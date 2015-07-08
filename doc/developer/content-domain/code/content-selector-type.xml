@@ -1,0 +1,8 @@
+<input name="cited-in" type="ContentSelector">
+  <label>Cited In</label>
+  <occurrences minimum="0" maximum="0"/>
+  <config>
+    <relationship-type>system:reference</relationship-type>
+    <allow-content-type>citation</allow-content-type>
+  </config>
+</input>

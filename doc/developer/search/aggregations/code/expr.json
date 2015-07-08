@@ -1,0 +1,10 @@
+"aggregations" : {
+  "[name]" : {
+    "[type]" : {
+      ... body ...
+    },
+    "aggregations": {
+      ... sub-aggregations ...
+    }
+  }
+}

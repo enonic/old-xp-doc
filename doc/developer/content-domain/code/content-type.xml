@@ -1,0 +1,17 @@
+<content-type>
+  <display-name>Choices</display-name>
+  <content-display-name-script>$('firstName', ' ', 'lastName')</content-display-name-script>
+  <super-type>base:structured</super-type>
+  <is-abstract>false</is-abstract>
+  <is-final>true</is-final>
+  <allow-child-content>true</allow-child-content>
+  <form>
+    <input name="choice1" type="ComboBox">
+      <label>Choice1</label>
+      <occurrences minimum="0" maximum="1"/>
+      <config>
+          ...
+      </config>
+    </input>
+  </form>
+</content-type>

@@ -1,0 +1,10 @@
+<content-type>
+  <display-name>Article</display-name>
+  <super-type>base:structured</super-type>
+  <form>
+    <input name="title" type="TextLine">
+      <label>My property text</label>
+      <occurrences minimum="1" maximum="1"/>
+    </input>
+  </form>
+</content-type>

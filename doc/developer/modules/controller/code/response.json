@@ -1,0 +1,10 @@
+{
+  "status": 200,
+  "body": "Hello World",
+  "contentType": "text/plain",
+  "headers": {
+      "key": "value"
+  },
+  "redirect": "/another/page",
+  "pageContributions": {}
+}

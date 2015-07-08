@@ -1,0 +1,16 @@
+<content-type>
+  <display-name>Using mixin: us-address</display-name>
+  <super-type>base:structured</super-type>
+  <is-abstract>false</is-abstract>
+  <is-final>true</is-final>
+  <is-built-in>false</is-built-in>
+  <allow-child-content>true</allow-child-content>
+  <form>
+    <field-set name="basic">
+      <label>Status</label>
+      <items>
+        <inline mixin="us-address"/> 
+      </items>
+    </field-set>
+  </form>
+</content-type>

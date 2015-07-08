@@ -1,0 +1,20 @@
+buildscript {
+  repositories {
+    jcenter()
+    maven {
+      url 'http://repo.enonic.com/public'
+    }
+  }
+
+  dependencies {
+    classpath 'com.enonic.xp.gradle:gradle-plugin:1.2.0'
+  }
+}
+
+apply plugin: 'com.enonic.xp.gradle.module'
+version = '1.0.0'
+
+module {
+  name = 'com.enonic.first.module'
+  displayName = 'My first module'
+}

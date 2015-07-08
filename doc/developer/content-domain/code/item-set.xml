@@ -1,0 +1,15 @@
+<form-item-set name="contact_info">
+  <label>Contact Info</label>
+  <items>
+    <input name="label" type="TextLine">
+      <label>Label</label>
+      <occurrences minimum="0" maximum="1"/>
+    </input>
+    <input name="phone_number" type="TextLine">
+      <label>Phone Number</label>
+      <occurrences minimum="0" maximum="1"/>
+    </input>
+  </items>
+  <immutable>false</immutable>
+  <occurrences minimum="0" maximum="0"/>
+</form-item-set>

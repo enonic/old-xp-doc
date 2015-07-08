@@ -1,0 +1,8 @@
+"by_month": {
+  "date_histogram": {
+    "field": "init_date",
+    "interval": "1M",
+    "minDocCount": 0,
+    "format": "MM-yyy"
+  }
+}

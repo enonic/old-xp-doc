@@ -1,0 +1,18 @@
+<input name="datetime" type="DateTime">
+  <config>
+    <with-timezone>false</with-timezone>
+  </config>
+  <label>DateTime (no tz)</label>
+  <indexed>true</indexed>
+  <custom-text>Custom text</custom-text>
+  <occurrences minimum="0" maximum="1"/>
+</input>
+<input name="requiredDatetime" type="DateTime">
+  <config>
+    <with-timezone>true</with-timezone>
+  </config>
+  <label>Required DateTime (with tz)</label>
+  <indexed>true</indexed>
+  <custom-text>Custom text</custom-text>
+  <occurrences minimum="1" maximum="0"/>
+</input>

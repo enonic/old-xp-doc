@@ -1,0 +1,9 @@
+<xsl:stylesheet version="2.0" exclude-result-prefixes="#all"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:portal="urn:enonic:xp:portal:1.0">
+
+  <xsl:template match="/">
+    <xsl:value-of select="portal:serviceUrl('_service=myservice', 'a=3')"/>
+  </xsl:template>
+
+</xsl:stylesheet>

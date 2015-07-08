@@ -1,0 +1,16 @@
+"aggregations": {
+  "categories": {
+    "buckets": [{
+      "doc_count": 132,
+      "key": "articles"
+    },
+    {
+      "doc_count": 101,
+      "key": "documents"
+    },
+    {
+      "doc_count": 43,
+      "key": "case-studies"
+    }]
+  }
+}

@@ -1,0 +1,4 @@
+<input name="image" type="ImageSelector">
+  <label>Non-required image</label>
+  <occurrences minimum="0" maximum="1"/>
+</input>

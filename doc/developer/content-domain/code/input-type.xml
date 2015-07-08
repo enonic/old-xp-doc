@@ -1,0 +1,7 @@
+<input name="name" type="type-name">
+  <label>Some label</label>
+  <immutable>false</immutable>
+  <indexed>true</indexed>
+  <occurrences minimum="0" maximum="1"/>
+</input>
+    

@@ -1,0 +1,12 @@
+"by_month" : {
+  "buckets" : [{
+    "doc_count" : 8,
+    "key" : "2014-01"
+  }, {
+    "doc_count" : 10,
+    "key" : "2014-02"
+  }, {
+    "doc_count" : 12,
+    "key" : "2014-03"
+  }]
+}
