@@ -10,7 +10,7 @@ For instance, consider a query returning all nodes that has a property "price" l
 0-25$, 25-50$ and so on. We also would like to know the average price for each category. This could be done by doing multiple separate queries, and calculate the
 average manually, but this would be very ineffective and cumbersome. Luckily, aggregations solves these types of problems easily.
 
-In some API functions it's possible to send in a aggregations expression object. This object is either in Java or a JSON like the following:
+In some API functions it's possible to send in an aggregations expression object. This object is either in Java or a JSON like the following:
 
 .. literalinclude:: code/expr.json
    :language: json
