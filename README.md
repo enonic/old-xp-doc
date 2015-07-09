@@ -1,4 +1,4 @@
-# Enonic XP Documentation
+# Enonic XP 6.0 Documentation
 
 [![Documentation Status](https://readthedocs.org/projects/xp/badge/?version=latest)](http://xp.readthedocs.org/)
 

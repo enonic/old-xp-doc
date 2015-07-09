@@ -17,7 +17,7 @@ guide to set up everything you need.
 After everything is installed, you can easily start up Enonic XP
 on your container host like this::
 
-  docker run -d -p 8080:8080 --name xp-app enonic/xp-app:5.2.0
+  docker run -d -p 8080:8080 --name xp-app enonic/xp-app:6.0.0-SNAPSHOT
 
 This will download the Enonic XP image and start it up and map it to
 port ``8080`` on your docker-host. To look at the log, use ``docker logs``
