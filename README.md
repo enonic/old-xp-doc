@@ -21,3 +21,4 @@ Read-the-docs (https://readthedocs.org/) will build automatically, but
 it's nice to build locally for verification. Build using make:
 
     make html
+

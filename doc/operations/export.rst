@@ -4,9 +4,7 @@ Export and Import
 =================
 
 Exporting and importing data in your Enonic XP installation is useful both for securing data and migrating between installations.
-
-Enonic XP ships with a set of :ref:`shell-scripts` to ease the operation of exporting and importing data from the system.
-The provided scripts can be found in the ``$XP_INSTALL/tools`` folder.
+Enonic XP ships with a set of :ref:`toolbox` to ease the operation of exporting and importing data from the system.
 
 .. CAUTION::
 
@@ -17,8 +15,9 @@ The provided scripts can be found in the ``$XP_INSTALL/tools`` folder.
 Export
 ------
 
-The export operation will extract data for a given content URL and store it as XML in the
-specified directory. The REST service for export is found at the following URL::
+The export operation will extract data for a given content URL and store it as XML
+in a sub-folder under ``$XP_HOME/data/export``.
+The REST service for export is found at the following URL::
 
   http://<host>:<port>/admin/rest/export/export
 
@@ -28,12 +27,12 @@ The export REST service accepts a JSON in this format:
 
   {
     "sourceRepoPath": "<source-repo-path>",
-    "targetDirectory": "<absolute-path-to-directory-on-server>",
+    "exportName": "<name>",
     "importWithIds": <true|false>,
     "dryRun": <true|false>
   }
 
-To ease the process, we have provided an :ref:`shell-scripts-export` tool.
+To ease the process, we have provided an :ref:`toolbox-export` tool.
 
 
 Import
@@ -49,13 +48,13 @@ The import REST service accepts a JSON in this format:
 .. code-block:: json
 
   {
-    "sourceDirectory": "<absolute-path-to-source-directory-on-server>",
+    "exportName": "<name>",
     "targetRepoPath": "<target-repo-path>",
     "importWithIds": <true|false>,
     "dryRun": <true|false>
   }
 
-To ease the process, we have provided an :ref:`shell-scripts-import` tool.
+To ease the process, we have provided an :ref:`toolbox-import` tool.
 
 
 Export data structure
@@ -67,10 +66,10 @@ Let's look at how this works. The following structure will be exported:
 
 Run the export command::
 
-  $ ./export.sh -u su:password -s cms-repo:draft:/ -t /tmp/myexport \
+  $ ./export.sh -u su:password -s cms-repo:draft:/ -t myexport \
     -n -i false
 
-Below is the resulting structure in the export folder ``/tmp/myexport``::
+Below is the resulting structure in the export folder ``$XP_HOME/data/export/myexport``::
 
   ./content
   ./content/_
@@ -129,7 +128,7 @@ It is possible to make manual changes to the exported data before importing.
 
 Using the above export as an example, the ``demo-site`` displayName can be changed to something more suitable::
 
-  /tmp/myExport $ vi content/demo-site/_/node.xml
+  myExport $ vi content/demo-site/_/node.xml
 
   <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
   <node xmlns="urn:enonic:xp:export:1.0">
@@ -144,7 +143,7 @@ Using the above export as an example, the ``demo-site`` displayName can be chang
 
 After some data has been changed, it can be imported again::
 
-  $ ./import.sh -u su:password -s /Users/rmy/tmp/myExport -t cms-repo:draft:/
+  $ ./import.sh -u su:password -s myExport -t cms-repo:draft:/
 
 .. image:: images/import-result.png
 

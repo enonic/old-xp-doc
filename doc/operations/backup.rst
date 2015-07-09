@@ -55,9 +55,9 @@ The snapshot rest-service accepts a JSON in this format:
 
 A snapshot of the given repository will be created for later retrieval. Each subsequent snapshot will store the changes between this snapshot
 and the last snapshot of the given repository. This means that only changed data are stored when doing subsequent snapshots. The snapshots
-will be stored in ``$XP_HOME/snapshots``. A name of the snapshot will be given at snapshot-time, and returned in the snapshot-result.
+will be stored in ``$XP_HOME/data/snapshot``. A name of the snapshot will be given at snapshot-time, and returned in the snapshot-result.
 
-To ease the process, we have provided a :ref:`shell-scripts-snapshot` tool.
+To ease the process, we have provided a :ref:`toolbox-snapshot` tool.
 
 
 Restore
@@ -73,7 +73,7 @@ The restore rest-service accepts a JSON in this format:
   }
 
 The indices will be closed for the duration of a restore operation, meaning that no request will be accepted while the restore in running.
-To ease the process, we have provided a :ref:`shell-scripts-restore` tool.
+To ease the process, we have provided a :ref:`toolbox-restore` tool.
 
 .. WARNING::
 
@@ -94,4 +94,4 @@ The delete rest-service accepts a JSON in this format:
   }
 
 Deletes either all snapshots before timestamp, or given snapshots by name. To ease the process, we have provided a
-:ref:`shell-scripts-deleteSnapshots` tool.
+:ref:`toolbox-delete-snapshots` tool.
