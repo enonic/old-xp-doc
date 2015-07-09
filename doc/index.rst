@@ -1,6 +1,6 @@
 
-Enonic XP documentation
-=======================
+Enonic XP |version| documentation
+=================================
 
 This is the home for Enonic XP |version| documentation. The documentation
 is `available on github`_ in a separate project.
