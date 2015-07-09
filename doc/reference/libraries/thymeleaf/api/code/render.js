@@ -1,6 +1,7 @@
-var view = resolve('view/fruit.xsl');
+var view = resolve('view/fruit.html');
 
-var result = execute('xslt.render', {
+var thymeleaf = require('/lib/xp/thymeleaf');
+var result = thymeleaf.render({
     view: view,
     model: {
         fruits: [

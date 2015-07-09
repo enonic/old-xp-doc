@@ -1,3 +1,5 @@
+.. _lib-xslt:
+
 lib-xslt
 ========
 
@@ -12,6 +14,7 @@ like this::
 
   var lib = require('/lib/xp/xslt')
 
+XSLT also supports a set of :ref:`view-functions`.
 Below is a list of methods that's implemented in this library.
 
 .. toctree::

@@ -1,11 +1,14 @@
-.. _script-commands-imageUrl:
+imageUrl
+========
 
-portal.imageUrl
-===============
+This function generates a URL pointing to an image.
 
-This command generates a URL pointing to an image.
+.. js:function:: imageUrl(params)
 
-Arguments:
+  :param object params: Input parameters.
+  :returns: the generated URL.
+
+**Parameters:**
 
 path *(string)*
   Path to the asset.
@@ -16,7 +19,7 @@ module *(string)*
 params *(object)*
   Custom parameters to append to the url.
 
-Example use in controller:
+**Example:**
 
 .. literalinclude:: code/imageUrl.js
   :language: javascript

@@ -17,6 +17,13 @@ Below is a list of methods that's implemented in this library.
 .. toctree::
    :maxdepth: 1
 
+   api/assetUrl
+   api/attachmentUrl
+   api/componentUrl
+   api/imageUrl
+   api/pageUrl
+   api/serviceUrl
+   api/processHtml
    api/getComponent
    api/getContent
    api/getSite

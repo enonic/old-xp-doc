@@ -1,16 +1,19 @@
-.. _script-commands-attachmentUrl:
+attachmentUrl
+=============
 
-portal.attachmentUrl
-====================
+This function generates a URL pointing to an attachment.
 
-This command generates a URL pointing to an attachment.
+.. js:function:: attachmentUrl(params)
 
-Arguments:
+  :param object params: Input parameters.
+  :returns: the generated URL.
+
+**Parameters:**
 
 id *(string)*
   Id to the content holding the attachment.
 
-path*(string)*
+path *(string)*
   Path to the content holding the attachment.
 
 name *(string)*
@@ -26,7 +29,7 @@ download *(boolean)*
 params *(object)*
   Custom parameters to append to the url.
 
-Example:
+**Example:**
 
 .. literalinclude:: code/attachmentUrl.js
   :language: javascript

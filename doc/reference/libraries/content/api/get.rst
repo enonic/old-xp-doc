@@ -5,7 +5,7 @@ This function fetches a content.
 
 .. js:function:: get(params)
 
-  :param object params: Input parameters.
+  :param object params: JSON with the parameters below.
   :returns: the content fetched from the repository.
 
 **Parameters:**

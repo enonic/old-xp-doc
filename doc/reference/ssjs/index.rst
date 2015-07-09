@@ -11,4 +11,3 @@ section.
    log
    resolve
    require
-   execute

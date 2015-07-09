@@ -2,14 +2,19 @@ processHtml
 ===========
 
 This function replaces abstract internal links contained in an HTML
-text by generated URLs.. See parameters for :ref:`script-commands-processHtml`.
+text by generated URLs.
 
-Usage in Thymeleaf:
+**Parameters:**
+
+_value
+  Html value string to process.
+
+**Usage in Thymeleaf:**
 
 .. literalinclude:: code/processHtml-thymeleaf.html
    :language: html
 
-Usage in XSLT:
+**Usage in XSLT:**
 
 .. literalinclude:: code/processHtml-xslt.xml
    :language: xml

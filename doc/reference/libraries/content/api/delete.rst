@@ -5,7 +5,7 @@ This function deletes a content.
 
 .. js:function:: delete(params)
 
-  :param object params: Input parameters.
+  :param object params: JSON with the parameters below.
   :returns: true if deleted, false otherwise.
 
 **Parameters:**

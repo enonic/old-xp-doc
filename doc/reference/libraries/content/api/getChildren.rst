@@ -5,7 +5,7 @@ This function fetches children of a content.
 
 .. js:function:: getChildren(params)
 
-  :param object params: Input parameters.
+  :param object params: JSON with the parameters below.
   :returns: the content fetched from the repository.
 
 **Parameters:**

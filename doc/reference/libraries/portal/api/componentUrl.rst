@@ -1,11 +1,14 @@
-.. _script-commands-componentUrl:
+componentUrl
+============
 
-portal.componentUrl
-===================
+This function generates a URL pointing to a component.
 
-This command generates a URL pointing to a component.
+.. js:function:: componentUrl(params)
 
-Arguments:
+  :param object params: Input parameters.
+  :returns: the generated URL.
+
+**Parameters:**
 
 id *(string)*
   Id to the page.
@@ -19,7 +22,7 @@ component *(string)*
 params *(object)*
   Custom parameters to append to the url.
 
-Example:
+**Example:**
 
 .. literalinclude:: code/componentUrl.js
   :language: javascript

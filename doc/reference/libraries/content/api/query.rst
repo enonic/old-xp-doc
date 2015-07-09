@@ -5,7 +5,7 @@ This command queries content.  See :ref:`query-language` for details.
 
 .. js:function:: query(params)
 
-  :param object params: Input parameters.
+  :param object params: JSON with the parameters below.
   :returns: the content found as JSON.
 
 **Parameters:**

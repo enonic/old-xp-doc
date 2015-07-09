@@ -5,7 +5,7 @@ This function creates a content.
 
 .. js:function:: create(params)
 
-  :param object params: Input parameters.
+  :param object params: JSON with the parameters below.
   :returns: the content created as JSON.
 
 **Parameters:**

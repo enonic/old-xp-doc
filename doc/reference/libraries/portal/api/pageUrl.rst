@@ -1,11 +1,14 @@
-.. _script-commands-pageUrl:
+pageUrl
+=======
 
-portal.pageUrl
-==============
+This function generates a URL pointing to a page.
 
-This command generates a URL pointing to a page.
+.. js:function:: pageUrl(params)
 
-Arguments:
+  :param object params: Input parameters.
+  :returns: the generated URL.
+
+**Parameters:**
 
 id *(string)*
   Id to the page. If id is set, then path is not used.
@@ -16,7 +19,7 @@ path *(string)*
 params *(object)*
   Custom parameters to append to the url.
 
-Example:
+**Example:**
 
 .. literalinclude:: code/pageUrl.js
   :language: javascript

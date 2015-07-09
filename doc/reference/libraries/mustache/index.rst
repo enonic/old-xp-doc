@@ -1,3 +1,5 @@
+.. _lib-mustache:
+
 lib-mustache
 ============
 

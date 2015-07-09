@@ -1,11 +1,14 @@
-.. _script-commands-serviceUrl:
+serviceUrl
+==========
 
-portal.serviceUrl
-=================
+This function generates a URL pointing to a service.
 
-This command generates a URL pointing to a service.
+.. js:function:: serviceUrl(params)
 
-Arguments:
+  :param object params: Input parameters.
+  :returns: the generated URL.
+
+**Parameters:**
 
 service *(string)*
   Name of the service.
@@ -16,7 +19,7 @@ module *(string)*
 params *(object)*
   Custom parameters to append to the url.
 
-Example:
+**Example:**
 
 .. literalinclude:: code/serviceUrl.js
   :language: javascript

@@ -1,11 +1,11 @@
-getChildren
-===========
+modify
+======
 
 This function modifies a content.
 
 .. js:function:: modify(params)
 
-  :param object params: Input parameters.
+  :param object params: JSON with the parameters below.
   :returns: the modified content as JSON.
 
 **Parameters:**

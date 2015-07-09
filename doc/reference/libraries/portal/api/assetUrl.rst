@@ -1,11 +1,14 @@
-.. _script-commands-assetUrl:
+assetUrl
+========
 
-portal.assetUrl
-===============
+This function generates a URL pointing to a static file.
 
-This command generates a URL pointing to a static file.
+.. js:function:: assetUrl(params)
 
-Arguments:
+  :param object params: Input parameters.
+  :returns: the generated URL.
+
+**Parameters:**
 
 path *(string)*
   Path to the asset.
@@ -16,7 +19,7 @@ module *(string)*
 params *(object)*
   Custom parameters to append to the url.
 
-Example use in controller:
+**Example:**
 
 .. literalinclude:: code/assetUrl.js
    :language: javascript
