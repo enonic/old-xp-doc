@@ -1,6 +1,6 @@
-# Enonic XP Documentation
+# Enonic XP 5.2 Documentation
 
-[![Documentation Status](https://readthedocs.org/projects/xp/badge/?version=latest)](http://xp.readthedocs.org/)
+[![Documentation Status](https://readthedocs.org/projects/xp/badge/?version=5.2)](http://xp.readthedocs.org/)
 
 This repository contains Enonic XP documentation. The documentation is
 written using Sphinx (http://sphinx-doc.org/index.html) and are hosted
