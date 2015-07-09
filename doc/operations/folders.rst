@@ -39,9 +39,8 @@ lib/
 system/
   System OSGi bundles are placed here.
 
-tools/
-  Scripts for misc operational activities like backup and export. See
-  :ref:`shell-scripts`.
+toolbox/
+  Command-line interface tool to manage the server. See :ref:`toolbox`.
 
 repo/
   Repository data (blobs and indexes).

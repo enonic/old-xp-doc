@@ -42,7 +42,7 @@ is `available on github`_ in a separate project.
    reference/script-commands/index
    reference/view-functions/index
    reference/query-language
-   reference/shell-scripts/index
+   reference/toolbox/index
    reference/javadoc
 
 .. toctree::
