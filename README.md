@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Enonic XP 6.0 Documentation
-=======
-# Enonic XP 5.3 Documentation
->>>>>>> 5.3
 
 [![Documentation Status](https://readthedocs.org/projects/xp/badge/?version=latest)](http://xp.readthedocs.org/)
 
