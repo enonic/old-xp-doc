@@ -11,7 +11,7 @@ The unpacked Enonic XP distribution will have the following structure::
      |- logs/
    |- lib/
    |- system/
-   |- tools/
+   |- toolbox/
    |- repo/
    |- data/
 
