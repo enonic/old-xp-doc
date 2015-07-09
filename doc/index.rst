@@ -44,6 +44,7 @@ is `available on github`_ in a separate project.
    :caption: Reference
 
    reference/ssjs/index
+   reference/libraries/index
    reference/script-commands/index
    reference/view-functions/index
    reference/query-language
