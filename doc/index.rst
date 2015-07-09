@@ -49,5 +49,6 @@ is `available on github`_ in a separate project.
    :maxdepth: 1
    :caption: Appendix
 
+   appendix/changes/index
    appendix/faq
    appendix/troubleshooting
