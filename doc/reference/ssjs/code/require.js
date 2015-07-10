@@ -1,6 +1,6 @@
 
 // Absolute path
-var lib1 = require('/cms/lib/mylib.js');
+var lib1 = require('/lib/mylib.js');
 
 // Relative path
 var lib2 = require('mylib.js');

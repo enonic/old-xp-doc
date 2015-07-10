@@ -1,6 +1,6 @@
 
 // Absolute path
-var path1 = resolve('/cms/views/myview.html');
+var path1 = resolve('/views/myview.html');
 
 // Relative path
 var path2 = resolve('myview.html');
