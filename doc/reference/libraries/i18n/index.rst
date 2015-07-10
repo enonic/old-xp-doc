@@ -7,7 +7,7 @@ This library implements JavaScript bindings for standard i18n-related
 functionality. Add the following into your ``build.gradle`` file in the
 ``dependencies`` section::
 
-  library 'com.enonic.xp:lib-i18n:6.0.0-SNAPSHOT'
+  library 'com.enonic.xp:lib-i18n:6.0.0-M1'
 
 To use this library in your JavaScript files, you can require the library
 like this::

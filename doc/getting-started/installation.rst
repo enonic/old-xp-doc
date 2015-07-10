@@ -30,9 +30,9 @@ the correct Enonic XP version and unzip it to a preferred directory.
 
 Terminal users can do this::
 
-  $ curl -O http://repo.enonic.com/public/com/enonic/xp/distro/6.0.0-SNAPSHOT/distro-6.0.0-SNAPSHOT.zip
-  $ unzip distro-6.0.0-SNAPSHOT.zip
-  $ cd enonic-xp-6.0.0-SNAPSHOT
+  $ curl -O http://repo.enonic.com/public/com/enonic/xp/distro/6.0.0-M1/distro-6.0.0-M1.zip
+  $ unzip distro-6.0.0-M1.zip
+  $ cd enonic-xp-6.0.0-M1
 
 The top level of the unzipped directory will be referred to as ``$XP_INSTALL``
 from now on.
