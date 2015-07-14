@@ -1,8 +1,7 @@
-dump
+load
 ====
 
-Export every repository branch. This is used to backup the entire
-repository when doing an upgrade. The result will be stored in
+Load will take data from a named dump and load it into Enonic XP. The dump read has to be stored in
 the ``$XP_HOME/data/dump`` directory.
 
 **Usage:**
@@ -10,10 +9,10 @@ the ``$XP_HOME/data/dump`` directory.
 .. code-block:: none
 
   NAME
-          toolbox dump - Export all nodes.
+          toolbox load - Import nodes from a dump.
 
   SYNOPSIS
-          toolbox dump -a <auth> [-h <host>] [-p <port>] -t <target>
+          toolbox load -a <auth> [-h <host>] [-p <port>] -s <source>
 
   OPTIONS
           -a <auth>
@@ -25,11 +24,11 @@ the ``$XP_HOME/data/dump`` directory.
           -p <port>
               Port number for server (default is 8080).
 
-          -t <target>
+          -s <source>
               Dump name.
 
 **Example:**
 
 .. code-block:: none
 
-  $ ./toolbox.sh dump -a su:password -t myDump
+  $ ./toolbox.sh load -a su:password -s myDump
