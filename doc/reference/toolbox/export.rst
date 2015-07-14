@@ -3,15 +3,15 @@
 export
 ======
 
-Extract data for a given repo, branch and content path. The result will be stored in the
-``$XP_HOME/data/export`` directory.
+Extract data for a given repository, branch and content path.
+The result will be stored in the ``$XP_HOME/data/export`` directory.
 
 **Usage:**
 
 .. code-block:: none
 
   NAME
-          toolbox export - Export nodes from a repository branch.
+          toolbox export - Export data for a specified path.
 
   SYNOPSIS
           toolbox export -a <auth> [-h <host>] [-p <port>] -s <sourceRepoPath>
