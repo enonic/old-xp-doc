@@ -1,7 +1,7 @@
 dump
 ====
 
-Export data from  every repository branch. This is used to backup the entire
+Export data from every repository. This is used to backup the entire
 repository when doing an upgrade. The result will be stored in
 the ``$XP_HOME/data/dump`` directory.
 
