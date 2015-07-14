@@ -1,15 +1,15 @@
 load
 ====
 
-Load will take data from a named dump and load it into Enonic XP. The dump read has to be stored in
-the ``$XP_HOME/data/dump`` directory.
+Load data from a named dump and load it into Enonic XP.
+The dump read has to be stored in the ``$XP_HOME/data/dump`` directory.
 
 **Usage:**
 
 .. code-block:: none
 
   NAME
-          toolbox load - Import nodes from a dump.
+          toolbox load - Import data from a dump.
 
   SYNOPSIS
           toolbox load -a <auth> [-h <host>] [-p <port>] -s <source>

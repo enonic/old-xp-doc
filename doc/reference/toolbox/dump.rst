@@ -1,7 +1,7 @@
 dump
 ====
 
-Export every repository branch. This is used to backup the entire
+Export data from every repository. This is used to backup the entire
 repository when doing an upgrade. The result will be stored in
 the ``$XP_HOME/data/dump`` directory.
 
@@ -10,7 +10,7 @@ the ``$XP_HOME/data/dump`` directory.
 .. code-block:: none
 
   NAME
-          toolbox dump - Export all nodes.
+          toolbox dump - Export data from every repository.
 
   SYNOPSIS
           toolbox dump -a <auth> [-h <host>] [-p <port>] -t <target>
