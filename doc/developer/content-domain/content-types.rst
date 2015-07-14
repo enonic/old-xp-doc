@@ -16,10 +16,9 @@ interfaces and the resulting data models. Some highlights are:
 Base Content Types
 ------------------
 
-Everything has to start somewhere, and for content types this starts with the base
-types. The base types are all installed and delivered with the system
+A set of basic content types are provided with the installation.
 
-Content types have a set of special tricks you need to know about:
+Content types have a set of properties you need to know about:
 
 * Content types are named with their module name, i.e. base:folder, where "base" is the module - but also have a nice display name like "Folder"
 * ``abstract`` (default: false) means you cannot create content with this content type

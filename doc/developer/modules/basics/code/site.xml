@@ -1,4 +1,5 @@
-<module>
+<site>
+  <x-data mixin="menu-item"/>
   <config>
     <field-set name="info">
       <label>Info</label>
@@ -14,4 +15,4 @@
       </items>
     </field-set>
   </config>
-</module>
+</site>

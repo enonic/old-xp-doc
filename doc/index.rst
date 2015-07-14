@@ -8,7 +8,7 @@ is `available on github`_ in a separate project.
 .. WARNING::
 
   Version |version| is not released yet. This is a developer version
-  and should be used at your own risk.
+  and should be used at your own risk. Fuck yeah!
 
 .. _available on github: https://github.com/enonic/xp-doc
 

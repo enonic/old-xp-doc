@@ -1,13 +1,13 @@
-Building the module
-===================
+Building an application
+=======================
 
 The project is built using Gradle. Here is a simple build script to
-build a module.
+build an app:
 
 .. literalinclude:: code/build.gradle
    :language: groovy
 
-To build your module, write ``gradle build`` on the command line::
+To build the app, write ``gradle build`` on the command line::
 
   $ gradle build
 

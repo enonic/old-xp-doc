@@ -1,10 +1,10 @@
 Configuring the module
 ======================
 
-Global configuration variables for the site may be defined in the config element of ``module.xml``. Values for these
+Global configuration variables for the site may be defined in the config element of ``site.xml``. Values for these
 settings can be filled in when you edit the site in the admin console.
 
-.. literalinclude:: code/module.xml
+.. literalinclude:: code/site.xml
    :language: xml
 
 The company and description fields may now be filled out by editing the site. The values will be used in a standard

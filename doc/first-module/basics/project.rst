@@ -2,14 +2,14 @@ Project structure
 =================
 
 The project structure is similar to Maven. Create the folder structure you
-see below. All are folders except for ``module.xml`` and ``build.gradle``::
+see below. All are folders except for ``site.xml`` and ``build.gradle``::
 
   my-first-module/
     build.gradle
     src/
       main/
         resources/
-          module.xml
+          site.xml
           cms/
             lib/
             pages/
@@ -28,14 +28,14 @@ build.gradle
   Gradle script for building the module. This file describes the actual
   build process.
 
-module.xml
-  The ``module.xml`` file contains basic information to register the module in
+site.xml
+  The ``site.xml`` file contains basic information to register the module in
   Enonic XP. Settings for the module can be defined in the ``config`` element
   and the values for these settings can be updated in the administration
   console. An example will be presented later in this document. Leave the
   ``config`` element blank for now.
 
-  .. literalinclude:: code/module.xml
+  .. literalinclude:: code/site.xml
      :language: xml
 
 cms/lib/

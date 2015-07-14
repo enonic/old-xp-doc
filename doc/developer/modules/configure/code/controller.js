@@ -1,5 +1,5 @@
 // Get the current site.
 var site = execute('portal.getSite');
 
-// Find the module configuration for this module in current site.
-var moduleConfig = site.moduleConfigs['com.enonic.first.module'];
+// Find the site configuration for this app in current site.
+var siteConfig = site.siteConfigs['com.enonic.first.app'];
