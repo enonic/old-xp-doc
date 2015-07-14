@@ -16,11 +16,12 @@ To get help for the commands, just type the following::
 
   The most commonly used toolbox commands are:
       delete-snapshots   Deletes snapshots, either before a given timestamp or by name.
-      dump               Export every branch in specified repository.
-      export             Export node from a branch in a repository.
+      dump               Export all nodes.
+      export             Export nodes from a repository branch.
       help               Display help information
       import             Import nodes from an export into a repository branch.
       list-snapshots     Returns a list of existing snapshots with name and status.
+      load               Import nodes from a dump.
       reindex            Reindex content in search indices for the given repository and branches.
       restore            Restores a snapshot of a previous state of the repository.
       snapshot           Stores a snapshot of the current state of the repository.
@@ -44,3 +45,4 @@ Here's a list of all the commands that you can do with the toolbox:
    import
    reindex
    dump
+   load
