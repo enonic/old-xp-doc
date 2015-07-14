@@ -3,8 +3,7 @@
 import
 ======
 
-Import will take data from a named export and load it into Enonic XP at the
-desired content path.
+Import data from a named export and load it into Enonic XP at the desired content path.
 
 **Usage:**
 
