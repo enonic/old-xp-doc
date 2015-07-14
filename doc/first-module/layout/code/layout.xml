@@ -1,8 +1,8 @@
-<layout-component>
+<layout>
   <display-name>70/30</display-name>
   <config/>
   <regions>
     <region name="left"/>
     <region name="right"/>
   </regions>
-</layout-component>
+</layout>

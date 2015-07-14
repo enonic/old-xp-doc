@@ -1,4 +1,4 @@
-<part-component>
+<part>
   <display-name>Person</display-name>
   <config>
     <input type="Relationship" name="person">
@@ -11,4 +11,4 @@
       </config>
     </input>
   </config>
-</part-component>
+</part>

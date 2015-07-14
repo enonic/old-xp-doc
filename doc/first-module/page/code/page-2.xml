@@ -1,7 +1,7 @@
-<page-component>
+<page>
   <display-name>My first page</display-name>
   <config />
   <regions>
     <region name="main"/>
   </regions>
-</page-component>
+</page>
