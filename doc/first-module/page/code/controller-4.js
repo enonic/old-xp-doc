@@ -1,6 +1,8 @@
+var portal = require('/lib/xp/portal');
+
 // Get the current content. It holds the context of the current execution
 // session, including information about regions in the page.
-var content = execute('portal.getContent');
+var content = portal.getContent();
 
 // Include info about the region of the current content in the parameters
 // list for the rendering.

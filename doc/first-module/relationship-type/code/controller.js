@@ -6,12 +6,15 @@ retrievable with `portal.getContent`. You can see this in action when
 you click on a `Person` content in the admin console and it is
 previewed in the page.
 */
-var content = execute('portal.getContent');
+var contentSvc = require('/lib/xp/content');
+var portal = require('/lib/xp/portal');
+
+var content = portal.getContent();
 
 // Find the related person id
 var personId = component.config['person'];
 
 // Fetch the actual person content
-var person = execute('content.get', {
+var person = contentSvc.get({
   key: personId
 });
