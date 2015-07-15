@@ -1,10 +1,14 @@
+var contentSvc = require('/lib/xp/content');
+var portal = require('/lib/xp/portal');
+var thymeleaf = require('/lib/xp/thymeleaf');
+
 exports.get = function(req) {
 
   // Find the current component
-  var component = execute('portal.getComponent');
+  var component = portal.getComponent();
 
   // Find the right content
-  var person = execute('content.get', {
+  var person = contentSvc.get({
     key: '/my-first-site/people/edvard-munch'
   });
 
@@ -18,7 +22,7 @@ exports.get = function(req) {
   var imageId = person.data['image'];
 
   // Create a URL to the image
-  var imageUrl = execute('portal.imageUrl', {
+  var imageUrl = portal.imageUrl({
     id: imageId,
     filter: 'scaleblock(400,400)'
   });
@@ -33,12 +37,15 @@ exports.get = function(req) {
     }
   };
 
+  // Resolve the view
+  var view = resolve('person-show.html');
+
+  // Render a thymeleaf template
+  var body = thymeleaf.render(view, model);
+
   // Return the result
   return {
-    body: execute('thymeleaf.render', {
-      view: resolve('person-show.html'),
-      model: model
-    }),
+    body: body,
     contentType: 'text/html'
   }
 

@@ -1,3 +1,5 @@
+var thymeleaf = require('/lib/xp/thymeleaf');
+
 exports.get = function(req) {
 
   // Resolve the view
@@ -9,10 +11,7 @@ exports.get = function(req) {
   };
 
   // Render a thymeleaf template
-  var body = execute('thymeleaf.render', {
-    view: view,
-    model: model
-  });
+  var body = thymeleaf.render(view, model);
 
   // Return the result
   return {
