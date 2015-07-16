@@ -3,7 +3,7 @@ var thymeleaf = require('/lib/xp/thymeleaf');
 exports.get = function(req) {
 
   // Resolve the view
-  var view = resolve('/cms/view/my-first-page.html');
+  var view = resolve('/app/view/my-first-page.html');
 
   // Define the model
   var model = {

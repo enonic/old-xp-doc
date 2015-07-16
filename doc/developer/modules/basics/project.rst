@@ -10,7 +10,7 @@ see below. All are folders except for ``site.xml`` and ``build.gradle``::
       main/
         resources/
           site.xml
-          cms/
+          app/
             lib/
             pages/
             parts/
@@ -37,36 +37,36 @@ site.xml
   .. literalinclude:: code/site.xml
      :language: xml
 
-cms/lib/
+app/lib/
   This is the last place the global ``require`` javascript-function looks,
   so it is a good place to put default libraries here.
 
-cms/pages/
+app/pages/
   Page definitions should be placed here. They will be used to create page
   templates in the repository.
 
-cms/parts/
+app/parts/
   Part definitions should be placed here. Parts are objects that can
   be placed on a page.
 
-cms/layouts/
+app/layouts/
   Layout definitions should be placed here. Layouts are definitions that
   restricts the placement of parts.
 
-cms/views/
+app/views/
   Views can generally be placed anywhere you want, just keep in mind
   what path to use when resolving them.
 
-cms/assets/
+app/assets/
   Public folder for external css, javascript and static images.
 
-cms/content-types/
+app/content-types/
   Content schemas-types are placed here. Used to create structured content.
 
-cms/mixins/
+app/mixins/
   Mixin schema-types are placed here. A mixin can be used to add fields to
   a content-type.
 
-cms/relationship-types/
+app/relationship-types/
   Relationship-types are placed here. They are used to form relations between
   contents.
