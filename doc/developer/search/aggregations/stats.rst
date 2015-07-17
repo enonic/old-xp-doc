@@ -19,7 +19,7 @@ Here's an example of the stats aggregation:
   .. literalinclude:: code/stats-query.json
      :language: json
 
-The above example gives the following result:
+The above example gives a result with this structure:
 
   .. literalinclude:: code/stats-result.json
      :language: json

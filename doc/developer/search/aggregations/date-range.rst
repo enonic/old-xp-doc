@@ -23,7 +23,7 @@ Here's an example of the date_range aggregation:
   .. literalinclude:: code/date-range-query.json
      :language: json
 
-The above example gives the following result:
+The above example gives a result with this structure:
 
   .. literalinclude:: code/date-range-result.json
      :language: json

@@ -22,7 +22,7 @@ provided ``count`` parameter in the query. The result will also contain a value 
 number of hits for the search: ``total``. The ``start`` parameter indicates from what position in the
 result set we should start retrieving results.
 
-Lets consider a search matching 1000 documents. Usually, one does not to retrieve all these results at once,
+Lets consider a search matching 1000 documents. Usually, one does not retrieve all these results at once,
 but rather a subset of the result - and fetch the next subset of the result if necessary. This type of
 data-retrieving is called paging.
 
