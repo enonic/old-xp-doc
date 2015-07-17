@@ -55,5 +55,6 @@ is `available on github`_ in a separate project.
    :caption: Appendix
 
    appendix/changes/index
+   appendix/upgrade/index
    appendix/faq
    appendix/troubleshooting

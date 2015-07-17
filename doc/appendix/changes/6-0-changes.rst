@@ -1,4 +1,4 @@
-Notable 6.0 Changes
+Upgrading
 ===================
 
 Here's a list of some notable changes.
