@@ -25,6 +25,7 @@ To get help for the commands, just type the following::
       reindex            Reindex content in search indices for the given repository and branches.
       restore            Restores a snapshot of a previous state of the repository.
       snapshot           Stores a snapshot of the current state of the repository.
+	  upgrade            Upgrade a dump to the current version. The upgraded dump will be written to a 'upgraded' folder in current directory
 
   See 'toolbox help <command>' for more information on a specific command.
 
@@ -46,3 +47,4 @@ Here's a list of all the commands that you can do with the toolbox:
    reindex
    dump
    load
+   upgrade
