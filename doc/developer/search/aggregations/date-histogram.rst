@@ -30,7 +30,7 @@ Here's an example of the date_histogram aggregation:
   .. literalinclude:: code/date-histogram-query.json
      :language: json
 
-The above example gives the following result:
+The above example gives a result with this structure:
 
   .. literalinclude:: code/date-histogram-result.json
      :language: json

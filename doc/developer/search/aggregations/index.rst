@@ -3,7 +3,7 @@
 Aggregations
 ============
 
-An aggregation is a function, or something that is executed, on a collection of search results. The search-results are defined by the query and query-filter
+An aggregation is a function that is executed on a collection of search results. The search-results are defined by the query and query-filter
 of the search request.
 
 For instance, consider a query returning all nodes that has a property "price" less than, say, 100$. Now, we want to divide the result nodes into ranges, say
@@ -31,3 +31,4 @@ sum, etc for each bucket if necessary.
    date-range
    date-histogram
    stats
+   geo-distance

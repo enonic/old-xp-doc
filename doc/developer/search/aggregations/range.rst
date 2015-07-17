@@ -18,7 +18,7 @@ Here's an example of the range aggregation:
   .. literalinclude:: code/range-query.json
      :language: json
 
-The above example gives the following result:
+The above example gives a result with this structure:
 
   .. literalinclude:: code/range-result.json
      :language: json
