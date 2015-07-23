@@ -3,8 +3,8 @@ Mixins
 
 Structures of data that are repeated in many content types, like a set of address fields, or a
 combobox with a standard set of values, may be defined as mixins and reused in multiple content types.  The
-mixin definition file must be named ``mixin.xml`` and placed in the folder ``site/mixins/[name]``.
-For example, ``site/mixins/us-address/mixin.xml``.
+mixin definition file must be placed in the folder ``site/mixins/[name]`` and named ``[name].xml``.
+For example, ``site/mixins/us-address/us-address.xml``.
 
 .. literalinclude:: code/mixin.xml
    :language: xml
