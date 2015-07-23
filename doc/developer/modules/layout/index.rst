@@ -8,13 +8,14 @@ around without touching any code. Layouts can even be nested. Making a layout is
 components.
 
 Layout contains - like pages and parts - a descriptor, a view and a controller, and should be
-placed in under the layouts-folder in the module: ``layouts/<layoutname>/``
+placed in the folder ``site/layouts/[layout-name]``
 
 
 Descriptor
 ----------
 
 The layout descriptor defines regions within the layout where parts can be placed with live edit.
+The file must be named ``[layout-name].xml``.
 
 .. literalinclude:: code/layout.xml
    :language: xml
@@ -24,6 +25,7 @@ Controller
 ----------
 
 The layout controller composes the view of the layout based on http-requests.
+The file must be named ``[layout-name].js``.
 
 .. literalinclude:: code/controller.js
    :language: javascript

@@ -9,12 +9,12 @@ components. They require a descriptor, a controller, and a view. We will make a 
 and 30%.
 
 The layout descriptor defines regions within the layout where parts can be placed with live edit. First make a new folder
-``layouts/layout-70-30``. Within this folder, make a file called ``layout.xml`` as seen below.
+``layouts/layout-70-30``. Within this folder, make a file called ``layout-70-30.xml`` as seen below.
 
 .. literalinclude:: code/layout.xml
    :language: xml
 
-Also, create a file called ``controller.js`` in the ``layout-70-30`` folder.
+Also, create a file called ``layout-70-30.js`` in the ``layout-70-30`` folder.
 
 .. literalinclude:: code/controller.js
    :language: javascript
