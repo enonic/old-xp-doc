@@ -6,7 +6,7 @@ For instance, a person may have an image, or an employee may have a boss, or bel
 to a department. These relationships must be defined with a specific *relationship type*, then used
 in the custom content with an input type ``ContentSelector``.  The relationship type definition
 is an XML file.  It must be placed in the folder, ``site/relationship-types/[name]`` and
-be named ``relationship-type.xml``.  Here is an example of a relationship-type:
+be named ``[name].xml``.  Here is an example of a relationship-type:
 
 .. literalinclude:: code/relationship-type.xml
    :language: xml

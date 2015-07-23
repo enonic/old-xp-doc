@@ -7,7 +7,7 @@ relationship type and modify the ``Person`` component part so that you can pick 
 and it will display correctly.
 
 First create a folder in the ``relationship-types`` folder called ``related-person``. Now make a file here called
-``relationship-type.xml``.
+``related-person.xml``.
 
 .. literalinclude:: code/relationship-type.xml
    :language: xml
