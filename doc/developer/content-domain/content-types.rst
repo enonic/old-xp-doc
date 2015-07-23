@@ -196,7 +196,7 @@ Custom Content Types
 Custom Content Types can be created using Java or simple xml files - and deployed through modules.
 
 When using xml, each content type must have a separate folder in the module resource structure.
-i.e. ``app/content-types/<my-content-type-name>``.
+i.e. ``site/content-types/<my-content-type-name>``.
 
 Each folder must then hold a file named ``content-type.xml`` and optionally an icon file, i.e. ``thumb.png``
 The icon must be a Portable Network Graphics file (png).  Other file formats will be supported in the future.

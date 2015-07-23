@@ -16,7 +16,7 @@ exports.get = function(portal) {
   };
 
   // Resolve the view
-  var view = resolve('/app/view/my-favorite-things.html');
+  var view = resolve('/site/view/my-favorite-things.html');
 
   // Render a thymeleaf template
   var body = thymeleaf.render(view, model);
