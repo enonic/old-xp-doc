@@ -8,9 +8,9 @@ There are changes to the repositories in version 6.0
 
 In the provided toolbox, there are a task ´´upgrade´´ that will do the necessary changes to your data.
 
-To upgrade your 5.3 installation, execute the following steps:
+To upgrade your 5.3.1 installation, execute the following steps:
 
- 1. Dump your 5.3 installation by the toolbox ´´dump´´ tool
+ 1. Dump your 5.3.1 installation by the toolbox ´´dump´´ tool
  2. Upgrade the dump with toolbox ´´upgrade´´
  3. Load the repository into a new instance of Enonix XP.
 
@@ -113,3 +113,38 @@ Add `require` call for the "content" library at the top of each JavaScript file 
 
    var contentSvc = require('/lib/xp/content');
 
+
+Xslt library
+------------------
+
+Search and replace the following calls in js controllers;
+
++-------------------------------+-------------------------+
+| Search                        |  Replace                |
++===============================+=========================+
+| execute('xslt.render',        | xslt.render(            |
++-------------------------------+-------------------------+
+
+Add `require` call for the "xslt" library at the top of each JavaScript file where the "xslt.render" command was used:
+
+.. code-block:: none
+
+    var xslt = require('/lib/xp/xslt');
+
+
+I18n library
+------------------
+
+Search and replace the following calls in js controllers;
+
++-------------------------------+-------------------------+
+| Search                        |  Replace                |
++===============================+=========================+
+| execute('i18n.localize',      | i18n.localize(          |
++-------------------------------+-------------------------+
+
+Add `require` call for the "i18n" library at the top of each JavaScript file where the "i18n.localize" command was used:
+
+.. code-block:: none
+
+    var i18n = require('/lib/xp/i18n');
