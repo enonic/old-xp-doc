@@ -9,12 +9,12 @@ the first name ``Edvard`` and the last name ``Munch`` and type in anything you l
 picture. Notice the path of this content under the display name is ``/my-first-site/people/edvard-munch``.
 
 Now create a new folder in your project under the ``parts`` folder and name it ``person-show``. Now create a part descriptor
-file named ``part.xml``. This descriptor only needs a display-name for now.
+file named ``person-show.xml``. This descriptor only needs a display-name for now.
 
 .. literalinclude:: code/part.xml
    :language: xml
 
-Next, create the person-show controller named ``controller.js``.
+Next, create the person-show controller named ``person-show.js``.
 
 .. literalinclude:: code/controller.js
    :language: javascript

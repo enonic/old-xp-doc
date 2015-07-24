@@ -3,15 +3,17 @@ Part
 
 A part is a building block that can be placed on a page or into a region. As
 with pages, a part is composed of a descriptor, a controller and
-and optionally - a view.
+and optionally - a view. It should be placed in the folder ``site/parts/[part-name]``
+
 
 The part descriptor is required to register the part and allows us to set up user input fields to configure the part.
 A part cannot contain any regions.
+The file must be named ``[part-name].xml``.
 
 .. literalinclude:: code/part.xml
    :language: xml
 
-To drive this part, we will also need a controller ``controller.js``.
+To drive this part, we will also need a controller ``[part-name].js``.
 
 .. literalinclude:: code/controller.js
    :language: javascript
