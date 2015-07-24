@@ -18,14 +18,86 @@ To upgrade your 5.3.1 installation, execute the following steps:
 Portal
 ------
 
+* Identify regions by name instead of position.
+* Added mandatory "scale" parameter to image URL function.
+* Removed "scale" prefix in scale functions e.g. scaleblock() -> block().
+* Separated scale from filters in image URL, new format: /_/image/inline/<imageid>/<scale>/contentname.format?filter=xxx
+e.g _/image/inline/234234234/wide-400-200/mer.jpg?filter=blur(10)
+
+
 Module
 ------
+
+* Renamed module.xml to site.xml.
+* Renamed module element name to site in site.xml.
+* Rename src/main/resources/cms folder, to src/main/resources/site.
+* Renamed form-item-set to item-set element in model.xsd and updated related parsers.
+* Renamed part-component element name to part in model.xsd and updated related parsers.
+* Renamed layout-component element name to layout in model.xsd and updated related parsers.
+* Renamed page-component element name to page in model.xsd and updated related parsers.
+* Renamed files /pages/<name>/page.xml into /pages/<name>/<name>.xml.
+* Renamed files /parts/<name>/part.xml into /parts/<name>/<name>.xml.
+* Renamed files /layouts/<name>/layout.xml into /layouts/<name>/<name>.xml.
+* Renamed files /<type>/<name>/controller.js into /<type>/<name>/<name>.js.
+* Renamed property "moduleConfigs" of content sites into "siteConfigs".
+* Renamed property "moduleConfig" of content sites into "siteConfig".
+* Renamed property "moduleKey" of property set siteConfig into "applicationKey".
+* Renamed input type "ModuleConfigurator" to "SiteConfigurator".
+* Renamed input type "SingleSelector" to "RadioButtons".
+
 
 Building modules
 ----------------
 
+The gradle build plugin must follow the version used for building.
+
+.. code-block:: none
+
+	buildscript {
+	    repositories {
+	        mavenLocal()
+	        jcenter()
+	        maven {
+	            url 'http://repo.enonic.net/public'
+	        }
+	    }
+
+	    dependencies {
+	        classpath 'com.enonic.xp:gradle-plugin:6.0.0-SNAPSHOT'
+	    }
+	}
+
+	apply plugin: 'com.enonic.xp.app'
+
+	app {
+	    name = 'com.enonic.wem.apps.xslt'
+	    displayName = 'Xslt Sample App'
+	    vendorName = 'Enonic AS'
+	    vendorUrl = 'http://enonic.com'
+	}
+
+
 JavaScript API
 --------------
+
+The Script commands used to access extra functions in the controllers have been replaced by libraries.
+These libraries will be automatically included in the App using the gradle build.
+
+The usages of `execute('lib_name.func_name', params)` should be replaced with calls to functions with the same name in the new corresponding library.
+
+Steps to upgrade:
+
+* Add dependencies for the libraries needed in the build.gradle of the app project, some or all of these:
+
+.. code-block:: none
+
+	dependencies {
+	    include 'com.enonic.xp:lib-portal:6.0.0-SNAPSHOT'
+	    include 'com.enonic.xp:lib-thymeleaf:6.0.0-SNAPSHOT'
+	    include 'com.enonic.xp:lib-xslt:6.0.0-SNAPSHOT'
+	    include 'com.enonic.xp:lib-i18n:6.0.0-SNAPSHOT'
+	    include 'com.enonic.xp:lib-content:6.0.0-SNAPSHOT'
+	}
 
 
 Portal library
