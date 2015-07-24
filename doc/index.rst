@@ -18,7 +18,7 @@ is `available on github`_ in a separate project.
 
    getting-started/installation
    getting-started/install-demo-module
-   first-module/index
+   getting-started/my-first-app
 
 .. toctree::
    :maxdepth: 1
