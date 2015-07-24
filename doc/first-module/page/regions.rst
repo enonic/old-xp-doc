@@ -2,7 +2,7 @@ Adding regions
 ==============
 
 To be able to add components like images, component parts, or text to our page via the live edit drag and drop
-interface, we need to create at least one region. To do this we will first modify the page descriptor (``page.xml``) to
+interface, we need to create at least one region. To do this we will first modify the page descriptor (``my-first-page.xml``) to
 support one region called ``main``.
 
 .. literalinclude:: code/page-2.xml

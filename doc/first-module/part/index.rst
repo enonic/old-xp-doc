@@ -4,7 +4,7 @@ Creating a part component
 Creating a component is very similar to creating a page. We need a descriptor, a controller and a view. When they are
 done, we can add the part component to the page by using drag and drop in live edit.
 
-Start by creating folders ``part/mypart``, and add a ``mypart.xml`` descriptor. This is very similar to our ``page.xml``, the
+Start by creating folders ``part/mypart``, and add a ``mypart.xml`` descriptor. This is very similar to our ``my-first-page.xml``, the
 only difference is that a part cannot contain any regions. We want this part to list our favorite things to do, so we
 will need to configure some input for the part. We will add a text input which can be repeated up to 5 times.
 

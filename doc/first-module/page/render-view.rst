@@ -11,7 +11,7 @@ To make a view, create a file ``my-first-page.html`` in the ``view`` folder.
 .. literalinclude:: code/thymeleaf-1.html
    :language: html
 
-In our ``controller.js`` file, we will need to parse the view to a string for
+In our ``my-first-page.js`` file, we will need to parse the view to a string for
 output. Here is where the Thymeleaf engine comes in. Using the Thymeleaf
 rendering engine is easy; here is how we do it.
 

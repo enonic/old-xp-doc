@@ -3,6 +3,7 @@ Descriptor
 
 The page descriptor is required to register the page and allows us to set up user input fields to configure the page.
 It also allows us to describe what regions are available in this page.
+The file must be named ``[page-name].xml``.
 
 .. literalinclude:: code/page-1.xml
    :language: xml

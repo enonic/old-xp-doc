@@ -3,14 +3,14 @@ Adding a Controller
 
 To be able to give a response to a request to this page, we will need to create
 a controller in the ``page/my-first-page`` folder. The controller is
-written in JavaScript and must be named ``controller.js``. A controller
-exports a set of methods, one for each HTTP method that should be handled.
+written in JavaScript and must be named ``my-first-page.js`` in our case.
+A controller exports a set of methods, one for each HTTP method that should be handled.
 The handle method has a request object as parameter and returns the result.
 
 .. literalinclude:: code/controller-1.js
    :language: javascript
 
-Create a simple ``controller.js`` file to render an HTML-page when it
+Create a simple ``my-first-page.js`` file to render an HTML-page when it
 receives a get request.
 
 .. literalinclude:: code/controller-2.js
