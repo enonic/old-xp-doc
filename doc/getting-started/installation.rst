@@ -51,8 +51,8 @@ Windows::
 
   $ $XP_INSTALL\bin\server.bat
 
-This will start Enonic XP, which when successfully started will show something
-like the following at the end of the log::
+This will start Enonic XP. When successfully started, something
+like the following will appear at the end of the log::
 
   12:53:14.302 INFO  c.e.x.l.framework.FrameworkService - Started Enonic XP in 7378 ms
 

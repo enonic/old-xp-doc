@@ -5,7 +5,7 @@ My First App
 .. WARNING:: WORK IN PROGRESS
 
 .. NOTE:: To complete this tutorial, you will need
-  **A local running installation of Enonic XP (with XP_HOME defined)**
+  **A local running installation of Enonic XP (with the $XP_HOME environment variable defined)**
   and a **Text editor of your choice (i.e. Atom)**
 
   All terminal actions assume you're using OSX or Linux
@@ -31,16 +31,16 @@ It includes an option to initialize an application with all the standard structu
 
 Run the following command while located in your target folder::
 
-  $XP_HOME/toolbox init-app -n com.company.myapp
+  $XP_INSTALL/toolbox.sh init-app -n com.company.myapp
 
 .. tip:: Only basic characters (a-z, 0-9 and .) should be used for application names. We recommend following standard Java package naming conventions
 
 For all options on the init script, Run::
 
-  $XP_HOME/toolbox help init-app
+  $XP_INSTALL/toolbox.sh help init-app
 
 
-The init script will create a standard project structure for your app, and configure Gradle build scripts.
+The init script will create a standard project structure for your app and configure Gradle build scripts.
 
 Investigate the build.gradle file located on your projects root for more details.
 
@@ -51,15 +51,18 @@ Build and Deploy
 ----------------
 Now that we have set up a project, we should test that it builds and deploys successfully.
 
+.. note:: The $XP_HOME environment variable must be set to the path of the home folder of the XP installation.
+  For example, ``$ export XP_HOME=/User/<name>/enonic-xp-6.0.0/home``
+
 Simply execute the following command, while placed in your root directory::
 
   ./gradlew deploy
 
 If you don't already have gradle installed, the gradle wrapper will download this first.
-Next it build build, and then attempt to deploy the app.
+Next it will build and then attempt to deploy the app.
 
-The deployment process simply consists of moving the result of the build (the application file) into the $XP_HOME/deploy directory.
-From there Enonic XP will detect, install and start the application automatically.
+The deployment process simply consists of moving the result of the build, (the application file) into the $XP_HOME/deploy directory.
+From there, Enonic XP will detect, install and start the application automatically.
 
 
 Hello World Site
@@ -158,7 +161,7 @@ When done - redeploy your app once again!::
   ./gradlew deploy
 
 
-Add Favourite Country
+Add Favorite Country
 ---------------------
 
 Now that the "Country" content type is installed,
@@ -166,7 +169,7 @@ we can create new countries using the Content Manager.
 
 #. Select the "Hello World" site from the navigation tree
 #. Choose ``New``, and select "Country" from the list of content types.
-#. Fill the form with the details of your favourite country and press save.
+#. Fill the form with the details of your favorite country and press save.
 
 TODO IMAGE
 
@@ -175,7 +178,7 @@ Similar to the site, we must also configure a view for the country
 #. From the Live Edit panel to the right, select "Hello Region" (this "pretty" name comes from the page xml configuration file).
 #. Save
 
-You should now have a page that renders your favourite country, something like this:
+You should now have a page that renders your favorite country, something like this:
 
 MISSING IMAGE
 
@@ -208,12 +211,12 @@ Now, every "Country" you create in the structure will use this template by defau
 
 Try this out by creating a few new countries in your site.
 
-Update Favourite Country
+Update Favorite Country
 ------------------------
 
-You might remember that your favourite country was "hardcoded" - so lets change it to use templates too.
+You might remember that your favorite country was "hardcoded" - so lets change it to use templates too.
 
-To update your favourite country to use this template too:
+To update your favorite country to use this template too:
 
 #. Select the country and click ``Edit``
 #. In Live Edit view, select the entire page (if you select the part first, simply click ``parent``"`` twice to select the page)
