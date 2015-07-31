@@ -6,13 +6,13 @@ Repositories
 
 There are changes to the repositories in version 6.0
 
-In the provided toolbox, there are a task ´´upgrade´´ that will do the necessary changes to your data.
+In the provided toolbox, there is a task ``upgrade`` that will do the necessary changes to your data.
 
 To upgrade your 5.3.1 installation, execute the following steps:
 
- 1. Dump your 5.3.1 installation by the toolbox ´´dump´´ tool
- 2. Upgrade the dump with toolbox ´´upgrade´´
- 3. Load the repository into a new instance of Enonix XP.
+ 1. Dump your 5.3.1 installation with the toolbox ``dump`` tool
+ 2. Upgrade the dump with toolbox ``upgrade``
+ 3. Load the repository into a new instance of Enonix XP with the toolbox ``load`` tool
 
 
 Portal

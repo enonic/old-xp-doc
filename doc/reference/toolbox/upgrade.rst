@@ -22,4 +22,4 @@ The output of the upgrade will be placed at $CURRENT_DIR/upgraded/<dump-name>
 
 .. code-block:: none
 
-  $ ./toolbox.sh dump -d ./data/dump/5.3.0-dump
+  $ ./toolbox.sh upgrade -d ./data/dump/5.3.0-dump
