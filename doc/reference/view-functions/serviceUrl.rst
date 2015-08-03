@@ -8,8 +8,8 @@ This generates a URL pointing to a service.
 _service
   Name of the service.
 
-_module
-  Other module to reference to.  Default is current module.
+_application
+  Other application to reference to.  Default is current application.
 
 *everything else*
   Custom parameters to append to the url.

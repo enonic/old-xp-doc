@@ -8,8 +8,8 @@ This generates a URL pointing to a static file.
 _path
   Path to the asset.
 
-_module
-  Other module to reference to. Defaults to current module.
+_application
+  Other application to reference to. Defaults to current application.
 
 *everything else*
   Custom parameters to append to the url.

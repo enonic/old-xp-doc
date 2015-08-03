@@ -13,8 +13,8 @@ This function generates a URL pointing to a static file.
 path *(string)*
   Path to the asset.
 
-module *(string)*
-  Other module to reference to. Defaults to current module.
+application *(string)*
+  Other application to reference to. Defaults to current application.
 
 params *(object)*
   Custom parameters to append to the url.

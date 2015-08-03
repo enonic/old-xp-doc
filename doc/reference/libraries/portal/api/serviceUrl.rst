@@ -13,8 +13,8 @@ This function generates a URL pointing to a service.
 service *(string)*
   Name of the service.
 
-module *(string)*
-  Other module to reference to.  Default is current module.
+application *(string)*
+  Other application to reference to.  Default is current application.
 
 params *(object)*
   Custom parameters to append to the url.
