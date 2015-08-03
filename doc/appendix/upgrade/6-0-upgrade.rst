@@ -23,6 +23,7 @@ Portal
 * Remove "scale" prefix in scale functions e.g. scaleblock() -> block().
 * Separate scale from filters in image URL, new format: /_/image/inline/<imageid>/<scale>/contentname.format?filter=xxx
 e.g _/image/inline/234234234/wide-400-200/mer.jpg?filter=blur(10)
+* Renamed parameter "module" to "application" for script commands and view functions "assetUrl" and "serviceUrl"
 
 
 Module
