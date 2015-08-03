@@ -21,9 +21,9 @@ Portal
 * Regions are identified by name instead of position.
 * Add mandatory "scale" parameter to image URL function.
 * Remove "scale" prefix in scale functions e.g. scaleblock() -> block().
+* Renamed parameter "module" to "application" for script commands and view functions "assetUrl" and "serviceUrl"
 * Separate scale from filters in image URL, new format: /_/image/inline/<imageid>/<scale>/contentname.format?filter=xxx
 e.g _/image/inline/234234234/wide-400-200/mer.jpg?filter=blur(10)
-* Renamed parameter "module" to "application" for script commands and view functions "assetUrl" and "serviceUrl"
 
 
 Module
