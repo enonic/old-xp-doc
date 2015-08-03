@@ -1,5 +1,5 @@
 Upgrading to 6.0.0
-===================
+==================
 
 Repositories
 ------------
@@ -139,7 +139,7 @@ Replace with:
 
 
 Thymeleaf library
-------------------
+-----------------
 
 * Search and replace the following calls in js controllers;
 
@@ -158,7 +158,7 @@ Thymeleaf library
 
 
 Content library
-----------------
+---------------
 
 * Search and replace
 
@@ -188,7 +188,7 @@ Replace with:
 
 
 Xslt library
-------------------
+------------
 
 * Search and replace the following calls in js controllers;
 
@@ -206,7 +206,7 @@ Xslt library
 
 
 I18n library
-------------------
+------------
 
 * Search and replace the following calls in js controllers;
 

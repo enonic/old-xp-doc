@@ -6,7 +6,7 @@ My First App
 
 .. NOTE:: To complete this tutorial, you will need
   **A local running installation of Enonic XP (with the $XP_HOME environment variable defined)**
-  and a **Text editor of your choice (i.e. Atom)**
+  and a **Text editor of your choice (e.g. Atom)**
 
   All terminal actions assume you're using OSX or Linux
 
@@ -24,20 +24,20 @@ In order to get started quickly, a tool exists to create the basic project struc
 Init App
 --------
 Find a suitable location on your filesystem where you want to place the code for your application, and create an empty folder.
-i.e. /Users/<username>/project/myapp
+e.g. /Users/<username>/project/myapp
 
 Included with Enonic XP is the :ref:`toolbox` command.
 It includes an option to initialize an application with all the standard structures typically required for an app.
 
 Run the following command while located in your target folder::
 
-  $XP_INSTALL/toolbox.sh init-app -n com.company.myapp
+  $XP_INSTALL/toolbox/toolbox.sh init-app -n com.company.myapp
 
 .. tip:: Only basic characters (a-z, 0-9 and .) should be used for application names. We recommend following standard Java package naming conventions
 
 For all options on the init script, Run::
 
-  $XP_INSTALL/toolbox.sh help init-app
+  $XP_INSTALL/toolbox/toolbox.sh help init-app
 
 
 The init script will create a standard project structure for your app and configure Gradle build scripts.
@@ -76,7 +76,7 @@ Site descriptor
 ---------------
 
 An application can serve many purposes, building sites is just one of them.
-We will create a site decriptor, and this will let Enonic XP know this app can be added to a site.
+We will create a site descriptor, and this will let Enonic XP know this app can be added to a site.
 
 Add the following file to your project::
 
@@ -98,7 +98,7 @@ When done, redeploy your app::
 
 
 Create Site
--------------
+-----------
 
 Log in to the Administrative console using the Administrative user, and navigate to the Content Manager App.
 
@@ -162,7 +162,7 @@ When done - redeploy your app once again!::
 
 
 Add Favorite Country
----------------------
+--------------------
 
 Now that the "Country" content type is installed,
 we can create new countries using the Content Manager.

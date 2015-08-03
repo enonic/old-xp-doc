@@ -9,6 +9,10 @@ For example, ``site/mixins/us-address/us-address.xml``.
 .. literalinclude:: code/mixin.xml
    :language: xml
 
+.. TIP::
+
+  A mixin may optionally have its own specific icon. The icon can be assigned to the mixin by adding a PNG file with
+  the same name, in the mixin folder, e.g. ``site/mixins/us-address/us-address.png``
 
 Using a mixin
 -------------

@@ -26,6 +26,11 @@ allowed-to-types
 The content types have the format ``module-name:content-type-name``.
 The module may be ``system`` for built-in types.
 
+.. TIP::
+
+  A relationship type may optionally have its own specific icon. The icon can be assigned to the relationship type by adding a PNG file with
+  the same name, in the relationship type folder, i.e. ``site/relationship-types/[name]/[name].png``
+
 
 System relationship types
 -------------------------
