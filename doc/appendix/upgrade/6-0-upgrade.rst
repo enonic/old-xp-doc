@@ -32,6 +32,7 @@ Module
 * Rename module.xml to site.xml.
 * Rename module element name to site in site.xml.
 * Rename src/main/resources/cms folder to src/main/resources/site.
+* Rename src/main/resources/site.xml file to src/main/resources/site/site.xml.
 * Rename form-item-set to item-set element.
 * Rename part-component element name to part .
 * Rename layout-component element name to layout.
