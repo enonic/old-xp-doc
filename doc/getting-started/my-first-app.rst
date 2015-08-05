@@ -33,11 +33,8 @@ Run the following command while located in your target folder::
 
   $XP_INSTALL/toolbox/toolbox.sh init-app -n com.company.myapp
 
-.. tip:: Only basic characters (a-z, 0-9 and .) should be used for application names. We recommend following standard Java package naming conventions
-
-For all options on the init script, Run::
-
-  $XP_INSTALL/toolbox/toolbox.sh help init-app
+.. tip:: Only basic characters (a-z, 0-9 and .) should be used for application names. We recommend following standard Java package naming
+  conventions. To see all options available with the init script, Run: ``$XP_INSTALL/toolbox/toolbox.sh help init-app``
 
 
 The init script will create a standard project structure for your app and configure Gradle build scripts.
@@ -52,59 +49,98 @@ Build and Deploy
 Now that we have set up a project, we should test that it builds and deploys successfully.
 
 .. note:: The $XP_HOME environment variable must be set to the path of the home folder of the XP installation.
-  For example, ``$ export XP_HOME=/User/<name>/enonic-xp-6.0.0/home``
+  For example, ``$ export XP_HOME=/Users/<name>/enonic-xp-6.0.0/home``
 
-Simply execute the following command, while placed in your root directory::
+Simply execute the following command from the project root directory::
 
   ./gradlew deploy
 
 If you don't already have gradle installed, the gradle wrapper will download this first.
 Next it will build and then attempt to deploy the app.
 
-The deployment process simply consists of moving the result of the build, (the application file) into the $XP_HOME/deploy directory.
+The deployment process simply consists of moving the result of the build, (the application file) into the ``$XP_HOME/deploy`` directory.
 From there, Enonic XP will detect, install and start the application automatically.
 
 
 Hello World Site
 ================
 
-Our next goal is to set up a "Hello World" site,
+Our next goal is to set up a "Hello World" site in the XP administration console,
 but first we must add some initial configuration to our project.
 
 Site descriptor
-
 ---------------
 
-An application can serve many purposes, building sites is just one of them.
-We will create a site descriptor, and this will let Enonic XP know this app can be added to a site.
+An application can serve many purposes and building sites is just one of them. The ``site.xml`` file is the descriptor that will let Enonic
+XP know that this app can be added to a site. Site-wide configurations can be defined in this file but we will leave the config element
+empty for now.
 
-Add the following file to your project::
+A basic site.xml file is automatically created by the app-init script::
 
   src/main/resources/site/site.xml
 
+.. literalinclude:: code/site.xml
+   :language: xml
 
-Page Controller
+Page Component
 ---------------
 
-Now, we need to set up a page controller, the page controller is responsible for displaying - you know - pages.
-Create the files specified below in their specific locations::
+A page component is used to create page templates in the administration console. Any number of page templates can be created
+from a single page component. Each page component requires three files: An XML descriptor, a JavaScript controller, and an HTML
+view file.
 
-  src/main/resources/site/pages/hello/hello.js
-  src/main/resources/site/pages/hello/hello.html
+Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the three files
+specified below inside the ``hello`` folder:
 
-When done, redeploy your app::
+The **page descriptor** is an XML file that defines the display-name and any configuration required by the page. The config element
+will be empty for now.
+
+``src/main/resources/site/pages/hello/hello.xml``
+
+.. literalinclude:: code/page-initial/hello.xml
+   :language: xml
+
+The **page controller** is a JavaScript file that passes dynamic values to the view file. No values are passed in this example, but
+the view file is defined and rendered with the Thymeleaf templating engine.
+
+``src/main/resources/site/pages/hello/hello.js``
+
+.. literalinclude:: code/page-initial/hello.js
+   :language: js
+
+The view is a simple HTML file. Later, Thymeleaf will be used to make the page dynamic.
+
+``src/main/resources/site/pages/hello/hello.html``
+
+.. literalinclude:: code/page-initial/hello.html
+   :language: html
+
+
+Once these files are in place, redeploy the app::
 
   ./gradlew deploy
 
+.. tip:: Each page component must reside in its own folder under the ``site/pages`` directory. The name of the XML and JS files must be the
+  same as the directory that contains them. The HTML view file can reside anywhere in the project and have any valid file name. This allows
+  the view files to be shared between components. Just make sure to specify the full path of the view file in the controller when the view
+  is not in the same directory.
 
 Create Site
 -----------
 
 Log in to the Administrative console using the Administrative user, and navigate to the Content Manager App.
 
-#. Click ``New``, and select "Site" from the list of content types
+#. Click ``New`` and select "Site" from the list of content types
 #. Fill in the form with Display Name: "Hello World"
-#. From the Live Edit panel (to the right), select "hello" as your page controller.
+#. Click the ``Save draft`` button on the top-left then close the site tab.
+
+Now that a ``Site`` content has been created, a built-in ``Templates`` folder appears below it in the content pane. A page template must be
+created here before any pages can be viewed.
+
+#. Click on the small triangle left of the globe icon to open the content tree.
+#. Click on the ``Templates`` icon and click ``New``.
+#. Name the template "Hello".
+#. In the Live Edit panel (to the right), select "Hello" as your page controller.
 #. Click ``Save draft``
 
 You should now have a site that looks something like this:
