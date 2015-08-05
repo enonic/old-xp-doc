@@ -79,9 +79,6 @@ A basic site.xml file is automatically created by the app-init script::
 
   src/main/resources/site/site.xml
 
-.. literalinclude:: code/site.xml
-   :language: xml
-
 Page Component
 ---------------
 
@@ -101,7 +98,7 @@ will be empty for now.
    :language: xml
 
 The **page controller** is a JavaScript file that passes dynamic values to the view file. No values are passed in this example, but
-the view file is defined and rendered with the Thymeleaf templating engine.
+the view file is specified and rendered with the Thymeleaf templating engine.
 
 ``src/main/resources/site/pages/hello/hello.js``
 
@@ -132,12 +129,13 @@ Log in to the Administrative console using the Administrative user, and navigate
 
 #. Click ``New`` and select "Site" from the list of content types
 #. Fill in the form with Display Name: "Hello World"
-#. Click the ``Save draft`` button on the top-left then close the site tab.
+#. Click the ``Save draft`` button on the top-left.
+#. Now close the site tab to see the content pane.
 
-Now that a ``Site`` content has been created, a built-in ``Templates`` folder appears below it in the content pane. A page template must be
-created here before any pages can be viewed.
+Now that a ``Site`` content has been created, a built-in ``Templates`` folder appears below it in the content pane. At least one page
+template must be created here before any pages can be viewed.
 
-#. Click on the small triangle left of the globe icon to open the content tree.
+#. Click on the small triangle to left of the globe icon to open the site content tree.
 #. Click on the ``Templates`` icon and click ``New``.
 #. Name the template "Hello".
 #. In the Live Edit panel (to the right), select "Hello" as your page controller.
