@@ -107,80 +107,62 @@ JavaScript example:
   The new ``scale`` parameter in image URL functions is mandatory.
 
 
-Finally, the parameter ``module`` has been renamed to "application" for the JavaScript and view (Thymeleaf, XSLT) functions ``assetUrl`` and ``serviceUrl``
+Finally, the parameter ``module`` has been renamed to ``application`` for the JavaScript and view (Thymeleaf, XSLT) functions ``assetUrl`` and ``serviceUrl``
 
 
 Building applications
 ---------------------
 
-The gradle build plugin must follow the version used for building.
+An application requires some changes in the ``build.gradle`` file:
 
-.. code-block:: none
+* The *gradle* plugin has been renamed from ``com.enonic.xp.gradle.module`` to ``com.enonic.xp.app``
+* From now on, the gradle build plugin must follow the XP version used (e.g. currently *6.0.0* ).
+* Since the Script commands have been replaced with libraries (see below :ref:`6upgrade_javascript_api`) the gradle build must include the library dependencies that are needed.
 
-	buildscript {
-	    repositories {
-	        mavenLocal()
-	        jcenter()
-	        maven {
-	            url 'http://repo.enonic.net/public'
-	        }
-	    }
+Example of build.gradle file:
 
-	    dependencies {
-	        classpath 'com.enonic.xp:gradle-plugin:6.0.0-SNAPSHOT'
-	    }
-	}
+.. literalinclude:: code/build.gradle
+   :language: groovy
 
-	apply plugin: 'com.enonic.xp.app'
-
-	app {
-	    name = 'com.enonic.wem.apps.xslt'
-	    displayName = 'Xslt Sample App'
-	    vendorName = 'Enonic AS'
-	    vendorUrl = 'http://enonic.com'
-	}
-
+.. _6upgrade_javascript_api:
 
 JavaScript API
 --------------
 
 The Script commands used to access extra functions in the controllers have been replaced by libraries.
-These libraries will be automatically included in the App using the gradle build.
+The libraries that are needed can be made available for an application using the gradle build.
 
-The usages of `execute('lib_name.func_name', params)` should be replaced with calls to functions with the same name in the new corresponding library.
+The Script command calls in the form of ``execute('lib_name.func_name', params)`` should be replaced with calls to functions with the same name in the new corresponding library.
 
-Steps to upgrade:
+For example:
 
-* Add dependencies for the libraries needed in the build.gradle of the app project, some or all of these:
+.. literalinclude:: code/api_60.js
+   :language: js
 
-.. code-block:: none
+
+.. IMPORTANT::
+
+  Usages of Script commands in JavaScript controllers must be replaced with calls to functions in the corresponding libraries.
+
+
+**In order to upgrade 5.x controllers to 6.0 :**
+
+1. Add dependencies for the libraries needed in the build.gradle of the app project, some or all of these:
+
+.. code-block:: groovy
 
 	dependencies {
-	    include 'com.enonic.xp:lib-portal:6.0.0-SNAPSHOT'
-	    include 'com.enonic.xp:lib-thymeleaf:6.0.0-SNAPSHOT'
-	    include 'com.enonic.xp:lib-xslt:6.0.0-SNAPSHOT'
-	    include 'com.enonic.xp:lib-i18n:6.0.0-SNAPSHOT'
-	    include 'com.enonic.xp:lib-content:6.0.0-SNAPSHOT'
+		include 'com.enonic.xp:lib-portal:6.0.0'
+		include 'com.enonic.xp:lib-thymeleaf:6.0.0'
+		include 'com.enonic.xp:lib-xslt:6.0.0'
+		include 'com.enonic.xp:lib-i18n:6.0.0'
+		include 'com.enonic.xp:lib-content:6.0.0'
 	}
 
+2. Follow the steps below to use the functions in the different libraries.
 
 Portal library
---------------
-
-* Search and replace execute('portal.*Url', with portal.*Url(
-
-This can be done e.g with this Regex from IntelliJ IDEA (Replace in Path):
-Text to find:
-
-.. code-block:: none
-
-	execute\('portal\.(.*)Url', 
-
-Replace with:
-
-.. code-block:: none
-    
-	portal\.$1Url\(
+~~~~~~~~~~~~~~
 
 * Search and replace the following calls in js controllers;
 
@@ -196,13 +178,13 @@ Replace with:
 
 * Add a `require` call for the "portal" library at the top of each JavaScript file where a "portal.*" command was used:
 
-.. code-block:: none
-    
+.. code-block:: js
+
 	var portal = require('/lib/xp/portal');
 
 
 Thymeleaf library
------------------
+~~~~~~~~~~~~~~~~~
 
 * Search and replace the following calls in js controllers;
 
@@ -212,46 +194,38 @@ Thymeleaf library
 | execute('thymeleaf.render',   | thymeleaf.render(       |
 +-------------------------------+-------------------------+
 
-* Add `require` call for the "thymeleaf" library at the top of each JavaScript file where the "thymeleaf.render" command was used:
+* Note that the parameters to render are now 2 separate parameters instead of an object: ``thymeleaf.render(view, model)`` vs ``execute('thymeleaf.render', {view: view, model: params})``
 
-.. code-block:: none
+* Add a `require` call for the "thymeleaf" library at the top of each JavaScript file where the "thymeleaf.render" command was used:
+
+.. code-block:: js
 
     var thymeleaf = require('/lib/xp/thymeleaf');
 
 
 
 Content library
----------------
+~~~~~~~~~~~~~~~
 
 * Search and replace
 
 +-------------------------------+-------------------------+
 | Search                        |  Replace                |
 +===============================+=========================+
-| execute('content.*',          | contentSvc.(            |
+| execute('content.*',          | contentSvc.*(           |
 +-------------------------------+-------------------------+
 
 (We use a variable named ``contentSvc`` to avoid conflicts with variables representing a Content instance, which are often named ``content``)
 
-It can be done with this Regex from IntelliJ IDEA (Replace in Path):
-
-Text to find:
-
-``execute\('content\.(.*)',``
-
-Replace with:
-
-``contentSvc\.$1\(``
- 
 * Add `require` call for the "content" library at the top of each JavaScript file where a "content.*" command was used:
 
-.. code-block:: none
+.. code-block:: js
 
    var contentSvc = require('/lib/xp/content');
 
 
 Xslt library
-------------
+~~~~~~~~~~~~
 
 * Search and replace the following calls in js controllers;
 
@@ -263,13 +237,13 @@ Xslt library
 
 * Add `require` call for the "xslt" library at the top of each JavaScript file where the "xslt.render" command was used:
 
-.. code-block:: none
+.. code-block:: js
 
     var xslt = require('/lib/xp/xslt');
 
 
 i18n library
-------------
+~~~~~~~~~~~~
 
 * Search and replace the following calls in js controllers;
 
@@ -281,6 +255,6 @@ i18n library
 
 * Add `require` call for the "i18n" library at the top of each JavaScript file where the "i18n.localize" command was used:
 
-.. code-block:: none
+.. code-block:: js
 
     var i18n = require('/lib/xp/i18n');
