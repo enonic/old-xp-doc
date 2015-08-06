@@ -38,12 +38,6 @@ A checkbox field has a value if it is checked, or no value if it is not checked.
 that makes sense is a minimum of zero and a maximum of one.  Any other value than zero for minimum is illegal.
 
 
-Color
------
-
-A color input-type.
-
-
 ComboBox
 --------
 
@@ -126,22 +120,6 @@ Long
 
 A simple field for large integers.
 
-Money
------
-
-Money string input-type.
-
-
-Phone
------
-
-Phone string input-type.
-
-Region
-------
-
-Region picker input-type.
-
 
 ContentSelector
 ---------------
@@ -207,12 +185,6 @@ Time
 ----
 
 A simple field for time.  A pop-up box allows simple selection of a certain time.  The default format is ``hh:mm``.
-
-
-Xml
----
-
-An input-type for XML text.
 
 
 Field set
