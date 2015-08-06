@@ -1,3 +1,5 @@
+.. _toolbox-upgrade:
+
 upgrade
 =======
 
