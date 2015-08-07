@@ -26,7 +26,7 @@ Init App
 Find a suitable location on your filesystem where you want to place the code for your application, and create an empty folder.
 e.g. /Users/<username>/project/myapp
 
-Included with Enonic XP is the :ref:`toolbox` command.
+Included with Enonic XP is the :ref:`toolbox`.
 It includes an option to initialize an application with all the standard structures typically required for an app.
 
 Run the following command while located in your target folder::
@@ -37,7 +37,7 @@ Run the following command while located in your target folder::
   conventions. To see all options available with the init script, Run: ``$XP_INSTALL/toolbox/toolbox.sh help init-app``
 
 
-The init script will create a standard project structure for your app and configure Gradle build scripts.
+The init-app script will create a standard project structure for your app and configure Gradle build scripts.
 
 Investigate the build.gradle file located on your projects root for more details.
 
@@ -56,9 +56,9 @@ Simply execute the following command from the project root directory::
   ./gradlew deploy
 
 If you don't already have gradle installed, the gradle wrapper will download this first.
-Next it will build and then attempt to deploy the app.
+Next it will build the app and then attempt to deploy it.
 
-The deployment process simply consists of moving the result of the build, (the application file) into the ``$XP_HOME/deploy`` directory.
+The deployment step simply moves the result of the build, (the application jar file) into the ``$XP_HOME/deploy`` directory.
 From there, Enonic XP will detect, install and start the application automatically.
 
 
@@ -125,7 +125,8 @@ Once these files are in place, redeploy the app::
 Create Site
 -----------
 
-Log in to the Administrative console using the Administrative user, and navigate to the Content Manager App.
+Log in to the Administrative console using the Administrative user, and navigate to the Content Manager App. The default username is "su"
+and the password is "password".
 
 #. Click ``New`` and select "Site" from the list of content types
 #. Fill in the form with Display Name: "Hello World"
@@ -137,7 +138,8 @@ template must be created here before any pages can be viewed.
 
 #. Click on the small triangle to left of the globe icon to open the site content tree.
 #. Click on the ``Templates`` icon and click ``New``.
-#. Name the template "Hello".
+#. Name the template "Hello" in the <Display Name> field.
+#. In the dropdown field labeled "Supports", select the Site content type.
 #. In the Live Edit panel (to the right), select "Hello" as your page controller.
 #. Click ``Save draft``
 
@@ -158,22 +160,25 @@ Country Content Type
 To add structured data (such as countries), we need so-called content types.
 The content type defines the form (and underlying schema) of items you manage.
 
-Add the following file to your project::
+Create a folder called "country" inside the "content-types" folder of your project. Then add the following file to this folder::
 
   src/main/resources/site/content-types/country/country.xml
 
+.. literalinclude:: code/content-types/country1.xml
+  :language: xml
 
 Country Part
 ------------
 
-We also need a way to present a country - because every country want's to be seen.
+We also need a way to present a country - because every country wants to be seen.
 This time, rather than just making another page controller - we will create a part.
 Parts are reusable components that can be added to pages with "regions" - more on this below.
 
-Add the following files to your project::
+Create a folder called "country" inside the "parts" folder in your project. Then add the following files in the "country" folder::
 
-  src/main/resources/site/part/country/country.js
-  src/main/resources/site/part/country/country.html
+  src/main/resources/site/parts/country/country.xml
+  src/main/resources/site/parts/country/country.js
+  src/main/resources/site/parts/country/country.html
 
 
 Hello Region Page
