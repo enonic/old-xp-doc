@@ -6,16 +6,16 @@ TODO intro
 Repositories
 ------------
 
-Some of the changes to the repositories done in version 6.0 require the data created with version 5.x to be upgraded.
-But note that when starting with a new installation, without any data, this part can be skipped.
+Any data that was create in version 5.0 must be upgraded to conform to the repository changes in version 6.0.
+This part can be skipped when starting with a new installation that doesn't have any data.
 
-In the provided toolbox, there is a task ``upgrade`` that will do the necessary changes to your data.
+The necessary changes to your data can be performed with the ``upgrade`` task in the provided :ref:`toolbox`.
 
 To upgrade your 5.3.1 installation, execute the following steps:
 
- 1. Dump your 5.3.1 installation with the toolbox :ref:`toolbox-dump` tool
- 2. Upgrade the dump with toolbox :ref:`toolbox-upgrade`
- 3. Load the repository into a new instance of Enonic XP with the toolbox :ref:`toolbox-load` tool
+#. Dump your 5.3.1 installation with the toolbox :ref:`toolbox-dump` tool
+#. Upgrade the dump with toolbox :ref:`toolbox-upgrade`
+#. Load the repository into a new instance of Enonic XP with the toolbox :ref:`toolbox-load` tool
 
 
 Module
@@ -39,7 +39,8 @@ In addition, some XML element names must be renamed in the page, part, layout an
 * Rename the ``<layout-component>`` element name to ``<layout>``
 * Rename the ``<page-component>`` element name to ``<page>``
 * Rename the ``<module>`` element name to ``<site>`` in site.xml
-* Rename input type ``SingleSelector`` to ``RadioButtons`` (i.e. ``<input name="..." type="SingleSelector">``)
+* Change input type ``SingleSelector`` to ``RadioButtons`` (or ``ComboBox`` for dropdowns) and remove the ``<selector-type>`` element.
+  (i.e. ``<input name="..." type="SingleSelector">``).
 
 Some properties in the Content object, possibly used in JavaScript controllers, have also been renamed:
 
@@ -58,13 +59,13 @@ Portal
 Regions
 ~~~~~~~
 In 5.x the regions in a page were identified by their position (1st, 2nd, 3rd...) inside the page or layout.
-This was problematic in Live Edit and could break the rendering in some cases.
+This was problematic in Live Edit and could even break the rendering in some cases.
 
-Since 6.0, regions will be identified by name. This makes Live Edit more robust and also the page structure more flexible for developers,
+Since 6.0, regions will be identified by name. This makes Live Edit more robust and the page structure more flexible for developers,
 since they can reorder the page and layout HTML elements without breaking anything.
 
-This change requires a minor update on the existing layout and page HTML view files (Thymeleaf, XSLT). The region definition in the XML file already had a name,
-and now the HTML generated in the view must contain an attribute ``data-portal-region`` with that region name.
+This change requires a minor update to the existing layout and page HTML view files (Thymeleaf, XSLT). The region definition in the XML file
+already had a name, and now the HTML generated in the view must contain an attribute ``data-portal-region`` with that region name.
 
 .. literalinclude:: code/region_5x.html
    :language: html
@@ -75,7 +76,7 @@ and now the HTML generated in the view must contain an attribute ``data-portal-r
 
 .. IMPORTANT::
 
-  The region HTML root element, in pages and layouts, must include an attribute with the region name.
+  Each region HTML root element in pages and layouts must include an attribute with the region name.
 
 URL functions
 ~~~~~~~~~~~~~
@@ -102,9 +103,8 @@ JavaScript example:
 .. literalinclude:: code/imageurl_60.js
    :language: js
 
-.. IMPORTANT::
-
-  The new ``scale`` parameter in image URL functions is mandatory.
+.. IMPORTANT:: The new ``scale`` parameter in image URL functions is mandatory. To render an image URL with no scaling, use
+  ``scale: '(1,1)'``.
 
 
 Finally, the parameter ``module`` has been renamed to ``application`` for the JavaScript and view (Thymeleaf, XSLT) functions ``assetUrl`` and ``serviceUrl``

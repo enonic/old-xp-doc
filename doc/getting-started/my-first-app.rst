@@ -143,7 +143,7 @@ template must be created here before any pages can be viewed.
 
 You should now have a site that looks something like this:
 
-MISSING IMAGE
+.. image:: images/hello-world-site1.png
 
 
 Adding Countries
