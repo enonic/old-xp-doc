@@ -61,6 +61,8 @@ Next it will build the app and then attempt to deploy it.
 The deployment step simply moves the result of the build, (the application jar file) into the ``$XP_HOME/deploy`` directory.
 From there, Enonic XP will detect, install and start the application automatically.
 
+Log in to the Administrative console using the Administrative user, and navigate to the Applications App. The default username is “su” and the password is “password”.
+Check that the application you just deployed is listed, and that it has started.
 
 Hello World Site
 ================
@@ -83,19 +85,11 @@ Page Component
 ---------------
 
 A page component is used to create page templates in the administration console. Any number of page templates can be created
-from a single page component. Each page component requires three files: An XML descriptor, a JavaScript controller, and an HTML
-view file.
+from a single page component. Each page component requires two files: a JavaScript controller and an HTML
+view file (an XML descriptor is optional).
 
-Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the three files
+Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the two files
 specified below inside the ``hello`` folder:
-
-The **page descriptor** is an XML file that defines the display-name and any configuration required by the page. The config element
-will be empty for now.
-
-``src/main/resources/site/pages/hello/hello.xml``
-
-.. literalinclude:: code/page-initial/hello.xml
-   :language: xml
 
 The **page controller** is a JavaScript file that passes dynamic values to the view file. No values are passed in this example, but
 the view file is specified and rendered with the Thymeleaf templating engine.

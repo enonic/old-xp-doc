@@ -7,8 +7,6 @@ exports.get = function(req) {
     var body = thymeleaf.render(view, model);
 
     return {
-        contentType: 'text/html',
-        status: 200,
         body: body
     }
 };
