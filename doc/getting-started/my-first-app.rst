@@ -124,6 +124,7 @@ and the password is "password".
 
 #. Click ``New`` and select "Site" from the list of content types
 #. Fill in the form with Display Name: "Hello World"
+#. Select your "MyApp" application in the ``Site config`` dropdown
 #. Click the ``Save draft`` button on the top-left.
 #. Now close the site tab to see the content pane.
 
