@@ -5,8 +5,7 @@ My First App
 .. WARNING:: WORK IN PROGRESS
 
 .. NOTE:: To complete this tutorial, you will need
-  **A local running installation of Enonic XP (with the $XP_HOME environment variable defined)**
-  and a **Text editor of your choice (e.g. Atom)**
+  **a local running installation of Enonic XP** and a **text editor of your choice (e.g. Atom)**
 
   All terminal actions assume you're using OSX or Linux
 
@@ -38,8 +37,7 @@ Run the following command while located in your target folder::
 
 
 The init-app script will create a standard project structure for your app and configure Gradle build scripts.
-
-Investigate the build.gradle file located on your projects root for more details.
+Investigate the build.gradle file located in your project's root for more details.
 
 MISSING LINK to build.gradle doc
 
@@ -48,7 +46,7 @@ Build and Deploy
 ----------------
 Now that we have set up a project, we should test that it builds and deploys successfully.
 
-.. note:: The $XP_HOME environment variable must be set to the path of the home folder of the XP installation.
+.. important:: The $XP_HOME environment variable must be set to the path of the home folder of the XP installation.
   For example, ``$ export XP_HOME=/Users/<name>/enonic-xp-6.0.0/home``
 
 Simply execute the following command from the project root directory::
@@ -61,8 +59,10 @@ Next it will build the app and then attempt to deploy it.
 The deployment step simply moves the result of the build, (the application jar file) into the ``$XP_HOME/deploy`` directory.
 From there, Enonic XP will detect, install and start the application automatically.
 
-Log in to the Administrative console using the Administrative user, and navigate to the Applications App. The default username is “su” and the password is “password”.
-Check that the application you just deployed is listed, and that it has started.
+Log in to the Administrative console with the Administrative user credentials and navigate to the Applications App.
+Check that the application you just deployed is listed and that it has started.
+
+.. tip:: The administration console is located at ``http://localhost:8080``. The default username is “su” and the password is “password”.
 
 Hello World Site
 ================
@@ -81,25 +81,21 @@ A basic site.xml file is automatically created by the app-init script::
 
   src/main/resources/site/site.xml
 
-Page Component
+Page Controller
 ---------------
 
-A page component is used to create page templates in the administration console. Any number of page templates can be created
-from a single page component. Each page component requires two files: a JavaScript controller and an HTML
-view file (an XML descriptor is optional).
+A **page controller** is a JavaScript file that handles requests such as GET and POST. Controllers usually pass dynamic values to an HTML
+view file. No values are passed in the example below, but the view file is specified and rendered with the Thymeleaf templating engine.
 
-Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the two files
-specified below inside the ``hello`` folder:
-
-The **page controller** is a JavaScript file that passes dynamic values to the view file. No values are passed in this example, but
-the view file is specified and rendered with the Thymeleaf templating engine.
+Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the two files specified below inside
+the ``hello`` folder:
 
 ``src/main/resources/site/pages/hello/hello.js``
 
 .. literalinclude:: code/page-initial/hello.js
    :language: js
 
-The view is a simple HTML file. Later, Thymeleaf will be used to make the page dynamic.
+The view is a simple HTML file. This file will be updated later to handle dynamic content.
 
 ``src/main/resources/site/pages/hello/hello.html``
 
@@ -111,32 +107,22 @@ Once these files are in place, redeploy the app::
 
   ./gradlew deploy
 
-.. tip:: Each page component must reside in its own folder under the ``site/pages`` directory. The name of the XML and JS files must be the
-  same as the directory that contains them. The HTML view file can reside anywhere in the project and have any valid file name. This allows
-  the view files to be shared between components. Just make sure to specify the full path of the view file in the controller when the view
-  is not in the same directory.
+.. tip:: Each page controller must reside in its own folder under the ``site/pages`` directory. The name of the controller JavaScript file
+  must be the same as the directory that contains it. The HTML view file can reside anywhere in the project and have any valid file name.
+  This allows view files to be shared between components. Just make sure to specify the full path of the view file in the controller when
+  the view is not in the same directory.
 
 Create Site
 -----------
 
-Log in to the Administrative console using the Administrative user, and navigate to the Content Manager App. The default username is "su"
-and the password is "password".
+Log in to the Administrative console using the Administrative user and navigate to the Content Manager App.
 
-#. Click ``New`` and select "Site" from the list of content types
-#. Fill in the form with Display Name: "Hello World"
-#. Select your "MyApp" application in the ``Site config`` dropdown
-#. Click the ``Save draft`` button on the top-left.
+#. Click "New" and select "Site" from the list of content types.
+#. Fill in the form with Display Name: "Hello World".
+#. Select your "MyApp" application in the "Installed Apps" dropdown.
+#. In the dropdown on the right side of the page, select the "hello" page.
+#. Click the "Save draft" button on the top-left.
 #. Now close the site tab to see the content pane.
-
-Now that a ``Site`` content has been created, a built-in ``Templates`` folder appears below it in the content pane. At least one page
-template must be created here before any pages can be viewed.
-
-#. Click on the small triangle to left of the globe icon to open the site content tree.
-#. Click on the ``Templates`` icon and click ``New``.
-#. Name the template "Hello" in the <Display Name> field.
-#. In the dropdown field labeled "Supports", select the Site content type.
-#. In the Live Edit panel (to the right), select "Hello" as your page controller.
-#. Click ``Save draft``
 
 You should now have a site that looks something like this:
 
@@ -162,6 +148,9 @@ Create a folder called "country" inside the "content-types" folder of your proje
 .. literalinclude:: code/content-types/country1.xml
   :language: xml
 
+.. tip:: Each content type must reside in its own folder under the ``site/content-types`` directory. The name of the content type XML file
+   must be the same as the directory that contains it.
+
 Country Part
 ------------
 
@@ -171,10 +160,17 @@ Parts are reusable components that can be added to pages with "regions" - more o
 
 Create a folder called "country" inside the "parts" folder in your project. Then add the following files in the "country" folder::
 
-  src/main/resources/site/parts/country/country.xml
   src/main/resources/site/parts/country/country.js
+
+.. literalinclude:: code/country-part/country1.js
+  :language: js
+
+::
+
   src/main/resources/site/parts/country/country.html
 
+.. literalinclude:: code/country-part/country1.html
+  :language: html
 
 Hello Region Page
 -----------------
@@ -284,7 +280,7 @@ To make use of the changes, do the following
 #. Add the "City List" part to your "Country" page template
 #. Create some Cities below a selected country (below are some sample data you may use)
 
-When visiting a country page, the browser will now requested your location.
+When visiting a country page, the browser will now request your location.
 You should then see something like this:
 
 MISSING Image (name of country at top, + google map with cities, also present the city which is closest to you using geo-distance sorting)

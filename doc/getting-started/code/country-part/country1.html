@@ -1,0 +1,6 @@
+<div>
+    <h3 data-th-text="${country.displayName}"></h3>
+    <div data-th-if="${country.population}" data-th-text="'Population: ' + ${country.population}"></div>
+    <div data-th-if="${country.description}" data-th-text="${country.description}"></div>
+    <img data-th-if="${country.imageUrl}" data-th-src="${country.imageUrl}" src="" alt=""/>
+</div>
