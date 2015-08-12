@@ -10,11 +10,14 @@ This function generates a URL pointing to an image.
 
 **Parameters:**
 
-path *(string)*
-  Path to the asset.
+id *(string)*
+  ID of the image content.
 
-module *(string)*
-  Other module to reference to.  Default is current module.
+scale *(string)*
+  Required. Options are width(px), height(px), block(width,height) and square(px).
+
+filter *(string)*
+  A number of filters are available to alter the image appearance, for example, blur(3), grayscale(), rounded(5), etc.
 
 params *(object)*
   Custom parameters to append to the url.
