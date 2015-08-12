@@ -13,9 +13,9 @@ The necessary changes to your data can be performed with the ``upgrade`` task in
 
 To upgrade your 5.3.1 installation, execute the following steps:
 
-#. Dump your 5.3.1 installation with the toolbox :ref:`toolbox-dump` tool
-#. Upgrade the dump with toolbox :ref:`toolbox-upgrade`
-#. Load the repository into a new instance of Enonic XP with the toolbox :ref:`toolbox-load` tool
+#. Dump your 5.3.1 installation with the toolbox :ref:`toolbox-dump` tool, then stop the 5.3.1 instance.
+#. Upgrade the dump with the 6.0.0 toolbox :ref:`toolbox-upgrade`.
+#. Start a new 6.0.0 instance of Enonic XP and load the upgraded dump with the toolbox :ref:`toolbox-load` tool.
 
 
 Module
@@ -76,7 +76,7 @@ already had a name, and now the HTML generated in the view must contain an attri
 
 .. IMPORTANT::
 
-  Each region HTML root element in pages and layouts must include an attribute with the region name.
+  Each **region** HTML root element in pages and layouts must include the ``data-portal-region`` attribute with the region name.
 
 URL functions
 ~~~~~~~~~~~~~
@@ -258,3 +258,49 @@ i18n library
 .. code-block:: js
 
     var i18n = require('/lib/xp/i18n');
+
+Content object structure
+------------------------
+
+The structure of some content objects has changed from what they were in Enonic XP versions prior to 6.0.
+
+Image content
+~~~~~~~~~~~~~
+
+Image content objects contained ``image-info`` prior to version 6.0.0. This has been updated to camel case ``imageInfo`` for consistency.
+
+Old image object structure:
+
+.. code-block:: js
+
+    ...
+    "x": {
+        "media": {
+            "image-info": {
+                "imageHeight": "695",
+                "imageWidth": "2000",
+                "contentType": "image/jpeg",
+                "bytesize": "548842",
+                "pixelSize": 1390000
+            }
+        }
+    },
+    "page": {}
+
+Image object structure in 6.x:
+
+.. code-block:: js
+
+    ...
+    "x": {
+        "media": {
+            "imageInfo": {
+                "imageHeight": "695",
+                "imageWidth": "2000",
+                "contentType": "image/jpeg",
+                "bytesize": "548842",
+                "pixelSize": 1390000
+            }
+        }
+    },
+    "page": {}
