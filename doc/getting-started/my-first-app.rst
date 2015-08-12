@@ -188,17 +188,26 @@ Add the following files to your project::
 .. literalinclude:: code/hello-region-page/region1.xml
   :language: xml
 
+The XML file above is a page descriptor. Regions and page configurations can be defined here. Read more about
+`page descriptors <../developer/modules/page/descriptor.html>`_.
+
 ::
 
   src/main/resources/site/page/hello-region/hello-region.js
 
 .. literalinclude:: code/hello-region-page/region1.js
+  :language: javascript
+
+This page controller uses a portal function to get the content and extract the "main" region which was defined in the descriptor XML file.
 
 ::
 
   src/main/resources/site/page/hello-region/hello-region.html
 
 .. literalinclude:: code/hello-region-page/region1.html
+  :language: html
+
+The view file above defines the place on the page where the region will render parts that are dragged and dropped in Live Edit.
 
 When done - redeploy your app once again!
 
@@ -214,7 +223,7 @@ Now that the "Country" content type is installed,
 we can create new countries using the Content Manager.
 
 #. Select the "Hello World" site from the navigation tree
-#. Choose ``New``, and select "Country" from the list of content types.
+#. Choose "New", and select "Country" from the list of content types.
 #. Fill the form with the details of your favorite country and press save.
 
 TODO IMAGE
@@ -232,14 +241,14 @@ MISSING IMAGE
 Page Templates
 ==============
 
-With our current solution, sadly you will have to configure a page for every country you create.
-As this is not a very effective way of working with large data sets, we will create a page template to simplify the process
+With our current solution, sadly, you will have to configure a page for every country you create.
+As this is not a very effective way of working with large data sets, we will create a page template to simplify the process.
 
 
 Create Country Template
 -----------------------
 
-#. Select the Templates item, located below the "Hello World" site
+#. Select the Templates item located below the "Hello World" site
 #. Click ``New`` and select "Page Template"
 #. Fill in the form as follows:
 
