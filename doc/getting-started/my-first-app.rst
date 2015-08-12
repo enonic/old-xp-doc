@@ -163,7 +163,7 @@ Create a folder called "country" inside the "parts" folder in your project. Then
   src/main/resources/site/parts/country/country.js
 
 .. literalinclude:: code/country-part/country1.js
-  :language: js
+  :language: javascript
 
 ::
 
@@ -183,10 +183,26 @@ simply by adding different parts to it as needed.
 
 Add the following files to your project::
 
+  src/main/resources/site/page/hello-region/hello-region.xml
+
+.. literalinclude:: code/hello-region-page/region1.xml
+  :language: xml
+
+::
+
   src/main/resources/site/page/hello-region/hello-region.js
+
+.. literalinclude:: code/hello-region-page/region1.js
+
+::
+
   src/main/resources/site/page/hello-region/hello-region.html
 
-When done - redeploy your app once again!::
+.. literalinclude:: code/hello-region-page/region1.html
+
+When done - redeploy your app once again!
+
+::
 
   ./gradlew deploy
 

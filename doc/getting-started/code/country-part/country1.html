@@ -1,6 +1,11 @@
 <div>
-    <h3 data-th-text="${country.displayName}"></h3>
+    <h3 data-th-text="${country.name}"></h3>
     <div data-th-if="${country.population}" data-th-text="'Population: ' + ${country.population}"></div>
     <div data-th-if="${country.description}" data-th-text="${country.description}"></div>
+
+    <ul data-th-if="${country.tags}">
+        <li data-th-each="tag : ${country.tags}" data-th-text="${tag}"></li>
+    </ul>
+
     <img data-th-if="${country.imageUrl}" data-th-src="${country.imageUrl}" src="" alt=""/>
 </div>
