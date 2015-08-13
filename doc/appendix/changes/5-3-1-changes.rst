@@ -1,5 +1,5 @@
 Notable 5.3.1 Changes
-===================
+=====================
 
 Here's a list of some notable changes. For every change see the `full changelog`_.
 
