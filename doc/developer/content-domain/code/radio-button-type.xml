@@ -1,0 +1,15 @@
+<input name="name" type="RadioButton">
+  <label>Radio Buttons</label>
+  <occurrences minimum="0" maximum="0"/>
+  <config>
+
+    <!-- Option one -->
+    <property name="option.value">one</property>
+    <property name="option.label">Option One</property>
+
+    <!-- Option two -->
+    <property name="option.value">two</property>
+    <property name="option.label">Option Two</property>
+
+  </config>
+</input>
