@@ -155,7 +155,7 @@ Country Part
 ------------
 
 We also need a way to present a country - because every country wants to be seen.
-This time, rather than just making another page controller - we will create a part.
+This time, rather than just making another page controller, we will create a `part`.
 Parts are reusable components that can be added to pages with "regions" - more on this below.
 
 Create a folder called "country" inside the "parts" folder in your project. Then add the following files in the "country" folder::
@@ -219,8 +219,7 @@ When done - redeploy your app once again!
 Add Favorite Country
 --------------------
 
-Now that the "Country" content type is installed,
-we can create new countries using the Content Manager.
+Now that the "Country" content type is installed, we can create new countries using the Content Manager.
 
 #. Select the "Hello World" site from the navigation tree
 #. Choose "New", and select "Country" from the list of content types.
