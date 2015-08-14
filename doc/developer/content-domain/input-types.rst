@@ -30,12 +30,20 @@ occurrences
   Set ``minimum`` to zero for fields that are not required, and ``maximum`` to zero for
   fields that have no restriction on the number of values.
 
+config
+  Optional configuration that is used by some of the input-types. The config
+  consists of a number of ordered properties. If it exists multiple properties
+  with the same name it will be an array of property values.
 
-Checkbox
+
+CheckBox
 --------
 
 A checkbox field has a value if it is checked, or no value if it is not checked.  Therefore, the only values for occurrences
-that makes sense is a minimum of zero and a maximum of one.  Any other value than zero for minimum is illegal.
+that makes sense is a minimum of zero and a maximum of one.
+
+.. literalinclude:: code/checkbox-type.xml
+   :language: xml
 
 
 ComboBox
@@ -46,13 +54,12 @@ A ComboBox needs a list of options.
 .. literalinclude:: code/combobox-type.xml
    :language: xml
 
-config
-   The config element lists the available options.
+``option.value`` property
+  This property defines the value. It is always associated with ``option.label``.
+  There can exists multiple properties with this name to allow for multiple options.
 
-option
-  Each option should have a ``label`` and a technical ``value``.
-  The ``value`` is passed to the server as a string. This input-type
-  can have multiple options.
+``option.label`` property
+    This property defines the label that is visible in the input-type.
 
 
 Date
@@ -60,6 +67,12 @@ Date
 
 A simple field for dates with a calendar pop-up box in the admin console.
 The default format is ``yyyy-MM-dd``.
+
+.. literalinclude:: code/date-type.xml
+   :language: xml
+
+``timezone`` property
+  ``true`` if timezone information should be used. Default is ``false``.
 
 
 DateTime
@@ -72,8 +85,8 @@ The format is ``yyyy-MM-dd hh:mm`` for example, ``2015-02-09T09:00``. The date-t
 .. literalinclude:: code/datetime-type.xml
    :language: xml
 
-with-timezone
-  ``true`` if timezone information should be used.
+``timezone`` property
+  ``true`` if timezone information should be used. Default is ``false``.
 
 
 Double
@@ -95,12 +108,6 @@ Stores a GPS coordinate as two comma-separated decimal numbers.
 
 HtmlArea
 --------
-
-A field for entering html manually.
-
-
-TinyMCE
--------
 
 A field for entering html in a WYSIWYG HTML editor.
 
@@ -129,38 +136,29 @@ References to other content are specified by this input type.
 .. literalinclude:: code/content-selector-type.xml
    :language: xml
 
-relationship-type
-  The ``config``` element is mandatory.  It must contain the node ``relationship-type`` that contains the name of
-  the relationship type. If no specific relationship type is required, use ``system:reference``.
+``relationshipType`` property
+  This property defines the name of which relationship-type to use.
+  Default is ``system:reference``.
 
-allow-content-type
-  This optional element is used to limit the content types that may be selected for this input. Use one
-  element for each content type. The full module name is required if the content type is defined in
-  another module, like: ``com.enonic.xp.modules.features:citation``
+``allowContentType`` property
+  This property is used to limit the content types that may be selected for this input.
+  Use one property for each content type.
 
 
-SingleSelector
---------------
+RadioButton
+-----------
 
-An input type for selecting one of several options, defined in a mandatory ``config`` element.
-It may be either radiobutton, a dropdown list or a combobox.  Example:
+An input type for selecting one of several options, defined in the ``config`` element.
 
-.. literalinclude:: code/single-selector-type.xml
+.. literalinclude:: code/radio-button-type.xml
    :language: xml
 
-occurrences
-  When the occurrences element allows for multiple selectors, it is still only
-  possible to select one item from each selector.
+``option.value`` property
+  This property defines the value. It is always associated with ``option.label``.
+  There can exists multiple properties with this name to allow for multiple options.
 
-config
-  The list of options for the selector is placed inside a ``config`` element.
-
-option
-  The ``option`` element must have a label and a value element.  The label is what
-  is presented to the user, while the value is the test that is stored on the back-end.
-
-selector-type
-  The ``selector-type`` element may have one of 3 values: ``RADIO``, ``DROPDOWN`` and ``COMBOBOX``.
+``option.label`` property
+  This property defines the label that is visible in the input-type.
 
 
 Tag
@@ -184,7 +182,8 @@ A field for inputting a single line of text.
 Time
 ----
 
-A simple field for time.  A pop-up box allows simple selection of a certain time.  The default format is ``hh:mm``.
+A simple field for time.  A pop-up box allows simple selection of a certain time.
+The default format is ``hh:mm``.
 
 
 Field set

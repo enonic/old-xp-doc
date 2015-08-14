@@ -1,5 +1,5 @@
-<input name="name" type="DateTime">
-  <label>DateTime (with tz)</label>
+<input name="name" type="Date">
+  <label>Date (with tz)</label>
   <indexed>true</indexed>
   <custom-text>Custom text</custom-text>
   <occurrences minimum="0" maximum="1"/>

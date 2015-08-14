@@ -1,8 +1,9 @@
-<input name="cited-in" type="ContentSelector">
+<input name="name" type="ContentSelector">
   <label>Cited In</label>
   <occurrences minimum="0" maximum="0"/>
   <config>
-    <relationship-type>system:reference</relationship-type>
-    <allow-content-type>citation</allow-content-type>
+    <property name="relationshipType">system:reference</property>
+    <property name="allowContentType">citation</property>
+    <property name="allowContentType">my.other.app:quote</property>
   </config>
 </input>

@@ -1,7 +1,7 @@
 "products": {
   "buckets": [{
     "key": "tv",
-    "doc_count": 123,
+    "docCount": 123,
     "priceStats": {
       "count": 123,
       "min": 2599,
@@ -12,7 +12,7 @@
   },
   {
     "key": "blu-ray player",
-    "doc_count": 42,
+    "docCount": 42,
     "priceStats": {
       "count": 42,
       "min": 699,
@@ -23,7 +23,7 @@
   },
   {
     "key": "reciever",
-    "doc_count": 12,
+    "docCount": 12,
     "priceStats": {
       "count": 12,
       "min": 2999,
