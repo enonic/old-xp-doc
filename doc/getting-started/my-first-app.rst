@@ -231,7 +231,8 @@ TODO IMAGE
 Similar to the site, we must also configure a view for the country
 
 #. From the Live Edit panel to the right, select "Hello Region" (this "pretty" name comes from the page xml configuration file).
-#. In the panel on the right, click the "Insert" tab and drag a "Part" into the box on the page. If the panel is not visible, click the hamburger menu (three horizontal bars) on the top-right of the page.
+#. Open the context panel (activated from the hamburger button in the toolbar).
+#. Under the "Insert" tab, drag a "Part" into the box on the page.
 #. A new dropdown option will appear. Select the "country" part.
 #. Save
 
@@ -250,16 +251,16 @@ As this is not a very effective way of working with large data sets, we will cre
 Create Country Template
 -----------------------
 
-1. Select the Templates item located below the "Hello World" site in the content pane
-2. Click "New" and select "Page Template"
+1. Select the Templates item located below the "Hello World" site in the content pane.
+2. Click "New" and select "Page Template".
 3. Fill in the form as follows:
 
   * Display Name: "Country"
   * Supports: "Country" (selected from the list of content types)
 
-4. In the Live Edit panel on the right, select the "Hello Region" controller
-5. Open the context panel (activated from the hamburger button in the toolbar)
-6. Drag a part into the empty region and select the "country" part
+4. In the Live Edit panel on the right, select the "Hello Region" controller.
+5. Open the context panel (activated from the hamburger button in the toolbar).
+6. Drag a "Part" into the empty region and select the "country" part.
 7. Save
 
 Now, every "Country" you create in the structure will use this template by default.
@@ -275,12 +276,31 @@ You might remember that your favorite country was "hardcoded" - so let's change 
 
 To update your favorite country to use this template too:
 
-#. Select the country and click "Edit`"
-#. In Live Edit view, select the entire page (if you select the part first, simply click "parent" twice to select the page)
-#. Open the context panel (top right in toolbar), and select "Automatic" from the Page Template selector
+#. Select the country and click "Edit".
+#. In Live Edit view, select the entire page (if you select the part first, simply click "parent" twice to select the page).
+#. Open the context panel (top right in toolbar), and select "Automatic" from the Page Template selector.
 #. Save
 
 You can at any time select another Page template, or even customize the presentation of a single item.
+
+Country List
+============
+
+Each country content can now be viewed on a page. But the site home page is still a bit empty. This section will have you alter the "hello"
+page controller and view files to list all of the country contents.
+
+Edit the "hello" page controller file ``site/pages/hello/hello.js`` and make the following changes:
+
+.. literalinclude:: code/page-list/hello.js
+  :language: javascript
+
+Now edit the "hello" view file ``site/pages/hello/hello.html`` and make the following changes:
+
+.. literalinclude:: code/page-list/hello.html
+  :language: html
+
+Redeploy the app from the command line with ``./gradlew deploy``. Each country that you created is now listed on the home page and the names
+are also links to the individual content pages.
 
 Hello Geo World
 ===============
