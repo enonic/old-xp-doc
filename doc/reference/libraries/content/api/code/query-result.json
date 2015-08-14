@@ -3,15 +3,15 @@
     "by_month": {
       "buckets": [
         {
-          "doc_count": 8,
+          "docCount": 8,
           "key": "2014-01"
         },
         {
-          "doc_count": 10,
+          "docCount": 10,
           "key": "2014-02"
         },
         {
-          "doc_count": 12,
+          "docCount": 12,
           "key": "2014-03"
         }
       ]
@@ -19,11 +19,11 @@
     "genders": {
       "buckets": [
         {
-          "doc_count": 10,
+          "docCount": 10,
           "key": "male"
         },
         {
-          "doc_count": 12,
+          "docCount": 12,
           "key": "female"
         }
       ]

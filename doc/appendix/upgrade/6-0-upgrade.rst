@@ -166,15 +166,27 @@ Portal library
 
 * Search and replace the following calls in js controllers;
 
-+-------------------------------+-------------------------+
-| Search                        |  Replace                |
-+===============================+=========================+
-| execute('portal.getComponent] | portal.getComponent()   |
-+-------------------------------+-------------------------+
-| execute('portal.getContent')  | portal.getContent()     |
-+-------------------------------+-------------------------+
-| execute('portal.getSite')     | portal.getSite()        |
-+-------------------------------+-------------------------+
+getComponent
+@@@@@@@@@@@
+
+*Search:* ``execute('portal.getComponent]``
+
+*Replace:* ``portal.getComponent()``
+
+getContent
+@@@@@@@@@@
+
+*Search:* ``execute('portal.getContent')``
+
+*Replace:* ``portal.getContent()``
+
+getSite
+@@@@@@@
+
+*Search:* ``execute('portal.getSite')``
+
+*Replace:* ``portal.getSite()``
+
 
 * Add a `require` call for the "portal" library at the top of each JavaScript file where a "portal.*" command was used:
 
@@ -188,11 +200,10 @@ Thymeleaf library
 
 * Search and replace the following calls in js controllers;
 
-+-------------------------------+-------------------------+
-| Search                        |  Replace                |
-+===============================+=========================+
-| execute('thymeleaf.render',   | thymeleaf.render(       |
-+-------------------------------+-------------------------+
+*Search:* ``execute('thymeleaf.render',``
+
+*Replace:* ``thymeleaf.render(``
+
 
 * Note that the parameters to render are now 2 separate parameters instead of an object: ``thymeleaf.render(view, model)`` vs ``execute('thymeleaf.render', {view: view, model: params})``
 
@@ -209,11 +220,9 @@ Content library
 
 * Search and replace
 
-+-------------------------------+-------------------------+
-| Search                        |  Replace                |
-+===============================+=========================+
-| execute('content.*',          | contentSvc.*(           |
-+-------------------------------+-------------------------+
+*Search:* ``execute('content.*',``
+
+*Replace:* ``contentSvc.*(``
 
 (We use a variable named ``contentSvc`` to avoid conflicts with variables representing a Content instance, which are often named ``content``)
 
@@ -229,11 +238,9 @@ Xslt library
 
 * Search and replace the following calls in js controllers;
 
-+-------------------------------+-------------------------+
-| Search                        |  Replace                |
-+===============================+=========================+
-| execute('xslt.render',        | xslt.render(            |
-+-------------------------------+-------------------------+
+*Search:* ``execute('xslt.render',``
+
+*Replace:* ``xslt.render(``
 
 * Add `require` call for the "xslt" library at the top of each JavaScript file where the "xslt.render" command was used:
 
@@ -247,12 +254,10 @@ i18n library
 
 * Search and replace the following calls in js controllers;
 
-+-------------------------------+-------------------------+
-| Search                        |  Replace                |
-+===============================+=========================+
-| execute('i18n.localize',      | i18n.localize(          |
-+-------------------------------+-------------------------+
+*Search:* ``execute('i18n.localize',``
 
+*Replace:* ``i18n.localize(``
+	
 * Add `require` call for the "i18n" library at the top of each JavaScript file where the "i18n.localize" command was used:
 
 .. code-block:: js
@@ -304,3 +309,16 @@ Image object structure in 6.x:
         }
     },
     "page": {}
+	
+
+Aggregation result object
+-------------------------
+
+The 'doc_count' property of aggregation result objects has been renamed to "docCount"
+
+* Search and replace in controllers and html;
+
+*Search:* ``doc_count``
+
+*Replace:* ``docCount``
+

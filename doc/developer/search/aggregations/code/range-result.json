@@ -1,17 +1,17 @@
 "price_ranges": {
   "buckets": [{
-    "doc_count": 2,
+    "docCount": 2,
     "key": "a",
     "to": 50
   },
   {
-    "doc_count": 4,
+    "docCount": 4,
     "from": 50,
     "key": "b",
     "to": 100
   },
   {
-    "doc_count": 4,
+    "docCount": 4,
     "from": 100,
     "key": "c"
   }]
