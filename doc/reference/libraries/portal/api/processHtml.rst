@@ -14,6 +14,9 @@ text by generated URLs.
 value *(string)*
   Html value string to process.
 
+type *(string)*
+  URL type. Either "server" (server-relative URL) or "absolute". Default is "server"
+
 **Example**:
 
 .. literalinclude:: code/processHtml.js

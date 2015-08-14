@@ -11,6 +11,9 @@ _id
 _path
   Path to the page. Relative paths is resolved using the context page.
 
+_type
+  URL type. Either "server" (server-relative URL) or "absolute". Default is "server"
+
 *everything else*
   Custom parameters to append to the url.
 

@@ -16,6 +16,9 @@ id *(string)*
 path *(string)*
   Path to the page. Relative paths is resolved using the context page.
 
+type *(string)*
+  URL type. Either "server" (server-relative URL) or "absolute". Default is "server"
+
 params *(object)*
   Custom parameters to append to the url.
 

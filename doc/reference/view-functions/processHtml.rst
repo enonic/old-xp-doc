@@ -9,6 +9,9 @@ text by generated URLs.
 _value
   Html value string to process.
 
+_type
+  URL type. Either "server" (server-relative URL) or "absolute". Default is "server"
+
 **Usage in Thymeleaf:**
 
 .. literalinclude:: code/processHtml-thymeleaf.html

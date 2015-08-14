@@ -26,6 +26,9 @@ download *(boolean)*
   Set to true if the disposition header should be set to attachment.
   Default is ``false``.
 
+type *(string)*
+  URL type. Either "server" (server-relative URL) or "absolute". Default is "server"
+
 params *(object)*
   Custom parameters to append to the url.
 

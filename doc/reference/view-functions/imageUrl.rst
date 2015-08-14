@@ -11,6 +11,9 @@ _path
 _module
   Other module to reference to.  Default is current module.
 
+_type
+  URL type. Either "server" (server-relative URL) or "absolute". Default is "server"
+
 *everything else*
   Custom parameters to append to the url.
 

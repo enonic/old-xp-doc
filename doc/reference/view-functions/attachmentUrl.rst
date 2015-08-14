@@ -21,6 +21,9 @@ _download
   Set to true if the disposition header should be set to attachment.
   Default is ``false``.
 
+_type
+  URL type. Either "server" (server-relative URL) or "absolute". Default is "server"
+
 *everything else*
   Custom parameters to append to the url.
 
