@@ -1,7 +1,7 @@
 Content Indexing
 ================
 
-All content are indexed when stored. The properties of a content is indexed
+All content is indexed when stored. The properties of a content are indexed
 based on a set of rules:
 
 * _id = string
@@ -45,13 +45,13 @@ minimal
   Indexed as a string-value only, no matter what type of data.
 
 type
-  Indexing are done based on type; e.g numeric values are stored as both string and numeric.
+  Indexing is done based on type; e.g numeric values are stored as both string and numeric.
 
 none
   Value not indexed.
 
 ngram
-  nGram-indexed fields are available for search by using the nGram-function. A nGram-analyzed
+  nGram-indexed fields are available for search by using the nGram-function. An nGram-analyzed
   field will index all substring values from 2 to 15 characters.
 
   Consider this value of a property of type ``text-line``::

@@ -22,7 +22,7 @@ immutable
   in such a field to become a constant when it is implemented.
 
 indexed
-  Indexed in not currently in use either, but required.  Thought to indicate if
+  Indexed in not currently in use either.  Thought to indicate if
   the value should be indexed so it may be searchable, but will most likely be removed.
 
 occurrences
@@ -56,7 +56,7 @@ A ComboBox needs a list of options.
 
 ``option.value`` property
   This property defines the value. It is always associated with ``option.label``.
-  There can exists multiple properties with this name to allow for multiple options.
+  There can exist multiple properties with this name to allow for multiple options.
 
 ``option.label`` property
     This property defines the label that is visible in the input-type.
