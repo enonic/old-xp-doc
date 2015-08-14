@@ -311,6 +311,18 @@ Image object structure in 6.x:
     "page": {}
 
 
+Request object structure
+------------------------
+
+Each handler function, present in a controller, receives as parameter a ``request`` object.
+This request had its attribute ``uri`` removed.
+
+The same value can be retrieved using the following call:
+
+.. literalinclude:: code/current_page_absolute_url.js
+   :language: js
+
+
 Aggregation result object
 -------------------------
 
