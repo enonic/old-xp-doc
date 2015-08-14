@@ -2,11 +2,14 @@
   <label>Required</label>
   <occurrences minimum="1" maximum="1"/>
   <config>
-    <options>
-      <option>
-        <label>option A</label>
-        <value>o1</value>
-      </option>
-    </options>
+
+    <!-- Option one -->
+    <property name="option.value">one</property>
+    <property name="option.label">Option One</property>
+
+    <!-- Option two -->
+    <property name="option.value">two</property>
+    <property name="option.label">Option Two</property>
+
   </config>
 </input>

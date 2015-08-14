@@ -257,7 +257,7 @@ i18n library
 *Search:* ``execute('i18n.localize',``
 
 *Replace:* ``i18n.localize(``
-	
+
 * Add `require` call for the "i18n" library at the top of each JavaScript file where the "i18n.localize" command was used:
 
 .. code-block:: js
@@ -309,7 +309,7 @@ Image object structure in 6.x:
         }
     },
     "page": {}
-	
+
 
 Aggregation result object
 -------------------------
@@ -321,4 +321,3 @@ The 'doc_count' property of aggregation result objects has been renamed to "docC
 *Search:* ``doc_count``
 
 *Replace:* ``docCount``
-
