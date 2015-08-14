@@ -2,11 +2,6 @@
   <display-name>Country</display-name>
   <super-type>base:unstructured</super-type>
   <form>
-    <input type="ImageSelector" name="photo">
-      <label>Photo</label>
-      <occurrences minimum="0" maximum="1"/>
-      <config/>
-    </input>
     <input type="TextArea" name="description">
       <label>Description</label>
       <occurrences minimum="0" maximum="1"/>
@@ -14,10 +9,6 @@
     <input type="TextLine" name="population">
       <label>Population</label>
       <occurrences minimum="0" maximum="1"/>
-    </input>
-    <input type="Tag" name="tags">
-      <label>Tags</label>
-      <occurrences minimum="0" maximum="0"/>
     </input>
   </form>
 </content-type>

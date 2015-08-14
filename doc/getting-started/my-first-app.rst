@@ -156,7 +156,7 @@ Country Part
 
 We also need a way to present a country - because every country wants to be seen.
 This time, rather than just making another page controller, we will create a `part`.
-Parts are reusable components that can be added to pages with "regions" - more on this below.
+`Parts <../developer/modules/part/index.html>`_ are reusable components that can be added to pages with "regions" - more on this below.
 
 Create a folder called "country" inside the "parts" folder in your project. Then add the following files in the "country" folder::
 
@@ -164,6 +164,8 @@ Create a folder called "country" inside the "parts" folder in your project. Then
 
 .. literalinclude:: code/country-part/country1.js
   :language: javascript
+
+The part controller file above handles the GET request and passes the country content data to the view file which is displayed below.
 
 ::
 
@@ -175,25 +177,24 @@ Create a folder called "country" inside the "parts" folder in your project. Then
 Hello Region Page
 -----------------
 
-To wrap things up, lets create a new page controller with a single region called "Main".
+To wrap things up, let's create a new page component with a single region called "Main".
 We will later place the "Country" part into this region.
 
-The benefit of regions is that a page controller can be re-used across multiple different pages,
+The benefit of regions is that a page component can be re-used across multiple different pages,
 simply by adding different parts to it as needed.
 
-Add the following files to your project::
+Create a folder called "hello-region" in your project's ``site/pages/`` folder and add the following three files::
 
-  src/main/resources/site/page/hello-region/hello-region.xml
+  src/main/resources/site/pages/hello-region/hello-region.xml
 
 .. literalinclude:: code/hello-region-page/region1.xml
   :language: xml
 
-The XML file above is a page descriptor. Regions and page configurations can be defined here. Read more about
-`page descriptors <../developer/modules/page/descriptor.html>`_.
+The XML file above is a `page descriptor <../developer/modules/page/descriptor.html>`_. Regions and page configurations can be defined here.
 
 ::
 
-  src/main/resources/site/page/hello-region/hello-region.js
+  src/main/resources/site/pages/hello-region/hello-region.js
 
 .. literalinclude:: code/hello-region-page/region1.js
   :language: javascript
@@ -202,7 +203,7 @@ This page controller uses a portal function to get the content and extract the "
 
 ::
 
-  src/main/resources/site/page/hello-region/hello-region.html
+  src/main/resources/site/pages/hello-region/hello-region.html
 
 .. literalinclude:: code/hello-region-page/region1.html
   :language: html
@@ -222,7 +223,7 @@ Add Favorite Country
 Now that the "Country" content type is installed, we can create new countries using the Content Manager.
 
 #. Select the "Hello World" site from the navigation tree
-#. Choose "New", and select "Country" from the list of content types.
+#. Choose "New" and select "Country" from the list of content types.
 #. Fill the form with the details of your favorite country and press save.
 
 TODO IMAGE
@@ -230,6 +231,8 @@ TODO IMAGE
 Similar to the site, we must also configure a view for the country
 
 #. From the Live Edit panel to the right, select "Hello Region" (this "pretty" name comes from the page xml configuration file).
+#. In the panel on the right, click the "Insert" tab and drag a "Part" into the box on the page. If the panel is not visible, click the hamburger menu (three horizontal bars) on the top-right of the page.
+#. A new dropdown option will appear. Select the "country" part.
 #. Save
 
 You should now have a page that renders your favorite country, something like this:
@@ -247,17 +250,17 @@ As this is not a very effective way of working with large data sets, we will cre
 Create Country Template
 -----------------------
 
-#. Select the Templates item located below the "Hello World" site
-#. Click ``New`` and select "Page Template"
-#. Fill in the form as follows:
+1. Select the Templates item located below the "Hello World" site in the content pane
+2. Click "New" and select "Page Template"
+3. Fill in the form as follows:
 
   * Display Name: "Country"
   * Supports: "Country" (selected from the list of content types)
 
-#. In Live Edit panel, select the "Hello Region" controller
-#. Open the context panel (activated from the rightmost button in the toolbar)
-#. Drag a part into the empty region and select the "country" controller
-#. Save
+4. In the Live Edit panel on the right, select the "Hello Region" controller
+5. Open the context panel (activated from the hamburger button in the toolbar)
+6. Drag a part into the empty region and select the "country" part
+7. Save
 
 Now, every "Country" you create in the structure will use this template by default.
 
@@ -268,12 +271,12 @@ Try this out by creating a few new countries in your site.
 Update Favorite Country
 ------------------------
 
-You might remember that your favorite country was "hardcoded" - so lets change it to use templates too.
+You might remember that your favorite country was "hardcoded" - so let's change it to use templates too.
 
 To update your favorite country to use this template too:
 
-#. Select the country and click ``Edit``
-#. In Live Edit view, select the entire page (if you select the part first, simply click ``parent``"`` twice to select the page)
+#. Select the country and click "Edit`"
+#. In Live Edit view, select the entire page (if you select the part first, simply click "parent" twice to select the page)
 #. Open the context panel (top right in toolbar), and select "Automatic" from the Page Template selector
 #. Save
 
