@@ -313,19 +313,51 @@ Cities
 
 Add the following files to your project::
 
-  src/main/resources/site/part/city-list/city-list.js
-  src/main/resources/site/part/city-list/city-list.html
-  src/main/resources/site/part/city-list/city-list.xml
+  src/main/resources/site/parts/city-list/city-list.js
+  src/main/resources/site/parts/city-list/city-list.html
+  src/main/resources/site/parts/city-list/city-list.xml
   src/main/resources/site/assets/googlemaps??.js
-  src/main/resources/site/content-type/city/city.xml
-  src/main/resources/site/content-type/city/city.png
+  src/main/resources/site/content-types/city/city.xml
+  src/main/resources/site/content-types/city/city.png
 
 Build and deploy your project one final time.
 
-To make use of the changes, do the following
+To make use of the changes, do the following:
 
-#. Add the "City List" part to your "Country" page template
-#. Create some Cities below a selected country (below are some sample data you may use)
+1. Add the "City List" part to your "Country" page template
+  A. Edit the "Country" page template.
+  B. Open the context panel by clicking the hamburger button in the toolbar.
+  C. Click and drag a `Part` to the page region below the "Country" part.
+  D. Save and close the tab.
+2. Create some City contents below a selected country (below are some sample data you may use).
+  A. Click a country content that you created earlier.
+  B. Click "New" and select "City" from the list of content types. It is important that the city content be created under the country.
+  C. Fill in the city name and location. The format must be comma separated latitude and longitude with decimals (for example 37.7833,-122.4167).
+
+Here is a list of cities with latitude and longitude that you may copy/paste from.
+
++--------------------+----------------+------------------+
+|Country             |City            |Lat,Long          |
++====================+================+==================+
+|USA                 |San Francisco   |37.7833,-122.4167 |
++                    +----------------+------------------+
+|                    |Las Vegas       |36.1215,-115.1739 |
++                    +----------------+------------------+
+|                    |Washington D.C. |38.9047,-77.0164  |
++--------------------+----------------+------------------+
+|Norway              |Oslo            |59.9500,10.7500   |
++                    +----------------+------------------+
+|                    |Bergen          |60.3894,5.3300    |
++                    +----------------+------------------+
+|                    |Trondheim       |63.4297,10.3933   |
++--------------------+----------------+------------------+
+|Colombia            |Bogota          |4.5981,-74.0758   |
++                    +----------------+------------------+
+|                    |Medellin        |6.2308,-75.5906   |
++                    +----------------+------------------+
+|                    |Barranquilla    |10.9639,-74.7964  |
++--------------------+----------------+------------------+
+
 
 When visiting a country page, the browser will now request your location.
 You should then see something like this:
@@ -334,14 +366,12 @@ MISSING Image (name of country at top, + google map with cities, also present th
 
 
 
-If you think the location question is noisy,
-We added a simple configuration button to the part (using the city-list.xml file)
+If you think the location question is bothersome,
+we added a simple configuration button to the part (using the city-list.xml file)
 - so you can turn this feature on/off. Simply select the part in live edit, open the context panel and toggle on/off.
 
 MISSING Image to turn feature on/off (radiobuttons?)
 
-
-**MISSING SAMPLE DATA**
 
 
 Go Online
