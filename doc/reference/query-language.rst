@@ -246,7 +246,7 @@ them ascending by distance from Oslo.
 .. code-block:: sql
 
   fulltext('_allText', 'fish spot', 'AND') ORDER BY
-  geoDistance('location', '59.9127300,10.7460900') ASC
+  geoDistance('data.location', '59.9127300,10.7460900') ASC
 
 Find all documents where any property under data-set 'data' contains 'fish' and 'spot', and order
 them ascending by distance from Oslo.
@@ -254,4 +254,4 @@ them ascending by distance from Oslo.
 .. code-block:: sql
 
   fulltext('data.*', 'fish spot', 'AND') ORDER BY
-  geoDistance('location', '59.9127300,10.7460900') ASC
+  geoDistance('data.location', '59.9127300,10.7460900') ASC
