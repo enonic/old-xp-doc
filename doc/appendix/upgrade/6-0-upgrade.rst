@@ -1,3 +1,5 @@
+.. _upgrading_to_6_0_0:
+
 Upgrading to 6.0.0
 ==================
 
