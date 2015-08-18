@@ -32,8 +32,9 @@ occurrences
 
 config
   Optional configuration that is used by some of the input-types. The config
-  consists of a number of ordered properties. If it exists multiple properties
-  with the same name it will be an array of property values.
+  consists of elements with optional attributes. Each element/attribute name
+  with dashes is automatically camel-cased
+  (``relationship-type`` -> ``relationshipType``).
 
 
 CheckBox
@@ -54,12 +55,10 @@ A ComboBox needs a list of options.
 .. literalinclude:: code/combobox-type.xml
    :language: xml
 
-``option.value`` property
-  This property defines the value. It is always associated with ``option.label``.
-  There can exist multiple properties with this name to allow for multiple options.
-
-``option.label`` property
-    This property defines the label that is visible in the input-type.
+option
+  This element defines the option label. ``value`` attribute defines the
+  actual value to set when this option is selected. Multiple ``option``
+  settings are ordered.
 
 
 Date
@@ -71,7 +70,7 @@ The default format is ``yyyy-MM-dd``.
 .. literalinclude:: code/date-type.xml
    :language: xml
 
-``timezone`` property
+timezone
   ``true`` if timezone information should be used. Default is ``false``.
 
 
@@ -85,7 +84,7 @@ The format is ``yyyy-MM-dd hh:mm`` for example, ``2015-02-09T09:00``. The date-t
 .. literalinclude:: code/datetime-type.xml
    :language: xml
 
-``timezone`` property
+timezone
   ``true`` if timezone information should be used. Default is ``false``.
 
 
@@ -136,13 +135,13 @@ References to other content are specified by this input type.
 .. literalinclude:: code/content-selector-type.xml
    :language: xml
 
-``relationshipType`` property
-  This property defines the name of which relationship-type to use.
+relationship-type
+  This setting defines the name of which relationship-type to use.
   Default is ``system:reference``.
 
-``allowContentType`` property
-  This property is used to limit the content types that may be selected for this input.
-  Use one property for each content type.
+allow-content-type
+  This is used to limit the content types that may be selected for this input.
+  Use one setting for each content-type.
 
 
 RadioButton
@@ -153,12 +152,10 @@ An input type for selecting one of several options, defined in the ``config`` el
 .. literalinclude:: code/radio-button-type.xml
    :language: xml
 
-``option.value`` property
-  This property defines the value. It is always associated with ``option.label``.
-  There can exists multiple properties with this name to allow for multiple options.
-
-``option.label`` property
-  This property defines the label that is visible in the input-type.
+option
+  This element defines the option label. ``value`` attribute defines the
+  actual value to set when this option is selected. Multiple ``option``
+  settings are ordered.
 
 
 Tag

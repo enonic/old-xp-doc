@@ -49,6 +49,7 @@ Some properties in the Content object, possibly used in JavaScript controllers, 
 * Usages of property ``moduleConfigs`` of content site should be replaced with ``siteConfigs``
 * Usages of property ``moduleConfig`` of content site should be replaced with ``siteConfig``
 * Usages of property ``moduleKey`` of property ``siteConfig`` in content site should be replaced with ``applicationKey``
+
 .. code-block:: js
 
     var config = site.moduleConfigs[module.name]; // in 5.x
@@ -169,7 +170,7 @@ Portal library
 * Search and replace the following calls in js controllers;
 
 getComponent
-@@@@@@@@@@@
+@@@@@@@@@@@@
 
 *Search:* ``execute('portal.getComponent]``
 

@@ -4,6 +4,6 @@
   <custom-text>Custom text</custom-text>
   <occurrences minimum="0" maximum="1"/>
   <config>
-    <property name="timezone">true</timezone>
+    <timezone>true</timezone>
   </config>
 </input>

@@ -31,4 +31,3 @@ sum, etc for each bucket if necessary.
    date-range
    date-histogram
    stats
-   geo-distance

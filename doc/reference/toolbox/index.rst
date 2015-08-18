@@ -48,3 +48,4 @@ Here's a list of all the commands that you can do with the toolbox:
    dump
    load
    upgrade
+   init-app

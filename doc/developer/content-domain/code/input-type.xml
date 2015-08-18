@@ -3,8 +3,5 @@
   <immutable>false</immutable>
   <indexed>true</indexed>
   <occurrences minimum="0" maximum="1"/>
-  <config>
-    <property name="some.name">some value</property>
-  </config>
+  <config/>
 </input>
-    

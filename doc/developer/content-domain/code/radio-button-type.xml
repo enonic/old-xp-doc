@@ -2,14 +2,7 @@
   <label>Radio Buttons</label>
   <occurrences minimum="0" maximum="0"/>
   <config>
-
-    <!-- Option one -->
-    <property name="option.value">one</property>
-    <property name="option.label">Option One</property>
-
-    <!-- Option two -->
-    <property name="option.value">two</property>
-    <property name="option.label">Option Two</property>
-
+    <option value="one">Option One</option>
+    <option value="two">Option Two</option>
   </config>
 </input>
