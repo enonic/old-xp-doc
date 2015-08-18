@@ -231,7 +231,7 @@ TODO IMAGE
 Similar to the site, we must also configure a view for the country
 
 #. From the Live Edit panel to the right, select "Hello Region" (this "pretty" name comes from the page xml configuration file).
-#. Open the context panel (activated from the hamburger button in the toolbar).
+#. Open the context panel (activated from the configuration gear button in the toolbar).
 #. Under the "Insert" tab, drag a "Part" into the box on the page.
 #. A new dropdown option will appear. Select the "country" part.
 #. Save
@@ -259,22 +259,20 @@ Create Country Template
   * Supports: "Country" (selected from the list of content types)
 
 4. In the Live Edit panel on the right, select the "Hello Region" controller.
-5. Open the context panel (activated from the hamburger button in the toolbar).
+5. Open the context panel (activated from the gear button in the toolbar).
 6. Drag a "Part" into the empty region and select the "country" part.
 7. Save
 
-Now, every "Country" you create in the structure will use this template by default.
+Every "Country" you create will now use this template by default.
 
-.. TIP:: The "Support" property is the key here. A page template will support rendering of the content types specified here.
+.. TIP:: The "Support" property is the key. A page template will support rendering of the content types specified here.
 
 Try this out by creating a few new countries in your site.
 
 Update Favorite Country
 ------------------------
 
-You might remember that your favorite country was "hardcoded" - so let's change it to use templates too.
-
-To update your favorite country to use this template too:
+You might remember that your favorite country was "hardcoded" - so let's change it to use templates as well.
 
 #. Select the country and click "Edit".
 #. In Live Edit view, select the entire page (if you select the part first, simply click "parent" twice to select the page).
@@ -313,12 +311,38 @@ Cities
 
 Add the following files to your project::
 
-  src/main/resources/site/parts/city-list/city-list.js
-  src/main/resources/site/parts/city-list/city-list.html
-  src/main/resources/site/parts/city-list/city-list.xml
-  src/main/resources/site/assets/googlemaps??.js
   src/main/resources/site/content-types/city/city.xml
-  src/main/resources/site/content-types/city/city.png
+
+.. literalinclude:: code/content-types/city1.xml
+  :language: xml
+
+The file above defines a content type for cities with a required field for the location in latitude and longitude.
+
+::
+
+  src/main/resources/site/parts/city-list/city-list.xml
+
+.. literalinclude:: code/city-part/city-list.xml
+  :language: xml
+
+The part descriptor above has a configuration similar to those found in content types.
+
+::
+
+  src/main/resources/site/parts/city-list/city-list.js
+
+.. literalinclude:: code/city-part/city-list.js
+  :language: javascript
+
+This controller uses page contributions to put the Google Maps JavaScript into the head of the document.
+
+::
+
+  src/main/resources/site/parts/city-list/city-list.html
+
+.. literalinclude:: code/city-part/city-list.html
+  :language: html
+
 
 Build and deploy your project one final time.
 
@@ -326,7 +350,7 @@ To make use of the changes, do the following:
 
 1. Add the "City List" part to your "Country" page template
   A. Edit the "Country" page template.
-  B. Open the context panel by clicking the hamburger button in the toolbar.
+  B. Open the context panel by clicking the gear button in the toolbar.
   C. Click and drag a `Part` to the page region below the "Country" part.
   D. Save and close the tab.
 2. Create some City contents below a selected country (below are some sample data you may use).
@@ -423,3 +447,30 @@ An actual implementation with projects called my-first-app and company-site woul
 This allows you to have one Enonic XP installation for each version and as many different XP_HOME folders as you need for your projects.
 When switching from one project to another, you only have to change the XP_HOME environment variable and then restart the installation of
 the Enonic XP version that the project was created for.
+
+Logging JSON objects
+--------------------
+
+While developing an app, it can be helpful to see the structure of objects returned by library functions. The best way to do
+this is to set up a utilities JavaScript file in the project lib folder. Add the following function to the utilities file:
+
+::
+
+  site/lib/utilities.js
+
+.. code-block:: javascript
+
+  exports.log = function (data) {
+    log.info('Utilities log %s', JSON.stringify(data, null, 4));
+  };
+
+Call the log function in any controller like the example below and then check the log after refreshing the page.
+
+.. code-block:: javascript
+
+  var util = require('utilities');
+
+  var content = portal.getContent();
+  util.log(content);
+
+
