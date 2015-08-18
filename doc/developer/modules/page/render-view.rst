@@ -17,3 +17,10 @@ rendering engine is easy; here is how we do it.
 
 .. literalinclude:: code/controller-3.js
    :language: javascript
+
+Unlike controllers and descriptors, view files can reside anywhere in your project
+and have any valid file name. This allows for code reuse as
+multiple page components can share the same view. If the view file is in the same
+folder as the page controller then it can be resolved with only the file name
+``resolve('file-name.html')``. Otherwise, the full path should be used, starting
+with a '/' as in the example above.

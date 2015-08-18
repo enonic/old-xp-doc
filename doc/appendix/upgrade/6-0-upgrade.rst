@@ -259,7 +259,7 @@ i18n library
 *Search:* ``execute('i18n.localize',``
 
 *Replace:* ``i18n.localize(``
-	
+
 * Add `require` call for the "i18n" library at the top of each JavaScript file where the "i18n.localize" command was used:
 
 .. code-block:: js
@@ -311,7 +311,19 @@ Image object structure in 6.x:
         }
     },
     "page": {}
-	
+
+
+Request object structure
+------------------------
+
+Each handler function, present in a controller, receives as parameter a ``request`` object.
+This request had its attribute ``uri`` removed.
+
+The same value can be retrieved using the following call:
+
+.. literalinclude:: code/current_page_absolute_url.js
+   :language: js
+
 
 Aggregation result object
 -------------------------
@@ -323,4 +335,3 @@ The 'doc_count' property of aggregation result objects has been renamed to "docC
 *Search:* ``doc_count``
 
 *Replace:* ``docCount``
-
