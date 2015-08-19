@@ -5,17 +5,10 @@
       <label>Map type</label>
       <occurrences minimum="0" maximum="1"/>
       <config>
-        <property name="option.value">ROADMAP</property>
-        <property name="option.label">ROADMAP</property>
-
-        <property name="option.value">SATELLITE</property>
-        <property name="option.label">SATELLITE</property>
-
-        <property name="option.value">HYBRID</property>
-        <property name="option.label">HYBRID</property>
-
-        <property name="option.value">TERRAIN</property>
-        <property name="option.label">TERRAIN</property>
+        <option value="ROADMAP">ROADMAP</option>
+        <option value="SATELLITE">SATELLITE</option>
+        <option value="HYBRID">HYBRID</option>
+        <option value="TERRAIN">TERRAIN</option>
       </config>
     </input>
     <input type="TextLine" name="zoom">

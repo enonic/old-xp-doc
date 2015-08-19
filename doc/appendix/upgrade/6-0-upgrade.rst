@@ -8,7 +8,7 @@ TODO intro
 Repositories
 ------------
 
-Any data that was create in version 5.0 must be upgraded to conform to the repository changes in version 6.0.
+Any data that was created in version 5.0 must be upgraded to conform to the repository changes in version 6.0.
 This part can be skipped when starting with a new installation that doesn't have any data.
 
 The necessary changes to your data can be performed with the ``upgrade`` task in the provided :ref:`toolbox`.
@@ -317,7 +317,7 @@ Image object structure in 6.x:
 Request object structure
 ------------------------
 
-Each handler function, present in a controller, receives as parameter a ``request`` object.
+Each handler function in a controller receives a ``request`` object as a parameter.
 This request had its attribute ``uri`` removed.
 
 The same value can be retrieved using the following call:

@@ -7,7 +7,7 @@ exports.get = function(req) {
 
     // Get the part configuration for the map
     var config = portal.getComponent().config;
-    var zoom = parseInt(config.zoom) && config.zoom <= 15 && config.zoom >= 1? config.zoom : 7;
+    var zoom = parseInt(config.zoom) && config.zoom <= 15 && config.zoom >= 1? config.zoom : 10;
     var mapType = config.mapType || 'ROADMAP';
 
     // String that will be inserted to the head of the document
@@ -37,7 +37,8 @@ exports.get = function(req) {
 
             googleMaps += 'var center' + i + ' = new google.maps.LatLng(' + city.location + '); '
 
-            googleMaps += 'var mapProp = {center:center' + i + ', zoom:' + zoom + ', mapTypeId:google.maps.MapTypeId.' + mapType + ' };' +
+            googleMaps += 'var mapProp = {center:center' + i + ', zoom:' + zoom +
+                ', mapTypeId:google.maps.MapTypeId.' + mapType + ', scrollwheel: false };' +
                 'var map' + i + ' = new google.maps.Map(document.getElementById("googleMap' + i + '"),mapProp); ' +
                 'var marker = new google.maps.Marker({ position:center' + i + '}); marker.setMap(map' + i + ');';
         }

@@ -14,7 +14,7 @@ reflected everywhere. To convert an existing module to an application, some chan
   
   - `init-app`-task in toolbox will create a new application project structure for you
   
-  - `part.xml` and `page.xml` are now optional
+  - The XML descriptors for `parts` and `pages` are now optional
 
 ----
 	
@@ -28,7 +28,7 @@ A publish wizard that will guide you in the process of publishing content and de
 
 - **Image crop and focus point edit**
 
-Its now possible to crop an image in the Content Manager application. It is also possible to set focus point to be retained when cropping images.
+It is now possible to crop an image in the Content Manager application. It is also possible to set a focus point to be retained when cropping images.
 
 .. image:: images/edit_focus.png
 
@@ -42,5 +42,5 @@ The Script commands used to access extra functions in the controllers have been 
 
 - **Content app search improved**
 
-The search in the content app has been greatly improved, by improving partial matching and better fulltext matching and scoring.
+The search in the content app has been greatly improved. Especially with regards to partial matching and better fulltext matching and scoring.
 
