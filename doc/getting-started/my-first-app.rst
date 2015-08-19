@@ -84,18 +84,18 @@ A basic site.xml file is automatically created by the app-init script::
 Page Controller
 ---------------
 
-A **page controller** is a JavaScript file that handles requests such as GET and POST. Controllers usually pass dynamic values to an HTML
+A `page controller <../developer/modules/page/controller.html>`_ is a JavaScript file that handles requests such as GET and POST. Controllers usually pass dynamic values to an HTML
 view file. No values are passed in the example below, but the view file is specified and rendered with the Thymeleaf templating engine.
 
-Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the two files specified below inside
-the ``hello`` folder:
+- Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the two files specified below inside
+  the ``hello`` folder:
 
 ``src/main/resources/site/pages/hello/hello.js``
 
 .. literalinclude:: code/page-initial/hello.js
    :language: js
 
-The view is a simple HTML file. This file will be updated later to handle dynamic content.
+The `view`  below is a simple HTML file. This file will be updated later to handle dynamic content.
 
 ``src/main/resources/site/pages/hello/hello.html``
 
