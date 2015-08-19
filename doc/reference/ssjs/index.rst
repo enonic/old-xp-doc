@@ -8,6 +8,7 @@ section.
 .. toctree::
    :maxdepth: 1
 
+   app
    log
    resolve
    require
