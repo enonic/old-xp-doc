@@ -4,10 +4,9 @@ getSiteConfig
 This function returns the site configuration for this app in the parent site of the content corresponding to the current execution context.
 It is meant to be called from a page, layout or part controller.
 
-.. js:function:: getSiteConfig(params)
+.. js:function:: getSiteConfig()
 
-  :param object params: Input parameters.
-  :returns: the site configuration as JSON.
+  :returns: the site configuration for current application as JSON.
 
 **Example:**
 
