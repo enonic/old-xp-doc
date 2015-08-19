@@ -46,14 +46,8 @@ In addition, some XML element names must be renamed in the page, part, layout an
 
 Some properties in the Content object, possibly used in JavaScript controllers, have also been renamed:
 
-* Usages of property ``moduleConfigs`` of content site should be replaced with ``siteConfigs``
-* Usages of property ``moduleConfig`` of content site should be replaced with ``siteConfig``
+* Usages of property ``moduleConfig`` of property ``data`` in content site should be replaced with ``siteConfig``
 * Usages of property ``moduleKey`` of property ``siteConfig`` in content site should be replaced with ``applicationKey``
-
-.. code-block:: js
-
-    var config = site.moduleConfigs[module.name]; // in 5.x
-    var config = site.siteConfigs[module.name];   // in 6.0
 
 
 Portal
@@ -196,6 +190,11 @@ getSite
 .. code-block:: js
 
 	var portal = require('/lib/xp/portal');
+
+* Note that the property ``moduleConfigs`` of content site has been removed. The method ``portal.getSiteConfig()``, which returns the site configuration for this app in the current site, should be use instead.
+
+.. literalinclude:: code/site_config_60.js
+   :language: js
 
 
 Thymeleaf library

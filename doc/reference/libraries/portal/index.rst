@@ -27,3 +27,4 @@ Below is a list of methods that's implemented in this library.
    api/getComponent
    api/getContent
    api/getSite
+   api/getSiteConfig
