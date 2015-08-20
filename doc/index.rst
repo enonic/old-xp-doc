@@ -38,6 +38,7 @@ is `available on github`_ in a separate project.
    operations/docker
    operations/backup
    operations/export
+   operations/monitoring
 
 .. toctree::
    :maxdepth: 1
