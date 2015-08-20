@@ -178,7 +178,7 @@ Hello Region Page
 To wrap things up, let's create a new page component with a single region called "Main".
 We will later place the "Country" part into this region.
 
-The benefit of regions is that a page component can be re-used across multiple different pages,
+The benefit of `regions <../developer/modules/page/regions.html>`_ is that a page component can be re-used across multiple different pages,
 simply by adding different parts to it as needed.
 
 Create a folder called "hello-region" in your project's ``site/pages/`` folder and add the following three files::
