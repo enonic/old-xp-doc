@@ -197,7 +197,7 @@ The XML file above is a `page descriptor <../developer/modules/page/descriptor.h
 .. literalinclude:: code/hello-region-page/region1.js
   :language: javascript
 
-This page controller uses a portal function to get the content and extract the "main" region which was defined in the descriptor XML file.
+This page controller uses a `portal function <../reference/libraries/portal/index.html>`_ to get the content and extract the "main" region which was defined in the descriptor XML file.
 
 ::
 
