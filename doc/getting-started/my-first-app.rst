@@ -51,7 +51,7 @@ Simply execute the following command from the project root directory::
 
   ./gradlew deploy
 
-If you don't already have gradle installed, the gradle wrapper will download this first.
+If you don't already have `Gradle <http://gradle.org>`_ installed, the Gradle wrapper will download this first.
 Next it will build the app and then attempt to deploy it.
 
 The deployment step simply moves the result of the build, (the application jar file) into the ``$XP_HOME/deploy`` directory.
