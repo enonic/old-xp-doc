@@ -26,7 +26,7 @@ Init App
 - Create an empty folder at a suitable location on your filesystem to place the code for your application. e.g. /Users/<username>/project/myapp
 
 Included with Enonic XP is the :ref:`toolbox`.
-It includes an option to initialize an application with all the standard structures typically required for an app.
+It includes an option to initialize an application with all the standard structures typically required for an app (see :ref:`apps-basics-project`).
 
 - Run the following command while located in your target folder::
 

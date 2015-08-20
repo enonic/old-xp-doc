@@ -1,3 +1,5 @@
+.. _apps-basics-project:
+
 Project structure
 =================
 
