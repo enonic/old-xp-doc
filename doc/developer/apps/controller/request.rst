@@ -7,14 +7,26 @@ controller.
 .. literalinclude:: code/request.json
    :language: json
 
-mode
-  Rendering mode, one of: ``edit``, ``preview``, ``live``.
-
-uri
-  URI of the request.
-
 method
   HTTP method of the request.
+
+scheme
+  Scheme of the request.
+
+host
+  Host of the request.
+
+port
+  Port of the request.
+
+path
+  Path of the request.
+
+url
+  URL of the request.
+
+mode
+  Rendering mode, one of: ``edit``, ``preview``, ``live``.
 
 branch
   Name of the repository branch, one of: ``draft``, ``master``.

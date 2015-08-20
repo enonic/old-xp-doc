@@ -317,12 +317,7 @@ Request object structure
 ------------------------
 
 Each handler function in a controller receives a ``request`` object as a parameter.
-This request had its attribute ``uri`` removed.
-
-The same value can be retrieved using the following call:
-
-.. literalinclude:: code/current_page_absolute_url.js
-   :language: js
+This request had its attribute ``uri`` renamed to ``url``.
 
 
 Aggregation result object
