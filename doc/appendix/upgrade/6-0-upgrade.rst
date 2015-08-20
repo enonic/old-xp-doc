@@ -319,6 +319,15 @@ Request object structure
 Each handler function in a controller receives a ``request`` object as a parameter.
 This request had its attribute ``uri`` renamed to ``url``.
 
+Module object renamed
+------------------------
+The ``module`` global variable in 5.x has been renamed to ``app``
+
+.. code-block:: js
+
+  var appName = app.name 
+  var version = app.version
+
 
 Aggregation result object
 -------------------------
