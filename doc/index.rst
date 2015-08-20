@@ -26,7 +26,7 @@ is `available on github`_ in a separate project.
 
    developer/node-domain/index
    developer/content-domain/index
-   developer/modules/index
+   developer/apps/index
    developer/search/index
 
 .. toctree::

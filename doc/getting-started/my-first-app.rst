@@ -347,11 +347,14 @@ Build and deploy your project one final time.
 To make use of the changes, do the following:
 
 1. Add the "City List" part to your "Country" page template
+
   A. Edit the "Country" page template.
   B. Open the context panel by clicking the gear button in the toolbar.
   C. Click and drag a `Part` to the page region below the "Country" part.
   D. Save and close the tab.
+
 2. Create some City contents below a selected country (below are some sample data you may use).
+
   A. Click a country content that you created earlier.
   B. Click "New" and select "City" from the list of content types. It is important that the city content be created under the country.
   C. Fill in the city name and location. The format must be comma separated latitude and longitude with decimals (for example 37.7833,-122.4167).
@@ -470,5 +473,3 @@ Call the log function in any controller like the example below and then check th
 
   var content = portal.getContent();
   util.log(content);
-
-

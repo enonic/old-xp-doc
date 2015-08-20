@@ -1,7 +1,7 @@
 .. _init-app:
 
 init-app
-====
+========
 
 The init-app will initialize a new application with gradle and the application folder strucure.
 
