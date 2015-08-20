@@ -83,7 +83,7 @@ Page Controller
 ---------------
 
 A `page controller <../developer/modules/page/controller.html>`_ is a JavaScript file that handles requests such as GET and POST. Controllers usually pass dynamic values to an HTML
-view file. No values are passed in the example below, but the view file is specified and rendered with the Thymeleaf templating engine.
+`view file <../first-module/page/render-view.html>`_. No values are passed in the example below, but the view file is specified and rendered with the Thymeleaf templating engine.
 
 - Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the two files specified below inside
   the ``hello`` folder:
