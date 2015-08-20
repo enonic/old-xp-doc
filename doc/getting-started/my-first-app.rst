@@ -2,12 +2,11 @@ My First App
 ************
 *This guide will lead you through the required steps to build the  "Hello World" app for Enonic XP*
 
-.. WARNING:: WORK IN PROGRESS
+.. NOTE::
 
-.. NOTE:: To complete this tutorial, you will need
-  `a local running installation of Enonic XP <../getting-started/installation.html>`_ and a **text editor of your choice (e.g. Atom)**
-
-  All terminal actions assume you're using OSX or Linux
+  To complete this tutorial, you will need a local running installation
+  (see :ref:`getting-started-installation`) of Enonic XP and a text editor of your choice.
+  All terminal actions assume you're using OSX or Linux.
 
 
 .. contents:: Table of Contents
@@ -36,7 +35,8 @@ Run the following command while located in your target folder::
   conventions. To see all options available with the init script, Run: ``$XP_INSTALL/toolbox/toolbox.sh help init-app``
 
 
-The init-app script will create a standard project structure for your app and configure `Gradle build scripts <../developer/modules/basics/building.html>`_.
+The init-app script will create a standard project structure for your app and configure
+Gradle build scripts (see :ref:`apps-basics-building`).
 Investigate the build.gradle file located in your project's root for more details.
 
 
@@ -82,8 +82,9 @@ A basic site.xml file is automatically created by the app-init script::
 Page Controller
 ---------------
 
-A `page controller <../developer/modules/page/controller.html>`_ is a JavaScript file that handles requests such as GET and POST. Controllers usually pass dynamic values to an HTML
-`view file <../first-module/page/render-view.html>`_. No values are passed in the example below, but the view file is specified and rendered with the Thymeleaf templating engine.
+A page controller (see :ref:`apps-page-controller`) is a JavaScript file that handles requests such as GET and POST.
+Controllers usually pass dynamic values to an HTML. No values are passed in the example below, but the view file
+is specified and rendered with the Thymeleaf templating engine.
 
 - Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the two files specified below inside
   the ``hello`` folder:
@@ -113,7 +114,8 @@ Once these files are in place, redeploy the app::
 Create Site
 -----------
 
-Log in to the Administrative console using the Administrative user and navigate to the `Content Manager app <../developer/content-domain/content-manager.html>`_.
+Log in to the Administrative console using the Administrative user and navigate to the
+:ref:`content-content-manager`.
 
 #. Click "New" and select "Site" from the list of content types.
 #. Fill in the form with Display Name: "Hello World".
@@ -136,7 +138,7 @@ In order to make our "World" slightly more interesting, we need some data
 Country Content Type
 --------------------
 
-To add structured data (such as countries), we need so-called `content types <../developer/content-domain/content-types.html>`_.
+To add structured data (such as countries), we need so-called :ref:`content-domain-content-types`.
 The content type defines the form (and underlying schema) of items you manage.
 
 Create a folder called "country" inside the "content-types" folder of your project. Then add the following file to this folder::
@@ -153,8 +155,8 @@ Country Part
 ------------
 
 We also need a way to present a country - because every country wants to be seen.
-This time, rather than just making another page controller, we will create a `part`.
-`Parts <../developer/modules/part/index.html>`_ are reusable components that can be added to pages with "regions" - more on this below.
+This time, rather than just making another page controller, we will create a ``part``.
+:ref:`apps-part` are reusable components that can be added to pages with "regions" - more on this below.
 
 Create a folder called "country" inside the "parts" folder in your project. Then add the following files in the "country" folder::
 
@@ -178,7 +180,7 @@ Hello Region Page
 To wrap things up, let's create a new page component with a single region called "Main".
 We will later place the "Country" part into this region.
 
-The benefit of `regions <../developer/modules/page/regions.html>`_ is that a page component can be re-used across multiple different pages,
+The benefit of a region (see :ref:`apps-page-region`) is that a page component can be re-used across multiple different pages,
 simply by adding different parts to it as needed.
 
 Create a folder called "hello-region" in your project's ``site/pages/`` folder and add the following three files::
@@ -188,7 +190,7 @@ Create a folder called "hello-region" in your project's ``site/pages/`` folder a
 .. literalinclude:: code/hello-region-page/region1.xml
   :language: xml
 
-The XML file above is a `page descriptor <../developer/modules/page/descriptor.html>`_. Regions and page configurations can be defined here.
+The XML file above is a :ref:`apps-page-descriptor`. Regions and page configurations can be defined here.
 
 ::
 
@@ -197,7 +199,8 @@ The XML file above is a `page descriptor <../developer/modules/page/descriptor.h
 .. literalinclude:: code/hello-region-page/region1.js
   :language: javascript
 
-This page controller uses a `portal function <../reference/libraries/portal/index.html>`_ to get the content and extract the "main" region which was defined in the descriptor XML file.
+This page controller uses a portal library (see :ref:`libs-portal`) to get the content and extract
+the "main" region which was defined in the descriptor XML file.
 
 ::
 
@@ -218,7 +221,8 @@ When done - redeploy your app once again!
 Add Favorite Country
 --------------------
 
-Now that the "Country" content type is installed, we can create new countries using the `Content Manager <../developer/content-domain/content-manager.html>`_.
+Now that the "Country" content type is installed, we can create new countries using the
+:ref:`content-content-manager`.
 
 #. Select the "Hello World" site from the navigation tree
 #. Choose "New" and select "Country" from the list of content types.
@@ -411,8 +415,9 @@ Now, that your "Hello World" is complete, it's time to go live.
 
 When clicking publish, all the selected items and changes are "cloned" from draft and into the master branch.
 
-You will always see the draft items using the preview function of the `Content Manager <../developer/content-domain/content-manager.html>`_.
-If you have placed your site on root level, you can also see your live site at this url: http://localhost:8080/portal/master/hello-word
+You will always see the draft items using the preview function of the :ref:`content-content-manager`.
+If you have placed your site on root level, you can also see your live site at this url:
+``http://localhost:8080/portal/master/hello-word``.
 
 
 Great job - you just created your first App for Enonic XP
@@ -420,8 +425,6 @@ Great job - you just created your first App for Enonic XP
 
 Next steps
 ==========
-
-IN PROGRESS
 
 This tutorial only covered the basics of app development.
 

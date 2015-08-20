@@ -1,3 +1,5 @@
+.. _apps-page-descriptor:
+
 Descriptor
 ==========
 
@@ -20,4 +22,3 @@ config
 regions
   This is where regions are defined. Various component parts can be dragged and dropped into
   regions on the page.
-  

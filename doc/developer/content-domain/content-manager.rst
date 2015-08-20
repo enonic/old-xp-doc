@@ -1,3 +1,5 @@
+.. _content-content-manager:
+
 Content manager
 ===============
 

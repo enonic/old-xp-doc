@@ -1,3 +1,5 @@
+.. _apps-basics-building:
+
 Building an application
 =======================
 
