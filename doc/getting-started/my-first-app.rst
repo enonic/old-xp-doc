@@ -1,3 +1,5 @@
+.. _getting-started-my-first-app:
+
 My First App
 ************
 *This guide will lead you through the required steps to build the  "Hello World" app for Enonic XP*
@@ -413,7 +415,7 @@ Now, that your "Hello World" is complete, it's time to go live.
 #. Remember to check the ``Include children`` checkbox
 #. After verifying everything in the Publishing Wizard window - click ``Publish``!
 
-When clicking publish, all the selected items and changes are "cloned" from draft and into the master branch.
+When clicking publish, all the selected items and changes are "cloned" from draft and into the master branch (:ref:`node-domain-repository`).
 
 You will always see the draft items using the preview function of the :ref:`content-content-manager`.
 If you have placed your site on root level, you can also see your live site at this url:
