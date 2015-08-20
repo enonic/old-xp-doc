@@ -1,7 +1,7 @@
 <mixin>
   <display-name>U.S. Address format</display-name>
   <items>
-    <form-item-set name="address">
+    <item-set name="address">
       <label>Address</label>
       <immutable>false</immutable>
       <occurrences minimum="0" maximum="0"/>
@@ -37,6 +37,6 @@
           <occurrences minimum="1" maximum="1"/>
         </input>
       </items>
-    </form-item-set>
+    </item-set>
   </items>
 </mixin>

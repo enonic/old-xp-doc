@@ -1,4 +1,4 @@
-<form-item-set name="contact_info">
+<item-set name="contact_info">
   <label>Contact Info</label>
   <items>
     <input name="label" type="TextLine">
@@ -12,4 +12,4 @@
   </items>
   <immutable>false</immutable>
   <occurrences minimum="0" maximum="0"/>
-</form-item-set>
+</item-set>
