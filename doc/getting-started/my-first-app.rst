@@ -113,7 +113,7 @@ Once these files are in place, redeploy the app::
 Create Site
 -----------
 
-Log in to the Administrative console using the Administrative user and navigate to the Content Manager App.
+Log in to the Administrative console using the Administrative user and navigate to the `Content Manager app <../developer/content-domain/content-manager.html>`_.
 
 #. Click "New" and select "Site" from the list of content types.
 #. Fill in the form with Display Name: "Hello World".
@@ -218,7 +218,7 @@ When done - redeploy your app once again!
 Add Favorite Country
 --------------------
 
-Now that the "Country" content type is installed, we can create new countries using the Content Manager.
+Now that the "Country" content type is installed, we can create new countries using the `Content Manager <../developer/content-domain/content-manager.html>`_.
 
 #. Select the "Hello World" site from the navigation tree
 #. Choose "New" and select "Country" from the list of content types.
@@ -408,7 +408,7 @@ Now, that your "Hello World" is complete, it's time to go live.
 
 When clicking publish, all the selected items and changes are "cloned" from draft and into the master branch.
 
-You will always see the draft items using the preview function of the Content Manager.
+You will always see the draft items using the preview function of the `Content Manager <../developer/content-domain/content-manager.html>`_.
 If you have placed your site on root level, you can also see your live site at this url: http://localhost:8080/portal/master/hello-word
 
 
