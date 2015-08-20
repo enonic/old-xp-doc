@@ -1,7 +1,11 @@
 {
-  "mode": "edit",
-  "uri": "http://enonic.com/my/page",
   "method": "GET",
+  "scheme": "http",
+  "host": "enonic.com",
+  "port": "80",
+  "path": "/my/page",
+  "url": "http://enonic.com/my/page?debug=true",
+  "mode": "edit",
   "branch": "master",
   "params": {
     "debug": "true"
