@@ -17,7 +17,6 @@ is `available on github`_ in a separate project.
    :caption: Getting Started
 
    getting-started/installation
-   getting-started/install-demo-module
    getting-started/my-first-app
 
 .. toctree::
@@ -38,6 +37,7 @@ is `available on github`_ in a separate project.
    operations/docker
    operations/backup
    operations/export
+   operations/monitoring
 
 .. toctree::
    :maxdepth: 1
