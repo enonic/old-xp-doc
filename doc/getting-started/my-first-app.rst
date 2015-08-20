@@ -5,7 +5,7 @@ My First App
 .. WARNING:: WORK IN PROGRESS
 
 .. NOTE:: To complete this tutorial, you will need
-  **a local running installation of Enonic XP** and a **text editor of your choice (e.g. Atom)**
+  `**a local running installation of Enonic XP** <../getting-started/installation.html>`_ and a **text editor of your choice (e.g. Atom)**
 
   All terminal actions assume you're using OSX or Linux
 
