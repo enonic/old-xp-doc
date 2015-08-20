@@ -16,7 +16,7 @@ exports.get = function(req) {
     }
 
     // Specify the view file to use
-    var view = resolve('country.html');
+    var view = resolve('hello-region.html');
     
     // Render the dynamic HTML with values from the model
     var body = thymeleaf.render(view, model);

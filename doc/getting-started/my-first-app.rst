@@ -21,13 +21,12 @@ In order to get started quickly, a tool exists to create the basic project struc
 
 Init App
 --------
-Find a suitable location on your filesystem where you want to place the code for your application, and create an empty folder.
-e.g. /Users/<username>/project/myapp
+- Create an empty folder at a suitable location on your filesystem to place the code for your application. e.g. /Users/<username>/project/myapp
 
 Included with Enonic XP is the :ref:`toolbox`.
 It includes an option to initialize an application with all the standard structures typically required for an app.
 
-Run the following command while located in your target folder::
+- Run the following command while located in your target folder::
 
   $XP_INSTALL/toolbox/toolbox.sh init-app -n com.company.myapp
 
@@ -47,7 +46,7 @@ Now that we have set up a project, we should test that it builds and deploys suc
 .. important:: The $XP_HOME environment variable must be set to the path of the home folder of the XP installation.
   For example, ``$ export XP_HOME=/Users/<name>/enonic-xp-6.0.0/home``
 
-Simply execute the following command from the project root directory::
+- Simply execute the following command from the project root directory::
 
   ./gradlew deploy
 
@@ -57,8 +56,8 @@ Next it will build the app and then attempt to deploy it.
 The deployment step simply moves the result of the build, (the application jar file) into the ``$XP_HOME/deploy`` directory.
 From there, Enonic XP will detect, install and start the application automatically.
 
-Log in to the Administrative console with the Administrative user credentials and navigate to the Applications App.
-Check that the application you just deployed is listed and that it has started.
+- Log in to the Administrative console with the Administrative user credentials and navigate to the Applications App.
+  Check that the application you just deployed is listed and that it has started.
 
 .. tip:: The administration console is located at ``http://localhost:8080``. The default username is “su” and the password is “password”.
 
@@ -102,7 +101,7 @@ The `view`  below is a simple HTML file. This file will be updated later to hand
    :language: html
 
 
-Once these files are in place, redeploy the app::
+- Once these files are in place, redeploy the app::
 
   ./gradlew deploy
 
@@ -114,9 +113,7 @@ Once these files are in place, redeploy the app::
 Create Site
 -----------
 
-Log in to the Administrative console using the Administrative user and navigate to the
-:ref:`content-content-manager`.
-
+#. Log in to the Administrative console using the Administrative user and navigate to the :ref:`content-content-manager`.
 #. Click "New" and select "Site" from the list of content types.
 #. Fill in the form with Display Name: "Hello World".
 #. Select your "MyApp" application in the "Installed Apps" dropdown.
@@ -141,7 +138,9 @@ Country Content Type
 To add structured data (such as countries), we need so-called :ref:`content-domain-content-types`.
 The content type defines the form (and underlying schema) of items you manage.
 
-Create a folder called "country" inside the "content-types" folder of your project. Then add the following file to this folder::
+- Create a folder called "country" inside the "content-types" folder of your project. Then add the following file to this folder:
+
+::
 
   src/main/resources/site/content-types/country/country.xml
 
@@ -155,10 +154,11 @@ Country Part
 ------------
 
 We also need a way to present a country - because every country wants to be seen.
-This time, rather than just making another page controller, we will create a ``part``.
-:ref:`apps-part` are reusable components that can be added to pages with "regions" - more on this below.
+This time, rather than just making another page controller, we will create a :ref:`apps-part`. Parts are reusable components that can be added to pages with "regions" - more on this below.
 
-Create a folder called "country" inside the "parts" folder in your project. Then add the following files in the "country" folder::
+- Create a folder called "country" inside the "parts" folder in your project. Then add the following files in the "country" folder:
+
+::
 
   src/main/resources/site/parts/country/country.js
 
@@ -183,7 +183,7 @@ We will later place the "Country" part into this region.
 The benefit of a region (see :ref:`apps-page-region`) is that a page component can be re-used across multiple different pages,
 simply by adding different parts to it as needed.
 
-Create a folder called "hello-region" in your project's ``site/pages/`` folder and add the following three files::
+- Create a folder called "hello-region" in your project's ``site/pages/`` folder and add the following three files::
 
   src/main/resources/site/pages/hello-region/hello-region.xml
 
