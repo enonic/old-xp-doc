@@ -36,10 +36,8 @@ Run the following command while located in your target folder::
   conventions. To see all options available with the init script, Run: ``$XP_INSTALL/toolbox/toolbox.sh help init-app``
 
 
-The init-app script will create a standard project structure for your app and configure Gradle build scripts.
+The init-app script will create a standard project structure for your app and configure `Gradle build scripts <../developer/modules/basics/building.html>`_.
 Investigate the build.gradle file located in your project's root for more details.
-
-MISSING LINK to build.gradle doc
 
 
 Build and Deploy
