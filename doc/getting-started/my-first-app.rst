@@ -419,7 +419,7 @@ When clicking publish, all the selected items and changes are "cloned" from draf
 
 You will always see the draft items using the preview function of the :ref:`content-content-manager`.
 If you have placed your site on root level, you can also see your live site at this url:
-``http://localhost:8080/portal/master/hello-word``.
+``http://localhost:8080/portal/master/hello-world``.
 
 
 Great job - you just created your first App for Enonic XP
