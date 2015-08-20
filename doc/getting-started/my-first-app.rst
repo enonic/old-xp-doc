@@ -136,7 +136,7 @@ In order to make our "World" slightly more interesting, we need some data
 Country Content Type
 --------------------
 
-To add structured data (such as countries), we need so-called content types.
+To add structured data (such as countries), we need so-called `content types <../developer/content-domain/content-types.html>`_.
 The content type defines the form (and underlying schema) of items you manage.
 
 Create a folder called "country" inside the "content-types" folder of your project. Then add the following file to this folder::
