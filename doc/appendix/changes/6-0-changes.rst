@@ -5,8 +5,9 @@ Here's a list of some notable changes.
 
 - **Module is now application**
 
-What we called module is now called application. This change is
-reflected everywhere. To convert an existing module to an application, some changes are needed in your module, please consult the :ref:`upgrading_to_6_0_0` chapter
+What we previously called module is now called application. An application can be just about anything - from a full fledged Corporate website with self-service to a Google Analytics Integration that can be wired into the previous mentioned site.
+
+To convert an existing module to an application, some changes are needed; please consult the :ref:`upgrading_to_6_0_0` chapter
 
 ----
 
@@ -36,11 +37,13 @@ It is now possible to crop an image in the Content Manager application. It is al
 
 - **JavaScript API changes**
 
-The Script commands used to access extra functions in the controllers have been replaced by libraries.
+The Script commands used to access extra functions in the controllers have been replaced by libraries. See :ref:`js-libraries` documentation for reference.
   
 ----
 
 - **Content app search improved**
 
-The search in the content app has been greatly improved. Especially with regards to partial matching and better fulltext matching and scoring.
+The search in the content app has been greatly improved. Especially with regards to partial matching, fulltext matching and scoring.
+
+.. image:: images/search.png
 
