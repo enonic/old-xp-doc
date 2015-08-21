@@ -59,7 +59,8 @@ The deployment step simply moves the result of the build, (the application jar f
 From there, Enonic XP will detect, install and start the application automatically.
 
 - Log in to the Administrative console with the Administrative user credentials and navigate to the Applications App.
-  Check that the application you just deployed is listed and that it has started.
+
+- The application you just deployed should be listed. Click the app to see information about it and confirm that it has started.
 
 .. tip:: The administration console is located at ``http://localhost:8080``. The default username is “su” and the password is “password”.
 
@@ -76,7 +77,7 @@ An application can serve many purposes and building sites is just one of them. T
 XP know that this app can be added to a site. Site-wide configurations can be defined in this file but we will leave the config element
 empty for now.
 
-A basic site.xml file is automatically created by the app-init script::
+A basic site.xml file was automatically created by the init-app script::
 
   src/main/resources/site/site.xml
 
@@ -84,7 +85,7 @@ Page Controller
 ---------------
 
 A page controller (see :ref:`apps-page-controller`) is a JavaScript file that handles requests such as GET and POST.
-Controllers usually pass dynamic values to an HTML. No values are passed in the example below, but the view file
+Controllers usually pass dynamic values to an HTML view. No values are passed in the example below, but the view file
 is specified and rendered with the Thymeleaf templating engine.
 
 - Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the two files specified below inside
@@ -116,14 +117,14 @@ Create Site
 -----------
 
 #. Log in to the Administrative console using the Administrative user and navigate to the :ref:`content-content-manager`.
-#. Click "New" and select "Site" from the list of content types.
+#. Click "New" and select "Site" from the list of content types. This opens a tab within the page for editing the `site` content.
 #. Fill in the form with Display Name: "Hello World".
-#. Select your "MyApp" application in the "Installed Apps" dropdown.
+#. Select your "MyApp" application in the "Applications" dropdown.
 #. In the dropdown on the right side of the page, select the "hello" page.
-#. Click the "Save draft" button on the top-left.
-#. Now close the site tab to see the content pane.
+#. Click the "Save draft" button in the toolbar (top-left).
+#. Now close the "Hello World" site editor tab to see the content pane.
 
-You should now have a site that looks something like this:
+When you click on the "Hello World" site content, the preview should look something like this:
 
 .. image:: images/hello-world-site1.png
 
@@ -148,6 +149,11 @@ The content type defines the form (and underlying schema) of items you manage.
 
 .. literalinclude:: code/content-types/country1.xml
   :language: xml
+
+This content type defines form inputs for **description** and **population**. All content has a built-in field for **Display Name**. This
+content type will produce the form (seen below) in the Content Manager app.
+
+.. image:: images/country-content-form.png
 
 .. tip:: Each content type must reside in its own folder under the ``site/content-types`` directory. The name of the content type XML file
    must be the same as the directory that contains it.
@@ -228,22 +234,22 @@ Now that the "Country" content type is installed, we can create new countries us
 
 #. Select the "Hello World" site from the navigation tree
 #. Choose "New" and select "Country" from the list of content types.
-#. Fill the form with the details of your favorite country and press save.
+#. Fill in the form with the details of your favorite country and click "Save draft".
 
-TODO IMAGE
+.. image:: images/country-content-edit.png
 
 Similar to the site, we must also configure a view for the country
 
 #. From the Live Edit panel to the right, select "Hello Region" (this "pretty" name comes from the page xml configuration file).
-#. Open the context panel (activated from the configuration gear button in the toolbar).
-#. Under the "Insert" tab, drag a "Part" into the box on the page.
-#. A new dropdown option will appear. Select the "country" part.
-#. Save
+#. Open the context panel (activated from the configuration cog button in the toolbar).
+#. Under the "Insert" tab, drag and drop a "Part" into the box on the page.
+#. A new dropdown option will appear. Select the "country" part. (You can start typing "Country" in the box or you may need to close the
+   context panel to see the dropdown.)
+#. Save draft and close the content edit tab.
 
-You should now have a page that renders your favorite country, something like this:
+When you click on the country in the content pane, you should see a preview of the rendered page, something like this:
 
-MISSING IMAGE
-
+.. image:: images/country-content-rendered.png
 
 Page Templates
 ==============
@@ -263,27 +269,30 @@ Create Country Template
   * Supports: "Country" (selected from the list of content types)
 
 4. In the Live Edit panel on the right, select the "Hello Region" controller.
-5. Open the context panel (activated from the gear button in the toolbar).
-6. Drag a "Part" into the empty region and select the "country" part.
-7. Save
+5. Open the context panel (activated from the cog button in the toolbar).
+6. Under the "Insert" tab, drag and drop a "Part" into the empty region.
+7. Select the "country" part from the dropdown. (You may need to close the context panel to see the dropdown.)
+8. Click "Save draft" in the toolbar and close the tab.
 
-Every "Country" you create will now use this template by default.
+Every "Country" content you create will now use this template by default.
 
 .. TIP:: The "Support" property is the key. A page template will support rendering of the content types specified here.
 
-Try this out by creating a few new countries in your site.
+- Try this out by creating a few new countries in your site. Make sure you click the "Hello World" site before clicking "New" in the
+  toolbar. Every content you create will exist as a child of the content that is selected in the content pane.
 
 Update Favorite Country
 ------------------------
 
 You might remember that your favorite country was "hardcoded" - so let's change it to use templates as well.
 
-#. Select the country and click "Edit".
-#. In Live Edit view, select the entire page (if you select the part first, simply click "parent" twice to select the page).
-#. Open the context panel (top right in toolbar), and select "Automatic" from the Page Template selector.
-#. Save
+#. In the Content pane, select the country and click "Edit".
+#. In Live Edit view, click on the page. A box should appear with the name of the country. If the word "country" appears in the box then
+   you have selected the part. In that case, click the "Parent" button twice.
+#. Open the context panel (cog button in the toolbar) and select "Automatic" from under the "Renderer" label. (It's under the "Inspect" tab)
+#. Save draft and close the tab.
 
-You can at any time select another Page template, or even customize the presentation of a single item.
+You can at any time select another Page template, or even customize the presentation of a single content.
 
 Country List
 ============
@@ -291,18 +300,19 @@ Country List
 Each country content can now be viewed on a page. But the site home page is still a bit empty. This section will have you alter the "hello"
 page controller and view files to list all of the country contents.
 
-Edit the "hello" page controller file ``site/pages/hello/hello.js`` and make the following changes:
+- Edit the "hello" page controller file ``site/pages/hello/hello.js`` and make the following changes:
 
 .. literalinclude:: code/page-list/hello.js
   :language: javascript
 
-Now edit the "hello" view file ``site/pages/hello/hello.html`` and make the following changes:
+- Now edit the "hello" view file ``site/pages/hello/hello.html`` and make the following changes:
 
 .. literalinclude:: code/page-list/hello.html
   :language: html
 
-Redeploy the app from the command line with ``./gradlew deploy``. Each country that you created is now listed on the home page and the names
-are also links to the individual content pages.
+- Redeploy the app from the command line with ``./gradlew deploy``.
+
+Each country that you created is now listed on the home page and the names are also links to the individual content pages.
 
 Hello Geo World
 ===============
@@ -348,22 +358,25 @@ This controller uses page contributions to put the Google Maps JavaScript into t
   :language: html
 
 
-Build and deploy your project one final time.
+- Build and deploy your project one final time.
 
 To make use of the changes, do the following:
 
 1. Add the "City List" part to your "Country" page template
 
   A. Edit the "Country" page template.
-  B. Open the context panel by clicking the gear button in the toolbar.
-  C. Click and drag a `Part` to the page region below the "Country" part.
-  D. Save and close the tab.
+  B. Open the context panel by clicking the cog button in the toolbar.
+  C. Click and drag a `Part` to the page region below the "country" part. (This may be a bit tricky because the "country" part is small.)
+  D. Select the "City list" part from the dropdown in the box. You may need to close the context panel to see it.
+  E. Save and close the tab.
 
-2. Create some City contents below a selected country (below are some sample data you may use).
+2. Create some City contents below a selected country. (Sample data is available in the table below.)
 
-  A. Click a country content that you created earlier.
+  A. From the content pane, click a country content that you created earlier.
   B. Click "New" and select "City" from the list of content types. It is important that the city content be created under the country.
-  C. Fill in the city name and location. The format must be comma separated latitude and longitude with decimals (for example 37.7833,-122.4167).
+  C. Fill in the city name and location. The population is optional. (The location format must be comma separated latitude and longitude
+     with decimals. Do not select a page template from the dropdown on the right.)
+  D. Save draft.
 
 Here is a list of cities with latitude and longitude that you may copy/paste from.
 
@@ -390,18 +403,16 @@ Here is a list of cities with latitude and longitude that you may copy/paste fro
 +--------------------+----------------+------------------+
 
 
-When visiting a country page, the browser will now request your location.
-You should then see something like this:
+Each country page will now have a list of the cities you created with a Google map of the location.
+It should look something like this:
 
-MISSING Image (name of country at top, + google map with cities, also present the city which is closest to you using geo-distance sorting)
+MISSING Image
 
-
-
-If you think the location question is bothersome,
-we added a simple configuration button to the part (using the city-list.xml file)
+TODO
+We added a simple configuration button to the part (using the city-list.xml file)
 - so you can turn this feature on/off. Simply select the part in live edit, open the context panel and toggle on/off.
 
-MISSING Image to turn feature on/off (radiobuttons?)
+MISSING Image of part config
 
 
 

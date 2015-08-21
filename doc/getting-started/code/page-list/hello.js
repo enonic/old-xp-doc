@@ -11,7 +11,7 @@ exports.get = function(req) {
         start: 0,
         count: 100,
         contentTypes: [
-            module.name + ':country'
+            app.name + ':country'
         ]
     });
 
