@@ -2,7 +2,7 @@ Page Contributions
 ==================
 
 Page contributions are fragments of HTML that a component (part or layout) can contribute to the page in which it is contained.
-The idea is to allow components to add Javascript or CSS stylesheets globally in the page, although it is not restricted to scripts or styles.
+The idea is to allow components to add JavaScript or CSS stylesheets globally in the page, although it is not restricted to scripts or styles.
 
 Page contributions help with solving 2 problems:
 
@@ -19,7 +19,7 @@ will be included in the final rendered page. Duplicated values will be ignored. 
 contributed content can be inserted in the page:
 
 * ``headBegin``: After the ``<head>`` opening tag.
-* ``headEnd``: Bbefore the ``</head>`` closing tag.
+* ``headEnd``: Before the ``</head>`` closing tag.
 * ``bodyBegin``: After the ``<body>`` opening tag.
 * ``bodyEnd``: Before the ``</body>`` closing tag.
 

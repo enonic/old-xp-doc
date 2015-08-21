@@ -1,7 +1,7 @@
 Rendering a view
 ================
 
-If you feel like concatenating strings to create an entire webpage is a
+If you feel like concatenating strings to create an entire web page is a
 little too much hassle, Enonic XP also supports views. A view is rendered
 using a rendering engine; we currently support XSLT, Mustache and Thymeleaf
 rendering engines. This example will use Thymeleaf.
