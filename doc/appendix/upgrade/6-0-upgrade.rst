@@ -33,6 +33,8 @@ Some of the files or paths inside an application must be renamed or moved:
 * Rename part files ``/parts/<name>/part.xml`` to ``/parts/<name>/<name>.xml``
 * Rename layout files ``/layouts/<name>/layout.xml`` to ``/layouts/<name>/<name>.xml``
 * Rename controller files ``/<type>/<name>/controller.js`` to ``/<type>/<name>/<name>.js``
+* Rename content type files ``/content-types/<name>/content-type.xml`` to ``/content-types/<name>/<name>.xml``
+* Rename content type thumbnails from ``/content-types/<name>/thumb.png`` to ``/content-types/<name>/<name>.png``
 
 In addition, some XML element names must be renamed in the page, part, layout and site XML files:
 
@@ -244,6 +246,8 @@ Xslt library
 
 *Replace:* ``xslt.render(``
 
+* Note that the parameters to render are now 2 separate parameters instead of an object: ``xslt.render(view, model)`` vs ``execute('xslt.render', {view: view, model: params})``
+
 * Add `require` call for the "xslt" library at the top of each JavaScript file where the "xslt.render" command was used:
 
 .. code-block:: js
@@ -275,6 +279,12 @@ Image content
 ~~~~~~~~~~~~~
 
 Image content objects contained ``image-info`` prior to version 6.0.0. This has been updated to camel case ``imageInfo`` for consistency.
+
+* Search and replace in controllers;
+
+*Search:* ``image-info``
+
+*Replace:* ``imageInfo``
 
 Old image object structure:
 
@@ -314,23 +324,14 @@ Image object structure in 6.x:
 
 
 Request object structure
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each handler function in a controller receives a ``request`` object as a parameter.
 This request had its attribute ``uri`` renamed to ``url``.
 
-Module object renamed
-------------------------
-The ``module`` global variable in 5.x has been renamed to ``app``
-
-.. code-block:: js
-
-  var appName = app.name 
-  var version = app.version
-
 
 Aggregation result object
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The 'doc_count' property of aggregation result objects has been renamed to "docCount"
 
@@ -339,3 +340,12 @@ The 'doc_count' property of aggregation result objects has been renamed to "docC
 *Search:* ``doc_count``
 
 *Replace:* ``docCount``
+
+Module object renamed
+------------------------
+The ``module`` global variable in 5.x has been renamed to ``app``
+
+.. code-block:: js
+
+  var appName = app.name
+  var version = app.version
