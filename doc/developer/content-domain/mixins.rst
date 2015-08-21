@@ -17,7 +17,7 @@ For example, ``site/mixins/us-address/us-address.xml``.
 Using a mixin
 -------------
 
-Below is an example of a simple contenttype that uses the ``us-address`` mixin.  Notice that the
+Below is an example of a simple content type that uses the ``us-address`` mixin.  Notice that the
 name of the mixin folder is used and not the mixin's Display Name.
 
 .. literalinclude:: code/content-type-with-mixin.xml

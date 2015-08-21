@@ -3,7 +3,7 @@
 Project structure
 =================
 
-The project structure is a bit similar to a Maven-project. Create the folder structure you
+The project structure is a bit similar to a Maven project. Create the folder structure you
 see below. All are folders except for ``site.xml`` and ``build.gradle``::
 
   my-first-app/

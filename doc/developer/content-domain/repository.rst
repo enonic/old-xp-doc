@@ -4,7 +4,7 @@ Content repository
 A built-in content repository called ``cms-repo`` is initialized when installing Enonic XP. This
 is where content is stored when working with content in the Content Manager application or the content-API.
 
-Inside a repository exists something called branches. A branch is a tree-structure containing content.
+Inside a repository exists something called branches. A branch is a tree structure containing content.
 The ``cms-repo``-repository has two branches:
 
 * ``draft``
