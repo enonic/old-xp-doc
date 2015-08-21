@@ -357,7 +357,7 @@ This controller uses page contributions to put the Google Maps JavaScript into t
 .. literalinclude:: code/city-part/city-list.html
   :language: html
   :caption: src/main/resources/site/parts/city-list/city-list.html
-
+  :name: src/main/resources/site/parts/city-list/city-list.html
 
 - Build and deploy your project one final time.
 
