@@ -286,12 +286,13 @@ Update Favorite Country
 
 You might remember that your favorite country was "hardcoded" - so let's change it to use templates as well.
 
-#. Select the country and click "Edit".
-#. In Live Edit view, select the entire page (if you select the part first, simply click "parent" twice to select the page).
-#. Open the context panel (top right in toolbar), and select "Automatic" from the Page Template selector.
-#. Save
+#. In the Content pane, select the country and click "Edit".
+#. In Live Edit view, click on the page. A box should appear with the name of the country. If the word "country" appears in the box then
+   you have selected the part. In that case, click the "Parent" button twice.
+#. Open the context panel (cog button in the toolbar) and select "Automatic" from under the "Renderer" label. (It's under the "Inspect" tab)
+#. Save draft and close the tab.
 
-You can at any time select another Page template, or even customize the presentation of a single item.
+You can at any time select another Page template, or even customize the presentation of a single content.
 
 Country List
 ============
@@ -299,18 +300,19 @@ Country List
 Each country content can now be viewed on a page. But the site home page is still a bit empty. This section will have you alter the "hello"
 page controller and view files to list all of the country contents.
 
-Edit the "hello" page controller file ``site/pages/hello/hello.js`` and make the following changes:
+- Edit the "hello" page controller file ``site/pages/hello/hello.js`` and make the following changes:
 
 .. literalinclude:: code/page-list/hello.js
   :language: javascript
 
-Now edit the "hello" view file ``site/pages/hello/hello.html`` and make the following changes:
+- Now edit the "hello" view file ``site/pages/hello/hello.html`` and make the following changes:
 
 .. literalinclude:: code/page-list/hello.html
   :language: html
 
-Redeploy the app from the command line with ``./gradlew deploy``. Each country that you created is now listed on the home page and the names
-are also links to the individual content pages.
+- Redeploy the app from the command line with ``./gradlew deploy``.
+
+Each country that you created is now listed on the home page and the names are also links to the individual content pages.
 
 Hello Geo World
 ===============
@@ -356,22 +358,25 @@ This controller uses page contributions to put the Google Maps JavaScript into t
   :language: html
 
 
-Build and deploy your project one final time.
+- Build and deploy your project one final time.
 
 To make use of the changes, do the following:
 
 1. Add the "City List" part to your "Country" page template
 
   A. Edit the "Country" page template.
-  B. Open the context panel by clicking the gear button in the toolbar.
-  C. Click and drag a `Part` to the page region below the "Country" part.
-  D. Save and close the tab.
+  B. Open the context panel by clicking the cog button in the toolbar.
+  C. Click and drag a `Part` to the page region below the "country" part. (This may be a bit tricky because the "country" part is small.)
+  D. Select the "City list" part from the dropdown in the box. You may need to close the context panel to see it.
+  E. Save and close the tab.
 
-2. Create some City contents below a selected country (below are some sample data you may use).
+2. Create some City contents below a selected country. (Sample data is available in the table below.)
 
-  A. Click a country content that you created earlier.
+  A. From the content pane, click a country content that you created earlier.
   B. Click "New" and select "City" from the list of content types. It is important that the city content be created under the country.
-  C. Fill in the city name and location. The format must be comma separated latitude and longitude with decimals (for example 37.7833,-122.4167).
+  C. Fill in the city name and location. The population is optional. (The location format must be comma separated latitude and longitude
+     with decimals. Do not select a page template from the dropdown on the right.)
+  D. Save draft.
 
 Here is a list of cities with latitude and longitude that you may copy/paste from.
 
@@ -398,18 +403,16 @@ Here is a list of cities with latitude and longitude that you may copy/paste fro
 +--------------------+----------------+------------------+
 
 
-When visiting a country page, the browser will now request your location.
-You should then see something like this:
+Each country page will now have a list of the cities you created with a Google map of the location.
+It should look something like this:
 
-MISSING Image (name of country at top, + google map with cities, also present the city which is closest to you using geo-distance sorting)
+MISSING Image
 
-
-
-If you think the location question is bothersome,
-we added a simple configuration button to the part (using the city-list.xml file)
+TODO
+We added a simple configuration button to the part (using the city-list.xml file)
 - so you can turn this feature on/off. Simply select the part in live edit, open the context panel and toggle on/off.
 
-MISSING Image to turn feature on/off (radiobuttons?)
+MISSING Image of part config
 
 
 
