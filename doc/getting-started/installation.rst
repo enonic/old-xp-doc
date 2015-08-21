@@ -30,7 +30,7 @@ Download
 First off, `download <http://repo.enonic.com/public/com/enonic/xp/distro>`_
 the correct Enonic XP version and unzip it to a preferred directory.
 
-Terminal users can do this::
+Terminal users can do this (actual download URL (version) might not be up to date)::
 
   $ curl -O http://repo.enonic.com/public/com/enonic/xp/distro/6.0.0-M1/distro-6.0.0-M1.zip
   $ unzip distro-6.0.0-M1.zip
