@@ -20,7 +20,7 @@ Do you publish changelogs?
 
 Yes. You can go to the
 `releases tab on GitHub <https://github.com/enonic/xp/releases>`_
-to read the changelog for all versions. If you want to see what's comming,
+to read the changelog for all versions. If you want to see what's coming,
 you can go to our `GitHub wiki page <https://github.com/enonic/xp/wiki>`_.
 
     
