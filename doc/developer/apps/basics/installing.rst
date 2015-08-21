@@ -1,7 +1,7 @@
 Installing an application
 =========================
 
-After an application is built with Gradle, it must be deployed to your Enonic XP
+After an application is built with `Gradle <http://gradle.org>`_, it must be deployed to your Enonic XP
 installation:
 
 To deploy a application, copy the produced artifact to your
