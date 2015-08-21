@@ -3,7 +3,7 @@
 Building an application
 =======================
 
-The project is built using Gradle. Here is a simple build script to
+The project is built using `Gradle <http://gradle.org>`_. Here is a simple build script to
 build an app:
 
 .. literalinclude:: code/build.gradle
