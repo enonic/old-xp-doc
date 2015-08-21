@@ -59,7 +59,8 @@ The deployment step simply moves the result of the build, (the application jar f
 From there, Enonic XP will detect, install and start the application automatically.
 
 - Log in to the Administrative console with the Administrative user credentials and navigate to the Applications App.
-  Check that the application you just deployed is listed and that it has started.
+
+- The application you just deployed should be listed. Click the app to see information about it and confirm that it has started.
 
 .. tip:: The administration console is located at ``http://localhost:8080``. The default username is “su” and the password is “password”.
 
@@ -76,7 +77,7 @@ An application can serve many purposes and building sites is just one of them. T
 XP know that this app can be added to a site. Site-wide configurations can be defined in this file but we will leave the config element
 empty for now.
 
-A basic site.xml file is automatically created by the app-init script::
+A basic site.xml file was automatically created by the init-app script::
 
   src/main/resources/site/site.xml
 
@@ -84,7 +85,7 @@ Page Controller
 ---------------
 
 A page controller (see :ref:`apps-page-controller`) is a JavaScript file that handles requests such as GET and POST.
-Controllers usually pass dynamic values to an HTML. No values are passed in the example below, but the view file
+Controllers usually pass dynamic values to an HTML view. No values are passed in the example below, but the view file
 is specified and rendered with the Thymeleaf templating engine.
 
 - Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the two files specified below inside
@@ -116,14 +117,14 @@ Create Site
 -----------
 
 #. Log in to the Administrative console using the Administrative user and navigate to the :ref:`content-content-manager`.
-#. Click "New" and select "Site" from the list of content types.
+#. Click "New" and select "Site" from the list of content types. This opens a tab within the page for editing the `site` content.
 #. Fill in the form with Display Name: "Hello World".
-#. Select your "MyApp" application in the "Installed Apps" dropdown.
+#. Select your "MyApp" application in the "Applications" dropdown.
 #. In the dropdown on the right side of the page, select the "hello" page.
-#. Click the "Save draft" button on the top-left.
-#. Now close the site tab to see the content pane.
+#. Click the "Save draft" button in the toolbar (top-left).
+#. Now close the "Hello World" site editor tab to see the content pane.
 
-You should now have a site that looks something like this:
+When you click on the "Hello World" site content, the preview should look something like this:
 
 .. image:: images/hello-world-site1.png
 
@@ -148,6 +149,11 @@ The content type defines the form (and underlying schema) of items you manage.
 
 .. literalinclude:: code/content-types/country1.xml
   :language: xml
+
+This content type defines form inputs for **description** and **population**. All content has a built-in field for **Display Name**. This
+content type will produce the form (seen below) in the Content Manager app.
+
+.. image:: images/country-content-form.png
 
 .. tip:: Each content type must reside in its own folder under the ``site/content-types`` directory. The name of the content type XML file
    must be the same as the directory that contains it.
@@ -228,22 +234,22 @@ Now that the "Country" content type is installed, we can create new countries us
 
 #. Select the "Hello World" site from the navigation tree
 #. Choose "New" and select "Country" from the list of content types.
-#. Fill the form with the details of your favorite country and press save.
+#. Fill in the form with the details of your favorite country and click "Save draft".
 
-TODO IMAGE
+.. image:: images/country-content-edit.png
 
 Similar to the site, we must also configure a view for the country
 
 #. From the Live Edit panel to the right, select "Hello Region" (this "pretty" name comes from the page xml configuration file).
-#. Open the context panel (activated from the configuration gear button in the toolbar).
-#. Under the "Insert" tab, drag a "Part" into the box on the page.
-#. A new dropdown option will appear. Select the "country" part.
-#. Save
+#. Open the context panel (activated from the configuration cog button in the toolbar).
+#. Under the "Insert" tab, drag and drop a "Part" into the box on the page.
+#. A new dropdown option will appear. Select the "country" part. (You can start typing "Country" in the box or you may need to close the
+   context panel to see the dropdown.)
+#. Save draft and close the content edit tab.
 
-You should now have a page that renders your favorite country, something like this:
+When you click on the country in the content pane, you should see a preview of the rendered page, something like this:
 
-MISSING IMAGE
-
+.. image:: images/country-content-rendered.png
 
 Page Templates
 ==============
@@ -263,15 +269,17 @@ Create Country Template
   * Supports: "Country" (selected from the list of content types)
 
 4. In the Live Edit panel on the right, select the "Hello Region" controller.
-5. Open the context panel (activated from the gear button in the toolbar).
-6. Drag a "Part" into the empty region and select the "country" part.
-7. Save
+5. Open the context panel (activated from the cog button in the toolbar).
+6. Under the "Insert" tab, drag and drop a "Part" into the empty region.
+7. Select the "country" part from the dropdown. (You may need to close the context panel to see the dropdown.)
+8. Click "Save draft" in the toolbar and close the tab.
 
-Every "Country" you create will now use this template by default.
+Every "Country" content you create will now use this template by default.
 
 .. TIP:: The "Support" property is the key. A page template will support rendering of the content types specified here.
 
-Try this out by creating a few new countries in your site.
+- Try this out by creating a few new countries in your site. Make sure you click the "Hello World" site before clicking "New" in the
+  toolbar. Every content you create will exist as a child of the content that is selected in the content pane.
 
 Update Favorite Country
 ------------------------
