@@ -1,3 +1,5 @@
+.. _apps-configure:
+
 Configuring a site
 ======================
 
