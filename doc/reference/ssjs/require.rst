@@ -4,13 +4,13 @@
 require
 =======
 
-This function will load a javascript and return the exports as object.
+This function will load a JavaScript and return the exports as object.
 The function implements parts of the `CommonJS Modules Specification`_.
 
 .. js:function:: require(path)
 
   :param string path: Path to the javascript to load.
-  :returns: The loaded javascript object exports.
+  :returns: The loaded JavaScript object exports.
 
 Examples:
 

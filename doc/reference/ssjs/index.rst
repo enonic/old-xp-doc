@@ -1,7 +1,7 @@
 Server JavaScript
 =================
 
-Our server-side javascript engine has some well-known global variables and
+Our server-side JavaScript engine has some well-known global variables and
 functions. All the global variables and functions are documented in this
 section.
 
