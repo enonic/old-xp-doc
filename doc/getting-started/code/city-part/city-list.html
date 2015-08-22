@@ -1,4 +1,5 @@
 <div class="cities" style="min-height:100px;">
+    <h3>Cities</h3>
     <div class="city" data-th-each="city : ${cities}">
         <h3 data-th-text="${city.name}"></h3>
         <div data-th-if="${city.population}" data-th-text="${city.population}"></div>

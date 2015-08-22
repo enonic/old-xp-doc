@@ -191,7 +191,9 @@ We will later place the "Country" part into this region.
 The benefit of a region (see :ref:`apps-page-region`) is that a page component can be re-used across multiple different pages,
 simply by adding different parts to it as needed.
 
-- Create a folder called "hello-region" in your project's ``site/pages/`` folder and add the following three files::
+- Create a folder called "hello-region" in your project's ``site/pages/`` folder and add the following three files:
+
+::
 
   src/main/resources/site/pages/hello-region/hello-region.xml
 
@@ -292,7 +294,7 @@ You might remember that your favorite country was "hardcoded" - so let's change 
 #. Open the context panel (cog button in the toolbar) and select "Automatic" from under the "Renderer" label. (It's under the "Inspect" tab)
 #. Save draft and close the tab.
 
-You can at any time select another Page template, or even customize the presentation of a single content.
+You can select another `Page template` at any time, or even customize the presentation of a single content.
 
 Country List
 ============
@@ -323,36 +325,27 @@ To make this even more exiting, we will add some geo-location info and configura
 Cities
 ------
 
-Add the following files to your project::
-
-  src/main/resources/site/content-types/city/city.xml
+We will now add a content type for cities with geo-location and a part component to display a list of cities in each country. Add the
+following files to your project:
 
 .. literalinclude:: code/content-types/city1.xml
   :language: xml
+  :caption: src/main/resources/site/content-types/city/city.xml
 
-The file above defines a content type for cities with a required field for the location in latitude and longitude.
-
-::
-
-  src/main/resources/site/parts/city-list/city-list.xml
+The file above defines a `content type` for cities with a required field for the location in latitude and longitude.
 
 .. literalinclude:: code/city-part/city-list.xml
   :language: xml
+  :caption: src/main/resources/site/parts/city-list/city-list.xml
 
 The part descriptor above has a configuration similar to those found in content types.
 
-::
-
-  src/main/resources/site/parts/city-list/city-list.js
-
 .. literalinclude:: code/city-part/city-list.js
   :language: javascript
+  :caption: src/main/resources/site/parts/city-list/city-list.js
 
-This controller uses page contributions to put the Google Maps JavaScript into the head of the document.
+This controller uses :ref:`apps-controller-contributions` to put the Google Maps JavaScript into the head of the document.
 
-::
-
-  src/main/resources/site/parts/city-list/city-list.html
 
 .. literalinclude:: code/city-part/city-list.html
   :language: html
@@ -380,40 +373,47 @@ To make use of the changes, do the following:
 
 Here is a list of cities with latitude and longitude that you may copy/paste from.
 
-+--------------------+----------------+------------------+
-|Country             |City            |Lat,Long          |
-+====================+================+==================+
-|USA                 |San Francisco   |37.7833,-122.4167 |
-+                    +----------------+------------------+
-|                    |Las Vegas       |36.1215,-115.1739 |
-+                    +----------------+------------------+
-|                    |Washington D.C. |38.9047,-77.0164  |
-+--------------------+----------------+------------------+
-|Norway              |Oslo            |59.9500,10.7500   |
-+                    +----------------+------------------+
-|                    |Bergen          |60.3894,5.3300    |
-+                    +----------------+------------------+
-|                    |Trondheim       |63.4297,10.3933   |
-+--------------------+----------------+------------------+
-|Colombia            |Bogota          |4.5981,-74.0758   |
-+                    +----------------+------------------+
-|                    |Medellin        |6.2308,-75.5906   |
-+                    +----------------+------------------+
-|                    |Barranquilla    |10.9639,-74.7964  |
-+--------------------+----------------+------------------+
++--------------------+----------------+------------------+-----------+
+|Country             |City            |Lat,Long          |Population |
++====================+================+==================+===========+
+|USA                 |San Francisco   |37.7833,-122.4167 |837,442    |
++                    +----------------+------------------+-----------+
+|                    |Las Vegas       |36.1215,-115.1739 |603,488    |
++                    +----------------+------------------+-----------+
+|                    |Washington D.C. |38.9047,-77.0164  |658,893    |
++--------------------+----------------+------------------+-----------+
+|Norway              |Oslo            |59.9500,10.7500   |618,683    |
++                    +----------------+------------------+-----------+
+|                    |Bergen          |60.3894,5.3300    |265,857    |
++                    +----------------+------------------+-----------+
+|                    |Trondheim       |63.4297,10.3933   |178,021    |
++--------------------+----------------+------------------+-----------+
+|Colombia            |Bogota          |4.5981,-74.0758   |7,000,000  |
++                    +----------------+------------------+-----------+
+|                    |Medellin        |6.2308,-75.5906   |2,440,000  |
++                    +----------------+------------------+-----------+
+|                    |Barranquilla    |10.9639,-74.7964  |1,885,500  |
++--------------------+----------------+------------------+-----------+
 
 
 Each country page will now have a list of the cities you created with a Google map of the location.
 It should look something like this:
 
-MISSING Image
+.. image:: images/city-list.png
 
-TODO
-We added a simple configuration button to the part (using the city-list.xml file)
-- so you can turn this feature on/off. Simply select the part in live edit, open the context panel and toggle on/off.
+The `City list` part descriptor (site/parts/city-list/city-list.xml) has configuration inputs for the map type and zoom level. You can set
+the default values for these inputs by editing the `City list` part in the `Country` page template.
 
-MISSING Image of part config
+#. Open the `Country` page template for editing.
+#. Open the Context panel by clicking the cog button in the toolbar.
+#. Click on the `City list` part in the Live Edit panel. (The `Inspect` tab should open.)
+#. Set the Map type to "Hybrid" and Zoom level to 12 with the form inputs in the Context panel.
+#. Save draft and close the edit tab.
 
+Now all of the countries will show the city maps with the new settings. You can override these defaults for any individual country by
+editing the Country content and changing its City list part configuration.
+
+.. image:: images/city-list-config.png
 
 
 Go Online
@@ -422,15 +422,15 @@ Go Online
 Now, that your "Hello World" is complete, it's time to go live.
 
 #. Select the "Hello World" site in the navigation
-#. Click ``Publish`` from the toolbar
-#. Remember to check the ``Include children`` checkbox
-#. After verifying everything in the Publishing Wizard window - click ``Publish``!
+#. Click "Publish" from the toolbar
+#. Remember to check the "Include children" checkbox
+#. After verifying everything in the Publishing Wizard window - click "Publish"!
 
 When clicking publish, all the selected items and changes are "cloned" from draft and into the master branch (:ref:`node-domain-repository`).
 
 You will always see the draft items using the preview function of the :ref:`content-content-manager`.
 If you have placed your site on root level, you can also see your live site at this url:
-``http://localhost:8080/portal/master/hello-world``.
+``http://localhost:8080/admin/portal/preview/master/hello-world``.
 
 
 Great job - you just created your first App for Enonic XP

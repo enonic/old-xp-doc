@@ -16,7 +16,7 @@ exports.get = function(req) {
     });
 
     var contents = result.contents;
-    var countries = new Array();
+    var countries = [];
 
     // Loop through the contents and extract the needed data
     for(var i = 0; i < contents.length; i++) {

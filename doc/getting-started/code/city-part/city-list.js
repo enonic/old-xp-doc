@@ -19,7 +19,7 @@ exports.get = function(req) {
     });
     var contents = result.contents;
 
-    var cities = new Array();
+    var cities = [];
 
     if(contents.length > 0) {
         googleMaps += '<script>function initialize() {';
@@ -63,4 +63,3 @@ exports.get = function(req) {
         }
     }
 };
-
