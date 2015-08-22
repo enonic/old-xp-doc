@@ -99,7 +99,7 @@ The `view`  below is a simple HTML file. This file will be updated later to hand
 
 .. literalinclude:: code/page-initial/hello.html
    :language: html
-   :cation: src/main/resources/site/pages/hello/hello.html
+   :caption: src/main/resources/site/pages/hello/hello.html
 
 
 - Once these files are in place, redeploy the app::
