@@ -91,17 +91,15 @@ is specified and rendered with the Thymeleaf templating engine.
 - Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the two files specified below inside
   the ``hello`` folder:
 
-``src/main/resources/site/pages/hello/hello.js``
-
 .. literalinclude:: code/page-initial/hello.js
    :language: js
+   :caption: src/main/resources/site/pages/hello/hello.js
 
 The `view`  below is a simple HTML file. This file will be updated later to handle dynamic content.
 
-``src/main/resources/site/pages/hello/hello.html``
-
 .. literalinclude:: code/page-initial/hello.html
    :language: html
+   :cation: src/main/resources/site/pages/hello/hello.html
 
 
 - Once these files are in place, redeploy the app::
@@ -143,12 +141,14 @@ The content type defines the form (and underlying schema) of items you manage.
 
 - Create a folder called "country" inside the "content-types" folder of your project. Then add the following file to this folder:
 
-::
-
-  src/main/resources/site/content-types/country/country.xml
-
 .. literalinclude:: code/content-types/country1.xml
   :language: xml
+  :caption: Country content type - src/main/resources/site/content-types/country/country.xml
+
+- Copy the image below to the the same folder with the name `country.png`. This will give the content type an icon that will be visible in
+  the Content Manager.
+
+.. image:: images/country.png
 
 This content type defines form inputs for **description** and **population**. All content has a built-in field for **Display Name**. This
 content type will produce the form (seen below) in the Content Manager app.
@@ -162,25 +162,20 @@ Country Part
 ------------
 
 We also need a way to present a country - because every country wants to be seen.
-This time, rather than just making another page controller, we will create a :ref:`apps-part`. Parts are reusable components that can be added to pages with "regions" - more on this below.
+This time, rather than just making another page controller, we will create a :ref:`apps-part`. Parts are reusable components that can be
+added to pages with "regions" - more on this below.
 
 - Create a folder called "country" inside the "parts" folder in your project. Then add the following files in the "country" folder:
 
-::
-
-  src/main/resources/site/parts/country/country.js
-
 .. literalinclude:: code/country-part/country1.js
   :language: javascript
+  :caption: Country part controller - src/main/resources/site/parts/country/country.js
 
 The part controller file above handles the GET request and passes the country content data to the view file which is displayed below.
 
-::
-
-  src/main/resources/site/parts/country/country.html
-
 .. literalinclude:: code/country-part/country1.html
   :language: html
+  :caption: Country part view - src/main/resources/site/parts/country/country.html
 
 Hello Region Page
 -----------------
@@ -193,31 +188,22 @@ simply by adding different parts to it as needed.
 
 - Create a folder called "hello-region" in your project's ``site/pages/`` folder and add the following three files:
 
-::
-
-  src/main/resources/site/pages/hello-region/hello-region.xml
-
 .. literalinclude:: code/hello-region-page/region1.xml
   :language: xml
+  :caption: Page descriptor - src/main/resources/site/pages/hello-region/hello-region.xml
 
 The XML file above is a :ref:`apps-page-descriptor`. Regions and page configurations can be defined here.
 
-::
-
-  src/main/resources/site/pages/hello-region/hello-region.js
-
 .. literalinclude:: code/hello-region-page/region1.js
   :language: javascript
+  :caption: Page controller - src/main/resources/site/pages/hello-region/hello-region.js
 
 This page controller uses a portal library (see :ref:`libs-portal`) to get the content and extract
 the "main" region which was defined in the descriptor XML file.
 
-::
-
-  src/main/resources/site/pages/hello-region/hello-region.html
-
 .. literalinclude:: code/hello-region-page/region1.html
   :language: html
+  :caption: Page view - src/main/resources/site/pages/hello-region/hello-region.html
 
 The view file above defines the place on the page where the region will render parts that are dragged and dropped in Live Edit.
 
@@ -325,37 +311,42 @@ To make this even more exiting, we will add some geo-location info and configura
 Cities
 ------
 
-We will now add a content type for cities with geo-location and a part component to display a list of cities in each country. Add the
-following files to your project:
+We will now add a content type for cities with geo-location and a part component to display a list of cities in each country.
+
+-Add the following files to your project:
 
 .. literalinclude:: code/content-types/city1.xml
   :language: xml
-  :caption: src/main/resources/site/content-types/city/city.xml
+  :caption: City content type - src/main/resources/site/content-types/city/city.xml
 
 The file above defines a `content type` for cities with a required field for the location in latitude and longitude.
 
+- Copy the image below and save it in the same folder with the City content type. Name it city.png.
+
+.. image:: images/city.png
+
 .. literalinclude:: code/city-part/city-list.xml
   :language: xml
-  :caption: src/main/resources/site/parts/city-list/city-list.xml
+  :caption: City list part descriptor - src/main/resources/site/parts/city-list/city-list.xml
 
 The part descriptor above has a configuration similar to those found in content types.
 
 .. literalinclude:: code/city-part/city-list.js
   :language: javascript
-  :caption: src/main/resources/site/parts/city-list/city-list.js
+  :caption: City list part controller - src/main/resources/site/parts/city-list/city-list.js
 
 This controller uses :ref:`apps-controller-contributions` to put the Google Maps JavaScript into the head of the document.
 
 
 .. literalinclude:: code/city-part/city-list.html
   :language: html
-  :caption: src/main/resources/site/parts/city-list/city-list.html
+  :caption: City list part view - src/main/resources/site/parts/city-list/city-list.html
 
 - Build and deploy your project one final time.
 
 To make use of the changes, do the following:
 
-1. Add the "City List" part to your "Country" page template
+1. Add the "City list" part to your "Country" page template
 
   A. Edit the "Country" page template.
   B. Open the context panel by clicking the cog button in the toolbar.
@@ -363,13 +354,14 @@ To make use of the changes, do the following:
   D. Select the "City list" part from the dropdown in the box. You may need to close the context panel to see it.
   E. Save and close the tab.
 
-2. Create some City contents below a selected country. (Sample data is available in the table below.)
+2. Create a City content below a selected country. (Sample data is available in the table below.)
 
   A. From the content pane, click a country content that you created earlier.
   B. Click "New" and select "City" from the list of content types. It is important that the city content be created under the country.
   C. Fill in the city name and location. The population is optional. (The location format must be comma separated latitude and longitude
      with decimals. Do not select a page template from the dropdown on the right.)
   D. Save draft.
+  E. Create several more city contents below each country content by repeating the previous steps.
 
 Here is a list of cities with latitude and longitude that you may copy/paste from.
 
@@ -405,9 +397,9 @@ The `City list` part descriptor (site/parts/city-list/city-list.xml) has configu
 the default values for these inputs by editing the `City list` part in the `Country` page template.
 
 #. Open the `Country` page template for editing.
-#. Open the Context panel by clicking the cog button in the toolbar.
+#. Open the context panel by clicking the cog button in the toolbar.
 #. Click on the `City list` part in the Live Edit panel. (The `Inspect` tab should open.)
-#. Set the Map type to "Hybrid" and Zoom level to 12 with the form inputs in the Context panel.
+#. Set the Map type to "Hybrid" and Zoom level to 12 with the form inputs in the context panel.
 #. Save draft and close the edit tab.
 
 Now all of the countries will show the city maps with the new settings. You can override these defaults for any individual country by
@@ -439,7 +431,10 @@ Great job - you just created your first App for Enonic XP
 Next steps
 ==========
 
-This tutorial only covered the basics of app development.
+This tutorial only covered the basics of app development. Explore the documentation and check out examples of more advanced apps on
+`GitHub <https://github.com/enonic>`_. The `Xeon <https://github.com/enonic/app-xeon-onepager>`_ app is fairly simple but still much more
+advanced than this. Be sure to view the 6.0 branch. The `Superhero <https://github.com/enonic/app-superhero-blog>`_ app is more complicated
+but still a work in progress (use the new6 branch).
 
 Multiple projects
 -----------------
