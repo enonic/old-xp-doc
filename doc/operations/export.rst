@@ -4,12 +4,12 @@ Export and Import
 =================
 
 Exporting and importing data in your Enonic XP installation is useful both for securing data and migrating between installations.
-Enonic XP ships with a set of :ref:`toolbox` to ease the operation of exporting and importing data from the system.
+Enonic XP ships with a set of tools (:ref:`toolbox`) to ease the operation of exporting and importing data from the system.
 
 .. CAUTION::
 
   At the moment, exporting and importing data can only be done to and from files on the
-  server running Enonic XP server.
+  same server running Enonic XP.
 
 
 Export
@@ -66,10 +66,9 @@ Let's look at how this works. The following structure will be exported:
 
 Run the export command::
 
-  $ ./export.sh -u su:password -s cms-repo:draft:/ -t myexport \
-    -n -i false
+  $ ./toolbox.sh export -a su:password -s cms-repo:draft:/ -t myExport
 
-Below is the resulting structure in the export folder ``$XP_HOME/data/export/myexport``::
+Below is the resulting structure in the export folder ``$XP_HOME/data/export/myExport``::
 
   ./content
   ./content/_
@@ -143,7 +142,7 @@ Using the above export as an example, the ``demo-site`` displayName can be chang
 
 After some data has been changed, it can be imported again::
 
-  $ ./import.sh -u su:password -s myExport -t cms-repo:draft:/
+  $ ./toolbox.sh import -a su:password -s myExport -t cms-repo:draft:/
 
 .. image:: images/import-result.png
 

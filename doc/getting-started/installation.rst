@@ -32,12 +32,20 @@ the correct Enonic XP version and unzip it to a preferred directory.
 
 Terminal users can do this (actual download URL (version) might not be up to date)::
 
-  $ curl -O http://repo.enonic.com/public/com/enonic/xp/distro/6.0.0-M1/distro-6.0.0-M1.zip
-  $ unzip distro-6.0.0-M1.zip
-  $ cd enonic-xp-6.0.0-M1
+  $ curl -O http://repo.enonic.com/public/com/enonic/xp/distro/6.0.0-RC1/distro-6.0.0-RC1.zip
+  $ unzip distro-6.0.0-RC1.zip
+  $ cd enonic-xp-6.0.0-RC1
 
 The top level of the unzipped directory will be referred to as ``$XP_INSTALL``
 from now on.
+
+.. note:: **$XP_INSTALL** and **$XP_HOME** are referenced frequently in the documentation and it is important
+  to understand the difference. $XP_INSTALL is the top level directory of the XP installation and it
+  contains the directories `bin`, `home`, `lib`, `toolbox` and others. While $XP_HOME, by default, is
+  the location of the $XP_INSTALL/home folder and it contains the `config`, `deploy`, `repo` and other
+  directories specific to a single XP instance. The home folder can be copied to multiple locations
+  for developers working on more than one project. The **$XP_HOME environment variable** should be set to
+  the home folder of the project to be run.
 
 Start the server
 ----------------

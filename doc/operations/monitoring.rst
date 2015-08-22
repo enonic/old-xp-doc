@@ -9,3 +9,6 @@ point to the following url::
 
 This will give you information about Enonic XP version, JVM metrics, memory
 usages and OS information.
+
+.. literalinclude:: code/status.js
+  :language: javascript

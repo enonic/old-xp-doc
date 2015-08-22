@@ -5,14 +5,14 @@ This library implements JavaScript bindings for standard content-related
 functionality. Add the following into your ``build.gradle`` file in the
 ``dependencies`` section::
 
-  library 'com.enonic.xp:lib-content:6.0.0-M1'
+  library 'com.enonic.xp:lib-content:6.0.0-RC1'
 
 To use this library in your JavaScript files, you can require the library
 like this::
 
   var lib = require('/lib/xp/content')
 
-Below is a list of methods that's implemented in this library.
+Below is a list of methods that are implemented in this library.
 
 .. toctree::
    :maxdepth: 1

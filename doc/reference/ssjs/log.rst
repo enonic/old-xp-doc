@@ -13,7 +13,7 @@ level and takes the same number of parameters.
 
 .. js:function:: log.info(message, args)
 
-  :param string message: Message to log as a info-level message.
+  :param string message: Message to log as an info-level message.
   :param array args: Optional arguments used in message format.
 
 .. js:function:: log.warning(message, args)
@@ -23,7 +23,7 @@ level and takes the same number of parameters.
 
 .. js:function:: log.error(message, args)
 
-  :param string message: Message to log as a error-level message.
+  :param string message: Message to log as an error-level message.
   :param array args: Optional arguments used in message format.
 
 Examples:
