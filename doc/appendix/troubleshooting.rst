@@ -35,5 +35,4 @@ A lot of different web software defaults to port 8080. If you find that the log
 is complaining about this, simply identify the other software you have running on this port
 and stop it.
 
-Optionally, you may set a different port for Enonic XP, but this is the topic
-of :ref:`configuration`.
+If shutting down other software that uses port 8080 is not an option, you may set a different port for Enonic XP. See :ref:`configuration`.
