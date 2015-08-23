@@ -1,3 +1,5 @@
+.. _apps-controller-contributions:
+
 Page Contributions
 ==================
 

@@ -3,12 +3,12 @@
 Configuration
 =============
 
-Enonic XP, system modules and 3rd party modules can easily be configured using the files
-in ``$XP_HOME/config/`` directory.
+Enonic XP, system modules, and 3rd party modules can easily be configured by editing the files
+in the ``$XP_HOME/config/`` directory.
 
-When changing files ending with ``.cfg``, their respective modules will automatically be
-restart with their new configuration. Files ending with ``.properties`` require a full restart of
-Enonic XP to be applied. In a clustered environment each node must be re-started.
+When changing files ending with ``.cfg``, their respective modules will automatically
+restart with the new configuration. Files ending with ``.properties`` require a full restart of
+Enonic XP to be applied. In a clustered environment each node must be restarted.
 
 
 System Configuration
@@ -24,7 +24,7 @@ Virtual Host Configuration
 --------------------------
 
 Virtual hosts are configured in the file ``com.enonic.xp.web.vhost.cfg`` and
-is automatically updated on changes. A sample virtual host configuration
+are automatically updated upon changes. A sample virtual host configuration
 is listed below.
 
 .. literalinclude:: code/vhost.properties
@@ -45,3 +45,11 @@ In the second example, mapping ``b``, a site is mapped to the root of the
 URL, which would be normal in production environments.
 
 In the third example, the admin site is mapped to ``enonic.com/admin``.
+
+Web Configuration
+-----------------
+
+The default http port for Enonic XP is 8080. This value can be changed in the file ``org.ops4j.pax.web.cfg``.
+
+.. literalinclude:: code/web.properties
+   :language: properties

@@ -3,9 +3,9 @@ Backup and Restore
 
 Backing up your Enonic XP data is vital for any installation. There are several ways to secure your data.
 
-* *Export/import:* see :ref:`operations-export`.
-* *Snapshot/restore:*: see below.
-* *Backup ``$XP_HOME/repo``-folder*: Only for non-clustered environments.
+* `Export/import:` see :ref:`operations-export`.
+* `Snapshot/restore:` see below.
+* `Backup $XP_HOME/repo folder`: Only for non-clustered environments.
 
 All the data in an Enonic XP installation is stored in ``$XP_HOME/repo``. This directory has two folders: ``blob`` and ``index``. The ``blob``
 folder contains all files needed by the system to manage your data, while the ``index`` folder contains the Elasticsearch index folders. These
@@ -13,7 +13,7 @@ are dependent on each other in the sense that one is not much use without the ot
 
 .. CAUTION::
 
-  Technical details: When fetching data in Enonic XP, the index is scanned and a set of "blob-keys" are returned. These blob-keys
+  Technical details: When fetching data in Enonic XP, the index is scanned and a set of "blob-keys" is returned. These blob-keys
   refer to files in the `blob` folder where the actual contents are fetched. Each file in the `blob` folder is a binary blob or a serialized
   "node", which is the low level structure of your data.
 
@@ -39,7 +39,7 @@ clustered environment. We have a number of rest-resources available at your disp
   Restore a snapshot of the indices state.
 
 ``http://<your-installation>/admin/rest/repo/delete``
-  Deletes a single or a group of snapshots.
+  Deletes a snapshot or a group of snapshots.
 
 
 Snapshot

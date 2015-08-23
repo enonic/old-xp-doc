@@ -6,8 +6,8 @@ into a standardized unit for software development. We provide standard
 images for each version so that it's really easy to start Enonic XP
 for development or production.
 
-To start using Docker you will have to set up a Docker host and
-install Docker client libraries. Please follow `get started with Docker`_
+To start using Docker, you will have to set up a Docker host and
+install Docker client libraries. Please follow the `get started with Docker`_
 guide to set up everything you need.
 
 .. _Docker: https://www.docker.com/
@@ -29,7 +29,7 @@ Shutdown your server by executing the ``docker stop`` command::
 
   docker stop xp-app
 
-And, finally, kill the container if you do not need it anymore. This
+And finally, kill the container if you do not need it anymore. This
 will destroy all data on the image as well::
 
   docker kill xp-app

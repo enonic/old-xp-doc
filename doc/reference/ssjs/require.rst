@@ -4,7 +4,7 @@
 require
 =======
 
-This function will load a JavaScript and return the exports as object.
+This function will load a JavaScript file and return the exports as objects.
 The function implements parts of the `CommonJS Modules Specification`_.
 
 .. js:function:: require(path)
@@ -16,3 +16,7 @@ Examples:
 
 .. literalinclude:: code/require.js
    :language: javascript
+
+If the path is relative then it will start looking for the file from the local directory.
+If the file is not found there, it will start looking from the `site/lib` directory.
+The file extension .js is not required.
