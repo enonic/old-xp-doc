@@ -93,14 +93,13 @@ is specified and rendered with the Thymeleaf templating engine.
 
 .. literalinclude:: code/page-initial/hello.js
    :language: js
-   :caption: src/main/resources/site/pages/hello/hello.js
+   :caption: Hello page controller - src/main/resources/site/pages/hello/hello.js
 
 The `view`  below is a simple HTML file. This file will be updated later to handle dynamic content.
 
 .. literalinclude:: code/page-initial/hello.html
    :language: html
-   :caption: src/main/resources/site/pages/hello/hello.html
-
+   :caption: Hello view - src/main/resources/site/pages/hello/hello.html
 
 - Once these files are in place, redeploy the app::
 
@@ -125,7 +124,6 @@ Create Site
 When you click on the "Hello World" site content, the preview should look something like this:
 
 .. image:: images/hello-world-site1.png
-
 
 Adding Countries
 ================
