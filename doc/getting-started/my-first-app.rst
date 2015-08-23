@@ -18,22 +18,21 @@ My First App
 Initialize project
 ==================
 
-In order to get started quickly, a tool exists to create the basic project structure you need.
-
+Enonic XP includes the :ref:`toolbox` which has an option to initialize an application project with the
+standard structures required for app development (see :ref:`apps-basics-project`).
 
 Init App
 --------
-- Create an empty folder at a suitable location on your filesystem to place the code for your application. e.g. /Users/<username>/project/myapp
+#. Create an empty folder at a suitable location on your filesystem to place the code for your application project. e.g. /Users/<username>/project/myapp
 
-Included with Enonic XP is the :ref:`toolbox`.
-It includes an option to initialize an application with all the standard structures typically required for an app (see :ref:`apps-basics-project`).
+#. Run the following command while located in your target folder::
 
-- Run the following command while located in your target folder::
+::
 
-  $XP_INSTALL/toolbox/toolbox.sh init-app -n com.company.myapp
+[$XP_INSTALL]/toolbox/toolbox.sh init-app -n com.company.myapp
 
 .. tip:: Only basic characters (a-z, 0-9 and .) should be used for application names. We recommend following standard Java package naming
-  conventions. To see all options available with the init script, Run: ``$XP_INSTALL/toolbox/toolbox.sh help init-app``
+  conventions. To see all options available with the init script, run: ``[$XP_INSTALL]/toolbox/toolbox.sh help init-app``
 
 
 The init-app script will create a standard project structure for your app and configure
@@ -43,31 +42,30 @@ Investigate the build.gradle file located in your project's root for more detail
 
 Build and Deploy
 ----------------
-Now that we have set up a project, we should test that it builds and deploys successfully.
+Now that we have set up a project, we should test that it builds and deploys successfully. But before deploying the app, the $XP_HOME
+environment variable must be set to the path of the home folder of the XP installation.
 
-.. important:: The $XP_HOME environment variable must be set to the path of the home folder of the XP installation.
-  For example, ``$ export XP_HOME=/Users/<name>/enonic-xp-6.0.0/home``
+#. Run the following command in the terminal, replacing [$XP_HOME] with your installation location (no brackets): ``export XP_HOME=[$XP_INSTALL]/home``
 
-- Simply execute the following command from the project root directory::
-
-  ./gradlew deploy
+#. Execute the following command from the project root directory: ``./gradlew deploy``
 
 If you don't already have `Gradle <http://gradle.org>`_ installed, the Gradle wrapper will download this first.
 Next it will build the app and then attempt to deploy it.
 
-The deployment step simply moves the result of the build, (the application jar file) into the ``$XP_HOME/deploy`` directory.
+The deployment step simply moves the result of the build (the application jar file) into the ``$XP_HOME/deploy`` directory.
 From there, Enonic XP will detect, install and start the application automatically.
 
-- Log in to the Administrative console with the Administrative user credentials and navigate to the Applications App.
+#. Log in to the Administrative console (http://localhost:8080) with the Administrative user credentials (userid "su" and password
+   "password").
 
-- The application you just deployed should be listed. Click the app to see information about it and confirm that it has started.
+#. Navigate to the Applications App. The application you just deployed should be listed.
 
-.. tip:: The administration console is located at ``http://localhost:8080``. The default username is “su” and the password is “password”.
+#. Click the app "MyApp" to see information about it and confirm that it has started.
 
 Hello World Site
 ================
 
-Our next goal is to set up a "Hello World" site in the XP administration console,
+Our next goal is to set up a "Hello World" site in the Content Manager app,
 but first we must add some initial configuration to our project.
 
 Site descriptor
@@ -79,27 +77,31 @@ empty for now (see :ref:`apps-configure`).
 
 A basic site.xml file was automatically created by the init-app script::
 
-  src/main/resources/site/site.xml
+  [project-root]/src/main/resources/site/site.xml
+
+.. note:: All of the files we will be working with are below the "site" directory, from the project root src/main/resources/site. All file
+  paths from now on will begin with "site/".
 
 Page Controller
 ---------------
 
 A page controller (see :ref:`apps-page-controller`) is a JavaScript file that handles requests such as GET and POST.
-Controllers usually pass dynamic values to an HTML view. No values are passed in the example below, but the view file
-is specified and rendered with the Thymeleaf templating engine.
+Controllers usually pass JavaScript objects with data to be dynamically rendered in an HTML view. No data is passed in the example below,
+but the view file is specified and rendered as static HTML.
 
-- Create a folder called ``hello`` inside the ``src/main/resources/site/pages`` directory. Then create the two files specified below inside
-  the ``hello`` folder:
+- Create a folder called ``hello`` inside the ``site/pages`` directory.
+
+- Create the page controller and page view files specified below inside the ``hello`` folder:
 
 .. literalinclude:: code/page-initial/hello.js
    :language: js
-   :caption: Hello page controller - src/main/resources/site/pages/hello/hello.js
+   :caption: Hello page controller - site/pages/hello/hello.js
 
 The `view`  below is a simple HTML file. This file will be updated later to handle dynamic content.
 
 .. literalinclude:: code/page-initial/hello.html
    :language: html
-   :caption: Hello view - src/main/resources/site/pages/hello/hello.html
+   :caption: Hello page view - site/pages/hello/hello.html
 
 - Once these files are in place, redeploy the app::
 
@@ -107,13 +109,12 @@ The `view`  below is a simple HTML file. This file will be updated later to hand
 
 .. tip:: Each page controller must reside in its own folder under the ``site/pages`` directory. The name of the controller JavaScript file
   must be the same as the directory that contains it. The HTML view file can reside anywhere in the project and have any valid file name.
-  This allows view files to be shared between components. Just make sure to specify the full path of the view file in the controller when
-  the view is not in the same directory.
+  This allows view files to be shared between components.
 
 Create Site
 -----------
 
-#. Log in to the Administrative console using the Administrative user and navigate to the :ref:`content-content-manager`.
+#. In your browser, navigate to the :ref:`content-content-manager` admin app. (Use the square dots icon in the toolbar to switch between admin apps.)
 #. Click "New" and select "Site" from the list of content types. This opens a tab within the page for editing the `site` content.
 #. Fill in the form with Display Name: "Hello World".
 #. Select your "MyApp" application in the "Applications" dropdown.
@@ -137,19 +138,21 @@ Country Content Type
 To add structured data (such as countries), we need so-called :ref:`content-domain-content-types`.
 The content type defines the form (and underlying schema) of items you manage.
 
-- Create a folder called "country" inside the "content-types" folder of your project. Then add the following file to this folder:
+- Create a folder called "country" inside the "content-types" folder of your project.
+
+- Add the Country content type file below to this folder:
 
 .. literalinclude:: code/content-types/country1.xml
   :language: xml
-  :caption: Country content type - src/main/resources/site/content-types/country/country.xml
+  :caption: Country content type - site/content-types/country/country.xml
 
-- Copy the image below to the the same folder with the name `country.png`. This will give the content type an icon that will be visible in
-  the Content Manager.
+- Copy the image below to the the same folder (content-types/country) with the name `country.png`. This will give the content type an icon
+  that will be visible in the Content Manager.
 
 .. image:: images/country.png
 
-This content type defines form inputs for **description** and **population**. All content has a built-in field for **Display Name**. This
-content type will produce the form (seen below) in the Content Manager app.
+This content type defines form inputs for **description** and **population**. All content has a built-in field for **Display Name**. When
+the app is redeployed, this content type will produce the form seen below in the Content Manager app.
 
 .. image:: images/country-content-form.png
 
@@ -167,13 +170,13 @@ added to pages with "regions" - more on this below.
 
 .. literalinclude:: code/country-part/country1.js
   :language: javascript
-  :caption: Country part controller - src/main/resources/site/parts/country/country.js
+  :caption: Country part controller - site/parts/country/country.js
 
 The part controller file above handles the GET request and passes the country content data to the view file which is displayed below.
 
 .. literalinclude:: code/country-part/country1.html
   :language: html
-  :caption: Country part view - src/main/resources/site/parts/country/country.html
+  :caption: Country part view - site/parts/country/country.html
 
 Hello Region Page
 -----------------
@@ -188,20 +191,20 @@ simply by adding different parts to it as needed.
 
 .. literalinclude:: code/hello-region-page/region1.xml
   :language: xml
-  :caption: Page descriptor - src/main/resources/site/pages/hello-region/hello-region.xml
+  :caption: Page descriptor - site/pages/hello-region/hello-region.xml
 
 The XML file above is a :ref:`apps-page-descriptor`. Regions and page configurations can be defined here.
 
 .. literalinclude:: code/hello-region-page/region1.js
   :language: javascript
-  :caption: Page controller - src/main/resources/site/pages/hello-region/hello-region.js
+  :caption: Page controller - site/pages/hello-region/hello-region.js
 
 This page controller uses a portal library (see :ref:`libs-portal`) to get the content and extract
 the "main" region which was defined in the descriptor XML file.
 
 .. literalinclude:: code/hello-region-page/region1.html
   :language: html
-  :caption: Page view - src/main/resources/site/pages/hello-region/hello-region.html
+  :caption: Page view - site/pages/hello-region/hello-region.html
 
 The view file above defines the place on the page where the region will render parts that are dragged and dropped in Live Edit.
 
@@ -315,7 +318,7 @@ We will now add a content type for cities with geo-location and a part component
 
 .. literalinclude:: code/content-types/city1.xml
   :language: xml
-  :caption: City content type - src/main/resources/site/content-types/city/city.xml
+  :caption: City content type - site/content-types/city/city.xml
 
 The file above defines a `content type` for cities with a required field for the location in latitude and longitude.
 
@@ -325,20 +328,20 @@ The file above defines a `content type` for cities with a required field for the
 
 .. literalinclude:: code/city-part/city-list.xml
   :language: xml
-  :caption: City list part descriptor - src/main/resources/site/parts/city-list/city-list.xml
+  :caption: City list part descriptor - site/parts/city-list/city-list.xml
 
 The part descriptor above has a configuration similar to those found in content types.
 
 .. literalinclude:: code/city-part/city-list.js
   :language: javascript
-  :caption: City list part controller - src/main/resources/site/parts/city-list/city-list.js
+  :caption: City list part controller - site/parts/city-list/city-list.js
 
 This controller uses :ref:`apps-controller-contributions` to put the Google Maps JavaScript into the head of the document.
 
 
 .. literalinclude:: code/city-part/city-list.html
   :language: html
-  :caption: City list part view - src/main/resources/site/parts/city-list/city-list.html
+  :caption: City list part view - site/parts/city-list/city-list.html
 
 - Build and deploy your project one final time.
 
@@ -482,3 +485,10 @@ Call the log function in any controller like the example below and then check th
 
   var content = portal.getContent();
   util.log(content);
+
+Gradle watch
+------------
+
+It can be quite time consuming to frequently switch to the terminal to redeploy an app during development. Try using ``./gradlew watch``
+from the terminal to automatically redeploy your app every time a change to a file is detected. This requires that the $XP_HOME environment
+variable is set in the terminal window.
