@@ -328,7 +328,12 @@ Request object structure
 
 Each handler function in a controller receives a ``request`` object as a parameter.
 This request had its attribute ``uri`` renamed to ``url``.
+<<<<<<< Local Changes
+	
 
+=======
+
+>>>>>>> External Changes
 
 Aggregation result object
 ~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -15,7 +15,7 @@ infrastructure or other platform services.
 General requirements are:
 
 * Any OS supporting Java
-* Java 1.8 (update 40 or above, `latest JDK download <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_)
+* Java 1.8 (update 40 or above). See our JDK installation help page here: :ref:`installing_java`
 * Local filesystem
 * At least 1 GB of available memory
 * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)
