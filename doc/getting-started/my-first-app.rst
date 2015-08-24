@@ -37,7 +37,7 @@ Init App
 
 The init-app script will create a standard project structure for your app and configure
 Gradle build scripts (see :ref:`apps-basics-building`).
-Investigate the build.gradle file located in your project's root for more details.
+Investigate the ``build.gradle`` file located in your project's root for more details.
 
 
 Build and Deploy

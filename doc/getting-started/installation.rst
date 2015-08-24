@@ -17,7 +17,7 @@ General requirements are:
 * Any OS supporting Java
 * Java 1.8 (update 40 or above, `latest JDK download <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_)
 * Local filesystem
-* At least 1Gb of available memory
+* At least 1 GB of available memory
 * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)
 
 For clustered deployments:
@@ -31,7 +31,7 @@ Download
 `Download <http://repo.enonic.com/public/com/enonic/xp/distro>`_
 the correct Enonic XP version and unzip it to a suitable location.
 
-Terminal users can do this (actual download URL (version) might not be up to date)::
+Terminal users can do this (actual download URL (version) might be newer than the version mentioned below)::
 
   $ curl -O http://repo.enonic.com/public/com/enonic/xp/distro/6.0.0-RC1/distro-6.0.0-RC1.zip
   $ unzip distro-6.0.0-RC1.zip
