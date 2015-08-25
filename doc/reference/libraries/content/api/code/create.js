@@ -1,11 +1,11 @@
-var lib = require('/lib/xp/content');
+var contentLib = require('/lib/xp/content');
 
-var result = lib.create({
+var result = contentLib.create({
     name: 'mycontent',
     parentPath: '/a/b',
     displayName: 'My Content',
     draft: true,
-    contentType: 'system:unstructured',
+    contentType: 'test:myContentType',
     data: {
         a: 1,
         b: 2,
@@ -18,8 +18,10 @@ var result = lib.create({
         }
     },
     x: {
-        test: {
-            a: 1
+        "com-enonic-myapplication": {
+            myschema: {
+                a: 1
+            }
         }
     }
 });

@@ -1,5 +1,5 @@
-var lib = require('/lib/xp/portal');
+var portalLib = require('/lib/xp/portal');
 
-var url = lib.componentUrl({
-  component: 'main/0'
+var url = portalLib.componentUrl({
+    component: 'main/0'
 });

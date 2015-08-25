@@ -1,7 +1,7 @@
 var view = resolve('view/fruit.html');
 
-var thymeleaf = require('/lib/xp/thymeleaf');
-var result = thymeleaf.render({
+var thymeleafLib = require('/lib/xp/thymeleaf');
+var result = thymeleafLib.render({
     view: view,
     model: {
         fruits: [
