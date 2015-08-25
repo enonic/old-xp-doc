@@ -1,6 +1,7 @@
 {
     "_id": "100123",
     "_name": "my-content",
+    "_parentPath" : "/",
     "_path": "/my-content",
     "data": {
         "siteConfig": {
