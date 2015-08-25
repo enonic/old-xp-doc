@@ -8,6 +8,9 @@ This generates a URL pointing to an image.
 _path
   Path to the asset.
 
+_scale
+Required. Options are width(px), height(px), block(width,height) and square(px).
+
 _module
   Other module to reference to.  Default is current module.
 
