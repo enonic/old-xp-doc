@@ -63,12 +63,12 @@ site/assets/
   Public folder for external CSS, JavaScript and static images.
 
 site/content-types/
-  Content schemas-types are placed here. Used to create structured content.
+  Content schemas-types are placed here. Used to create structured content (see :ref:`content-domain-content-types`).
 
 site/mixins/
   Mixin schema-types are placed here. A mixin can be used to add fields to
-  a content-type.
+  a content-type (see :ref:`content-domain-mixins`).
 
 site/relationship-types/
   Relationship-types are placed here. They are used to form relations between
-  contents.
+  contents (see :ref:`content-domain-relationship-types`).
