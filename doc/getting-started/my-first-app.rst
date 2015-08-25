@@ -25,14 +25,14 @@ Init App
 --------
 #. Create an empty folder at a suitable location on your filesystem to place the code for your application project. e.g. /Users/<username>/project/myapp
 
-#. Run the following command while located in your target folder::
+#. Run the following command while located in your target folder:
 
 ::
 
 [$XP_INSTALL]/toolbox/toolbox.sh init-app -n com.company.myapp
 
 .. tip:: Only basic characters (a-z, 0-9 and .) should be used for application names. We recommend following standard Java package naming
-  conventions. To see all options available with the init script, run: ``[$XP_INSTALL]/toolbox/toolbox.sh help init-app``
+  conventions. To see all options available with the init-app script, run: ``[$XP_INSTALL]/toolbox/toolbox.sh help init-app``
 
 
 The init-app script will create a standard project structure for your app and configure
@@ -45,7 +45,7 @@ Build and Deploy
 Now that we have set up a project, we should test that it builds and deploys successfully. But before deploying the app, the $XP_HOME
 environment variable must be set to the path of the home folder of the XP installation.
 
-#. Run the following command in the terminal, replacing [$XP_HOME] with your installation location (no brackets): ``export XP_HOME=[$XP_INSTALL]/home``
+#. Run the following command in the terminal, replacing [$XP_INSTALL] with your installation location (no brackets): ``export XP_HOME=[$XP_INSTALL]/home``
 
 #. Execute the following command from the project root directory: ``./gradlew deploy``
 
@@ -55,12 +55,14 @@ Next it will build the app and then attempt to deploy it.
 The deployment step simply moves the result of the build (the application jar file) into the ``$XP_HOME/deploy`` directory.
 From there, Enonic XP will detect, install and start the application automatically.
 
-#. Log in to the Administrative console (http://localhost:8080) with the Administrative user credentials (userid "su" and password
-   "password").
+1. Check that the app has installed and started
 
-#. Navigate to the Applications App. The application you just deployed should be listed.
+  A. Log in to the Administrative console (http://localhost:8080) with the Administrative user credentials (userid "su" and password
+     "password").
 
-#. Click the app "MyApp" to see information about it and confirm that it has started.
+  B. Navigate to the Applications App. The application you just deployed should be listed.
+
+  C. Click the app "MyApp" to see information about it and confirm that it has started.
 
 Hello World Site
 ================
@@ -79,7 +81,7 @@ A basic site.xml file was automatically created by the init-app script::
 
   [project-root]/src/main/resources/site/site.xml
 
-.. note:: All of the files we will be working with are below the "site" directory, from the project root src/main/resources/site. All file
+.. note:: All of the files we will be working with are below the "site" directory in the project folder - src/main/resources/site. All file
   paths from now on will begin with "site/".
 
 Page Controller
@@ -89,9 +91,9 @@ A page controller (see :ref:`apps-page-controller`) is a JavaScript file that ha
 Controllers usually pass JavaScript objects with data to be dynamically rendered in an HTML view. No data is passed in the example below,
 but the view file is specified and rendered as static HTML.
 
-- Create a folder called ``hello`` inside the ``site/pages`` directory.
+#. Create a folder called ``hello`` inside the ``site/pages`` directory.
 
-- Create the page controller and page view files specified below inside the ``hello`` folder:
+#. Create the page controller and page view files specified below inside the ``hello`` folder:
 
 .. literalinclude:: code/page-initial/hello.js
    :language: js
@@ -103,7 +105,9 @@ The `view`  below is a simple HTML file. This file will be updated later to hand
    :language: html
    :caption: Hello page view - site/pages/hello/hello.html
 
-- Once these files are in place, redeploy the app::
+#. Once these files are in place, redeploy the app:
+
+::
 
   ./gradlew deploy
 
@@ -138,16 +142,18 @@ Country Content Type
 To add structured data (such as countries), we need so-called :ref:`content-domain-content-types`.
 The content type defines the form (and underlying schema) of items you manage.
 
-- Create a folder called "country" inside the "content-types" folder of your project.
+#. Create a folder called "country" inside the "content-types" folder of your project.
 
-- Add the Country content type file below to this folder:
+#. Add the Country content type file below to this folder:
 
 .. literalinclude:: code/content-types/country1.xml
   :language: xml
   :caption: Country content type - site/content-types/country/country.xml
 
-- Copy the image below to the the same folder (content-types/country) with the name `country.png`. This will give the content type an icon
-  that will be visible in the Content Manager.
+Each content type can have a custom icon that will be visible in the Content Manager app. Though not required, content icons can be helpful
+for content editors.
+
+#. Copy the image below to the the same folder (content-types/country) with the name `country.png`.
 
 .. image:: images/country.png
 
@@ -166,7 +172,7 @@ We also need a way to present a country - because every country wants to be seen
 This time, rather than just making another page controller, we will create a :ref:`apps-part`. Parts are reusable components that can be
 added to pages with "regions" - more on this below.
 
-- Create a folder called "country" inside the "parts" folder in your project. Then add the following files in the "country" folder:
+#. Create a folder called "country" inside the "parts" folder in your project. Then add the following files in the "country" folder:
 
 .. literalinclude:: code/country-part/country1.js
   :language: javascript
@@ -181,13 +187,13 @@ The part controller file above handles the GET request and passes the country co
 Hello Region Page
 -----------------
 
-To wrap things up, let's create a new page component with a single region called "Main".
+Component parts must be placed into a `region` on a page or layout. Let's create a new page component with a single region called "Main".
 We will later place the "Country" part into this region.
 
-The benefit of a region (see :ref:`apps-page-region`) is that a page component can be re-used across multiple different pages,
-simply by adding different parts to it as needed.
+The benefit of a region (see :ref:`apps-page-region`) is that a page component can be re-used across multiple different pages by simply
+adding different parts to it as needed.
 
-- Create a folder called "hello-region" in your project's ``site/pages/`` folder and add the following three files:
+#. Create a folder called "hello-region" in your project's ``site/pages/`` folder and add the following three files:
 
 .. literalinclude:: code/hello-region-page/region1.xml
   :language: xml
@@ -208,7 +214,7 @@ the "main" region which was defined in the descriptor XML file.
 
 The view file above defines the place on the page where the region will render parts that are dragged and dropped in Live Edit.
 
-When done - redeploy your app once again!
+#. When done - redeploy your app once again!
 
 ::
 
@@ -243,9 +249,8 @@ When you click on the country in the content pane, you should see a preview of t
 Page Templates
 ==============
 
-With our current solution, sadly, you will have to configure a page for every country you create.
+With our current solution, sadly, you would have to configure a page for every country you create.
 As this is not a very effective way of working with large data sets, we will create a page template to simplify the process.
-
 
 Create Country Template
 -----------------------
@@ -289,32 +294,34 @@ Country List
 Each country content can now be viewed on a page. But the site home page is still a bit empty. This section will have you alter the "hello"
 page controller and view files to list all of the country contents.
 
-- Edit the "hello" page controller file ``site/pages/hello/hello.js`` and make the following changes:
+1. Edit the "hello" page controller file ``site/pages/hello/hello.js`` and make the following changes:
 
 .. literalinclude:: code/page-list/hello.js
   :language: javascript
 
-- Now edit the "hello" view file ``site/pages/hello/hello.html`` and make the following changes:
+2. Now edit the "hello" view file ``site/pages/hello/hello.html`` and make the following changes:
 
 .. literalinclude:: code/page-list/hello.html
   :language: html
 
-- Redeploy the app from the command line with ``./gradlew deploy``.
+3. Redeploy the app from the command line with ``./gradlew deploy``.
 
 Each country that you created is now listed on the home page and the names are also links to the individual content pages.
 
 Hello Geo World
 ===============
 
-Going back to your site, you will now see a list of the countries we have added.
-To make this even more exiting, we will add some geo-location info and configuration capabilities to the site.
+Going back to your site, you will now see a list of the countries we have added. To make this even more exiting, we will add a City content
+type with geo-location and a `City list` part with configuration capabilities.
 
 Cities
 ------
 
-We will now add a content type for cities with geo-location and a part component to display a list of cities in each country.
+The next steps will create a content type for adding cities with location coordinates.
 
--Add the following files to your project:
+1. Create a folder called `cities` inside the project's ``site/content-types`` folder.
+
+2. Add the content type file below to your project:
 
 .. literalinclude:: code/content-types/city1.xml
   :language: xml
@@ -322,9 +329,15 @@ We will now add a content type for cities with geo-location and a part component
 
 The file above defines a `content type` for cities with a required field for the location in latitude and longitude.
 
-- Copy the image below and save it in the same folder with the City content type. Name it city.png.
+3. Copy the image below and save it in the same folder with the City content type. Name it "city.png".
 
 .. image:: images/city.png
+
+We need a `part component` to display the city data. It will list the cities and show a Google map of each location.
+
+1. Create a folder called `city-list` inside the project's ``site/parts`` folder.
+
+2. Add the part descriptor file.
 
 .. literalinclude:: code/city-part/city-list.xml
   :language: xml
@@ -332,22 +345,26 @@ The file above defines a `content type` for cities with a required field for the
 
 The part descriptor above has a configuration similar to those found in content types.
 
+3. Add the part controller file.
+
 .. literalinclude:: code/city-part/city-list.js
   :language: javascript
   :caption: City list part controller - site/parts/city-list/city-list.js
 
 This controller uses :ref:`apps-controller-contributions` to put the Google Maps JavaScript into the head of the document.
 
+4. Add the part view file.
 
 .. literalinclude:: code/city-part/city-list.html
   :language: html
   :caption: City list part view - site/parts/city-list/city-list.html
 
-- Build and deploy your project one final time.
+5. Build and deploy your project one final time with ``./gradlew deploy``.
 
-To make use of the changes, do the following:
+All of the project's files are now complete. The rest of the steps will be performed in the Content Manager app. Now let's make use of the
+new city content type and part component.
 
-1. Add the "City list" part to your "Country" page template
+1. In the Content Manager app, add the "City list" part to your "Country" page template
 
   A. Edit the "Country" page template.
   B. Open the context panel by clicking the cog button in the toolbar.
@@ -362,9 +379,7 @@ To make use of the changes, do the following:
   C. Fill in the city name and location. The population is optional. (The location format must be comma separated latitude and longitude
      with decimals. Do not select a page template from the dropdown on the right.)
   D. Save draft.
-  E. Create several more city contents below each country content by repeating the previous steps.
-
-Here is a list of cities with latitude and longitude that you may copy/paste from.
+  E. Create several more city contents below each country content by repeating the previous steps. Sample data is provided in the table below.
 
 +--------------------+----------------+------------------+-----------+
 |Country             |City            |Lat,Long          |Population |
@@ -404,7 +419,7 @@ the default values for these inputs by editing the `City list` part in the `Coun
 #. Save draft and close the edit tab.
 
 Now all of the countries will show the city maps with the new settings. You can override these defaults for any individual country by
-editing the Country content and changing its City list part configuration.
+editing the Country content and changing its `City list` part configuration.
 
 .. image:: images/city-list-config.png
 
@@ -412,22 +427,22 @@ editing the Country content and changing its City list part configuration.
 Go Online
 =========
 
-Now, that your "Hello World" is complete, it's time to go live.
+Now that your "Hello World" is complete, it's time to go live.
 
-#. Select the "Hello World" site in the navigation
-#. Click "Publish" from the toolbar
+#. Select the "Hello World" site in the content pane
+#. Click "Publish" in the toolbar
 #. Remember to check the "Include children" checkbox
 #. After verifying everything in the Publishing Wizard window - click "Publish"!
 
 When clicking publish, all the selected items and changes are "cloned" from draft and into the master branch (:ref:`node-domain-repository`).
 
-You will always see the draft items using the preview function of the :ref:`content-content-manager`.
+You will always see the draft version of content in the preview window and with the preview function of the :ref:`content-content-manager`.
 If you have placed your site on root level, you can also see your live site at this url:
 ``http://localhost:8080/admin/portal/preview/master/hello-world``.
 
 
-Great job - you just created your first App for Enonic XP
-- The Enonic team congratulates you - we look forward to see all the brilliant things you will make and are always looking for feedback.
+Great job - you just created your first App for Enonic XP - The Enonic team congratulates you - we look forward to seeing all the brilliant
+things you will make and are always looking for feedback.
 
 Next steps
 ==========
@@ -490,5 +505,5 @@ Gradle watch
 ------------
 
 It can be quite time consuming to frequently switch to the terminal to redeploy an app during development. Try using ``./gradlew watch``
-from the terminal to automatically redeploy your app every time a change to a file is detected. This requires that the $XP_HOME environment
-variable is set in the terminal window.
+in the terminal (from the project root) to **automatically redeploy** your app every time a change to a file is detected. The $XP_HOME
+environment variable must be set in the terminal window.
