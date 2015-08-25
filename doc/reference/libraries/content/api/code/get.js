@@ -1,7 +1,7 @@
 var lib = require('/lib/xp/content');
 
 var result = lib.get({
-    key: '/my/content'
+        key: '123456'
 });
 
 if (result) {
