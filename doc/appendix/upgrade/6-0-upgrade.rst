@@ -236,6 +236,8 @@ Content library
 
    var contentSvc = require('/lib/xp/content');
 
+* ``contents`` in *query* and *getChildren* has been renamed to ``hits``.
+
 
 Xslt library
 ~~~~~~~~~~~~
