@@ -1,11 +1,11 @@
-var portal = require('/lib/xp/portal'); // Import the portal functions
-var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf rendering function
+var portalLib = require('/lib/xp/portal'); // Import the portal functions
+var thymeleafLib = require('/lib/xp/thymeleaf'); // Import the Thymeleaf rendering function
 
 // Handle the GET request
-exports.get = function(req) {
+exports.get = function (req) {
 
     // Get the country content and extract the needed data from the JSON
-    var content = portal.getContent();
+    var content = portalLib.getContent();
 
     // Prepare the model object with the needed data extracted from the content
     var model = {
@@ -19,6 +19,6 @@ exports.get = function(req) {
 
     // Return the merged view and model in the response object
     return {
-        body: thymeleaf.render(view, model)
+        body: thymeleafLib.render(view, model)
     }
 };

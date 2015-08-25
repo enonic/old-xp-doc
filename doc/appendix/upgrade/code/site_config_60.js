@@ -4,6 +4,6 @@ var config = site.moduleConfigs[module.name];
 
 
 // in 6.0, using 'portal' library and 'getSiteConfig' function
-var portal = require('/lib/xp/portal'); // usually at the beginning of the file
+var portalLib = require('/lib/xp/portal'); // usually at the beginning of the file
 // ...
-var config = portal.getSiteConfig();
+var config = portalLib.getSiteConfig();

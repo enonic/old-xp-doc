@@ -1,6 +1,6 @@
-var lib = require('/lib/xp/portal');
+var portalLib = require('/lib/xp/portal');
 
-var url = lib.imagePlaceholder({
-  width: '300',
-  height: '200'
+var url = portalLib.imagePlaceholder({
+    width: '300',
+    height: '200'
 });

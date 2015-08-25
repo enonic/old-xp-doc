@@ -1,10 +1,10 @@
-var portal = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
+var portalLib = require('/lib/xp/portal');
+var thymeleafLib = require('/lib/xp/thymeleaf');
 
 exports.get = function(req) {
 
   // Find the current component.
-  var component = portal.getComponent();
+  var component = portalLib.getComponent();
 
   // Resolve the view
   var view = resolve('./layout-70-30.html');
@@ -17,7 +17,7 @@ exports.get = function(req) {
   };
 
   // Render a thymeleaf template
-  var body = thymeleaf.render(view, model);
+  var body = thymeleafLib.render(view, model);
 
   // Return the result
   return {

@@ -1,36 +1,36 @@
-var contentSvc = require('/lib/xp/content'); // Import the content service functions
-var portal = require('/lib/xp/portal'); // Import the portal functions
-var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf rendering function
+var contentLib = require('/lib/xp/content'); // Import the content service functions
+var portalLib = require('/lib/xp/portal'); // Import the portal functions
+var thymeleafLib = require('/lib/xp/thymeleaf'); // Import the Thymeleaf rendering function
 
 // Handle the GET request
-exports.get = function(req) {
+exports.get = function (req) {
 
     // Get the part configuration for the map
-    var config = portal.getComponent().config;
-    var zoom = parseInt(config.zoom) && config.zoom <= 15 && config.zoom >= 1? config.zoom : 10;
+    var config = portalLib.getComponent().config;
+    var zoom = parseInt(config.zoom) && config.zoom <= 15 && config.zoom >= 1 ? config.zoom : 10;
     var mapType = config.mapType || 'ROADMAP';
 
     // String that will be inserted to the head of the document
     var googleMaps = '<script src="http://maps.googleapis.com/maps/api/js"></script>';
 
     // Get the country content and extract the needed data from the JSON
-    var result = contentSvc.getChildren({
-        key: portal.getContent()._id
+    var result = contentLib.getChildren({
+        key: portalLib.getContent()._id
     });
     var contents = result.contents;
 
     var cities = [];
 
-    if(contents.length > 0) {
+    if (contents.length > 0) {
         googleMaps += '<script>function initialize() {';
 
         // Loop through the contents and extract the needed data
-        for(var i = 0; i < contents.length; i++) {
+        for (var i = 0; i < contents.length; i++) {
 
             var city = {};
             city.name = contents[i].displayName;
             city.location = contents[i].data.location;
-            city.population = contents[i].data.population? 'Population: ' + contents[i].data.population : null;
+            city.population = contents[i].data.population ? 'Population: ' + contents[i].data.population : null;
             city.mapId = 'googleMap' + i;
 
             cities.push(city);
@@ -38,9 +38,9 @@ exports.get = function(req) {
             googleMaps += 'var center' + i + ' = new google.maps.LatLng(' + city.location + '); '
 
             googleMaps += 'var mapProp = {center:center' + i + ', zoom:' + zoom +
-                ', mapTypeId:google.maps.MapTypeId.' + mapType + ', scrollwheel: false };' +
-                'var map' + i + ' = new google.maps.Map(document.getElementById("googleMap' + i + '"),mapProp); ' +
-                'var marker = new google.maps.Marker({ position:center' + i + '}); marker.setMap(map' + i + ');';
+                          ', mapTypeId:google.maps.MapTypeId.' + mapType + ', scrollwheel: false };' +
+                          'var map' + i + ' = new google.maps.Map(document.getElementById("googleMap' + i + '"),mapProp); ' +
+                          'var marker = new google.maps.Marker({ position:center' + i + '}); marker.setMap(map' + i + ');';
         }
 
         googleMaps += '} google.maps.event.addDomListener(window, "load", initialize);</script>';
@@ -56,7 +56,7 @@ exports.get = function(req) {
 
     // Return the response object
     return {
-        body: thymeleaf.render(view, model),
+        body: thymeleafLib.render(view, model),
         // Put the maps' javascript into the head of the document
         pageContributions: {
             headEnd: googleMaps

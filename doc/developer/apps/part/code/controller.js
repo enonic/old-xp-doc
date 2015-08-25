@@ -1,11 +1,11 @@
-var portal = require('/lib/xp/portal'); // Import the portal functions
-var thymeleaf = require('/lib/xp/thymeleaf'); // Import the thymeleaf render function
+var portalLib = require('/lib/xp/portal'); // Import the portal functions
+var thymeleafLib = require('/lib/xp/thymeleaf'); // Import the thymeleaf render function
 
 // Handle GET requests
-exports.get = function(portal) {
+exports.get = function (req) {
 
   // Find the current component from request
-  var component = portal.getComponent();
+  var component = portalLib.getComponent();
 
   // Find a config variable for the component
   var things = component.config["thing"] || [];
@@ -20,7 +20,7 @@ exports.get = function(portal) {
   var view = resolve('/site/view/my-favorite-things.html');
 
   // Render a thymeleaf template
-  var body = thymeleaf.render(view, model);
+  var body = thymeleafLib.render(view, model);
 
   // Return the result
   return {

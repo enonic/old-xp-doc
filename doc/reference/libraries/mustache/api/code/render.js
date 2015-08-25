@@ -1,7 +1,7 @@
 var view = resolve('view/fruit.html');
 
-var mustache = require('/lib/xp/mustache');
-var result = mustache.render({
+var mustacheLib = require('/lib/xp/mustache');
+var result = mustacheLib.render({
     view: view,
     model: {
         fruits: [
