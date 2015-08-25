@@ -12,7 +12,7 @@ like this::
 
   var lib = require('/lib/xp/content')
 
-Below is a list of methods that are implemented in this library.
+The methods implemented in this library are listed below.
 
 .. toctree::
    :maxdepth: 1

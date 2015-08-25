@@ -3,7 +3,7 @@ imagePlaceholder
 
 This command generates a URL to an image placeholder.
 
-**Usage in Thymeleaf:**
+**Parameters:**
 
 width
   Width of image.

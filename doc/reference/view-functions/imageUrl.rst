@@ -9,7 +9,7 @@ _path
   Path to the asset.
 
 _scale
-Required. Options are width(px), height(px), block(width,height), max(px), wide(width,height) and square(px).
+  Required. Options are width(px), height(px), block(width,height), max(px), wide(width,height) and square(px).
 
 _module
   Other module to reference to.  Default is current module.

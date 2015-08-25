@@ -3,8 +3,7 @@
 View Functions
 ==============
 
-Some view technologies supports a set of view functions. Here's
-a list of view functions supported out-of-the-box:
+Some view technologies support a set of view functions. The list of view functions below are supported out-of-the-box:
 
 .. toctree::
    :maxdepth: 1

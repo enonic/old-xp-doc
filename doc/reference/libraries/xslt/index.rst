@@ -15,7 +15,7 @@ like this::
   var lib = require('/lib/xp/xslt')
 
 XSLT also supports a set of :ref:`view-functions`.
-Below is a list of methods that's implemented in this library.
+The methods implemented in this library are listed below.
 
 .. toctree::
    :maxdepth: 1

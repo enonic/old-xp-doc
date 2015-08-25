@@ -14,7 +14,7 @@ like this::
 
   var lib = require('/lib/xp/portal')
 
-Below is a list of methods that's implemented in this library.
+The methods implemented in this library are listed below.
 
 .. toctree::
    :maxdepth: 1
