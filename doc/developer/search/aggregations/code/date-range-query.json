@@ -1,5 +1,5 @@
 "my_date_range": {
-  "date_range": {
+  "dateRange": {
     "field": "date",
     "format": "MM-yyy",
     "ranges": [{

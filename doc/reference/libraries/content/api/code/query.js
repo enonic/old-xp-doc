@@ -30,7 +30,7 @@ var result = lib.query({
                     }
                 },
                 "by_month": {
-                    "date_histogram": {
+                    "dateHistogram": {
                         "field": "init_date",
                         "interval": "1M",
                         "minDocCount": 0,
@@ -48,7 +48,7 @@ var result = lib.query({
                     }
                 },
                 "my_date_range": {
-                    "date_range": {
+                    "dateRange": {
                         "field": "date",
                         "format": "MM-yyy",
                         "ranges": [

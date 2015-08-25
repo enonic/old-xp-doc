@@ -1,8 +1,8 @@
-date_range
+dateRange
 ==========
 
-The date_range aggregation query defines a set of date-ranges that represents a bucket. Only
-documents with properties of type 'DateTime' will considered in the ``date_range`` aggregation buckets.
+The dateRange aggregation query defines a set of date-ranges that represents a bucket. Only
+documents with properties of type 'DateTime' will considered in the ``dateRange`` aggregation buckets.
 Here's a list of properties:
 
 field (string)
@@ -18,7 +18,7 @@ range (from: number, to: number)
   Defines a range to create a bucket for. From-value is included in bucket, to is excluded. The
   from and to follows a special date-math explained below.
 
-Here's an example of the date_range aggregation:
+Here's an example of the dateRange aggregation:
 
   .. literalinclude:: code/date-range-query.json
      :language: json

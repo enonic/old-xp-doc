@@ -1,5 +1,5 @@
 "by_month": {
-  "date_histogram": {
+  "dateHistogram": {
     "field": "init_date",
     "interval": "1M",
     "minDocCount": 0,

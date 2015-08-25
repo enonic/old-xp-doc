@@ -1,8 +1,8 @@
-date_histogram
+dateHistogram
 ==============
 
 The date-histogram aggregation query defines a set of bucket based on a given time-unit. For instance,
-if querying a set of log-events,  a ``date_historgram`` aggregations query with interval ``h`` (hour) will divide each log
+if querying a set of log-events,  a ``dateHistorgram`` aggregations query with interval ``h`` (hour) will divide each log
 event into a bucket for each hour in the time-span of the matching events. Here's a list of properties:
 
 field (string)
