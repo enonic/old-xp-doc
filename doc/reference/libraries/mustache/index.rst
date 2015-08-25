@@ -12,7 +12,7 @@ processing. Add the following into your ``build.gradle`` file in the
 To use this library in your JavaScript files, you can require the library
 like this::
 
-  var lib = require('/lib/xp/mustache')
+  var mustacheLib = require('/lib/xp/mustache')
 
 Below is a list of methods that's implemented in this library.
 

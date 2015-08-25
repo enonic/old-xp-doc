@@ -1,4 +1,4 @@
-var thymeleaf = require('/lib/xp/thymeleaf');
+var thymeleafLib = require('/lib/xp/thymeleaf');
 
 exports.get = function(req) {
 
@@ -11,7 +11,7 @@ exports.get = function(req) {
   };
 
   // Render a thymeleaf template
-  var body = thymeleaf.render(view, model);
+  var body = thymeleafLib.render(view, model);
 
   // Return the result
   return {

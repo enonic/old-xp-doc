@@ -1,14 +1,14 @@
-var portal = require('/lib/xp/portal');
+var portalLib = require('/lib/xp/portal');
 
 // Get the current site.
-var site = portal.getSite();
+var site = portalLib.getSite();
 
 // Find the module configuration for this module in current site.
 var moduleConfig = site.moduleConfigs['com.enonic.first.module'];
 
 // Get the current content. It holds the context of the current execution
 // session, including information about regions in the page.
-var content = portal.getContent();
+var content = portalLib.getContent();
 
 // Include info about the region of the current content in the parameters
 // list for the rendering.

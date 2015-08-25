@@ -1,7 +1,7 @@
-var lib = require('/lib/xp/content');
+var contentLib = require('/lib/xp/content');
 
-var result = lib.get({
-        key: '123456'
+var result = contentLib.get({
+    key: '123456'
 });
 
 if (result) {

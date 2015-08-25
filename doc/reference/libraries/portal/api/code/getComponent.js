@@ -1,4 +1,4 @@
-var lib = require('/lib/xp/portal');
-var result = lib.getComponent();
+var portalLib = require('/lib/xp/portal');
+var result = portalLib.getComponent();
 
 log.info('Current component name = ' + result.name);

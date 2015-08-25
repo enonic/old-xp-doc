@@ -1,7 +1,7 @@
 var view = resolve('view/fruit.xsl');
 
-var xslt = require('/lib/xp/xslt');
-var result = xslt.render({
+var xsltLib = require('/lib/xp/xslt');
+var result = xsltLib.render({
     view: view,
     model: {
         fruits: [

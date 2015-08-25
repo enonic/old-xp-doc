@@ -170,28 +170,28 @@ getComponent
 
 *Search:* ``execute('portal.getComponent]``
 
-*Replace:* ``portal.getComponent()``
+*Replace:* ``portalLib.getComponent()``
 
 getContent
 @@@@@@@@@@
 
 *Search:* ``execute('portal.getContent')``
 
-*Replace:* ``portal.getContent()``
+*Replace:* ``portalLib.getContent()``
 
 getSite
 @@@@@@@
 
 *Search:* ``execute('portal.getSite')``
 
-*Replace:* ``portal.getSite()``
+*Replace:* ``portalLib.getSite()``
 
 
-* Add a `require` call for the "portal" library at the top of each JavaScript file where a "portal.*" command was used:
+* Add a `require` call for the "portal" library at the top of each JavaScript file where a "portalLib.*" command was used:
 
 .. code-block:: js
 
-	var portal = require('/lib/xp/portal');
+	var portalLib = require('/lib/xp/portal');
 
 * Note that the property ``moduleConfigs`` of content site has been removed. The method ``portal.getSiteConfig()``, which returns the site configuration for this app in the current site, should be use instead.
 
@@ -206,16 +206,16 @@ Thymeleaf library
 
 *Search:* ``execute('thymeleaf.render',``
 
-*Replace:* ``thymeleaf.render(``
+*Replace:* ``thymeleafLib.render(``
 
 
-* Note that the parameters to render are now 2 separate parameters instead of an object: ``thymeleaf.render(view, model)`` vs ``execute('thymeleaf.render', {view: view, model: params})``
+* Note that the parameters to render are now 2 separate parameters instead of an object: ``thymeleafLib.render(view, model)`` vs ``execute('thymeleaf.render', {view: view, model: params})``
 
-* Add a `require` call for the "thymeleaf" library at the top of each JavaScript file where the "thymeleaf.render" command was used:
+* Add a `require` call for the "thymeleaf" library at the top of each JavaScript file where the "thymeleafLib.render" command was used:
 
 .. code-block:: js
 
-    var thymeleaf = require('/lib/xp/thymeleaf');
+    var thymeleafLib = require('/lib/xp/thymeleaf');
 
 
 
@@ -226,15 +226,13 @@ Content library
 
 *Search:* ``execute('content.*',``
 
-*Replace:* ``contentSvc.*(``
+*Replace:* ``contentLib.*(``
 
-(We use a variable named ``contentSvc`` to avoid conflicts with variables representing a Content instance, which are often named ``content``)
-
-* Add `require` call for the "content" library at the top of each JavaScript file where a "content.*" command was used:
+* Add `require` call for the "content" library at the top of each JavaScript file where a "contentLib.*" command was used:
 
 .. code-block:: js
 
-   var contentSvc = require('/lib/xp/content');
+   var contentLib = require('/lib/xp/content');
 
 * ``contents`` in *query* and *getChildren* has been renamed to ``hits``.
 
@@ -246,15 +244,15 @@ Xslt library
 
 *Search:* ``execute('xslt.render',``
 
-*Replace:* ``xslt.render(``
+*Replace:* ``xsltLib.render(``
 
-* Note that the parameters to render are now 2 separate parameters instead of an object: ``xslt.render(view, model)`` vs ``execute('xslt.render', {view: view, model: params})``
+* Note that the parameters to render are now 2 separate parameters instead of an object: ``xsltLib.render(view, model)`` vs ``execute('xslt.render', {view: view, model: params})``
 
-* Add `require` call for the "xslt" library at the top of each JavaScript file where the "xslt.render" command was used:
+* Add `require` call for the "xslt" library at the top of each JavaScript file where the "xsltLib.render" command was used:
 
 .. code-block:: js
 
-    var xslt = require('/lib/xp/xslt');
+    var xsltLib = require('/lib/xp/xslt');
 
 
 i18n library
@@ -264,13 +262,13 @@ i18n library
 
 *Search:* ``execute('i18n.localize',``
 
-*Replace:* ``i18n.localize(``
+*Replace:* ``i18nLib.localize(``
 
-* Add `require` call for the "i18n" library at the top of each JavaScript file where the "i18n.localize" command was used:
+* Add `require` call for the "i18n" library at the top of each JavaScript file where the "i18nLib.localize" command was used:
 
 .. code-block:: js
 
-    var i18n = require('/lib/xp/i18n');
+    var i18nLib = require('/lib/xp/i18n');
 
 Content object structure
 ------------------------

@@ -1,6 +1,6 @@
-var lib = require('/lib/xp/content');
+var contentLib = require('/lib/xp/content');
 
-var result = lib.delete({
+var result = contentLib.delete({
     key: '/my/content'
 });
 

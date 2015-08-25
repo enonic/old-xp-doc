@@ -12,7 +12,7 @@ processing. Add the following into your ``build.gradle`` file in the
 To use this library in your JavaScript files, you can require the library
 like this::
 
-  var lib = require('/lib/xp/thymeleaf')
+  var thymeleafLib = require('/lib/xp/thymeleaf')
 
 Thymeleaf also supports a set of :ref:`view-functions`. 
 Below is a list of methods that's implemented in this library.
