@@ -238,6 +238,36 @@ Content library
 
 * ``contents`` in *query* and *getChildren* has been renamed to ``hits``.
 
+Aggregation query
+@@@@@@@@@@@@@@@@
+
+The 'date_histogram' and 'date_range' aggregation-types has changed name to 'dateHistogram' and 'dateRange'
+
+* Search and replace in controllers:
+
+*Search:* ``date_histogram``
+
+*Replace:* ``dateHistogram``
+
+* Search and replace in controllers:
+
+*Search:* ``date_range``
+
+*Replace:* ``dateRange``
+
+
+Aggregation result object
+@@@@@@@@@@@@@@@@
+
+The 'doc_count' property of aggregation result objects has been renamed to 'docCount'
+
+* Search and replace in controllers and html;
+
+*Search:* ``doc_count``
+
+*Replace:* ``docCount``
+
+
 
 Xslt library
 ~~~~~~~~~~~~
@@ -326,27 +356,11 @@ Image object structure in 6.x:
 
 
 Request object structure
-~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 Each handler function in a controller receives a ``request`` object as a parameter.
 This request had its attribute ``uri`` renamed to ``url``.
-<<<<<<< Local Changes
-	
 
-=======
-
->>>>>>> External Changes
-
-Aggregation result object
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The 'doc_count' property of aggregation result objects has been renamed to "docCount"
-
-* Search and replace in controllers and html;
-
-*Search:* ``doc_count``
-
-*Replace:* ``docCount``
 
 Module object renamed
 ------------------------
@@ -356,3 +370,17 @@ The ``module`` global variable in 5.x has been renamed to ``app``
 
   var appName = app.name
   var version = app.version
+  
+* Search and replace in controllers:
+
+*Search:* ``module.name``
+
+*Replace:* ``app.name``
+  
+ 
+* Search and replace in controllers:
+
+*Search:* ``module.version``
+
+*Replace:* ``app.version``
+  
