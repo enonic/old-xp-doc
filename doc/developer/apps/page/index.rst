@@ -1,3 +1,5 @@
+.. _apps-page-index:
+
 Page
 ====
 

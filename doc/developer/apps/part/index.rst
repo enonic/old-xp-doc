@@ -1,4 +1,4 @@
-.. _apps-part:
+.. _apps-part-index:
 
 Part
 ====

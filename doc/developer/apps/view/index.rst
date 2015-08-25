@@ -1,3 +1,5 @@
+.. _apps-view-index:
+
 Rendering a View
 ================
 
