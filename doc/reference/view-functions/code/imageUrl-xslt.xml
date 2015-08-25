@@ -3,8 +3,8 @@
   xmlns:portal="urn:enonic:xp:portal:1.0">
 
   <xsl:template match="/">
-    <xsl:value-of select="portal:imageUrl('_id=11')"/>
-    <xsl:value-of select="portal:imageUrl('_name=test')"/>
+    <xsl:value-of select="portal:imageUrl('_id=11', 'scale=width(200)')"/>
+    <xsl:value-of select="portal:imageUrl('_name=test', 'scale=width(200)')"/>
   </xsl:template>
 
 </xsl:stylesheet>
