@@ -3,20 +3,22 @@
 init-app
 ========
 
-The init-app will initialize a new application with gradle and the application folder strucure.
+The init-app tool initializes a new application by creating the files and folder structure required to build an application for Enonic XP.
+
+The gradle wrapper is included and the "build.gradle" file is configured with the basic repositories and dependency libraries needed.
 
 **Usage:**
 
 .. code-block:: none
 
-NAME
+  NAME
         toolbox init-app - Initiates an Enonic XP application.
 
-SYNOPSIS
+  SYNOPSIS
         toolbox init-app [(-d <destination> | --destination <destination>)]
                 (-n <name> | --name <name>) [(-v <version> | --version <version>)]
 
-OPTIONS
+  OPTIONS
         -d <destination>, --destination <destination>
             Project path.
 
@@ -30,4 +32,4 @@ OPTIONS
 
 .. code-block:: none
 
-./toolbox.sh init-app -d ~/Dev/xp/apps/myApp -n myApp -v 6.0.0
+  $ ./toolbox.sh init-app -d ~/Dev/xp/apps/myApp -n myApp -v 6.0.0
