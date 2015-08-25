@@ -3,14 +3,14 @@ Enonic XP |version| documentation
 =================================
 
 This is the home for Enonic XP |version| documentation. The documentation
-is `available on github`_ in a separate project.
+is `available on GitHub`_ in a separate project.
 
 .. WARNING::
 
   Version |version| is not released yet. This is a developer version
   and should be used at your own risk.
 
-.. _available on github: https://github.com/enonic/xp-doc
+.. _available on GitHub: https://github.com/enonic/xp-doc
 
 .. toctree::
    :maxdepth: 1

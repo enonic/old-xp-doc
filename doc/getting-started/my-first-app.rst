@@ -27,8 +27,6 @@ Init App
 
 #. Run the following command while located in your target folder:
 
-::
-
 [$XP_INSTALL]/toolbox/toolbox.sh init-app -n com.company.myapp
 
 .. tip:: Only basic characters (a-z, 0-9 and .) should be used for application names. We recommend following standard Java package naming
