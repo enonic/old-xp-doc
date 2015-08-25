@@ -1,3 +1,5 @@
+.. _content-domain-mixins:
+
 Mixins
 ======
 

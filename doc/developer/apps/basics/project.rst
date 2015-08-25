@@ -3,7 +3,7 @@
 Project structure
 =================
 
-The project structure is a bit similar to a Maven project. Create the folder structure you
+The project structure is a bit similar to a `Maven <https://maven.apache.org/>`_ project. Create the folder structure you
 see below. All are folders except for ``site.xml`` and ``build.gradle``::
 
   my-first-app/
@@ -27,7 +27,7 @@ see below. All are folders except for ``site.xml`` and ``build.gradle``::
 Every file and folder has a specific function and meaning.
 
 build.gradle
-  Gradle script for building the module. This file describes the actual
+  `Gradle <https://gradle.org/>`_ script for building the module. This file describes the actual
   build process.
 
 site/site.xml
@@ -45,30 +45,30 @@ site/lib/
 
 site/pages/
   Page definitions should be placed here. They will be used to create page
-  templates in the repository.
+  templates in the repository (see :ref:`apps-page-index`).
 
 site/parts/
   Part definitions should be placed here. Parts are objects that can
-  be placed on a page.
+  be placed on a page (see :ref:`apps-part-index`).
 
 site/layouts/
   Layout definitions should be placed here. Layouts are definitions that
-  restricts the placement of parts.
+  restricts the placement of parts (see :ref:`apps-layout-index`).
 
 site/views/
   Views can generally be placed anywhere you want, just keep in mind
-  what path to use when resolving them.
+  what path to use when resolving them (see :ref:`apps-view-index`).
 
 site/assets/
   Public folder for external css, javascript and static images.
 
 site/content-types/
-  Content schemas-types are placed here. Used to create structured content.
+  Content schemas-types are placed here. Used to create structured content (see :ref:`content-domain-content-types`).
 
 site/mixins/
   Mixin schema-types are placed here. A mixin can be used to add fields to
-  a content-type.
+  a content-type (see :ref:`content-domain-mixins`).
 
 site/relationship-types/
   Relationship-types are placed here. They are used to form relations between
-  contents.
+  contents (see :ref:`content-domain-relationship-types`).

@@ -1,3 +1,5 @@
+.. _content-domain-relationship-types:
+
 Relationship Types
 ==================
 
