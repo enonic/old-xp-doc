@@ -17,6 +17,7 @@
     },
     "displayName": "My Content",
     "hasChildren": false,
+    "language": "no",
     "page": {},
     "type": "test:myContentType",
     "valid": false,

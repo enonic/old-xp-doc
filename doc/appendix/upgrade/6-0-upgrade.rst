@@ -193,7 +193,7 @@ getSite
 
 	var portalLib = require('/lib/xp/portal');
 
-* Note that the property ``moduleConfigs`` of content site has been removed. The method ``portal.getSiteConfig()``, which returns the site configuration for this app in the current site, should be use instead.
+* Note that the property ``moduleConfigs`` of content site has been removed. The method ``portalLib.getSiteConfig()``, which returns the site configuration for this app in the current site, should be use instead.
 
 .. literalinclude:: code/site_config_60.js
    :language: js

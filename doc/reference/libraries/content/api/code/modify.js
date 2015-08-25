@@ -7,6 +7,8 @@ function editor(c) {
         name: 'test'
     };
 
+    c.language = 'no';
+
     return c;
 }
 
