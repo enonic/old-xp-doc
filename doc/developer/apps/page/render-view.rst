@@ -3,7 +3,7 @@ Rendering a view
 
 If you feel like concatenating strings to create an entire web page is a
 little too much hassle, Enonic XP also supports views. A view is rendered
-using a rendering engine; we currently support XSLT, Mustache and Thymeleaf
+using a rendering engine; we currently support `XSLT <http://www.w3.org/Style/XSL/>`_, `Mustache <https://mustache.github.io/>`_ and `Thymeleaf <http://www.thymeleaf.org/>`_
 rendering engines. This example will use Thymeleaf.
 
 To make a view, create a file ``my-first-page.html`` in the ``view`` folder.

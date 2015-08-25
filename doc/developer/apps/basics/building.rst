@@ -13,5 +13,5 @@ To build the app, write ``gradle build`` on the command line::
 
   $ gradle build
 
-This will produce a jar file that is located inside ``build/libs`` folder.
-That jar file is your build artifact you can install into Enonic XP.
+This will produce a JAR file that is located inside ``build/libs`` folder.
+That JAR file is your build artifact you can install into Enonic XP.

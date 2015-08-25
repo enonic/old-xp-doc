@@ -1,7 +1,7 @@
 Methods
 =======
 
-A controller must have one or more functions to handle requests: one for each different http method -- ``GET``, ``POST``, ``DELETE``, etc.
+A controller must have one or more functions to handle requests: one for each different HTTP method -- ``GET``, ``POST``, ``DELETE``, etc.
 For every request sent to the controller, the appropriate function will be called.
 
 The functions that handle the requests can be exposed with the ``exports`` keyword.

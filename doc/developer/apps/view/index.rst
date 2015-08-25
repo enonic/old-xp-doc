@@ -9,4 +9,4 @@ technologies and support the following out of the box:
 
 * Thymeleaf (see :ref:`lib-thymeleaf`)
 * Mustache (see :ref:`lib-mustache`)
-* Xslt (see :ref:`lib-xslt`)
+* XSLT (see :ref:`lib-xslt`)
