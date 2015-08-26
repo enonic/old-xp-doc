@@ -14,6 +14,7 @@ sites will typically have very few page components--perhaps one for all the HTML
 Pages should be placed in the folder ``site/pages/[page-name]``
 
 .. _apps-page-descriptor:
+
 Descriptor
 ----------
 
@@ -39,6 +40,7 @@ regions
 
 
 .. _apps-page-controller:
+
 Controller
 ----------
 
@@ -102,6 +104,7 @@ More on how to use Thymeleaf can be found in
 
 
 .. _apps-page-regions:
+
 Regions
 -------
 

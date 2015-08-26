@@ -1,7 +1,7 @@
 .. _upgrading_to_6_0_0:
 
 Upgrading to 6.0.0
-==================
+=================================
 
 TODO intro
 
@@ -239,7 +239,7 @@ Content library
 * ``contents`` in *query* and *getChildren* has been renamed to ``hits``.
 
 Aggregation query
-@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 The 'date_histogram' and 'date_range' aggregation-types has changed name to 'dateHistogram' and 'dateRange'
 
@@ -257,7 +257,7 @@ The 'date_histogram' and 'date_range' aggregation-types has changed name to 'dat
 
 
 Aggregation result object
-@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 The 'doc_count' property of aggregation result objects has been renamed to 'docCount'
 

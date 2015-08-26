@@ -34,7 +34,7 @@ To check your current JDK version (if any), run ``javac -version`` in the termin
  javac 1.8.0_45
  ~/ $ 
 
-* If you dont have a JDK equal to or above version 1.8.0_40, you must install a newer version.
+* If you don't have a JDK equal to or above version 1.8.0_40, you must install a newer version.
 
   - To find the correct version for downloading, find the ``Mac OS X x64`` link under the download section **"Java SE Development Kit 8u<version>"** at the `latest JDK download page <http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>`_ and following instructions.  
 
@@ -57,7 +57,7 @@ If this is not set correctly, you must set the correct one either for this termi
 
 * To set the correct ``JAVA_HOME`` for the current terminal session; invoke the following command in your terminal. This command will set ``JAVA_HOME`` to the newest installed 1.8 JDK-version:
 
-.. code-block:: node
+.. code-block:: none
 
  ~/ $ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
  

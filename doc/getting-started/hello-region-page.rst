@@ -5,7 +5,7 @@ Hello Region Page
 Component parts must be placed into a `region` on a page or layout. Let's create a new page component with a single region called "Main".
 We will later place the "Country" part into this region.
 
-The benefit of a region (see :ref:`apps-page-region`) is that a page component can be re-used across multiple different pages by simply
+The benefit of a region (see :ref:`apps-page-regions`) is that a page component can be re-used across multiple different pages by simply
 adding different parts to it as needed.
 
 1. Create a folder called "hello-region" in your project's ``site/pages/`` folder.
