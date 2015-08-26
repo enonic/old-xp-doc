@@ -12,9 +12,9 @@ function editor(c) {
     return c;
 }
 
-var lib = require('/lib/xp/content');
+var contentLib = require('/lib/xp/content');
 
-var result = lib.modify({
+var result = contentLib.modify({
     key: '/my/content',
     editor: editor
 });

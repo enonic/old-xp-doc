@@ -1,6 +1,6 @@
-var lib = require('/lib/xp/content');
+var contentLib = require('/lib/xp/content');
 
-var result = lib.create({
+var result = contentLib.create({
         name: 'mycontent',
         parentPath: '/a/b',
         displayName: 'My Content',

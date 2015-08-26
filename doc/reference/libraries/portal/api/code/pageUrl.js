@@ -1,6 +1,6 @@
-var lib = require('/lib/xp/portal');
+var portal = require('/lib/xp/portal');
 
-var url = lib.pageUrl({
+var url = portal.pageUrl({
   path: '/my/page',
   params: {
     a: 1,

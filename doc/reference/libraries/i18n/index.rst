@@ -12,7 +12,7 @@ functionality. Add the following into your ``build.gradle`` file in the
 To use this library in your JavaScript files, you can require the library
 like this::
 
-  var lib = require('/lib/xp/i18n')
+  var i18n = require('/lib/xp/i18n')
 
 The methods implemented in this library are listed below.
 

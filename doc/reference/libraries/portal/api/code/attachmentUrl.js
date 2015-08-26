@@ -1,5 +1,5 @@
-var lib = require('/lib/xp/portal');
+var portal = require('/lib/xp/portal');
 
-var url = lib.attachmentUrl({
+var url = portal.attachmentUrl({
   download: true
 });

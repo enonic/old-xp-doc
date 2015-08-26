@@ -1,6 +1,6 @@
-var lib = require('/lib/xp/portal');
+var portal = require('/lib/xp/portal');
 
-var url = lib.serviceUrl({
+var url = portal.serviceUrl({
   service: 'myservice',
   params: {
     a: 1,

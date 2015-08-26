@@ -1,6 +1,6 @@
-var lib = require('/lib/xp/content');
+var contentLib = require('/lib/xp/content');
 
-var result = lib.query({
+var result = contentLib.query({
             "start": 0,
             "count": 3,
             "sort": "_modifiedTime DESC, geodistance('p1', 'p2')",

@@ -1,5 +1,5 @@
-var lib = require('/lib/xp/portal');
+var portal = require('/lib/xp/portal');
 
-var url = lib.assetUrl({
+var url = portal.assetUrl({
   path: 'styles/main.css'
 });
