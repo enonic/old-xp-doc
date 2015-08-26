@@ -41,7 +41,7 @@ source
 target
   Path to which the request is sent.
 
-In the second example, mapping ``b``, a site is mapped to the root of the
+In the second example, mapping "intranet", a site is mapped to the root of the
 URL, which would be normal in production environments.
 
 In the third example, the admin site is mapped to ``enonic.com/admin``.
