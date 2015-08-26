@@ -329,7 +329,7 @@ Old image object structure:
                 "imageHeight": "695",
                 "imageWidth": "2000",
                 "contentType": "image/jpeg",
-                "bytesize": "548842",
+                "byteSize": 548842,
                 "pixelSize": 1390000
             }
         }
@@ -347,7 +347,7 @@ Image object structure in 6.x:
                 "imageHeight": "695",
                 "imageWidth": "2000",
                 "contentType": "image/jpeg",
-                "bytesize": "548842",
+                "byteSize": 548842,
                 "pixelSize": 1390000
             }
         }
