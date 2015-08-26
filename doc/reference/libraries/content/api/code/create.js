@@ -6,6 +6,7 @@ var result = lib.create({
         displayName: 'My Content',
         draft: true,
         contentType: 'test:myContentType',
+        language: 'no',
         data: {
             a: 1,
             b: 2,

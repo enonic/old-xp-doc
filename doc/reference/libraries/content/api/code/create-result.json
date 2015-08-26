@@ -23,6 +23,7 @@
   "displayName": "My Content",
   "draft": true,
   "hasChildren": false,
+  "language": "no",
   "x": {
     "mymodule:": {
       "test:": {

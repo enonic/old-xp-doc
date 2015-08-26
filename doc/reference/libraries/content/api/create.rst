@@ -35,6 +35,9 @@ branch *(string)*
   Set by portal, depending on context, to either "draft" or "master". May be overridden, but this is not recommended.
   Default is the current branch set in portal.
 
+language *(string)*
+  The language tag representing the content's locale. This parameter is optional.
+
 **Example:**
 
 .. literalinclude:: code/create.js
