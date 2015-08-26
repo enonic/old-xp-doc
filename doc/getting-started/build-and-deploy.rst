@@ -1,7 +1,7 @@
 Build and Deploy
 ----------------
 
-Now that we have set up a project, we should test that it builds and deploys successfully. But before deploying the app, the $XP_HOME
+Now that we have set up a project, we should test that it builds and deploys successfully. But before deploying the app, the ``$XP_HOME``
 environment variable must be set to the path of the home folder of the XP installation.
 
 1. Run the following command in the terminal, replacing [$XP_INSTALL] with your installation location (no brackets): ``export XP_HOME=[$XP_INSTALL]/home``
@@ -16,8 +16,8 @@ From there, Enonic XP will detect, install and start the application automatical
 
 You will need to access the Administrative console to check that the app has installed and started.
 
-3. Log in to the Administrative console (http://localhost:8080) with the Administrative user credentials (userid "su" and password
-   "password").
+3. Log in to the Administrative console (http://localhost:8080) with the Administrative user credentials (userid **su** and password
+   **password**).
 
 4. Navigate to the Applications App. The application you just deployed should be listed.
 

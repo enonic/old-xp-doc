@@ -2,7 +2,7 @@
 
 My First App
 ************
-*This guide will lead you through the required steps to build the "Hello World" app for Enonic XP*
+*This guide will lead you through the required steps to build the "Hello World" app for Enonic XP.*
 
 In this tutorial, you will learn how to initialize new application projects and deploy them. We will create a simple website that displays a
 list of countries and cities with a Google map of each city. Upon completion, you will be familiar with content types, page and part

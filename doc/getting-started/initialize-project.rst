@@ -1,13 +1,13 @@
 Initialize project
 ==================
 
-Enonic XP includes the :ref:`toolbox` which can perform several useful operations. The init-app operation will initialize a new application
+Enonic XP includes the :ref:`toolbox` which can perform several useful operations. The ``init-app`` operation will initialize a new application
 project with the standard structures required for app development (see :ref:`apps-basics-project`).
 
 Init App
 --------
 #. Create a new folder at a suitable location on your filesystem for the application project files.
-   e.g. /Users/<username>/project/myapp This will be the project root.
+   e.g. ``/Users/<username>/project/myapp`` This will be the project root.
 
 #. Go to this folder in the terminal and run the following command:
 
