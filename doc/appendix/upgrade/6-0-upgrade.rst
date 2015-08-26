@@ -326,8 +326,8 @@ Old image object structure:
     "x": {
         "media": {
             "image-info": {
-                "imageHeight": "695",
-                "imageWidth": "2000",
+                "imageHeight": 695,
+                "imageWidth": 2000,
                 "contentType": "image/jpeg",
                 "byteSize": 548842,
                 "pixelSize": 1390000
@@ -344,8 +344,8 @@ Image object structure in 6.x:
     "x": {
         "media": {
             "imageInfo": {
-                "imageHeight": "695",
-                "imageWidth": "2000",
+                "imageHeight": 695,
+                "imageWidth": 2000,
                 "contentType": "image/jpeg",
                 "byteSize": 548842,
                 "pixelSize": 1390000
