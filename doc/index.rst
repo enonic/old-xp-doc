@@ -58,3 +58,4 @@ is `available on GitHub`_ in a separate project.
    appendix/upgrade/index
    appendix/faq
    appendix/troubleshooting
+   appendix/glossary

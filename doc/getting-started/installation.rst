@@ -49,7 +49,7 @@ Terminal users can do this (actual download URL (version) might be newer than th
 The top level of the unzipped directory will be referred to as ``$XP_INSTALL``
 from now on.
 
-.. note:: **$XP_INSTALL** and **$XP_HOME** are referenced frequently in the documentation. $XP_INSTALL is the
+.. note:: :term:`$XP_INSTALL` and :term:`$XP_HOME` are referenced frequently in the documentation. $XP_INSTALL is the
   location of the unzipped XP download. $XP_HOME, by default, is
   the location of the $XP_INSTALL/home folder and it contains directories specific to a single XP instance. The
   home folder can be copied to multiple locations for developers working on multiple isolated projects. The **$XP_HOME
