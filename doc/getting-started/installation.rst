@@ -15,7 +15,7 @@ infrastructure or other platform services.
 General requirements are:
 
 * Any OS supporting Java
-* Java 1.8 (update 40 or above). See our JDK installation help page here: :ref:`installing_java`
+* Java JDK 1.8 (update 40 or above)
 * Local filesystem
 * At least 1 GB of available memory
 * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)
@@ -24,6 +24,15 @@ For clustered deployments:
 
 * Shared filesystem (for storing configuration and blobs)
 * Open for network communication between the nodes
+
+Installing Java JDK
+-------------------
+
+You need Java JDK 1.8 update 40 or above to run Enonic XP. Here are some nice installation guides to help you out:
+
+* `Mac <https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html>`_
+* `Windows <https://docs.oracle.com/javase/8/docs/technotes/guides/install/windows_jdk_install.html>`_
+* `Linux <https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html>`_
 
 Download
 --------
