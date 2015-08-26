@@ -12,7 +12,7 @@ _application
   Other application to reference to.  Default is current application.
 
 _type
-  URL type. Either "server" (server-relative URL) or "absolute". Default is "server"
+  URL type. Either ``server`` (server-relative URL) or ``absolute``. Default is ``server``.
 
 *everything else*
   Custom parameters to append to the url.
