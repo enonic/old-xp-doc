@@ -1,4 +1,4 @@
-var contentSvc = require('/lib/xp/content'); // Import the content service functions
+var contentLib = require('/lib/xp/content'); // Import the content library functions
 var portal = require('/lib/xp/portal'); // Import the portal functions
 var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf rendering function
 
@@ -14,23 +14,23 @@ exports.get = function(req) {
     var googleMaps = '<script src="http://maps.googleapis.com/maps/api/js"></script>';
 
     // Get the country content and extract the needed data from the JSON
-    var result = contentSvc.getChildren({
+    var result = contentLib.getChildren({
         key: portal.getContent()._id
     });
-    var contents = result.contents;
+    var hits = result.hits;
 
     var cities = [];
 
-    if(contents.length > 0) {
+    if(hits.length > 0) {
         googleMaps += '<script>function initialize() {';
 
         // Loop through the contents and extract the needed data
-        for(var i = 0; i < contents.length; i++) {
+        for(var i = 0; i < hits.length; i++) {
 
             var city = {};
-            city.name = contents[i].displayName;
-            city.location = contents[i].data.location;
-            city.population = contents[i].data.population? 'Population: ' + contents[i].data.population : null;
+            city.name = hits[i].displayName;
+            city.location = hits[i].data.location;
+            city.population = hits[i].data.population? 'Population: ' + hits[i].data.population : null;
             city.mapId = 'googleMap' + i;
 
             cities.push(city);

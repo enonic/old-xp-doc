@@ -1,5 +1,5 @@
 var thymeleaf = require('/lib/xp/thymeleaf'); // Import the thymeleaf render function
-var contentSvc = require('/lib/xp/content'); // Import the content service functions
+var contentLib = require('/lib/xp/content'); // Import the content service functions
 var portal = require('/lib/xp/portal'); // Import the portal functions
 
 // Handle the GET request
@@ -7,7 +7,7 @@ exports.get = function(req) {
     var model = {};
 
     // Get all the country contents
-    var result = contentSvc.query({
+    var result = contentLib.query({
         start: 0,
         count: 100,
         contentTypes: [
@@ -15,16 +15,16 @@ exports.get = function(req) {
         ]
     });
 
-    var contents = result.contents;
+    var hits = result.hits;
     var countries = [];
 
     // Loop through the contents and extract the needed data
-    for(var i = 0; i < contents.length; i++) {
+    for(var i = 0; i < hits.length; i++) {
 
         var country = {};
-        country.name = contents[i].displayName;
+        country.name = hits[i].displayName;
         country.contentUrl = portal.pageUrl({
-            id: contents[i]._id
+            id: hits[i]._id
         });
         countries.push(country);
     }
