@@ -27,7 +27,7 @@ In order to convert a 5.x XP module into a 6.0 XP application, follow the steps 
 
 Some of the files or paths inside an application must be renamed or moved:
 
-* Rename ``src/main/resources/cms`` folder to ``src/man/resources/site``
+* Rename ``src/main/resources/cms`` folder to ``src/main/resources/site``
 * Move and rename ``src/main/resources/module.xml`` to ``src/main/resources/site/site.xml``
 * Rename page files ``/pages/<name>/page.xml`` to ``/pages/<name>/<name>.xml``
 * Rename part files ``/parts/<name>/part.xml`` to ``/parts/<name>/<name>.xml``
