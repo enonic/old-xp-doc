@@ -163,7 +163,7 @@ For example:
 Portal library
 ~~~~~~~~~~~~~~
 
-* Search and replace the following calls in js controllers;
+* Search and replace the following calls in JavaScript controllers;
 
 getComponent
 @@@@@@@@@@@@
@@ -202,7 +202,7 @@ getSite
 Thymeleaf library
 ~~~~~~~~~~~~~~~~~
 
-* Search and replace the following calls in js controllers;
+* Search and replace the following calls in JavaScript controllers;
 
 *Search:* ``execute('thymeleaf.render',``
 
@@ -272,7 +272,7 @@ The 'doc_count' property of aggregation result objects has been renamed to 'docC
 Xslt library
 ~~~~~~~~~~~~
 
-* Search and replace the following calls in js controllers;
+* Search and replace the following calls in JavaScript controllers;
 
 *Search:* ``execute('xslt.render',``
 
@@ -290,7 +290,7 @@ Xslt library
 i18n library
 ~~~~~~~~~~~~
 
-* Search and replace the following calls in js controllers;
+* Search and replace the following calls in JavaScript controllers;
 
 *Search:* ``execute('i18n.localize',``
 
