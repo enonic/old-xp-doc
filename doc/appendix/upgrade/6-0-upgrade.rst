@@ -310,13 +310,19 @@ The structure of some content objects has changed from what they were in Enonic 
 Image content
 ~~~~~~~~~~~~~
 
-Image content objects contained ``image-info`` prior to version 6.0.0. This has been updated to camel case ``imageInfo`` for consistency.
+Image content objects contained ``image-info`` prior to version 6.0.0.
+The values ``image-info`` and ``bytesize`` have been updated to camel case ``imageInfo`` and ``byteSize`` for consistency.
+The value type of ``imageHeight``, ``imageWidth`` and ``bytesize`` type has been updated from String to Number.
 
 * Search and replace in controllers;
 
 *Search:* ``image-info``
 
 *Replace:* ``imageInfo``
+
+*Search:* ``bytesize``
+
+*Replace:* ``byteSize``
 
 Old image object structure:
 
@@ -326,10 +332,10 @@ Old image object structure:
     "x": {
         "media": {
             "image-info": {
-                "imageHeight": 695,
-                "imageWidth": 2000,
+                "imageHeight": "695",
+                "imageWidth": "2000",
                 "contentType": "image/jpeg",
-                "byteSize": 548842,
+                "bytesize": "548842",
                 "pixelSize": 1390000
             }
         }
