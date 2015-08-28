@@ -168,7 +168,7 @@ Portal library
 getComponent
 @@@@@@@@@@@@
 
-*Search:* ``execute('portal.getComponent]``
+*Search:* ``execute('portal.getComponent)``
 
 *Replace:* ``portal.getComponent()``
 
@@ -226,15 +226,15 @@ Content library
 
 *Search:* ``execute('content.*',``
 
-*Replace:* ``contentSvc.*(``
+*Replace:* ``contentLib.*(``
 
-(We use a variable named ``contentSvc`` to avoid conflicts with variables representing a Content instance, which are often named ``content``)
+(We use a variable named ``contentLib`` to avoid conflicts with variables representing a Content instance, which are often named ``content``)
 
 * Add `require` call for the "content" library at the top of each JavaScript file where a "content.*" command was used:
 
 .. code-block:: js
 
-   var contentSvc = require('/lib/xp/content');
+   var contentLib = require('/lib/xp/content');
 
 * ``contents`` in *query* and *getChildren* has been renamed to ``hits``.
 
