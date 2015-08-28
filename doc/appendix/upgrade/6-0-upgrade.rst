@@ -312,7 +312,7 @@ Image content
 
 Image content objects contained ``image-info`` prior to version 6.0.0.
 The values ``image-info`` and ``bytesize`` have been updated to camel case ``imageInfo`` and ``byteSize`` for consistency.
-The value type of ``imageHeight``, ``imageWidth`` and ``bytesize`` type has been updated from String to Number.
+The value type of ``imageHeight``, ``imageWidth`` and ``bytesize`` has been updated from String to Number.
 
 * Search and replace in controllers;
 
