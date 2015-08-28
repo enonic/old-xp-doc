@@ -15,8 +15,8 @@ _format
   Format of the image.
 
 _scale
-  Scaling option. Options are width(px), height(px), block(width,height), max(px),
-  wide(width,height) and square(px).
+  Scaling filter.  Only one scaling filter may be used for each image.
+  See Scaling Filters here: :ref:`reference-image-filters` .
 
 _quality
   Quality for JPEG images.
@@ -25,7 +25,8 @@ _background
   Background color.
 
 _filter
-  Filters to use on the image.
+  Styling filters to use on the image.  More than one filter may be combined with a semicolon.
+  All Styling filters are listed here: :ref:`reference-image-filters` .
 
 _type
   URL type. Either ``server`` (server-relative URL) or ``absolute``. Default is ``server``.

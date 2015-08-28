@@ -49,6 +49,7 @@ is `available on GitHub`_ in a separate project.
    reference/query-language
    reference/toolbox/index
    reference/javadoc
+   reference/image-filters/index
 
 .. toctree::
    :maxdepth: 1
