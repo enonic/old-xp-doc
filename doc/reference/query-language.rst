@@ -227,7 +227,7 @@ Examples
 --------
 
 Find all documents where property 'myCategory' is populated with a value, and
-the value does not equals 'article'.
+the value does not equal 'article'.
 
 .. code-block:: sql
 
