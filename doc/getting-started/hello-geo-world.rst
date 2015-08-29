@@ -9,7 +9,7 @@ City content
 
 The next steps will create a content type for adding cities with location coordinates.
 
-1. Create a folder called `cities` inside the project's ``site/content-types`` folder.
+1. Create a folder called `city` inside the project's ``site/content-types`` folder.
 
 2. Add the content type file below to your project:
 

@@ -1,6 +1,8 @@
 Page Templates
 ==============
 
+.. |cogicon| image:: images/icon-cog.png
+
 With our current solution, sadly, you would have to configure a page for every country you create.
 As this is not a very effective way of working with large data sets, we will create a page template to simplify the process.
 
@@ -15,7 +17,7 @@ Create Country Template
   * Supports: "Country" (selected from the list of content types)
 
 4. In the Live Edit panel on the right, select the "Hello Region" controller.
-5. Open the context panel (activated from the cog button in the toolbar).
+5. Open the context panel (activated from the cog button |cogicon| in the toolbar).
 6. Under the "Insert" tab, drag and drop a "Part" into the empty region.
 7. Select the "country" part from the dropdown. (You may need to close the context panel to see the dropdown.)
 8. Click "Save draft" in the toolbar and close the tab.
@@ -35,7 +37,7 @@ You might remember that your favorite country was "hardcoded" - so let's change 
 #. In the Content pane, select the country and click "Edit".
 #. In Live Edit view, click on the page. A box should appear with the name of the country. If the word "country" appears in the box then
    you have selected the part. In that case, click the "Parent" button twice.
-#. Open the context panel (cog button in the toolbar) and select "Automatic" from under the "Renderer" label. (It's under the "Inspect" tab)
+#. Open the context panel (cog button |cogicon|) and select "Automatic" from under the "Renderer" label. (It's under the "Inspect" tab)
 #. Save draft and close the tab.
 
 You can select another `Page template` at any time, or even customize the presentation of a single content.

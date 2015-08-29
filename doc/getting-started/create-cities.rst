@@ -1,11 +1,12 @@
 Create Cities
 -------------
+.. |cogicon| image:: images/icon-cog.png
 
 Now let's make use of the new city content type and part component. First we need to add the "City list" part to the "Country" page
 template.
 
 #. Edit the "Country" page template.
-#. Open the context panel by clicking the cog button in the toolbar.
+#. Open the context panel by clicking the cog button |cogicon| in the toolbar.
 #. Click and drag a `Part` to the page region below the "country" part. (This may be a bit tricky because the "country" part is small.)
 #. Select the "City list" part from the dropdown in the box. You may need to close the context panel to see it.
 #. Save and close the tab.
@@ -54,7 +55,7 @@ The `City list` part descriptor (site/parts/city-list/city-list.xml) has configu
 the default values for these inputs by editing the `City list` part in the `Country` page template.
 
 #. Open the `Country` page template for editing.
-#. Open the context panel by clicking the cog button in the toolbar.
+#. Open the context panel by clicking the cog button |cogicon| in the toolbar.
 #. Click on the `City list` part in the Live Edit panel. (The `Inspect` tab should open.)
 #. Set the Map type to "Hybrid" and Zoom level to 12 with the form inputs in the context panel.
 #. Save draft and close the edit tab.
