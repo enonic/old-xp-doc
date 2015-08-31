@@ -1,5 +1,5 @@
-Applications
-============
+Application Development
+=======================
 
 Applications are the core components in Enonic XP. An application is a standalone package of
 code, content and structure that can be deployed into any instance of Enonic XP.
