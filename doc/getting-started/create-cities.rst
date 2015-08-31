@@ -11,12 +11,13 @@ template.
 #. Select the "City list" part from the dropdown in the box. You may need to close the context panel to see it.
 #. Save and close the tab.
 
-Now we need to create a City content below a selected country. (Sample data is available in the table below.)
+Now we need to create a few City contents below a selected country. (Sample data is available in the table below.)
 
-#. From the content pane, click a country content that you created earlier.
-#. Click "New" and select "City" from the list of content types. It is important that the city content be created under the country.
-#. Fill in the city name and location; the population is optional. (The location format must be comma separated latitude and longitude
-   with decimals. Do not select a page template from the dropdown on the right.)
+#. From the content pane, select a country content that you created earlier. It is important that the city content be created under the country.
+#. Right-click on the country content and select "New". The "Create content" dialogue will open.
+#. Now select "City" from the list of content types.
+#. Fill in the city name and location; the population is optional. The location format must be comma separated latitude and longitude
+   with decimals. Do not select a page template from the dropdown on the right.
 #. Save draft.
 #. Create several more city contents below each country content by repeating the previous steps. Sample data is provided in the table below.
 
