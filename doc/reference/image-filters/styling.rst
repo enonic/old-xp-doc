@@ -46,12 +46,13 @@ width
   The width of the border in pixels. Default: 2
 
 color
-  The color of the border as a decimal or hexadecimal number. Default: Default: 0 / 0x000000 (black)
+  The color of the border as a decimal or hexadecimal number.
+  Default: 0 / 0x000000 (black)
 
-  Example:
-    .. literalinclude:: code/border.txt
+Example:
+  .. literalinclude:: code/border.txt
 
-    .. image:: images/border4_0x777777.jpg
+  .. image:: images/border4_0x777777.jpg
 
 
 Emboss
@@ -178,3 +179,146 @@ Example:
 
 Edge
 ----
+
+Creates an abstract image by brightening every edge and darkening every even
+surface of the image.
+
+*No arguments*
+
+Example:
+  .. literalinclude:: code/edge.txt
+
+  .. image:: images/edge.jpg
+
+
+Bump
+----
+
+Creates a 3D looking texture, based on darkening and lighting each side of edges
+in the image.
+
+*No arguments*
+
+Example:
+  .. literalinclude:: code/bump.txt
+
+  .. image:: images/bump.jpg
+
+
+Sepia
+-----
+
+Creates a grayscale image with a yellow-reddish tint to make it look like an old
+photograph.
+
+*Arguments:*
+
+depth
+  The brightness of the tint.  Default: 20
+
+Example:
+  .. literalinclude:: code/sepia.txt
+
+  .. image:: images/sepia25.jpg
+
+
+Rotate 90
+---------
+
+Rotates an image 90 degrees
+
+*No arguments*
+
+Example:
+  .. literalinclude:: code/rotate90.txt
+
+  .. image:: images/rotate90.jpg
+
+
+Rotate 180
+----------
+
+Rotates an image 180 degrees
+
+*No arguments*
+
+Example:
+  .. literalinclude:: code/rotate180.txt
+
+  .. image:: images/rotate180.jpg
+
+
+Rotate 270
+----------
+
+Rotates an image 270 degrees
+
+*No arguments*
+
+Example:
+  .. literalinclude:: code/rotate270.txt
+
+  .. image:: images/rotate270.jpg
+
+
+Flip horizontal
+---------------
+
+Flips an image horizontally
+
+*No arguments*
+
+Example:
+  .. literalinclude:: code/fliph.txt
+
+  .. image:: images/fliph.jpg
+
+
+Flip vertically
+---------------
+
+Flips an image vertically
+
+*No arguments*
+
+Example:
+  .. literalinclude:: code/flipv.txt
+
+  .. image:: images/flipv.jpg
+
+
+Colorize
+--------
+
+Makes a grayscale image, then applies a tint, based on the specified color.
+
+*Arguments:*
+
+red
+  Red boost value.  Default: 1
+
+green
+  Green boost value.  Default: 1
+
+blue
+  Blue boost value.  Default: 1
+
+Example:
+  .. literalinclude:: code/colorize.txt
+
+  .. image:: images/colorize.jpg
+
+HSB Colorize
+------------
+
+Makes a grayscale image, then applies a tint, based on the specified color.
+
+*Arguments:*
+
+color
+  The tint color as a decimal or hexadecimal number. Default: 0xFFFFFF
+
+Example:
+  .. literalinclude:: code/hsbcolorize.txt
+
+  .. image:: images/hsbcolorize.jpg
