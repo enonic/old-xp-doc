@@ -1,0 +1,4 @@
+rounded()
+rounded(15)
+rounded(10,1)
+rounded(8,4,0x777777)
