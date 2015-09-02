@@ -1,3 +1,5 @@
+.. _reference-image-url:
+
 imageUrl
 ========
 
@@ -15,8 +17,8 @@ _format
   Format of the image.
 
 _scale
-  Scaling filter.  Only one scaling filter may be used for each image.
-  See Scaling Filters here: :ref:`reference-image-filters` .
+  Resize and crop the image to fit the available area.  See *Scaling* here:
+  :ref:`reference-image-processor` .
 
 _quality
   Quality for JPEG images.
@@ -25,8 +27,8 @@ _background
   Background color.
 
 _filter
-  Styling filters to use on the image.  More than one filter may be combined with a semicolon.
-  All Styling filters are listed here: :ref:`reference-image-filters` .
+  Styling filters to use on the image.  More than one filter may be combined
+  with a semicolon.  See *Styling* here: :ref:`reference-image-processor` .
 
 _type
   URL type. Either ``server`` (server-relative URL) or ``absolute``. Default is ``server``.
