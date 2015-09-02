@@ -1,3 +1,5 @@
+.. _reference-image-styling:
+
 Styling
 =======
 

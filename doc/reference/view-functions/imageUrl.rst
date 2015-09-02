@@ -17,8 +17,7 @@ _format
   Format of the image.
 
 _scale
-  Resize and crop the image to fit the available area.  See *Scaling* here:
-  :ref:`reference-image-processor` .
+  Resize and crop the image to fit the available area.  See: :ref:`reference-image-scaling`
 
 _quality
   Quality for JPEG images.
@@ -28,7 +27,7 @@ _background
 
 _filter
   Styling filters to use on the image.  More than one filter may be combined
-  with a semicolon.  See *Styling* here: :ref:`reference-image-processor` .
+  with a semicolon.  See: :ref:`reference-image-styling`
 
 _type
   URL type. Either ``server`` (server-relative URL) or ``absolute``. Default is ``server``.
