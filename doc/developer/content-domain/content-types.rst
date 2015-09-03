@@ -23,7 +23,7 @@ Content types have a set of properties you need to know about:
 * Content types are named with their application name, i.e. base:folder, where "base" is the application - but also have a nice display name like "Folder"
 * ``abstract`` (default: false) means you cannot create content with this content type
 * ``final`` (default: false) means it is not possible to create content types that "extend" this
-* ``allow-child-content`` (default: true) if false, it will prevent users to create child items of content of this type. (i.e. prevents creating child items of images)
+* ``allow-child-content`` (default: true) if false, it will prevent users from creating child items on content of this type. (i.e. prevents creating child items of images)
 
 
 Folder (base:folder)
