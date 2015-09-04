@@ -1,5 +1,5 @@
 <site>
-  <x-data mixin="menu-item"/>
+  <x-data mixin="menuItem"/>
   <config>
     <field-set name="info">
       <label>Info</label>
