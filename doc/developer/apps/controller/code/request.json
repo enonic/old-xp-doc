@@ -10,10 +10,6 @@
   "params": {
     "debug": "true"
   },
-  "formParams": {
-    "user": "dymmy",
-    "password": "secret"
-  },
   "headers": {
     "Language": "en",
     "Cookies": "mycookie=123; other=abc;"

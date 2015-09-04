@@ -32,15 +32,10 @@ branch
   Name of the repository branch, one of: ``draft``, ``master``.
 
 params
-  Name/value pairs with the URI query parameters from the request.
-
-formParams
-  Name/value pairs with the form parameters submitted in the request.
+  Name/value pairs with the query/form parameters from the request.
 
 headers
   Name/value pairs with the HTTP request headers.
 
 cookies
   Name/value pairs with the HTTP request cookies.
-
-  
