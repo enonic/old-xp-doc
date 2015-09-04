@@ -1,7 +1,7 @@
 assetUrl
 ========
 
-This generates a URL pointing to a static file.
+This generates a URL pointing to a static file in the site/assets folder, such as CSS, background images, etc.
 
 **Parameters:**
 
@@ -9,7 +9,8 @@ _path
   Path to the asset.
 
 _application
-  Other application to reference to. Defaults to current application.
+  Use this when the asset referenced is in another application. Defaults to current application. Use the app name, for example,
+  ``com.enonic.blog.superhero``.
 
 _type
   URL type. Either ``server`` (server-relative URL) or ``absolute``. Default is ``server``.
