@@ -20,7 +20,7 @@ Run `java -version` in the shell where you attempt to start Enonic XP::
 
 The boot log will also output the version of Java that was actually used.
 
-If the Java version does not match your expected version, make sure that ``JAVA_HOME`` is set correctly.
+If the Java version does not match your expected version, make sure that the ``JAVA_HOME`` environment variable is set correctly.
 For OS X and Linux users - execute the following in your command line::
 
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
@@ -36,3 +36,13 @@ is complaining about this, simply identify the other software you have running o
 and stop it.
 
 If shutting down other software that uses port 8080 is not an option, you may set a different port for Enonic XP. See :ref:`configuration`.
+
+
+Unexpected behavior
+-------------------
+
+While frequently redeploying an app during development, some instability or unexpected behavior may be noticed. This can be caused by
+certain changes to the app files. For example, changing the app name in the build.gradle file, or deleting content import node.xml files.
+When this occurs, the project may need a clean build ``gradle clean build``. Sometimes the app JAR file may need to be deleted from the
+$XP_HOME/deploy directory as well, and then replaced with the clean build JAR file.
+
