@@ -64,13 +64,16 @@ Since 6.0, regions will be identified by name. This makes Live Edit more robust 
 since they can reorder the page and layout HTML elements without breaking anything.
 
 This change requires a minor update to the existing layout and page HTML view files (Thymeleaf, XSLT). The region definition in the XML file
-already had a name, and now the HTML generated in the view must contain an attribute ``data-portal-region`` with that region name.
+already had a name, and now the HTML generated in the view must contain an attribute ``data-portal-region`` with that region name. Also, the
+attribute ``data-portal-component-type="region`` is no longer required.
 
 .. literalinclude:: code/region_5x.html
    :language: html
+   :caption: Version 5.x region example
 
 .. literalinclude:: code/region_60.html
    :language: html
+   :caption: Version 6.0 region example
 
 
 .. IMPORTANT::
