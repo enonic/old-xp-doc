@@ -367,6 +367,9 @@ Request object structure
 Each handler function in a controller receives a ``request`` object as a parameter.
 This request had its attribute ``uri`` renamed to ``url``.
 
+When ``POST``ing HTML forms using ``x-www-form-urlencoded``-encoding,
+parameters are now inside ``params`` field instead of the old ``formParams``.
+
 
 Module object renamed
 ------------------------
@@ -376,17 +379,16 @@ The ``module`` global variable in 5.x has been renamed to ``app``
 
   var appName = app.name
   var version = app.version
-  
+
 * Search and replace in controllers:
 
 *Search:* ``module.name``
 
 *Replace:* ``app.name``
-  
- 
+
+
 * Search and replace in controllers:
 
 *Search:* ``module.version``
 
 *Replace:* ``app.version``
-  
