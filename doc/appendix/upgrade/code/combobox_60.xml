@@ -1,0 +1,9 @@
+<!-- 6.0 ComboBox dropdown -->
+<input name="dorpdownSelector" type="ComboBox">
+  <label>Dropdown Selector</label>
+  <occurrences minimum="0" maximum="1"/>
+  <config>
+    <option value="o1">My Option 1</option>
+    <option value="o2">My Option 2</option>
+  </config>
+</input>

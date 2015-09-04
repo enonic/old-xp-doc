@@ -46,6 +46,7 @@ that makes sense is a minimum of zero and a maximum of one.
 .. literalinclude:: code/checkbox-type.xml
    :language: xml
 
+.. _combobox:
 
 ComboBox
 --------
@@ -143,6 +144,7 @@ allow-content-type
   This is used to limit the content types that may be selected for this input.
   Use one setting for each content-type.
 
+.. _radiobutton:
 
 RadioButton
 -----------

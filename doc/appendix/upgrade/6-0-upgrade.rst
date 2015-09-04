@@ -43,14 +43,35 @@ In addition, some XML element names must be renamed in the page, part, layout an
 * Rename the ``<layout-component>`` element name to ``<layout>``
 * Rename the ``<page-component>`` element name to ``<page>``
 * Rename the ``<module>`` element name to ``<site>`` in site.xml
-* Change input type ``SingleSelector`` to ``RadioButtons`` (or ``ComboBox`` for dropdowns) and remove the ``<selector-type>`` element.
-  (i.e. ``<input name="..." type="SingleSelector">``).
 
 Some properties in the Content object, possibly used in JavaScript controllers, have also been renamed:
 
 * Usages of property ``moduleConfig`` of property ``data`` in content site should be replaced with ``siteConfig``
 * Usages of property ``moduleKey`` of property ``siteConfig`` in content site should be replaced with ``applicationKey``
 
+Input Types
+-----------
+
+The ``SingleSelector`` input type has been removed. These may be found in XML files: site.xml, content types, and descriptors for parts,
+pages, layouts, and mixins.
+
+* Replace ``SingleSelector`` input types with either ``RadioButton`` or ``ComboBox``.
+
+* Update the config elements of these inputs with the new format.
+
+  * Remove the ``<selector-type>`` element.
+
+  * Update the options format to the following: ``<option value="value">Label</option>``
+
+.. literalinclude:: code/singleselector_5x.xml
+   :language: xml
+   :caption: Version 5.x SingleSelector
+
+.. literalinclude:: code/combobox_60.xml
+   :language: xml
+   :caption: Version 6.0 ComboBox
+
+See :ref:`combobox` and :ref:`radiobutton` for more details.
 
 Portal
 ------
