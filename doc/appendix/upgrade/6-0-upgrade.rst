@@ -129,11 +129,13 @@ JavaScript API
 --------------
 
 The Script commands used to access extra functions in the controllers have been replaced by libraries.
-The libraries that are needed can be made available for an application using the gradle build.
+The libraries that are needed can be made available for an application in the "dependencies" section of the build.gradle file (see step 1
+below).
 
-The Script command calls in the form of ``execute('lib_name.func_name', params)`` should be replaced with calls to functions with the same name in the new corresponding library.
+Script command calls in the form of ``execute('lib_name.func_name', params)`` should be replaced with calls to functions with the same name
+in the new corresponding library.
 
-For example:
+Below is just one example of how an "execute" command should be replaced with a "library" function:
 
 .. literalinclude:: code/api_60.js
    :language: js
@@ -168,7 +170,7 @@ Portal library
 getComponent
 @@@@@@@@@@@@
 
-*Search:* ``execute('portal.getComponent)``
+*Search:* ``execute('portal.getComponent')``
 
 *Replace:* ``portal.getComponent()``
 
