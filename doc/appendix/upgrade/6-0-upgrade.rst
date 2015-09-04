@@ -316,7 +316,7 @@ Image content objects contained ``image-info`` prior to version 6.0.0.
 The values ``image-info`` and ``bytesize`` have been updated to camel case ``imageInfo`` and ``byteSize`` for consistency.
 The value type of ``imageHeight``, ``imageWidth`` and ``bytesize`` has been updated from String to Number.
 
-* Search and replace in controllers;
+* Search and replace in controllers:
 
 *Search:* ``image-info``
 
@@ -366,12 +366,23 @@ Image object structure in 6.x:
 Request object structure
 -------------------------
 
-Each handler function in a controller receives a ``request`` object as a parameter.
-This request had its attribute ``uri`` renamed to ``url``.
+Each handler function in a controller receives a :ref:`request` object as a parameter.
+This request object had its ``uri`` attribute renamed to ``url`` and its ``formParams`` object renamed to ``params``.
 
-When ``POST``ing HTML forms using ``x-www-form-urlencoded``-encoding,
-parameters are now inside ``params`` field instead of the old ``formParams``.
+* Search and replace in controllers:
 
+*Search:* ``req.uri``
+
+*Replace:* ``req.url``
+
+When HTML forms are submitted with ``POST`` using ``x-www-form-urlencoded`` encoding,
+parameters are now inside the ``params`` object instead of the old ``formParams``.
+
+* Search and replace in controllers:
+
+*Search:* ``req.formParams``
+
+*Replace:* ``req.params``
 
 Module object renamed
 ------------------------
