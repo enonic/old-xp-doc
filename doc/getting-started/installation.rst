@@ -15,7 +15,7 @@ infrastructure or other platform services.
 General requirements are:
 
 * Any OS supporting Java
-* Java JDK 1.8 (update 40 or above)
+* Java JDK 1.8 (update 40 or above) `JDK download page <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_
 * Local filesystem
 * At least 1 GB of available memory
 * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)
@@ -25,20 +25,13 @@ For clustered deployments:
 * Shared filesystem (for storing configuration and blobs)
 * Open for network communication between the nodes
 
-Installing Java JDK
--------------------
+.. note:: If needed, read our :ref:`installing_java` guide for the latest JDK.
 
-You need Java JDK 1.8 update 40 or above to run Enonic XP. Here are some nice installation guides to help you out:
+Download XP
+-----------
 
-* `Mac <https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html>`_
-* `Windows <https://docs.oracle.com/javase/8/docs/technotes/guides/install/windows_jdk_install.html>`_
-* `Linux <https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html>`_
-
-Download
---------
-
-`Download <http://repo.enonic.com/public/com/enonic/xp/distro>`_
-the correct Enonic XP version and unzip it to a suitable location.
+`Download <https://enonic.com/try-now#t-Download-now>`_
+the latest Enonic XP release version and unzip it to a suitable location.
 
 Terminal users can do this (actual download URL (version) might be newer than the version mentioned below)::
 
@@ -52,7 +45,7 @@ from now on.
 .. note:: :term:`$XP_INSTALL` and :term:`$XP_HOME` are referenced frequently in the documentation. $XP_INSTALL is the
   location of the unzipped XP download. $XP_HOME, by default, is
   the location of the $XP_INSTALL/home folder and it contains directories specific to a single XP instance. The
-  home folder can be copied to multiple locations for developers working on multiple isolated projects. The **$XP_HOME
+  home folder can be copied to multiple locations for developers working on multiple projects to keep them isolated. The **$XP_HOME
   environment variable** should be set to the home folder of the project to be run.
 
 Start the server
@@ -78,5 +71,7 @@ Log in
 
 Point your browser to ``http://localhost:8080``. Log in with username ``su`` and password ``password``.
 
-Congratulations on installing Enonic XP. Check the :ref:`troubleshooting` page, the :ref:`faq`, or the
-`community forum <https://discuss.enonic.com/>`_ if you had any problems.
+Congratulations on installing Enonic XP. Now get some demo apps from `GitHub <https://github.com/enonic>`_ or create your own with
+:ref:`getting-started-my-first-app`.
+
+Check the :ref:`troubleshooting` page, the :ref:`faq`, or the `community forum <https://discuss.enonic.com/>`_ if you had any problems.
