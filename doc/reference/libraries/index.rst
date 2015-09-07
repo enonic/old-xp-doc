@@ -1,10 +1,9 @@
 .. _js-libraries:
 
-Libraries
-=========
+Javascript Libraries
+====================
 
-This section describes the various standard libraries you can include
-in your application.
+This section describes the various standard libraries shipped with Enonic XP. The libraries are included in your application through the Gradle build script.
 
 .. toctree::
   :maxdepth: 1

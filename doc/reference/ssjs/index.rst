@@ -1,8 +1,8 @@
-Server JavaScript
-=================
+ServerSide JavaScript
+=====================
 
-Our server-side JavaScript engine has some important global variables and
-functions which are documented in this section.
+Enonic XP uses a lot of Javascript in the server. This section describes important global variables and
+functions.
 
 .. toctree::
    :maxdepth: 1

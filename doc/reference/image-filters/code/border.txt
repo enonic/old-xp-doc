@@ -1,2 +1,0 @@
-border(5)
-border(4, 0x777777)

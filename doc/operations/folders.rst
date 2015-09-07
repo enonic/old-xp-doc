@@ -1,7 +1,7 @@
-Folder Structure
-================
+Package Structure
+=================
 
-The unpacked Enonic XP distribution will have the following structure (folders with a * will not appear until the installation is started)
+The unzipped Enonic XP distribution will have the following structure (folders with a * will not appear until the installation is started the first time)
 
 ::
 

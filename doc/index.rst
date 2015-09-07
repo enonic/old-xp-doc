@@ -2,54 +2,23 @@
 Enonic XP |version| documentation
 =================================
 
-This is the home for Enonic XP |version| documentation. The documentation
-is `available on GitHub`_ in a separate project.
+This is the official Enonic XP |version| documentation. The documentation
+source is `available on GitHub`_ .
+
+.. _available on GitHub: https://github.com/enonic/xp-doc
 
 .. WARNING::
 
   Version |version| is not released yet. This is a developer version
   and should be used at your own risk.
 
-.. _available on GitHub: https://github.com/enonic/xp-doc
 
 .. toctree::
    :maxdepth: 1
-   :caption: Getting Started
 
-   getting-started/installation
-   getting-started/my-first-app
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Developers
-
-   developer/node-domain/index
-   developer/content-domain/index
-   developer/apps/index
-   developer/search/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Operations
-
-   operations/folders
-   operations/configuration
-   operations/docker
-   operations/backup
-   operations/export
-   operations/monitoring
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Reference
-
-   reference/ssjs/index
-   reference/libraries/index
-   reference/view-functions/index
-   reference/query-language
-   reference/toolbox/index
-   reference/javadoc
-   reference/image-filters/index
+   operations/index
+   developer/index
+   reference/index
 
 .. toctree::
    :maxdepth: 1
@@ -58,5 +27,4 @@ is `available on GitHub`_ in a separate project.
    appendix/changes/index
    appendix/upgrade/index
    appendix/faq
-   appendix/troubleshooting
    appendix/glossary
