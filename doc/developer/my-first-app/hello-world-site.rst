@@ -1,5 +1,5 @@
-Hello World Site
-================
+Create the Hello World Site
+===========================
 
 Our next goal is to set up a "Hello World" site in the Content Manager app,
 but first we must add some initial configuration to our project.

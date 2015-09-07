@@ -1,5 +1,5 @@
-Add Favorite Country
---------------------
+Add your favorite country
+=========================
 
 .. |cogicon| image:: images/icon-cog.png
 

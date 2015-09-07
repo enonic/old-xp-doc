@@ -1,13 +1,10 @@
-Page Templates
-==============
+The Country Page Template
+=========================
 
 .. |cogicon| image:: images/icon-cog.png
 
-With our current solution, sadly, you would have to configure a page for every country you create.
+With our current solution, sadly, we'll have to create a new page for every country we add.
 As this is not a very effective way of working with large data sets, we will create a page template to simplify the process.
-
-Create Country Template
------------------------
 
 1. Select the Templates item located below the "Hello World" site in the content pane.
 2. Click "New" and select "Page Template".
@@ -29,8 +26,11 @@ Every "Country" content you create will now use this template by default.
 - Try this out by creating a few new countries in your site. Make sure you click the "Hello World" site before clicking "New" in the
   toolbar. Every content you create will exist as a child of the content that is selected in the content pane.
 
-Update Favorite Country
-------------------------
+
+Extra task
+----------
+
+**Make your Favorite Country use the page template too!**
 
 You might remember that your favorite country was "hardcoded" - so let's change it to use templates as well.
 

@@ -1,11 +1,9 @@
-Adding Countries
-================
+Add some Countries
+==================
 
 In order to make our "World" slightly more interesting, we need some data
 - or more specifically countries.
 
-Country Content Type
---------------------
 
 To add structured data (such as countries), we need so-called :ref:`content-domain-content-types`.
 The content type defines the form (and underlying schema) of items you manage.

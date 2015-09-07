@@ -1,8 +1,7 @@
-Country List
-============
+The Country List Part
+=====================
 
-Each country content can now be viewed on a page. But the site home page is still a bit empty. This section will have you alter the "hello"
-page controller and view files to list all of the country contents.
+Each country content can now be viewed on a page. But the site home page is still a bit empty. This section will have you alter the "hello" page controller and view files to list all of the country contents.
 
 1. Edit the "hello" page controller file ``site/pages/hello/hello.js`` and make the following changes:
 

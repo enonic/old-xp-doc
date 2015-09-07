@@ -1,9 +1,9 @@
 Create Cities
--------------
+=============
+
 .. |cogicon| image:: images/icon-cog.png
 
-Now let's make use of the new city content type and part component. First we need to add the "City list" part to the "Country" page
-template.
+Now let's make use of the new city content type and part component. First we need to add the "City list" part to the "Country" page template.
 
 #. Edit the "Country" page template.
 #. Open the context panel by clicking the cog button |cogicon| in the toolbar.
@@ -49,19 +49,3 @@ It should look something like this:
 
 .. image:: images/city-list.png
 
-Configure part
---------------
-
-The `City list` part descriptor (site/parts/city-list/city-list.xml) has configuration inputs for the map type and zoom level. You can set
-the default values for these inputs by editing the `City list` part in the `Country` page template.
-
-#. Open the `Country` page template for editing.
-#. Open the context panel by clicking the cog button |cogicon| in the toolbar.
-#. Click on the `City list` part in the Live Edit panel. (The `Inspect` tab should open.)
-#. Set the Map type to "Hybrid" and Zoom level to 12 with the form inputs in the context panel.
-#. Save draft and close the edit tab.
-
-Now all of the countries will show the city maps with the new settings. You can override these defaults for any individual country by
-editing the Country content and changing its `City list` part configuration.
-
-.. image:: images/city-list-config.png

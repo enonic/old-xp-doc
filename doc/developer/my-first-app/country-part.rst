@@ -1,13 +1,10 @@
 
-Part Component
---------------
+Create the Country Part
+=======================
 
 We also need a way to present a country - because every country wants to be seen.
-This time, rather than just making another page controller, we will create a :ref:`apps-part-index` component. Parts are reusable components
-that can be added to pages with "regions" - more on this below.
+This time, rather than just making another page controller, we will create a :ref:`apps-part-index` component. Parts are reusable components that can be added to pages containing "regions" - more on this later.
 
-Country part
-~~~~~~~~~~~~
 
 #. Create a folder called "country" inside the "parts" folder in your project.
 #. Add the part **controller** and **view** files in the "country" folder:

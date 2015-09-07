@@ -1,7 +1,7 @@
 Content vs Node
 ===============
 
-The foundation of Enonic XP is the :ref:`node-domain`. In this domain, very general data
+The foundation of Enonic XP is the :ref:`node_domain`. In this domain, very general data
 can be stored and retrieved through the node-API. A node is schema-less, and contains a minimal set of set properties.
 
 A content is a basically a node with a schema and a rich API on top of the node-domain. The

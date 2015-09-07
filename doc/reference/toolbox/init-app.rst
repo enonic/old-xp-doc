@@ -1,4 +1,4 @@
-.. _init-app:
+.. _init_app:
 
 init-app
 ========

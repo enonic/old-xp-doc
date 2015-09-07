@@ -1,7 +1,7 @@
 query
 =====
 
-This command queries content.  See :ref:`query-language` for details.
+This command queries content.  See :ref:`query_language` for details.
 
 .. js:function:: query(params)
 
