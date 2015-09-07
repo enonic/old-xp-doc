@@ -1,0 +1,10 @@
+<page>
+  <display-name>My first page</display-name>
+  <config>
+    <!-- input fields... -->
+  </config>
+  <regions>
+    <region name="top"/>
+    <region name="bottom"/>
+  </regions>
+</page>

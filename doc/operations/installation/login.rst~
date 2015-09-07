@@ -1,0 +1,29 @@
+.. _start_server:
+
+Start the server
+----------------
+
+Now that the software has been downloaded, you're ready to start the
+server - start the respective file from command line.
+
+Linux and OS X::
+
+  $ [$XP_INSTALL]/bin/server.sh
+
+Windows::
+
+  $ [$XP_INSTALL]\bin\server.bat
+
+This will start Enonic XP. When successfully started, the following will appear at the end of the log::
+
+  12:53:14.302 INFO  c.e.x.l.framework.FrameworkService - Started Enonic XP in 7378 ms
+
+Log in
+------
+
+Point your browser to ``http://localhost:8080``. Log in with username ``su`` and password ``password``.
+
+Congratulations on installing Enonic XP. Now get some demo apps from `GitHub <https://github.com/enonic>`_ or create your own with
+:ref:`getting-started-my-first-app`.
+
+Check the :ref:`troubleshooting` page, the :ref:`faq`, or the `community forum <https://discuss.enonic.com/>`_ if you had any problems.
