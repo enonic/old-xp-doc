@@ -1,4 +1,4 @@
-.. _getting-started-installation:
+.. _installation:
 
 Installing Enonic XP
 ====================

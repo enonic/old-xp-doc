@@ -1,3 +1,4 @@
+.. _api_ref_doc:
 
 API Reference Doc
 =================

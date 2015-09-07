@@ -1,4 +1,4 @@
-.. _query-language:
+.. _query_language:
 
 Query Language
 ==============
