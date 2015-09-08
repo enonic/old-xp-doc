@@ -35,6 +35,7 @@ Some of the files or paths inside an application must be renamed or moved:
 * Rename controller files ``/<type>/<name>/controller.js`` to ``/<type>/<name>/<name>.js``
 * Rename content type files ``/content-types/<name>/content-type.xml`` to ``/content-types/<name>/<name>.xml``
 * Rename content type thumbnails from ``/content-types/<name>/thumb.png`` to ``/content-types/<name>/<name>.png``
+* Rename mixin files ``/mixins/<name>/mixin.xml`` to ``/mixins/<name>/<name>.xml``
 
 In addition, some XML element names must be renamed in the page, part, layout and site XML files:
 
