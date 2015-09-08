@@ -3,7 +3,7 @@
 Upgrading to 6.0.0
 =================================
 
-TODO intro
+This document contains all the nitty-gritty details to help you upgrade from Enonic XP 5.x
 
 Repositories
 ------------
