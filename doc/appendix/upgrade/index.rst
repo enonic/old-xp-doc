@@ -5,11 +5,12 @@ Upgrading to 6.0.0
 
 This document contains all the nitty-gritty details to help you upgrade from Enonic XP 5.x
 
-Repositories
-------------
+.. warning:: In order to upgrade, you must use Enonic XP 5.3.1 or newer
+
+Data Migration
+--------------
 
 Any data that was created in version 5.0 must be upgraded to conform to the repository changes in version 6.0.
-This part can be skipped when starting with a new installation that doesn't have any data.
 
 The necessary changes to your data can be performed with the ``upgrade`` task in the provided :ref:`toolbox`.
 
@@ -20,8 +21,8 @@ To upgrade your 5.3.1 installation, execute the following steps:
 #. Start a new 6.0.0 instance of Enonic XP and load the upgraded dump with the toolbox :ref:`toolbox-load` tool.
 
 
-Module
-------
+From Module to Application
+--------------------------
 There have been some changes regarding the module structure in 6.0 . A **module** is from now on called an **application**.
 In order to convert a 5.x XP module into a 6.0 XP application, follow the steps below:
 
@@ -50,8 +51,9 @@ Some properties in the Content object, possibly used in JavaScript controllers, 
 * Usages of property ``moduleConfig`` of property ``data`` in content site should be replaced with ``siteConfig``
 * Usages of property ``moduleKey`` of property ``siteConfig`` in content site should be replaced with ``applicationKey``
 
-Input Types
------------
+
+Input Type changes
+------------------
 
 The ``SingleSelector`` input type has been removed. These may be found in XML files: site.xml, content types, and descriptors for parts,
 pages, layouts, and mixins.
@@ -74,20 +76,19 @@ pages, layouts, and mixins.
 
 See :ref:`combobox` and :ref:`radiobutton` for more details.
 
-Portal
-------
+Code Changes
+------------
 
 Regions
 ~~~~~~~
 In 5.x the regions in a page were identified by their position (1st, 2nd, 3rd...) inside the page or layout.
-This was problematic in Live Edit and could even break the rendering in some cases.
+This was unintentional, and has now been fixed.
 
-Since 6.0, regions will be identified by name. This makes Live Edit more robust and the page structure more flexible for developers,
-since they can reorder the page and layout HTML elements without breaking anything.
+Since 6.0, regions are identified by name. This makes Live Edit more robust and the page structure more flexible for developers, as they can now reorder the regions within the markup without breaking anything.
 
 This change requires a minor update to the existing layout and page HTML view files (Thymeleaf, XSLT). The region definition in the XML file
-already had a name, and now the HTML generated in the view must contain an attribute ``data-portal-region`` with that region name. Also, the
-attribute ``data-portal-component-type="region`` is no longer required.
+already had a name, and now the HTML generated in the view must contain an attribute ``data-portal-region`` with region name as value. Also, the
+attribute ``data-portal-component-type="region`` is now obsolete.
 
 .. literalinclude:: code/region_5x.html
    :language: html
@@ -108,7 +109,7 @@ There is a new ``scale`` parameter in the **image URL** functions that is used f
 The *filter* options that apply some kind of scaling, are now *scale* parameters and they loose the "scale" prefix.
 Also note that the ``scale`` parameter is mandatory.
 
-For example: ``filter: 'scalewidth(800); blur(5)'`` becomes ``scale: 'width(800)'; filter: 'blur(5)'``
+For example: ``filter: 'scalewidth(800); blur(5)'`` becomes ``scale: 'width(800)'; filter: 'blur(5)'`` - read more about available scaling effects and filters in :ref:`image_processor`
 
 Thymeleaf example:
 

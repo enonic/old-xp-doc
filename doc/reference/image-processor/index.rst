@@ -1,4 +1,4 @@
-.. _reference-image-processor:
+.. _image_processor:
 
 Image Processor
 ===============
