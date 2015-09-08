@@ -1,7 +1,7 @@
 .. _install_guide:
 
-Installation and Operations Guide
-=================================
+Installation Guide
+==================
 
 
 .. toctree::
