@@ -14,10 +14,8 @@ We're thrilled to see you here - If you're a first timer to Enonic XP we recomme
    :maxdepth: 1
    :caption: Table Of Contents
 
-   
    my-first-app/index
    project/index
-   build/index
    deploy/index
    site/index
    controller/index
@@ -30,4 +28,3 @@ We're thrilled to see you here - If you're a first timer to Enonic XP we recomme
    node-domain/index
    content-domain/index
    search/index
-

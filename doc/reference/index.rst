@@ -5,7 +5,6 @@ API and Reference Guide
 
 .. toctree::
    :maxdepth: 1
-   :caption: Table of Contents
 
    ssjs/index
    libraries/index
@@ -14,6 +13,3 @@ API and Reference Guide
    toolbox/index
    image-processor/index
    javadoc
-
-
-

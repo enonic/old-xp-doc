@@ -23,13 +23,8 @@ For clustered deployments:
 
 .. toctree::
    :maxdepth: 1
-   :caption: Table of Contents
 
    download
    java
    start
    login
-
-
-
-

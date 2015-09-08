@@ -1,3 +1,5 @@
+.. _building:
+
 Build and Deploy
 ----------------
 

@@ -7,7 +7,7 @@ This library implements JavaScript bindings for XSLT template
 processing. Add the following into your ``build.gradle`` file in the
 ``dependencies`` section::
 
-  library 'com.enonic.xp:lib-xslt:6.0.0'
+  library 'com.enonic.xp:lib-xslt:6.1.0'
 
 To use this library in your JavaScript files, you can require the library
 like this::
