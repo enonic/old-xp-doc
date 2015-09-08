@@ -1,33 +1,38 @@
 Backup and Restore
 ==================
 
-Backing up your Enonic XP data is vital for any installation. There are several ways to secure your data.
+Backing up your data is vital for any installation. 
 
-* `Export/import:` see :ref:`operations-export`.
-* `Snapshot/restore:` see below.
-* `Backup $XP_HOME/repo folder`: Only for non-clustered environments.
+All the data in an Enonic XP installation is stored in ``$XP_HOME/repo``. This directory has two folders: ``blob`` and ``index``. 
 
-All the data in an Enonic XP installation is stored in ``$XP_HOME/repo``. This directory has two folders: ``blob`` and ``index``. The ``blob``
-folder contains all files needed by the system to manage your data, while the ``index`` folder contains the Elasticsearch index folders. These
+The ``blob`` folder contains all files needed by the system to manage your data, while the ``index`` folder contains the Elasticsearch index folders. These
 are dependent on each other in the sense that one is not much use without the other.
-
-.. CAUTION::
-
-  Technical details: When fetching data in Enonic XP, the index is scanned and a set of "blob-keys" is returned. These blob-keys
-  refer to files in the `blob` folder where the actual contents are fetched. Each file in the `blob` folder is a binary blob or a serialized
-  "node", which is the low level structure of your data.
 
 That leaves us with ensuring that two elements are safely stored for retrieval in an emergency:
 
 * ``$XP_HOME/repo/blobs``
 * ``$XP_HOME/repo/index``
 
+Backup vs Export
+----------------
+The export/import-API enables you to dump your data to a serialized format. The serialized data could then be imported into another instance. This is very useful, but is not optimal for a backup/restore scheme since it requires some work to get things up and running again, especially when working with big installations with a lot of data. The backup/restore-process described below on the other hand, should enable a quick and safe way to get your system back to operation when in a hurry.
+
+See :ref:`operations-export` for more information on export/import.
+
+Backing up blobs
+------------------
+The blobs are just files on a filesystem. This should be backed up by your preferred way of doing file-backups.
+
+The folder to backup is:
+
+* ``$XP_HOME/repo/blobs``
 
 Backing up indexes
 ------------------
 
 Backing up the indices is a bit more complex than just copying the index-folder since it involves floating data with state, especially in a
-clustered environment. We have a number of rest-resources available at your disposal for snapshot operations:
+clustered environment. To help you out, we have a snapshot-API. A snapshot is exactly that; a snapshot of the indices state at a point of time.
+There are 4 rest-resources at your disposal.
 
 ``http://<your-installation>/admin/rest/repo/snapshot``
   Stores a snapshot of the current indices state.
@@ -43,7 +48,7 @@ clustered environment. We have a number of rest-resources available at your disp
 
 
 Snapshot
---------
+*********
 
 The snapshot rest-service accepts a JSON in this format:
 
@@ -61,7 +66,7 @@ To ease the process, we have provided a :ref:`toolbox-snapshot` tool.
 
 
 Restore
--------
+*********
 
 The restore rest-service accepts a JSON in this format:
 
@@ -82,7 +87,7 @@ To ease the process, we have provided a :ref:`toolbox-restore` tool.
 
 
 Delete
-------
+*********
 
 The delete rest-service accepts a JSON in this format:
 
