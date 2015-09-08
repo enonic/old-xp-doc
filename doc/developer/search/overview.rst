@@ -1,11 +1,11 @@
 Overview
 ========
 
-When searching in Enonic XP, you are searching for nodes, or content if working in context of the CMS-module.
+When searching in Enonic XP, you are searching for nodes, or content if working in the context of the CMS content API.
 This documentation is general and intended for the nodes-domain, but except for some built-in
 property-values and the addition of some convenience parameters in the content domain, everything is valid for both domains.
 
-In general, the search-API's deals with a number of basic parameters:
+In general, the search-APIs deal with a number of basic parameters:
 
 * start
 * count
