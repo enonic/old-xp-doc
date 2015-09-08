@@ -5,7 +5,7 @@ This library implements JavaScript bindings for standard content-related
 functionality. Add the following into your ``build.gradle`` file in the
 ``dependencies`` section::
 
-  library 'com.enonic.xp:lib-content:6.0.0-RC2'
+  library 'com.enonic.xp:lib-content:6.0.0'
 
 To use this library in your JavaScript files, you can require the library
 like this::
