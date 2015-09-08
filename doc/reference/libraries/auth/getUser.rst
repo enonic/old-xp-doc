@@ -1,0 +1,4 @@
+getUser
+=======
+
+TODO: Document this.

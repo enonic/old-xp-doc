@@ -1,0 +1,4 @@
+hasRole
+=======
+
+TODO: Document this.
