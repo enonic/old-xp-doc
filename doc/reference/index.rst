@@ -1,7 +1,7 @@
-.. _api_ref_doc:
+.. _api_ref_guide:
 
-API Reference Doc
-=================
+API and Reference Guide
+=======================
 
 .. toctree::
    :maxdepth: 1

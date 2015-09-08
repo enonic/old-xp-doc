@@ -1,11 +1,11 @@
 .. _dev_guide:
 
-Developers Guide to XP
-======================
+Developer Guide
+===============
 
 .. rubric:: We <3 Developers!
 
-We're thrilled to see you here - If you're a first timer to Enonic XP we recommend starting on :ref:`my_first_app` - or if you're very familiar with XP how about drilling into the :ref:`node_domain` chapter. If you're actually looking for APIs - you'll find them over here :ref:`api_ref_doc`.
+We're thrilled to see you here - If you're a first timer to Enonic XP we recommend starting on :ref:`my_first_app` - or if you're very familiar with XP how about drilling into the :ref:`node_domain` chapter. If you're actually looking for APIs - you'll find them over here :ref:`api_ref_guide`.
 
 .. image:: images/ready-set-code.jpg
 
