@@ -3,9 +3,6 @@
   <items>
     <item-set name="address">
       <label>Address</label>
-      <immutable>false</immutable>
-      <custom-text/>
-      <help-text/>
       <occurrences minimum="0" maximum="0"/>
       <items>
         <input type="TextLine" name="addressLine">

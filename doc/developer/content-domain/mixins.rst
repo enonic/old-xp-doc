@@ -19,12 +19,16 @@ For example, ``site/mixins/us-address/us-address.xml``.
 Using a mixin
 -------------
 
-Below is an example of a simple content type that uses the ``us-address`` mixin.  Notice that the
-name of the mixin folder is used and not the mixin's Display Name.
+Below is an example of a simple content type that uses the ``us-address`` mixin (inline) and the ``menu-item`` mixin (x-data).  Notice that
+the name of the mixin file is used and not the mixin's Display Name.
 
 .. literalinclude:: code/content-type-with-mixin.xml
    :language: xml
 
 inline
-  The mixin inputs are included with the ``inline`` element and the attribute
-  ``mixin`` with the name of the mixin.
+  When a mixin is added with the ``inline`` element, the inputs will be included with the content data. Inline mixins can be used in content
+  types, component descriptors, and the site.xml file.
+
+x-data
+  Mixins can also be added with an ``x-data`` element in content types and the site.xml file. Be aware that any ``x-data`` inputs added to
+  the site.xml file will be applied to all content types in the site.
