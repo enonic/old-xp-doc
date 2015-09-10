@@ -26,3 +26,5 @@ type *(string)*
 
 .. literalinclude:: code/processHtml-result.html
    :language: html
+
+.. note:: When outputting processed HTML in Thymeleaf, use attribute ``data-th-utext="${processedHtml}"``.
