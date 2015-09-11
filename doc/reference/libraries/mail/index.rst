@@ -11,11 +11,11 @@ into your ``build.gradle`` file in the ``dependencies`` section::
 To use this library in your JavaScript files, you can require the library
 like this::
 
-  var thymeleaf = require('/lib/xp/mail')
+  var mail = require('/lib/xp/mail')
 
 The methods implemented in this library are listed below.
 
 .. toctree::
    :maxdepth: 1
 
-   send
+   api/send

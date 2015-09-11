@@ -57,3 +57,32 @@ setting in the ``system.properties`` file.
 .. literalinclude:: code/web.properties
    :language: properties
    :caption: ``$XP_HOME/config/org.ops4j.pax.web.cfg``
+
+
+.. _configuration-mail:
+
+Mail Configuration
+------------------
+
+The mail server used for sending email messages using the :ref:`lib-mail` API can be configured.
+A sample mail configuration is listed below.
+
+.. literalinclude:: code/mail.properties
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.mail.cfg``
+
+smtpHost
+  Host name of the SMTP server. Default ``localhost``.
+
+smtpPort
+  TCP port of the SMTP server. Default ``25``.
+
+smtpAuth
+  Enable authentication with the SMTP server. Default ``false``.
+
+smtpUser
+  User to be used during authentication with the SMTP server, if 'smtpAuth' is set to true.
+
+smtpPassword
+  Password to be used during authentication with the SMTP server, if 'smtpAuth' is set to true.
+
