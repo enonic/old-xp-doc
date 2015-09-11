@@ -20,7 +20,7 @@ Example:
 Scale Wide
 ----------
 
-Scales the image to fit the given width of the picture.  If the image is higher
+Scales the image to fit the given width of the picture.  If the image is taller
 than the given height, it is cropped on top and bottom, based on the focal
 point position.
 
@@ -86,7 +86,7 @@ Example:
 Scale Width
 -----------
 
-Scales the image proportionally to match the given height.
+Scales the image proportionally to match the given width.
 
 *Arguments:*
 
