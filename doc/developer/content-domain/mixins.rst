@@ -9,7 +9,7 @@ mixin definition file must be placed in the folder ``site/mixins/[name]`` and na
 For example, ``site/mixins/us-address/us-address.xml``.
 
 .. literalinclude:: code/mixin.xml
-:language: xml
+    :language: xml
 
 .. TIP::
 
@@ -23,10 +23,10 @@ Below is an example of a simple content type that uses the ``us-address`` mixin 
 the name of the mixin file is used and not the mixin's Display Name.
 
 .. literalinclude:: code/content-type-with-mixin.xml
-:language: xml
+    :language: xml
 
-    inline
-      When a mixin is added with the ``inline`` element, the inputs will be included with the content data. Inline mixins can be used in content
+inline
+  When a mixin is added with the ``inline`` element, the inputs will be included with the content data. Inline mixins can be used in content
   types, component descriptors, and the site.xml file.
 
 x-data
