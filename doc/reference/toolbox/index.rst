@@ -16,16 +16,17 @@ To get help for the commands, just type the following::
 
   The most commonly used toolbox commands are:
       delete-snapshots   Deletes snapshots, either before a given timestamp or by name.
-      dump               Export all nodes.
-      export             Export nodes from a repository branch.
+      dump               Export data from every repository.
+      export             Export data for a specified path.
       help               Display help information
-      import             Import nodes from an export into a repository branch.
+      import             Import data from a named export.
+      init-app           Initiates an Enonic XP application.
       list-snapshots     Returns a list of existing snapshots with name and status.
-      load               Import nodes from a dump.
+      load               Import data from a dump.
       reindex            Reindex content in search indices for the given repository and branches.
       restore            Restores a snapshot of a previous state of the repository.
       snapshot           Stores a snapshot of the current state of the repository.
-      upgrade            Upgrade a dump to the current version. The upgraded dump will be written to a 'upgraded' folder in current directory
+      upgrade            Upgrade a dump to the current version. The upgraded files will be written to <dumpFolderName>_upgraded_<version>
 
   See 'toolbox help <command>' for more information on a specific command.
 
