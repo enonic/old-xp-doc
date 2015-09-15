@@ -86,3 +86,5 @@ smtpUser
 smtpPassword
   Password to be used during authentication with the SMTP server, if 'smtpAuth' is set to true.
 
+smtpTLS
+  Turn on Transport Layer Security (TLS) security for SMTP servers that require it. Default ``false``.
