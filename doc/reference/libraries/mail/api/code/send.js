@@ -9,3 +9,14 @@ var sendResult = mail.send({
     replyTo: 'support@enonic.com',
     body: 'Welcome to Enonic XP!' + '\r\n\r\n' + '- The Dev Team'
 });
+
+var sendResultHtml = mail.send({
+    from: 'me@enonic.com',
+    to: 'user@somewhere.org',
+    subject: 'HTML email test',
+    body: '<h1>HTML Email!</h1><p>You can use headers to set the content type.</p>',
+    headers: {
+        'Content-Type': 'text/html; charset="UTF-8"'
+    }
+});
+

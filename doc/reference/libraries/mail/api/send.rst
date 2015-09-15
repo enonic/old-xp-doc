@@ -31,11 +31,17 @@ subject *(string)*
 body *(string)*
   The text content of the message.
 
+headers *(object)*
+  Custom headers in the form of name-value pairs. Optional.
 
 The address values can be either a simple email address (e.g. `'name@domain.org'` ) or an address
 with a display name. In the latter case the email will be enclosed with angle brackets (e.g. `'Some Name <name@domain.org>'` ).
 
 The parameters ``to``, ``cc`` and ``bcc`` can be passed as a single string or as an array of strings, if there are multiple addresses to specify.
+
+.. TIP::
+
+  The content-type of the email can be specified by using a `header`. See example below for sending a message with HTML body.
 
 **Example:**
 
