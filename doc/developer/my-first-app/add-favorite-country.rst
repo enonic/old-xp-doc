@@ -12,11 +12,12 @@ new countries using the :ref:`content-content-manager`.
 
 Similar to the site, we must also configure a view for the country
 
-4. In the toolbar, click the cog button |cogicon| to open the Context panel (far right) and the Live Edit panel (blue background).
+4. In the toolbar, in the top right corner of the page, click the "Live"-button to activate the "Live Edit"-mode (blue background).
+5. Click the cog button |cogicon| to open the Context panel (far right).
 
 .. image:: images/country-content-edit.png
 
-5. In the Live Edit panel, select "Hello Region" from the template selector dropdown. If the dropdown arrow is not visible, double-click
+6. In the Live Edit panel, select "Hello Region" from the template selector dropdown. If the dropdown arrow is not visible, double-click
    inside the option field or type "h" in it to see the options.
 #. In the Context panel, click the "Insert" tab. This reveals a list of built-in components that can be placed into regions.
 #. Click and drag a "Part" into the box on the page.
