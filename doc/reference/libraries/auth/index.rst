@@ -3,7 +3,7 @@
 lib-auth
 ========
 
-This library implements methods for authentication. Add the following
+This library implements methods for dealing with authentication and the currently authenticated user. Add the following
 into your ``build.gradle`` file in the ``dependencies`` section::
 
   library 'com.enonic.xp:lib-auth:6.1.0'
@@ -18,7 +18,7 @@ The methods implemented in this library are listed below.
 .. toctree::
    :maxdepth: 1
 
-   login
-   logout
-   getUser
-   hasRole
+   api/login
+   api/logout
+   api/getUser
+   api/hasRole

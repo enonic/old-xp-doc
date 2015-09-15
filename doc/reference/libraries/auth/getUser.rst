@@ -1,4 +1,0 @@
-getUser
-=======
-
-TODO: Document this.

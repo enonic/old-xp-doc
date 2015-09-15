@@ -1,4 +1,0 @@
-login
-=====
-
-TODO: Document this.
