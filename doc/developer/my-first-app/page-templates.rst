@@ -13,11 +13,12 @@ As this is not a very effective way of working with large data sets, we will cre
   * Display Name: "Country"
   * Supports: "Country" (selected from the list of content types)
 
-4. In the Live Edit panel on the right, select the "Hello Region" controller.
-5. Open the context panel (activated from the cog button |cogicon| in the toolbar).
-6. Under the "Insert" tab, drag and drop a "Part" into the empty region.
-7. Select the "country" part from the dropdown. (You may need to close the context panel to see the dropdown.)
-8. Click "Save draft" in the toolbar and close the tab.
+4. Click the "Live" button in the top right corner of the page to activate "Live Edit"-mode.
+5. In the blue area to the right, select the "Hello Region" controller.
+6. Open the context panel (activated from the cog button |cogicon| in the toolbar).
+7. Under the "Insert" tab, drag and drop a "Part" into the empty region.
+8. Select the "country" part from the dropdown. (You may need to close the context panel to see the dropdown.)
+9. Click "Save draft" in the toolbar and close the tab.
 
 Every "Country" content you create will now use this template by default.
 
