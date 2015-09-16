@@ -58,7 +58,8 @@ switch between admin apps with the button on the far right of the toolbar that l
 #. Click "New" and select "Site" from the list of content types. This opens a tab within the page for editing the `site` content.
 #. Fill in the form with Display Name: "Hello World".
 #. Select your "MyApp" application in the "Applications" dropdown.
-#. In the dropdown on the right side of the page, select the "hello" page.
+#. In the top right corner is a button that says "Live", click it!
+#. In the dropdown on the blue area that now appeared, select the "hello" page.
 #. Click the "Save draft" button in the toolbar (top-left).
 #. Now close the "Hello World" site editor tab to see the content pane.
 
