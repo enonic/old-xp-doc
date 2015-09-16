@@ -6,6 +6,7 @@ Create Cities
 Now let's make use of the new city content type and part component. First we need to add the "City list" part to the "Country" page template.
 
 #. Edit the "Country" page template.
+#. Click the “Live” button in the top right corner of the page to activate “Live Edit”-mode.
 #. Open the context panel by clicking the cog button |cogicon| in the toolbar.
 #. Click and drag a `Part` to the page region below the "country" part. (This may be a bit tricky because the "country" part is small.)
 #. Select the "City list" part from the dropdown in the box. You may need to close the context panel to see it.
