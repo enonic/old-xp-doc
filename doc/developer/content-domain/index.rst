@@ -1,3 +1,5 @@
+.. _content_domain:
+
 Content Domain
 ==============
 

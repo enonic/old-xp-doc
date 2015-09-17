@@ -11,7 +11,7 @@ The screen-shots below show the final product of this tutorial.
 .. NOTE::
 
   To complete this tutorial, you will need a local running installation
-  (see :ref:`installation`) of Enonic XP and a text editor of your choice.
+  (see :ref:`local_installation`) of Enonic XP and a text editor of your choice.
   All terminal actions assume you're using OSX or Linux.
 
 

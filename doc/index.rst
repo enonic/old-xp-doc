@@ -2,9 +2,9 @@
 Enonic XP |version| documentation
 =================================
 
-Congratulations - you've found the official Enonic XP |version| documentation. We really hope you like our technology, and use it to build amazing and cool stuff :-).
+Congratulations - you've found the official Enonic XP |version| documentation. We really hope you like our technology, and use it to build amazing things :-).
 
-We've put together some funky documentation, including for instance the :ref:`api_ref_guide`. If you're new to everything however, we recommend starting with the cozy stuff like :ref:`installation` and :ref:`my_first_app`.
+We've put together some funky documentation - we recommend starting with the cozy stuff like :ref:`getting_started_guide` or :ref:`my_first_app`.  The more saavy will probably enjoy our :ref:`api_ref_guide`.
 
 Enjoy! - *The Enonic Development Team*
 
@@ -13,8 +13,9 @@ Enjoy! - *The Enonic Development Team*
 .. toctree::
    :maxdepth: 1
 
-   operations/index
+   getstarted/index
    developer/index
+   operations/index
    reference/index
 
 .. toctree::
