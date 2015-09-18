@@ -1,6 +1,6 @@
 <content-type>
   <display-name>Country</display-name>
-  <super-type>base:unstructured</super-type>
+  <super-type>base:structured</super-type>
   <form>
     <input type="TextArea" name="description">
       <label>Description</label>
