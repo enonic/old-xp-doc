@@ -1,6 +1,6 @@
 <content-type>
   <display-name>City</display-name>
-  <super-type>base:unstructured</super-type>
+  <super-type>base:structured</super-type>
   <form>
     <input type="GeoPoint" name="location">
       <label>Location</label>
