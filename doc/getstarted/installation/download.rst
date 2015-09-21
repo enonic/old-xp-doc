@@ -12,9 +12,9 @@ Enonic XP is available in a simple universal distribution file - running on all 
 
   **Geeks only version** ::
 
-    curl -O http://repo.enonic.com/public/com/enonic/xp/distro/6.0.0/distro-6.0.0.zip
-    unzip distro-6.0.0.zip
-    cd enonic-xp-6.0.0
+    curl -O http://repo.enonic.com/public/com/enonic/xp/distro/6.1.0/distro-6.1.0.zip
+    unzip distro-6.1.0.zip
+    cd enonic-xp-6.1.0
 
 
 Next - lets get the server started
