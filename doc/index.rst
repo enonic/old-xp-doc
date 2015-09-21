@@ -2,9 +2,11 @@
 Enonic XP |version| documentation
 =================================
 
-Congratulations - you've found the official Enonic XP |version| documentation. We really hope you like our technology, and use it to build amazing things :-).
+Congratulations - you've found the official Enonic XP |version| documentation. We really hope you like our technology and use it to build
+amazing things :-).
 
-We've put together some funky documentation - we recommend starting with the cozy stuff like :ref:`getting_started_guide` or :ref:`my_first_app`.  The more saavy will probably enjoy our :ref:`api_ref_guide`.
+We've put together some funky documentation - we recommend starting with the cozy stuff like :ref:`getting_started_guide`
+or :ref:`my_first_app`.  The more savvy will probably enjoy our :ref:`api_ref_guide`.
 
 Enjoy! - *The Enonic Development Team*
 
