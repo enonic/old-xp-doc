@@ -1,19 +1,12 @@
-.. _installing_java:
+.. _troubleshooting_java:
 
-Installing Java
-***************
+Troubleshooting Java
+=========================
 
-To run Enonic XP, you need Java 1.8 JDK (Java Development Kit) on your machine.
-
-The latest JDK is available at the `JDK download page <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ , along with
-installation guides for Mac, Linux, Solaris and Windows.
-
-
-OS X - Quick guide
-------------------
+.. important:: This documentation is based on OSX, Windows version coming later..
 
 Check current JDK version
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 To see all installed JDK's on you environment, if any, type the following command in your terminal:
 
@@ -26,14 +19,13 @@ To see all installed JDK's on you environment, if any, type the following comman
      1.8.0_20, x86_64:	"Java SE 8"	/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home
      1.7.0_67, x86_64:	"Java SE 7"	/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home
  ~/ $
- 
-To check your current JDK version (if any), run ``javac -version`` in the terminal:
 
-.. code-block:: none
 
- ~/ $ javac -version
- javac 1.8.0_60
- ~/ $ 
+If you have a JDK equal to or above version 1.8.0_40, but the ``javac -version`` points to another version, proceed to set the JAVA_HOME
+environment variable correctly.
+
+Setting JAVA_HOME
+-----------------
 
 If you don't have a JDK equal to or above version 1.8.0_40, you must install a newer version.
 
@@ -44,19 +36,14 @@ If you don't have a JDK equal to or above version 1.8.0_40, you must install a n
 
 * After installation, proceed to check that the JAVA_HOME environment variable is set correctly.
 
-If you have a JDK equal to or above version 1.8.0_40, but the ``javac -version`` points to another version, proceed to set the JAVA_HOME
-environment variable correctly.
 
-Setting JAVA_HOME
-~~~~~~~~~~~~~~~~~
-
-To check the current JAVA_HOME environment variable: 
+To check the current JAVA_HOME environment variable:
 
 .. code-block:: none
 
  ~/ $ echo $JAVA_HOME
  /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
- ~/ $ 
+ ~/ $
 
 If this is not set correctly, you must set the correct one either for this terminal session, or in your ``.profile`` or ``.bashrc`` for all
 terminal sessions.
@@ -67,12 +54,12 @@ terminal sessions.
 .. code-block:: none
 
  ~/ $ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
- 
+
 * To set for all terminal sessions, add the entry to either your ``~/.bash_profile`` or ``~/.profile.``
 
 .. code-block:: none
 
- $ vim .bash_profile 
+ $ vim .bash_profile
 
  export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
