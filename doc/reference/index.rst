@@ -3,6 +3,8 @@
 API and Reference Guide
 =======================
 
+.. image:: images/make-anything-tick.jpg
+
 .. toctree::
    :maxdepth: 1
 
