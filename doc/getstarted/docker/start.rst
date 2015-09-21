@@ -6,15 +6,15 @@ Start Server
 
 **Launch Enonic XP on Docker**
 
-With Docker up and running, installing Enonic XP is as smooth as baby skin. Execute the commands below in your terminal/shell to get going
+With Docker up and running, installing Enonic XP is as smooth as baby skin. Execute the commands below in your terminal/shell to get going.
 
-Create storage container for configuration files, applications and data (XP_HOME)
+* Create a storage container for configuration files, applications and data (XP_HOME)
 
 ::
 
   docker run -it --name xp-home enonic/xp-home
 
-Install and start Enonic XP, mounting the xp-home volume
+* Install and start Enonic XP, mounting the xp-home volume
 
 ::
 
@@ -46,7 +46,7 @@ Start server (if you have an existing container running)
 
 ::
 
-	docker stop xp-app
+	docker start xp-app
 
 
 Delete the container if you do not need it anymore. NB! Home folder with data is preserved

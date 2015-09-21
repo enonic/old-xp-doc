@@ -1,7 +1,7 @@
 **Start blogging**
 
 * From the Admin interface, verify that Superhero has been installed using the Applications App
-* Open the Content Manager app and select the "Superhero" site, you should see the following image
+* Open the Content Manager app and select the "Superhero" site. You should see the following image
 
 .. image:: ../images/content-manager.jpg
 
