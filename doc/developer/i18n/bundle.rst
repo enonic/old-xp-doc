@@ -2,9 +2,9 @@ Resource Bundle
 ===============
 
 The resource-bundle consists of a collection of files containing the phrases to be used for localization. The
-resource-bundle should be placed in a folder named ``i18n`` under the module resource root.
+resource-bundle should be placed in a folder named ``i18n`` under the application ``site`` folder.
 
-Each locale to be localized should be represented by a single resource, e.g this could be a structure for a module supporting
+Each locale to be localized should be represented by a single resource, e.g this could be a structure for an app supporting
 
 * 'English' (default)
 * 'English US'
