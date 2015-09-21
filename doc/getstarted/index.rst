@@ -3,7 +3,7 @@
 Getting Started Guide
 ======================
 
-So - you thing Enonic XP is cool - and you're looking for the fastest way to get it up and running?
+So - you think Enonic XP is cool - and you're looking for the fastest way to get it up and running?
 
 **Select ONE of the options below to get going:**
 

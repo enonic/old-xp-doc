@@ -17,4 +17,4 @@ Enonic XP is available in a simple universal distribution file - running on all 
     cd enonic-xp-6.0.0
 
 
-Next - lets get the server started
+Next - let's get the server started
