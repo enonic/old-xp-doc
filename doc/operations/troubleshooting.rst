@@ -46,3 +46,10 @@ certain changes to the app files. For example, changing the app name in the buil
 When this occurs, the project may need a clean build ``gradle clean build``. Sometimes the app JAR file may need to be deleted from the
 $XP_HOME/deploy directory as well, and then replaced with the clean build JAR file.
 
+
+Cannot login after install
+--------------------------
+
+There could be a problem with file permissions on Windows if Enonic XP was unzipped and started from within the "My Documents" folder. This
+may allow XP to start, but the users cannot log in. The solution would be to unzip the Enonic XP distribution outside of the "My Documents"
+folder, or to manually change the file permissions.
