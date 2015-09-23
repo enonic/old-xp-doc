@@ -20,7 +20,7 @@ To get help for the commands, just type the following::
       export             Export data for a specified path.
       help               Display help information
       import             Import data from a named export.
-      init-app           Initiates an Enonic XP application.
+      init-project       Initiates an Enonic XP application project structure.
       list-snapshots     Returns a list of existing snapshots with name and status.
       load               Import data from a dump.
       reindex            Reindex content in search indices for the given repository and branches.
@@ -49,4 +49,4 @@ Here's a list of all the commands that you can do with the toolbox:
    dump
    load
    upgrade
-   init-app
+   init-project
