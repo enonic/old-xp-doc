@@ -11,7 +11,7 @@ An application can serve many purposes and building sites is just one of them. T
 XP know that this app can be added to a site. Site-wide configurations can be defined in this file but we will leave the config element
 empty for now (see :ref:`apps-configure`).
 
-A basic site.xml file was automatically created by the init-app script::
+A basic site.xml file was automatically created by the init-project script::
 
   [project-root]/src/main/resources/site/site.xml
 

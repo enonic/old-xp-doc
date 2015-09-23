@@ -3,7 +3,7 @@
 Project structure
 =================
 
-To build applications with Enonic XP, you will typically setup a so-called project. The fastest way to do this is using the init-app feature included in the Enonic XP toolbox utility. 
+To build applications with Enonic XP, you will typically setup a so-called project. The fastest way to do this is using the init-project feature included in the Enonic XP toolbox utility.
 
 The project structure is a similar to a `Maven <https://maven.apache.org/>`_ projects for those who are familiar with that. 
 

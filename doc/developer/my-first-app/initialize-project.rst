@@ -1,7 +1,7 @@
 Initialize project
 ==================
 
-Enonic XP includes the :ref:`toolbox` which can perform several useful operations. The :ref:`init_app` operation will initialize a new application project with the standard structures required  (see :ref:`apps-basics-project`).
+Enonic XP includes the :ref:`toolbox` which can perform several useful operations. The :ref:`init_project` operation will initialize a new application project with the standard structures required  (see :ref:`apps-basics-project`).
 
 #. Create a new folder at a suitable location on your filesystem for the application project files.
    e.g. ``/Users/<username>/project/myapp`` This will be the project root.
@@ -10,7 +10,7 @@ Enonic XP includes the :ref:`toolbox` which can perform several useful operation
 
 ::
 
-[$XP_INSTALL]/toolbox/toolbox.sh init-app -n com.company.myapp
+[$XP_INSTALL]/toolbox/toolbox.sh init-project -n com.company.myapp -r starter-base
 
 .. tip::
 

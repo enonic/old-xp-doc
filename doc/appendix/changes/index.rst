@@ -14,7 +14,7 @@ To convert an existing module to an application, some changes are needed; please
 Powerful tools for developers
 -----------------------------
   
-  - New tool: `init-app`  will create a new application project structure for you
+  - New tool: `init-project`  will create a new application project structure for you
   - The XML descriptors for `parts` and `pages` are now optional - more intuitive and simpler to use.
   - libraries are now be bundled inside an application, offering both javascript and java in each library.
 
