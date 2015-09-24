@@ -6,8 +6,8 @@ var result = contentLib.query({
             "sort": "_modifiedTime DESC, geodistance('p1', 'p2')",
             "query": "type = 'article' AND fulltext('myField', 'searching for cheese', 'AND') ",
             "contentTypes": [
-                "article",
-                "comment"
+                app.name + ":article",
+                app.name + ":comment"
             ],
             "aggregations": {
                 "genders": {
