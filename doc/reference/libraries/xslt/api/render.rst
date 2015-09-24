@@ -3,14 +3,15 @@ render
 
 This function renders a view using XSLT.
 
-.. js:function:: render(params)
+.. js:function:: render(view, model)
 
-  :param object params: Input parameters.
+  :param ref view: Location of the view.
+  :param object model: View model.
   :returns: the rendered output.
 
 **Parameters:**
 
-view *(string)*
+view *(ref)*
   Location of the view. Use ``resolve(..)`` to resolve a view.
 
 model *(object)*
