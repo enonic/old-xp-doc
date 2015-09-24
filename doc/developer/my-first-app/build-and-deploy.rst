@@ -23,4 +23,4 @@ You will need to access the Administrative console to check that the app has ins
 
 4. Navigate to the Applications App. The application you just deployed should be listed.
 
-5. Click the app "MyApp" to see information about it and confirm that it has started.
+5. Click the app "Myapp App" to see information about it and confirm that it has started.
