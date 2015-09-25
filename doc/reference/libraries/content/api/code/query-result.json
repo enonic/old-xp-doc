@@ -1,115 +1,165 @@
- {
-    "aggregations": {
-        "by_month": {
-            "buckets": [{
-                "docCount": 8,
-                "key": "2014-01"
-            }, {
-                "docCount": 10,
-                "key": "2014-02"
-            }, {
-                "docCount": 12,
-                "key": "2014-03"
-            }]
-        },
-        "genders": {
-            "buckets": [{
-                "docCount": 10,
-                "key": "male"
-            }, {
-                "docCount": 12,
-                "key": "female"
-            }]
-        },
-        "item_count": {
-            "avg": 3.0,
-            "count": 5.0,
-            "max": 5.0,
-            "min": 1.0,
-            "sum": 15.0
-        },
-        "my_date_range": {
-            "buckets": [{
-                "docCount": 2,
-                "from": "2014-09-01T00:00:00Z"
-            }, {
-                "docCount": 5,
-                "from": "2014-10-01T00:00:00Z",
-                "to": "2014-09-01T00:00:00Z"
-            }, {
-                "docCount": 7,
-                "to": "2014-11-01T00:00:00Z"
-            }]
-        },
-        "price_ranges": {
-            "buckets": [{
-                "docCount": 2,
-                "key": "a",
-                "to": 50
-            }, {
-                "docCount": 4,
-                "from": 50,
-                "key": "b",
-                "to": 100
-            }, {
-                "docCount": 4,
-                "from": 100,
-                "key": "c"
-            }]
+{
+  "total": 6,
+  "count": 2,
+  "hits": [
+    {
+      "_id": "b71c697b-dedc-4246-8340-c7d9232ba161",
+      "_name": "house1",
+      "_path": "/features/house1",
+      "creator": "user:system:su",
+      "modifier": "user:system:su",
+      "createdTime": "2015-09-25T12:55:32.600Z",
+      "modifiedTime": "2015-09-25T12:56:07.419Z",
+      "type": "com.enonic.app.features:house",
+      "displayName": "House1",
+      "hasChildren": false,
+      "valid": true,
+      "data": {
+        "city": "Oslo",
+        "location": "59.91,10.75",
+        "price": 2100000,
+        "number_floor": 2,
+        "description": "With garden",
+        "publish_date": "2015-09-02"
+      },
+      "x": {
+        "com-enonic-app-features": {
+          "menu-item": {
+            "menuItem": false
+          }
         }
+      },
+      "page": {}
     },
-    "count": 3,
-    "hits": [{
-        "_id": "111111",
-        "_name": "mycontent",
-        "_parentPath": "/a/b",
-        "_path": "/a/b/mycontent",
-        "createdTime": "1970-01-01T00:00:00Z",
-        "creator": "user:system:admin",
-        "data": {},
-        "displayName": "My Content",
-        "hasChildren": false,
-        "language": "en_US",
-        "modifiedTime": "1970-01-01T00:00:00Z",
-        "modifier": "user:system:admin",
-        "page": {},
-        "type": "base:unstructured",
-        "valid": false,
-        "x": {}
-    }, {
-        "_id": "222222",
-        "_name": "othercontent",
-        "_parentPath": "/a/b",
-        "_path": "/a/b/othercontent",
-        "createdTime": "1970-01-01T00:00:00Z",
-        "creator": "user:system:admin",
-        "data": {},
-        "displayName": "Other Content",
-        "hasChildren": false,
-        "language": "en_US",
-        "modifiedTime": "1970-01-01T00:00:00Z",
-        "modifier": "user:system:admin",
-        "page": {},
-        "type": "base:unstructured",
-        "valid": false,
-        "x": {}
-    }, {
-        "_id": "333333",
-        "_name": "another",
-        "_parentPath": "/a/b",
-        "_path": "/a/b/another",
-        "createdTime": "1970-01-01T00:00:00Z",
-        "creator": "user:system:admin",
-        "data": {},
-        "displayName": "Another Content",
-        "hasChildren": false,
-        "language": "en_US",
-        "modifiedTime": "1970-01-01T00:00:00Z",
-        "modifier": "user:system:admin",
-        "page": {},
-        "type": "base:unstructured",
-        "valid": false,
-        "x": {}
-    }],
-    "total": 20
+    {
+      "_id": "0683c4c8-b340-40cf-93f2-b26e2ec96867",
+      "_name": "house2",
+      "_path": "/features/house2",
+      "creator": "user:system:su",
+      "modifier": "user:system:su",
+      "createdTime": "2015-09-25T12:55:32.600Z",
+      "modifiedTime": "2015-09-25T13:19:58.209Z",
+      "type": "com.enonic.app.features:house",
+      "displayName": "House2",
+      "hasChildren": false,
+      "valid": true,
+      "data": {
+        "city": "Oslo",
+        "location": "59.91,10.85",
+        "price": 2900000,
+        "number_floor": 3,
+        "description": "With garden",
+        "publish_date": "2015-09-05"
+      },
+      "x": {
+        "com-enonic-app-features": {
+          "menu-item": {
+            "menuItem": false
+          }
+        }
+      },
+      "page": {}
+    }
+  ],
+  "aggregations": {
+    "floors": {
+      "buckets": [
+        {
+          "key": "2",
+          "docCount": 3,
+          "prices": {
+            "buckets": [
+              {
+                "key": "3000000",
+                "docCount": 0
+              },
+              {
+                "key": "2000000",
+                "docCount": 2
+              },
+              {
+                "key": "1000000",
+                "docCount": 1
+              }
+            ]
+          }
+        },
+        {
+          "key": "3",
+          "docCount": 3,
+          "prices": {
+            "buckets": [
+              {
+                "key": "3000000",
+                "docCount": 2
+              },
+              {
+                "key": "2000000",
+                "docCount": 1
+              },
+              {
+                "key": "1000000",
+                "docCount": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "price_ranges": {
+      "buckets": [
+        {
+          "key": "*-2000000.0",
+          "docCount": 1,
+          "from": null,
+          "to": 2000000
+        },
+        {
+          "key": "2000000.0-3000000.0",
+          "docCount": 3,
+          "from": 2000000,
+          "to": 3000000
+        },
+        {
+          "key": "3000000.0-*",
+          "docCount": 2,
+          "from": 3000000,
+          "to": null
+        }
+      ]
+    },
+    "my_date_range": {
+      "buckets": [
+        {
+          "key": "*-11-2014",
+          "docCount": 0,
+          "to": "2014-11-01T00:00:00Z"
+        },
+        {
+          "key": "11-2014-*",
+          "docCount": 6,
+          "from": "2014-11-01T00:00:00Z"
+        }
+      ]
+    },
+    "price_stats": {
+      "count": 6,
+      "min": 1900000,
+      "max": 3200000,
+      "avg": 2566666.6666666665,
+      "sum": 15400000
+    },
+    "by_month": {
+      "buckets": [
+        {
+          "key": "08-2015",
+          "docCount": 4
+        },
+        {
+          "key": "08-2015",
+          "docCount": 2
+        }
+      ]
+    }
+  }
 }
