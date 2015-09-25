@@ -39,7 +39,7 @@ for developers working on more than one project.
 
 There are two situations where the **$XP_HOME environment variable** must be set:
 
-#. When developers are working on an application and intend to use ``./gradlew deploy`` or ``./gradlew watch``.
+#. When developers are working on an application and intend to use ``./gradlew deploy`.
 
 #. When a `home` folder other than $XP_INSTALL/home is to be used.
 

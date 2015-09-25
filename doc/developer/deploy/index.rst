@@ -19,8 +19,15 @@ For this to work you have to set ``XP_HOME`` environment variable
 (in your shell) to your actual Enonic XP home directory.
 
 To continuously build and deploy your application on changes, you can use
-the ``gradle watch`` task. This will watch for changes and deploy the changes
-to Enonic XP. The server will then pick up the changes and reload the application.
-This is probably the fastest way to develop your application::
+`Gradle continuous mode <https://docs.gradle.org/current/userguide/continuous_build.html>`_.
+This will watch for changes and run the specified task when something changes.
+To use this with ``deploy`` task, you can run the following command::
 
-  $ gradle watch
+  $ gradle --continuous deploy
+
+Or the short version::
+
+  $ gradle -t deploy
+
+This will deploy and reload the application on server when something changes and
+is probably the fastest way to develop your application.

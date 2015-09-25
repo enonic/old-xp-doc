@@ -52,9 +52,9 @@ Call the log function in any controller like the example below and then check th
   util.log(content);
 
 
-Using Gradle watch
-------------------
+Using Gradle continuous-mode
+----------------------------
 
-It can be quite time consuming to frequently switch to the terminal to redeploy an app during development. Try using ``./gradlew watch``
+It can be quite time consuming to frequently switch to the terminal to redeploy an app during development. Try using ``./gradlew -t deploy``
 in the terminal (from the project root) to **automatically redeploy** your app every time a change to a file is detected. The $XP_HOME
-environment variable must be set in the terminal window.
+environment variable must be set in the terminal window. 
