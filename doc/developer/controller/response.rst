@@ -22,6 +22,9 @@ contentType
 headers
   Name/value pairs with the HTTP headers to be added to the response.
 
+cookies
+  HTTP cookies to be added to the response. Will be described in a later section.
+
 redirect
   URI to redirect to. If specified, the value will be set in the "Location" header
   and the status will be set to 303 ("See other").

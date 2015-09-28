@@ -14,4 +14,5 @@ be ``site/parts/things/things.js``.
    methods
    request
    response
+   cookies
    contributions

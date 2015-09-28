@@ -5,6 +5,7 @@
   "headers": {
       "key": "value"
   },
+  "cookies": {},
   "redirect": "/another/page",
   "pageContributions": {}
 }
