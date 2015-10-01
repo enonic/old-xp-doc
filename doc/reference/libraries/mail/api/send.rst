@@ -31,6 +31,9 @@ subject *(string)*
 body *(string)*
   The text content of the message.
 
+contentType *(string)*
+  Content type of the message body. Optional.
+
 headers *(object)*
   Custom headers in the form of name-value pairs. Optional.
 
@@ -41,7 +44,7 @@ The parameters ``to``, ``cc`` and ``bcc`` can be passed as a single string or as
 
 .. TIP::
 
-  The content-type of the email can be specified by using a `header`. See example below for sending a message with HTML body.
+  The content-type of the email can be specified by using the `contentType` parameter. See example below for sending a message with an HTML body.
 
 **Example:**
 
