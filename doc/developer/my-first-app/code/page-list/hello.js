@@ -15,7 +15,7 @@ exports.get = function(req) {
         contentTypes: [
             app.name + ':country'
         ],
-        "query": "_path LIKE '*" + nearestSite._path + "/*'"
+        "query": "_path LIKE '/content" + nearestSite._path + "/*'"
     });
 
     var hits = result.hits;
