@@ -6,13 +6,16 @@ var portal = require('/lib/xp/portal'); // Import the portal functions
 exports.get = function(req) {
     var model = {};
 
-    // Get all the country contents
+    var nearestSite = portal.getSite();
+
+    // Get all the country contents (in the current site)
     var result = contentLib.query({
         start: 0,
         count: 100,
         contentTypes: [
             app.name + ':country'
-        ]
+        ],
+        "query": "_path LIKE '*" + nearestSite._path + "/*'"
     });
 
     var hits = result.hits;

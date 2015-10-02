@@ -1,7 +1,7 @@
 Hello Geo World
 ===============
 
-Going back to your site, you will now see a list of the countries we have added. To make this even more exiting, we will add a City content
+Going back to your site, you will now see a list of the countries we have added. To make this even more exciting, we will add a City content
 type with geo-location and a `City list` part with configuration capabilities.
 
 City content
