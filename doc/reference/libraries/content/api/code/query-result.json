@@ -3,13 +3,13 @@
   "count": 2,
   "hits": [
     {
-      "_id": "b71c697b-dedc-4246-8340-c7d9232ba161",
+      "_id": "1e3c0e4c-80b1-4e95-be4c-c64923b45930",
       "_name": "house1",
-      "_path": "/features/house1",
+      "_path": "/features/js-libraries/houses/house1",
       "creator": "user:system:su",
       "modifier": "user:system:su",
-      "createdTime": "2015-09-25T12:55:32.600Z",
-      "modifiedTime": "2015-09-25T12:56:07.419Z",
+      "createdTime": "2015-10-05T12:09:41.998Z",
+      "modifiedTime": "2015-10-05T12:11:01.272Z",
       "type": "com.enonic.app.features:house",
       "displayName": "House1",
       "hasChildren": false,
@@ -19,8 +19,8 @@
         "location": "59.91,10.75",
         "price": 2100000,
         "number_floor": 2,
-        "description": "With garden",
-        "publish_date": "2015-09-02"
+        "description": "House with garden",
+        "publish_date": "2015-10-01"
       },
       "x": {
         "com-enonic-app-features": {
@@ -32,24 +32,24 @@
       "page": {}
     },
     {
-      "_id": "0683c4c8-b340-40cf-93f2-b26e2ec96867",
+      "_id": "ff97e9ca-6dca-43f6-bf46-118c024b752b",
       "_name": "house2",
-      "_path": "/features/house2",
+      "_path": "/features/js-libraries/houses/house2",
       "creator": "user:system:su",
       "modifier": "user:system:su",
-      "createdTime": "2015-09-25T12:55:32.600Z",
-      "modifiedTime": "2015-09-25T13:19:58.209Z",
+      "createdTime": "2015-10-05T12:09:41.998Z",
+      "modifiedTime": "2015-10-05T12:18:14.269Z",
       "type": "com.enonic.app.features:house",
       "displayName": "House2",
       "hasChildren": false,
       "valid": true,
       "data": {
         "city": "Oslo",
-        "location": "59.91,10.85",
-        "price": 2900000,
-        "number_floor": 3,
-        "description": "With garden",
-        "publish_date": "2015-09-05"
+        "location": "59.91,10.76",
+        "price": 2200000,
+        "number_floor": 2,
+        "description": "House with garden",
+        "publish_date": "2015-09-17"
       },
       "x": {
         "com-enonic-app-features": {
@@ -71,7 +71,7 @@
             "buckets": [
               {
                 "key": "3000000",
-                "docCount": 0
+                "docCount": 1
               },
               {
                 "key": "2000000",
@@ -79,7 +79,7 @@
               },
               {
                 "key": "1000000",
-                "docCount": 1
+                "docCount": 0
               }
             ]
           }
@@ -110,7 +110,7 @@
       "buckets": [
         {
           "key": "*-2000000.0",
-          "docCount": 1,
+          "docCount": 0,
           "from": null,
           "to": 2000000
         },
@@ -122,7 +122,7 @@
         },
         {
           "key": "3000000.0-*",
-          "docCount": 2,
+          "docCount": 3,
           "from": 3000000,
           "to": null
         }
@@ -131,33 +131,33 @@
     "my_date_range": {
       "buckets": [
         {
-          "key": "*-11-2014",
+          "key": "*-12-2014",
           "docCount": 0,
-          "to": "2014-11-01T00:00:00Z"
+          "to": "2014-12-01T00:00:00Z"
         },
         {
-          "key": "11-2014-*",
+          "key": "12-2014-*",
           "docCount": 6,
-          "from": "2014-11-01T00:00:00Z"
+          "from": "2014-12-01T00:00:00Z"
         }
       ]
     },
     "price_stats": {
       "count": 6,
-      "min": 1900000,
-      "max": 3200000,
-      "avg": 2566666.6666666665,
-      "sum": 15400000
+      "min": 2100000,
+      "max": 3400000,
+      "avg": 2800000,
+      "sum": 16800000
     },
     "by_month": {
       "buckets": [
         {
-          "key": "08-2015",
-          "docCount": 4
-        },
-        {
           "key": "09-2015",
           "docCount": 2
+        },
+        {
+          "key": "10-2015",
+          "docCount": 4
         }
       ]
     }

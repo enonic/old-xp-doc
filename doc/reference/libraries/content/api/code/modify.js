@@ -1,21 +1,15 @@
 function editor(c) {
     c.displayName = 'Modified';
-    c.data.a++;
-    c.data.z = '99';
-
-    c.x['other'] = {
-        name: 'test'
-    };
-
-    c.language = 'no';
-
+    c.language = 'en';
+    c.data.myCheckbox = false;
+    c.data["myTime"] = "11:00";
     return c;
 }
 
 var contentLib = require('/lib/xp/content');
 
 var result = contentLib.modify({
-    key: '/my/content',
+    key: '/features/js-libraries/mycontent',
     editor: editor
 });
 
