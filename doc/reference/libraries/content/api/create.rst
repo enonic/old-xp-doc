@@ -25,18 +25,18 @@ requireValid *(boolean)*
 contentType *(string)*
   Content type to use.
 
-data *(object)*
-  Actual content data.
-
-x *(object)*
-  eXtra data to use.
-
 branch *(string)*
   Set by portal, depending on context, to either "draft" or "master". May be overridden, but this is not recommended.
   Default is the current branch set in portal.
 
 language *(string)*
   The language tag representing the content's locale. This parameter is optional.
+
+data *(object)*
+  Actual content data.
+
+x *(object)*
+  eXtra data to use.
 
 **Example:**
 
