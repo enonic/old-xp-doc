@@ -1,7 +1,8 @@
 var contentLib = require('/lib/xp/content');
 
 var result = contentLib.delete({
-    key: '/my/content'
+    key: '/features/js-libraries/mycontent',
+    branch: 'draft'
 });
 
 if (result) {

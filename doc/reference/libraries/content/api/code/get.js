@@ -1,7 +1,8 @@
 var contentLib = require('/lib/xp/content');
 
 var result = contentLib.get({
-        key: '123456'
+    key: '/features/js-libraries/mycontent',
+    branch: 'draft'
 });
 
 if (result) {
