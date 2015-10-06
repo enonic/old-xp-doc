@@ -88,3 +88,14 @@ smtpPassword
 
 smtpTLS
   Turn on Transport Layer Security (TLS) security for SMTP servers that require it. Default ``false``.
+
+
+Elasticsearch Configuration
+---------------------------
+
+Elasticsearch settings can be configured.
+When changing ``com.enonic.xp.elasticsearch.cfg``, the Elasticsearch node will automatically restart with the new configuration
+
+.. literalinclude:: code/elasticsearch.properties
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg``
