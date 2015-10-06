@@ -1,7 +1,7 @@
 .. _init_project:
 
 init-project
-========
+============
 
 The init-project tool initializes a new application project structure by retrieving a Git repository and adapting its gradle.properties.
 

@@ -10,7 +10,7 @@ Latest official release is
 `|version| <https://github.com/enonic/xp/releases/tag/v|version|>`_.
 
 Where can I get the source code?
-----------------------------------
+--------------------------------
 
 All source code for Enonic XP is published on our
 `GitHub project page <https://github.com/enonic/xp>`_.
@@ -39,7 +39,7 @@ for developers working on more than one project.
 
 There are two situations where the **$XP_HOME environment variable** must be set:
 
-#. When developers are working on an application and intend to use ``./gradlew deploy`.
+#. When developers are working on an application and intend to use `./gradlew deploy`.
 
 #. When a `home` folder other than $XP_INSTALL/home is to be used.
 

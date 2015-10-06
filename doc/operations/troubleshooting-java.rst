@@ -1,7 +1,7 @@
 .. _troubleshooting_java:
 
 Troubleshooting Java
-=========================
+====================
 
 .. important:: This documentation is based on OSX, Windows version coming later..
 
