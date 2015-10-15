@@ -14,6 +14,6 @@ Enonic XP includes the :ref:`toolbox` which can perform several useful operation
 
 .. tip::
 
-  Only basic characters (a-z, 0-9 and .) should be used for application names, and the name must be globally unique. We recommend following standard Java package naming conventions such as com.mycompany.myapp - but it's all up to you.
+  Only basic characters (a-z, 0-9 and .) must be used for application names, and the name must be globally unique. We recommend following standard Java package naming conventions such as com.mycompany.myapp.
 
-Your project folder will now be filled with the standard folder structure for developing an app. Gradle build scripts were also created (see :ref:`building`).
+Your project folder will now be filled with the standard folder structure for developing an app.

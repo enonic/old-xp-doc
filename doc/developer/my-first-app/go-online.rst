@@ -12,7 +12,7 @@ When publishing content, all the selected items and changes are "cloned" from dr
 
 You will always see the draft version of content in the preview window and with the preview function of the :ref:`content-content-manager`.
 If you have placed your site on root level, you can also see your live site at this url:
-``http://localhost:8080/admin/portal/preview/master/hello-world``.
+``http://localhost:8080/portal/master/hello-world``.
 
 Well done - you just created your first App for Enonic XP - The Enonic team congratulates you - we look forward to seeing all the brilliant
 things you will make and are always looking for `feedback <https://discuss.enonic.com>`_.

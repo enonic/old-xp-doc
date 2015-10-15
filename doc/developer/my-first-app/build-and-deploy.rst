@@ -10,8 +10,8 @@ environment variable must be set to the path of the home folder of the XP instal
 
 2. Execute the following command from the project root directory: ``./gradlew deploy``
 
-If you don't already have `Gradle <http://gradle.org>`_ installed, the Gradle wrapper will download this first.
-Next it will build the app and then attempt to deploy it.
+If you don't already have `Gradle <http://gradle.org>`_ installed, the Gradle wrapper will be download first.
+Next it will build the app and then attempt to deploy it to your installation.
 
 The deployment step simply moves the result of the build (the application JAR file) into the ``$XP_HOME/deploy`` directory.
 From there, Enonic XP will detect, install and start the application automatically.
@@ -23,4 +23,9 @@ You will need to access the Administrative console to check that the app has ins
 
 4. Navigate to the Applications App. The application you just deployed should be listed.
 
-5. Click the app "Myapp App" to see information about it and confirm that it has started.
+5. Click the app listed as "Myapp" to see information about it and confirm that it has started.
+
+
+.. NOTE::
+
+  You can change the display name of the application by editing the gradle.properties file.
