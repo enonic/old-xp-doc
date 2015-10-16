@@ -1,9 +1,9 @@
 .. default-domain:: js
 
-resolve
-=======
+Resolve()
+=========
 
-This function resolves a fully qualified path to a local path based
+The globally available function resolves a fully qualified path to a local path based
 on your current location. It will never check if the path exists, just
 resolve it. This function supports both relative (with dot-references)
 and absolute paths.

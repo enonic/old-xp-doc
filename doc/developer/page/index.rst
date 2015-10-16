@@ -1,4 +1,4 @@
-.. _apps-page-index:
+.. _page:
 
 Page
 ====

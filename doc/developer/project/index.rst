@@ -5,7 +5,7 @@ Project structure
 
 To build applications with Enonic XP, you will typically setup a so-called project. The fastest way to do this is using the init-project feature included in the Enonic XP toolbox utility.
 
-The project structure is a similar to a `Maven <https://maven.apache.org/>`_ projects for those who are familiar with that. 
+The project structure is a similar to a `Maven <https://maven.apache.org/>`_ projects for those who are familiar with that.
 
 Below is a sample project folder structure - all items are folders, except for ``site.xml`` and ``build.gradle``::
 
@@ -48,19 +48,19 @@ site/lib/
 
 site/pages/
   Page definitions should be placed here. They will be used to create page
-  templates in the repository (see :ref:`apps-page-index`).
+  templates in the repository (see :ref:`page`).
 
 site/parts/
   Part definitions should be placed here. Parts are objects that can
-  be placed on a page (see :ref:`apps-part-index`).
+  be placed on a page (see :ref:`part`).
 
 site/layouts/
   Layout definitions should be placed here. Layouts are definitions that
-  restricts the placement of parts (see :ref:`apps-layout-index`).
+  restricts the placement of parts (see :ref:`layout`).
 
 site/views/
   Views can generally be placed anywhere you want, just keep in mind
-  what path to use when resolving them (see :ref:`apps-view-index`).
+  what path to use when resolving them (see :ref:`view`).
 
 site/assets/
   Public folder for external css, javascript and static images.

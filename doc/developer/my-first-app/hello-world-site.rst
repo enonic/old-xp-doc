@@ -21,10 +21,10 @@ A basic site.xml file was automatically created by the init-project script::
 Page Component
 --------------
 
-Page components are the most basic building blocks of websites in Enonic XP (see :ref:`apps-page-index`). They require a JavaScript
+Page components are the most basic building blocks of websites in Enonic XP (see :ref:`page`). They require a JavaScript
 controller and optionally an XML descriptor and an HTML view. This first example does not need a descriptor file.
 
-A page controller (see :ref:`apps-page-controller`) is a JavaScript file that handles requests such as GET and POST.
+A page controller (see :ref:`page`) is a JavaScript file that handles requests such as GET and POST.
 Controllers usually pass JavaScript objects with data to be dynamically rendered in an HTML view. No data is passed in the example below,
 but the view file is specified and rendered as static HTML.
 

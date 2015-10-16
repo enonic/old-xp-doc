@@ -1,4 +1,4 @@
-.. _apps-layout-index:
+.. _layout:
 
 Layout
 ======

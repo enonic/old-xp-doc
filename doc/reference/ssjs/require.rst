@@ -1,10 +1,10 @@
 .. default-domain:: js
 .. _CommonJS Modules Specification: http://wiki.commonjs.org/wiki/Modules/1.1
 
-require
-=======
+Require()
+=========
 
-This function will load a JavaScript file and return the exports as objects.
+The globally available function will load a JavaScript file and return the exports as objects.
 The function implements parts of the `CommonJS Modules Specification`_.
 
 .. js:function:: require(path)

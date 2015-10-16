@@ -20,11 +20,10 @@ here :ref:`api_ref_guide`.
    project/index
    deploy/index
    site/index
-   controller/index
-   service/index
    page/index
    part/index
    layout/index
+   service/index
    i18n/index
    view/index
    node-domain/index

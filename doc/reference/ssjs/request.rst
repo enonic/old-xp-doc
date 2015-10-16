@@ -1,7 +1,7 @@
 .. _request:
 
 Request
-=======
+========
 
 The ``request`` object represents the HTTP request and current context for the
 controller.
@@ -28,10 +28,13 @@ url
   URL of the request.
 
 mode
-  Rendering mode, one of: ``edit``, ``preview``, ``live``.
+  Portal rendering mode, one of: ``edit``, ``preview``, ``live``.
 
 branch
   Name of the repository branch, one of: ``draft``, ``master``.
+
+body
+  Optional text value
 
 params
   Name/value pairs with the query/form parameters from the request.

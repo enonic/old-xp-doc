@@ -1,9 +1,7 @@
-.. default-domain:: js
-
-log
+Log
 ===
 
-This object holds the logging methods. It's one method for each log
+This gobally available ``log`` object holds the logging methods. It's one method for each log
 level and takes the same number of parameters.
 
 .. js:function:: log.debug(message, args)

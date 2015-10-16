@@ -1,7 +1,7 @@
 .. _apps-controller-response:
 
 Response
-========
+=========
 
 The ``response`` object is the value returned by a controller handler function.
 It represents the HTTP response.
@@ -32,5 +32,3 @@ redirect
 pageContributions
   HTML contributions that can be provided from a component to a page. Will
   be described in a later section.
-
-  

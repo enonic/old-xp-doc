@@ -1,14 +1,12 @@
-.. default-domain:: js
-
-app
+App
 ===
 
-This object holds application related information.
+The globally available ``app`` object holds information about the contextual app it was delivered from.
 
-name
+app.name
   Name of the application.
 
-version
+app.version
   Version of the application.
 
 Examples:
