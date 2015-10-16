@@ -86,6 +86,10 @@ This is also accompanied with a new starter app: starter-base, available on GitH
 
 Read more about :ref:`init_project`
 
+Faster and safer Node Persistance
+==================================
+
+The node persistance layer has been completely rewritten in order to improve both speed and robustness. Single node write operations now are now only limited by disk-write speed.
 
 Minor improvements
 ------------------
