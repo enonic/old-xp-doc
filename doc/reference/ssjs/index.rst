@@ -15,7 +15,7 @@ be ``site/parts/things/things.js``.
    log
    resolve
    require
-   methods
+   exports
    request
    response
    cookies
