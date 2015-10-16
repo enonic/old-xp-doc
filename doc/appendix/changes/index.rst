@@ -8,16 +8,16 @@ Content Detail panel UI
 -----------------------
 
 Access contextual content metadata and advanced options directly from the content browse view.
-In upcoming versions this panel will include more information and capabilities.
+In upcoming versions, this panel will include more information and capabilities.
 
 .. image:: images/detail-panel.png
   :alt: Detail panel can be seen to the right
 
-Impoved UI Responsiveness
+Improved UI Responsiveness
 -------------------------
 
-The Content Manager browse view has been enhanced for mobile, i.e. for showing preview and detail panel instantly when cliked - similar to reading mail on iOS.
-Also, the content editor panel has improved support for mobile devices.
+The Content Manager browse view has been enhanced for mobile, i.e. for showing preview and detail panel instantly when clicked - similar to
+reading mail on iOS. Also, the content editor panel has improved support for mobile devices.
 
 .. image:: images/mobile.jpg
 :alt: Browse view, Preview and Detail view
@@ -25,7 +25,8 @@ Also, the content editor panel has improved support for mobile devices.
 Improved Site config UI
 -----------------------
 
-Site application configurations are now edited from a modal dialogue. This simplifies the main site form and also makes it easier to configure applications installed on sites.
+Site application configurations are now edited from a modal dialogue. This simplifies the main site form and also makes it easier to
+configure applications installed on sites.
 
 .. image:: images/site-config.png
 
@@ -33,8 +34,8 @@ Site application configurations are now edited from a modal dialogue. This simpl
 Insert from context menu
 ------------------------
 
-Using the page editor and context menus - users can now insert new components directly from this menu. New components will be placed below the selected component.
-If a region is selected the component will be placed on top of the region.
+When using the page editor, users can now insert new components directly from context menus. New components will be placed below the
+selected component. If a region is selected, the component will be placed on top of the region.
 
 .. image:: images/insert-context-menu.png
 
@@ -42,7 +43,7 @@ If a region is selected the component will be placed on top of the region.
 Improved Component Panel
 ------------------------
 
-The component panel now supports all operations insert, reorder (drag'n drop), delete, reset etc. Simplifying editing of complex pages.
+The component panel now supports all operations - insert, reorder (drag'n drop), delete, reset etc. - simplifying editing of complex pages.
 
 .. image:: images/component-panel.png
 
@@ -63,15 +64,16 @@ The Serverside Javascript controllers and API have been improved as follows:
 **Lib-mail**
 
   Mail server can now be added as a system setting - this can be utilized from the new Javascript library.
-  Enables sending mail directly from Javascript controller - detailed documentation. Read more about :ref:`lib-mail`
+  Enables sending mail directly from Javascript controllers. Read more about :ref:`lib-mail`
 
 **Lib-auth**
 
-  Enables logging in users and getting users and roles through Enonic XP's native identity system. Read more about :ref:`lib-auth`
+  Enables logging-in users and getting users and roles through Enonic XP's native identity system. Read more about :ref:`lib-auth`
 
 **Post text bodies to JS Controllers**
 
-  Javascript controllers now support text-based body elements in post requests - this enables posting JSON strings in the body for instance - a popular way to pass complex objects to the server. Read more about :ref:`request`
+  Javascript controllers now support text-based body elements in post requests. This enables posting JSON strings in the body - a popular
+  way to pass complex objects to the server. Read more about :ref:`request`
 
 **Set cookies in JS controller response**
 
@@ -81,15 +83,16 @@ The Serverside Javascript controllers and API have been improved as follows:
 New Project Init Tool
 --------------------------
 
-The project initialization tool has been rewritten, and now supports ripping any valid Enonic XP application project directly from any Git installation, and GitHub specifically.
-This is also accompanied with a new starter app: starter-base, available on GitHub https://github.com/enonic/starter-base.
+The project initialization tool has been rewritten and now supports ripping any valid Enonic XP application project directly from any Git
+installation, and GitHub specifically. This is also accompanied with a new starter app: starter-base, available on GitHub https://github.com/enonic/starter-base.
 
 Read more about :ref:`init_project`
 
 Faster and safer Node Persistance
 ==================================
 
-The node persistance layer has been completely rewritten in order to improve both speed and robustness. Single node write operations now are now only limited by disk-write speed.
+The node persistence layer has been completely rewritten in order to improve both speed and robustness. Single node write operations are now
+only limited by disk-write speed.
 
 Minor improvements
 ------------------
@@ -106,7 +109,7 @@ Minor improvements
   * Implement Thymeleaf fragment support
   * Admin UI - Improve loading of background image
   * Wizard - Improve handling of "name" field for mobile clients
-  * Deprecate Gradle watch task in favour of new continuous mode
+  * Deprecate Gradle watch task in favor of new continuous mode
   * Use HttpMethod enum in PortalRequest.getMethod
   * Use MediaType object in PortalResponse
   * Use HttpStatus enum in PortalResponse
@@ -116,7 +119,7 @@ Minor improvements
 
 Bugfixes
 --------
-  * Image Selector - When doing DND two blue bubbles appears
+  * Image Selector - When doing DND two blue bubbles appear
   * Cropping is not reset when replacing image in Image Editor
   * Children not ordered properly after sorting
   * Publishing Wizard ResolveSyncWork fails on nodes not in source repo
@@ -127,14 +130,14 @@ Bugfixes
   * Possible to create two nodes with same path with different case
   * Preview without saving draft not working
   * Security - Permissions not propagating correctly to child items
-  * Grid not refreshed, when content deleted
+  * Grid not refreshed when content deleted
   * Image editor - Autofocus does not work properly after canvas resize
   * Other files listed as Parts and Page Templates in App Manager
   * Live-edit frame occupies full screen when browser window is maximized
   * NullPointerException retrieving principals right after deleting a user
   * Can't publish changed sorting of menu items
   * Page Editor - Inserting new components does not put inspect panel in focus
-  * Content Browse - When in mobile browse view, the main colum is broken
+  * Content Browse - When in mobile browse view, the main column is broken
   * Bad notification message when content saved with a name that is already in use
   * Inline mixin in site.xml does not work
   * Some math operations using lib-content throws an exception

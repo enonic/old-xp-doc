@@ -27,6 +27,7 @@ For OS X and Linux users - execute the following in your command line::
 
 Optionally add the line to your ``~/.properties`` file to make the change persistent.
 
+Check the :ref:`troubleshooting_java` page for more Java help.
 
 Port 8080 already taken
 -----------------------

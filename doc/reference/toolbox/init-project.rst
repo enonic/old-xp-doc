@@ -3,7 +3,8 @@
 init-project
 ============
 
-The init-project tool initializes a new application project structure by retrieving a Git repository, removing all references to the Git repository and adapting its the build file properties (gradle.properties).
+The init-project tool initializes a new application project structure by retrieving a Git repository, removing all references to the Git
+repository, and adapting its build file properties (gradle.properties).
 
 **Usage:**
 
