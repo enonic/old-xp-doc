@@ -3,7 +3,7 @@
 lib-mail
 ========
 
-This library implements methods for mail operations. Add the following
+This library implements methods for mail operations. Set the :ref:`configuration-mail` and add the following
 into your ``build.gradle`` file in the ``dependencies`` section::
 
   include 'com.enonic.xp:lib-mail:6.1.0'

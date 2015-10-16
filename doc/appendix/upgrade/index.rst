@@ -13,7 +13,7 @@ There are no breaking changes in this release, so upgrading simply requires you 
   #. Download and install the new release on your chosen infrastructure
   #. Stop your existing server
   #. Move/copy/link the contents of your $XP_HOME folder (configuration, deployments and data) into the the new Enonic XP installation
-  #. Update your system configuration with mail server
+  #. Update your system configuration with mail server (See :ref:`configuration-mail`)
   #. Start the new server
 
 

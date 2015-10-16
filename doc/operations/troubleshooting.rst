@@ -54,3 +54,9 @@ Cannot login after install
 There could be a problem with file permissions on Windows if Enonic XP was unzipped and started from within the "My Documents" folder. This
 may allow XP to start, but the users cannot log in. The solution would be to unzip the Enonic XP distribution outside of the "My Documents"
 folder, or to manually change the file permissions.
+
+
+Sending email with lib-mail not working
+---------------------------------------
+
+Check the installation's :ref:`configuration-mail`.
