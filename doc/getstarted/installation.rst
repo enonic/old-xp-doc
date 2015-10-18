@@ -38,7 +38,7 @@ If it turns out you're on the wrong java version, follow these steps
 
 * Download it from http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
-.. image:: java-download.png
+.. image:: images/java-download.png
 
 * Follow the instructions for your respective operating system
 
@@ -53,11 +53,11 @@ Enonic XP is available in a simple universal distribution file - running on all 
 
 .. hint::
 
-**Commandline Ninja version** ::
+  **Commandline Ninja version** ::
 
-  curl -O http://repo.enonic.com/public/com/enonic/xp/distro/6.1.0/distro-6.1.0.zip
-  unzip distro-6.1.0.zip
-  cd enonic-xp-6.1.0
+    curl -O http://repo.enonic.com/public/com/enonic/xp/distro/6.1.0/distro-6.1.0.zip
+    unzip distro-6.1.0.zip
+    cd enonic-xp-6.1.0
 
 
 Next - let's get the server started
@@ -87,7 +87,7 @@ Log In
 
 * Point your browser to ``http://localhost:8080``
 
-.. include:: ../login.rst
+.. include:: login.rst
 
 
 Install Superhero Blog
@@ -100,10 +100,10 @@ This is a simple blog, basically emulating Wordpress - even using one of their n
 * `Download the Superhero Blog Application <https://repo.enonic.com/public/com/enonic/app/superhero/1.0.0/superhero-1.0.0.jar>`_
 * Copy the application file into [XP Installation Folder]/home/deploy/
 
-.. include:: ../start-blogging.rst
+.. include:: start-blogging.rst
 
 
 Next Steps
 ----------
 
-.. include:: ../next.rst
+.. include:: next.rst

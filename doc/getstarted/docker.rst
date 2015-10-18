@@ -4,9 +4,9 @@ Install with Docker
 We huge devop fans - and devops love `Docker <https://www.docker.com>`_. Docker is the most popular application container platform in the world.
 For your convenience, we build Docker images of every Enonic XP release.
 
-.. image:: docker.png
+.. image:: images/docker.png
 
-.. content:: Complete the following steps:
+.. contents:: Complete the following steps:
    :local:
 
 Install Docker
@@ -59,7 +59,7 @@ Log In
 
 * Point your browser to ``http://<mydockercontainer>:8080``
 
-.. include:: ../login.rst
+.. include:: login.rst
 
 
 Install Superhero Blog
@@ -77,9 +77,9 @@ This is a simple blog, basically emulating Wordpress - even using one of their n
 
   docker cp superhero-1.0.0.jar xp-home:/enonic-xp/home/deploy/.
 
-.. include:: ../start-blogging.rst
+.. include:: start-blogging.rst
 
 Next Steps
 ----------
 
-.. include:: ../next.rst
+.. include:: next.rst

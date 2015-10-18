@@ -24,8 +24,7 @@ After requesting a Trial, you should recieve an informative e-mail about your in
 
 * Click the link in your e-mail to reach the administrative interface, it should be in the following form: ``http://<my-email-com>.tryme.enonic.io``
 
-.. include:: ../login.rst
-
+.. include:: login.rst
 
 Superhero Blog
 --------------
@@ -38,10 +37,10 @@ For your enjoyment, we've created the Superhero Blog application and pre-install
 This is a simple blog, basically emulating Wordpress - even using one of their nice themes. Follow these steps to try it out:
 
 
-.. include:: ../start-blogging.rst
+.. include:: start-blogging.rst
 
 
 Next Steps
 ----------
 
-.. include:: ../next.rst
+.. include:: next.rst

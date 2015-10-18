@@ -1,5 +1,5 @@
 Release Notes
-===================
+=============
 
 Enonic XP |version| is a minor release, with several new feature and fixes - there are no breaking changes
 
@@ -14,13 +14,13 @@ In upcoming versions, this panel will include more information and capabilities.
   :alt: Detail panel can be seen to the right
 
 Improved UI Responsiveness
--------------------------
+--------------------------
 
 The Content Manager browse view has been enhanced for mobile, i.e. for showing preview and detail panel instantly when clicked - similar to
 reading mail on iOS. Also, the content editor panel has improved support for mobile devices.
 
 .. image:: images/mobile.jpg
-:alt: Browse view, Preview and Detail view
+  :alt: Browse view, Preview and Detail view
 
 Improved Site config UI
 -----------------------
@@ -81,7 +81,7 @@ The Serverside Javascript controllers and API have been improved as follows:
 
 
 New Project Init Tool
---------------------------
+---------------------
 
 The project initialization tool has been rewritten and now supports ripping any valid Enonic XP application project directly from any Git
 installation, and GitHub specifically. This is also accompanied with a new starter app: starter-base, available on GitHub https://github.com/enonic/starter-base.
