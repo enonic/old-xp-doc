@@ -10,7 +10,7 @@ Content Detail panel UI
 Access contextual content metadata and advanced options directly from the content browse view.
 In upcoming versions, this panel will include more information and capabilities.
 
-.. image:: images/detail-panel.png
+.. image:: images/details.png
   :alt: Detail panel can be seen to the right
 
 Improved UI Responsiveness
