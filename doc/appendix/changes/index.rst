@@ -89,7 +89,7 @@ installation, and GitHub specifically. This is also accompanied with a new start
 Read more about :ref:`init_project`
 
 Faster and safer Node Persistance
-==================================
+---------------------------------
 
 The node persistence layer has been completely rewritten in order to improve both speed and robustness. Single node write operations are now
 only limited by disk-write speed.
