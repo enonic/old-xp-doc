@@ -24,6 +24,7 @@ here :ref:`api_ref_guide`.
    part/index
    layout/index
    service/index
+   error/index
    i18n/index
    view/index
    node-domain/index
