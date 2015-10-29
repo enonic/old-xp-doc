@@ -10,7 +10,7 @@ The content type defines the form (and underlying schema) of items you manage.
 
 1. Create a folder called "country" inside the "content-types" folder of your project.
 
-2. Add the Country content type file below to this folder:
+2. Add the Country content type file below to this folder.
 
 .. literalinclude:: code/content-types/country1.xml
   :language: xml

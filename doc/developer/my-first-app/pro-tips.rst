@@ -5,7 +5,7 @@ Handling Multiple projects
 --------------------------
 
 A **best practice** for working on multiple projects would involve keeping a separate XP_HOME folder for each project.
-The folder structure for such a set up would look something like this::
+The folder structure for such a setup would look something like this::
 
   /Users/<name>/development
   /Users/<name>/development/software/<xp-install-version>
@@ -24,6 +24,9 @@ An actual implementation with projects called my-first-app and company-site woul
 This allows you to have one Enonic XP installation for each version and as many different XP_HOME folders as you need for your projects.
 When switching from one project to another, you only have to change the XP_HOME environment variable and then restart the installation of
 the Enonic XP version that the project was created for.
+
+Check this `Enonic Labs article <http://labs.enonic.com/articles/working-with-multiple-xp-projects>`_ for a more in-depth process. It also
+includes some bash scripting that will help with setting and changing $XP_HOME and starting and stopping XP.
 
 
 Logging JSON objects
@@ -56,5 +59,5 @@ Using Gradle continuous-mode
 ----------------------------
 
 It can be quite time consuming to frequently switch to the terminal to redeploy an app during development. Try using ``./gradlew -t deploy``
-in the terminal (from the project root) to **automatically redeploy** your app every time a change to a file is detected. The $XP_HOME
-environment variable must be set in the terminal window. 
+in the terminal (from the project root) to **automatically redeploy** your app every time a change to a file is detected. Gradle 2.7 or
+newer must be used and the $XP_HOME environment variable must be set in the terminal window for this to work.
