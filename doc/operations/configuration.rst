@@ -99,3 +99,13 @@ When changing ``com.enonic.xp.elasticsearch.cfg``, the Elasticsearch node will a
 .. literalinclude:: code/elasticsearch.properties
    :language: properties
    :caption: ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg``
+
+
+Jetty HTTP Configuration
+------------------------
+
+Jetty HTTP settings can be configured using ``com.enonic.xp.web.jetty.cfg`` file.
+
+.. literalinclude:: code/jetty.properties
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.web.jetty.cfg``
