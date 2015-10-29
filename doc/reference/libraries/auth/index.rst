@@ -22,3 +22,5 @@ The methods implemented in this library are listed below.
    api/logout
    api/getUser
    api/hasRole
+   api/generatePassword
+   api/changePassword
