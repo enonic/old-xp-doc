@@ -1,7 +1,7 @@
 .. _apps-controller-response:
 
 Response
-=========
+========
 
 The ``response`` object is the value returned by a controller handler function.
 It represents the HTTP response.

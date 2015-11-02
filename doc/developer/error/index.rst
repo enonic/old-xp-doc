@@ -13,7 +13,7 @@ If an ``error.js`` script is found, it looks for an exported method named ``hand
 If not found, it will try to find the generic error method ``handleError`` instead.
 
 
-Here's an example of an ``error.js`` file:
+Here is an example of an ``error.js`` file:
 
 .. literalinclude:: code/error.js
    :language: javascript
