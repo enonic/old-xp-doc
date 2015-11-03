@@ -1,7 +1,7 @@
 .. _request:
 
 Request
-========
+=======
 
 The ``request`` object represents the HTTP request and current context for the
 controller.

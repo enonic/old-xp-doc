@@ -7,5 +7,7 @@
   },
   "cookies": {},
   "redirect": "/another/page",
-  "pageContributions": {}
+  "pageContributions": {},
+  "postProcess": true,
+  "applyFilters": true
 }

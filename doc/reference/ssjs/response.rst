@@ -32,3 +32,9 @@ redirect
 pageContributions
   HTML contributions that can be provided from a component to a page. Will
   be described in a later section.
+
+postProcess
+  Whether or not execute the post-processing step after rendering. Post-processing is necessary for page contributions and rendering components in a page. (See also :ref:`apps-controller-contributions`) (default is ``true``).
+
+applyFilters
+  Whether or not execute the filters after rendering. Set to ``false`` to skip execution of filters. (See also :ref:`response_filters`) (default is ``true``).
