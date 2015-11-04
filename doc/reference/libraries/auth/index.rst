@@ -11,7 +11,7 @@ into your ``build.gradle`` file in the ``dependencies`` section::
 To use this library in your JavaScript files, you can require the library
 like this::
 
-  var auth = require('/lib/xp/auth')
+  var auth = require('/lib/xp/auth');
 
 The methods implemented in this library are listed below.
 
