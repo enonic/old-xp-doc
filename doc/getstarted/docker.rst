@@ -1,7 +1,7 @@
 Install with Docker
 ===================
 
-We huge devop fans - and devops love `Docker <https://www.docker.com>`_. Docker is the most popular application container platform in the world.
+We´re huge devop fans - and devops love `Docker <https://www.docker.com>`_. Docker is the most popular application container platform in the world.
 For your convenience, we build Docker images of every Enonic XP release.
 
 .. image:: images/docker.png
