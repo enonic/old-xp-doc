@@ -11,7 +11,7 @@ This function creates a content.
 **Parameters:**
 
 name *(string)*
-  Name of content.
+  Name of content. Optional, see below.
 
 parentPath *(string)*
   Path to place content under.  Default is '/'.
@@ -38,6 +38,15 @@ data *(object)*
 x *(object)*
   eXtra data to use.
 
+
+The parameter ``name`` is optional, but if it is not set then ``displayName`` must be specified.
+When ``name`` is not set, the system will auto-generate a name based on the ``displayName``, by lower-casing and replacing certain characters.
+If there is already a content with the auto-generated name, a suffix will be added to the name in order to make it unique.
+
+.. TIP::
+
+  To create a content where the name is not important and there could be multiple instances under the same parent content, skip the `name` parameter and specify a `displayName` .
+
 **Example:**
 
 .. literalinclude:: code/create.js
@@ -47,3 +56,11 @@ x *(object)*
 
 .. literalinclude:: code/create-result.json
   :language: json
+
+If the content cannot be created because there is already a content with the specified path and name, an exception will be thrown.
+This case can be handled in JavaScript by wrapping the call with a ``try catch`` and checking if the error code is "contentAlreadyExists", as in the example below:
+
+**Example:**
+
+.. literalinclude:: code/create-existing.js
+  :language: javascript

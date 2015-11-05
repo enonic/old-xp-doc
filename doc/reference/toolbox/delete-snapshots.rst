@@ -1,7 +1,7 @@
 .. _toolbox-delete-snapshots:
 
-deleteSnapshots
-===============
+delete-snapshots
+================
 
 Deletes all snapshots before the given timestamp.
 
