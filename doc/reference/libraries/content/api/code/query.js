@@ -3,7 +3,7 @@ var contentLib = require('/lib/xp/content');
 var result = contentLib.query({
     start: 0,
     count: 2,
-    sort: "_modifiedTime DESC, geoDistance('data.location', '59.91,10.75')",
+    sort: "modifiedTime DESC, geoDistance('data.location', '59.91,10.75')",
     query: "data.city = 'Oslo' AND fulltext('data.description', 'garden', 'AND') ",
     branch: "draft",
     contentTypes: [
