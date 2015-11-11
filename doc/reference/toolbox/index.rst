@@ -24,6 +24,7 @@ To get help for the commands, just type the following::
       list-snapshots     Returns a list of existing snapshots with name and status.
       load               Import data from a dump.
       reindex            Reindex content in search indices for the given repository and branches.
+      set-replicas       Set the number of replicas in the cluster.
       restore            Restores a snapshot of a previous state of the repository.
       snapshot           Stores a snapshot of the current state of the repository.
       upgrade            Upgrade a dump to the current version. The upgraded files will be written to <dumpFolderName>_upgraded_<version>
@@ -46,6 +47,7 @@ Here's a list of all the commands that you can do with the toolbox:
    export
    import
    reindex
+   set-replicas
    dump
    load
    upgrade
