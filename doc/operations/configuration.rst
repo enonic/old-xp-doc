@@ -84,11 +84,48 @@ Elasticsearch Configuration
 ---------------------------
 
 Elasticsearch settings can be configured.
-When changing ``com.enonic.xp.elasticsearch.cfg``, the Elasticsearch node will automatically restart with the new configuration
+When changing ``com.enonic.xp.elasticsearch.cfg``, the Elasticsearch node will automatically restart with the new configuration.
 
 .. literalinclude:: code/elasticsearch.properties
    :language: properties
    :caption: ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg``
+
+(node.)name
+  Node name. Default ``local-node``.
+(node.)client
+  Set this node to be a client node which means it will hold no data. Default ``false``.
+(node.)data
+  Allow this node to allocate data. Default ``true``.
+(node.)master
+  Allow this node to be eligible as a master node. Default ``true``.
+path.data
+  Path to directory where to store index data allocated for this node. Default ``${xp.home}/repo/index/data``.
+path.work
+  Path to temporary files. Default ``${xp.home}/repo/index/work``.
+path.conf
+  Path to directory containing configuration. Default ``${xp.home}/repo/index/conf``.
+path.logs
+  Path to log files. Default ``${xp.home}/repo/index/logs``.
+path.plugins
+  Path to where plugins are installed. Default ``${xp.home}/repo/index/plugins``.
+cluster.name
+  Cluster name. Default ``mycluster``.
+cluster.routing.allocation.disk.threshold_enabled
+  Prevent shard allocation on nodes depending on disk usage. Default ``false``.
+http.enabled
+  Enable the HTTP module. Default ``false``.
+network.host
+  Set the bind address and the address other nodes will use to communicate with this node. Default ``127.0.0.1``.
+transport.tcp.port
+  Custom port for the node to node communication. Default ``9300``.
+discovery.zen.minimum_master_nodes
+  Ensure a node sees N other master eligible nodes to be considered operational within the cluster. Default ``1``.
+discovery.zen.ping.multicast.enabled
+  Enable multicast ping discovery. Default ``false``.
+discovery.zen.ping.unicast.hosts
+  List of master nodes in the cluster to perform discovery when new nodes are started. Default ``127.0.0.1, [::1]``.
+index.recovery.initial_shards
+  Number of shards expected to be found on full cluster restart per index. Default ``quorum``.
 
 
 Jetty HTTP Configuration
