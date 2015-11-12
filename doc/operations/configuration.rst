@@ -48,16 +48,6 @@ URL, which would be normal in production environments.
 
 In the third example, the admin site is mapped to ``enonic.com/admin``.
 
-HTTP Port & Web Configuration
------------------------------
-
-The default http port for Enonic XP is 8080. The port can be changed in the ``org.ops4j.pax.web.cfg`` file and this will override the
-setting in the ``system.properties`` file.
-
-.. literalinclude:: code/web.properties
-   :language: properties
-   :caption: ``$XP_HOME/config/org.ops4j.pax.web.cfg``
-
 
 .. _configuration-mail:
 
