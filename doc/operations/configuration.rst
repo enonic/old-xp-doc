@@ -136,3 +136,13 @@ Jetty HTTP settings can be configured using ``com.enonic.xp.web.jetty.cfg`` file
 .. literalinclude:: code/jetty.properties
    :language: properties
    :caption: ``$XP_HOME/config/com.enonic.xp.web.jetty.cfg``
+
+
+Repository Configuration
+------------------------
+
+Repository configuration can be set using ``com.enonic.xp.repo.cfg`` file.
+
+.. literalinclude:: code/repo.properties
+  :language: properties
+  :caption: ``$XP_HOME/config/com.enonic.xp.repo.cfg``

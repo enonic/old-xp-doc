@@ -52,7 +52,7 @@ Set up a shared file system
 
   ::
 
-    blobstore.path = <where you mounted shared disk>
+    blobStore.dir = <where you mounted shared disk>
 
 
 Specify cluster network
