@@ -33,7 +33,7 @@ network.host
 
 The ``network.host`` setting specifies the TCP-address used for node communication. The default value for this is 127.0.0.1, which means that this node will never be able to talk to other nodes.
 
-The ``network.host`` setting can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`network-host-aliases` 
+The ``network.host`` setting can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`network-host-aliases` section for an overview.
 
 transport.tcp.port
 ##################
@@ -46,6 +46,12 @@ discovery.zen.ping.unicast.hosts
 The ``discovery.zen.ping.unicast.hosts`` value contains a comma-separated list of nodes that are allowed to join the cluster. Each value is either in form of ``host:port`` or ``host:port1-port2`` (port-range).
 
 
+Sample config
+*************
+
+.. literalinclude:: code/sample-network-settings.properties
+   :language: properties
+
 .. NOTE::
 
    **Why arent my nodes connecting**
@@ -57,7 +63,7 @@ The ``discovery.zen.ping.unicast.hosts`` value contains a comma-separated list o
 
        09:01:43.282 INFO  org.elasticsearch.http - [loadtest-appserver1] bound_address {inet[/10.0.6.49:9300]}, publish_address {inet[/10.0.6.49:9300]}
 
-   Make sure that the bind-addresses matches the ones specified in the unicast-list.
+   Make sure that the bind-addresses matches the ones specified in the unicast-list. If it still doesnt work, its time to blame the firewall or consult the :ref:`troubleshooting`
 
 .. _replica-setup:
  
