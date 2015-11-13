@@ -180,15 +180,20 @@ Sample configurations
 2-nodes cluster
 ****************
 
-3-nodes cluster with no dedicated master-nodes
-**********************************************
+.. literalinclude:: code/2-node-cluster-config.properties
+   :language: properties
+
+3-nodes cluster
+****************
 
 .. literalinclude:: code/3-node-cluster-config.properties
    :language: properties
-   :caption: ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg``
 
-3-nodes cluster with two dedicated master-nodes
-***********************************************
+5-nodes cluster 
+****************
+
+.. literalinclude:: code/5-node-cluster-config.properties
+   :language: properties
 
 
 
