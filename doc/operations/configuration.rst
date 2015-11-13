@@ -80,34 +80,35 @@ smtpTLS
   Turn on Transport Layer Security (TLS) security for SMTP servers that require it. Default ``false``.
 
 
-Elasticsearch Configuration
+.. _configuration-cluster:
+
+Cluster Configuration
 ---------------------------
 
-Elasticsearch settings can be configured.
-When changing ``com.enonic.xp.elasticsearch.cfg``, the Elasticsearch node will automatically restart with the new configuration.
+The cluster functionallity is facilitated by Elasticsearch, so all relevant Elasticsearch settings are available.
+
+When changing ``com.enonic.xp.elasticsearch.cfg``, the  node will automatically restart with the new configuration.
 
 .. literalinclude:: code/elasticsearch.properties
    :language: properties
    :caption: ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg``
 
-(node.)name
+node.name
   Node name. Default ``local-node``.
-(node.)client
-  Set this node to be a client node which means it will hold no data. Default ``false``.
-(node.)data
-  Allow this node to allocate data. Default ``true``.
-(node.)master
+node.master
   Allow this node to be eligible as a master node. Default ``true``.
+path
+  Path to directory where elasticsearch stores files. Default ``${xp.home}/repo/index``. Should be on a local file-system, not sharded.
 path.data
-  Path to directory where to store index data allocated for this node. Default ``${xp.home}/repo/index/data``.
+  Path to directory where to store index data allocated for this node. Default ``$path/data``.
 path.work
   Path to temporary files. Default ``${xp.home}/repo/index/work``.
 path.conf
-  Path to directory containing configuration. Default ``${xp.home}/repo/index/conf``.
+  Path to directory containing configuration. Default ``$path/conf``.
 path.logs
   Path to log files. Default ``${xp.home}/repo/index/logs``.
 path.plugins
-  Path to where plugins are installed. Default ``${xp.home}/repo/index/plugins``.
+  Path to where plugins are installed. Default ``$path/plugins``.
 cluster.name
   Cluster name. Default ``mycluster``.
 cluster.routing.allocation.disk.threshold_enabled
@@ -115,7 +116,7 @@ cluster.routing.allocation.disk.threshold_enabled
 http.enabled
   Enable the HTTP module. Default ``false``.
 network.host
-  Set the bind address and the address other nodes will use to communicate with this node. Default ``127.0.0.1``.
+  Set the bind address and the address other nodes will use to communicate with this node. Default ``127.0.0.1``. See ::ref network-host-aliases for info
 transport.tcp.port
   Custom port for the node to node communication. Default ``9300``.
 discovery.zen.minimum_master_nodes
@@ -126,6 +127,20 @@ discovery.zen.ping.unicast.hosts
   List of master nodes in the cluster to perform discovery when new nodes are started. Default ``127.0.0.1, [::1]``.
 index.recovery.initial_shards
   Number of shards expected to be found on full cluster restart per index. Default ``quorum``.
+  
+  
+.. _network-host-aliases:
+
+Network host aliases
+********************
+
+* ``_local_`` : Will be resolved to the local ip address.
+* ``_non_loopback_`` : The first non loopback address.
+* ``_non_loopback:ipv4_`` : The first non loopback IPv4 address.
+* ``_non_loopback:ipv6_`` : The first non loopback IPv6 address.
+* ``_[networkInterface]_`` : Resolves to the ip address of the provided network interface. For example ``_en0_``
+* ``_[networkInterface]:ipv4_`` : Resolves to the ipv4 address of the provided network interface. For example ``_en0:ipv4_``
+* ``_[networkInterface]:ipv6_`` : Resolves to the ipv6 address of the provided network interface. For example ``_en0:ipv6_``
 
 
 Jetty HTTP Configuration

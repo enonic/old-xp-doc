@@ -1,3 +1,5 @@
+.. _set-replicas:
+
 set-replicas
 ============
 
