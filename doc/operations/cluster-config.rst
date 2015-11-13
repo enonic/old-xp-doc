@@ -111,7 +111,7 @@ To avoid this situation, there are a couple of basic properties of a cluster tha
 
 .. NOTE::
 
-    **Reasons for nodes leaving the cluster**
+    **Why does my nodes leave the cluster**
   
     There are 2 main reasons why cluster nodes leaves the cluster
 	
