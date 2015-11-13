@@ -15,7 +15,7 @@ the ``$XP_HOME/data/snapshot`` directory.
           repository.
 
   SYNOPSIS
-          toolbox snapshot -a <auth> [-h <host>] [-p <port>] -r <repository>
+          toolbox snapshot -a <auth> [-h <host>] [-p <port>] [-r <repository>]
 
   OPTIONS
           -a <auth>
