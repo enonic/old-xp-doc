@@ -15,7 +15,7 @@ Restore a named snapshot. The snapshots are located in the
           repository.
 
   SYNOPSIS
-          toolbox restore -a <auth> [-h <host>] [-p <port>] -r <repository>
+          toolbox restore -a <auth> [-h <host>] [-p <port>] [-r <repository>]
                   -s <snapshotName>
 
   OPTIONS
