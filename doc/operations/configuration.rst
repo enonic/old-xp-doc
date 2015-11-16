@@ -97,6 +97,8 @@ node.name
   Node name. Default ``local-node``.
 node.master
   Allow this node to be eligible as a master node. Default ``true``.
+node.data
+  Allow data to be distributed to this node. Default ``true``.
 path
   Path to directory where elasticsearch stores files. Default ``${xp.home}/repo/index``. Should be on a local file-system, not sharded.
 path.data
@@ -116,9 +118,9 @@ cluster.routing.allocation.disk.threshold_enabled
 http.enabled
   Enable the HTTP module. Default ``false``.
 network.host
-  Set the bind address and the address other nodes will use to communicate with this node. Default ``127.0.0.1``. See ::ref network-host-aliases for info
+  Set the bind address and the address other nodes will use to communicate with this node. Default ``127.0.0.1``. Can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`network-host-aliases` section for an overview of aliases.
 transport.tcp.port
-  Custom port for the node to node communication. Default ``9300``.
+  Custom port for the node to node communication. Defaults to the range ``9300-9400``.
 discovery.zen.minimum_master_nodes
   Ensure a node sees N other master eligible nodes to be considered operational within the cluster. Default ``1``.
 discovery.zen.ping.multicast.enabled
