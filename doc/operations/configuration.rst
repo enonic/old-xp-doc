@@ -121,6 +121,10 @@ network.host
   Set the bind address and the address other nodes will use to communicate with this node. Default ``127.0.0.1``. Can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`network-host-aliases` section for an overview of aliases.
 transport.tcp.port
   Custom port for the node to node communication. Defaults to the range ``9300-9400``.
+gateway.expected_nodes
+  Number of nodes expected to be in the cluster to start the recovery. Default ``1``.
+gateway.recover_after_nodes
+  Number of nodes expected to be in the cluster to start the recovery after recovery timeout. Default ``1``.
 discovery.zen.minimum_master_nodes
   Ensure a node sees N other master eligible nodes to be considered operational within the cluster. Default ``1``.
 discovery.zen.ping.multicast.enabled
