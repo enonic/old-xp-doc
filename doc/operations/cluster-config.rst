@@ -23,7 +23,7 @@ Network configuration
 
 The nodes in a cluster needs to be able to discover and communicate with other nodes in the network. The nodes communicate through TCP.
 
-Each node binds to an IP-address and port, and communicates to other nodes specified in a list of other nodes bind addresses.
+Each node binds to an IP-address and port, and communicates to other nodes specified in a list of other nodes bind addresses. The first thing to do is to verify that your network allows TCP-traffic on specific port or port-range for the nodes to communicate, and then configure the nodes to use this address.
 
 Settings
 *********
@@ -52,7 +52,7 @@ Sample config
 .. literalinclude:: code/sample-network-settings.properties
    :language: properties
 
-.. NOTE::
+.. TIP::
 
    **Why arent my nodes connecting**
 
@@ -81,7 +81,7 @@ The number of replicas can be set runtime with the Toolbox CLI :ref:`set-replica
  
 So for a 3 nodes cluster, the number of replicas should be set to 2.
 
-.. NOTE:: 
+.. CAUTION:: 
 
     The number of replicas in your cluster should be tuned to play along with your ``index.recovery.initial_shards``-setting, see the `Node recovery settings`_ section
 
@@ -108,10 +108,24 @@ To avoid this situation, there are a couple of basic properties of a cluster tha
  #. When nodes are forming separate smaller clusters, only the cluster-partition with the majority of nodes should be fully operational and accept writes.
  #. The minority cluster partitions can be allowed to serve read-only requests if that is acceptable for the provided service
 
+Settings
+*********
 
-.. NOTE::
+discovery.zen.minimum_master_nodes
+----------------------------------
 
-    **Why does my nodes leave the cluster**
+This is the most important setting to set correctly to ensure cluster data integrity. A node will not accept request before the number of 'minimum_master_nodes' are met. For instance, in a 3 node cluster with 3 master nodes and 'minimum_master_nodes' setting of '2', imagine that one of the nodes loose connection to the two other nodes. This node will only see one possible master node (itself) and will not accept requests. The remaining two other nodes will still work, and when the lost node reconnects again, it will get the fresh data from the other nodes and rejoin the cluster.
+
+.. IMPORTANT::
+
+   As a rule of thumb, this setting should be set to N/2+1, where N is the total number of nodes. So for a 5 nodes cluster, discovery.zen.minimum_master_nodes =    5/2+1 = 3 (rounding down to the nearest integer)
+
+So what about a 2 node cluster? It will be impossible to avoid a possible split-brain scenario with this setup. Its highly recommended to add one node as a tie-breaker. This node may act as a dedicated master node (with `node.data = false`, see :ref:`cluster-stability-settings`) which enables it to run on less expensive hardware since it will not handle any external requests.
+
+
+.. TIP::
+
+    **Why nodes leave the cluster**
   
     There are 2 main reasons why cluster nodes leaves the cluster
 	
@@ -128,6 +142,7 @@ To avoid this situation, there are a couple of basic properties of a cluster tha
     
     If a node does not get a response on a ping to the master node within a set timeout, it will consider it as dead, and invoke an election process. Likewise, the master node expects that a slave node respons within a certain amount of time.
     This is usually caused by a node doing a stop-the-world garbage collection, and not beeing able to respond to the request at all for a period of time.
+
 
 .. _cluster-stability-settings:
 
@@ -172,7 +187,20 @@ A dedicated data node should have the following settings:
 Node recovery settings
 -----------------------
 
-Yadayada
+Node recovery happes when a node starts or reconnects to the cluster after a e.g a network shortage. 
+
+Consider a cluster of 2 nodes. When a node starts for the first time, it will try to connect to a cluster. If no master found, it will elect itself as master, then proceed to intitalize the index-data locally. If it do find an existing master node, it will require the master to provide it with data. This is all good, but there may occure situations where for instance a new node in an existing cluster may start before the existing nodes, and start intitializing data before the nodes with existing data can inform the new node that there is already data in the cluster.
+
+
+Settings
+*********
+
+gateway.recover_after_nodes
+#############################
+
+Defaults to 1. Do not start the recovery before this number of nodes (master or data) has joined the cluster.
+
+
 
 Sample configurations
 ---------------------
