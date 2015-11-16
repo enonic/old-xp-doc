@@ -198,8 +198,12 @@ Settings
 gateway.recover_after_nodes
 #############################
 
-Defaults to 1. Do not start the recovery before this number of nodes (master or data) has joined the cluster.
+Defaults to 1. Do not start the recovery of local indices before this number of nodes (master or data) has joined the cluster.
 
+gateway.recover_after_master_nodes
+##################################
+
+Defaults to 0. Do not start the recovery of local indices before this number of master-nodes is present in the cluster.
 
 
 Sample configurations
@@ -223,7 +227,11 @@ Sample configurations
 .. literalinclude:: code/5-node-cluster-config.properties
    :language: properties
 
+7-nodes cluster with dedicated roles
+************************************
 
+.. literalinclude:: code/7-node-cluster-dedicated.properties
+   :language: properties
 
 
 

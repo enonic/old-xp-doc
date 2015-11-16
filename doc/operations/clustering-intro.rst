@@ -51,7 +51,7 @@ To set up a cluster on your local machine, there are two configuration propertie
  
  :: 
  
-    blobstore.path = /some/common/path
+    blobStore.dir = /some/common/path
  
  2. $XP_HOME/config/com.enonic.xp.web.jetty.cfg: 
  
@@ -59,7 +59,7 @@ To set up a cluster on your local machine, there are two configuration propertie
  
     http.port = somePort
 
-The `blobstore.path` must point to a directory where both node can access the blobstore files
+The `blobStore.dir` must point to a directory where both node can access the blobstore files
 
 The `http.port` must be set to different values for each node. The default is 8080, select e.g 8090 for next node etc.
 
