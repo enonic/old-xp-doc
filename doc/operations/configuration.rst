@@ -122,9 +122,11 @@ network.host
 transport.tcp.port
   Custom port for the node to node communication. Defaults to the range ``9300-9400``.
 gateway.expected_nodes
-  Number of nodes expected to be in the cluster to start the recovery. Default ``1``.
+  Number of nodes expected to be in the cluster to start the recovery immediately. Default ``1``.
+gateway.recover_after_time
+  Time to wait until recovery happens once the nodes are met. Default ``5m``.
 gateway.recover_after_nodes
-  Number of nodes expected to be in the cluster to start the recovery after recovery timeout. Default ``1``.
+  Number of nodes expected to be in the cluster to start the recovery after gateway.recover_after_time. Default ``1``.
 discovery.zen.minimum_master_nodes
   Ensure a node sees N other master eligible nodes to be considered operational within the cluster. Default ``1``.
 discovery.zen.ping.multicast.enabled
