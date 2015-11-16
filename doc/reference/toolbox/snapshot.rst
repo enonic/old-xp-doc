@@ -3,7 +3,7 @@
 snapshot
 ========
 
-Create a snapshot of a single repository while running. The snapshots will be stored in
+Create a snapshot of all or a single repository while running. The snapshots will be stored in
 the ``$XP_HOME/data/snapshot`` directory.
 
 **Usage:**
@@ -28,10 +28,10 @@ the ``$XP_HOME/data/snapshot`` directory.
               Port number for server (default is 8080).
 
           -r <repository>
-              the name of the repository to snapshot.
+              the name of the repository to snapshot (default is all repositories)
 
 **Example:**
 
 .. code-block:: none
 
-  $ ./toolbox.sh snapshot -a su:password -r cms-repo
+  $ ./toolbox.sh snapshot -a su:password

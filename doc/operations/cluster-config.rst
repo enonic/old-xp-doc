@@ -1,20 +1,39 @@
 .. _cluster-setup:
 
+
 Cluster setup
 =============
 
 There are a well of options at your disposal to configure and tune the cluster behaviour. See :ref:`configuration-cluster` for a subset of the available settings.
-All settings referred to in this chapter is set in ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg``
+All settings referred to in this chapter is set in ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg`` if nothing else is specified.
 
 
 There are some key elements to consider when setting up a cluster:
 
+ #. Set up a shared storage for the nodes -> :ref:`shared-storage`
  #. Make sure that nodes are connected -> :ref:`network-config`
  #. Distribute the data between the nodes -> :ref:`replica-setup`
  #. Ensure cluster data integrity -> :ref:`cluster-partition-settings`
  #. Ensure cluster stability -> :ref:`cluster-stability-settings`
  #. Make sure nodes recovers correctly -> :ref:`node-recovery-settings`
+ #. Deploying applications -> :ref:`deploying-apps`
+ #. Securing data -> :ref:`cluster-backup`
  
+
+.. _shared-storage:
+
+Set up a shared storage
+---------------------------
+
+For now, the nodes needs a shared storage to store data as files. Setting up this is highly individual for different operating systems and infrastructures, but as a basic guidline 
+
+  #. Get access to a shared or distributed file system and mount it on the nodes that will be part of the cluster (this is )
+  #. Configure ``$XP_HOME/config/com.enonic.xp.repo.cfg`` to point to the mounted storage:
+
+  ::
+
+    blobstore.path = /path/to/shared/disk/folder
+
 
 .. _network-config:
  
@@ -204,6 +223,32 @@ gateway.recover_after_master_nodes
 ##################################
 
 Defaults to 0. Do not start the recovery of local indices before this number of master-nodes is present in the cluster.
+
+.. _deploying-apps:
+
+Deploying Apps in cluster
+-------------------------
+
+To deploy applications in a cluster you need to deploy the application to every node, as loading and installation of apps is done on a per-node basis.
+This also means you can choose what applications to deploy on each node.
+
+.. WARNING::
+
+      Remember that XP only support running one version of an application at any time.
+      So don't leave the old versions of your applications in the deploy directory.
+
+.. _cluster-backup:
+
+Backing up a cluster
+--------------------
+
+Backing up a cluster is done in the same way as backing up a single node installation
+
+  #. First, on any cluster node, take a :ref:`toolbox-snapshot` of the indices. This will store a cluster-wide snapshot of all data at a point of time. This can be configured to run as an automatic job; Only the diff from the last snapshot will be stored, so the operation is quick.
+  #. Secondly, take a file copy of your blobstore.
+
+  We recommend uing incremental backup for the blobstore (rsync or similar) as this will only copy the recently changed files.
+  The combined data from the snapshots and blobstore copy is all you need in order to restore Enonic XP.
 
 
 Sample configurations
