@@ -13,9 +13,21 @@ This function generates a URL pointing to an image.
 id *(string)*
   ID of the image content.
 
+path *(string)*
+  Path to the image. If ``id`` is specified, this parameter is not used.
+
+format *(string)*
+  Format of the image.
+
 scale *(string)*
   Required. Options are width(px), height(px), block(width,height) and square(px). See the :ref:`reference-image-scaling` page for more
   information.
+
+quality *(integer)*
+  Quality for JPEG images, ranges from 0 (max compression) to 100 (min compression). Default is 85.
+
+background *(string)*
+  Background color.
 
 filter *(string)*
   A number of filters are available to alter the image appearance, for example, blur(3), grayscale(), rounded(5), etc. All filter options
