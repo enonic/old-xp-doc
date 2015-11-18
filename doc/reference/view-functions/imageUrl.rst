@@ -20,7 +20,7 @@ _scale
   Resize and crop the image to fit the available area.  See: :ref:`reference-image-scaling`
 
 _quality
-  Quality for JPEG images.
+  Quality for JPEG images, ranges from 0 (max compression) to 100 (min compression). Default is 85.
 
 _background
   Background color.
