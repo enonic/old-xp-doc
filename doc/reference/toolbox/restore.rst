@@ -1,4 +1,4 @@
-.. _toolbox-restore:
+.. _toolbox-restore-snapshot:
 
 restore
 =======

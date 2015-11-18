@@ -35,3 +35,9 @@ the ``$XP_HOME/data/snapshot`` directory.
 .. code-block:: none
 
   $ ./toolbox.sh snapshot -a su:password
+
+
+**Related:**
+
+ * List available snapshots with names: :ref:`toolbox-list-snapshots`
+ * Restore snapshot: :ref:`toolbox-restore-snapshot`

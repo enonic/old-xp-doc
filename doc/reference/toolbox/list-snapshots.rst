@@ -1,3 +1,5 @@
+.. _toolbox-list-snapshots:
+
 list-snapshots
 ==============
 
