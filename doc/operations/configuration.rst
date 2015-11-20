@@ -135,8 +135,8 @@ discovery.zen.ping.unicast.hosts
   List of master nodes in the cluster to perform discovery when new nodes are started. Default ``127.0.0.1, [::1]``.
 index.recovery.initial_shards
   Number of shards expected to be found on full cluster restart per index. Default ``quorum``.
-  
-  
+
+
 .. _network-host-aliases:
 
 Network host aliases
@@ -169,3 +169,13 @@ Repository configuration can be set using ``com.enonic.xp.repo.cfg`` file.
 .. literalinclude:: code/repo.properties
   :language: properties
   :caption: ``$XP_HOME/config/com.enonic.xp.repo.cfg``
+
+
+OSGi Shell Configuration
+------------------------
+
+To enable or configure OSGi shell, use ``com.enonic.xp.server.shell.cfg`` file.
+
+.. literalinclude:: code/server-shell.properties
+  :language: properties
+  :caption: ``$XP_HOME/config/com.enonic.xp.server.shell.cfg``
