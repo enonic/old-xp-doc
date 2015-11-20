@@ -1,0 +1,61 @@
+{
+    "summary": {
+        "total": 8,
+        "started": 4,
+        "unassigned": 4
+        "initializing": 0,
+        "relocating": 0,
+     },
+    "shards": {
+        "initializing": [],
+        "relocating": [],
+        "started": [
+            {
+                "id": "search-cms-repo(0)",
+                "nodeAddress": "10.0.6.146",
+                "nodeId": "xUfgZ2FdRu6q-CLJA4CIkA",
+                "type": "PRIMARY"
+            },
+            {
+                "id": "search-system-repo(0)",
+                "nodeAddress": "10.0.6.146",
+                "nodeId": "xUfgZ2FdRu6q-CLJA4CIkA",
+                "type": "PRIMARY"
+            },
+            {
+                "id": "storage-system-repo(0)",
+                "nodeAddress": "10.0.6.146",
+                "nodeId": "xUfgZ2FdRu6q-CLJA4CIkA",
+                "type": "PRIMARY"
+            },
+            {
+                "id": "storage-cms-repo(0)",
+                "nodeAddress": "10.0.6.146",
+                "nodeId": "xUfgZ2FdRu6q-CLJA4CIkA",
+                "type": "PRIMARY"
+            }
+        ],
+        "unassigned": [
+            {
+                "id": "search-cms-repo(0)",
+                "nodeAddress": "UNKNOWN",
+                "type": "REPLICA"
+            },
+            {
+                "id": "search-system-repo(0)",
+                "nodeAddress": "UNKNOWN",
+                "type": "REPLICA"
+            },
+            {
+                "id": "storage-system-repo(0)",
+                "nodeAddress": "UNKNOWN",
+                "type": "REPLICA"
+            },
+            {
+                "id": "storage-cms-repo(0)",
+                "nodeAddress": "UNKNOWN",
+                "type": "REPLICA"
+            }
+        ]
+    }
+}
