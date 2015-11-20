@@ -101,11 +101,6 @@ The number of replicas can be set runtime with the Toolbox CLI :ref:`set-replica
  
 So for a 3 nodes cluster, the number of replicas should be set to 2.
 
-.. CAUTION:: 
-
-    The number of replicas in your cluster should be tuned to play along with your ``index.recovery.initial_shards``-setting, see the `Node recovery settings`_ section
-
-
 .. _cluster-partition-settings:
 
 Cluster partition settings
@@ -224,6 +219,7 @@ gateway.recover_after_master_nodes
 ##################################
 
 Defaults to 0. Do not start the recovery of local indices before this number of master-nodes is present in the cluster.
+
 
 .. _cluster-monitoring:
 
