@@ -33,7 +33,7 @@ Complete the following tasks ro run XP as a service on Linux:
    
    2. **Download the xp-distribution and install at your preferred location.** 
    
-   We recommend to install under ``/opt``, which will be the default location in our scripts. Make sure that the required Java version is installed, consult the ref:`local_installation` for guidance.
+   We recommend to install under ``/opt``, which will be the default location in our scripts. Make sure that the required Java version is installed, consult the :ref:`local_installation` for guidance.
   
 .. TIP:: 
 
