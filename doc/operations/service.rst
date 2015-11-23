@@ -17,11 +17,11 @@ Complete the following tasks ro run XP as a service on Linux:
   
   :: 
      
-	 ladmin@my-server:/$ sudo adduser --home <USER-HOME, e.g /home/xp> --gecos "" --UID <UID, eg 1337> --disabled-password <USER, eg xp>
+	 ladmin@my-server:/$ sudo adduser --home /home/xp --gecos "" --UID <some integer> --disabled-password xp
   
 .. TIP::
 
-   To make access rights setup easier with regards to a shared file setup, we specify UID on the user to make sure the user will have the same UID across different servers in a clustered environment
+   To make access rights setup easier with regards to a shared file setup in a clustered environment, specify UID on the user to make sure the user will have the same UID across different servers.
 ..
    
    If planning to do the rest of the installation as the xp-user you created, it must be added to the sudo-list:
@@ -38,11 +38,12 @@ Complete the following tasks ro run XP as a service on Linux:
 .. TIP:: 
 
    Setting up a symbolic link from a fixed name to the current used version is recommended to be able to switch version without changing any scripts. 
-   
+..
+
    Here is a complete list of commands to install with alias ``xp`` pointing to the installed version:
    
    .. literalinclude:: code/service-install.sh
-      :language: bash
+      :language: none
    .. 
 ..
 
