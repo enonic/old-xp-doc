@@ -15,5 +15,6 @@
     "page": {},
     "type": "base:unstructured",
     "valid": false,
-    "x": {}
+    "x": {},
+    "attachments": {}
 }
