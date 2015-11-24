@@ -4,10 +4,15 @@ Run XP as a Service
 ===================
 
 when installing Enonic XP on a standard production server, you will want to set it up as a service, so it automatically starts and stops when the server does.
-Basically the installation requirements are similar to the description in :ref:`getting_started`, but you will need a different way to launch it.
+Basically the installation requirements are similar to the description in :ref:`getting_started_guide`, but you will need a different way to launch it.
 
 Linux
 -----
+
+.. ATTENTION:: 
+
+	This guide is written for and tested using Ubuntu - details may differ on other distrubutions. 
+..
 
 Complete the following tasks ro run XP as a service on Linux:
 
@@ -27,7 +32,7 @@ Complete the following tasks ro run XP as a service on Linux:
    
    2. **Download the xp-distribution and install at your preferred location.** 
    
-   We recommend to install under ``/opt/enonic``, which will be the default location in our scripts. Make sure that the required Java version is installed, consult the :ref:`local_installation` for guidance.
+   We recommend to install under ``/opt/enonic``, which will be the default location in our scripts. Make sure that the required Java version is installed, consult the :ref:`install_java`-section for guidance.
   
 .. TIP:: 
 
@@ -39,6 +44,7 @@ Complete the following tasks ro run XP as a service on Linux:
    .. literalinclude:: code/service-install.sh
       :language: none
    .. 
+
 ..
 
   3. **Configure the service script (OPTIONAL)** 
@@ -74,7 +80,7 @@ Complete the following tasks ro run XP as a service on Linux:
   
   ::
   
-	ladmin@my-server:/opt$ mkdir -p /home/xp/enonic/xp
+	ladmin@my-server:/opt$ sudo mkdir -p /home/xp/enonic/xp
 	 
   6. **Copy config from distribution** 
   
@@ -101,9 +107,9 @@ Complete the following tasks ro run XP as a service on Linux:
   
     ladmin@my-server:/opt$ sudo cp /opt/enonic/xp/service/xp.conf /etc/xp.conf
 
-  9. **Start service:** ``service xp start``
-  10. **Check service-status:** ``service xp status``
-  11. **Stop service:** ``service xp stop``
+  9. **Start service:** ``sudo service xp start``
+  10. **Check service-status:** ``sudo service xp status``
+  11. **Stop service:** ``sudo service xp stop``
 
 Windows
 -------

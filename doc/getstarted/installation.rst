@@ -14,6 +14,8 @@ please look at our :ref:`troubleshooting` section.
    * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)
 
 
+.. _install_java:
+
 Install Java
 ------------
 

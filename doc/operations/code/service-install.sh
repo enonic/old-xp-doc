@@ -1,4 +1,6 @@
-ladmin@my-server:/opt$ mkdir enonic
+ladmin@my-server:/opt$ cd /opt
+
+ladmin@my-server:/opt$ sudo mkdir enonic
 
 ladmin@my-server:/opt$ cd enonic
 
