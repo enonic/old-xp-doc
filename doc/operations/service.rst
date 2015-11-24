@@ -3,8 +3,7 @@
 Run XP as a Service
 ===================
 
-when installing Enonic XP on a standard production server, you will want to set it up as a service, so it automatically starts and stops when the server does.
-Basically the installation requirements are similar to the description in :ref:`getting_started_guide`, but you will need a different way to launch it.
+When installing Enonic XP on a standard production server, you will want to set it up as to run as a service.
 
 Linux
 -----
