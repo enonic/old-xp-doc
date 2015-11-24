@@ -24,16 +24,10 @@ Complete the following tasks ro run XP as a service on Linux:
    To make access rights setup easier with regards to a shared file setup in a clustered environment, specify UID on the user to make sure the user will have the same UID across different servers.
 ..
    
-   If planning to do the rest of the installation as the xp-user you created, it must be added to the sudo-list:
-   
-   :: 
-  
-   	 ladmin@my-server:/$ sudo adduser xp sudo
-..  
    
    2. **Download the xp-distribution and install at your preferred location.** 
    
-   We recommend to install under ``/opt``, which will be the default location in our scripts. Make sure that the required Java version is installed, consult the :ref:`local_installation` for guidance.
+   We recommend to install under ``/opt/enonic``, which will be the default location in our scripts. Make sure that the required Java version is installed, consult the :ref:`local_installation` for guidance.
   
 .. TIP:: 
 
@@ -53,7 +47,7 @@ Complete the following tasks ro run XP as a service on Linux:
   
   :: 
     
-	XP_INSTALL="/opt/xp"
+	XP_INSTALL="/opt/enonic/xp"
 	RUNUSER="xp"
 	OUT_LOG="/dev/null"
 
@@ -71,7 +65,7 @@ Complete the following tasks ro run XP as a service on Linux:
   
   :: 
    
-	xp@my-server:/opt$ sudo cp /opt/xp/service/init.d/xp /etc/init.d/xp    
+	ladmin@my-server:/opt$ sudo cp /opt/enonic/xp/service/init.d/xp /etc/init.d/xp    
 	 
 	 
   5. **Create XP_HOME** 
@@ -80,16 +74,16 @@ Complete the following tasks ro run XP as a service on Linux:
   
   ::
   
-	xp@my-server:/opt$ mkdir -p /home/xp/enonic/xp
+	ladmin@my-server:/opt$ mkdir -p /home/xp/enonic/xp
 	 
   6. **Copy config from distribution** 
   
-  Copy ``$XP_INSTALL/home`` to the ``$XP_HOME`` directory and make sure you have the correct access rights:
+  Copy ``$XP_INSTALL/home`` to the ``$XP_HOME`` directory and make sure *xp* have the correct access rights:
   
   ::
   
-  	xp@my-server:/opt$ sudo cp -R /opt/xp/home/* /home/xp/enonic/xp/
-  	xp@my-server:/opt$ sudo chown -R xp:xp /home/xp/enonic
+  	ladmin@my-server:/opt$ sudo cp -R /opt/enonic/xp/home/* /home/xp/enonic/xp/
+  	ladmin@my-server:/opt$ sudo chown -R xp:xp /home/xp/enonic
 		 
   7. **Configure the xp application** 
   
@@ -105,7 +99,7 @@ Complete the following tasks ro run XP as a service on Linux:
   
   :: 
   
-    xp@my-server:/opt$ sudo cp /opt/xp/service/xp.conf /etc/xp.conf
+    ladmin@my-server:/opt$ sudo cp /opt/enonic/xp/service/xp.conf /etc/xp.conf
 
   9. **Start service:** ``service xp start``
   10. **Check service-status:** ``service xp status``
