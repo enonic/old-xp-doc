@@ -21,10 +21,10 @@ This function allows to run a function within a specified context.
 
 **Example:**
 
-  .. literalinclude:: code/runWithBranch.js
-    :language: javascript
+.. literalinclude:: code/runWithBranch.js
+  :language: javascript
 
-  **Result:**
+**Result:**
 
-  .. literalinclude:: code/runWithBranch-result.json
-    :language: json
+.. literalinclude:: code/runWithBranch-result.json
+  :language: json
