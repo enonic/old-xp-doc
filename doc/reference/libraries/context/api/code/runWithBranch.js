@@ -7,7 +7,7 @@ function getNumberOfContents() {
     }
 }
 
-var result = contextLib.runWith({
+var result = contextLib.run({
     branch: 'master'
 }, getNumberOfContents);
 

@@ -1,8 +1,11 @@
 var authLib = require('/lib/xp/auth');
 var contextLib = require('/lib/xp/context');
 
-var result = contextLib.runWith({
-    user: 'su'
+var result = contextLib.run({
+    user: {
+        login: 'su',
+        userStore: 'system'
+    }
 }, authLib.getUser);
 
 if (result) {

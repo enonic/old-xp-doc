@@ -1,20 +1,13 @@
-runWith
-=======
+run
+===
 
 This function allows to run a function within a specified context.
 
-.. js:function:: runWith(params)
+.. js:function:: run(params)
 
-  :param object params: JSON with the parameters below.
-  :returns: the content created as JSON.
-
-**Parameters:**
-
-context *(object)*
-  Context parameters.
-
-callback *(function)*
-  Function to execute.
+  :param object context: JSON with the context parameters.
+  :param function callback: Function to execute.
+  :returns: the result of function execution.
 
 **Example:**
 
