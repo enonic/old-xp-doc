@@ -2,6 +2,8 @@ var contentLib = require('/lib/xp/content');
 
 var result = contentLib.setPermissions({
     key: '/features/js-libraries/mycontent',
+    inheritPermissions: false,
+    overwriteChildPermissions: true,
     permissions: [{
         principal: 'user:system:anonymous',
         allow: ['READ'],

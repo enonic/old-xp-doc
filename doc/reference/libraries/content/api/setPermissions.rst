@@ -13,6 +13,12 @@ This function sets permissions on a content.
 key *(string)*
   Path or id to the content.
 
+inheritPermissions *(boolean)*
+   Set to true if the content must inherit permissions. Default is *(false)*.
+
+overwriteChildPermissions *(boolean)*
+   Set to true to overwrite child permissions. Default is *(false)*.
+
 permissions *(array)*
    Array of permissions.
 
