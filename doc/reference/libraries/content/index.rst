@@ -24,3 +24,4 @@ The methods implemented in this library are listed below.
    api/create
    api/modify
    api/setPermissions
+   api/getAttachments
