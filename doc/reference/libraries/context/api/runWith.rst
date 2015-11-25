@@ -7,7 +7,7 @@ This function allows to run a function within a specified context.
 
   :param object context: JSON with the context parameters.
   :param function callback: Function to execute.
-  :returns: the result of function execution.
+  :returns: the result of the function execution.
 
 **Example:**
 
