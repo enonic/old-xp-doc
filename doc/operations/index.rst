@@ -12,9 +12,9 @@ This guide gives you all the gory details on how to tune Enonic XP - if you're l
 
    folders
    configuration
+   clustering
+   monitoring
+   service
    backup
    export
-   monitoring
-   clustering
-   service
    troubleshooting
