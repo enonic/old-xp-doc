@@ -10,6 +10,7 @@ This section describes the various standard libraries shipped with Enonic XP. Th
 
   auth/index
   content/index
+  context/index
   i18n/index
   mail/index
   mustache/index

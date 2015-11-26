@@ -1,0 +1,8 @@
+{
+  "type": "user",
+  "key": "user:system:su",
+  "displayName": "Super User",
+  "disabled": false,
+  "login": "su",
+  "userStore": "system"
+}

@@ -23,3 +23,6 @@ The methods implemented in this library are listed below.
    api/delete
    api/create
    api/modify
+   api/setPermissions
+   api/getAttachments
+   api/getAttachmentStream

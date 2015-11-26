@@ -29,7 +29,20 @@
           }
         }
       },
-      "page": {}
+      "page": {},
+      "attachments": {
+        "logo.png": {
+          "name": "logo.png",
+          "label": "small",
+          "size": 6789,
+          "mimeType": "image/png"
+        },
+        "document.pdf": {
+          "name": "document.pdf",
+          "size": 12345,
+          "mimeType": "application/pdf"
+        }
+      }
     },
     {
       "_id": "7c1006a0-5ca8-473e-b8dc-79f87c28e9be",
@@ -58,7 +71,8 @@
           }
         }
       },
-      "page": {}
+      "page": {},
+      "attachments": {}
     }
   ],
   "aggregations": {
