@@ -25,3 +25,4 @@ The methods implemented in this library are listed below.
    api/modify
    api/setPermissions
    api/getAttachments
+   api/getAttachmentStream
