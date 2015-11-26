@@ -1,8 +1,56 @@
-.. _cluster-setup:
+.. _clustering:
 
-
-Cluster setup
+Clustering
 =============
+
+Introduction
+-------------
+
+System Requirements
+*******************
+
+Enonic XP clusters have minimal requirements to infrastructure, it needs:
+
+  * Distributed (or shared) filesystem
+  * Load balancer - to make sure traffic is routed to different nodes
+
+.. image:: images/logical-cluster.png
+
+These components are standard ingredients in modern clouds - and easily available as software as well.
+If you want, a XP cluster can be launched on a regular computer - typically used for testing or development purposes.
+
+
+Basic cluster setup on local machine
+**************************************
+
+We have tried to make deployment of XP as simple and fail-safe as possible.
+By default is configured to run on a local computer -
+and it will not start looking for nodes in the network before you configures it to do so
+
+To test a cluster on your local machine, your need to set a common place for storing data:
+
+In ``$XP_HOME/config/com.enonic.xp.repo.cfg`` set the following property to point to a common directory: 
+ 
+ :: 
+ 
+    blobStore.dir = /some/common/path
+ 
+Since you will run two nodes on the same machine, you also need to set two different HTTP-ports to be able to run two instances at once:
+
+In ``$XP_HOME/config/com.enonic.xp.web.jetty.cfg`` set the following property to different values for the two nodes, typically ``8080`` and ``8090``
+ 
+ :: 
+ 
+    http.port = somePort
+
+
+Start the nodes, they will connect and you should have a live cluster on your machine. You can check the current cluster info at:
+
+http://localhost:8080/status/cluster
+
+
+Cluster configuration
+---------------------
 
 There are a well of options at your disposal to configure and tune the cluster behaviour. See :ref:`configuration-cluster` for a subset of the available settings.
 All settings referred to in this chapter is set in ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg`` if nothing else is specified.
@@ -221,59 +269,11 @@ gateway.recover_after_master_nodes
 Defaults to 0. Do not start the recovery of local indices before this number of master-nodes is present in the cluster.
 
 
-.. _cluster-monitoring:
+Cluster monitoring
+------------------
 
-Monitoring the cluster 
--------------------------
+See :ref:`cluster-monitoring`
 
-There are two tools at your disposal for monitoring the cluster health and how the indices are faring:
-
-Cluster health
-***************
-
-::
-
-  http://<host>:<port>/status/cluster
-
-Which should give you a response like this:
-
-.. literalinclude:: code/cluster-state-response.json
-   :language: json
-
-This view gives a brief overview of the nodes in the cluster. For convenience, the current local node to which the request was made have a separat entry in addition to beeing in the list of members.
-
-The "state" property is the most important:
-
- * **Green**: Cluster is operational, and all configured replicas are distributed to a node
- * **Yellow**: Cluster is operation, but there are replicas that are not distributed to any node
- * **Red**: Cluster is not operational 
-
-To see the details about how the replicas are distributed, lets continue to the ``Index stats`` report:
-
-Index stats
-*************
-
-::
-
-  http://<host>:<port>/status/index
-
-Which should give you a response like this:
-
-.. literalinclude:: code/index-stats-response.json
-   :language: json
-
-This gives an overview of how the indices are distributed and what state the index parts (**shards**) are currently in. A shard could be either ``PRIMARY`` or ``REPLICA`` (copy of a primary shard).
-These are the possible states:
-
- * **total**: Total number of index parts (e.g two repositories with two indices with one replica for each index)
- * **started**: Shards that are currently assigned to a node
- * **unassigned**: Shards waiting to be distributed to a node. Typically a setup with a number of replicas where one or more nodes are not running
- * **relocating**: Shards that are currently moved from one node to another
- * **initializing** Shards that are currently beeing recovered from disk at startup.
- 
- The ``shards`` section gives a more detailed overview on the shard distribution.
- 
- 
 .. _deploying-apps:
  
 Deploying Apps in cluster

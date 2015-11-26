@@ -15,7 +15,6 @@ This guide gives you all the gory details on how to tune Enonic XP - if you're l
    backup
    export
    monitoring
-   clustering-intro
-   cluster-config
+   clustering
    service
    troubleshooting
