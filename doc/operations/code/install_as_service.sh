@@ -34,9 +34,12 @@ checkDistro()
     then
         LINUX_DISTRO="Ubuntu";
         echo "Ubuntu detected";
-    else
-        echo "This script is for Ubuntu distrubutions only"
-        exit 1;
+	elif [[ ${DISTRO_STRING} == *"Red Hat"* ]]
+        LINUX_DISTRO="RedHat"
+        echo "RedHat detected";
+	else
+		 LINUX_DISTRO="Generic";
+		 echo "Unknown distrubtion";
     fi
 }
 
@@ -49,8 +52,19 @@ addUser()
         echo "User ${USER} exists already"
     else
         echo "Create user ${USER}"
-        sudo adduser --home ${USER_HOME} --gecos "" --UID ${USER_ID} --disabled-password ${USER}
+		sudo adduser --home ${USER_HOME} --gecos "" --UID ${USER_ID} --disabled-password ${USER}
     fi
+}
+
+doCreateUser() 
+{
+	if [[ ${LINUX_DISTRO} == "Ubuntu" ]]; then
+		sudo adduser --home ${USER_HOME} --gecos "" --UID ${USER_ID} --disabled-password ${USER}
+	elif [[ ${LINUX_DISTRO} == "RedHat" ]]; then
+		sudo adduser -d ${USER_HOME} -m -r -u ${USER_ID} ${USER}
+	else
+		sudo adduser --home ${USER_HOME} --gecos "" --UID ${USER_ID} --disabled-password ${USER}
+	fi
 }
 
 install()
