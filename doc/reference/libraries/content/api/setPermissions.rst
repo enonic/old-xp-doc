@@ -6,7 +6,7 @@ This function sets permissions on a content.
 .. js:function:: setPermissions(params)
 
   :param object params: JSON with the parameters below.
-  :returns: the updated content as JSON.
+  :returns: true if successful, false otherwise.
 
 **Parameters:**
 

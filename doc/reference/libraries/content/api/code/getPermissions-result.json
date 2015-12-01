@@ -1,0 +1,12 @@
+{
+  "inheritsPermissions": false,
+  "permissions": [
+    {
+      "principal": "user:system:anonymous",
+      "allow": [
+        "READ"
+      ],
+      "deny": []
+    }
+  ]
+}
