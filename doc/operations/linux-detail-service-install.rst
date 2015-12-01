@@ -41,7 +41,7 @@ Complete the following tasks ro run XP as a service on Linux:
    Setting up a symbolic link from a fixed name to the current used version is recommended to be able to switch version without changing any scripts. 
 ..
 
-   Here is a complete list of commands to install with alias ``xp`` pointing to the installed version on Ubuntu:
+   Here is a complete list of commands to install with alias ``xp`` pointing to the installed version:
    
    .. literalinclude:: code/service-install.sh
       :language: none
