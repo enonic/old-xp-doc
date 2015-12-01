@@ -10,7 +10,18 @@ var sendResult = mail.send({
     body: 'Welcome to Enonic XP!' + '\r\n\r\n' + '- The Dev Team',
     headers: {
         'Disposition-Notification-To': 'me@enonic.com'
-    }
+    },
+    attachments: [
+        {
+            fileName: 'logo.png',
+            mimeType: 'image/png',
+            data: imageStream
+        },
+        {
+            fileName: 'image.pdf',
+            data: uploadStream
+        }
+    ]
 });
 
 var sendResultHtml = mail.send({
