@@ -20,7 +20,7 @@ Install with script
  #. Run script: ``sudo ./install_as_service.sh 6.3.0``
  #. Set `JAVA_HOME` in ``/etc/xp.conf``
  #. Start service: ``sudo service xp start``
- #. See log: ``tail -f /home/xp/enonic/xp/logs/server.log``
+ #. Check log: ``tail -f /home/xp/enonic/xp/logs/server.log``
  
 Manual installation
 *******************
