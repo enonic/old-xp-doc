@@ -5,7 +5,7 @@ Linux detailed instructions
 
 .. ATTENTION:: 
 
-	This guide is written for and tested using Ubuntu - details may differ on other distrubutions. 
+	This guide is written for and tested using Ubuntu / CentOS - details may differ on other distrubutions. 
 ..
 
 Complete the following tasks ro run XP as a service on Linux:
@@ -14,9 +14,17 @@ Complete the following tasks ro run XP as a service on Linux:
   
   We recommend to use the name "xp" to stick with the script defaults.
   
-  :: 
-     
-	 sudo adduser --home /home/xp --gecos "" --UID <some integer> --disabled-password xp
+  *Ubuntu*
+  
+  ::
+  
+  	sudo adduser --home /home/xp --gecos "" --UID <some integer> --disabled-password xp
+  
+  *CentOS*
+  
+  ::
+  	
+	sudo adduser -d /home/xp -m -r -u <some integer> xp  
   
 .. TIP::
 
@@ -33,7 +41,7 @@ Complete the following tasks ro run XP as a service on Linux:
    Setting up a symbolic link from a fixed name to the current used version is recommended to be able to switch version without changing any scripts. 
 ..
 
-   Here is a complete list of commands to install with alias ``xp`` pointing to the installed version:
+   Here is a complete list of commands to install with alias ``xp`` pointing to the installed version on Ubuntu:
    
    .. literalinclude:: code/service-install.sh
       :language: none

@@ -12,7 +12,7 @@ Install with script
 *******************
 
 .. ATTENTION:: 
-	The script is written for and tested on Ubuntu. For other distrubutions, the manual installation may be neccessary.
+	The script is written for and tested on Ubuntu / CentOS. For other distrubutions, the manual installation may be neccessary.
 ..
 
  #. Download the install-script: :download:`code/install_as_service.sh`
