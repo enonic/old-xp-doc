@@ -37,6 +37,10 @@ contentType *(string)*
 headers *(object)*
   Custom headers in the form of name-value pairs. Optional.
 
+attachments *(array)*
+  Attachments to include in the email. Optional.
+  Array of objects with properties: ``fileName``, ``data`` (stream) and optionally a ``mimeType``.
+
 The address values can be either a simple email address (e.g. `'name@domain.org'` ) or an address
 with a display name. In the latter case the email will be enclosed with angle brackets (e.g. `'Some Name <name@domain.org>'` ).
 

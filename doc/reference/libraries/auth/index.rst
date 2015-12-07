@@ -18,9 +18,19 @@ The methods implemented in this library are listed below.
 .. toctree::
    :maxdepth: 1
 
-   api/login
-   api/logout
+   api/addMembers
+   api/changePassword
+   api/createGroup
+   api/createUser
+   api/findPrincipals
+   api/generatePassword
+   api/getMembers
+   api/getMemberships
+   api/getPrincipal
    api/getUser
    api/hasRole
-   api/generatePassword
-   api/changePassword
+   api/login
+   api/logout
+   api/modifyGroup
+   api/modifyUser
+   api/removeMembers
