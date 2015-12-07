@@ -31,6 +31,8 @@ To test a cluster on your local machine, your need to do the following:
 
  1. **Get two XP installations:** Download / copy existing $XP_DISTRO to a second $XP_DISTRO folder.
  
+Typically, you will already have a XP-installation by now, so just copy the $XP_DISTRO/folder to make another node.
+ 
  2. **Share data:** Set a common place for storing data:
 
 In ``$XP_HOME/config/com.enonic.xp.repo.cfg`` set the following property to point to a common directory: 
