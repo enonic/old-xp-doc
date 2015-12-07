@@ -3,16 +3,13 @@
 Clustering
 =============
 
-Introduction
--------------
-
 System Requirements
-*******************
+-------------------
 
 Enonic XP clusters have minimal requirements to infrastructure, it needs:
 
-  * Distributed (or shared) filesystem
   * Load balancer - to make sure traffic is routed to different nodes
+  * Distributed (or shared) filesystem
 
 .. image:: images/logical-cluster.png
 
@@ -20,53 +17,44 @@ These components are standard ingredients in modern clouds - and easily availabl
 If you want, a XP cluster can be launched on a regular computer - typically used for testing or development purposes.
 
 
-Basic cluster setup on local machine
-**************************************
+Test cluster on local machine
+-----------------------------
 
-We have tried to make deployment of XP as simple and fail-safe as possible.
-By default is configured to run on a local computer -
-and it will not start looking for nodes in the network before you configures it to do so
+Enonic XP can quickly be started as a cluster on your local computer for testing and development purposes. Complete the steps below to give it a try:
 
-To test a cluster on your local machine, your need to do the following:
+1. **Create two XP installations:** Download / copy existing $XP_DISTRO to a second $XP_DISTRO folder. Typically, you will already have a XP-installation by now, so just copy the $XP_DISTRO/folder to make another node.
 
- 1. **Get two XP installations:** Download / copy existing $XP_DISTRO to a second $XP_DISTRO folder.
- 
-Typically, you will already have a XP-installation by now, so just copy the $XP_DISTRO/folder to make another node.
- 
- 2. **Share data:** Set a common place for storing data in both XP instances config:
+::
 
-In ``$XP_DISTRO/home/config/com.enonic.xp.repo.cfg`` set the following property to point to a common directory:
+2. **Share data:**   Set a common place for storing data in both XP instances config: In ``$XP_DISTRO/home/config/com.enonic.xp.repo.cfg`` set the following property to point to a common directory:
  
  :: 
  
     blobStore.dir = /some/common/path
- 
- 3. **Give each node its own HTTP-port:** Since you will run two nodes on the same machine, you also need to set two different HTTP-ports to be able to run two instances at once:
 
-In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following property to different values for the two nodes, typically ``8080`` and ``8090``
- 
+3. **Give each node its own HTTP-port:** Since you will run two nodes on the same machine, you also need to set two different HTTP-ports to be able to run two instances at once: In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following property to different values for the two nodes, typically ``8080`` and ``8090``
+
  :: 
  
     http.port = somePort
 
 
- 4. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat`` they will connect and you should have a live cluster on your machine. You can check the current cluster info at:
+4. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat`` they will connect and you should have a live cluster on your machine. You can check the current cluster info at:
 
-http://localhost:8080/status/cluster
+ http://localhost:8080/status/cluster
 
 
-Cluster configuration
+Production deployment
 ---------------------
 
-There are a well of options at your disposal to configure and tune the cluster behaviour. See :ref:`configuration-cluster` for a subset of the available settings.
-All settings referred to in this chapter is set in ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg`` if nothing else is specified.
+To deploy Enonic XP in a production environment you need to make sure it is configured and tuned to your environment and requirements. See :ref:`configuration-cluster` for a subset of the available settings.
+All settings referred to in this chapter are set in ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg`` unless specified otherwise.
 
+Enonic XP ships with standard settings that are conservative and should work in most cases. Here are some settings you should be aware of or tune:
 
-There are some key elements to consider when setting up a cluster:
-
- #. Set up a shared storage for the nodes -> :ref:`shared-storage`
+ #. Set up a shared disk storage for the nodes -> :ref:`shared-storage`
  #. Make sure that nodes are connected -> :ref:`network-config`
- #. Distribute the data between the nodes -> :ref:`replica-setup`
+ #. Distribution of data between the nodes -> :ref:`replica-setup`
  #. Ensure cluster data integrity -> :ref:`cluster-partition-settings`
  #. Ensure cluster stability -> :ref:`cluster-stability-settings`
  #. Make sure nodes recovers correctly -> :ref:`node-recovery-settings`
@@ -91,7 +79,8 @@ For now, the nodes in the cluster needs a shared storage to store data as files.
 
 
 .. _network-config:
- 
+
+
 Network configuration
 ----------------------
 
@@ -99,23 +88,20 @@ The nodes in a cluster needs to be able to discover and communicate with other n
 
 Each node binds to an IP-address and port, and communicates to other nodes specified in a list of other nodes bind addresses. The first thing to do is to verify that your network allows TCP-traffic on specific port or port-range for the nodes to communicate, and then configure the nodes to use this address.
 
-Settings
-*********
-
 network.host
-############
+************
 
 The ``network.host`` setting specifies the TCP-address used for node communication. The default value for this is 127.0.0.1, which means that this node will never be able to talk to other nodes.
 
 The ``network.host`` setting can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`network-host-aliases` section for an overview.
 
 transport.tcp.port
-##################
+******************
 
 The ``transport.tcp.port`` value defines the port that the node will use for communication. This defaults to a range of ports; ``9300-9400``, meaning that it will use the first available port in this range.
 
 discovery.zen.ping.unicast.hosts
-################################
+********************************
 
 The ``discovery.zen.ping.unicast.hosts`` value contains a comma-separated list of nodes that are allowed to join the cluster. Each value is either in form of ``host:port`` or ``host:port1-port2`` (port-range).
 
@@ -139,13 +125,11 @@ Sample config
 
    Make sure that the bind-addresses matches the ones specified in the unicast-list. If it still doesnt work, its time to blame the firewall or consult the :ref:`troubleshooting`
 
-.. _replica-setup:
- 
-Replica setup
--------------------
 
-Number of replicas
-******************
+.. _replica-setup:
+
+Replica setup
+-------------
 
 For a cluster to perform, all nodes must be able to do its share of work. Enonic XP searches for data in a number of Elasticsearch indices. An index can have a number of replicas (copies) spread around to the nodes in the cluster, so each node can query its local index when needing data.
 
@@ -177,11 +161,8 @@ To avoid this situation, there are a couple of basic properties of a cluster tha
  #. When nodes are forming separate smaller clusters, only the cluster-partition with the majority of nodes should be fully operational and accept writes.
  #. The minority cluster partitions can be allowed to serve read-only requests if that is acceptable for the provided service
 
-Settings
-*********
-
 discovery.zen.minimum_master_nodes
-##################################
+**********************************
 
 This is the most important setting to set correctly to ensure cluster data integrity. A node will not accept request before the number of 'minimum_master_nodes' are met. For instance, in a 3 node cluster with 3 master nodes and 'minimum_master_nodes' setting of '2', imagine that one of the nodes loose connection to the two other nodes. This node will only see one possible master node (itself) and will not accept requests. The remaining two other nodes will still work, and when the lost node reconnects again, it will get the fresh data from the other nodes and rejoin the cluster.
 
@@ -261,16 +242,13 @@ Node recovery happes when a node starts or reconnects to the cluster after a e.g
 Consider a cluster of 2 nodes. When a node starts for the first time, it will try to connect to a cluster. If no master found, it will elect itself as master, then proceed to intitalize the index-data locally. If it do find an existing master node, it will require the master to provide it with data. This is all good, but there may occure situations where for instance a new node in an existing cluster may start before the existing nodes, and start intitializing data before the nodes with existing data can inform the new node that there is already data in the cluster.
 
 
-Settings
-*********
-
 gateway.recover_after_nodes
-#############################
+***************************
 
 Defaults to 1. Do not start the recovery of local indices before this number of nodes (master or data) has joined the cluster.
 
 gateway.recover_after_master_nodes
-##################################
+**********************************
 
 Defaults to 0. Do not start the recovery of local indices before this number of master-nodes is present in the cluster.
 
@@ -292,6 +270,7 @@ This also means you can choose what applications to deploy on each node.
 
       Remember that XP only support running one version of an application at any time.
       So don't leave the old versions of your applications in the deploy directory.
+
 
 .. _cluster-backup:
 
