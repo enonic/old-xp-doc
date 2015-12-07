@@ -27,7 +27,11 @@ We have tried to make deployment of XP as simple and fail-safe as possible.
 By default is configured to run on a local computer -
 and it will not start looking for nodes in the network before you configures it to do so
 
-To test a cluster on your local machine, your need to set a common place for storing data:
+To test a cluster on your local machine, your need to do the following:
+
+ 1. **Get two XP installations:** Download / copy existing $XP_DISTRO to a second $XP_DISTRO folder.
+ 
+ 2. **Share data:** Set a common place for storing data:
 
 In ``$XP_HOME/config/com.enonic.xp.repo.cfg`` set the following property to point to a common directory: 
  
@@ -35,7 +39,7 @@ In ``$XP_HOME/config/com.enonic.xp.repo.cfg`` set the following property to poin
  
     blobStore.dir = /some/common/path
  
-Since you will run two nodes on the same machine, you also need to set two different HTTP-ports to be able to run two instances at once:
+ 3. **Give each node its own HTTP-port:** Since you will run two nodes on the same machine, you also need to set two different HTTP-ports to be able to run two instances at once:
 
 In ``$XP_HOME/config/com.enonic.xp.web.jetty.cfg`` set the following property to different values for the two nodes, typically ``8080`` and ``8090``
  
@@ -44,7 +48,7 @@ In ``$XP_HOME/config/com.enonic.xp.web.jetty.cfg`` set the following property to
     http.port = somePort
 
 
-Start the nodes, they will connect and you should have a live cluster on your machine. You can check the current cluster info at:
+ 4. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat`` they will connect and you should have a live cluster on your machine. You can check the current cluster info at:
 
 http://localhost:8080/status/cluster
 
