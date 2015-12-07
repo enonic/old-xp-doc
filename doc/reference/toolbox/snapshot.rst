@@ -6,6 +6,10 @@ snapshot
 Create a snapshot of all or a single repository while running. The snapshots will be stored in
 the ``$XP_HOME/data/snapshot`` directory.
 
+.. Attention::
+ 
+	For clustered installation, the snapshot-location must be on a shared file-system
+
 **Usage:**
 
 .. code-block:: none

@@ -15,7 +15,15 @@ Install with script
 
 .. ATTENTION:: 
 	The script is written for and tested on Ubuntu / CentOS. For other distrubutions, the manual installation may be neccessary.
+
+	*Prerequisites*
+		* User with *sudo* rights
+		* Java JDK 1.8+ installed
+		* ``unzip`` installed
+		* ``/lib/lsb/init-functions`` installed
+		* ``curl`` installed
 ..
+
 
  #. Download the install-script: :download:`code/install_as_service.sh`
  #. Add execute right to script: ``chmod u+x install_as_services.sh``

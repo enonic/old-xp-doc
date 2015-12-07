@@ -292,7 +292,7 @@ This also means you can choose what applications to deploy on each node.
 Backing up a cluster
 --------------------
 
-Backing up a cluster is done in the same way as backing up a single node installation
+Backing up a cluster is done in the same way as backing up a single node installation, the only difference is that the ``$XP_HOME/data/snapshot`` should point to a shared file system location.
 
   #. First, on any cluster node, take a :ref:`toolbox-snapshot` of the indices. This will store a cluster-wide snapshot of all data at a point of time. This can be configured to run as an automatic job; Only the diff from the last snapshot will be stored, so the operation is quick.
   #. Secondly, take a file copy of your blobstore.
