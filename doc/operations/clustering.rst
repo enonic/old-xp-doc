@@ -33,9 +33,9 @@ To test a cluster on your local machine, your need to do the following:
  
 Typically, you will already have a XP-installation by now, so just copy the $XP_DISTRO/folder to make another node.
  
- 2. **Share data:** Set a common place for storing data:
+ 2. **Share data:** Set a common place for storing data in both XP instances config:
 
-In ``$XP_HOME/config/com.enonic.xp.repo.cfg`` set the following property to point to a common directory: 
+In ``$XP_DISTRO/home/config/com.enonic.xp.repo.cfg`` set the following property to point to a common directory:
  
  :: 
  
@@ -43,7 +43,7 @@ In ``$XP_HOME/config/com.enonic.xp.repo.cfg`` set the following property to poin
  
  3. **Give each node its own HTTP-port:** Since you will run two nodes on the same machine, you also need to set two different HTTP-ports to be able to run two instances at once:
 
-In ``$XP_HOME/config/com.enonic.xp.web.jetty.cfg`` set the following property to different values for the two nodes, typically ``8080`` and ``8090``
+In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following property to different values for the two nodes, typically ``8080`` and ``8090``
  
  :: 
  
