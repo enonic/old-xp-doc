@@ -49,10 +49,22 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
  
     http.port = somePort
 
-
  4. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat`` they will connect and you should have a live cluster on your machine. You can check the current cluster info at:
 
-http://localhost:8080/status/cluster
+ :: 
+  
+  http://localhost:8080/status/cluster
+ 
+
+.. NOTE::
+
+	By default, if no XP_HOME environment variable is set, the XP_HOME used is the one located in the XP_DISTRO/home folder which will work nicely for the above example. If you have exported a XP_HOME in the shell where you try to start the server, this will override the default settings.
+	So for the above test, unset the XP_HOME variable if already set if needed:
+	
+	::
+	
+	   unset XP_HOME
+
 
 
 Cluster configuration
