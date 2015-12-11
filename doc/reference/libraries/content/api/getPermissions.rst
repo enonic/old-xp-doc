@@ -12,6 +12,7 @@ This function gets permissions on a content.
 
 key *(string)*
   Path or id to the content.
+
 **Example:**
 
 .. literalinclude:: code/getPermissions.js
