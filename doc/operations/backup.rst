@@ -1,9 +1,9 @@
 Backup and Restore
 ==================
 
-Backing up your data is vital for any installation. 
+Backing up your data is vital for any installation.
 
-All the data in an Enonic XP installation is stored in ``$XP_HOME/repo``. This directory has two folders: ``blob`` and ``index``. 
+All the data in an Enonic XP installation is stored in ``$XP_HOME/repo``. This directory has two folders: ``blob`` and ``index``.
 
 The ``blob`` folder contains all files needed by the system to manage your data, while the ``index`` folder contains the Elasticsearch index folders. These
 are dependent on each other in the sense that one is not much use without the other.
@@ -78,7 +78,7 @@ The restore rest-service accepts a JSON in this format:
   }
 
 The indices will be closed for the duration of a restore operation, meaning that no request will be accepted while the restore in running.
-To ease the process, we have provided a :ref:`toolbox-restore` tool.
+To ease the process, we have provided a :ref:`toolbox-restore-snapshot` tool.
 
 .. WARNING::
 

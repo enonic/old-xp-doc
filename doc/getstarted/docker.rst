@@ -49,7 +49,7 @@ You can optionally add :<versionnumber> at the end of the command to launch a sp
 
 ::
 
-  docker run -d -p 8080:8080 --volumes-from xp-home --name xp-app enonic/xp-app:6.1.0
+  docker run -d -p 8080:8080 --volumes-from xp-home --name xp-app enonic/xp-app:${version}
 
 Check out our `Project page at Docker Hub <docker_project>`_ for more info.
 

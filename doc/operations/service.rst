@@ -13,7 +13,7 @@ Linux
 Install with script
 *******************
 
-.. ATTENTION:: 
+.. ATTENTION::
 	The script is written for and tested on Ubuntu / CentOS. For other distrubutions, the manual installation may be neccessary.
 
 	*Prerequisites*
@@ -27,11 +27,11 @@ Install with script
 
  #. Download the install-script: :download:`code/install_as_service.sh`
  #. Add execute right to script: ``chmod u+x install_as_services.sh``
- #. Run script: ``sudo ./install_as_service.sh 6.3.0``
+ #. Run script: ``sudo ./install_as_service.sh ${release}``
  #. Set **JAVA_HOME** and **JAVA_OPTS** variables in ``/etc/xp.conf``
  #. Start service: ``sudo service xp start``
  #. Check log: ``tail -f /home/xp/enonic/xp/logs/server.log``
- 
+
 Manual installation
 *******************
 

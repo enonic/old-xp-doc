@@ -53,13 +53,11 @@ Enonic XP is available in a simple universal distribution file - running on all 
 * `Download Enonic XP distribution <https://enonic.com/try-now#download-now>`_
 * Unzip the file to a suitable location
 
-.. hint::
+Command-line version::
 
-  **Commandline Ninja version** ::
-
-    curl -O http://repo.enonic.com/public/com/enonic/xp/distro/6.2.1/distro-6.2.1.zip
-    unzip distro-6.2.1.zip
-    cd enonic-xp-6.2.1
+  curl -O http://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip
+  unzip distro-${release}.zip
+  cd enonic-xp-${release}
 
 
 Next - let's get the server started

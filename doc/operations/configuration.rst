@@ -54,7 +54,7 @@ In the third example, the admin site is mapped to ``enonic.com/admin``.
 Mail Configuration
 ------------------
 
-The mail server used for sending email messages using the :ref:`lib-mail` API can be configured.
+The mail server used for sending email messages can be configured.
 A sample mail configuration is listed below.
 
 .. literalinclude:: code/mail.properties

@@ -3,17 +3,43 @@
 Javascript Libraries
 ====================
 
-This section describes the various standard libraries shipped with Enonic XP. The libraries are included in your application through the Gradle build script.
+This section describes the various standard libraries shipped with Enonic XP. The libraries are
+included in your application through the Gradle build script like this::
 
-.. toctree::
-  :maxdepth: 1
+  dependencies {
+    include 'com.enonic.xp:<name>:${release}'
+  }
 
-  auth/index
-  content/index
-  context/index
-  i18n/index
-  mail/index
-  mustache/index
-  portal/index
-  thymeleaf/index
-  xslt/index
+Where ``name`` is the name of the library. Here's a list of available libraries:
+
+* lib-auth
+* lib-cache
+* lib-content
+* lib-context
+* lib-http-client
+* lib-i18n
+* lib-io
+* lib-mail
+* lib-mustache
+* lib-portal
+* lib-thymeleaf
+* lib-xslt
+
+To include both ``lib-mail`` and ``lib-content`` you can add both inside the
+dependency list like this::
+
+  dependencies {
+    include 'com.enonic.xp:lib-mail:${release}'
+    include 'com.enonic.xp:lib-content:${release}'
+  }
+
+.. note::
+
+  The server-side JavaScript reference documentation can be accessed using
+  the following links:
+
+  * `Read in your browser`_
+  * `Download as zip`_
+
+.. _Download as zip: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip
+.. _Read in your browser: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/index.html

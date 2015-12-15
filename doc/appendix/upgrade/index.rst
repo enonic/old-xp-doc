@@ -1,12 +1,12 @@
 .. _upgrading:
 
 Upgrading to |version|
-=================================
+======================
 
 .. warning:: In order to upgrade, you must already have upgraded to Enonic XP 6.0.0 or newer
 
 
-Enonic XP |version| download: https://repo.enonic.com/public/com/enonic/xp/distro/6.2.0/distro-6.2.0.zip
+Enonic XP |version| download: https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip
 
 There are no breaking changes in this release, but due to internal changes in repository you will have to dump your data and load them into the new version:
 

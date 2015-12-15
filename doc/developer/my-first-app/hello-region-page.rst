@@ -2,7 +2,7 @@
 The Hello Region Page
 =====================
 
-Parts start to make sense when placed into a `region` - regions are "slots" contained within pages or layouts. Pages and layouts may contain multiple regions, and each region must have a unique name. 
+Parts start to make sense when placed into a `region` - regions are "slots" contained within pages or layouts. Pages and layouts may contain multiple regions, and each region must have a unique name.
 
 Let's create a new page component with a single region called "Main" - we will later place the "Country" part into this region.
 
@@ -22,7 +22,7 @@ The XML file above is a :ref:`apps-page-descriptor`. Regions and page configurat
   :language: javascript
   :caption: Page controller - site/pages/hello-region/hello-region.js
 
-This page controller uses a portal library (see :ref:`libs-portal`) to get the content and extract
+This page controller uses a portal library (see ``lib-portal`` in :ref:`js-libraries`) to get the content and extract
 the "main" region which was defined in the descriptor XML file.
 
 .. literalinclude:: code/hello-region-page/region1.html
