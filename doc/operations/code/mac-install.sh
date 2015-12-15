@@ -121,7 +121,7 @@ function download() {
 
     if [ ! -f ./${DISTRO_NAME} ]; then
         info "Downloading distribution: $DOWNLOAD_URL"
-        curl --fail -o ${DOWNLOAD_URL}
+        curl --fail -o ${DISTRO_NAME} ${DOWNLOAD_URL}
         check_verify "Failed to download distribution"
     else
         ok "Distro '${DISTRO_NAME}' found locally"
