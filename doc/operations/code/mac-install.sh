@@ -16,7 +16,7 @@ XP_HOME="$XP_DISTRO/home"
 XP_DEPLOY="$XP_HOME/deploy"
 
 # APPS
-XP_APP_PATH="com/enonic/theme/"
+XP_APP_PATH="com/enonic/theme"
 XP_APP_BASE_URL="${REPO}/${XP_APP_PATH}"
 
 # SUPERHERO
