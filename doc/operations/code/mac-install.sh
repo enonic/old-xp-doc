@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+#set -e
 
 # CONFIG
 
@@ -12,6 +12,18 @@ DISTRO_NAME="distro-$VERSION.zip"
 DOWNLOAD_URL="${REPO}/${REPO_PATH}/${VERSION}/${DISTRO_NAME}"
 XP_DISTRO="enonic-xp-${VERSION}"
 XP_OPT="ui"
+XP_HOME="$XP_DISTRO/home"
+XP_DEPLOY="$XP_HOME/deploy"
+
+# APPS
+XP_APP_PATH="com/enonic/app/"
+XP_APP_BASE_URL="${REPO}/${XP_APP_PATH}"
+
+# SUPERHERO
+SUPERHERO_VERSION="1.0.0"
+SUPERHERO_NAME="superhero"
+SUPERHERO_ARTIFACT="$SUPERHERO_NAME-$SUPERHERO_VERSION.jar"
+SUPERHERO_REPO_URL="${XP_APP_BASE_URL}/${SUPERHERO_NAME}/${SUPERHERO_VERSION}/${SUPERHERO_ARTIFACT}"
 
 ################
 # HELPERS
@@ -107,24 +119,28 @@ function welcome() {
 function install() {
     info "Installing Enonic XP version $VERSION"
     verify
-    download
+    download ${DISTRO_NAME} ${DOWNLOAD_URL}
     unwrap
-    start
 }
 
 function verify() {
     check_java
 }
 
+# $1 = target, $2 = url
 function download() {
+
+    TARGET=$1
+    URL=$2
+
     info "Locating $DISTRO_NAME"
 
-    if [ ! -f ./${DISTRO_NAME} ]; then
-        info "Downloading distribution: $DOWNLOAD_URL"
-        curl --fail -o ${DISTRO_NAME} ${DOWNLOAD_URL}
+    if [ ! -f ./${TARGET} ]; then
+        info "Downloading distribution: $URL"
+        curl --fail -o ${TARGET} ${URL}
         check_verify "Failed to download distribution"
     else
-        ok "Distro '${DISTRO_NAME}' found locally"
+        ok "Distro '${TARGET}' found locally"
     fi
 }
 
@@ -132,6 +148,16 @@ function unwrap() {
     info "Unzip distro $DISTRO_NAME"
     unzip -qq -u ${DISTRO_NAME}
     check_verify "Cannot unzip ${DISTRO_NAME} "
+}
+
+
+function install_apps() {
+    install_superhero
+}
+
+function install_superhero() {
+    info "Installing application ${SUPERHERO_ARTIFACT}"
+    download "${XP_DEPLOY}/${SUPERHERO_ARTIFACT}" "${SUPERHERO_REPO_URL}"
 }
 
 function start() {
@@ -146,6 +172,7 @@ function start() {
 function main() {
     welcome
     install
+    install_apps
     start
 }
 
