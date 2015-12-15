@@ -19,6 +19,7 @@ here :ref:`api_ref_guide`.
    my-first-app/index
    project/index
    deploy/index
+   deploy/devmode
    site/index
    page/index
    part/index

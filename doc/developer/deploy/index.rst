@@ -1,3 +1,5 @@
+.. _gradle_deploy_app:
+
 Installing an application
 =========================
 
@@ -31,3 +33,5 @@ Or the short version::
 
 This will deploy and reload the application on server when something changes and
 is probably the fastest way to develop your application.
+
+To speed up development, please see :ref:`gradle_dev_mode`.
