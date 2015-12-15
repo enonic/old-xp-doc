@@ -7,21 +7,19 @@ a simple JSON format.
 Basic status info
 -----------------
 
-To access the monitoring JSON feed you can
-point to the following url::
+To access the monitoring JSON feed you can point to the following url::
 
-  http://<host>:8080/status
+  http://localhost:8080/status
 
-This will give you information about Enonic XP version, JVM metrics, memory
-usages and OS information.
+This will give you a list of status-reporters. Each reporter has a name and
+can be accessed using the following pattern::
 
-.. literalinclude:: code/status.js
-  :language: javascript
+  http://localhost:8080/status/<name>
 
 
 .. _cluster-monitoring:
 
-Cluster monitoring 
+Cluster monitoring
 -------------------------
 
 There are two tools at your disposal for monitoring the cluster health and how the indices are faring:
@@ -44,7 +42,7 @@ The "state" property is the most important:
 
  * **Green**: Cluster is operational, and all configured replicas are distributed to a node
  * **Yellow**: Cluster is operation, but there are replicas that are not distributed to any node
- * **Red**: Cluster is not operational 
+ * **Red**: Cluster is not operational
 
 To see the details about how the replicas are distributed, lets continue to the ``Index stats`` report:
 
@@ -68,6 +66,5 @@ These are the possible states:
  * **unassigned**: Shards waiting to be distributed to a node. Typically a setup with a number of replicas where one or more nodes are not running
  * **relocating**: Shards that are currently moved from one node to another
  * **initializing** Shards that are currently beeing recovered from disk at startup.
- 
+
  The ``shards`` section gives a more detailed overview on the shard distribution.
- 

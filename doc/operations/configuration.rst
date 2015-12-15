@@ -179,3 +179,13 @@ To enable or configure OSGi shell, use ``com.enonic.xp.server.shell.cfg`` file.
 .. literalinclude:: code/server-shell.properties
   :language: properties
   :caption: ``$XP_HOME/config/com.enonic.xp.server.shell.cfg``
+
+DoS Filter Configuration
+------------------------
+
+The DoS (denial of service) filter can be configured using
+``com.enonic.xp.web.dos.cfg`` file.
+
+.. literalinclude:: code/com.enonic.xp.web.dos.cfg
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.web.dos.cfg``
