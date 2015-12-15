@@ -38,6 +38,8 @@ Manual installation
 See :ref:`linux-detailed-service-install`
 
 
+Testings : :download:`code/mac-install.sh`
+
 Windows
 -------
 
