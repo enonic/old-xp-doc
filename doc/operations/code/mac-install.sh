@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # CONFIG
 
 VERSION="6.3.0-SNAPSHOT"
@@ -119,7 +121,7 @@ function download() {
 
     if [ ! -f ./${DISTRO_NAME} ]; then
         info "Downloading distribution: $DOWNLOAD_URL"
-        wget ${DOWNLOAD_URL}
+        curl --fail -o ${DOWNLOAD_URL}
         check_verify "Failed to download distribution"
     else
         ok "Distro '${DISTRO_NAME}' found locally"
