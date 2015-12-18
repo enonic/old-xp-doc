@@ -38,9 +38,16 @@ Manual installation
 See :ref:`linux-detailed-service-install`
 
 
-Testings : :download:`code/mac-install.sh`
+
 
 Windows
 -------
 
 Info on running XP as a service in windows will come later.
+
+
+Testing
+-------
+
+* Mac try-me: :download:`code/mac-install.sh`
+* Linux try-me: :download:`code/linux-install.sh`

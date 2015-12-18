@@ -11,7 +11,7 @@ REPO_PATH="com/enonic/xp/distro"
 DISTRO_NAME="distro-$VERSION.zip"
 DOWNLOAD_URL="${REPO}/${REPO_PATH}/${VERSION}/${DISTRO_NAME}"
 XP_DISTRO="enonic-xp-${VERSION}"
-XP_OPT="ui"
+XP_OPT=""
 XP_HOME="$XP_DISTRO/home"
 XP_DEPLOY="$XP_HOME/deploy"
 
@@ -101,7 +101,7 @@ function check_java() {
         version=$(${JAVACMD} -version 2>&1 | awk -F '"' '/version/ {print $2}')
         ok "Found Java version: $version"
         if [[ "$version" < "1.8" ]]; then
-            echo "Needs Java 1.8+ to run"
+            echo "Needs Java JRE 1.8+ to run"
             exit 1
         fi
     fi
