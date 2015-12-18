@@ -1,7 +1,7 @@
 .. _linux-detailed-service-install:
 
-Linux detailed instructions
-----------------------------
+Linux install as service detailed
+----------------------------------
 
 .. ATTENTION::
 
