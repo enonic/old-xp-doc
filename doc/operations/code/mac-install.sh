@@ -4,7 +4,7 @@
 
 # CONFIG
 
-VERSION="6.3.0-SNAPSHOT"
+VERSION="6.2.0"
 DOC_URL="http://xp.readthedocs.org/en/latest/"
 REPO="http://repo.enonic.com/public"
 REPO_PATH="com/enonic/xp/distro"

@@ -3,8 +3,7 @@
 restore
 =======
 
-Restore a named snapshot. The snapshots are located in the
-``$XP_HOME/data/snapshot`` directory.
+Restore a named snapshot.
 
 **Usage:**
 

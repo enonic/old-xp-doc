@@ -187,7 +187,7 @@ _chown()
 }
 
 main() {
-    checkDistro;
+    checkDistro
     addUser
     install
     installService

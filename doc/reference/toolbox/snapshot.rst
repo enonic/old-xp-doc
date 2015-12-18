@@ -4,7 +4,7 @@ snapshot
 ========
 
 Create a snapshot of all or a single repository while running. The snapshots will be stored in
-the ``$XP_HOME/data/snapshot`` directory.
+the directory given in ``snapshots.dir`` option in the :ref:`repository-config` (default ``$xp_home/snapshots``).
 
 .. Attention::
  

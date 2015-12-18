@@ -161,6 +161,8 @@ Jetty HTTP settings can be configured using ``com.enonic.xp.web.jetty.cfg`` file
    :caption: ``$XP_HOME/config/com.enonic.xp.web.jetty.cfg``
 
 
+.. _repository-config:
+
 Repository Configuration
 ------------------------
 
