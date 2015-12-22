@@ -80,10 +80,20 @@ smtpTLS
   Turn on Transport Layer Security (TLS) security for SMTP servers that require it. Default ``false``.
 
 
-.. _configuration-cluster:
+.. _storage-config:
 
-Cluster Configuration
+Storage Configuration
 ---------------------------
+   
+**Repository Configuration**
+
+Repository configuration can be set using ``com.enonic.xp.repo.cfg`` file.
+
+.. literalinclude:: code/repo.properties
+  :language: properties
+  :caption: ``$XP_HOME/config/com.enonic.xp.repo.cfg``
+
+**Elasticsearch configuration** 
 
 The cluster functionallity is facilitated by Elasticsearch, so all relevant Elasticsearch settings are available.
 
@@ -118,7 +128,7 @@ cluster.routing.allocation.disk.threshold_enabled
 http.enabled
   Enable the HTTP module. Default ``false``.
 network.host
-  Set the bind address and the address other nodes will use to communicate with this node. Default ``127.0.0.1``. Can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`network-host-aliases` section for an overview of aliases.
+  Set the bind address and the address other nodes will use to communicate with this node. Default ``127.0.0.1``. Can be an explicit *IP-address*, a *host-name* or an *alias*. See the section below for an overview of aliases.
 transport.tcp.port
   Custom port for the node to node communication. Defaults to the range ``9300-9400``.
 gateway.expected_nodes
@@ -139,8 +149,7 @@ index.recovery.initial_shards
 
 .. _network-host-aliases:
 
-Network host aliases
-********************
+*Network host aliases*
 
 * ``_local_`` : Will be resolved to the local ip address.
 * ``_non_loopback_`` : The first non loopback address.
@@ -159,18 +168,6 @@ Jetty HTTP settings can be configured using ``com.enonic.xp.web.jetty.cfg`` file
 .. literalinclude:: code/jetty.properties
    :language: properties
    :caption: ``$XP_HOME/config/com.enonic.xp.web.jetty.cfg``
-
-
-.. _repository-config:
-
-Repository Configuration
-------------------------
-
-Repository configuration can be set using ``com.enonic.xp.repo.cfg`` file.
-
-.. literalinclude:: code/repo.properties
-  :language: properties
-  :caption: ``$XP_HOME/config/com.enonic.xp.repo.cfg``
 
 
 OSGi Shell Configuration

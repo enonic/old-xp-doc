@@ -1,11 +1,11 @@
 .. _bootservice:
 
-Run XP as a Service
+Install as service
 ===================
 
 When installing Enonic XP on a standard production server, you will want to set it up to run as a service.
 
-First, make sure the correct version of Java JDK is installed on your system. See :ref:`install_java` for guidance.
+First, make sure the correct version of Java is installed on your system. See :ref:`install_java` for guidance.
 
 Linux
 -----
@@ -18,36 +18,23 @@ Install with script
 
 	*Prerequisites*
 		* User with *sudo* rights
-		* Java JDK 1.8+ installed
-		* ``unzip`` installed
+		* Java JRE 1.8+ installed
 		* ``/lib/lsb/init-functions`` installed
-		* ``curl`` installed
 ..
 
-
- #. Download the install-script: :download:`code/install_as_service.sh`
- #. Add execute right to script: ``chmod u+x install_as_services.sh``
- #. Run script: ``sudo ./install_as_service.sh ${release}``
- #. Set **JAVA_HOME** and **JAVA_OPTS** variables in ``/etc/xp.conf``
+ #. Download the Enonic XP distribution
+ #. Unzip the distributiopn
+ #. Run script: ``sudo ./enonic-xp-${release}/service/install_service.sh``
+ #. *Optional:* Set **JAVA_HOME** and **JAVA_OPTS** variables in ``/etc/xp.conf``
  #. Start service: ``sudo service xp start``
- #. Check log: ``tail -f /home/xp/enonic/xp/logs/server.log``
+ #. Check log: ``sudo tail -f /home/xp/enonic/xp/logs/server.log``
 
 Manual installation
 *******************
 
 See :ref:`linux-detailed-service-install`
 
-
-
-
 Windows
 -------
 
 Info on running XP as a service in windows will come later.
-
-
-Testing
--------
-
-* Mac try-me: :download:`code/mac-install.sh`
-* Linux try-me: :download:`code/linux-install.sh`

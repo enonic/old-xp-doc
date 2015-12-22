@@ -70,7 +70,7 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
 Cluster configuration
 ---------------------
 
-There are a well of options at your disposal to configure and tune the cluster behaviour. See :ref:`configuration-cluster` for a subset of the available settings.
+There are a well of options at your disposal to configure and tune the cluster behaviour. See :ref:`Elasticsearch configuration<storage-config>` for a subset of the available settings.
 All settings referred to in this chapter is set in ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg`` if nothing else is specified.
 
 
@@ -119,7 +119,7 @@ network.host
 
 The ``network.host`` setting specifies the TCP-address used for node communication. The default value for this is 127.0.0.1, which means that this node will never be able to talk to other nodes.
 
-The ``network.host`` setting can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`network-host-aliases` section for an overview.
+The ``network.host`` setting can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`storage-config` section for an overview.
 
 transport.tcp.port
 ##################
@@ -310,7 +310,7 @@ This also means you can choose what applications to deploy on each node.
 Backing up a cluster
 --------------------
 
-Backing up a cluster is done in the same way as backing up a single node installation, the only difference is that the ``snapshots.dir``-option should point to a shared file system location, see :ref:`repository-config`.
+Backing up a cluster is done in the same way as backing up a single node installation, the only difference is that the ``snapshots.dir``-option should point to a shared file system location, see :ref:`storage-config`.
 
   #. First, on any cluster node, take a :`toolbox-snapshot` of the indices. This will store a cluster-wide snapshot of all data at a point of time. This can be configured to run as an automatic job; Only the diff from the last snapshot will be stored, so the operation is quick.
   #. Secondly, take a file copy of your blobstore.
