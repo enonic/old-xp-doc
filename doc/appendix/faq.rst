@@ -6,8 +6,7 @@ Frequently Asked Questions
 What's the latest release?
 --------------------------
 
-The latest official release is |version|.
-More information is available on the `latest release changelog <https://github.com/enonic/xp/releases/latest>`_.
+The latest release can be found here `latest release changelog <https://github.com/enonic/xp/releases/latest>`_.
 
 Where can I get the source code?
 --------------------------------
