@@ -1,0 +1,21 @@
+<!--
+All children of <site>/people, e.g
+  /mySite/people/myContent
+  /mySite/people/myGroup/anotherContent
+-->
+<allowPath>${site}/people/*</allowPath>
+
+<!--
+All content in mySite starting with people, including children, e.g
+  /mySite/peoples
+  /mySite/people/myContent
+  /mySite/peoples/myContent
+  /mySite/people/myGroup/anotherContent
+-->
+<allowPath>/mySite/people*</allowPath>
+
+<!-- All children of the current content -->
+<allowPath>./*</allowPath>
+
+<!-- All children of the current contents parent -->
+<allowPath>../*</allowPath>

@@ -2,8 +2,11 @@
   <label>Cited In</label>
   <occurrences minimum="0" maximum="0"/>
   <config>
-    <relationship-type>system:reference</relationship-type>
-    <allow-content-type>citation</allow-content-type>
-    <allow-content-type>my.other.app:quote</allow-content-type>
+    <relationship>system:reference</relationship>
+    <allowType>citation</allowType>
+    <allowType>my.other.app:quote</allowType>
+    <allowPath>${site}/people/</allowPath>
+   <allowPath>./*</allowPath>
+   <allowPath>/quotes*</allowPath>
   </config>
 </input>

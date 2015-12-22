@@ -121,6 +121,11 @@ the file system.
 .. literalinclude:: code/image-selector-type.xml
    :language: xml
 
+allowPath
+  This is used to limit the path of the images that may be selected for this input.
+  The site on which the content exists, can be wildcarded with ``${site}``
+  Use one setting for path expression.
+  
 
 Long
 ----
@@ -136,13 +141,23 @@ References to other content are specified by this input type.
 .. literalinclude:: code/content-selector-type.xml
    :language: xml
 
-relationship-type
+relationship
   This setting defines the name of which relationship-type to use.
   Default is ``system:reference``.
 
-allow-content-type
+allowType
   This is used to limit the content types that may be selected for this input.
   Use one setting for each content-type.
+
+allowPath
+  This is used to limit the path of the content that may be selected for this input.
+  The site on which the content exists, can be wildcarded with ``${site}``
+  Use one setting for path expression.
+  
+.. literalinclude:: code/allowPath-samples.xml
+   :caption: allowPath samples
+   :language: xml
+   
 
 .. _radiobutton:
 
