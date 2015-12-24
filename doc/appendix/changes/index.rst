@@ -7,7 +7,7 @@ Clustering support
 ------------------
 Enonic XP is now ready for production deployment in clustered environments. 
 The clustering utilizes the distributed capabilities of the storage engine and features a new set of distributable events, so developers can easily communicate across cluster nodes. 
-We have also created an extensive documentation for how to get started with ref:`clustering`.
+We have also created an extensive documentation for how to get started with :ref:`clustering`.
 
 Happy scaling everyone :)
 
