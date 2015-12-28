@@ -20,17 +20,16 @@ here :ref:`api_ref_guide`.
    project/index
    deploy/index
    deploy/devmode
+   ssjs/index
    site/index
    page/index
    part/index
    layout/index
    service/index
-   filter/index
    error/index
    i18n/index
    view/index
    node-domain/index
    content-domain/index
    writing-lib/index
-   calling-java/index
    search/index

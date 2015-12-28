@@ -19,12 +19,12 @@ Here is an example of an ``error.js`` file:
    :language: javascript
 
 
-The input parameter for the ``handleXXX`` and ``handleError`` functions is an error JSON object containing the status code, error message, Java Exception object, and the original :ref:`request` object:
+The input parameter for the ``handleXXX`` and ``handleError`` functions is an error JSON object containing the status code, error message, Java Exception object, and the original ``request`` object:
 
 .. literalinclude:: code/error_param.json
    :language: json
 
-The expected returned value for the function is a response object (see :ref:`apps-controller-response`).
+The expected returned value for the function is a ``response`` object (see :ref:`apps-controller-http`).
 
 The error processing logic will try every handle-function in application order until it can get a result (not ``undefined`` or ``null``).
 This means that an error function can decide to not handle a specific error and let the next one deal with it.

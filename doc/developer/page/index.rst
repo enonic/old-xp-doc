@@ -46,7 +46,7 @@ Controller
 
 A page controller handles requests to the page. The controller is a required file written in JavaScript and must be
 named ``[page-name].js``. A controller exports a method for each type of HTTP request that should be handled.
-The handle method has the request object as a parameter and returns the response object (see :ref:`apps-controller-response`).
+The handle method has the request object as a parameter and returns the response object (see :ref:`apps-controller-http`).
 
 .. literalinclude:: code/controller-1.js
    :language: javascript

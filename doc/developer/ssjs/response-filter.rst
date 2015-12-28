@@ -8,7 +8,7 @@ After the page and component controllers have been processed during rendering, t
 
 To add a response filter, create a folder ``site/filters`` in the application and place a ``[filter-name].js`` file within this folder.
 A filter must export a method named ``responseFilter``.
-This method receives the request and response objects as parameters and must return a response object (see :ref:`request` and :ref:`apps-controller-response`).
+This method receives the request and response objects as parameters and must return a response object (see :ref:`apps-controller-http`).
 
 Here is an example of a ``[filter].js`` file:
 
