@@ -31,4 +31,5 @@ here :ref:`api_ref_guide`.
    view/index
    node-domain/index
    content-domain/index
+   writing-lib/index
    search/index
