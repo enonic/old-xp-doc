@@ -28,8 +28,8 @@ Read more on how to build a :ref:`widget`
 
 Multipart handling in JS
 ------------------------
-The servers-side javascript framework now supports handling of multipart requests. This allows you to handle any kind of files and binaries that are submitted along with a request.
-Along with this new capability, a few new libraries for handling repository attachments and IO has been developed. These are shipped with this release.
+The server-side javascript framework now supports handling of multipart requests. This allows you to handle any kind of files and binaries that are submitted along with a request.
+Along with this new capability, a few new libraries for handling repository attachments and IO have been developed. These are shipped with this release.
 
 
 New JS Libraries
@@ -37,7 +37,7 @@ New JS Libraries
 
 * lib-cache (Create caches with Javascript)
 * lib-io (Read, Write and parse files and binaries)
-* lib-http-client (Integrate with remote http services)
+* lib-http-client (Integrate with remote HTTP services)
 * lib-context (Access and override context during request, i.e. execute commands as other users)
 * lib-security (Access and modify content and node permissions)
 
@@ -66,7 +66,7 @@ The cache is completely transparent and requires no invalidation or update delay
 Minor improvements
 ------------------
 
-* XP Admin now has for IE 11 and Edge support
+* XP Admin now has IE 11 and Edge support
 * Path filtering option for selector input types
 * Regular expression support for TextLine input types
 * Status reporters for installation :ref:`monitoring`
