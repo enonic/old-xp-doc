@@ -1,8 +1,10 @@
+.. _CMS content API: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/module-lib_xp_content.html
+
 Overview
 ========
 
-When searching in Enonic XP, you are searching for nodes, or content if working in the context of the CMS content API.
-This documentation is general and intended for the nodes-domain, but except for some built-in
+When searching in Enonic XP, you are searching for nodes, or content if working in the context of the `CMS content API`_.
+This documentation is general and intended for the :ref:`node_domain`, but except for some built-in
 property-values and the addition of some convenience parameters in the content domain, everything is valid for both domains.
 
 In general, the search-APIs deal with a number of basic parameters:
