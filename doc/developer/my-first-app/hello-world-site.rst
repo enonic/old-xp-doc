@@ -12,7 +12,7 @@ Site descriptor
 
 An application can serve many purposes and building sites is just one of them. The ``site.xml`` file is the descriptor that will let Enonic
 XP know that this app can be added to a site. Site-wide configurations can be defined in this file but we will leave the config element
-empty for now (see :ref:`apps-configure`).
+empty for now (see :ref:`site-configure`).
 
 A basic site.xml file was automatically created by the init-project script::
 

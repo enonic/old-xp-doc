@@ -11,9 +11,6 @@ Content is king, and Enonic XP ships with a complete CMS for your disposal.
    content-vs-node
    content-manager
    repository
-   content-types
    input-types
-   relationship-types
-   mixins
    structure
    indexing

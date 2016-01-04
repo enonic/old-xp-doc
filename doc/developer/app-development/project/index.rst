@@ -39,7 +39,7 @@ site/site.xml
   and the values for these settings can be updated in the administration
   console.
 
-  .. literalinclude:: ../site/site.xml
+  .. literalinclude:: ../../site/code/site.xml
      :language: xml
 
 site/lib/

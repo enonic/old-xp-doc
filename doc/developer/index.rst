@@ -14,22 +14,13 @@ here :ref:`api_ref_guide`.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Table Of Contents
 
    my-first-app/index
-   project/index
-   deploy/index
-   deploy/devmode
-   ssjs/index
+   app-development/index
    site/index
-   page/index
-   part/index
-   layout/index
-   service/index
-   error/index
+   schema/index
    i18n/index
-   view/index
    node-domain/index
    content-domain/index
-   writing-lib/index
+   ssjs/index
    search/index

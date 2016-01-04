@@ -1,3 +1,5 @@
+.. _serverside_javascript:
+
 Serverside Javascript
 =====================
 
@@ -9,14 +11,14 @@ or other reusable code to multiple responses.
 All the different JavaScripts, may invoke code written in Java, if that is desired.
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   using-controllers
-   global-objects
-   http-objects
-   contributions
-   response-filter
-   invoking-java
+    using-controllers
+    global-objects
+    http-objects
+    contributions
+    response-filter
+    invoking-java
 
 
 There is also our reference documentation with a number of libraries and other functions that may be quite useful: :ref:`api_ref_guide`

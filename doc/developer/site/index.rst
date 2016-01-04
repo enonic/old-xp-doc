@@ -1,15 +1,22 @@
-.. _apps-configure:
+.. _site_components:
 
-Configuring a site
-======================
+Site Components
+===============
 
-Global configuration variables for a site may be defined in the config element of ``site.xml``. Values for these
-settings can be filled in when you edit the site in the admin console.
+Sites are developed in apps.  In the :ref:`apps-basics-project`, an overview of the file structure for an app is given.
+This structure is rooted in the ``site`` folder, even though it is an app, because the app is a component in a site.
 
-.. literalinclude:: site.xml
-   :language: xml
+Below is more information about the different components used to build a site in an app.
 
-To use the site configuration values, the controller can read the values and use it.
+.. toctree::
+    :maxdepth: 1
 
-.. literalinclude:: code/controller.js
-   :language: javascript
+    configuration
+    view
+    page/index
+    part/index
+    layout/index
+    service
+    error
+
+To add logic and flow, and make these components work together, check out our chapter on :ref:`serverside_javascript`.
