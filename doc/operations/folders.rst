@@ -13,6 +13,7 @@ The unzipped Enonic XP distribution will have the following structure (folders w
      |- deploy/
      |- logs/
      |- repo/ *
+     |- snapshots/
      |- work/ *
    |- lib/
    |- system/
@@ -33,7 +34,7 @@ home/
     Configuration files are placed here, including Virtual Host and system.properties.
 
   data/
-    Additional data like exports, snapshots and dumps. This folder will not appear until certain operations are run.
+    Additional data like exports and dumps. This folder will not appear until certain operations are run.
 
   deploy/
     Hot deploy directory. Applications are automatically installed upon placing their JAR files in this directory.
@@ -44,6 +45,9 @@ home/
   repo/
     Repository data (blobs and indexes). This folder will not appear until the installation is started for the first time.
 
+  snapshots/
+    This is where snapshots are stored when using the :ref:`toolbox-snapshot`-operation. This folder will not appear until a snapshot is done.
+	
   work/
     Cache and generated bundles are stored here. This folder will not appear until the installation is started the first time.
 
