@@ -21,7 +21,7 @@ methods, like the ``readLines`` method:
        return source.readLines();
    }
 
-This method has now been made a funciton on the ``bean`` bean, and may be invoked from JavaScript, like this:
+This method has now been made a function on the ``bean`` bean, and may be invoked from JavaScript, like this:
 
 .. code-block:: javascript
 
