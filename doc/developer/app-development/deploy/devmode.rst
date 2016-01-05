@@ -16,7 +16,7 @@ First time you will need to deploy the code using ``deploy`` task
 
   $ gradle deploy
 
-After that, you do not need to redeply your application except...
+After that, you do not need to redeploy your application except...
 
 * when modifying Java code.
 * when deleting a page, part or layout.
