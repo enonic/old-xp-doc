@@ -29,8 +29,21 @@ Import data from a named export and load it into Enonic XP at the desired conten
               Target path for import. Format:
               <repo-name>:<branch-name>:<node-path>. e.g 'cms-repo:draft:/'
 
+          -xslParam <xslParam>
+              Parameter to pass to the XSL transformations before importing nodes.
+              Format: <parameter-name>=<parameter-value> . e.g. 'applicationId=com.enonic.myapp'
+
+          -xslSource <xslSource>
+              Path to xsl file (relative to <XP_HOME>/data/export) for applying
+              transformations to node.xml before importing.
+
 **Example:**
 
 .. code-block:: none
 
   $ ./toolbox.sh import -a su:password -s myExport -t cms-repo:draft:/
+
+.. TIP::
+  An **XSL** file and a set of *name=value* parameters can be optionally passed for applying transformations to each ``node.xml`` file, before importing it.
+
+  This option could for example be used for renaming types or fields. The *.xsl* file must be located in the ``$XP_HOME/data/export`` directory.

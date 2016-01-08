@@ -51,7 +51,12 @@ The import REST service accepts a JSON in this format:
     "exportName": "<name>",
     "targetRepoPath": "<target-repo-path>",
     "importWithIds": <true|false>,
+    "importWithPermissions": <true|false>,
     "dryRun": <true|false>
+    "xslSource": "<xsl-file-path>"
+    "xslParams": {
+      "<name>": "<value>"
+    }
   }
 
 To ease the process, we have provided an :ref:`toolbox-import` tool.
