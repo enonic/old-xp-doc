@@ -1,0 +1,23 @@
+.. _http_controllers:
+
+HTTP Controllers
+=================
+
+The most common use of Serverside Javascript in Enonic XP are http controllers.
+Every :ref:`page`, :ref:`part`, :ref:`layout`, :ref:`service` etc must have a controller.
+
+Javascript controllers specifically, are invoked from the portal by exporting functions matching the desired HTTP Method it implements.
+As such, any controller must explicitly declare one or more export in order to handle requests:
+``GET``, ``POST``, ``DELETE`` are examples of such methods.
+
+For every request sent to the controller, the appropriate function will automatically be invoked.
+
+Example usage
+
+.. literalinclude:: code/controller-1.js
+    :language: javascript
+
+A handler function receives a parameter with a ``request`` object, and returns a ``response`` object.
+
+.. literalinclude:: code/controller-2.js
+    :language: javascript

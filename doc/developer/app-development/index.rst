@@ -1,13 +1,13 @@
 .. _app_development:
 
-Application Development
-=======================
+Applications
+============
 
-Site mostly consist of deployed apps.
-It is in the apps where functionality is added and structures are built.
-Here are some basic information on how to develop apps.
-For more information on the components of an app, please check out :ref:`site_components` and :ref:`schemas`.
+Enonic XP supports the concept of Applications - almost like a regular operating system. Apps can be installed, started, stopped and uninstalled.
+Applications are basically containers of functionality and code, but they may also include data - for instance to be imported when the application is started.
+Applications can even be used to build sites.
 
+In this chapter you will learn the basics of building applications, and the standard tools available to get the job done!
 
 .. toctree::
     :maxdepth: 1
@@ -16,4 +16,4 @@ For more information on the components of an app, please check out :ref:`site_co
     project/index
     deploy/index
     deploy/devmode
-    writing-lib/index
+  

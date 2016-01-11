@@ -23,4 +23,4 @@ When a localize function is called upon, a locale is resolved to decide which lo
 The following is considered, in this order:
 
 * Given as argument to function
-* Site-language
+* Language specified on site

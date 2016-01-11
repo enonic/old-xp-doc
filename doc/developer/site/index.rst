@@ -1,22 +1,23 @@
-.. _site_components:
+.. _site:
 
-Site Components
-===============
+Sites
+=====
 
-Sites are developed in apps.  In the :ref:`apps-basics-project`, an overview of the file structure for an app is given.
-This structure is rooted in the ``site`` folder, even though it is an app, because the app is a component in a site.
+Sites can be built from one (or more) applications.
+But only applications that contain a specific structure and a :ref:`site_descriptor` can be used for this purpose.
 
-Below is more information about the different components used to build a site in an app.
+This chapter will dive into the details on how to build sites and the various components of a site, such as pages and parts.
 
 .. toctree::
     :maxdepth: 1
 
-    configuration
-    view
+    site
+    content-types/index
+    input-types/index
+    input-types/relationship-types
     page/index
     part/index
     layout/index
     service
+    contributions
     error
-
-To add logic and flow, and make these components work together, check out our chapter on :ref:`serverside_javascript`.

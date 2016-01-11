@@ -3,15 +3,19 @@
 Schemas
 =======
 
-Schemas define the building blocks of the data and site structure.
-Content types, mixins and relationship types are data structures defined by schemas.  These are explained here.
+As the low level storage of Enonic XP is entirely schema-less, we have created a high-level schema concept that is used to configure many of the forms you see in the Enonic XP Admin.
 
-Schemas also include the ``site.xml``-file that defines the whole site, and the descriptors for the pages, parts and layout elements.
-For more on these schemas, see: :ref:`site_components`.
+Schemas are made up of the following main concepts:
+
+* A rich set of widgets called :ref:`input_types`
+* Build rich :ref:`schema_forms` by combining Input Types and layouts
+* Horizontal inheritance across forms through the use of :ref:`mixins`
 
 .. toctree::
     :maxdepth: 1
 
-    content-types
+    input-types
+    item-sets
+    layouts
     mixins
-    relationship-types
+    forms

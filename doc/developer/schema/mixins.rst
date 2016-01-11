@@ -1,4 +1,4 @@
-.. _content-domain-mixins:
+.. _mixins:
 
 Mixins
 ======

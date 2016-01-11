@@ -1,7 +1,7 @@
 .. _getting_started_guide:
 
-Getting Started Guide
-======================
+Getting Started
+===============
 
 So - you're looking for the fastest way to get Enonic XP up and running?
 

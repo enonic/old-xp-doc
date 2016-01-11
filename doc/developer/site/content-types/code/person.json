@@ -1,0 +1,22 @@
+{
+  "_id": "c814b68c-7dd3-4851-a35e-6709b07409d4",
+  "_name": "purple-tentacle",
+  "_path": "/superhero/authors/purple-tentacle",
+  "creator": "user:system:su",
+  "modifier": "user:system:su",
+  "createdTime": "2016-01-07T07:23:42.149Z",
+  "modifiedTime": "2016-01-07T07:26:49.129Z",
+  "type": "com.enonic.sampleapp:person",
+  "displayName": "Purple Tentacle",
+  "hasChildren": true,
+  "language": "en",
+  "valid": true,
+  "data": {
+    "photo": "10b6cf60-581a-43cd-aa76-30a0c3503a45",
+    "bio": "<p>Have great plans to take on the world</p>",
+    "email": "purple@dott.game"
+  },
+  "x": {},
+  "page": {},
+  "attachments": {}
+}

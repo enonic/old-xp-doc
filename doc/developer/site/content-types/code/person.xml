@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content-type>
+  <display-name>Person</display-name>
+  <super-type>base:structured</super-type>
+  <form>
+    <input type="imageSelector" name="photo">
+      <label>Photo</label>
+      <occurrences minimum="1" maximum="1"/>
+    </input>
+    <input type="HtmlArea" name="bio">
+      <label>Bio</label>
+       <occurrences minimum="1" maximum="1"/>
+    </input>
+    <input type="TextLine" name="email">
+      <label>Email</label>
+      <occurrences minimum="1" maximum="1"/>
+    </input>
+    <input type="TextLine" name="website">
+      <label>Website</label>
+      <occurrences minimum="0" maximum="1"/>
+    </input>
+    <input type="TextLine" name="twitter">
+      <label>Twitter Name</label>
+      <occurrences minimum="0" maximum="1"/>
+    </input>
+    <input type="TextLine" name="facebook">
+      <label>Facebook Name</label>
+      <occurrences minimum="0" maximum="1"/>
+    </input>
+  </form>
+</content-type>

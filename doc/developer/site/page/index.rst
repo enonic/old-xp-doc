@@ -6,7 +6,7 @@ Page
 A page component is the most basic building block of a site. Each page component must have a JavaScript controller file
 and optionally an XML descriptor and an HTML view file. These files can define regions in the page where parts and layouts may be
 added, or they can define a simple page without any compositions. Page components can be added to content individually
-(via the Content Manager, see :ref:`content-content-manager`) or they can be used to create page templates that automatically render supported content types.
+throught the Content Manager interface or they can be used to create page templates that automatically render supported content types.
 
 Any number of page templates can be created from a single page component. Thanks to the magic of page templates, even very large
 sites will typically have very few page components--perhaps one for all the HTML pages and one for RSS pages.
@@ -46,7 +46,7 @@ Controller
 
 A page controller handles requests to the page. The controller is a required file written in JavaScript and must be
 named ``[page-name].js``. A controller exports a method for each type of HTTP request that should be handled.
-The handle method has the request object as a parameter and returns the response object (see :ref:`apps-controller-http`).
+The handle method has the request object as a parameter and returns the response object (see :ref:`http_controllers`).
 
 .. literalinclude:: code/controller-1.js
    :language: javascript

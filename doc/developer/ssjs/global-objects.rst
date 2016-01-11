@@ -4,8 +4,7 @@
 Global JavaScript objects and functions
 =======================================
 
-The following are some globally available JavaScript functions and objects which any Enonic XP developer will find useful and should
-be familiar with.
+When using the Enonic XP serverside javascript framework, the following global functions and objects are available.
 
 App
 ---
@@ -102,4 +101,3 @@ The globally available ``exports`` keyword is used to expose funtionality from a
 This is part of the require.js spec.
 
 Simply use the ``exports`` keyword to expose functionality from any javascript file.
-

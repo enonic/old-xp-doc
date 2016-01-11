@@ -1,0 +1,9 @@
+<form>
+  <input name="choice1" type="ComboBox">
+    <label>Choice1</label>
+    <occurrences minimum="0" maximum="1"/>
+    <config>
+        ...
+    </config>
+  </input>
+</form>

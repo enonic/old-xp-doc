@@ -8,6 +8,7 @@ retrieving data, a rich search-API is paramount.
    :maxdepth: 1
 
    overview
+   index-instructions
    query-functions/index
    order-functions/index
    aggregations/index

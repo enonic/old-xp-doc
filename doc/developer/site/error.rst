@@ -24,7 +24,7 @@ The input parameter for the ``handleXXX`` and ``handleError`` functions is an er
 .. literalinclude:: code/error_param.json
    :language: json
 
-The expected returned value for the function is a ``response`` object (see :ref:`apps-controller-http`).
+The expected returned value for the function is a ``response`` object (see :ref:`http_controllers`).
 
 The error processing logic will try every handle-function in application order until it can get a result (not ``undefined`` or ``null``).
 This means that an error function can decide to not handle a specific error and let the next one deal with it.
