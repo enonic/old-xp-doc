@@ -14,7 +14,7 @@ This video demonstrates how to build site html parts using Javascript as control
 
 Here are some resources related to site development
 
-* :ref:`site`
+* :ref:`sites`
 * :ref:`content_types`
-* :ref:`view`
+* :ref:`views`
 * :ref:`part`

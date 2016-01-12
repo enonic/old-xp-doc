@@ -5,9 +5,9 @@ Forms
 =====
 
 The main purpose of the schema concept is to construct forms that can be edited through the admin interface or used programmatically, without coding a custom interface and complex controllers.
-A form is basically a composition layouts and input types. When a form is populated and submitted, the result will be a basic property structure that can be stored directly into :ref:`node-domain-nodes`. 
+A form is basically a composition layouts and input types. When a form is populated and submitted, the result will be a basic property structure that can be stored directly into :ref:`node-domain-nodes`.
 
-Some hands on examples where forms are used in the system are :ref:`content_types` and :ref:`site`.
+Some hands on examples where forms are used in the system are :ref:`content_types` and :ref:`sites`.
 
 Basic Setup
 -----------
@@ -31,4 +31,3 @@ When the form is rendered, it will in this case simply act as if everything in t
 
 .. literalinclude:: code/form-with-mixin.xml
     :language: xml
-

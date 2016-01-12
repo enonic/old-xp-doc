@@ -1,10 +1,10 @@
-.. _view:
+.. _views:
 
 Views
 =====
 
-Instead of composing the HTML, JSON or other output's in your javascript controllers, 
-it's often easier to use a full MVC (Model View Controller) approach. 
+Instead of composing the HTML, JSON or other output's in your javascript controllers,
+it's often easier to use a full MVC (Model View Controller) approach.
 
 Enonic XP supports pluggable view technologies, and ship the following view libraries out-of-the-box.
 

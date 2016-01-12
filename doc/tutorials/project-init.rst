@@ -15,5 +15,5 @@ This video demonstrates how to initialize a new application project using existi
 Here are some additional resources related to application development
 
 * :ref:`dev_guide`
-* :ref:`apps-basics-project`
+* :ref:`projects`
 * :ref:`libraries`

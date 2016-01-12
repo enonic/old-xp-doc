@@ -1,4 +1,4 @@
-.. _apps-basics-project:
+.. _project_structure:
 
 Project structure
 =================
@@ -20,7 +20,7 @@ Below is a sample project folder structure - all items are folders, except for `
             pages/
             parts/
             layouts/
-            view/
+            views/
             assets/
             content-types/
             mixins/
@@ -39,7 +39,7 @@ site/site.xml
   and the values for these settings can be updated in the administration
   console.
 
-  .. literalinclude:: ../../site/code/site.xml
+  .. literalinclude:: ../site/code/site.xml
      :language: xml
 
 site/lib/
@@ -60,7 +60,7 @@ site/layouts/
 
 site/views/
   Views can generally be placed anywhere you want, just keep in mind
-  what path to use when resolving them (see :ref:`view`).
+  what path to use when resolving them (see :ref:`views`).
 
 site/assets/
   Public folder for external css, javascript and static images.

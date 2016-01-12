@@ -15,12 +15,14 @@ here :ref:`api_ref_guide`.
 .. toctree::
    :maxdepth: 1
 
-   app-development/index
+   applications/index
    libraries/index
+   projects/index
    schema/index
    ssjs/index
+   views
+   assets
    site/index
-   view
    i18n/index
    node-domain/index
    search/index
