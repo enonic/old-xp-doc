@@ -1,14 +1,15 @@
-.. _error_page:
+.. _errors:
 
-Error Page
-==========
+Error Handling
+==============
 
-The error page for a site can be customized by defining one or more error handling scripts.
+Enonic XP provides a standard approach to handle errors.
 
-To add an error script, create a folder ``site/error`` in the application and place an ``error.js`` file within this folder.
+To add an error script, simply create a folder in your project ``src/main/resources/error`` and place an ``error.js`` file within this folder.
 The file follows the same pattern as controllers and filters. If certain methods are implemented and exported, they will be executed in case of errors during rendering.
 
-When there is an error while rendering a page, the system looks for an ``error.js`` script in all the applications configured for the site, in the order they are set on the site.
+If an error occurs during processing - the system looks for an ``error.js`` script within the relevant application - sites specifically it will go through all applications added to the site.
+
 If an ``error.js`` script is found, it looks for an exported method named ``handleXXX`` where ``XXX`` is the HTTP status-code of the error.
 If not found, it will try to find the generic error method ``handleError`` instead.
 

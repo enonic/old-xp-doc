@@ -20,8 +20,10 @@ here :ref:`api_ref_guide`.
    projects/index
    schema/index
    ssjs/index
-   views
    assets
+   services/index
+   views
+   errors/index
    site/index
    i18n/index
    node-domain/index
