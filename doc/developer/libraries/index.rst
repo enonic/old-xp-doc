@@ -12,7 +12,7 @@ So, a library may consist of all the same objects you find in applications such 
 Finding Libraries
 -----------------
 
-A number of standard and 3.rd party libraries are available with the core XP release, check out: :ref:`js-libraries`.
+A number of standard and 3rd party libraries are available with the core XP release, check out: :ref:`js-libraries`.
 You will also find a wide range of libraries on the Enonic Market - https://enonic.com/market/libraries
 
 Adding libraries
