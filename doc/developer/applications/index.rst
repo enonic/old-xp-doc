@@ -6,6 +6,7 @@ Applications
 Enonic XP supports the concept of Applications - almost like a regular operating system.
 
 Applications are self-contained, and have the following life-cycle:
+
 * installed
 * started
 * stopped
