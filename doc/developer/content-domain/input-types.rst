@@ -145,7 +145,7 @@ relationship
   This setting defines the name of which relationship-type to use.
   Default is ``system:reference``.
 
-allowType
+allowContentType
   This is used to limit the content types that may be selected for this input.
   Use one setting for each content-type.
 
