@@ -188,3 +188,12 @@ The DoS (denial of service) filter can be configured using
 .. literalinclude:: code/com.enonic.xp.web.dos.cfg
    :language: properties
    :caption: ``$XP_HOME/config/com.enonic.xp.web.dos.cfg``
+   
+Market Configuration
+------------------------
+
+The market-place for installing applications can be configured using the ``com.enonic.xp.market.cfg`` file
+
+.. literalinclude:: code/com.enonic.xp.market.cfg
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.market.cfg`` 
