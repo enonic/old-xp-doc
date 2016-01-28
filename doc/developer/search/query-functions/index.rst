@@ -10,4 +10,5 @@ Here's a description of all functions that can be used in a query.
 
    fulltext
    ngram
+   range
    
