@@ -1,10 +1,10 @@
-.. _widget:
+.. _widgets:
 
 Widget
 ======
 
 .. note:: **Work In Progress**
-   
+
 Widgets are user interface components that can be used by the various administrative tools.
 
 
@@ -30,4 +30,3 @@ To drive the widget, we will need a **controller**. The `controller <../controll
 
 .. literalinclude:: code/controller.js
    :language: javascript
-

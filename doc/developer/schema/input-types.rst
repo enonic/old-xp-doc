@@ -1,10 +1,13 @@
 .. _input_types:
 
 
-Standard Input Types
-====================
+Input Types
+============
 
-Input types are widgets with both a front-end and a back-enEach input type holds a specific type of data.  A general input type is defined like this:
+Input types are widgets used in combinations to buid forms. An input type has both a front-end and a back-end.
+Each input type will in the end return a property, with a specific value type.
+
+The following XML configuration is common for all input types:
 
 .. literalinclude:: code/input-type.xml
    :language: xml
@@ -32,7 +35,8 @@ config
   (``relationship-type`` -> ``relationshipType``).
 
 
-**Generic Input types**
+**Input types**
+
 
 
 CheckBox

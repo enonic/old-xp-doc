@@ -4,7 +4,7 @@
 Global JavaScript objects and functions
 =======================================
 
-When using the Enonic XP serverside javascript framework, the following global functions and objects are available.
+When using the Enonic XP framework, the following global functions and objects are available.
 
 App
 ---

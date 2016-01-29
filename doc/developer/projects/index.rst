@@ -3,7 +3,7 @@
 Projects
 ========
 
-Continue reading below to learn more about libraries
+This section brings you an overview of how to setup, build and deploy new projects for applications and libraries.
 
 .. toctree::
     :maxdepth: 1

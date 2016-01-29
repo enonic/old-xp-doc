@@ -28,4 +28,4 @@ here :ref:`api_ref_guide`.
    i18n/index
    node-domain/index
    search/index
-   widget/index
+   admin/index

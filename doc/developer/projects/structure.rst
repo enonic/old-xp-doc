@@ -13,65 +13,82 @@ Below is a sample project folder structure - all items are folders, except for `
     build.gradle
     src/
       main/
+        java/
         resources/
+          admin/
+            widgets/
+            tools/
+          assets/
+          lib/
+          mixins/
+          services/
           site/
             site.xml
-            lib/
             pages/
             parts/
             layouts/
-            views/
-            assets/
             content-types/
-            mixins/
-            relationship-types/
-            services/
+          views/
 
 Every file and folder has a specific function and meaning.
 
 build.gradle
-  `Gradle <https://gradle.org/>`_ script for building the module. This file describes the actual
+  `Gradle <https://gradle.org/>`_ script for building the application or library. This file describes the actual
   build process.
+
+src/main/java/
+  Optional folder where you place any java code that might be included in the project - following traditional Maven style development.
+
+src/main/resources/
+  This is where all non-java code is placed, and thus where you will typically be working with your XP projects.
+  All folders described below are relative to this folder
+
+admin/tools
+  This is where you place tool controllers. Tools are administrative user interfaces (apps) running in their own separate browser tab.
+  Create tools if you need a back-office utility to manage your applications or similar.
+
+admin/tools
+  Widgets are essentially user intarface components that can be embedded within selected admin tools.
+  I.e. you can create a widget that extends the Content Studio admin tool.
+
+assets/
+  Public folder for external css, javascript and static images etc etc
+
+lib/
+  This is the last place the global ``require`` javascript-function looks,
+  so it is a good place to put default javascript files here.
+
+mixins/
+  Mixin schema-types are placed here. A mixin can be used to add fields to
+  a content-type (see :ref:`mixins`).
+
+services/
+  Services are a special type of http controllers that will be mounted on a fixed url patter that looks like this: _/service/<myapp>/<myservice>.
+  You may use services like any other Javascript controller in the system
 
 site/site.xml
   The ``site.xml`` file contains basic information for a site created with the application.
   Settings for the application can be defined in the ``config`` element
-  and the values for these settings can be updated in the administration
-  console.
+  and the values for these settings can be updated using the Content Studio tool.
 
   .. literalinclude:: ../site/code/site.xml
      :language: xml
 
-site/lib/
-  This is the last place the global ``require`` javascript-function looks,
-  so it is a good place to put default libraries here.
-
 site/pages/
-  Page definitions should be placed here. They will be used to create page
-  templates in the repository (see :ref:`page`).
+  Page controllers are placed here. They will be used to render pages
+  and page templates (see :ref:`page`).
 
 site/parts/
-  Part definitions should be placed here. Parts are objects that can
-  be placed on a page (see :ref:`part`).
+  Part controllers should be placed here. Parts are dynamically configurable components that can
+  be placed on pages (see :ref:`part`).
 
 site/layouts/
-  Layout definitions should be placed here. Layouts are definitions that
-  restricts the placement of parts (see :ref:`layout`).
-
-site/views/
-  Views can generally be placed anywhere you want, just keep in mind
-  what path to use when resolving them (see :ref:`views`).
-
-site/assets/
-  Public folder for external css, javascript and static images.
+  Layout controllers should be placed here. Layouts are similar to parts, but in addition has one or more regions.
+  Regions enable placements of other components inside the layout. (see :ref:`layout`).
 
 site/content-types/
   Content schemas-types are placed here. Used to create structured content (see :ref:`content_types`).
 
-site/mixins/
-  Mixin schema-types are placed here. A mixin can be used to add fields to
-  a content-type (see :ref:`mixins`).
-
-site/relationship-types/
-  Relationship-types are placed here. They are used to form relations between
-  contents (see :ref:`relationship_types`).
+views/
+  Views are any kind of files that are used for rendering. The folder is optional, as view files can
+   be placed anywhere you want, just keep in mind what path to use when resolving them (see :ref:`views`).

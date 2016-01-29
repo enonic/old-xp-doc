@@ -3,21 +3,41 @@
 Applications
 ============
 
-Enonic XP supports the concept of Applications - almost like a regular operating system.
+Like anything that calls itself an operating system - Enonic XP has Applications.
+The applications can be installed and run on a single server, or an entire cluster.
 
-Applications are self-contained, and have the following life-cycle:
+It is important to note that applications are not limited being "Web Applications" -
+they can be running server jobs, provide internal API's to other applications, offer HTTP services, include custom Admin Tools, extend other tools or applications, or be used to build sites.
+
+Applications may even carry data, for instance to initializing a repository or populate a new site.
+
+Life Cycle
+----------
+Applications and have the following life-cycle:
 
 * installed
 * started
 * stopped
-* uninstalled.
+* uninstalled
 
-Applications are basically containers of functionality and code, but may even include data - for instance to be imported when the application is started.
+When installing applications in an XP cluster - the application is uploaded and stored in the system repository - and then started on all nodes.
+If an application contains an initialization script, this script will only be executed on the master node - running only once.
 
-An application can have just about any kind of purpose. :ref:`sites` for instance can be created from one (or more) applications. Applications that have site support will explicitly declare this in their project structure.
-
-You may add :ref:`libraries` to your applications and speed up development by re-using code across projects and organizations.
-
-An application artifact (file) is typically a JAR file (.jar). This is short for Java Archive.
-Enonic XP is build on top of Java and the OSGi framework, so developers with special requirements may utilize this capability.
+Composition
+-----------
+An application file is typically a JAR (.jar). This is short for Java Archive.
+Enonic XP is build on top of Java and the powerful OSGi framework, so developers with special requirements may utilize capabilities such as exposing and consuming services from other applications.
 However, since Enonic XP is designed to run :ref:`serverside_javascript` most :ref:`projects` will be completely free of Java.
+
+To speed up development and enable a high degree of re-use - applications can be composed of :ref:`libraries` - in addition to your own code naturally.
+Libraries can be built almost like you create applications. Libraries (and applications) are shared through so-called Maven repositories. An example is https://repo.enonic.com.
+Anyone may configure and run their own repository - for internal as well as external use.
+
+For your amusement, we can also tell you that Enonic XP itself is composed from more than 50 different applications - making the platform extremely modular.
+
+Other Resources
+---------------
+To learn more about applications and how they are build - continuing reading :ref:`dev_guide` is recommended, but pay special attention to the following chapters:
+
+* :ref:`projects`
+* :ref:`libraries`

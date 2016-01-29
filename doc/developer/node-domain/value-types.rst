@@ -20,14 +20,14 @@ String
   Example
     ``'myString'``
 
-GeoPoint
-  Represents a geographical point, given in latitude and longitude.
+BinaryReference
+  Reference to a binary object.
 
   Index value-type
-    ``GeoPoint``
+    ``String``
 
   Example
-    ``'59.9090442,10.7423389'``
+    ``'my-binary-ref'``
 
 Boolean
   A value representing ``true`` or ``false``.
@@ -47,14 +47,15 @@ Double
   Example
     ``11.5``
 
-Long
-  64-bit two's complement integer.
+
+GeoPoint
+  Represents a geographical point, given in latitude and longitude.
 
   Index value-type
-    ``Double``
+    ``GeoPoint``
 
   Example
-    ``1234``
+    ``'59.9090442,10.7423389'``
 
 Instant
   A single point on the time-line.
@@ -65,15 +66,6 @@ Instant
   Example
     ``2015-03-16T10:00:02Z``
 
-LocalDateTime
-  A date-time representation without timezone.
-
-  Index value-type
-    ``String``
-
-  Example
-    ``2015-03-16T10:00:02``
-
 LocalTime
   A time representation without timezone.
 
@@ -83,23 +75,23 @@ LocalTime
   Example
     ``10:00:03``
 
-HTMLPart
-  Accepts a String containing valid HTML.
+LocalDateTime
+  A date-time representation without timezone.
 
   Index value-type
     ``String``
 
   Example
-    ``'<h1>my header</h1>'``
+    ``2015-03-16T10:00:02``
 
-XML
-  Accepts a String containing valid XML.
+Long
+  64-bit two's complement integer.
 
   Index value-type
-    ``String``
+    ``Double``
 
   Example
-    ``'<property>myPropertyValue</property>'``
+    ``1234``
 
 Reference
   Holds a reference to other nodes in the same repository.
@@ -110,15 +102,19 @@ Reference
   Example
     ``'0b7f7720-6ab1-4a37-8edc-731b7e4f439e'``
 
-BinaryReference
-  Reference to a binary object.
+Set
+  A special value type that holds properties as it's value, allowing
+  nested levels of properties, creating tree structures within a single node.
+
+  Index value-type
+    N/A
+
+
+XML
+  Accepts a String containing valid XML.
 
   Index value-type
     ``String``
 
   Example
-    ``'my-binary-ref'``
-
-Set
-  A special value type that holds properties, allowing
-  nested levels of properties.
+    ``'<property>myPropertyValue</property>'``

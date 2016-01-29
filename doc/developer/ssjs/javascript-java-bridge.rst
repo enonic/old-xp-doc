@@ -30,7 +30,7 @@ This method has now been made a function on the ``bean`` bean, and may be invoke
    };
 
 which results in a global JavaScript function ``readLines``.  This example also shows the use of the ``toNativeObject`` method, which in
-this case, converts a Java String array to a JSon object.
+this case, converts a Java String array to a JSON object.
 The reference documentation for the ``__`` object can be found here: `The __ object`_.
 
 .. _The __ object: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/-__.html

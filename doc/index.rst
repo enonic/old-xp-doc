@@ -25,7 +25,7 @@ Enjoy! - *The Enonic Development Team*
    :maxdepth: 1
    :caption: Appendix
 
-   appendix/changes/index
+   appendix/release-notes/index
    appendix/upgrade/index
    appendix/faq
    appendix/glossary

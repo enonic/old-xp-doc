@@ -1,13 +1,15 @@
+.. _gradle_build_script:
+
 Build script
 ============
 
-We have standardized on Gradle as the main build tool. This is a highly flexible Java-based utility that build on the popular Maven project tools and code repository structures.
-Enonic provides a Gradle plugin that simplifies the build process, if you used the starter-base project to initialize your project, you will have all the basic tools you need to get going.
+By default, Enonic uses Gradle as the main build tool. This is a highly flexible Java-based utility that build on the popular Maven project tools and code repository structures.
+Enonic provides a Gradle plugin that simplifies the build process greatly, if you used the starter-base project to initialize your project, you will have all the basic tools you need to get going.
 
 Running a build
 ---------------
 
-If you have not installed Gradel, the fastest way to get going is to execute the gradle wrapper script.
+If you have not installed Gradle, the fastest way to get going is to execute the gradle wrapper script.
 
 Move into your project root folder and execute the following command:
 

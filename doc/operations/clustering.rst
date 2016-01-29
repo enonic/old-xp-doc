@@ -1,7 +1,7 @@
 .. _clustering:
 
 Clustering
-=============
+==========
 
 Introduction
 -------------
@@ -30,39 +30,39 @@ and it will not start looking for nodes in the network before you configures it 
 To test a cluster on your local machine, your need to do the following:
 
  1. **Get two XP installations:** Download / copy existing $XP_DISTRO to a second $XP_DISTRO folder.
- 
+
 Typically, you will already have a XP-installation by now, so just copy the $XP_DISTRO/folder to make another node.
- 
+
  2. **Share data:** Set a common place for storing data in both XP instances config:
 
 In ``$XP_DISTRO/home/config/com.enonic.xp.repo.cfg`` set the following property to point to a common directory:
- 
- :: 
- 
+
+ ::
+
     blobStore.dir = /some/common/path
- 
+
  3. **Give each node its own HTTP-port:** Since you will run two nodes on the same machine, you also need to set two different HTTP-ports to be able to run two instances at once:
 
 In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following property to different values for the two nodes, typically ``8080`` and ``8090``
- 
- :: 
- 
+
+ ::
+
     http.port = somePort
 
  4. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat`` they will connect and you should have a live cluster on your machine. You can check the current cluster info at:
 
- :: 
-  
+ ::
+
   http://localhost:8080/status/cluster
- 
+
 
 .. NOTE::
 
 	By default, if no XP_HOME environment variable is set, the XP_HOME used is the one located in the XP_DISTRO/home folder which will work nicely for the above example. If you have exported a XP_HOME in the shell where you try to start the server, this will override the default settings.
 	So for the above test, unset the XP_HOME variable if already set if needed:
-	
+
 	::
-	
+
 	   unset XP_HOME
 
 
@@ -85,14 +85,14 @@ There are some key elements to consider when setting up a cluster:
  #. Monitoring the cluster -> :ref:`cluster-monitoring`
  #. Deploying applications -> :ref:`deploying-apps`
  #. Securing data -> :ref:`cluster-backup`
- 
+
 
 .. _shared-storage:
 
 Shared storage Configuration
 ----------------------------
 
-For now, the nodes in the cluster needs a shared storage to store data as files. Setting up this is highly individual for different operating systems and infrastructures, but as a basic guidline 
+For now, the nodes in the cluster needs a shared storage to store data as files. Setting up this is highly individual for different operating systems and infrastructures, but as a basic guidline
 
   #. Get access to a shared or distributed file system and mount it on the nodes that will be part of the cluster
   #. Configure ``$XP_HOME/config/com.enonic.xp.repo.cfg`` to point to the mounted storage:
@@ -103,7 +103,7 @@ For now, the nodes in the cluster needs a shared storage to store data as files.
 
 
 .. _network-config:
- 
+
 Network configuration
 ----------------------
 
@@ -152,7 +152,7 @@ Sample config
    Make sure that the bind-addresses matches the ones specified in the unicast-list. If it still doesnt work, its time to blame the firewall or consult the :ref:`troubleshooting`
 
 .. _replica-setup:
- 
+
 Replica setup
 -------------------
 
@@ -164,7 +164,7 @@ For a cluster to perform, all nodes must be able to do its share of work. Enonic
 By default, the indices in Enonic XP has one replica configured. When having a cluster with more than two nodes, this number has to be increased to ensure that each node has a replica of the indices.
 
 The number of replicas can be set runtime with the Toolbox CLI :ref:`set-replicas`, and the recommended settings for replicas is ``number of nodes - 1``
- 
+
 So for a 3 nodes cluster, the number of replicas should be set to 2.
 
 .. _cluster-partition-settings:
@@ -179,13 +179,13 @@ In a split-brain scenario, nodes gets divided into smaller clusters that dont co
 
 <<<Figure>>>
 
-If the nodes on location-1 are disconnected from the master node on location-2, they will regroup and select a new master on location-1 and still provide service. 
+If the nodes on location-1 are disconnected from the master node on location-2, they will regroup and select a new master on location-1 and still provide service.
 The nodes on location-2 will just assume that the nodes in location-1 is dead, so they will also continue serving request, but they have no way of syncronizing data between the locations. This will break the integrity of the cluster and make data invalid.
 
 
 To avoid this situation, there are a couple of basic properties of a cluster that should be ensured:
 
- #. Beyond a two node cluster, there should be an odd number of nodes. So 1,2,3,5,7 etc are all acceptable cluster configurations. 
+ #. Beyond a two node cluster, there should be an odd number of nodes. So 1,2,3,5,7 etc are all acceptable cluster configurations.
  #. When nodes are forming separate smaller clusters, only the cluster-partition with the majority of nodes should be fully operational and accept writes.
  #. The minority cluster partitions can be allowed to serve read-only requests if that is acceptable for the provided service
 
@@ -207,20 +207,20 @@ So what about a 2 node cluster? It will be impossible to avoid a possible split-
 .. TIP::
 
     **Why nodes leave the cluster**
-  
+
     There are 2 main reasons why cluster nodes leaves the cluster
-	
+
      #. Network failure
      #. Node not responding
-     
+
     *Network failures*
-   
-    
+
+
     Network failures are the main reason for cluster stability-issues. The problems could having any number of reasons, from a router breaking down to complex scenarios where e.g a firewall cuts the connection in one direction between two nodes
-    
+
     *Node not responding*
-    
-    
+
+
     If a node does not get a response on a ping to the master node within a set timeout, it will consider it as dead, and invoke an election process. Likewise, the master node expects that a slave node respons within a certain amount of time.
     This is usually caused by a node doing a stop-the-world garbage collection, and not beeing able to respond to the request at all for a period of time.
 
@@ -240,14 +240,14 @@ In a busy cluster, the master-nodes will have to do a lot of work to ensure that
 
 Since the cluster stability depends on a healthy master node, it may be a good idea to set aside a number of nodes as *dedicated master nodes*. These dedicated master nodes should not be handling external requests, but rather concentrate on keeping the cluster nodes in sync and stable.
 
-A node can be configured to be allowed to act as a master-node or not by the setting ``node.master``. 
+A node can be configured to be allowed to act as a master-node or not by the setting ``node.master``.
 
 A dedicated master node should have the following settings:
 
-:: 
+::
 
   node.master = true
-  node.data = false 
+  node.data = false
 
 
 Data nodes
@@ -257,7 +257,7 @@ Data nodes are the workhorses of the cluster. They will handle the bulk load of 
 
 A dedicated data node should have the following settings:
 
-:: 
+::
 
   node.master = false
   node.data = true
@@ -268,7 +268,7 @@ A dedicated data node should have the following settings:
 Node recovery settings
 -----------------------
 
-Node recovery happes when a node starts or reconnects to the cluster after a e.g a network shortage. 
+Node recovery happes when a node starts or reconnects to the cluster after a e.g a network shortage.
 
 Consider a cluster of 2 nodes. When a node starts for the first time, it will try to connect to a cluster. If no master found, it will elect itself as master, then proceed to intitalize the index-data locally. If it do find an existing master node, it will require the master to provide it with data. This is all good, but there may occure situations where for instance a new node in an existing cluster may start before the existing nodes, and start intitializing data before the nodes with existing data can inform the new node that there is already data in the cluster.
 
@@ -293,7 +293,7 @@ Cluster monitoring
 See :ref:`cluster-monitoring`
 
 .. _deploying-apps:
- 
+
 Deploying Apps in cluster
 -------------------------
 
@@ -334,7 +334,7 @@ Sample configurations
 .. literalinclude:: code/3-node-cluster-config.properties
    :language: properties
 
-5-nodes cluster 
+5-nodes cluster
 ****************
 
 .. literalinclude:: code/5-node-cluster-config.properties
@@ -345,13 +345,3 @@ Sample configurations
 
 .. literalinclude:: code/7-node-cluster-dedicated.properties
    :language: properties
-
-
-
-
-
-
-
-
-
-
