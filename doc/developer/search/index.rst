@@ -14,3 +14,4 @@ retrieving data, a rich search-API is paramount.
    aggregations/index
    date-and-time/index
    query-paths
+   query-references
