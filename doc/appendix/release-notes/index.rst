@@ -8,7 +8,7 @@ Enonic Market
 Enonic Market is now available, Indirectly a part of Enonic XP - providing easy access to applications, libraries and starters built by Enonic or other 3rd party vendors.
 Market applications can even be installed directly from XP. Check it out: https://enonic.com/market
 
-.. image:: images/enonic-market.png
+.. image:: images/enonic-market.jpg
 
 
 New App installer
@@ -19,7 +19,7 @@ For clustered installations, applications will automatically be distributed and 
 
 Read more about :ref:`gradle_deploy_app`
 
-.. image:: images/install.png
+.. image:: images/install.jpg
 
 
 Pluggable Admin Tools
@@ -36,7 +36,7 @@ The launcher panel is easily embedded in other tools - provide global navigation
 The home page currently only serves the purpose of being a start page for choosing other tools -
 but will provide exiting features in upcoming releases.
 
-.. image:: images/home.png
+.. image:: images/home.jpg
 
 
 Reference Search
