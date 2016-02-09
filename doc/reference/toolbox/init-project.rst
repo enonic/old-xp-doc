@@ -15,6 +15,7 @@ repository, and adapting its build file properties (gradle.properties).
 
   SYNOPSIS
           toolbox init-project [-a <authentication>]
+              [(-c <checkout> | --checkout <checkout>)]
               [(-d <destination> | --destination <destination>)]
               (-n <name> | --name <name>)
               (-r <repository> | --repository <repository>)
@@ -23,6 +24,9 @@ repository, and adapting its build file properties (gradle.properties).
   OPTIONS
           -a <authentication>
               Optional authentication token for basic authentication (user:password)
+
+          -c <checkout>, --checkout <checkout>
+              Branch or commit to checkout.
 
           -d <destination>, --destination <destination>
               Optional destination path to create your project, if not specified current directory will be used
@@ -41,7 +45,7 @@ repository, and adapting its build file properties (gradle.properties).
 
 ::
 
-  $ toolbox.sh init-project -d ~/Dev/xp/apps/myApp -n com.company.myapp -v 0.9.0 -r https://github.com/enonic/starter-base.git
+  $ toolbox.sh init-project -d ~/Dev/xp/apps/myApp -n com.company.myapp -v 0.9.0 -r https://github.com/enonic/starter-base.git -c 1.0
 
 ::
 
