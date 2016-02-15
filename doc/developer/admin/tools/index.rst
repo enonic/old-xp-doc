@@ -33,7 +33,7 @@ Controller
 To drive the tool, we will need a **controller** (See :ref:`http_controllers`). The controller typically produces the initial tool html.
 Depending on the tool implementation it may also handle sub-requests from the tool.
 
-  admin/tools/[tool-name]/[tool-name].js
+The descriptor file must have the same name as the `tool` folder that contains it ``admin/tools/[tool-name]/[tool-name].js``:
 
 .. literalinclude:: code/controller.js
    :language: javascript
