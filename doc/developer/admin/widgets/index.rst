@@ -1,7 +1,7 @@
 .. _widgets:
 
-Widget
-======
+Widgets
+=======
 
 .. note:: **Work In Progress**
 
