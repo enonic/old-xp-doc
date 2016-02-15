@@ -10,6 +10,7 @@ By default, the following tools are installed and listed in the launcher : "Appl
 
 .. image:: images/launcher.png
 
+
 Descriptor
 ----------
 
@@ -21,11 +22,13 @@ The descriptor file must have the same name as the `tool` folder that contains i
 .. literalinclude:: code/descriptor.xml
    :language: xml
 
+
 Icon
 ----
 
 An SVG icon can be associated to the tool to be displayed in the launcher
 The icon file must have the same name as the `tool` folder that contains it ``admin/tools/[tool-name]/[tool-name].svg``:
+
 
 Controller
 ----------
