@@ -1,5 +1,5 @@
 <widget>
-  <display-name>Google Analytics</display-name>
+  <display-name>My first widget</display-name>
   <interfaces>
     <interface>com.enonic.xp.content-manager.context-widget</interface>
   </interfaces>
