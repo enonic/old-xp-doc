@@ -1,6 +1,6 @@
 <widget>
   <display-name>My first widget</display-name>
   <interfaces>
-    <interface>com.enonic.xp.content-manager.context-widget</interface>
+    <interface>contentstudio.detailpanel</interface>
   </interfaces>
 </widget>

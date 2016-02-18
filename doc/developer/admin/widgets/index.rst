@@ -16,7 +16,7 @@ Descriptor
 The widget ``descriptor`` defines the display name and the interfaces it matches.
 
 An interface is simply a unique identifier that is used to create a link between a tool and the widget.
-For example, for your widget to be displayed in the "Content Studio" detail panel, add the interface "com.enonic.xp.content-manager.context-widget"
+For example, for your widget to be displayed in the "Content Studio" detail panel, add the interface "contentstudio.detailpanel"
 
 The descriptor file must match the widget name, i.e. ``admin/widgets/[widget-name]/[widget-name].xml``:
 
