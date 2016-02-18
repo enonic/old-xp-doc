@@ -23,7 +23,6 @@ here :ref:`api_ref_guide`.
    assets
    services/index
    views
-   errors/index
    site/index
    i18n/index
    node-domain/index

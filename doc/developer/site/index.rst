@@ -19,3 +19,4 @@ This chapter will dive into the details on how to build sites and the various co
     part/index
     layout/index
     contributions
+    errors/index
