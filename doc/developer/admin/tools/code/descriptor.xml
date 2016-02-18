@@ -1,9 +1,8 @@
 <tool>
-  <display-name>Content Studio</display-name>
-  <description>Manage content and sites</description>
+  <display-name>My Tool</display-name>
+  <description>Control my stuff</description>
   <allow>
     <principal>role:system.admin</principal>
-    <principal>role:cms.admin</principal>
-    <principal>role:cms.cm.app</principal>
+    <principal>role:myapp.myrole</principal>
   </allow>
 </tool>
