@@ -3,8 +3,6 @@
 Widgets
 =======
 
-.. note:: **Work In Progress**
-
 Widgets are user interface components that can be used by the various administrative tools.
 
 

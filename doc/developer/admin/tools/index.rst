@@ -3,8 +3,6 @@
 Tools
 =====
 
-.. note:: **Work In Progress**
-
 Tools are independent user interfaces used to administrate your Enonic XP installations.
 By default, the following tools are installed and listed in the launcher : "Applications", "Content Studio" and "Users".
 
@@ -15,7 +13,6 @@ Descriptor
 ----------
 
 The tool **descriptor** is where is defined the information displayed by the launcher and the rights required to access the tool.
-If the tool is not to be displayed in the launcher, omit the optional fields "display-name" and "description"
 
 The descriptor file must have the same name as the `tool` folder that contains it ``admin/tools/[tool-name]/[tool-name].xml``:
 

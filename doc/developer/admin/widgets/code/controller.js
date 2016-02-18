@@ -1,16 +1,6 @@
-var portal = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
-
-function handleGet(req) {
-    var view = resolve('ga-report.html');
-
-    var params = {
-        googleAnalyticsCssUrl: portal.assetUrl({path: 'css/google-analytics.css'})
-    }
-
+exports.get = function (req) {
     return {
-        contentType: 'text/html',
-        body: thymeleaf.render(view, params)
+        body: '<html><head></head><body><h1>My first widget</h1></body></html>',
+        contentType: 'text/html'
     };
-}
-exports.get = handleGet;
+};
