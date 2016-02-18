@@ -1,20 +1,43 @@
 .. _tools:
 
-Tools
-=====
+Admin Tools
+===========
 
-Tools are independent user interfaces used to administrate your Enonic XP installations.
-By default, the following tools are installed and listed in the launcher : "Applications", "Content Studio" and "Users".
+Admin Tools are independent "back office" user interfaces designed to manage Enonic XP or installed applications.
+Each tool will runs will run in it's own browser tab - here are some of the reasons for this:
 
-.. image:: images/launcher.png
+* Faster user interfaces and better deep-linking support
+* Developers can use their favorite front-end frameworks
+* Simplified debugging
+
+**Standard Tools**
+
+Enonic XP ships with the following tools by default:
+
+* Home (The default tool)
+* Applications (Install, stop, start and uninstall applications)
+* Content Studio (Create and manage content and sites)
+* Users (Create, setup and manage users, groups and roles)
+
+**Launcher**
+
+Navigation between the various Admin Tools is done via the "Launcher Panel", Accessible from the top right corner.
+This icon and the Launcher panel should be available across all Admin Tools.
+
+.. image:: images/launcher.jpg
+
+
+
+To create a new Admin Tool, you must create a new folder in your project structure, i.e.  ``admin/tools/[tool-name]``.
+Then you must place a descriptor, an icon and a controller there.
 
 
 Descriptor
 ----------
 
-The tool **descriptor** is where is defined the information displayed by the launcher and the rights required to access the tool.
+The tool ``descriptor`` defines the basic info to be displayed in the launcher and which roles are required to access the tool.
 
-The descriptor file must have the same name as the `tool` folder that contains it ``admin/tools/[tool-name]/[tool-name].xml``:
+The descriptor file must have the same name as the tool, i.e. ``admin/tools/[tool-name]/[tool-name].xml``:
 
 .. literalinclude:: code/descriptor.xml
    :language: xml
@@ -23,8 +46,8 @@ The descriptor file must have the same name as the `tool` folder that contains i
 Icon
 ----
 
-An SVG icon can be associated to the tool to be displayed in the launcher
-The icon file must have the same name as the `tool` folder that contains it ``admin/tools/[tool-name]/[tool-name].svg``:
+You should add an SVG icon to the tool. This will be displayed in the launcher panel together with the info from the descriptor.
+The icon file must have the same name as the tool, i.e. ``admin/tools/[tool-name]/[tool-name].svg``:
 
 
 Controller
@@ -33,7 +56,7 @@ Controller
 To drive the tool, we will need a **controller** (See :ref:`http_controllers`). The controller typically produces the initial tool html.
 Depending on the tool implementation it may also handle sub-requests from the tool.
 
-The descriptor file must have the same name as the `tool` folder that contains it ``admin/tools/[tool-name]/[tool-name].js``:
+The controller must have the same name as the tool, i.e. ``admin/tools/[tool-name]/[tool-name].js``:
 
 .. literalinclude:: code/controller.js
    :language: javascript

@@ -3,17 +3,22 @@
 Widgets
 =======
 
-Widgets are user interface components that can be used by the various administrative tools.
+Widgets are user interface components that can be used to extend various Admin Tools.
+Currently, the only available extension point for widgets are detail panels in the Content Studio tool.
 
+
+To create a widget, you must create a new folder in your project structure, i.e.  ``admin/widgets/[widget-name]``.
+Then you must place a descriptor and a controller there.
 
 Descriptor
 ----------
 
-The widget **descriptor** is where is defined the display name and its interfaces.
-The interfaces are used to create a link between a tool and the widget.
-For example, for your widget to be displayed in the context panel of the tool "Content Studio", add the interface "com.enonic.xp.content-manager.context-widget"
+The widget ``descriptor`` defines the display name and the interfaces it matches.
 
-The descriptor file must have the same name as the `widget` folder that contains it ``admin/widgets/[widget-name]/[widget-name].xml``:
+An interface is simply a unique identifier that is used to create a link between a tool and the widget.
+For example, for your widget to be displayed in the "Content Studio" detail panel, add the interface "com.enonic.xp.content-manager.context-widget"
+
+The descriptor file must match the widget name, i.e. ``admin/widgets/[widget-name]/[widget-name].xml``:
 
 .. literalinclude:: code/descriptor.xml
    :language: xml
@@ -22,10 +27,10 @@ The descriptor file must have the same name as the `widget` folder that contains
 Controller
 ----------
 
-To drive the widget, we will need a **controller** (See :ref:`http_controllers`). The controller typically produces the initial widget html.
+To drive the widget, we will need a ``controller`` (See :ref:`http_controllers`). The controller typically produces the initial widget html.
 Depending on the widget implementation it may also handle sub-requests from the widget.
 
-The descriptor file must have the same name as the `widget` folder that contains it ``admin/widgets/[widget-name]/[widget-name].js``:
+The controller file must match the widget name, i.e. ``admin/widgets/[widget-name]/[widget-name].js``:
 
 .. literalinclude:: code/controller.js
    :language: javascript

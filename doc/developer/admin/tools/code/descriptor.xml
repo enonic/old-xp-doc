@@ -1,7 +1,8 @@
 <tool>
-  <display-name>My first tool</display-name>
-  <description>My first tool</description>
+  <display-name>My Tool</display-name>
+  <description>Control my stuff</description>
   <allow>
     <principal>role:system.admin</principal>
+    <principal>role:myapp.myrole</principal>
   </allow>
 </tool>
