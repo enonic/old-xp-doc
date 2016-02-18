@@ -13,5 +13,5 @@ So - you're looking for the fastest way to get Enonic XP up and running?
    :maxdepth: 1
 
    cloud
-   installation
+   download
    docker

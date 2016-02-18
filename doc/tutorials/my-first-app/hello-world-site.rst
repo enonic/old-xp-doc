@@ -2,9 +2,8 @@ Create the Hello World Site
 ===========================
 
 .. |monitoricon| image:: images/icon-monitor.png
-.. |appsicon| image:: images/icon-apps.png
 
-Our next goal is to set up a "Hello World" site in the Content Manager app,
+Our next goal is to set up a "Hello World" site in Content Studio,
 but first we must add some initial configuration to our project.
 
 Site descriptor
@@ -54,11 +53,11 @@ The `view`  below is a simple HTML file. This file will be updated later to hand
 Create Site
 -----------
 
-Now that the files are in place, we can create the site using the Content Manager interface. You can
-switch between admin apps with the button on the far right of the toolbar that looks like a square made of dots.
+Now that the files are in place, we can create the site using Content Studio.
+Switch between different tools using top right icon, it will open the Launcher panel.
 
-#. In your browser, navigate to the Content Manager admin app. (Use the square dots icon |appsicon| in the toolbar to switch between admin apps.)
-#. Click "New" and select "Site" from the list of content types. This opens a tab within the page for editing the `site` content.
+#. In your browser, navigate to the Content Studio tool. (Use menu icon at top right)
+#. Click "New" and select "Site" from the list of content types (Opens a tab for editing the new site).
 #. Fill in the form with Display Name: "Hello World".
 #. Select your "MyApp" application in the "Applications" dropdown.
 #. Open the Page Editor with this button |monitoricon| in the toolbar.

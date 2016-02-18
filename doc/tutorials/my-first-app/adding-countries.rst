@@ -16,7 +16,7 @@ The content type defines the form (and underlying schema) of items you manage.
   :language: xml
   :caption: Country content type - site/content-types/country/country.xml
 
-Each content type can have a custom icon that will be visible in the Content Manager interface. Though not required, content icons can be helpful
+Each content type can have a custom icon that will be visible in the Content Studio interface. Though not required, content icons can be helpful
 for content editors.
 
 3. Copy the image below to the the same folder (content-types/country) with the name `country.png`.
@@ -24,7 +24,7 @@ for content editors.
 .. image:: images/country.png
 
 This content type defines form inputs for **description** and **population**. All content has a built-in field for **Display Name**. When
-the app is redeployed, this content type will produce the form seen below in the Content Manager app.
+the app is redeployed, this content type will produce the form seen below in the Content Studio app.
 
 .. image:: images/country-content-form.png
 

@@ -5,7 +5,7 @@ Add your favorite country
 .. |monitoricon| image:: images/icon-monitor.png
 
 Now that the "Country" content type is installed (and we have a part to display them), we can create
-new countries using the Content Manager interface.
+new countries using the Content Studio interface.
 
 1. Right-click on the "Hello World" site from the navigation tree and select "New". The "Create Content" dialogue will open.
 2. Click "Country" from the list of content types.

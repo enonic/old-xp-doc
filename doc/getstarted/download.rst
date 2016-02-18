@@ -53,7 +53,7 @@ Enonic XP is available in a simple universal distribution file - running on all 
 * `Download Enonic XP distribution <https://enonic.com/try-now#download-now>`_
 * Unzip the file to a suitable location
 
-Command-line version::
+Command-line version (OSX/Linux only)::
 
   curl -O http://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip
   unzip distro-${release}.zip
@@ -86,22 +86,18 @@ Log In
 ------
 
 * Point your browser to ``http://localhost:8080``
+* Log in with username ``su`` and password ``password``.
 
-.. include:: login.rst
+After logging in you should see the following screen, with the launcher panel to the right:
 
+.. image:: images/admin.jpg
 
 Install Superhero Blog
 ----------------------
 
-This is a simple blog, basically emulating Wordpress - even using one of their nice themes. Follow these steps to try it out:
-
-**Deploy App**
-
-* `Download the Superhero Blog Application <http://repo.enonic.com/public/com/enonic/theme/superhero/1.1.0/superhero-1.1.0.jar>`_
-* Copy the application file into [XP Installation Folder]/home/deploy/
+.. include:: install.rst
 
 .. include:: start-blogging.rst
-
 
 Next Steps
 ----------

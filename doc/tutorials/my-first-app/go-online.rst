@@ -10,7 +10,7 @@ Now that your "Hello World" is complete, it's time to publish.
 
 When publishing content, all the selected items and changes are "cloned" from draft to the master branch (:ref:`node-domain-repository`).
 
-You will always see the draft version of content in the preview window and the Page Editor of the Content Manager.
+You will always see the draft version of content in the preview window and the Page Editor of the Content Studio.
 If you have placed your site on root level, you can also see your live site at this url:
 ``http://localhost:8080/portal/master/hello-world``.
 

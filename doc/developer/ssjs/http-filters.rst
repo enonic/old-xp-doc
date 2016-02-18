@@ -35,7 +35,7 @@ The order in which the filters are executed depends on the filters ``order`` (as
 
 The filters with a **lower order** will be executed **first**.
 In case there are several filters with the same ``order`` number,
-then the position of the applications (as configured for a Site in Content Manager) determines the order.
+then the position of the applications (as configured for a Site in Content Studio) determines the order.
 
 
 The filter-chain execution can be interrupted from either a controller or a filter by setting the ``applyFilters`` field in the response.

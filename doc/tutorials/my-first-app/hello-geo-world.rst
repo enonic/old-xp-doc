@@ -54,4 +54,4 @@ This controller uses :ref:`page_contributions` to put the Google Maps JavaScript
 
 5. Build and deploy your project one final time with ``./gradlew deploy``.
 
-All of the project's files are now complete. The rest of the steps will be performed in the Content Manager interface.
+All of the project's files are now complete. The rest of the steps will be performed in the Content Studio interface.

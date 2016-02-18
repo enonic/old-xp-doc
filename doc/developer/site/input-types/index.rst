@@ -4,7 +4,7 @@
 Site Input Types
 ================
 
-For the content manager and sites, several custom input types have been created. These may freely be used by any schema in the site domain, such as content types - page, part, and site descriptors.
+For the Content Studio and sites, several custom input types have been created. These may freely be used by any schema in the site domain, such as content types - page, part, and site descriptors.
 
 
 ContentSelector

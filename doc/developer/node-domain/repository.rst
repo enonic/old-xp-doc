@@ -7,7 +7,7 @@ A repository is a place where nodes can be stored. Data stored in a repository w
 typically belong to a common domain. Fetches and searches are by default executed against
 a single repository, so it makes sense to keep data from different domains separated in different repositories.
 For instance, in the Enonic XP CMS, content and data concerning user management are separated into two
-repositories. The Content Manager application uses the ``cms-repo`` repository, and the
+repositories. The Content Studio application uses the ``cms-repo`` repository, and the
 User Manager application uses the ``system-repo`` repository.
 
 When nodes are stored in the repository, two things happens:
