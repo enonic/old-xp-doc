@@ -19,6 +19,8 @@ Below is a sample project folder structure - all items are folders, except for `
             widgets/
             tools/
           assets/
+          filters/
+          i18n/
           lib/
           services/
           site/
@@ -54,6 +56,15 @@ admin/widgets
 
 assets/
   Public folder for external css, javascript and static images etc etc
+
+filters/
+  This is where generic http filters are placed. Currently, only so-called responseFilters are supported.
+  They can be used for post processing any request
+
+i18n/
+  This folder will contain application localization files (i18n is short for Internationalization).
+  Files placed in this folder must follow Java's standard property file format, one file for each language.
+  Here is an example: https://docs.oracle.com/javase/tutorial/i18n/resbundle/propfile.html
 
 lib/
   This is the last place the global ``require`` javascript-function looks,

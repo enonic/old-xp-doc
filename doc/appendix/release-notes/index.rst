@@ -15,7 +15,7 @@ New App installer
 -----------------
 Applications can now be installed directly from the "Applications" admin tool.
 This applies both to local application files, and applications shared in the Enonic Market.
-For clustered installations, applications will automatically be distributed and started on all nodes!
+For clustered installations, applications will automatically be distributed and started on all cluster nodes!
 
 Read more about :ref:`gradle_deploy_app`
 
