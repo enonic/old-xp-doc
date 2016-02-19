@@ -1,16 +1,29 @@
 .. _websockets:
 
-Web Sockets
-===========
+Websockets
+==========
 
-..warning:: Websocket support is experimental
+.. WARNING::
+  Websocket support is experimental.
 
-BLA BLA
+Websocket support allows a service to act as a websocket channel that
+you can connect to from a web-browser.
 
-* Bullet1
-* Bullet2
+First, you will need to implement a ``get`` method to handle initialization
+of the websocket.
 
-Here's an example of how to create a websocket:
+.. literalinclude:: code/websockets-1.js
+    :language: javascript
 
-.. literalinclude:: code/websockets.js
+Next is to create a websocket event handler shown in the next example. This
+will be called for every websocket events from a client.
+
+.. literalinclude:: code/websockets-2.js
+    :language: javascript
+
+To create a simple chat you will need to use ``lib-websocket`` to be able
+to send messages back and add/remove clients in groups. Adding to groups
+allows for multicast message sending.
+
+.. literalinclude:: code/websockets-3.js
     :language: javascript

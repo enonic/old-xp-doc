@@ -24,6 +24,7 @@ Where ``name`` is the name of the library. Here's a list of available libraries:
 * lib-portal
 * lib-thymeleaf
 * lib-xslt
+* lib-websocket
 
 To include both ``lib-mail`` and ``lib-content`` you can add both inside the
 dependency list like this::
