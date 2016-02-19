@@ -17,6 +17,7 @@ There are no breaking changes in this release, but due to internal changes in re
   #. Move or link (however this is configured) your $XP_HOME (configuration and deployments and data) to the the new Enonic XP installation
   #. Optionally update your system configuration with mail server (See :ref:`configuration-mail`) - introduced in 6.1
   #. Delete the $XP_HOME/repo - folder
+  #. Delete the $XP_HOME/config/org.apache.felix.fileinstall-deploy.cfg - config file
   #. Start the new server
   #. Upgrade the dump with the 6.4.0 toolbox upgrade, see :ref:`toolbox-upgrade` reference.
   #. Load the repository-dump you updated, see :ref:`toolbox-load` reference
