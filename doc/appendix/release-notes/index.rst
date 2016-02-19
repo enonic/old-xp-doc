@@ -16,6 +16,9 @@ New App installer
 Applications can now be installed directly from the "Applications" admin tool.
 This applies both to local application files, and applications shared in the Enonic Market.
 For clustered installations, applications will automatically be distributed and started on all cluster nodes!
+The system still supports local deployments. Local deployments will override apps installed centrally - i.e. for development or testing purposes.
+
+Application configuration is still handled on file.
 
 Read more about :ref:`gradle_deploy_app`
 
@@ -38,6 +41,11 @@ but will provide exiting features in upcoming releases.
 
 .. image:: images/home.jpg
 
+Contextual Navigation
+---------------------
+Editors may now navigate directly in the preview area to find what they are looking for, and then click edit.
+The content navigation panel (to the left) will update selection as the user navigates the site.
+
 
 Reference Search
 ----------------
@@ -45,6 +53,10 @@ It is now possible to search for incoming and outbound references.
 All references within a document are now automatically indexed in the virtual property ``_references``,
 making it easy to search for incoming references and outbound references between nodes and content.
 
+Experimental Websocket support
+------------------------------
+It is now possible to create and use WebSockets in XP apps. This support is experimental and details may change for future releases.
+Feel free to test it out and give us feedback so we can implement this the best way. More details on :ref:`websockets`.
 
 Libraries
 ---------
@@ -54,8 +66,7 @@ Libraries
 Minor improvements
 ------------------
 
-* Improved organizing of assets, services, and other development resources
-* Navigate using the content preview panel - content selection will update automatically.
+* Improved organizing of assets, services, and other development resources - see  :ref:`project_structure`.
 * XSLT Transformations support in toolbox import utility (Apply transformation to import XML on a per-node basis)
 * New input type - AttachmentUploader - Add attachments directly from a form :ref:`input_types`
 * New "abstract" property for media:document content types (Enabling presentation/indexing of a document abstract)

@@ -13,6 +13,7 @@ This chapter will dive into the details on how to build sites and the various co
 
     site
     content-types/index
+    filters
     input-types/index
     input-types/relationship-types
     page/index

@@ -24,5 +24,5 @@ Read more below to learn about the basic concepts.
     http-request
     http-response
     http-cookies
-    http-filters
+    websockets
     javascript-java-bridge

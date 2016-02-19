@@ -38,6 +38,15 @@ config
 **Input types**
 
 
+AttachmentUploader
+------------------
+
+This field enables uploading of one or more files that will be stored as attachments to the current node/content.
+This is different from for instance media content where each media is a separate node that can be linked to.
+
+.. literalinclude:: code/attachmentUploader-type.xml
+   :language: xml
+
 
 CheckBox
 --------

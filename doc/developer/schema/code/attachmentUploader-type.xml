@@ -1,0 +1,4 @@
+<input type="AttachmentUploader" name="myname">
+  <label>My Label</label>
+  <occurrences minimum="0" maximum="0"/>
+</input>
