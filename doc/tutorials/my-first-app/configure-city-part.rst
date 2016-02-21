@@ -8,8 +8,8 @@ the default values for these inputs by editing the `City list` part in the `Coun
 
 #. Open the `Country` page template for editing.
 #. Open the Inspection Panel by clicking the cog button |cogicon| in the toolbar.
-#. Click on the `City list` part in the Page Editor panel. (The `Inspect` tab should open.)
-#. Set the Map type to "Hybrid" and Zoom level to 12 with the form inputs in the context panel.
+#. Click on the `City list` part in the Page Editor panel.
+#. Under the "Inspect" tab of the Inspection Panel, set the Map type to "HYBRID" and Zoom level to 12.
 #. Save draft and close the edit tab.
 
 Now all of the countries will show the city maps with the new settings. You can override these defaults for any individual country by

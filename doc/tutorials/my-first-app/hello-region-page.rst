@@ -2,9 +2,9 @@
 The Hello Region Page
 =====================
 
-Parts start to make sense when placed into a `region` - regions are "slots" contained within pages or layouts. Pages and layouts may contain multiple regions, and each region must have a unique name.
+Parts start to make sense when placed into a `region`. Regions are "slots" contained within pages or layouts. Pages and layouts may contain multiple regions, and each region must have a unique name.
 
-Let's create a new page component with a single region called "Main" - we will later place the "Country" part into this region.
+Let's create a new page component with a single region called "Main". We will later place the "Country" part into this region.
 
 The benefit of a region (see :ref:`apps-page-regions`) is that a page component can be re-used across multiple different pages by simply adding different parts to them as needed.
 
@@ -29,10 +29,13 @@ the "main" region which was defined in the descriptor XML file.
   :language: html
   :caption: Page view - site/pages/hello-region/hello-region.html
 
-The view file above defines the place on the page where the region will render parts that are dragged and dropped in Live Edit.
+The view file above defines the place on the page where the region will render component parts that are dragged and dropped in the Page Editor.
 
 3. When done - redeploy your app once again!
 
 ::
 
   ./gradlew deploy
+
+
+.. tip:: You can restart XP in :ref:`gradle_dev_mode` and then the app won't have to be redeployed after making changes.

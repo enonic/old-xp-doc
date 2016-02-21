@@ -11,7 +11,7 @@ The next steps will create a content type for adding cities with location coordi
 
 1. Create a folder called `city` inside the project's ``site/content-types`` folder.
 
-2. Add the content type file below to your project:
+2. Add the content type file below to your project. Because the contet type's folder is named "city" the file must be named "city.xml".
 
 .. literalinclude:: code/content-types/city1.xml
   :language: xml
@@ -30,7 +30,7 @@ We need a `part component` to display the city data. It will list the cities and
 
 1. Create a folder called `city-list` inside the project's ``site/parts`` folder.
 
-2. Add the part descriptor file.
+2. Add the part descriptor file. It must be named city-list.xml.
 
 .. literalinclude:: code/city-part/city-list.xml
   :language: xml
@@ -38,7 +38,7 @@ We need a `part component` to display the city data. It will list the cities and
 
 The part descriptor above has a configuration similar to those found in content types.
 
-3. Add the part controller file.
+3. Add the part controller file. It must be named city-list.js.
 
 .. literalinclude:: code/city-part/city-list.js
   :language: javascript
@@ -46,12 +46,12 @@ The part descriptor above has a configuration similar to those found in content 
 
 This controller uses :ref:`page_contributions` to put the Google Maps JavaScript into the head of the document.
 
-4. Add the part view file.
+4. Add the part view file. It must be named city-list.html to match the "resolve" function in the controller.
 
 .. literalinclude:: code/city-part/city-list.html
   :language: html
   :caption: City list part view - site/parts/city-list/city-list.html
 
-5. Build and deploy your project one final time with ``./gradlew deploy``.
+5. If you didn't start XP in :ref:`gradle_dev_mode` then build and deploy your project one final time with ``./gradlew deploy``.
 
 All of the project's files are now complete. The rest of the steps will be performed in the Content Studio interface.

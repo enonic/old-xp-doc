@@ -4,7 +4,7 @@ Layout
 ======
 
 Layouts are used in conjunction with ``regions`` to organize the structure of the various component parts that will be placed on the page
-via Live Edit drag and drop. Layouts can be dropped into the page ``regions`` and then ``parts`` can be dragged into the
+via Page Editor drag and drop. Layouts can be dropped into the page ``regions`` and then ``parts`` can be dragged into the
 layout. This allows multiple layouts (two-column, three-column, etc.) on the same page and web editors can change things
 around without touching any code. Making a layout is similar to making pages and part
 components. Layouts cannot be nested.
@@ -16,7 +16,7 @@ placed in the folder ``site/layouts/[layout-name]``
 Descriptor
 ----------
 
-The layout descriptor defines regions within the layout where parts can be placed with Live Edit.
+The layout descriptor defines regions within the layout where parts can be placed with the Page Editor.
 The file must be named ``[layout-name].xml``.
 
 .. literalinclude:: code/layout.xml

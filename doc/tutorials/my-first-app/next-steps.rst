@@ -5,6 +5,6 @@ This tutorial only covered the basics of app development. Explore the documentat
 
 Check our `GitHub <https://github.com/enonic>`_ page for examples of more advanced apps. The
 `Superhero <https://github.com/enonic/app-superhero-blog>`_ blog app is also a good place to see more advanced code.
-`Google Analytics <https://github.com/enonic/app-google-analytics>`_ app demonstrates extending the Content Studio interface
+The `Google Analytics <https://github.com/enonic/app-google-analytics>`_ app demonstrates extending the Content Studio interface
 
 Need help? Ask questions on our `forum <https://discuss.enonic.com>`_ or answer questions from others.
