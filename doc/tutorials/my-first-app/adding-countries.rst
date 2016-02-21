@@ -23,7 +23,7 @@ for content editors.
 
 .. image:: images/country.png
 
-This content type defines form inputs for **description** and **population**. All content has a built-in field for **Display Name**. When
+This content type defines form inputs for **description** and **population**. Every content has a built-in field for **Display Name**. When
 the app is redeployed, this content type will produce the form seen below in the Content Studio app.
 
 .. image:: images/country-content-form.png

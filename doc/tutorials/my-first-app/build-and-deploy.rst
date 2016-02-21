@@ -8,7 +8,7 @@ environment variable must be set to the path of the home folder of the XP instal
 
 1. Run the following command in the terminal, replacing [$XP_INSTALL] with your installation location (no brackets):
 
-Linux and OS X::
+Linux and OSX::
 
   export XP_HOME=[XP Installation Folder]/home
 
@@ -18,7 +18,7 @@ Windows::
 
 2. Execute the following command (from the project root directory):
 
-Linux and OS X::
+Linux and OSX::
 
   ./gradlew deploy
 
@@ -26,8 +26,7 @@ Windows::
 
   gradlew deploy
 
-If you don't already have `Gradle <http://gradle.org>`_ installed, the Gradle wrapper will be download first.
-Next it will build the app and then attempt to deploy it to your installation.
+The included `Gradle <http://gradle.org>`_ wrapper will build the app and then attempt to deploy it to your installation.
 
 The deployment step simply moves the result of the build (the application JAR file) into the ``$XP_HOME/deploy`` directory.
 From there, Enonic XP will detect, install and start the application automatically.

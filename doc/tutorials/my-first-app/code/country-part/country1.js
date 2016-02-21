@@ -4,10 +4,10 @@ var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf rendering 
 // Handle the GET request
 exports.get = function(req) {
 
-    // Get the country content and extract the needed data from the JSON
+    // Get the country content as a JSON object
     var content = portal.getContent();
 
-    // Prepare the model object with the needed data extracted from the content
+    // Prepare the model object with the needed data from the content
     var model = {
         name: content.displayName,
         description: content.data.description,

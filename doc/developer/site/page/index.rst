@@ -108,7 +108,7 @@ More on how to use Thymeleaf can be found in
 Regions
 -------
 
-To be able to add components like images, component parts, or text to our page via the live edit drag and drop
+To be able to add components like images, component parts, or text to our page via the Page Editor drag and drop
 interface, we need to create at least one region. Regions can be declared in the page descriptor.
 Each region will be referenced by name.
 
@@ -120,11 +120,11 @@ You will also need to handle regions in the controller.
 .. literalinclude:: code/controller-4.js
    :language: javascript
 
-To make live-edit understand that an element is a region, we need an attribute
+To make the Page Editor understand that an element is a region, we need an attribute
 called ``data-portal-component-type`` with the value ``region`` in our HTML.
 
 .. literalinclude:: code/thymeleaf-3.html
    :language: html
 
-We can now use the live edit drag and drop interface to drag components into
+We can now use the Page Editor drag and drop interface to drag components into
 our page.

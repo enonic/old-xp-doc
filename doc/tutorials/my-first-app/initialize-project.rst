@@ -1,16 +1,18 @@
 Initialize project
 ==================
 
-Enonic XP includes the :ref:`toolbox` which can perform several useful operations. The :ref:`init_project` operation will initialize a new application project with the standard structures required  (see :ref:`projects`).
+Enonic XP includes the :ref:`toolbox` which can perform several useful operations. The :ref:`init_project` operation will clone an existing project from a repository source, such as `GitHub <https://github.com>`_. The starter-vanilla project will initialize a new application with the standard structures required (see :ref:`projects`).
 
 #. Create a new folder at a suitable location on your filesystem for the application project files.
-   e.g. ``/Users/<username>/project/myapp`` This will be the project root.
+   e.g. ``/Users/<username>/projects/myapp`` This will be the project root.
 
-#. Go to this folder in the terminal and run the following command:
+#. Change directory in the terminal to this project root.
+
+#. Run the following command, replacing [$XP_INSTALL] with the path to your unzipped XP installation:
 
 ::
 
-[$XP_INSTALL]/toolbox/toolbox.sh init-project -n com.company.myapp -r starter-base
+[$XP_INSTALL]/toolbox/toolbox.sh init-project -n com.company.myapp -r starter-vanilla -c 1.0.0
 
 .. tip::
 

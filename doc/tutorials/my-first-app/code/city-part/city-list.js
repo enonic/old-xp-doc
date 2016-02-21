@@ -22,7 +22,8 @@ exports.get = function (req) {
         contentTypes: [
             app.name + ':city'
         ],
-        "query": "_path LIKE '/content" + countryPath + "/*'",
+        query: "_path LIKE '/content" + countryPath + "/*'",
+        sort: "modifiedTime DESC"
     });
 
     var hits = result.hits;

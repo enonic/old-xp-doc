@@ -2,19 +2,21 @@ Create Cities
 =============
 
 .. |cogicon| image:: images/icon-cog.png
+.. |templatesicon| image:: images/icon-templates.png
+.. |particon| image:: images/icon-part.png
 
 Now let's make use of the new city content type and part component. First we need to add the "City list" part to the "Country" page template.
 
-#. Edit the "Country" page template.
+#. Edit the "Country" page template. Find it in the content pane below the templates |templatesicon|
 #. Open the Inspect Panel by clicking the cog button |cogicon| in the toolbar.
-#. Under the Insert tab, click and drag a `Part` to the page region below the "country" part. (This may be a bit tricky because the
+#. Under the Insert tab, click and drag a `Part` |particon| to the page region below the "country" part. (This may be a bit tricky because the
    "country" part is small.)
-#. Select the "City list" part from the dropdown in the box. You may need to close the Inspection Panel to see it.
+#. Select the "City list" part from the dropdown in the box.
 #. Save and close the tab.
 
-Now we need to create a few City contents below the countries. (Sample data is available in the table below.)
+Now we need to create a few City contents under each country. (Sample data is available in the table below.)
 
-#. From the content pane, select a country content that you created earlier. It is important that each city content is created under the
+#. From the content pane, select a country content that you created earlier. It is important that each city content is created under its
    country.
 #. Right-click the country content and select "New". The "Create content" dialogue will open.
 #. Now select "City" from the list of content types.

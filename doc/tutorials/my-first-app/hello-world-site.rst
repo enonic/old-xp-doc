@@ -2,6 +2,7 @@ Create the Hello World Site
 ===========================
 
 .. |monitoricon| image:: images/icon-monitor.png
+.. |menuicon| image:: images/icon-menu.png
 
 Our next goal is to set up a "Hello World" site in Content Studio,
 but first we must add some initial configuration to our project.
@@ -27,8 +28,8 @@ Page components are the most basic building blocks of websites in Enonic XP (see
 controller and optionally an XML descriptor and an HTML view. This first example does not need a descriptor file.
 
 A page controller (see :ref:`page`) is a JavaScript file that handles requests such as GET and POST.
-Controllers usually pass JavaScript objects with data to be dynamically rendered in an HTML view. No data is passed in the example below,
-but the view file is specified and rendered as static HTML.
+Controllers usually pass data in the form of a JavaScript object to be dynamically rendered in an HTML view. No data is passed in the
+example below, but the view file is specified and rendered as static HTML.
 
 1. Create a folder called ``hello`` inside the ``site/pages`` directory.
 
@@ -53,15 +54,15 @@ The `view`  below is a simple HTML file. This file will be updated later to hand
 Create Site
 -----------
 
-Now that the files are in place, we can create the site using Content Studio.
-Switch between different tools using top right icon, it will open the Launcher panel.
+Now that the files are in place, we can create the site in a browser using the Content Studio admin tool.
+Switch between different tools by clicking the menu icon |menuicon| (top right) to open the Launcher panel.
 
-#. In your browser, navigate to the Content Studio tool. (Use menu icon at top right)
+#. In your browser, navigate to the Content Studio tool. (Use the menu icon at the top right)
 #. Click "New" and select "Site" from the list of content types (Opens a tab for editing the new site).
 #. Fill in the form with Display Name: "Hello World".
 #. Select your "MyApp" application in the "Applications" dropdown.
-#. Open the Page Editor with this button |monitoricon| in the toolbar.
-#. Use the dropdown in the blue area that just appeared to select the "hello" page.
+#. If you don't see a blue area on the right of the page then click this button |monitoricon| in the toolbar to open the Page Editor.
+#. Use the dropdown in the Page Editor (blue area) to select the "hello" page.
 #. Click the "Save draft" button in the toolbar (top-left).
 #. Now close the "Hello World" site editor tab to see the content pane.
 
