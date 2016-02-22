@@ -3,11 +3,11 @@
 Upgrading to |version|
 ======================
 
-Enonic XP |version| Java distribution download: https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip
-
 .. warning:: In order to upgrade, you must already have upgraded to Enonic XP 6.0.0 or newer.
 
 .. warning:: Enonic XP 6.3.0 contains an error in its export/dump process. If your installation uses Enonic XP 6.3.0, you must upgrade to Enonic XP 6.3.1 before following the steps listed below. When upgrading from Enonic XP 6.3.0 to 6.3.1, do not dump & load your data.
+
+Enonic XP |version| Java distribution download: https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip
 
 Upgrade Steps
 -------------
