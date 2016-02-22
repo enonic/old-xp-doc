@@ -4,7 +4,7 @@ Admin Tools
 ===========
 
 Admin Tools are independent "back office" user interfaces designed to manage Enonic XP or installed applications.
-Each tool will runs will run in it's own browser tab - here are some of the reasons for this:
+Each tool will run in it's own browser tab - here are some of the reasons for this:
 
 * Faster user interfaces and better deep-linking support
 * Developers can use their favorite front-end frameworks
