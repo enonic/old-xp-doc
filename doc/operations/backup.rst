@@ -61,8 +61,9 @@ The snapshot rest-service accepts a JSON in this format:
   }
 
 A snapshot of the given repository will be created for later retrieval. Each subsequent snapshot will store the changes between this snapshot
-and the last snapshot of the given repository. This means that only changed data are stored when doing subsequent snapshots. The snapshots
-will by default be stored in ``$xp_home/snapshots``. A name of the snapshot will be given at snapshot-time, and returned in the snapshot-result.
+and the last snapshot of the given repository. This means that only changed data are stored when doing subsequent snapshots. The default
+location where snapshots are stored is ``$xp_home/snapshots``. A name of the snapshot will be given at snapshot-time, and returned in the
+snapshot-result.
 
 To ease the process, we have provided a :ref:`toolbox-snapshot` tool.
 

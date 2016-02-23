@@ -29,23 +29,29 @@ repository, and adapting its build file properties (gradle.properties).
               Branch or commit to checkout.
 
           -d <destination>, --destination <destination>
-              Optional destination path to create your project, if not specified current directory will be used
+              Optional destination path to create your project, if not specified current
+              directory will be used
 
           -n <name>, --name <name>
-              Unique qualifying name that will be given to your application i.e. com.company.myapp. NOTE: Choose the name carefully as changing it at a later point in time will require updating your content too.
+              Unique qualifying name that will be given to your application i.e.
+              com.company.myapp. NOTE: Choose the name carefully as changing it at a later
+              point in time will require updating your content too.
 
           -v <version>, --version <version>
-              Optional version number that will be set in your application project, if not used 1.0.0-SNAPSHOT will be set
+              Optional version number that will be set in your application project, if not
+              used 1.0.0-SNAPSHOT will be set
 
           -r <repository>, --repository <repository>
-              Git repository you wish to use as starting point. Supports both full urls to any standard xp git-hosted project, or optionally a GitHub repository path (account/repo) - account defaults to "enonic" if not specified
+              Git repository you wish to use as starting point. Supports both full urls to
+              any standard xp git-hosted project, or optionally a GitHub repository path
+              (account/repo) - account defaults to "enonic" if not specified
 
 
 **Examples:**
 
 ::
 
-  $ toolbox.sh init-project -d ~/Dev/xp/apps/myApp -n com.company.myapp -v 0.9.0 -r https://github.com/enonic/starter-base.git -c 1.0
+  $ toolbox.sh init-project -d ~/Dev/xp/apps/myApp -n com.company.myapp -v 0.9.0 -r https://github.com/enonic/starter-vanilla.git -c 1.0.0
 
 ::
 

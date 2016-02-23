@@ -38,7 +38,6 @@ and stop it.
 
 If shutting down other software that uses port 8080 is not an option, you may set a different port for Enonic XP. See :ref:`configuration`.
 
-
 Unexpected behavior
 -------------------
 
@@ -47,6 +46,7 @@ certain changes to the app files. For example, changing the app name in the buil
 When this occurs, the project may need a clean build ``gradle clean build``. Sometimes the app JAR file may need to be deleted from the
 $XP_HOME/deploy directory as well, and then replaced with the clean build JAR file.
 
+Having two versions of the same app in the $XP_HOME/deploy folder will cause problems.
 
 Cannot login after install
 --------------------------
