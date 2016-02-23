@@ -12,7 +12,7 @@ Complete the following tasks ro run XP as a service on Linux:
 
   1. **Create a user for running xp as a service**.
 
-  We recommend to use the name "xp" to stick with the script defaults.
+  We recommend using the name "xp" to stick with the script defaults.
 
   *Ubuntu*
 
@@ -34,7 +34,7 @@ Complete the following tasks ro run XP as a service on Linux:
 
    2. **Download the xp-distribution and install at your preferred location.**
 
-   We recommend to install under ``/opt/enonic``, which will be the default location in our scripts. Make sure that the required Java version is installed, consult the :ref:`install_java`-section for guidance.
+   We recommend installing under ``/opt/enonic``, which will be the default location in our scripts. Make sure that the required Java version is installed, consult the :ref:`install_java`-section for guidance.
 
 .. TIP::
 
@@ -119,7 +119,7 @@ Complete the following tasks ro run XP as a service on Linux:
 
   7. **Start service:**
 
-  Ok, your should be ready to go, start the service with the service start command:
+  Ok, you should be ready to go, start the service with the service start command:
 
   ::
 
