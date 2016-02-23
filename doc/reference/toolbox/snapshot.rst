@@ -8,7 +8,7 @@ the directory given in ``snapshots.dir`` option in the :ref:`storage-config` (de
 
 .. Attention::
  
-	For clustered installation, the snapshot-location must be on a shared file-system
+	For a clustered installation, the snapshot-location must be on a shared file-system.
 
 **Usage:**
 

@@ -17,19 +17,19 @@ Installs an application on all nodes
 
   OPTIONS
           -a <auth>
-              Authentication token for basic authentication (user:password).
+              Authentication token for basic authentication (user:password)
 
-	  	  -u <url>
-		  	  Url to application,
+          -u <url>
+              Url to application
 			  
-		  -f <file>
-		  	  Path to application jar-file
+          -f <file>
+              Path to application jar-file
 		  
           -h <host>
-              Host name for server (default is localhost).
+              Host name for server (default is localhost)
 
           -p <port>
-              Port number for server (default is 8080).
+              Port number for server (default is 8080)
 
 **Example:**
 
