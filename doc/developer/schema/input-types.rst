@@ -118,6 +118,11 @@ Stores a GPS coordinate as two comma-separated decimal numbers.
   a location in the western hemisphere and a positive number is a location in the eastern hemisphere.
 
 
+HtmlArea
+--------
+
+A field for inputting multi-line text, with formatting options.
+
 
 Long
 ----
