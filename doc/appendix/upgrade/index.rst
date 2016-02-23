@@ -38,7 +38,6 @@ To take benefit of some of the new application development capabilities such as 
 * move .../resources/site/assets/ to .../resources/assets/
 * move .../resources/site/services/ to .../resources/services/
 * move .../resources/site/lib/ to .../resources/lib
-* move .../resources/site/i18n/ to .../resources/i18n
 * Optionally move .../resources/site/views/ to .../resources/views/ - this is an optional folder.
 
 To support backward compatibility, XP will scan for assets/ and services/ - initially on root, then in site. But only the first discovered folder will be used.
