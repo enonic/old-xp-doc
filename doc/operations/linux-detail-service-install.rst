@@ -87,7 +87,7 @@ Complete the following tasks ro run XP as a service on Linux:
 
   4. **Create XP_HOME**
 
-  Create a XP_HOME - folder that will contain the data-files and configuration of your xp-installation.
+  Create an XP_HOME - folder that will contain the data-files and configuration of your xp-installation.
 
   ::
 
