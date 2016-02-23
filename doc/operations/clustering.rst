@@ -16,24 +16,23 @@ Enonic XP clusters have minimal requirements to infrastructure, it needs:
 
 .. image:: images/logical-cluster.png
 
-These components are standard ingredients in modern clouds - and easily available as software as well.
-If you want, a XP cluster can be launched on a regular computer - typically used for testing or development purposes.
+These components are standard ingredients in modern clouds and they are readily available as software as well.
+An XP cluster can also be launched on a regular computer for testing or development purposes.
 
 
 Basic cluster setup on local machine
 **************************************
 
-We have tried to make deployment of XP as simple and fail-safe as possible.
-By default is configured to run on a local computer -
-and it will not start looking for nodes in the network before you configures it to do so
+We have tried to make deployment of XP as simple and fail-safe as possible. By default it is configured to run on a local computer and it
+will not start looking for nodes in the network until you configure it to do so.
 
-To test a cluster on your local machine, your need to do the following:
+To test a cluster on your local machine, you need to do the following:
 
- 1. **Get two XP installations:** Download / copy existing $XP_DISTRO to a second $XP_DISTRO folder.
+ 1. **Get two XP installations:** Download an $XP_DISTRO and copy it to a second $XP_DISTRO folder.
 
-Typically, you will already have a XP-installation by now, so just copy the $XP_DISTRO/folder to make another node.
+Typically, you will already have an XP-installation by now, so just copy the $XP_DISTRO folder to make another node.
 
- 2. **Share data:** Set a common place for storing data in both XP instances config:
+ 2. **Share data:** Prepare a common place for storing data and configure both XP instances:
 
 In ``$XP_DISTRO/home/config/com.enonic.xp.repo.cfg`` set the following property to point to a common directory:
 
@@ -49,7 +48,7 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
 
     http.port = somePort
 
- 4. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat`` they will connect and you should have a live cluster on your machine. You can check the current cluster info at:
+ 4. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
 
  ::
 
@@ -58,8 +57,9 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
 
 .. NOTE::
 
-	By default, if no XP_HOME environment variable is set, the XP_HOME used is the one located in the XP_DISTRO/home folder which will work nicely for the above example. If you have exported a XP_HOME in the shell where you try to start the server, this will override the default settings.
-	So for the above test, unset the XP_HOME variable if already set if needed:
+	By default, if no XP_HOME environment variable is set, the XP_HOME used is the one located in the XP_DISTRO/home folder which will work
+	nicely for the above example. If you have set XP_HOME in the shell where you try to start the server, this will override the default settings.
+	So for the above test, unset the XP_HOME variable if needed:
 
 	::
 
@@ -70,8 +70,8 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
 Cluster configuration
 ---------------------
 
-There are a well of options at your disposal to configure and tune the cluster behaviour. See :ref:`Elasticsearch configuration<storage-config>` for a subset of the available settings.
-All settings referred to in this chapter is set in ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg`` if nothing else is specified.
+There are a well of options at your disposal to configure and tune the cluster behavior. See :ref:`Elasticsearch configuration<storage-config>` for a subset of the available settings.
+All settings referred to in this chapter are set in ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg`` unless otherwise specified.
 
 
 There are some key elements to consider when setting up a cluster:
@@ -81,7 +81,7 @@ There are some key elements to consider when setting up a cluster:
  #. Distribute the data between the nodes -> :ref:`replica-setup`
  #. Ensure cluster data integrity -> :ref:`cluster-partition-settings`
  #. Ensure cluster stability -> :ref:`cluster-stability-settings`
- #. Make sure nodes recovers correctly -> :ref:`node-recovery-settings`
+ #. Make sure nodes recover correctly -> :ref:`node-recovery-settings`
  #. Monitoring the cluster -> :ref:`cluster-monitoring`
  #. Deploying applications -> :ref:`deploying-apps`
  #. Securing data -> :ref:`cluster-backup`
@@ -92,7 +92,7 @@ There are some key elements to consider when setting up a cluster:
 Shared storage Configuration
 ----------------------------
 
-For now, the nodes in the cluster needs a shared storage to store data as files. Setting up this is highly individual for different operating systems and infrastructures, but as a basic guidline
+For now, the nodes in the cluster need a shared storage to store data as files. Setting this up is highly individual for different operating systems and infrastructures, but as a basic guideline:
 
   #. Get access to a shared or distributed file system and mount it on the nodes that will be part of the cluster
   #. Configure ``$XP_HOME/config/com.enonic.xp.repo.cfg`` to point to the mounted storage:
@@ -107,9 +107,9 @@ For now, the nodes in the cluster needs a shared storage to store data as files.
 Network configuration
 ----------------------
 
-The nodes in a cluster needs to be able to discover and communicate with other nodes in the network. The nodes communicate through TCP.
+The nodes in a cluster need to be able to discover and communicate with other nodes in the network. The nodes communicate through TCP.
 
-Each node binds to an IP-address and port, and communicates to other nodes specified in a list of other nodes bind addresses. The first thing to do is to verify that your network allows TCP-traffic on specific port or port-range for the nodes to communicate, and then configure the nodes to use this address.
+Each node binds to an IP-address and port, and communicates to other nodes specified in a list of other nodes bind addresses. Verify that your network allows TCP traffic on a specific port or port-range for the nodes to communicate and then configure the nodes to use these addresses.
 
 Settings
 *********
@@ -129,7 +129,7 @@ The ``transport.tcp.port`` value defines the port that the node will use for com
 discovery.zen.ping.unicast.hosts
 ################################
 
-The ``discovery.zen.ping.unicast.hosts`` value contains a comma-separated list of nodes that are allowed to join the cluster. Each value is either in form of ``host:port`` or ``host:port1-port2`` (port-range).
+The ``discovery.zen.ping.unicast.hosts`` value contains a comma-separated list of nodes that are allowed to join the cluster. Each value is either in the form of ``host:port`` or ``host:port1-port2`` (port-range).
 
 
 Sample config
@@ -140,16 +140,16 @@ Sample config
 
 .. TIP::
 
-   **Why arent my nodes connecting**
+   **Why aren't my nodes connecting**
 
-   The most common issue is that the node binds to another network address than specified in the unicast list.
-   When a node starts, the log will show the current bind-address of the node is a message similar to this:
+   The most common issue is that the node binds to a different network address than specified in the unicast list.
+   When a node starts, the log will show the current bind-address of the node in a message similar to this:
 
    ::
 
        09:01:43.282 INFO  org.elasticsearch.http - [loadtest-appserver1] bound_address {inet[/10.0.6.49:9300]}, publish_address {inet[/10.0.6.49:9300]}
 
-   Make sure that the bind-addresses matches the ones specified in the unicast-list. If it still doesnt work, its time to blame the firewall or consult the :ref:`troubleshooting`
+   Make sure that the bind-addresses match those specified in the unicast-list. If it still doesn't work, it's time to blame the firewall or consult the :ref:`troubleshooting`
 
 .. _replica-setup:
 
@@ -159,35 +159,39 @@ Replica setup
 Number of replicas
 ******************
 
-For a cluster to perform, all nodes must be able to do its share of work. Enonic XP searches for data in a number of Elasticsearch indices. An index can have a number of replicas (copies) spread around to the nodes in the cluster, so each node can query its local index when needing data.
+For a cluster to perform, each node must be able to do its share of work. Enonic XP searches for data in a number of Elasticsearch indices.
+An index can have a number of replicas (copies) spread around to the nodes in the cluster, so each node can query its local index for data.
 
-By default, the indices in Enonic XP has one replica configured. When having a cluster with more than two nodes, this number has to be increased to ensure that each node has a replica of the indices.
+The indices in Enonic XP have one replica configured by default. When a cluster has more than two nodes, this number must be increased to ensure that each node has a replica of the indices.
 
-The number of replicas can be set runtime with the Toolbox CLI :ref:`set-replicas`, and the recommended settings for replicas is ``number of nodes - 1``
+The number of replicas can be set at runtime with the Toolbox CLI :ref:`set-replicas`, and the recommended settings for replicas is ``number of nodes - 1``
 
-So for a 3 nodes cluster, the number of replicas should be set to 2.
+So for a 3 node cluster, the number of replicas should be set to 2.
 
 .. _cluster-partition-settings:
 
 Cluster partition settings
 ----------------------------------
 
-One of the main motivations of a cluster is to ensure that even if one or several nodes fails, the service you are providing should still be available.  In an ideal world, a 100 nodes cluster should be fully operational even if 99 nodes are down.
-But in the real world, we also need to consider the cluster data integrity. This introduces a common dilemma in clustered environments; how to avoid the dreaded split-brain situation.
+One of the main motivations of a cluster is to ensure that even if one or several nodes fail, the service you are providing should still be
+available. In an ideal world, a 100 node cluster should be fully operational even if 99 nodes are down. But in the real world, we also need
+to consider the cluster data integrity. This introduces a common dilemma in clustered environments; how to avoid the dreaded split-brain situation.
 
-In a split-brain scenario, nodes gets divided into smaller clusters that dont communicate with each other, and each cluster beliving that the nodes in the other cluster are dead. This can easily happen having a cluster with 4 nodes on two different locations:
+In a split-brain scenario, nodes get divided into smaller clusters that don't communicate with each other, and each cluster believing that
+the nodes in the other cluster are dead. This can easily happen in a cluster with 4 nodes on two different locations:
 
 <<<Figure>>>
 
-If the nodes on location-1 are disconnected from the master node on location-2, they will regroup and select a new master on location-1 and still provide service.
-The nodes on location-2 will just assume that the nodes in location-1 is dead, so they will also continue serving request, but they have no way of syncronizing data between the locations. This will break the integrity of the cluster and make data invalid.
+If the nodes on location-1 are disconnected from the master node on location-2, they will regroup and select a new master on location-1 and
+still provide service. The nodes on location-2 will assume that the nodes in location-1 are dead, so they will also continue serving
+requests. but they have no way of synchronizing data between the locations. This will break the integrity of the cluster and make data invalid.
 
 
 To avoid this situation, there are a couple of basic properties of a cluster that should be ensured:
 
  #. Beyond a two node cluster, there should be an odd number of nodes. So 1,2,3,5,7 etc are all acceptable cluster configurations.
  #. When nodes are forming separate smaller clusters, only the cluster-partition with the majority of nodes should be fully operational and accept writes.
- #. The minority cluster partitions can be allowed to serve read-only requests if that is acceptable for the provided service
+ #. The minority cluster partitions can be allowed to serve read-only requests if that is acceptable for the provided service.
 
 Settings
 *********
@@ -195,20 +199,27 @@ Settings
 discovery.zen.minimum_master_nodes
 ##################################
 
-This is the most important setting to set correctly to ensure cluster data integrity. A node will not accept request before the number of 'minimum_master_nodes' are met. For instance, in a 3 node cluster with 3 master nodes and 'minimum_master_nodes' setting of '2', imagine that one of the nodes loose connection to the two other nodes. This node will only see one possible master node (itself) and will not accept requests. The remaining two other nodes will still work, and when the lost node reconnects again, it will get the fresh data from the other nodes and rejoin the cluster.
+This is the most important setting to set correctly to ensure cluster data integrity. A node will not accept requests before the number of
+'minimum_master_nodes' are met. For instance, in a 3 node cluster with 3 master nodes and 'minimum_master_nodes' setting of '2', imagine
+that one of the nodes loose connection to the two other nodes. This node will only see one possible master node (itself) and will not accept
+requests. The remaining two other nodes will still work, and when the lost node reconnects again, it will get the fresh data from the other
+nodes and rejoin the cluster.
 
 .. IMPORTANT::
 
-   As a rule of thumb, this setting should be set to N/2+1, where N is the total number of nodes. So for a 5 nodes cluster, discovery.zen.minimum_master_nodes =    5/2+1 = 3 (rounding down to the nearest integer)
+   As a rule of thumb, this setting should be set to N/2+1, where N is the total number of nodes. So for a 5 node cluster,
+   discovery.zen.minimum_master_nodes =    5/2+1 = 3 (rounding down to the nearest integer)
 
-So what about a 2 node cluster? It will be impossible to avoid a possible split-brain scenario with this setup. Its highly recommended to add one node as a tie-breaker. This node may act as a dedicated master node (with `node.data = false`, see :ref:`cluster-stability-settings`) which enables it to run on less expensive hardware since it will not handle any external requests.
+So what about a 2 node cluster? It will be impossible to avoid a possible split-brain scenario with this setup. It's highly recommended to
+add one node as a tie-breaker. This node may act as a dedicated master node (with `node.data = false`, see :ref:`cluster-stability-settings`)
+which enables it to run on less expensive hardware since it will not handle any external requests.
 
 
 .. TIP::
 
     **Why nodes leave the cluster**
 
-    There are 2 main reasons why cluster nodes leaves the cluster
+    There are 2 main reasons why cluster nodes leave the cluster
 
      #. Network failure
      #. Node not responding
@@ -216,13 +227,15 @@ So what about a 2 node cluster? It will be impossible to avoid a possible split-
     *Network failures*
 
 
-    Network failures are the main reason for cluster stability-issues. The problems could having any number of reasons, from a router breaking down to complex scenarios where e.g a firewall cuts the connection in one direction between two nodes
+    Network failures are the main reason for cluster stability-issues. The problems could have any number of reasons, from a router breaking
+    down to complex scenarios where e.g a firewall cuts the connection in one direction between two nodes
 
     *Node not responding*
 
 
-    If a node does not get a response on a ping to the master node within a set timeout, it will consider it as dead, and invoke an election process. Likewise, the master node expects that a slave node respons within a certain amount of time.
-    This is usually caused by a node doing a stop-the-world garbage collection, and not beeing able to respond to the request at all for a period of time.
+    If a node does not get a response on a ping to the master node within a set timeout, it will consider it as dead and invoke an election
+    process. Likewise, the master node expects that a slave node will respond within a certain amount of time. This is usually caused by a
+    node doing a stop-the-world garbage collection, and not being able to respond to the request at all for a period of time.
 
 
 .. _cluster-stability-settings:
@@ -230,17 +243,20 @@ So what about a 2 node cluster? It will be impossible to avoid a possible split-
 Cluster stability settings
 ---------------------------
 
-In a low load environment, there is probably no need reason to do a lot of tuning since it will performe acceptable with the default setup. If you expect heavy load, there are a couple of things to consider when setting up the cluster topology.
+In a low load environment, there is probably no need to do a lot of tuning since it will perform acceptable with the default setup. If you
+expect heavy load, there are a couple of things to consider when setting up the cluster topology.
 
 Dedicated master nodes
 ***********************
 
-A cluster consists of a number of nodes sharing data and state between them. A cluster needs to have exactly one node acting as a master-node at any time. The master-node is reponsible for managing the cluster-state.
-In a busy cluster, the master-nodes will have to do a lot of work to ensure that all other nodes gets the needed information.
+A cluster consists of a number of nodes sharing data and state between them. A cluster needs to have exactly one node acting as a master-node
+at any time. The master-node is responsible for managing the cluster-state. In a busy cluster, the master-nodes will have to do a lot of work
+to ensure that all other nodes get the needed information.
 
-Since the cluster stability depends on a healthy master node, it may be a good idea to set aside a number of nodes as *dedicated master nodes*. These dedicated master nodes should not be handling external requests, but rather concentrate on keeping the cluster nodes in sync and stable.
+Since the cluster stability depends on a healthy master node, it may be a good idea to set aside a number of nodes as *dedicated master nodes*.
+These dedicated master nodes should not be handling external requests, but rather concentrate on keeping the cluster nodes in sync and stable.
 
-A node can be configured to be allowed to act as a master-node or not by the setting ``node.master``.
+A node can be configured to be allowed to act as a master-node by the setting ``node.master``.
 
 A dedicated master node should have the following settings:
 
@@ -253,7 +269,8 @@ A dedicated master node should have the following settings:
 Data nodes
 **********
 
-Data nodes are the workhorses of the cluster. They will handle the bulk load of the requests, depending on the master node to keep them in sync. These nodes needs the most memory and CPU power.
+Data nodes are the workhorses of the cluster. They will handle the bulk load of the requests, depending on the master node to keep them in
+sync. These nodes need the most memory and CPU power.
 
 A dedicated data node should have the following settings:
 
@@ -268,9 +285,12 @@ A dedicated data node should have the following settings:
 Node recovery settings
 -----------------------
 
-Node recovery happes when a node starts or reconnects to the cluster after a e.g a network shortage.
+Node recovery happens when a node starts or reconnects to the cluster after a e.g a network shortage.
 
-Consider a cluster of 2 nodes. When a node starts for the first time, it will try to connect to a cluster. If no master found, it will elect itself as master, then proceed to intitalize the index-data locally. If it do find an existing master node, it will require the master to provide it with data. This is all good, but there may occure situations where for instance a new node in an existing cluster may start before the existing nodes, and start intitializing data before the nodes with existing data can inform the new node that there is already data in the cluster.
+Consider a cluster of 2 nodes. When a node starts for the first time, it will try to connect to a cluster. If no master found, it will elect
+itself as master, then proceed to initialize the index-data locally. If it does find an existing master node, it will require the master to
+provide it with data. This is all good, but there may occur situations where a new node in an existing cluster starts initializing data
+before the nodes with existing data can inform the new node that there is already data in the cluster.
 
 
 Settings
@@ -297,12 +317,12 @@ See :ref:`cluster-monitoring`
 Deploying Apps in cluster
 -------------------------
 
-To deploy applications in a cluster you need to deploy the application to every node, as loading and installation of apps is done on a per-node basis.
-This also means you can choose what applications to deploy on each node.
+To deploy applications in a cluster you need to deploy the application to every node, as loading and installation of apps is done on a
+per-node basis. This also means you can choose what applications to deploy on each node.
 
 .. WARNING::
 
-      Remember that XP only support running one version of an application at any time.
+      Remember that XP only supports running one version of an application at any time.
       So don't leave the old versions of your applications in the deploy directory.
 
 .. _cluster-backup:
@@ -310,37 +330,39 @@ This also means you can choose what applications to deploy on each node.
 Backing up a cluster
 --------------------
 
-Backing up a cluster is done in the same way as backing up a single node installation, the only difference is that the ``snapshots.dir``-option should point to a shared file system location, see :ref:`storage-config`.
+Backing up a cluster is done in the same way as backing up a single node installation, the only difference is that the
+``snapshots.dir``-option should point to a shared file system location, see :ref:`storage-config`.
 
-  #. First, on any cluster node, take a :`toolbox-snapshot` of the indices. This will store a cluster-wide snapshot of all data at a point of time. This can be configured to run as an automatic job; Only the diff from the last snapshot will be stored, so the operation is quick.
-  #. Secondly, take a file copy of your blobstore.
+  #. First, on any cluster node, take a :`toolbox-snapshot` of the indices. This will store a cluster-wide snapshot of all data at a point
+     of time. This can be configured to run as an automatic job; Only the diff from the last snapshot will be stored, so the operation is quick.
+  #. Second, take a file copy of your blobstore.
 
-  We recommend uing incremental backup for the blobstore (rsync or similar) as this will only copy the recently changed files.
+  We recommend uisng incremental backup for the blobstore (rsync or similar) as this will only copy the recently changed files.
   The combined data from the snapshots and blobstore copy is all you need in order to restore Enonic XP.
 
 
 Sample configurations
 ---------------------
 
-2-nodes cluster
+2-node cluster
 ****************
 
 .. literalinclude:: code/2-node-cluster-config.properties
    :language: properties
 
-3-nodes cluster
+3-node cluster
 ****************
 
 .. literalinclude:: code/3-node-cluster-config.properties
    :language: properties
 
-5-nodes cluster
+5-node cluster
 ****************
 
 .. literalinclude:: code/5-node-cluster-config.properties
    :language: properties
 
-7-nodes cluster with dedicated roles
+7-node cluster with dedicated roles
 ************************************
 
 .. literalinclude:: code/7-node-cluster-dedicated.properties
