@@ -13,7 +13,7 @@ Adding apps to your site
 
 A website can be created from a single app. But a site's functionality can be extended by adding other pre-made apps. SEO Meta Fields,
 Disqus comments and Google Analytics are just a few of the many apps that can instantly add features to your site. See what's available at
-the `Enonic Marketplace <http://marketplace.enonic.com/applications>`_.
+the `Enonic Marketplace <http://market.enonic.com/applications>`_.
 
 Handling Multiple projects
 --------------------------
