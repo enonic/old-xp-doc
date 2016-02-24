@@ -15,8 +15,8 @@ There are no breaking changes in this release, but due to internal changes in re
 
   #. Download Enonic XP (link above)
   #. Backup your existing data
-  #. Dump the repository, see :ref:`toolbox-dump` reference
-  #. Stop the old server(s) - to avoid new data from coming in.
+  #. Dump the repository, see :ref:`toolbox-dump` reference (make sure you do this with 6.3.1 installed, as explained above)
+  #. Stop the old server(s) - to avoid new data from coming in
   #. Setup new XP installation - (for all servers in your entire cluster if you have one)
   #. Move or link (however this is configured) your $XP_HOME folder(s) (configuration, deployment and data) to the the new Enonic XP installation
   #. (OPTION) Empty the $XP_HOME/deploy folder - Only if you want to use the new system deployment tools (Appliations are then installed in the repository, cluster wide)
