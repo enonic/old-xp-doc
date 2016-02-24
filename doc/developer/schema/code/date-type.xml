@@ -1,7 +1,5 @@
 <input name="name" type="Date">
   <label>Date (with tz)</label>
-  <indexed>true</indexed>
-  <custom-text>Custom text</custom-text>
   <occurrences minimum="0" maximum="1"/>
   <config>
     <timezone>true</timezone>

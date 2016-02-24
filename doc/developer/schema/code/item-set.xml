@@ -10,6 +10,5 @@
       <occurrences minimum="0" maximum="1"/>
     </input>
   </items>
-  <immutable>false</immutable>
   <occurrences minimum="0" maximum="0"/>
 </item-set>

@@ -6,7 +6,7 @@ Project structure
 To build applications with Enonic XP, you will typically setup a project.  The fastest way to do this is using the init-project feature
 included in the Enonic XP toolbox utility.
 
-The project structure is a similar to a `Maven <https://maven.apache.org/>`_ projects for those who are familiar with that.
+The project structure is a similar to `Maven <https://maven.apache.org/>`_ projects for those who are familiar with that.
 
 Below is a sample project folder structure - all items are folders, except for ``site.xml`` and ``build.gradle``::
 
@@ -48,7 +48,7 @@ src/main/resources/
   All folders described below are relative to this folder
 
 admin/tools
-  This is where you place tool controllers. Tools are administrative user interfaces (apps) running in their own separate browser tab.
+  This is where you place code for admin tools. Tools are administrative user interfaces (apps) running in their own separate browser tab.
   Create tools if you need a back-office utility to manage your applications or similar.
 
 admin/widgets
@@ -56,15 +56,15 @@ admin/widgets
   I.e. you can create a widget that extends the Content Studio detail panel.
 
 assets/
-  Public folder for external css, javascript and static images etc etc
+  Public folder for external css, javascript and static images etc. etc.
 
 lib/
-  This is the last place the global ``require`` javascript-function looks,
-  so it is a good place to put default javascript files here.
+  This is the last place the global ``require`` JavaScript-function looks,
+  so it is a good place to put default JavaScript files here.
 
 services/
-  Services are a special type of http controllers that will be mounted on a fixed url patter that looks like this: _/service/<myapp>/<myservice>.
-  You may use services like any other Javascript controller in the system
+  Services are a special type of http controller that will be mounted on a fixed url pattern that looks like this: _/service/<myapp>/<myservice>.
+  You may use services like any other JavaScript controller in the system.
 
 site/site.xml
   The ``site.xml`` file contains basic information for a site created with the application.
@@ -75,13 +75,13 @@ site/site.xml
      :language: xml
 
 site/content-types/
-  Content schemas-types are placed here. Used to create structured content (see :ref:`content_types`).
+  Content schemas are placed here. Used to create structured content (see :ref:`content_types`).
 
 site/error/
   Create custom http error pages by placing an error controller in this directory (see :ref:`errors`).
 
 site/filters/
-    This is where generic http response filters are placed. Filtes can be used for post processing any given request - also across applications added to a site.
+    This is where generic http response filters are placed. Filters can be used for post processing any given request - also across applications added to a site.
     A common use case is adding script tags to pages - but possibilities are virtually endless.
 
 site/i18n/
@@ -90,19 +90,18 @@ site/i18n/
   Here is an example: https://docs.oracle.com/javase/tutorial/i18n/resbundle/propfile.html
 
 site/mixins/
-  Mixin schema-types are placed here. A mixin can be used to add fields to a content-type or other schemas (see :ref:`mixins`).
+  Mixin schema-types are placed here. A mixin can be used to add common fields to multiple content-types or other schemas (see :ref:`mixins`).
 
 site/pages/
-  Page controllers are placed here. They will be used to render pages
-  and page templates (see :ref:`page`).
+  Page controllers are placed here. They will be used to render pages and page templates (see :ref:`page`).
 
 site/parts/
   Part controllers should be placed here. Parts are dynamically configurable components that can
   be placed on pages (see :ref:`part`).
 
 site/layouts/
-  Layout controllers should be placed here. Layouts are similar to parts, but in addition has one or more regions.
-  Regions enable placements of other components inside the layout. (see :ref:`layout`).
+  Layout controllers should be placed here. Layouts are similar to parts, but in addition have one or more regions.
+  Regions enable placement of other components inside the layout. (see :ref:`layout`).
 
 views/
   Views are any kind of files that are used for rendering. The folder is optional, as view files can

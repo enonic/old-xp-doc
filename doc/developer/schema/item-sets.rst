@@ -3,13 +3,12 @@
 Item Sets
 =========
 
-Item sets represent a special capability of forms that allow you to nest other form items hierarchically. This enables the 
+Item sets represent a special capability of forms that allow you to nest other form items hierarchically.
 
-
-It is possible to group inputs into logical units, either to allow them to repeat as a complex input type - since item sets support occurences too.
+Inputs in item sets are grouped into logical units, allowing them to repeat as a complex input type - since item sets support occurrences too.
 Item sets are both visually and semantically grouped as the name of the item set is used in the persisted property structure. An item set actually produces a property set.
 
-Here is an example of an item set with a regular input type before and after:
+Here is an example of an item set with two inputs. The resulting form will allow multiple entries of phone numbers with labels:
 
 .. literalinclude:: code/item-set.xml
    :language: xml

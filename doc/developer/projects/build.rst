@@ -3,8 +3,8 @@
 Build script
 ============
 
-By default, Enonic uses Gradle as the main build tool. This is a highly flexible Java-based utility that build on the popular Maven project tools and code repository structures.
-Enonic provides a Gradle plugin that simplifies the build process greatly, if you used the starter-base project to initialize your project, you will have all the basic tools you need to get going.
+By default, Enonic uses Gradle as the main build tool. This is a highly flexible Java-based utility that builds on the popular Maven project tools and code repository structures.
+Enonic provides a Gradle plugin that greatly simplifies the build process. If you used the starter-vanilla project to initialize your project, you will have all the basic tools you need to get going.
 
 Running a build
 ---------------
@@ -49,7 +49,7 @@ There are three standard scopes (keywords) used in the dependency list
 gradle deploy
 -------------
 
-To have Gradle automatically deploy new applications to your XP intallation you have to specify an environment variable that tells Gradle where to place the artifact (application file).
+To have Gradle automatically deploy new applications to your XP installation, you have to specify an environment variable that tells Gradle where to place the artifact (application file).
 
 OSX/Linux:
 
@@ -64,19 +64,19 @@ Windows:
   set XP_HOME=c:\path\to\xp-installation\home
 
 
-When done, if you have installed Gradle, run the following commands to build and deploy the file
+With $XP_HOME set, run the following command to build and deploy the file
 
 OSX/Linux:
 
 .. code-block:: none
 
-   gradle deploy
+   ./gradlew deploy
 
 Windows:
 
 .. code-block:: none
 
-   gradlew.bat build
+   gradlew.bat deploy
 
 
 Once completed, your XP installation will detect, install and start the files.

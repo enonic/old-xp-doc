@@ -3,12 +3,12 @@
 Serverside Javascript
 =====================
 
-Enonic XP primarily uses server-side Javascript for application development.
+Enonic XP primarily uses server-side JavaScript for application development.
 Our goal is to enable any developer - PHP, .net, Java, Python, etc, etc to quickly be productive with Enonic XP.
 
 Here are some highlights on how it works:
 
-* Runs on the Java Virtual Machine using the Nashorn javascript engine, a highly performant, portable and robust platform.
+* Runs on the Java Virtual Machine using the Nashorn JavaScript engine, a high performance, portable and robust platform.
 * Multithreaded request-response approach - simplifying software development and utilization of modern multi-core hardware
 * Implements central parts of CommonJS module specification (http://wiki.commonjs.org/wiki/Modules/1.1) like RequireJS - but not all
 * You can invoke Java directly from your scripts - quickly accessing powerful Java libraries
