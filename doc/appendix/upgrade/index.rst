@@ -5,7 +5,8 @@ Upgrading to |version|
 
 .. warning:: In order to upgrade, you must already have upgraded to Enonic XP 6.0.0 or newer.
 
-.. warning:: Enonic XP 6.3.0 has a problem with the export/dump of manually sorted content. If your installation uses Enonic XP 6.3.0, you must upgrade to Enonic XP 6.3.1 before following the steps listed below. When upgrading from Enonic XP 6.3.0 to 6.3.1, do not dump & load your data.
+.. warning:: Enonic XP 6.3.0 has a problem with the export/dump of manually sorted content. If your installation uses Enonic XP 6.3.0, you
+    must upgrade to Enonic XP 6.3.1 before following the steps listed below. When upgrading from Enonic XP 6.3.0 to 6.3.1, do not dump & load your data.
 
 Enonic XP |version| Java distribution download: https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip
 
@@ -33,7 +34,8 @@ There are no breaking changes in this release, but due to internal changes in re
 New Project Structure
 ---------------------
 
-To take benefit of some of the new application development capabilities such as :ref:`tools` and :ref:`widgets`, and align their applications for other future improvements, developers should to update their application project structure.
+Developers should update their application project structure to benefit from some of the new application development capabilities such
+as :ref:`tools` and :ref:`widgets`, and align their applications for other future improvements,
 
 * move .../resources/site/assets/ to .../resources/assets/
 * move .../resources/site/services/ to .../resources/services/
@@ -45,4 +47,4 @@ For libraries, the lookup pattern for "require" will now include scanning parent
 
 NB! If you have used explicit require references i.e. "/lib/mylib" these files must now be moved to resouces/ root, or referenced relatively instead.
 
-(NB! Applications with updated structure will require minumum XP version 6.4)
+(NB! Applications with updated structure will require minimum XP version 6.4)
