@@ -3,10 +3,8 @@
 Upgrading to |version|
 ======================
 
-.. warning:: In order to upgrade, you must already have upgraded to Enonic XP 6.0.0 or newer.
-
 .. warning:: Enonic XP 6.3.0 has a problem with the export/dump of manually sorted content. If your installation uses Enonic XP 6.3.0, you
-    must upgrade to Enonic XP 6.3.1 before following the steps listed below. When upgrading from Enonic XP 6.3.0 to 6.3.1, do not dump & load your data.
+    must upgrade to Enonic XP 6.3.1 before following the steps listed below. When upgrading from Enonic XP 6.3.0 to 6.3.1, do *not* dump & load your data.
 
 Enonic XP |version| Java distribution download: https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip
 
