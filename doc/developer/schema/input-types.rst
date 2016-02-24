@@ -4,8 +4,8 @@
 Input Types
 ============
 
-Input types are widgets used in combinations to buid forms. An input type has both a front-end and a back-end.
-Each input type will in the end return a property, with a specific value type.
+Input types are specified by XML snippets and used in combinations to build forms. An input type has both a front-end and a back-end.
+Each input type will return a property with a specific value type.
 
 The following XML configuration is common for all input types:
 
@@ -42,7 +42,7 @@ AttachmentUploader
 ------------------
 
 This field enables uploading of one or more files that will be stored as attachments to the current node/content.
-This is different from for instance media content where each media is a separate node that can be linked to.
+This is different from media content where each media is a separate node that can be linked to.
 
 .. literalinclude:: code/attachmentUploader-type.xml
    :language: xml
@@ -69,7 +69,7 @@ A ComboBox needs a list of options.
    :language: xml
 
 option
-  This element defines the option label. ``value`` attribute defines the
+  This element defines the option label. The ``value`` attribute defines the
   actual value to set when this option is selected. Multiple ``option``
   settings are ordered.
 
@@ -92,7 +92,7 @@ DateTime
 
 A simple field for dates with time.  A pop-up box with a calendar and time selector allows easy editing.
 The format is ``yyyy-MM-dd hh:mm`` for example, ``2015-02-09T09:00``. The date-time could be of type
-``local`` (no datetime) or with timezone. This is done using configuration:
+``local`` (no datetime) or with a timezone. This is done using configuration:
 
 .. literalinclude:: code/datetime-type.xml
    :language: xml
@@ -112,9 +112,9 @@ GeoPoint
 
 Stores a GPS coordinate as two comma-separated decimal numbers.
 
-* The first number must be a number between -90 and 90, where a negative number
+* The first number must be between -90 and 90, where a negative number
   indicates a location south of equator and a positive is north of the equator.
-* The second number must be a number between -180 and 180, where a negative number indicates
+* The second number must be between -180 and 180, where a negative number indicates
   a location in the western hemisphere and a positive number is a location in the eastern hemisphere.
 
 

@@ -1,10 +1,10 @@
 Sample library
 ==============
 
-In this example, we will create support for redirection of URLs.  For this, we need a content-type, and a simple JavaScript.
+In this example, we will create support for redirection of URLs.  For this, we need a content-type, and a simple JavaScript file.
 
-The content-type, let's just call it url, defines the URLs that the code may redirect to, so in the ``content-types`` directory, add a new
-directory and name it ``url`` .  Then, in this directory, create the content type:
+The content-type, let's just call it url, defines the URLs that the code may redirect to. So in the ``content-types`` directory, add a new
+directory and name it ``url``.  Then, in this directory, create the content type:
 
 .. literalinclude:: code/url.xml
    :language: xml

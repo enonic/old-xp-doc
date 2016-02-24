@@ -12,7 +12,7 @@ Some hands on examples where forms are used in the system are :ref:`content_type
 Basic Setup
 -----------
 
-Forms can be composed through Java or XML, where the latter is the most common.
+Forms can be defined through Java or XML, where the latter is the most common.
 
 Below is an example configuration in xml:
 
@@ -26,7 +26,7 @@ Adding Mixins
 -------------
 
 To simplify maintenance of forms, mixins can be created and injected into a form simply by referencing it.
-The form will render as if everything in the mixin was written directly in the form itself.
+The form will render as if everything in the mixin was written directly in the form itself. Read more about :ref:`mixins`.
 
 
 .. literalinclude:: code/form-with-mixin.xml

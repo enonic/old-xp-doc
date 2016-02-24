@@ -3,18 +3,17 @@
 Development mode
 ================
 
-To speed up the development process you can start the server in dev-mode.
-When using this mode you only need to deploy your code once or when you
-have modified some Java code.
+You can start the server in dev-mode to speed up the development process.
+When using this mode, you only need to deploy your code once - or when certain situations arise (see below).
 
 Start server using dev-mode::
 
-  $ bin/server.sh dev
+  $ $XP_INSTALL/bin/server.sh dev
 
-First time you will need to deploy the code using ``deploy`` task
+First time you will need to deploy the code (app, lib, etc.) using the ``deploy`` task
 (see :ref:`gradle_deploy_app`)::
 
-  $ gradle deploy
+  $ ./gradlew deploy
 
 After that, you do not need to redeploy your application except...
 

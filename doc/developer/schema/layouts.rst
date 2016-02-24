@@ -8,9 +8,8 @@ To shape the presentation of a form, one can use layouts. Currently, only one la
 Field set
 ---------
 
-In order to group items visually, a field set may be used.  This is an XML element with a label that will
-cause the form in the admin console to group the inputs inside the set under a heading from the label of
-the field set.
+A field set may be used to group items visually. The example below will create a form in the admin console with the inputs grouped under the
+label of the field set.
 
 .. literalinclude:: code/field-set.xml
    :language: xml
