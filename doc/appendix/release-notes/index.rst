@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Enonic XP |version| is a minor release, with several exciting new feature and fixes - there are no breaking changes
+Enonic XP |version| is a minor release, with several exciting new features and fixes - there are no breaking changes
 
 Enonic Market
 -------------
