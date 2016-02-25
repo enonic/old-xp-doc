@@ -6,7 +6,7 @@ Enonic XP |version| is a minor release, with several exiting new feature and fix
 Enonic Market
 -------------
 Enonic Market is now available, indirectly a part of Enonic XP - providing easy access to applications, libraries and starters built by
-Enonic or other 3rd party vendors. Market applications can even be installed directly from XP. Check it out: https://enonic.com/market
+Enonic or other 3rd party vendors. Market applications can even be installed directly from XP. Check it out: https://market.enonic.com
 
 .. image:: images/enonic-market.jpg
 

@@ -22,10 +22,19 @@ Yes. You can go to the
 to read the changelog for all versions. If you want to see what's coming,
 you can go to our `GitHub wiki page <https://github.com/enonic/xp/wiki>`_.
 
-What software is bundled with Enonic XP, and which legal licenses do they use?
-------------------------------------------------------------------------------
+How is Enonic XP Licensed
+-------------------------
+Enonic XP is available under the `AGPL 3 license <http://www.gnu.org/licenses/agpl-3.0.html>`_, with a linking exception.
+This basically means that you are free to use and re-distribute Enonic XP according to the AGPL license.
+The linking exception ensures that you can build custom applications and libraries on top of Enonic XP and license these however you see fit.
+Any changes made to the Enonic XP core platform however must be licensed as APGL.
 
-The list of licenses can be found in our `Notice.txt file <https://github.com/enonic/xp/blob/master/NOTICE.txt>`_
+We encourage the use of FOSS licensing for 3rd party apps and libraries. Libraries in particular should be licensed with a non-intrusive license such as Apache, BSD or MIT.
+
+.. note:: This is a major difference from products such as Drupal and Wordpress where your themes, plugins and modules must be licensed as GPL too.
+
+
+Enonic XP also consist of many 3rd party software components. The complete list can be found in our `Notice.txt file <https://github.com/enonic/xp/blob/master/NOTICE.txt>`_
 
 What is $XP_INSTALL?
 --------------------
@@ -52,3 +61,5 @@ Where can I get help?
 
 The `community forum <https://discuss.enonic.com/>`_ would be a good place to start. We also offer
 `formal training courses <https://enonic.com/learn>`_.
+
+Enonic also offers software support subscriptions for business critical installations: https://enonic.com/pricing
