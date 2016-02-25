@@ -67,10 +67,10 @@ Follow the steps below if you want to migrate your apps from file.
   #. Install the Applications that was in the $XP_HOME/deploy folder using the Applications UI tool, or :ref:`toolbox-install-app`
 
 
-New Project Structure
+New Project Structure (OPTIONAL)
 ---------------------
 
-Developers should update their application project structure to benefit from some of the new application development capabilities such
+Developers can update their application project structure to benefit from some of the new application development capabilities such
 as :ref:`tools` and :ref:`widgets`, and align their applications for other future improvements,
 
 * move .../resources/site/assets/ to .../resources/assets/
@@ -78,7 +78,7 @@ as :ref:`tools` and :ref:`widgets`, and align their applications for other futur
 * move .../resources/site/lib/ to .../resources/lib
 * Optionally move .../resources/site/views/ to .../resources/views/ - this is an optional folder.
 
-To support backward compatibility, XP will scan for assets/ and services/ - initially on root, then in site. But only the first discovered folder will be used.
+XP is backward compatible, and will scan for assets/ and services/ - initially on root, then in site. But only the first discovered folder will be used.
 For libraries, the lookup pattern for "require" will now include scanning parent folders with lib/ folders until reaching the resources/ folder.
 
 NB! If you have used explicit require references i.e. "/lib/mylib" these files must now be moved to resouces/ root, or referenced relatively instead.
