@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Enonic XP |version| is a minor release, with several exiting new feature and fixes - there are no breaking changes
+Enonic XP |version| is a minor release, with several exciting new feature and fixes - there are no breaking changes
 
 Enonic Market
 -------------
@@ -37,7 +37,7 @@ Launcher and Home page
 The home page is now available as a separate tool, featuring a new tools launcher panel.
 The launcher panel is easily embedded in other tools - providing global navigation capabilities.
 The home page currently only serves the purpose of being a start page for choosing other tools -
-but will provide exiting features in upcoming releases.
+but will provide exciting features in upcoming releases.
 
 .. image:: images/home.jpg
 
