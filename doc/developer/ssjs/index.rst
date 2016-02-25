@@ -1,6 +1,6 @@
 .. _serverside_javascript:
 
-Serverside Javascript
+Serverside JavaScript
 =====================
 
 Enonic XP primarily uses server-side JavaScript for application development.
@@ -13,7 +13,7 @@ Here are some highlights on how it works:
 * Implements central parts of CommonJS module specification (http://wiki.commonjs.org/wiki/Modules/1.1) like RequireJS - but not all
 * You can invoke Java directly from your scripts - quickly accessing powerful Java libraries
 
-Beyond simply executing Javascript on the server, the XP framework provides a range of capabilities, primarily associated with HTTP.
+Beyond simply executing JavaScript on the server, the XP framework provides a range of capabilities, primarily associated with HTTP.
 Read more below to learn about the basic concepts.
 
 .. toctree::

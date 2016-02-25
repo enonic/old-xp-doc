@@ -9,21 +9,19 @@ Websockets
 Websocket support allows a service to act as a websocket channel that
 you can connect to from a web-browser.
 
-First, you will need to implement a ``get`` method to handle initialization
+A ``get`` method must be implemented to handle initialization
 of the websocket.
 
 .. literalinclude:: code/websockets-1.js
     :language: javascript
 
-Next is to create a websocket event handler shown in the next example. This
-will be called for every websocket events from a client.
+A websocket event handler named ``webSocketEvent`` is required. It will be called for every websocket event from a client. See example below.
 
 .. literalinclude:: code/websockets-2.js
     :language: javascript
 
-To create a simple chat you will need to use ``lib-websocket`` to be able
-to send messages back and add/remove clients in groups. Adding to groups
-allows for multicast message sending.
+Below is an example of a simple chat. A library called ``lib-websocket`` has functions for sending messages back and adding/removing clients
+in groups. Adding to groups allows for multicast message sending.
 
 .. literalinclude:: code/websockets-3.js
     :language: javascript

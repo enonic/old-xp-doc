@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+  <filters>
+    <response-filter name="trackingScript" order="10"/>
+  </filters>
+  <x-data mixin="html-meta"/>
+  <config>
+    <input type="ContentSelector" name="profiles">
+      <label>Profiles folder</label>
+      <occurrences minimum="0" maximum="1"/>
+      <config>
+        <relationship-type>system:reference</relationship-type>
+        <allow-content-type>base:folder</allow-content-type>
+      </config>
+    </input>
+  </config>
+</site>
