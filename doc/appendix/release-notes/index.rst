@@ -41,6 +41,15 @@ but will provide exciting features in upcoming releases.
 
 .. image:: images/home.jpg
 
+
+Page Editor
+-----------
+
+Navigation and user interaction inside Page Editor have been significantly improved to be more intuitive and not take away attention from
+the components being edited by giving them more focus and space. We’ve also changed component interaction behaviour and styling to be
+consistent between the Page Editor and the Page Components view.
+
+
 Contextual Navigation
 ---------------------
 Editors may now navigate directly in the preview area to find what they are looking for, and then click edit.
