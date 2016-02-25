@@ -4,7 +4,7 @@
 Global JavaScript objects and functions
 =======================================
 
-When using the Enonic XP framework, the following global functions and objects are available.
+The following global functions and objects are available in the Enonic XP framework.
 
 App
 ---
@@ -29,22 +29,22 @@ Log
 This gobally available ``log`` object holds the logging methods. It's one method for each log
 level and takes the same number of parameters.
 
-.. js:function:: log.debug(message, args)
+.. js:function:: log.debug(message, [args])
 
     :param string message: Message to log as a debug-level message.
     :param array args: Optional arguments used in message format.
 
-.. js:function:: log.info(message, args)
+.. js:function:: log.info(message, [args])
 
     :param string message: Message to log as an info-level message.
     :param array args: Optional arguments used in message format.
 
-.. js:function:: log.warning(message, args)
+.. js:function:: log.warning(message, [args])
 
     :param string message: Message to log as a warning-level message.
     :param array args: Optional arguments used in message format.
 
-.. js:function:: log.error(message, args)
+.. js:function:: log.error(message, [args])
 
     :param string message: Message to log as an error-level message.
     :param array args: Optional arguments used in message format.
@@ -58,10 +58,9 @@ Examples:
 Resolve()
 ---------
 
-The globally available function resolves a fully qualified path to a local path based
-on your current location. It will never check if the path exists, just
-resolve it. This function supports both relative (with dot-references)
-and absolute paths.
+This globally available function resolves a fully qualified path to a local resource based
+on the current location. It does not check if a resource exists at the specified path.
+This function supports both relative (with dot-references) and absolute paths.
 
 .. js:function:: resolve(path)
 
@@ -76,12 +75,12 @@ Examples:
 Require()
 ---------
 
-The globally available function will load a JavaScript file and return the exports as objects.
+This globally available function will load a JavaScript file and return the exports as objects.
 The function implements parts of the `CommonJS Modules Specification`_.
 
 .. js:function:: require(path)
 
-    :param string path: Path to the javascript to load.
+    :param string path: Path to the JavaScript to load.
     :returns: The loaded JavaScript object exports.
 
 Examples:
@@ -90,14 +89,14 @@ Examples:
     :language: javascript
 
 If the path is relative then it will start looking for the file from the local directory.
-If the file is not found there, it will start looking from the `site/lib` directory.
+If the file is not found there, it will start scanning in parent directories that have a /lib folder until it reaches the resources/ folder.
 The file extension .js is not required.
 
 
 Exports
 -------
 
-The globally available ``exports`` keyword is used to expose funtionality from a given Javascript file (controllers, libraries etc).
+The globally available ``exports`` keyword is used to expose functionality from a given JavaScript file (controllers, libraries etc).
 This is part of the require.js spec.
 
-Simply use the ``exports`` keyword to expose functionality from any javascript file.
+Simply use the ``exports`` keyword to expose functionality from any JavaScript file.

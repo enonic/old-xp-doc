@@ -22,7 +22,7 @@ cookies
     HTTP cookies to be added to the response. Will be described in a later section.
 
 redirect
-    URI to redirect to. If specified, the value will be set in the "Location" header and the status will be set to 303 ("See other").
+    URI to redirect to. If specified, the value will be set in the "Location" header and the status will be set to 303.
 
 pageContributions
     A special filter available for sites and page components allowing page components to contribute html to the main page markup. See :ref:`page_contributions`
@@ -32,4 +32,4 @@ postProcess
     components in a page. (See also :ref:`page_contributions`) (default is ``true``). Set to false if you want to speed up page rendering in cases where there are no regions or page components.
 
 applyFilters
-    Whether or not execute the filters after rendering. Set to ``false`` to skip execution of filters. (See also :ref:`response_filters`) (default is ``true``).
+    Whether or not to execute the filters after rendering. Set to ``false`` to skip execution of filters. (See also :ref:`response_filters`) (default is ``true``).

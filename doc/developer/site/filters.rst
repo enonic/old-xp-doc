@@ -16,11 +16,13 @@ Here is an example of a ``[filter].js`` file:
 
 .. literalinclude:: code/filter.js
    :language: javascript
+   :caption: site/filters/trackingScript.js
 
 In addition, the filter must be declared in the ``site.xml`` descriptor by adding a ``<response-filter>`` tag within the ``<filters>`` element, with the ``name`` and ``order``.
 
-.. literalinclude:: code/site.xml
+.. literalinclude:: code/filter-site.xml
    :language: xml
+   :caption: site/site.xml
 
 
 Response filters may change any of the values of the response object, that includes: HTTP status code, response body, HTTP headers, cookies and page contributions.

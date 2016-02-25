@@ -31,8 +31,8 @@ Media (base:media)
 * final: false
 * allow-child-content: false
 
-This content type serves as the abstract supertype for all content types that in
-their natural habitat are considered "files", these are listed below
+This content type serves as the abstract supertype for all content types that are considered "files" in
+their natural habitat. These are listed on the :ref:`content_media_types` page.
 
 
 Shortcut
@@ -41,7 +41,7 @@ Shortcut
 * final: true
 * allow-child-content: true
 
-Redirecting visitor to another content item in the structure
+This is used for redirecting a visitor to another content item in the structure
 The content type name is ``base:shortcut``.
 
 
@@ -53,9 +53,9 @@ Structured (base:structured)
 * final: false
 * allow-child-content: true
 
-This is possibly the most commonly used base type for creating other content type.
+This is possibly the most commonly used base type for creating other content types.
 The structured content type is the foundation for basically any other structured content
-you can come up with, such as the ``Person`` content type above.
+you can come up with, such as the ``Person`` content in the previous example.
 
 
 Unstructured (base:unstructured)
@@ -66,11 +66,11 @@ Unstructured (base:unstructured)
 * allow-child-content: true
 
 The unstructured content type is a special content type that permits the creation
-of any property or structure - without actually defining it first.
+of any property or structure without actually defining it first. This is convenient for user generated content from forms on a site.
 
 .. CAUTION::
 
-  There is currently no UI for unstructured content so they will appear
-  as empty from the admin console.
+  There is currently no UI for unstructured content so they will appear empty in the admin console. However, a custom page template that
+  supports base:unstructured may easily be created to show name/value pairs.
 
 
