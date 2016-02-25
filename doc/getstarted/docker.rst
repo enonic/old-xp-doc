@@ -58,8 +58,11 @@ Log In
 ------
 
 * Point your browser to ``http://<mydockercontainer>:8080``
+* Log in with username ``su`` and password ``password``.
 
-.. include:: login.rst
+After logging in you should see the following screen, with the launcher panel to the right:
+
+.. image:: images/admin.jpg
 
 
 Install Superhero Blog

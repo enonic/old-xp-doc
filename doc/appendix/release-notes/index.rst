@@ -5,8 +5,8 @@ Enonic XP |version| is a minor release, with several exiting new feature and fix
 
 Enonic Market
 -------------
-Enonic Market is now available, Indirectly a part of Enonic XP - providing easy access to applications, libraries and starters built by Enonic or other 3rd party vendors.
-Market applications can even be installed directly from XP. Check it out: https://enonic.com/market
+Enonic Market is now available, indirectly a part of Enonic XP - providing easy access to applications, libraries and starters built by
+Enonic or other 3rd party vendors. Market applications can even be installed directly from XP. Check it out: https://market.enonic.com
 
 .. image:: images/enonic-market.jpg
 
@@ -35,7 +35,7 @@ Read the documentation for how to get started with :ref:`tools`.
 Launcher and Home page
 ----------------------
 The home page is now available as a separate tool, featuring a new tools launcher panel.
-The launcher panel is easily embedded in other tools - provide global navigation capabilities.
+The launcher panel is easily embedded in other tools - providing global navigation capabilities.
 The home page currently only serves the purpose of being a start page for choosing other tools -
 but will provide exiting features in upcoming releases.
 
@@ -61,17 +61,17 @@ Feel free to test it out and give us feedback so we can implement this the best 
 Libraries
 ---------
 
-* lib-content now features ``publish`` function (push content from draft to master branch)
+* lib-content now features a ``publish`` function (push content from draft to master branch)
 
 Minor improvements
 ------------------
 
-* Improved organizing of assets, services, and other development resources - see  :ref:`project_structure`.
+* Improved organizing of development resources for application projects - see  :ref:`project_structure`.
+  Developer assets/ libs/ and services/ should now be placed on resources/ root - not within sites/ - see :ref:`upgrading`
 * XSLT Transformations support in toolbox import utility (Apply transformation to import XML on a per-node basis)
-* New input type - AttachmentUploader - Add attachments directly from a form :ref:`input_types`
+* New input type - AttachmentUploader - Add attachments directly from a form - see :ref:`input_types`
 * New "abstract" property for media:document content types (Enabling presentation/indexing of a document abstract)
 * New "tags" property for all media:* content-types (Enables tagging and search across media)
-* Developer Assets/ and Services/ should now be placed on resources/ root - not within sites/.
 * Usability improvements for page editor - removed shader, faster selections and context menu on right-click
 * Page Component - Highlighting with dashed borders and show text extract from text components
 * Upgraded to Elasticsearch 1.5.2
