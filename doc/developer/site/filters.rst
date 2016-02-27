@@ -4,9 +4,9 @@ Response Filters
 ================
 
 Response filters are scripts, similar to controllers, that allow customizing or adapting the response of page controllers.
-Notice thst this actually applies to pages from any application added to the site.
+Notice that this actually applies to pages from any application added to the site.
 
-After the page and component controllers have been processed during rendering, the response filters will be executed.
+The page and component controllers are processed during rendering and then the response filters will be executed afterward.
 
 To add a response filter, create a folder ``site/filters`` in the application and place a ``[filter-name].js`` file within this folder.
 A filter must export a method named ``responseFilter``.
@@ -18,7 +18,7 @@ Here is an example of a ``[filter].js`` file:
    :language: javascript
    :caption: site/filters/trackingScript.js
 
-In addition, the filter must be declared in the ``site.xml`` descriptor by adding a ``<response-filter>`` tag within the ``<filters>`` element, with the ``name`` and ``order``.
+In addition, the filter must be declared in the ``site.xml`` descriptor by adding a ``<response-filter>`` element within the ``<filters>`` element, with ``@name`` and ``@order`` attributes.
 
 .. literalinclude:: code/filter-site.xml
    :language: xml
@@ -31,14 +31,14 @@ It is also possible to return the response object received without any changes.
 
 Execution order
 ---------------
-An application can contain multiple filters, declared in ``site.xml``. And also multiple applications can be selected for a Site.
+An application can contain multiple filters declared in ``site.xml``. Multiple applications can be selected for a Site.
 When a page is rendered, all the filters declared in all the applications selected for the site will be executed.
 The order in which the filters are executed depends on the filters ``order`` (as defined in ``site.xml``) and the order of the applications configured on the Site.
 
 The filters with a **lower order** will be executed **first**.
 In case there are several filters with the same ``order`` number,
-then the position of the applications (as configured for a Site in Content Studio) determines the order.
+the position of the applications (as configured for a Site in Content Studio) determines the order of execution.
 
 
 The filter-chain execution can be interrupted from either a controller or a filter by setting the ``applyFilters`` field in the response.
-When this value is set to ``false`` all of the remaining filters will be skipped.
+When this value is set to ``false`` all of the remaining filters will be skipped. (See :ref:`http-response`).

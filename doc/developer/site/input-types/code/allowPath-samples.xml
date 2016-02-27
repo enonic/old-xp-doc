@@ -17,5 +17,5 @@ All content in mySite starting with people, including children, e.g
 <!-- All children of the current content -->
 <allowPath>./*</allowPath>
 
-<!-- All children of the current contents parent -->
+<!-- All children of the current content's parent -->
 <allowPath>../*</allowPath>

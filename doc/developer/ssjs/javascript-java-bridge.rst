@@ -1,3 +1,5 @@
+.. _invoking_java:
+
 Invoking Java
 =============
 

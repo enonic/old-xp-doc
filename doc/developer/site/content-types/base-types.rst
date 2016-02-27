@@ -35,8 +35,8 @@ This content type serves as the abstract supertype for all content types that ar
 their natural habitat. These are listed on the :ref:`content_media_types` page.
 
 
-Shortcut
-^^^^^^^^
+Shortcut (base:shortcut)
+^^^^^^^^^^^^^^^^^^^^^^^^
 * abstract: false
 * final: true
 * allow-child-content: true

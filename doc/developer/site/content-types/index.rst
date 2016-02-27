@@ -17,3 +17,4 @@ Structured, indexed and searchable content items are created from Content types.
     base-types
     media-types
     portal-types
+    custom-types

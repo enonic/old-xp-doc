@@ -100,3 +100,9 @@ The globally available ``exports`` keyword is used to expose functionality from 
 This is part of the require.js spec.
 
 Simply use the ``exports`` keyword to expose functionality from any JavaScript file.
+
+Double underscore __
+--------------------
+
+The double underscore is available in any server-side JavaScript code and is used for wrapping Java objects in a JavaScript object. Read
+more about :ref:`invoking_java`.
