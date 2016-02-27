@@ -4,7 +4,8 @@
 Site Input Types
 ================
 
-For the Content Studio and sites, several custom input types have been created. These may freely be used by any schema in the site domain, such as content types - page, part, and site descriptors.
+For the Content Studio and sites, several custom input types have been created. These may freely be used by any schema in the site domain,
+such as content types - page, part, and site descriptors.
 
 
 ContentSelector
@@ -26,7 +27,7 @@ allowType
 allowPath
   This is used to limit the path of the content that may be selected for this input.
   The site on which the content exists, can be wildcarded with ``${site}``
-  Use one setting for path expression.
+  Use one setting for each path expression.
   
 .. literalinclude:: code/allowPath-samples.xml
    :caption: allowPath samples
@@ -36,7 +37,7 @@ allowPath
 HtmlArea
 --------
 
-A field for entering html in a WYSIWYG HTML editor, supports inserting images and linking to media content in general.
+A field for entering html in a WYSIWYG HTML editor. It supports inserting images and linking to media content in general.
 More configuration options will be available here soon!
    
    

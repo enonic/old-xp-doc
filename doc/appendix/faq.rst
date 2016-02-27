@@ -34,7 +34,7 @@ We encourage the use of FOSS licensing for 3rd party apps and libraries. Librari
 .. note:: This is a major difference from products such as Drupal and Wordpress where your themes, plugins and modules must be licensed as GPL too.
 
 
-Enonic XP also consist of many 3rd party software components. The complete list can be found in our `Notice.txt file <https://github.com/enonic/xp/blob/master/NOTICE.txt>`_
+Enonic XP also consists of many 3rd party software components. The complete list can be found in our `Notice.txt file <https://github.com/enonic/xp/blob/master/NOTICE.txt>`_
 
 What is $XP_INSTALL?
 --------------------

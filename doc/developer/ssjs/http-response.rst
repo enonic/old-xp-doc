@@ -1,3 +1,5 @@
+.. _http-response:
+
 HTTP Response
 =============
 
