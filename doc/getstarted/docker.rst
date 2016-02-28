@@ -28,7 +28,7 @@ Start Server
 
 .. _docker_project: <https://registry.hub.docker.com/u/enonic/xp-app/>
 
-**Launch Enonic XP on Docker**
+**Launch Enonic XP on Docker** 
 
 With Docker up and running, installing Enonic XP is as smooth as baby skin. Execute the commands below in your terminal/shell to get going.
 
