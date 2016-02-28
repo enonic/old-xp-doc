@@ -26,9 +26,7 @@ If you don't already have a Docker up and running, we recommend reading the bril
 Start Server
 ------------
 
-.. _docker_project: <https://registry.hub.docker.com/u/enonic/xp-app/>
-
-**Launch Enonic XP on Docker** 
+**Launch Enonic XP on Docker**
 
 With Docker up and running, installing Enonic XP is as smooth as baby skin. Execute the commands below in your terminal/shell to get going.
 
@@ -51,7 +49,7 @@ You can optionally add :<versionnumber> at the end of the command to launch a sp
 
   docker run -d -p 8080:8080 --volumes-from xp-home --name xp-app enonic/xp-app:${version}
 
-Check out our `Project page at Docker Hub <docker_project>`_ for more info.
+Check out our `Project page at Docker Hub <https://hub.docker.com/u/enonic/>`_ for more info.
 
 
 Log In
