@@ -40,7 +40,7 @@ There are no breaking changes in this release, but due to internal changes in re
 
 ..
 
-  3. Upgrade the dump with (:ref:`toolbox-upgrade`)
+  3. Upgrade the dump with a new XP installation. (:ref:`toolbox-upgrade`).
 
 ::
 
@@ -49,12 +49,12 @@ There are no breaking changes in this release, but due to internal changes in re
 ..
 
   4. Start the new server(s)
-  5. Copy the upgraded dump files from the old to the new server, place it in $NEW_XP_HOME/data/dump/. The folder will be named "6.3.1-dump_upgraded_6.4.1"
+  5. Copy the upgraded dump files from the old to the new server, place it in $NEW_XP_HOME/data/dump/. The folder will be named "6.3.1-dump_upgraded_6.4.0"
   6. Load the updated dump (:ref:`toolbox-load`)
 
 ::
 
-  toolbox.sh load -a su:password -s 6.3.1-dump_upgraded_6.4.1
+  toolbox.sh load -a su:password -s 6.3.1-dump_upgraded_6.4.0
 
 
 4. Install Apps (OPTIONAL)
