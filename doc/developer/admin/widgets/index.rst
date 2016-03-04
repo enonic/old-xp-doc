@@ -3,6 +3,9 @@
 Widgets
 =======
 
+.. WARNING::
+  Widget support is experimental.
+
 Widgets are user interface components that can be used to extend various Admin Tools.
 Currently, the only available extension point for widgets are detail panels in the Content Studio tool.
 
