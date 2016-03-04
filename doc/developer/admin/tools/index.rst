@@ -3,6 +3,9 @@
 Admin Tools
 ===========
 
+.. WARNING::
+  Admin Tool support is experimental.
+
 Admin Tools are independent "back office" user interfaces designed to manage Enonic XP or installed applications.
 Each tool will run in it's own browser tab - here are some of the reasons for this:
 
