@@ -17,7 +17,7 @@ Grammar:
   queryExpr = [ constraintExpr ] [ orderExpr ] ;
 
 * If no constraint-expression is given, all documents will match.
-* If no order-expression is given, results will be ordered by *timestamp* descending.
+* If no order-expression is given, results will be ordered by *_score* descending.
 
 Examples:
 
