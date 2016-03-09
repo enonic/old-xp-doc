@@ -9,9 +9,11 @@ retrieving data, a rich search-API is paramount.
 
    overview
    index-instructions
+   indexed-content-properties
    query-functions/index
    order-functions/index
    aggregations/index
+   ordering
    date-and-time/index
    query-paths
    query-references
