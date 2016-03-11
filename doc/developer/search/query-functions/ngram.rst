@@ -1,7 +1,7 @@
 nGram
 =====
 
-An n-gram is a sequence of n letters from a string. The nGram-function are used to search for
+An n-gram is a sequence of n letters from a string. The nGram-function is used to search for
 words or phrases beginning with a given search string. Typically, find-as-you-type searches will use this function.
 
 .. TIP::

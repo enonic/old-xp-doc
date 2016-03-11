@@ -11,11 +11,11 @@ Syntax
 
   range(<field>, <from>, <to>, [<includeFrom>], [<includeTo>])
 
-The ``from`` and ``to`` values must be of same type.
+The ``from`` and ``to`` values must be of the same type.
 
 ``includeFrom`` and ``includeTo`` are optional with default value 'false', meaning that the actual values for the ``from`` and ``to`` are not included as matches.
 
-Unboundet ranges can be queried by providing an empty string as argument.
+Unbounded ranges can be queried by providing an empty string as argument.
 
 
 Examples

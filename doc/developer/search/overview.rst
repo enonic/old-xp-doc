@@ -45,11 +45,11 @@ the ``total`` hits by the page-size (``count``) to get the needed number of page
 Query
 -----
 
-The query-part of a search is where the constraints are defined. If query parameter is empty, all nodes in
-the repository will match. The query is defined in :ref:`query_language` section.
+The query-part of a search is where the constraints are defined. All nodes in
+the repository will match when then query parameter is empty. The query is defined in the :ref:`query_language` section.
 
 The results matching the query constraint will be assigned a score. This is imperative for fulltext-type queries.
-The score of a matching documents depends on how the constraint is defined, e.g which fulltext-like function
+The score of a matching document depends on how the constraint is defined, e.g which fulltext-like function
 is used. See the :ref:`search-query-functions` section for details.
 
 
@@ -58,7 +58,7 @@ Filter & query-filter
 
 A filter also applies constraints. The difference between a filter-constraint and a query-constraint,
 is that the hits matching the filter are not scored. Scoring hits is a costly operation, and makes no sense
-for typical filter constraints like "price > 10", so its a good way of optimizing searches by appending
+for typical filter constraints like "price > 10", so it's a good way of optimizing searches by appending
 non-fulltext operations to the filter-constraint instead of the query-constraint.
 
 There are also two different kinds of filters. A *query-filter* is a part of the query-constraint,

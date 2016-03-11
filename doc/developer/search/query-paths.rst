@@ -1,7 +1,7 @@
 Querying paths
 ==============
 
-All nodes have 3 system-properties concerning the node placement in a branch, all of type ``String``:
+All nodes have three system-properties concerning the node placement in a branch, all of type ``String``:
 
 * ``_name``: The node name without path.
 * ``_parentPath``: The parent node path.
