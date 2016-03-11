@@ -12,7 +12,7 @@ _id
 	Holds the id of the content, typically generated automatically in the form of a UUID.
 
 _manualordervalue
-	The order value used when child-content are ordered manually
+	The order value used when child-content is ordered manually
 
 _name
 	Holds the name of the content
@@ -106,4 +106,4 @@ type
   	The content-type name
 
 x
-  	A property-set containing properties from mixins, also known as xtra data. Indexed values depends on the specified mixins.
+  	A property-set containing properties from mixins, also known as extra data. Indexed values depend on the specified mixins.
