@@ -38,7 +38,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Enonic XP'
-copyright = u'2015, Enonic AS'
+copyright = u'2016, Enonic AS'
 author = u'Enonic AS'
 
 # The version info for the project you're documenting, acts as replacement for
