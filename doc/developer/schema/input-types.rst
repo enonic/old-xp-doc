@@ -2,7 +2,7 @@
 
 
 Input Types
-============
+===========
 
 Input types are specified by XML snippets and used in combinations to build forms. An input type has both a front-end and a back-end.
 Each input type will return a property with a specific value type.
@@ -27,6 +27,7 @@ occurrences
   Detailed definition of how many times this field may be repeated inside one content.
   Set ``minimum`` to zero for fields that are not required, and ``maximum`` to zero for
   fields that have no restriction on the number of values.
+  This element is optional, if omitted the default will be ``minimum="0"`` and ``maximum="1"``.
 
 config
   Optional configuration that is used by some of the input-types. The config
