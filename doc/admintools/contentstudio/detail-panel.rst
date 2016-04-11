@@ -18,8 +18,9 @@ whatever the widget is designed to display. To the left of the widget selector i
 
 Next in the detail panel is the content status (Online, Offline, or Modified) followed by the permissions section. The permissions section
 has three parts. First it shows an unlock icon |unlockicon| if the content has the role **Everyone**, which means the content is viewable
-without authentication. Second, it lists the users that have full access to the selected content. Third, it has a link to edit permissions
-if the logged in user has the **Content Manager Administrator** role or other applied permissions to edit the content.
+without authentication. Second, it lists the users that have access to the selected content at each access level, for example, "Can Read" or
+"Full Access". Third, it has a link to edit permissions if the logged in user has the **Content Manager Administrator** role or other
+applied permissions to edit the content.
 
 The next part of the detail panel shows basic information about the selected content, including type, application, language, owner,
 timestamps and ID. Finally, if the content has any file attachments, they are listed here.
