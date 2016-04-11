@@ -5,4 +5,5 @@
     <option value="one">Option One</option>
     <option value="two">Option Two</option>
   </config>
+  <default>one</default>
 </input>
