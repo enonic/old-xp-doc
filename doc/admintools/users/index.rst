@@ -1,7 +1,7 @@
 .. _users_tool:
 
-Users admin tool
-================
+Users
+=====
 
 .. NOTE::
    This page is under construction. This information is likely incomplete and possibly inaccurate until this notice is removed.

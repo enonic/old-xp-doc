@@ -1,5 +1,5 @@
-Admin Tools
-===========
+Admin UI
+========
 
 .. |menuicon| image:: images/icon-menu.png
 

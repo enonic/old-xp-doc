@@ -1,7 +1,7 @@
 .. _application_tool:
 
-Applications admin tool
-=======================
+Applications
+============
 
 .. NOTE::
    This page is under construction. This information is likely incomplete and possibly inaccurate until this notice is removed.

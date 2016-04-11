@@ -1,7 +1,7 @@
 .. _content_studio:
 
-Content Studio admin tool
-=========================
+Content Studio
+==============
 
 .. NOTE::
    This page is under construction. This information is likely incomplete and possibly inaccurate until this notice is removed.
