@@ -58,7 +58,7 @@ There are no breaking changes in this release, but due to internal changes in re
 
 
 4. Install Apps (OPTIONAL)
-***********************
+**************************
 
 This release supports installing applications globally, using the repository.
 Follow the steps below if you want to migrate your apps from file.
@@ -68,7 +68,7 @@ Follow the steps below if you want to migrate your apps from file.
 
 
 New Project Structure (OPTIONAL)
----------------------
+--------------------------------
 
 Developers can update their application project structure to benefit from some of the new application development capabilities such
 as :ref:`tools` and :ref:`widgets`, and align their applications for other future improvements,
