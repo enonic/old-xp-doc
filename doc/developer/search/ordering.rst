@@ -2,7 +2,7 @@
 Ordering results
 ================
 	
-Any field can be used to order the result, either (default) DESC (descending) or ASC (ascending).
+Any user-defined or system-field can be used to order the result, either (default) DESC (descending) or ASC (ascending).
 The default field for ordering are *_score*
 
 

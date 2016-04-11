@@ -84,16 +84,48 @@ smtpTLS
 
 Storage Configuration
 ---------------------------
+
+**Blobstore Configuration**
    
-**Repository Configuration**
+Main blobstore configuration is configured in ``com.enonic.xp.blobstore.cfg``.
 
-Repository configuration can be set using ``com.enonic.xp.repo.cfg`` file.
-
-.. literalinclude:: code/repo.properties
+.. literalinclude:: code/com.enonic.xp.blobstore.cfg
   :language: properties
-  :caption: ``$XP_HOME/config/com.enonic.xp.repo.cfg``
+  :caption: ``$XP_HOME/config/com.enonic.xp.blobstore.cfg``
 
-**Elasticsearch configuration** 
+provider
+ 	The blobstore provider to be used for storing. Default value is ``file``. Other providers will be available in future versions / enterprise-edition. Each provider will have a separate configuration file named ``com.enonic.xp.blobstore.<providername>.cfg``
+	
+cache
+	Enable or disable memory caching of blobs fetched from the blobstore. Default true
+	
+cache.sizeThreshold 
+    The maximum size for objects to be cached, defaults to 1MB. You will usually avoid filling up the cache with large blobs, but rather cache smaller objects that are used often. The size notation accepts a number plus byte-size idenfier (``b``/``kb``/``mb``/``gb``/``tb``/``pb``)
+
+cache.memoryCapacity
+	The maximum memory footprint of the blob cache. Defaults to 100MB. The size notation accepts a number plus byte-size idenfier  (``b``/``kb``/``mb``/``gb``/``tb``/``pb``)
+	
+**File blobstore configuration**
+
+.. literalinclude:: code/com.enonic.xp.blobstore.file.cfg
+  :language: properties
+  :caption: ``$XP_HOME/config/com.enonic.xp.blobstore.file.cfg``
+
+baseDir
+ 	Base-directory for storing blobs. Defaults to ``${xp.home}/repo/blob``. 
+	
+readThrough.provider = none
+	Readthrough provider name, if enabled. A readthrough provider stores and fetches blobs through an intermediate blobstore. Typically used for providers using a remote blobstore where caching as local files will improve performance.
+
+readThrough.enabled = false
+	Enable or disable readthough provider usage. Default to false.
+
+readThrough.sizeThreshold = 100mb
+    The maximum size for objects to be stored in the readthrough provider, defaults to 100MB. The size notation accepts a number plus byte-size idenfier (``b``/``kb``/``mb``/``gb``/``tb``/``pb``)
+
+
+Elasticsearch configuration
+----------------------------
 
 The cluster functionallity is facilitated by Elasticsearch, so all relevant Elasticsearch settings are available.
 
