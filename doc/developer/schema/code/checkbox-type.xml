@@ -1,4 +1,5 @@
 <input name="name" type="CheckBox">
   <label>Required</label>
   <occurrences minimum="0" maximum="1"/>
+  <default>checked</default>
 </input>
