@@ -36,8 +36,8 @@ config
   (``relationship-type`` -> ``relationshipType``).
 
 default
-  Optional element which contains default value for particular input type. Currently supported by some input types.
-  See value formats in the corresponding input type description. Invalid values are ignored.
+  Optional element that contains a default value for the particular input type. Currently it is only supported by some input types.
+  See below for value formats for each input type. Invalid values for a given input type will be ignored.
 
 
 **Input types**
@@ -63,7 +63,7 @@ that makes sense is a minimum of zero and a maximum of one.
    :language: xml
 
 default
-  This element specifies default value. Use "checked" string to check it, otherwise it will be unchecked.
+  This element specifies the default value. Set it to ``checked`` to check it, otherwise it will be left unchecked.
 
 .. _combobox:
 
@@ -82,7 +82,7 @@ option
   settings are ordered.
 
 default
-  This element specifies default value. It should be equal to one of the ``option`` value.
+  This element specifies the default option for the combo box. It should be equal to one of the ``option`` values.
 
 
 Date
@@ -100,15 +100,23 @@ timezone
 default
   The format for the default date can be:
 
-  * yyyy-MM-dd    (e.g. "2011-09-12")
+  * Date in ISO 8601 format: ``yyyy-MM-dd``  (e.g. "2016-12-31")
+  * Relative date expression (e.g. "+1year -12days")
 
-  * Relative date expression. A relative time expression can be a sequence of one or more date offsets.
-  An offset is: a plus or minus sign '+' | '-' , followed by an integer, followed by a ``date unit`` string (e.g. "+3 days")
-  The ``date unit`` can be expressed as a singular unit, plural unit, or initial letter:
-       "year" | "years" | "y" |
-       "month" | "months" | "M" |
-       "week" | "weeks" | "w" |
-       "day" | "days" | "d"
+  A relative date expression can be a sequence of one or more date offsets.
+  An offset consists of: a plus or minus sign, followed by an integer, followed by a date unit string (e.g. "+3 days")
+
+  The date unit can be expressed as a singular unit, plural unit, or initial letter:
+
+  +--------+---------+-----+
+  | "year" | "years" | "y" |
+  +--------+---------+-----+
+  | "month"| "months"| "M" |
+  +--------+---------+-----+
+  | "week" | "weeks" | "w" |
+  +--------+---------+-----+
+  | "day"  | "days"  | "d" |
+  +--------+---------+-----+
 
   An offset can also be the string ``now``, which means current date.
 
@@ -132,7 +140,7 @@ Double
 A double value input-type.
 
 default
-  This element specifies default value, accepts doubles only.
+  This element specifies a default value. The value can be any double-precision floating-point number, with the dot character as decimal separator.
 
 
 GeoPoint
@@ -152,7 +160,7 @@ HtmlArea
 A field for inputting multi-line text, with formatting options.
 
 default
-  This element specifies default value, accepts any valid html.
+  This element specifies a default value. The value contents can be any HTML, but tags must be correctly closed since the input type is defined inside an XML.
 
 
 Long
@@ -161,7 +169,7 @@ Long
 A simple field for large integers.
 
 default
-  This element specifies default value, accepts longs only.
+  This element specifies a default value. The value can be any valid integer.
 
 
 .. _radiobutton:
@@ -180,7 +188,7 @@ option
   settings are ordered.
 
 default
-  This element specifies default value. It should be equal to one of the ``option`` value.
+  This element specifies the default option for the radio button. It should be equal to one of the ``option`` values.
 
 
 Tag
@@ -195,7 +203,7 @@ TextArea
 A field for inputting multi-line text.
 
 default
-  This element specifies default string value.
+  This element specifies a default string value for the TextArea.
 
 
 TextLine
@@ -210,7 +218,7 @@ regexp
   A regular expression that restricts the valid values for the input. Optional, if not set any text is a valid value.
 
 default
-  This element specifies default string value.
+  This element specifies a default string value for the TextLine.
 
 Time
 ----
@@ -219,14 +227,20 @@ A simple field for time.  A pop-up box allows simple selection of a certain time
 The default format is ``hh:mm``.
 
 default
-  The format for the default date can be:
+  The format for the default time can be:
 
-  * ``hh:mm``    (e.g. "23:59")
+  * Time in 24h format: ``hh:mm``  (e.g. "23:59")
+  * Relative time expression (e.g. "+1month -12hours")
 
-  * Relative time expression. A relative time expression can be a sequence of one or more time offsets.
-  An offset is: a plus or minus sign '+' | '-' , followed by an integer, followed by a ``time unit`` string (e.g. "+3 minutes")
-  The ``time unit`` can be expressed as a singular unit, plural unit, or initial letter:
-          "hour" | "hours" | "h" |
-          "minute" | "minutes" | "m"
+  A relative time expression can be a sequence of one or more time offsets.
+  An offset consists of: a plus or minus sign, followed by an integer, followed by a time unit string (e.g. "+3 minutes")
+
+  The date unit can be expressed as a singular unit, plural unit, or initial letter:
+
+  +----------+------------+-----+
+  | "hour"   | "hours"    | "h" |
+  +----------+------------+-----+
+  | "minute" | "minutes"  | "m" |
+  +----------+------------+-----+
 
   An offset can also be the string ``now``, which means current time.
