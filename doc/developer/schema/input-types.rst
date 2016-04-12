@@ -97,28 +97,6 @@ The default format is ``yyyy-MM-dd``.
 timezone
   ``true`` if timezone information should be used. Default is ``false``.
 
-default
-  The format for the default date can be:
-
-  * Date in ISO 8601 format: ``yyyy-MM-dd``  (e.g. "2016-12-31")
-  * Relative date expression (e.g. "+1year -12days")
-
-  A relative date expression can be a sequence of one or more date offsets.
-  An offset consists of: a plus or minus sign, followed by an integer, followed by a date unit string (e.g. "+3 days")
-
-  The date unit can be expressed as a singular unit, plural unit, or initial letter:
-
-  +--------+---------+-----+
-  | "year" | "years" | "y" |
-  +--------+---------+-----+
-  | "month"| "months"| "M" |
-  +--------+---------+-----+
-  | "week" | "weeks" | "w" |
-  +--------+---------+-----+
-  | "day"  | "days"  | "d" |
-  +--------+---------+-----+
-
-  An offset can also be the string ``now``, which means current date.
 
 DateTime
 --------
@@ -225,22 +203,3 @@ Time
 
 A simple field for time.  A pop-up box allows simple selection of a certain time.
 The default format is ``hh:mm``.
-
-default
-  The format for the default time can be:
-
-  * Time in 24h format: ``hh:mm``  (e.g. "23:59")
-  * Relative time expression (e.g. "+1month -12hours")
-
-  A relative time expression can be a sequence of one or more time offsets.
-  An offset consists of: a plus or minus sign, followed by an integer, followed by a time unit string (e.g. "+3 minutes")
-
-  The date unit can be expressed as a singular unit, plural unit, or initial letter:
-
-  +----------+------------+-----+
-  | "hour"   | "hours"    | "h" |
-  +----------+------------+-----+
-  | "minute" | "minutes"  | "m" |
-  +----------+------------+-----+
-
-  An offset can also be the string ``now``, which means current time.
