@@ -117,6 +117,9 @@ Double
 
 A double value input-type.
 
+.. literalinclude:: code/double-type.xml
+   :language: xml
+
 default
   This element specifies a default value. The value can be any double-precision floating-point number, with the dot character as decimal separator.
 
@@ -137,14 +140,20 @@ HtmlArea
 
 A field for inputting multi-line text, with formatting options.
 
+.. literalinclude:: code/htmlarea-type.xml
+   :language: xml
+
 default
-  This element specifies a default value. The value contents can be any HTML, but tags must be correctly closed since the input type is defined inside an XML.
+  This element specifies a default value. The value can contain any HTML elements, but tags must be correctly closed since the input type is defined inside an XML.
 
 
 Long
 ----
 
 A simple field for large integers.
+
+.. literalinclude:: code/long-type.xml
+   :language: xml
 
 default
   This element specifies a default value. The value can be any valid integer.

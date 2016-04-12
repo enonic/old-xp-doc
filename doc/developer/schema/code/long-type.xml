@@ -1,0 +1,4 @@
+<input name="count" type="Long">
+  <label>Count</label>
+  <default>42</default>
+</input>

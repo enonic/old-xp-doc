@@ -2,5 +2,5 @@
   <config>
     <regexp>\b\d{3}-\d{2}-\d{4}\b</regexp>
   </config>
-  <default>default string value</default>
+  <default>000-00-0000</default>
 </input>

@@ -1,0 +1,4 @@
+<input name="rate" type="Double">
+  <label>Interest rate</label>
+  <default>3.89</default>
+</input>
