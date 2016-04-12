@@ -11,7 +11,6 @@ exports.get = function(req) {
 
   // Define the model
   var model = {
-    component: component,
     leftRegion: component.regions["left"],
     rightRegion: component.regions["right"]
   };
