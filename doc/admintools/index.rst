@@ -22,4 +22,4 @@ permissions etc.
    users/index
 
 
-.. image:: images/login-page.png
+.. image:: images/login-page.jpg

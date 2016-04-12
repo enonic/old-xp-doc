@@ -3,7 +3,7 @@
 XP Installation (Video)
 =======================
 
-This video demonstrates how to install Enonic XP on your local computer.
+This video demonstrates how to get Enonic XP running on your local computer without installers.
 
 .. raw:: html
 
@@ -15,6 +15,7 @@ This video demonstrates how to install Enonic XP on your local computer.
 Here are some resources related to installation and hosting of Enonic XP
 
 * :ref:`local_installation`
+* :ref:`install_mac`
 * :ref:`operations_guide`
 * :ref:`bootservice`
 * :ref:`clustering`

@@ -15,7 +15,7 @@ panel**.
    The Content Studio is fully responsive, so panels may stack or collapse if the screen is small or narrow. This
    documentation will assume a large desktop view.
 
-.. image:: images/content-studio.png
+.. image:: images/content-studio.jpg
 
 .. toctree::
    :maxdepth: 1

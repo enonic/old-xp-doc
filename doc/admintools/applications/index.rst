@@ -12,7 +12,7 @@ a selected app appears in the right panel. This information includes the basics 
 list of schemas for content types, mixins and relationship types, and also a list of descriptors, which are components for pages, parts and
 layouts.
 
-.. image:: images/apps-tool.png
+.. image:: images/apps-tool.jpg
 
 Installing an app
 -----------------
@@ -27,7 +27,7 @@ A list of apps on the Enonic Market will appear under the "Enonic Market" tab. E
 number and an "Install" link that will download, install and start the app. Installation will occur on all nodes of a clustered environment.
 Clicking the name of an app will open a page on the Enonic Market website with more information about the app.
 
-.. image:: images/install-market.png
+.. image:: images/install-market.jpg
 
 Upload file install
 ```````````````````
@@ -36,7 +36,7 @@ Applications can also be installed by clicking the "Upload" tab in the "Install 
 drag and drop an application JAR file, or click the upload button on the right and select an application JAR file from your local
 filesystem. The app will be installed and started automatically when the download is complete.
 
-.. image:: images/install-upload.png
+.. image:: images/install-upload.jpg
 
 Manual installation
 ```````````````````

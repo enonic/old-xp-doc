@@ -33,7 +33,7 @@ Groups and Roles can be added to the user now or while editing the entry later.
 Once the required fields have valid values, the red exclamation mark in the tab goes away and the user entry can be saved by clicking the
 button in the toolbar.
 
-.. image:: images/create-user.png
+.. image:: images/create-user.jpg
 
 Groups
 ------
@@ -51,4 +51,4 @@ listed in the "Groups" folder. The ``<name>`` is automatically generated as a UR
 be changed. The Description is optional. Users and other groups can be added to the group as "Members". Users can also be added to a group
 by editing the user.
 
-.. image:: images/groups.png
+.. image:: images/groups.jpg

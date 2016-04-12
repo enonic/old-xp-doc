@@ -15,4 +15,4 @@ essential for the proper management of your applications.
    userstore
    roles
 
-.. image:: images/user-admin.png
+.. image:: images/user-admin.jpg
