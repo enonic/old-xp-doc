@@ -2,7 +2,7 @@
 
 * Open the Launcher panel (top right)
 * Select the "Content Studio" tool
-* Once it has loaded, you will find the superhero site and all it's content there
+* Once it has loaded, you will find the superhero site and all its content there
 
 .. image:: images/content-manager.jpg
 
