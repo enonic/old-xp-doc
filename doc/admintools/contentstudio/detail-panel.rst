@@ -1,3 +1,5 @@
+.. _detail_panel:
+
 .. |detailicon| image:: images/icon-detail-panel.png
 .. |unlockicon| image:: images/icon-unlock.png
 

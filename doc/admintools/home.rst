@@ -6,7 +6,7 @@ Login and Home
 .. NOTE::
    This page is under construction. This information is likely incomplete and possibly inaccurate until this notice is removed.
 
-This is the login page. Users of the **System userstore** with the role of **Admin** or **Administration Console Login** may log in with
+Users of the **System userstore** with the role of **Admin** or **Administration Console Login** may log in with
 their **userid** or **email address** and password.
 
 .. image:: images/login-page.jpg

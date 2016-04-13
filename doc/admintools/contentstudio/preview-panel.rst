@@ -1,3 +1,5 @@
+.. _preview_panel:
+
 Preview panel
 =============
 

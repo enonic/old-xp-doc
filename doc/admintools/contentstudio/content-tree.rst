@@ -1,3 +1,5 @@
+.. _content_tree:
+
 Content tree grid
 =================
 
