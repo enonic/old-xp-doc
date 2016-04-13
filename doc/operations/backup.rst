@@ -17,7 +17,7 @@ That leaves us with ensuring that two elements are safely stored for retrieval i
 
 Backup vs Export
 ----------------
-The export/import-API enables you to dump your data to a serialized format. The serialized data could then be imported into another instance. This is very useful, but is not optimal for a backup/restore scheme since it requires some work to get things up and running again, especially when working with big installations with a lot of data. The backup/restore-process described below on the other hand, should enable a quick and safe way to get your system back to operation when in a hurry.
+The export/import enables you to export your data to a serialized format. The serialized data could then be imported into another instance. This is very useful, but is not optimal for a backup/restore scheme since it requires some work to get things up and running again, especially when working with big installations with a lot of data. The backup/restore-process described below on the other hand, should enable a quick and safe way to get your system back to operation when in a hurry.
 
 See :ref:`operations-export` for more information on export/import.
 

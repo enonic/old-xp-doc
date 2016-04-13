@@ -3,8 +3,9 @@
 load
 ====
 
-Load data from a named dump and load it into Enonic XP.
+Load data from a named system dump into Enonic XP.
 The dump read has to be stored in the ``$XP_HOME/data/dump`` directory.
+See :ref:`operations-export` for more information on system dump/load.
 
 **Usage:**
 

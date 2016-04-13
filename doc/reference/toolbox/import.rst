@@ -3,7 +3,9 @@
 import
 ======
 
-Import data from a named export and load it into Enonic XP at the desired content path.
+Import data from a named export into Enonic XP at the desired content path.
+The export read has to be stored in the ``$XP_HOME/data/export`` directory.
+See :ref:`operations-export` for more information on content export/import.
 
 **Usage:**
 

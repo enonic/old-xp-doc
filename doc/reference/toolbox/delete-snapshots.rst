@@ -4,6 +4,7 @@ delete-snapshots
 ================
 
 Deletes all snapshots before the given timestamp.
+See :ref:`backup` for more information on snapshots.
 
 **Usage:**
 

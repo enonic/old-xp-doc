@@ -4,6 +4,7 @@ restore
 =======
 
 Restore a named snapshot.
+See :ref:`backup` for more information on snapshots.
 
 **Usage:**
 
