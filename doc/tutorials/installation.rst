@@ -14,8 +14,9 @@ This video demonstrates how to get Enonic XP running on your local computer with
 
 Here are some resources related to installation and hosting of Enonic XP
 
-* :ref:`local_installation`
 * :ref:`install_mac`
+* :ref:`install_windows`
+* :ref:`local_installation`
 * :ref:`operations_guide`
 * :ref:`bootservice`
 * :ref:`clustering`

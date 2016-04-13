@@ -1,10 +1,11 @@
 .. _local_installation:
 
-Install on my Computer
-======================
+Other operating systems
+=======================
 
-This section describes how to install Enonic XP on your own computer. If you have any problems,
-please look at our :ref:`troubleshooting` section.
+This section describes how to install Enonic XP on your own computer, without the Mac or Windows installer. This is also the preferred
+method of environment setup for developers who will be running multiple projects with various XP versions and XP_HOME locations. If you
+have any problems, please look at our :ref:`troubleshooting` section.
 
 .. note:: **General Requirements**
 

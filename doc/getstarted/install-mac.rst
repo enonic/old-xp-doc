@@ -1,11 +1,11 @@
 .. _install_mac:
 
-Mac installer
-=============
+OSX
+===
 
-This section describes how to install Enonic XP on a Mac OSX computer.
+This section describes the easiest way to install Enonic XP on a Mac OSX computer.
 
-.. note:: The Java JDK is not required to run XP with this installer, but developers will need the JDK to build applications for Enonic XP.
+.. tip:: The Java JDK is not required to run XP with this installer, but developers will need the JDK to build applications for Enonic XP.
 
 .. note:: **General Requirements**
 
