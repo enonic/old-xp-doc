@@ -1,82 +1,104 @@
 Release Notes
 =============
 
-Enonic XP |version| is a minor release, with several exiting new feature and fixes - there are no breaking changes
+Enonic XP |version| is a minor release, with cool new feature and many improvments and fixes - there are no breaking changes
 
-Enonic Market
--------------
-Enonic Market is now available, indirectly a part of Enonic XP - providing easy access to applications, libraries and starters built by
-Enonic or other 3rd party vendors. Market applications can even be installed directly from XP. Check it out: https://market.enonic.com
+Enonic XP installers
+--------------------
+A new download page is now available, providing native installers for OSX and Windows.
+The installers bundles Java Runtime Environment (JRE) and as such simplifies testing of Enonic XP greatly.
+Developers are still recommended to use traditional Java installation as building applications will require access to the Java Development Kit (JDK)
 
-.. image:: images/enonic-market.jpg
+Enonic XP installation docs :ref:`getting_started_guide`
+
+.. image:: ../../getstarted/images/install-mac.jpg
 
 
-New App installer
+New Text Component Editor
+-------------------------
+The Page editors Text component has finally been aligned with the htmlArea.
+It now provides all the powerful text editing capabilities you expect, such as tables, images, special characters, source mode and more.
+It is also more visually pleasing with a traditional ribbon at the top that can be exited easily by clicking the top right close icon.
+
+.. image:: images/text-component.jpg
+
+
+Page Fragments
+--------------
+Wouldn't it be nice if you could create a component once, and re-use it across pages and templates? Well now you can!
+Thanks to the new concept of "fragments", any single component (parts, texts, images and even layouts) can be converted to fragments.
+A new content type "portal:fragment" is available with this release, so when a component is converted to a fragment it is actually created as a separate content item.
+This means you can manage access control for it, and publish at will - just like page templates or other content items.
+
+To get the optimal visual appearance when editing fragments you will have to implement a controller mapping that handles standalone fragment rendering (read about this below).
+
+.. figure:: images/fragment-editor.png
+
+   Edit fragments just like any other page
+
+.. figure:: images/fragment-on-page.jpg
+
+   Fragments can be inserted on multiple pages
+
+Read more about  :ref:`fragments`
+
+Inline image crop
 -----------------
-Applications can now be installed directly from the "Applications" admin tool.
-This applies both to local application files, and applications shared in the Enonic Market.
-For clustered installations, applications will automatically be distributed and started on all cluster nodes!
-The system still supports local deployments. Local deployments will override apps installed centrally - i.e. for development or testing purposes.
+The html editors now supports pre-defined image sizes and automatic cropping on insert.
+The sizes are Cinema (21:9), Widescreen (16:9), Regular (4:3), Sqare (1:1), Portrait (3:4), Tall (2:3) and Skyscraper (9:21)
 
-Application configuration is still handled on file.
-
-Read more about :ref:`gradle_deploy_app`
-
-.. image:: images/install.jpg
+.. image:: images/crop-on-insert-image.jpg
 
 
-Pluggable Admin Tools
----------------------
-Enonic XP now supports 3rd party admin tools - (previously admin apps). Each tool is now running in a separate browser tab,
-allowing developers to pick and choose their favorite front-end technology.
-Read the documentation for how to get started with :ref:`tools`.
+Version history restore
+-----------------------
+Content Studio UI now supports rollback (and rollforward) in a documents history.
+Simply restore a selected version and publish it!
+
+.. image:: images/version-restore.jpg
 
 
-Launcher and Home page
-----------------------
-The home page is now available as a separate tool, featuring a new tools launcher panel.
-The launcher panel is easily embedded in other tools - providing global navigation capabilities.
-The home page currently only serves the purpose of being a start page for choosing other tools -
-but will provide exiting features in upcoming releases.
+Controller mapping
+------------------
+Until now, rendering of sites have required a 100% content driven approach,
+meaning you would have to create some content item in the path for anything to be rendered (with the exception of /_/services and /_/components).
+Also if a content did exist a page template or controller would have to be configured editorially first.
 
-.. image:: images/home.jpg
+With controller mappings, developers can statically declare url patterns or content matches that will be triggered without any editorial setup:
 
-Contextual Navigation
----------------------
-Editors may now navigate directly in the preview area to find what they are looking for, and then click edit.
-The content navigation panel (to the left) will update selection as the user navigates the site.
+* Pattern example: pattern /mycontroller - if the request matches the path pattern, a defined javascript controller will be invoked
+* Content match example: match myproperty: "somevalue" - if the content in path matches, a defined javascript controller will be executed
 
+Read more about  :ref:`controller_mappings`
 
-Reference Search
-----------------
-It is now possible to search for incoming and outbound references.
-All references within a document are now automatically indexed in the virtual property ``_references``,
-making it easy to search for incoming references and outbound references between nodes and content.
-
-Experimental Websocket support
+Default values for input types
 ------------------------------
-It is now possible to create and use WebSockets in XP apps. This support is experimental and details may change for future releases.
-Feel free to test it out and give us feedback so we can implement this the best way. More details on :ref:`websockets`.
+To speed up form population, the following input types now support default values:
+
+* TextLine
+* TextArea
+* Long
+* Double
+* Checkbox
+* ComboBox
+* HtmlArea
 
 Libraries
 ---------
 
-* lib-content now features a ``publish`` function (push content from draft to master branch)
+* Portal Library - New function url() to create statically defined url's
 
 Minor improvements
 ------------------
 
-* Improved organizing of development resources for application projects - see  :ref:`project_structure`.
-  Developer assets/ libs/ and services/ should now be placed on resources/ root - not within sites/ - see :ref:`upgrading`
-* XSLT Transformations support in toolbox import utility (Apply transformation to import XML on a per-node basis)
-* New input type - AttachmentUploader - Add attachments directly from a form - see :ref:`input_types`
-* New "abstract" property for media:document content types (Enabling presentation/indexing of a document abstract)
-* New "tags" property for all media:* content-types (Enables tagging and search across media)
-* Usability improvements for page editor - removed shader, faster selections and context menu on right-click
-* Page Component - Highlighting with dashed borders and show text extract from text components
-* Upgraded to Elasticsearch 1.5.2
-* JVM now autoselects memory HEAP size - no longer using fixed default values
+* Marketplace installer UI now handles unlimited number of items
+* Progress bar for marketplace installer while downloading
+* Cleaned up presentation of htmlArea toolbar (aligned with new text component)
+* More robust valueTypes conversion in forms i.e. from dateTime to date
+* Added description field to users, groups and roles
+* Support for pressing keys Y and N in close wizard dialogue
+* Publishing dialogue - enable opening invalid items directly
 
 Changelog
 ---------
-For a complete list of changes see http://github.com/enonic/xp/releases/tag/v6.4.0
+For a complete list of changes see http://github.com/enonic/xp/releases/tag/v6.5.0

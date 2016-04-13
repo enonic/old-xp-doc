@@ -66,7 +66,7 @@ After logging in you should see the following screen, with the launcher panel to
 Install Superhero Blog
 ----------------------
 
-.. include:: install.rst
+.. include:: install-app.rst
 
 .. include:: start-blogging.rst
 

@@ -1,7 +1,7 @@
 .. cloud_installation:
 
-Use Enonic Cloud
-================
+Enonic Cloud
+============
 
 Enonic Cloud is a one-stop-shop hosted version of Enonic XP, available on demand.
 
