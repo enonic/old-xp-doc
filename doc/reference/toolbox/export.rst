@@ -5,6 +5,7 @@ export
 
 Extract data for a given repository, branch and content path.
 The result will be stored in the ``$XP_HOME/data/export`` directory.
+See :ref:`operations-export` for more information on content export/import.
 
 **Usage:**
 

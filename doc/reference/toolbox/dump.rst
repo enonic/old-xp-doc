@@ -3,9 +3,9 @@
 dump
 ====
 
-Export data from every repository. This is used to backup the entire
-repository when doing an upgrade. The result will be stored in
-the ``$XP_HOME/data/dump`` directory.
+Export data from an entire system.
+The result will be stored in the ``$XP_HOME/data/dump`` directory.
+See :ref:`operations-export` for more information on system dump/load.
 
 **Usage:**
 

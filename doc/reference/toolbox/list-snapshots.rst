@@ -4,6 +4,7 @@ list-snapshots
 ==============
 
 List all the snapshots for the installation.
+See :ref:`backup` for more information on snapshots.
 
 **Usage:**
 

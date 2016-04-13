@@ -11,9 +11,15 @@ Enonic XP ships with a set of tools (:ref:`toolbox`) to ease the operation of ex
   At the moment, exporting and importing data can only be done to and from files on the
   same server running Enonic XP.
 
+Content Export/Import vs System Dump/Load
+-----------------------------------------
 
-Export
-------
+Both enable you to export your data to a serialized format and import the serialized data into another instance.
+But, while the export/import focuses on a given content, the dump/load is used to export an entire system (all repositories and branches). This is used, for example, to export the entire system when doing an upgrade.
+
+
+Content Export
+--------------
 
 The export operation will extract data for a given content URL and store it as XML
 in a sub-folder under ``$XP_HOME/data/export``.
@@ -28,15 +34,15 @@ The export REST service accepts a JSON in this format:
   {
     "sourceRepoPath": "<source-repo-path>",
     "exportName": "<name>",
-    "importWithIds": <true|false>,
+    "exportWithIds": <true|false>,
     "dryRun": <true|false>
   }
 
 To ease the process, we have provided an :ref:`toolbox-export` tool.
 
 
-Import
-------
+Content Import
+--------------
 
 The import will take data from a given export directory and load it into Enonic XP at the
 desired content path. The REST service for import is found at the following URL::
@@ -62,8 +68,8 @@ The import REST service accepts a JSON in this format:
 To ease the process, we have provided an :ref:`toolbox-import` tool.
 
 
-Export data structure
----------------------
+Content Export data structure
+-----------------------------
 
 Let's look at how this works. The following structure will be exported:
 
@@ -157,3 +163,42 @@ After some data has been changed, it can be imported again::
   done carefully. For exports without ids, references will be broken and must be fixed manually. When
   importing *with* ids onto existing data, renaming and changing manual order will not yet
   work as expected.
+
+
+System Dump
+-----------
+
+The dump operation will extract data from your entire system and store it as XML in a sub-folder under ``$XP_HOME/data/dump``.
+The REST service for export is found at the following URL::
+
+  http://<host>:<port>/admin/rest/system/dump
+
+The dump REST service accepts a JSON in this format:
+
+.. code-block:: json
+
+  {
+    "name": "<dump-name>"
+  }
+
+To ease the process, we have provided an :ref:`toolbox-dump` tool.
+
+
+
+System Load
+-----------
+
+The load operation will take data from a given dump directory and load it into Enonic XP.
+The REST service for load is found at the following URL::
+
+  http://<host>:<port>/admin/rest/system/load
+
+The export REST service accepts a JSON in this format:
+
+.. code-block:: json
+
+  {
+    "name": "<dump-name>"
+  }
+
+To ease the process, we have provided an :ref:`toolbox-load` tool.
