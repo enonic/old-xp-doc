@@ -24,14 +24,14 @@ Controller
 ----------
 
 The controller is specified with the ``controller`` attribute in a ``<mapping>`` element.
-A controller handles requests in the same way a :ref:`page` or a :ref:`part` controller do.
+A controller handles requests in the same way a :ref:`page` or a :ref:`part` controller does.
 The controller is a JavaScript file located in the application.
 
 Unlike page and part controllers, a mapping controller is not required to be placed in a specific directory.
-In fact, an existing page or service controller can also be used as controller for the mapping.
+In fact, an existing page or service controller can also be used as the controller for a mapping.
 
 The controller must export a method for each type of HTTP request that should be handled.
-The handle method has the request object as a parameter and returns the response object (see :ref:`http_controllers`).
+The handle method receives the request object as a parameter and returns the response object (see :ref:`http_controllers`).
 
 Example: ``<mapping controller="/site/controller/foo.js">``
 
@@ -51,10 +51,9 @@ Examples:
 | ``<match>data.employee.type:'developer'</match>``
 | ``<match>data.product.category:42</match>``
 | ``<match>x.com-enonic-myapp.menuItem.show:true</match>``
-
 |
-The expected value can be either a regular expression to match the property value, or simply a string, number or boolean (``true`` | ``false``)
 
+The expected value can be either a regular expression to match the property value, or simply a string, number or boolean (``true`` | ``false``).
 
 URL pattern
 -----------
