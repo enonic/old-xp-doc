@@ -1,12 +1,12 @@
 Release Notes
 =============
 
-Enonic XP |version| is a minor release, with cool new feature and many improvements and fixes - there are no breaking changes.
+Enonic XP |version| is a minor release, with cool new feature and many improvments and fixes - there are no breaking changes
 
 Enonic XP installers
 --------------------
 A new download page is now available, providing native installers for OSX and Windows.
-The installers bundle the Java Runtime Environment (JRE) which greatly simplifies testing of Enonic XP.
+The installers bundles Java Runtime Environment (JRE) and as such simplifies testing of Enonic XP greatly.
 Developers are still recommended to use traditional Java installation as building applications will require access to the Java Development Kit (JDK)
 
 Enonic XP installation docs :ref:`getting_started_guide`
@@ -30,7 +30,7 @@ Thanks to the new concept of "fragments", any single component (parts, texts, im
 A new content type "portal:fragment" is available with this release, so when a component is converted to a fragment it is actually created as a separate content item.
 This means you can manage access control for it, and publish at will - just like page templates or other content items.
 
-To get the optimal visual appearance when editing fragments, you will have to implement a controller mapping that handles standalone fragment rendering (read about this below).
+To get the optimal visual appearance when editing fragments you will have to implement a controller mapping that handles standalone fragment rendering (read about this below).
 
 .. figure:: images/fragment-editor.png
 
@@ -40,19 +40,18 @@ To get the optimal visual appearance when editing fragments, you will have to im
 
    Fragments can be inserted on multiple pages
 
-Read more about  :ref:`fragments`
 
 Inline image crop
 -----------------
-The html editors now support pre-defined image sizes and automatic cropping on insert.
-The sizes are Cinema (21:9), Widescreen (16:9), Regular (4:3), Square (1:1), Portrait (3:4), Tall (2:3) and Skyscraper (9:21)
+The html editors now supports pre-defined image sizes and automatic cropping on insert.
+The sizes are Cinema (21:9), Widescreen (16:9), Regular (4:3), Sqare (1:1), Portrait (3:4), Tall (2:3) and Skyscraper (9:21)
 
 .. image:: images/crop-on-insert-image.jpg
 
 
 Version history restore
 -----------------------
-Content Studio UI now supports rollback (and rollforward) in a document's history.
+Content Studio UI now supports rollback (and rollforward) in a documents history.
 Simply restore a selected version and publish it!
 
 .. image:: images/version-restore.jpg
@@ -60,7 +59,7 @@ Simply restore a selected version and publish it!
 
 Controller mapping
 ------------------
-Until now, rendering of sites has required a 100% content driven approach,
+Until now, rendering of sites have required a 100% content driven approach,
 meaning you would have to create some content item in the path for anything to be rendered (with the exception of /_/services and /_/components).
 Also if a content did exist a page template or controller would have to be configured editorially first.
 
@@ -86,7 +85,7 @@ To speed up form population, the following input types now support default value
 Libraries
 ---------
 
-* Portal Library - New function url() to create statically defined URLs.
+* Portal Library - New function url() to create statically defined url's
 
 Minor improvements
 ------------------

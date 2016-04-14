@@ -1,7 +1,7 @@
-.. _menu-bar:
+.. _cs_actions:
 
-Menu Bar
-========
+Actions
+=======
 
 .. NOTE::
    This page is under construction. This information is likely incomplete and possibly inaccurate until this notice is removed.
