@@ -1,11 +1,13 @@
 .. _detail_panel:
 
+Detail panel and widgets
+========================
+
 .. |detailicon| image:: images/icon-detail-panel.png
 .. |unlockicon| image:: images/icon-unlock.png
 
-
-Detail panel and widgets
-========================
+.. NOTE::
+   This page is under construction. This information is likely incomplete and possibly inaccurate until this notice is removed.
 
 This panel shows basic information about whichever content is selected in the tree grid. The content type icon is displayed at the top along
 with the Display Name of the content and the content path.

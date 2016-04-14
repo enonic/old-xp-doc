@@ -3,6 +3,9 @@
 Search Panel
 ============
 
+.. NOTE::
+   This page is under construction. This information is likely incomplete and possibly inaccurate until this notice is removed.
+
 The search panel can be toggled with the magnifying glass icon at the far left of the menu bar. When opened, it has a text search field and
 categories to limit search results by Content Types and Last Modified. All content will match an empty search field.
 

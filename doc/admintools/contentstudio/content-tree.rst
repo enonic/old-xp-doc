@@ -3,6 +3,9 @@
 Content tree grid
 =================
 
+.. NOTE::
+   This page is under construction. This information is likely incomplete and possibly inaccurate until this notice is removed.
+
 The content tree lists all the content that the logged in user has `read access` to. Content can be organized and stored in a hierarchy with
 child content collapsed under parent content. Parent content will have a gray triangle to the left of the content icon that can be clicked
 to expand or collapse the view of its children. The content tree can also be navigated with the keyboard arrow keys. The top of the content
