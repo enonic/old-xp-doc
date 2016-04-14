@@ -1,4 +1,6 @@
 <input name="socialSecurityNumber" type="TextLine">
+  <label>SSN</label>
+  <occurrences minimum="0" maximum="1"/>
   <config>
     <regexp>\b\d{3}-\d{2}-\d{4}\b</regexp>
   </config>

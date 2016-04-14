@@ -8,14 +8,15 @@ As the low level storage of Enonic XP is entirely schema-less, we have created a
 Schemas are made up of the following main concepts:
 
 * A rich set of widgets called :ref:`input_types`
-* Building rich :ref:`schema_forms` by combining Input Types and layouts
+* Rich :ref:`schema_forms` by combining Input Types and layouts
 * Horizontal inheritance across forms through the use of :ref:`mixins`
 
 .. toctree::
     :maxdepth: 1
 
-    input-types
+    input-types/index
     item-sets
     layouts
     mixins
+    relationship-types
     forms

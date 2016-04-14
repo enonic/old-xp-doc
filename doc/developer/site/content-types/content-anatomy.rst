@@ -1,79 +1,56 @@
 Standard Content Properties
 ===========================
 
-* _id = string
-* _name = fulltext
-* _parent = string
-* attachment = string
-* displayName = fulltext
-* contentType = string
-* creator = string
-* createdTime = datetime
-* data = type
-* x = type
-* form = none
-* language = string
-* modifiedTime = datetime
-* owner = string
-* page = minimal
-* page.regions = none
-* site = none
-* thumbnail = none
-* type = string
+These are the standard content properties - value type and index options specified in parentheses.
 
+_id (string)
+  The content id (this is the same as node id)
 
-
-A content has a set of standard properties (sorted alphabetically below).
-
-_id
-  The content id (same as node id)
-
-_name
+_name (string, fulltext, ngram)
   The content name (same as node name)
 
-_parent
+_parent (reference)
   The parent content path (same as node parent)
 
-attachment
-  If content contains attachments, a list of attachment-names and properties.
+attachment (propertySet)
+  If content contains attachments, a list of attachments with respective properties will be listed here.
 
-contentType
+contentType (string)
   The content schema type.
 
-creator
+creator (string)
   The user principal that created the content.
 
-createdTime
+createdTime (dateTime)
   The timestamp when the content was created.
 
-data
-  A property-set containing all user defined properties defined in
-  the content-type.
+data (propertySet)
+  Contains all user defined properties as defined by the contentType.
 
-displayName
+displayName (string, fulltext)
   Name used for display purposes.
 
-language
+language (string)
   The locale-property of the content.
 
-modifiedTime
+modifiedTime (dateTime)
   Last time the content was modified.
 
-owner
+owner (string)
   The user principal that owns the content.
 
-page
+page (propertySet)
   The page property contains page-specific properties, like template and regions.
   This will typically be reference to a page-template that supports the content-type.
 
-site
-  If contentType is ``portal:site``, this will contain site-specific information.
+site (propertySet)
+  If the contentType is ``portal:site``, this will contain site-specific information.
 
 thumbnail
   A thumbnail representing the content.
 
-type
-  A property used to identify content in a node repository.
+type (string)
+  the nodetype - Used to identify nodes of type content in the repository.
 
-x
+x (propertySet)
   A property-set containing properties from mixins, also known as xtra data.

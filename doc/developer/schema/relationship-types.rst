@@ -3,6 +3,8 @@
 Relationship Types
 ==================
 
+.. note:: **Relationship types are optional and experimental, they currently do not provide relevant functionality to your projects**
+
 Custom content types may have relationships to each other or other content types.
 For instance, a person may have an image, or an employee may have a boss, or belong
 to a department. These relationships must be defined with a specific *relationship type*, then used

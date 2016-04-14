@@ -14,11 +14,9 @@ This chapter will dive into the details on how to build sites and the various co
     site
     content-types/index
     filters
-    input-types/index
-    input-types/relationship-types
+    mappings/index
     page/index
     part/index
     layout/index
     contributions
     errors/index
-    mappings/index

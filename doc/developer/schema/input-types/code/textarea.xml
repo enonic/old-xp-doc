@@ -1,0 +1,4 @@
+<input name="description" type="TextArea">
+  <label>Description</label>
+  <default>Description goes here</default>
+</input>

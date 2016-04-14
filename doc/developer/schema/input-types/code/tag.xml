@@ -1,0 +1,4 @@
+<input name="name" type="Tag">
+  <label>Location</label>
+  <occurrences minimum="0" maximum="1"/>
+</input>

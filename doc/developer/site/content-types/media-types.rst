@@ -3,8 +3,8 @@
 Media Content Types
 ===================
 
-The system ships with a set of pre-defined media content types. 
-When files are uploaded in the Content Studio interface or through the content API - 
+The system ships with a set of pre-defined media content types.
+When files are uploaded in the Content Studio interface or through the content API -
 they will be transformed to one of the following content-types.
 
 Common settings for all the content types listed below.
@@ -62,4 +62,3 @@ Executable (media:executable)
 
 Unknown (media:unknown)
   Everything else.
-
