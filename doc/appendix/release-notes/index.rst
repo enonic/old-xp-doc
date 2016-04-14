@@ -80,6 +80,7 @@ To speed up form population, the following input types now support default value
 * Double
 * Checkbox
 * ComboBox
+* RadioButton
 * HtmlArea
 
 Libraries
