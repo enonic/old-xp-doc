@@ -18,5 +18,6 @@ This chapter will dive into the details on how to build sites and the various co
     page/index
     part/index
     layout/index
+    fragments/index
     contributions
     errors/index

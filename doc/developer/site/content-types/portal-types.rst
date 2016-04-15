@@ -1,4 +1,4 @@
- .. _content_portal_types:
+.. _content_portal_types:
 
 Portal content types
 --------------------

@@ -20,6 +20,11 @@ Each controller mapping has the following properties:
 - **URL pattern**: regular expression to match against the request URL. This element is optional.
 - **Order**: determines which controller will be executed in case there is more than one that matches. The mapping with lowest order value will be executed. Default is ``50``.
 
+Controller mappings can be used for rendering **fragments**, i.e. contents of type ``portal:fragment``, with custom styles and layout.
+That way they will be consistent with the other page components in the application (see :ref:`content_portal_types`).
+This is useful for editing fragments from *Page Editor* in :ref:`content_studio`.
+
+
 Controller
 ----------
 
