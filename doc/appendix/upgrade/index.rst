@@ -41,7 +41,7 @@ There are no breaking changes in this release, but due to internal changes in re
 ..
 
   3. Start the new server(s)
-  4. Copy the dump files from the old to the new server, place it in $NEW_XP_HOME/data/dump/. The folder will be named "6.4.2-dump"
+  4. Copy the dump files from the old to the new server, place it in $NEW_XP_HOME/data/dump/.
   5. Load the dump (:ref:`toolbox-load`)
 
 ::
