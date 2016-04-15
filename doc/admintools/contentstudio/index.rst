@@ -22,4 +22,5 @@ view** appears when content is created or edited. All actions and features will 
    :maxdepth: 1
 
    browse-view
+   edit-view
    actions
