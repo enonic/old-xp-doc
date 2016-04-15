@@ -3,7 +3,7 @@
 Upgrading to |version|
 ======================
 
-.. warning:: This documentation describes upgrading from 6.3.1 to |version|. Upgrading directly from 6.3.0 is not supported.
+.. warning:: This documentation describes upgrading from 6.4.2 to |version|.
 
 Upgrade Steps
 -------------
@@ -36,25 +36,17 @@ There are no breaking changes in this release, but due to internal changes in re
 
 ::
 
-  toolbox.sh dump -a su:password -t 6.3.1-dump
+  toolbox.sh dump -a su:password -t 6.4.2-dump
 
 ..
 
-  3. Upgrade the dump with (:ref:`toolbox-upgrade`)
+  3. Start the new server(s)
+  4. Copy the dump files from the old to the new server, place it in $NEW_XP_HOME/data/dump/. The folder will be named "6.4.2-dump"
+  5. Load the dump (:ref:`toolbox-load`)
 
 ::
 
-  toolbox.sh upgrade -d [path/to/OLD_XP_HOME]/data/dump/6.3.1-dump
-
-..
-
-  4. Start the new server(s)
-  5. Copy the upgraded dump files from the old to the new server, place it in $NEW_XP_HOME/data/dump/. The folder will be named "6.3.1-dump_upgraded_6.4.1"
-  6. Load the updated dump (:ref:`toolbox-load`)
-
-::
-
-  toolbox.sh load -a su:password -s 6.3.1-dump_upgraded_6.4.1
+  toolbox.sh load -a su:password -s 6.4.2-dump
 
 
 4. Install Apps (OPTIONAL)
@@ -78,21 +70,3 @@ If the property has not been changed from the default value (``${xp.home}/repo/b
 
 See :ref:`storage-config` for more details about configuring storage.
 
-
-New Project Structure (OPTIONAL)
---------------------------------
-
-Developers can update their application project structure to benefit from some of the new application development capabilities such
-as :ref:`tools` and :ref:`widgets`, and align their applications for other future improvements,
-
-* move .../resources/site/assets/ to .../resources/assets/
-* move .../resources/site/services/ to .../resources/services/
-* move .../resources/site/lib/ to .../resources/lib
-* Optionally move .../resources/site/views/ to .../resources/views/ - this is an optional folder.
-
-XP is backward compatible, and will scan for assets/ and services/ - initially on root, then in site. But only the first discovered folder will be used.
-For libraries, the lookup pattern for "require" will now include scanning parent folders with lib/ folders until reaching the resources/ folder.
-
-NB! If you have used explicit require references i.e. "/lib/mylib" these files must now be moved to resouces/ root, or referenced relatively instead.
-
-(NB! Applications with updated structure will require minimum XP version 6.4)
