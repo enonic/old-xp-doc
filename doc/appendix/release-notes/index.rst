@@ -6,7 +6,7 @@ Enonic XP |version| is a minor release, with cool new features and many improvem
 Enonic XP installers
 --------------------
 A new download page is now available, providing native installers for OSX and Windows.
-The installers bundle the Java Runtime Environment (JRE) which greatly simplifies testing of Enonic XP.
+The installers bundle the Java Runtime Environment (JRE) and as such simplifies testing of Enonic XP greatly.
 Developers are still recommended to use traditional Java installation as building applications will require access to the Java Development Kit (JDK)
 
 Enonic XP installation docs :ref:`getting_started_guide`
@@ -30,7 +30,7 @@ Thanks to the new concept of "fragments", any single component (parts, texts, im
 A new content type "portal:fragment" is available with this release, so when a component is converted to a fragment it is actually created as a separate content item.
 This means you can manage access control for it, and publish at will - just like page templates or other content items.
 
-A controller mapping that handles standalone fragment rendering should be implemented to get the optimal visual appearance when editing fragments (read about this below).
+To get the optimal visual appearance when editing fragments you will have to implement a fragment controller mapping (More about controller mappings below).
 
 .. figure:: images/fragment-editor.png
 
@@ -43,7 +43,7 @@ A controller mapping that handles standalone fragment rendering should be implem
 
 Inline image crop
 -----------------
-The html editors now support pre-defined image sizes and automatic cropping on insert.
+The html editor now support pre-defined image sizes and automatic cropping on insert.
 The sizes are Cinema (21:9), Widescreen (16:9), Regular (4:3), Square (1:1), Portrait (3:4), Tall (2:3) and Skyscraper (9:21)
 
 .. image:: images/crop-on-insert-image.jpg
@@ -59,7 +59,7 @@ Simply restore a selected version and publish it!
 
 Controller mapping
 ------------------
-Until now, rendering of sites has required a 100% content driven approach,
+Until now, rendering of sites have required a 100% content driven approach,
 meaning you would have to create some content item in the path for anything to be rendered (with the exception of /_/services and /_/components).
 Also if a content did exist a page template or controller would have to be configured editorially first.
 
