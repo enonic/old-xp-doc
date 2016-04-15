@@ -94,6 +94,8 @@ Minor improvements
 * Marketplace installer UI now handles unlimited number of items
 * Progress bar for marketplace installer while downloading
 * Cleaned up presentation of htmlArea toolbar (aligned with new text component)
+* SVG support for content type icons
+* SVG support for content thumbnails
 * More robust valueTypes conversion in forms i.e. from dateTime to date
 * Added description field to users, groups and roles
 * Support for pressing keys Y and N in close wizard dialogue
