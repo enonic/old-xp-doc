@@ -8,55 +8,41 @@ Upgrading to |version|
 Upgrade Steps
 -------------
 
-There are no breaking changes in this release, but due to internal changes in repository you will have to dump your data, upgrade the dump, and load it into the new version:
-
-1. Setup new installation
-*************************
-
-  #. Download Enonic XP https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip
-  #. Setup new XP installations - (for all servers in your entire cluster if you have one)
-
-.. tip:: Remember to update any startup scripts you might have to launch your new installation given a server restart
-
-2. Move configuration
-*********************
-
-  #. Copy your $OLD_XP_HOME/config/ and deploy/ folders to the the new $NEW_XP_HOME/ (on all nodes)
-  #. Remove the $NEW_XP_HOME/config/org.apache.felix.fileinstall-deploy.cfg file (To support UI-based application installation)
-
-3. Migrate Data
-***************
-
-.. tip:: Remember to backup your existing data before starting this step
-
-..
-
-  1. If possible - stop traffic to the servers to avoid new data coming in during this process, or stop the servers after dumping the data.
-  2. Dump data from existing server. (:ref:`toolbox-dump`). The dump will be created in $OLD_XP_HOME/data/dump/
-
-::
-
-  toolbox.sh dump -a su:password -t 6.4.2-dump
-
-..
-
-  3. Start the new server(s)
-  4. Copy the dump files from the old to the new server, place it in $NEW_XP_HOME/data/dump/.
-  5. Load the dump (:ref:`toolbox-load`)
-
-::
-
-  toolbox.sh load -a su:password -s 6.4.2-dump
-
-
-4. Install Apps (OPTIONAL)
+1. Backup the installation
 **************************
 
-This release supports installing applications globally, using the repository.
-Follow the steps below if you want to migrate your apps from file.
+Backup you current installation. This is described in :ref:`backup`. 
 
-  #. Make sure the $XP_HOME/deploy folder of the new installation is empty
-  #. Install the Applications that was in the $XP_HOME/deploy folder using the Applications UI tool, or :ref:`toolbox-install-app`
+You could also do a :ref:`toolbox-dump` of the system, but then you will loose versions if you have to reload it.
+
+2. Install new version
+******************************
+
+  #. Download Enonic XP https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip and install according to your setup.
+  
+.. tip:: Remember to update any startup scripts you might have to launch your new installation given a server restart
+
+4. Configure XP_HOME
+*********************
+
+The next steps depends on your setup:
+
+  **If $XP_HOME outside the $XP_INSTALL - folder:**
+
+  #. Make sure the new installation points to the correct $XP_HOME folder
+
+  **If $XP_HOME inside the $XP_INSTALL - folder:**
+
+  #. Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all nodes)
+ 
+
+3. Stop the old installation
+****************************
+
+.. not:: It is very important to stop the existing nodes before starting a new on the same machine to avoid issue with notes starting to form a cluster.
+
+4. Start the new installation
+*****************************
 
 
 Storage Configuration changes
