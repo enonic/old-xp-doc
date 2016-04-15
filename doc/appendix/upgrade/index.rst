@@ -67,6 +67,18 @@ Follow the steps below if you want to migrate your apps from file.
   #. Install the Applications that was in the $XP_HOME/deploy folder using the Applications UI tool, or :ref:`toolbox-install-app`
 
 
+Storage Configuration changes
+-----------------------------
+
+The ``baseDir`` - configuration property on where to store blobs that where previously configured in ``com.enonic.xp.repo.cfg``. 
+
+This has been removed and replaced by a ``baseDir`` property in ``com.enonic.xp.blobstore.file.cfg``. 
+
+If the property has not been changed from the default value (``${xp.home}/repo/blob``) in your system, no action is required. 
+
+See :ref:`storage-config` for more details about configuring storage.
+
+
 New Project Structure (OPTIONAL)
 --------------------------------
 
