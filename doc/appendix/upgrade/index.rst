@@ -39,7 +39,7 @@ The next steps depends on your setup:
 3. Stop the old installation
 ****************************
 
-.. not:: It is very important to stop the existing nodes before starting a new on the same machine to avoid issue with notes starting to form a cluster.
+.. note:: It is very important to stop the existing nodes before starting a new on the same machine to avoid issue with nodes trying to form a cluster.
 
 4. Start the new installation
 *****************************
