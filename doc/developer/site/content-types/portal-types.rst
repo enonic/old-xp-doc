@@ -49,3 +49,23 @@ Template folder (portal:template-folder)
 This is a special content-type. Every site automatically creates a child
 content of this type named ``_templates``.  The templates folder holds all the page templates of
 that site.  It may not hold any other content type, and it may not be created manually in any other location.
+
+Fragment (portal:fragment)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* super-type: base:structured
+* abstract: false
+* final: true
+* allow-child-content: true
+
+The Fragment content type represents a **reusable page component**. A content of this type contains a page component(*Part*, *Layout*, *Text*, *Image*) that can be re-used in other pages.
+But it only needs to be maintained in one place.
+
+To create a content of type ``portal:fragment`` edit an existing page with *Page Editor*, select the context menu of an existing component in the page, and then clicking on "Create Fragment".
+Once created, the fragment content can be referenced in other pages by inserting a *Fragment component* in the page.
+
+A Fragment content can be edited with *Page Editor* and the changes applied to the component will immediately be available in the pages that include the fragment.
+When a page containing fragment a component is rendered, the components of the ``portal:fragment`` content pointed by the fragment component are rendered in the place of the fragment component.
+
+There is a default page for rendering and edit fragments.
+The default page does not have any styles defined, but it is possible to render it with the application theme and styles by defining a controller mapping with ``<match>type:'portal:fragment'</match>`` (See :ref:`controller_mappings`).
