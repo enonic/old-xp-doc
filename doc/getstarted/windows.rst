@@ -13,7 +13,6 @@ This section describes the easiest way to install Enonic XP on a Windows compute
    * At least 1 GB of available memory
    * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)
 
-
 Download
 --------
 
