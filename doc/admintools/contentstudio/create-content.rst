@@ -1,3 +1,5 @@
+.. _create_content_dialogue:
+
 Create Content Dialogue
 =======================
 
@@ -11,11 +13,11 @@ the user with finding the type of content to be created. Second, it opens the ed
 
 There are three ways to open the **Create Content** dialogue in the Content Studio. The first method is with the shortcut - **alt + n**. The
 other methods require selecting the **New** button in the toolbar or in the context menu that appears when right-clicking an existing
-content the tree grid.
+content in the tree grid.
 
-Content will be created as a child of whatever content was selected in the tree grid when the Create Content dialogue was opened. If no
-content was selected, the new content will be created at the root of the repository. Usually, only **Site** contents and folders for
-archived content are created at the root.
+Content will be created as a child of whichever content was selected in the tree grid when the Create Content dialogue was opened. If no
+content was selected, the new content will be created at the root of the repository. Usually, only **Site** contents are created at the
+root.
 
 Search field
 ------------
@@ -33,14 +35,15 @@ Most Popular
 ------------
 
 If the parent content has one or more existing child items, the most used type of child content will appear with a blue background at the
-top of the content type list. The number of this type of child contents is in parenthesis.
+top of the content type list. The number of this type of child content is in parenthesis.
 
 Content type list
 -----------------
 
 All content types of the installed applications are listed on the left side of the Create Content dialogue. The list is instantly updated as
 characters are typed into the search field. Each item in the list has the content type icon, Display Name of the content type, and the full
-app name of the content type. It is possible for two applications to have a content type with the same Display Name.
+app name of the content type. It is possible for two applications to have a content type with the same Display Name, so the full app name
+would be helpful to tell them apart.
 
 Recently Used
 -------------

@@ -12,7 +12,7 @@ available in the context menu that appears when right-clicking on a content in t
 New
 ---
 
-Opens the **Create content** dialogue which is covered in another section.
+Opens the :ref:`create_content_dialogue` for creating new content.
 
 Edit
 ----
@@ -71,7 +71,7 @@ Preview
 -------
 
 This button will open the selected content in preview mode, in a new browser tab. If more than one content is selected, each will open in
-its own tab. Only content that has a supporting page template can be previewed. Read more about page templates.
+its own tab. Only content that has a supporting page template can be previewed. Read more about :ref:`page_templates`.
 
 Publish
 -------
