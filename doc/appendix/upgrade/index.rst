@@ -22,7 +22,7 @@ You could also do a :ref:`toolbox-dump` of the system, but then you will loose v
   
 .. tip:: Remember to update any startup scripts you might have to launch your new installation given a server restart
 
-4. Configure XP_HOME
+3. Configure XP_HOME
 *********************
 
 The next steps depends on your setup:
@@ -36,12 +36,12 @@ The next steps depends on your setup:
   #. Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all nodes)
  
 
-3. Stop the old installation
+4. Stop the old installation
 ****************************
 
 .. note:: It is very important to stop the existing nodes before starting a new on the same machine to avoid issue with nodes trying to form a cluster.
 
-4. Start the new installation
+5. Start the new installation
 *****************************
 
 
