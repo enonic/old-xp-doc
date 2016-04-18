@@ -24,12 +24,13 @@ Search field
 
 The search field can be used to quickly find a content type.
 
-File upload
------------
+File and image upload
+---------------------
 
 To the right of the search field is an upload button represented by an icon with an up arrow. Clicking this icon will open the user's file
 browser so one or more files can be selected from the file system. The type of content created will depend on the type of file selected.
-Files can also be dragged and dropped onto the Create Content dialogue.
+Files can also be dragged and dropped onto the Create Content dialogue. A new edit view tab will open for each selected file so that
+meta-data can be entered.
 
 Most Popular
 ------------

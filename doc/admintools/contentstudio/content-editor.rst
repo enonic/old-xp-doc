@@ -15,9 +15,13 @@ version. The path will not update automatically once the content has been publis
 links. The path name can always be changed manually. It is also possible for the Display Name to be generated automatically while other
 fields in the form are filled in if the content type was set up that way in the application code.
 
+.. image:: images/content-editor1.jpg
+
 Next is a ribbon with buttons that correspond to different sections of the content form. All content will have buttons for the content type
 name, **Settings**, and **Security**. Other items may be in the ribbon if x-data was added to the content type in the application code.
 Clicking on an item in the ribbon will scroll the content editor to the corresponding section of the form.
+
+.. image:: images/content-editor2.jpg
 
 The content data section is next and the form fields will depend on how the content type was set up.
 
