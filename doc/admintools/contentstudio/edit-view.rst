@@ -21,9 +21,7 @@ a page template. The inspection panel is on the right.
 .. toctree::
    :maxdepth: 1
 
-   create-content
    content-editor
    page-editor
    inspection-panel
    components-view
-   page-templates
