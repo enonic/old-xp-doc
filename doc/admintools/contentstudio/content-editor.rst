@@ -32,4 +32,4 @@ permissions.
 
 The **Security** section is where the content's permissions are set. Content will inherit the permissions of the parent content when
 created. Users, Groups and Roles are principals that can be added to the content. Clicking on any item here will expand it and show what
-permissions the principal has. Read more in the :ref:`content_security` section.
+permissions the principal has. Read more about :ref:`content_security`.
