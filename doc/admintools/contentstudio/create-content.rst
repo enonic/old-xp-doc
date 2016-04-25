@@ -1,7 +1,7 @@
 .. _create_content_dialogue:
 
-Create Content Dialogue
-=======================
+Create Content
+==============
 
 .. NOTE::
    This page is under construction. This information is likely incomplete and possibly inaccurate until this notice is removed.
