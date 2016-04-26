@@ -16,6 +16,7 @@ that has three small squares next to horizontal bars.
 .. toctree::
    :maxdepth: 1
 
+   toolbar
    search-panel
    content-tree
    preview-panel
