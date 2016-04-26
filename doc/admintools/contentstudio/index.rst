@@ -24,7 +24,5 @@ view** appears when content is created or edited. All actions and features will 
    browse-view
    edit-view
    actions
-   page-templates
-   publish
+   content-types
    content-security
-   site-content
