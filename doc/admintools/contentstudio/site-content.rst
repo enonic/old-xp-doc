@@ -6,8 +6,8 @@ Site Content
 .. NOTE::
    This page is under construction. This information is likely incomplete and possibly inaccurate until this notice is removed.
 
-Sites are created at the root level of the tree grid from a special built-in content type represented by a globe icon. Site contents have a
-textarea field for the site description and a dropdown selector for adding and configuring applications. Every site content will have a
+Sites are usually created at the root level of the tree grid from a special built-in content type represented by a globe icon. Site contents
+have a textarea field for the site description and a dropdown selector for adding and configuring applications. Every site content will have a
 **Templates** folder which is automatically created along with the site content.
 
 .. image:: images/sites.jpg
