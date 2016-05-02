@@ -74,6 +74,9 @@ attachment.name
 attachment.binary
 	If any attachments, contains an array of attachment file-name
 
+attachment.text
+	If any attachments, contains the extracted text of e.g pdf-files
+
 creator
   	The user principal that created the content.
 
