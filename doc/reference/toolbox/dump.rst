@@ -7,6 +7,10 @@ Export data from an entire system.
 The result will be stored in the ``$XP_HOME/data/dump`` directory.
 See :ref:`operations-export` for more information on system dump/load.
 
+.. Attention::
+ 
+	Performing a `dump` will delete version history for all data (used for version history restoration).
+
 **Usage:**
 
 .. code-block:: none
