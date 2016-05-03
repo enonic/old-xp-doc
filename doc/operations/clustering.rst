@@ -74,7 +74,7 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
 Cluster configuration
 ---------------------
 
-There are a well of options at your disposal to configure and tune the cluster behavior. See :ref:`Elasticsearch configuration<elasticsearch-config>` for a subset of the available settings.
+There are a well of options at your disposal to configure and tune the cluster behavior. See :ref:`Elasticsearch configuration<es-config>` for a subset of the available settings.
 All settings referred to in this chapter are set in ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg`` unless otherwise specified.
 
 
@@ -128,7 +128,7 @@ network.host
 
 The ``network.host`` setting specifies the TCP-address used for node communication. The default value for this is 127.0.0.1, which means that this node will never be able to talk to other nodes.
 
-The ``network.host`` setting can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`storage-config` section for an overview.
+The ``network.host`` setting can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`es-config` section for an overview.
 
 transport.tcp.port
 ##################
