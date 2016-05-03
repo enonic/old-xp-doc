@@ -47,8 +47,14 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
  ::
 
     http.port = somePort
+ 
+ 4. **Enable clustering:** In ``$XP_DISTRO/home/config/com.enonic.xp.elasticsearch.cfg`` set the property ``node.local`` to ``false``
+ 
+ ::
+ 
+    node.local = false
 
- 4. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
+ 5. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
 
  ::
 
@@ -65,12 +71,10 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
 
 	   unset XP_HOME
 
-
-
 Cluster configuration
 ---------------------
 
-There are a well of options at your disposal to configure and tune the cluster behavior. See :ref:`Elasticsearch configuration<storage-config>` for a subset of the available settings.
+There are a well of options at your disposal to configure and tune the cluster behavior. See :ref:`Elasticsearch configuration<elasticsearch-config>` for a subset of the available settings.
 All settings referred to in this chapter are set in ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg`` unless otherwise specified.
 
 
@@ -113,6 +117,11 @@ Each node binds to an IP-address and port, and communicates to other nodes speci
 
 Settings
 *********
+
+node.local
+##########
+
+When this setting is ``true``, the node will never try to join a cluster. In all cluster setups, nodes must set this to ``false``
 
 network.host
 ############

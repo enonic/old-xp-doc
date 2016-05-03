@@ -124,6 +124,8 @@ readThrough.sizeThreshold = 100mb
     The maximum size for objects to be stored in the readthrough provider, defaults to 100MB. The size notation accepts a number plus byte-size idenfier (``b``/``kb``/``mb``/``gb``/``tb``/``pb``)
 
 
+.. _elasticsearch-config
+
 Elasticsearch configuration
 ----------------------------
 

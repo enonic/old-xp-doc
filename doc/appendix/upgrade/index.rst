@@ -3,7 +3,7 @@
 Upgrading to |version|
 ======================
 
-.. warning:: This documentation describes upgrading from 6.4.2 to |version|.
+.. warning:: This documentation describes upgrading from 6.5.3 to |version|.
 
 Upgrade Steps
 -------------
@@ -39,20 +39,20 @@ The next steps depends on your setup:
 4. Stop the old installation
 ****************************
 
-.. note:: It is very important to stop the existing nodes before starting a new on the same machine to avoid issue with nodes trying to form a cluster.
 
 5. Start the new installation
 *****************************
 
 
-Storage Configuration changes
+Cluster now defaults to false
 -----------------------------
 
-The ``baseDir`` - configuration property on where to store blobs that where previously configured in ``com.enonic.xp.repo.cfg``. 
+To prevent unintentional forming of cluster when two xp-instances are started on the same machine, the cluster discovery is now turned off by default.
+To enable clustering, an option in ``$XP_DISTRO/home/config/com.enonic.xp.elasticsearch.cfg`` must be set:
 
-This has been removed and replaced by a ``baseDir`` property in ``com.enonic.xp.blobstore.file.cfg``. 
+:: 
+ 
+  node.local = false 
 
-If the property has not been changed from the default value (``${xp.home}/repo/blob``) in your system, no action is required. 
-
-See :ref:`storage-config` for more details about configuring storage.
+See :ref:`clustering` for more details about configuring clustering.
 
