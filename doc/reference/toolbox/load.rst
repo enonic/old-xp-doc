@@ -7,6 +7,10 @@ Load data from a named system dump into Enonic XP.
 The dump read has to be stored in the ``$XP_HOME/data/dump`` directory.
 See :ref:`operations-export` for more information on system dump/load.
 
+.. Attention::
+ 
+	Performing a load must never be performed on a repo with existing content, make sure the repo is emptied first!
+
 **Usage:**
 
 .. code-block:: none
