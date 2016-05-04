@@ -1,7 +1,4 @@
 <input name="name" type="Date">
-  <label>Date (with tz)</label>
+  <label>Some Date</label>
   <occurrences minimum="0" maximum="1"/>
-  <config>
-    <timezone>true</timezone>
-  </config>
 </input>

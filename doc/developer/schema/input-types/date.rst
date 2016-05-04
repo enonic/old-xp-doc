@@ -8,6 +8,3 @@ The default format is ``yyyy-MM-dd``.
 
 .. literalinclude:: code/date.xml
    :language: xml
-
-timezone
-  ``true`` if timezone information should be used. Default is ``false``.
