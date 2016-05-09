@@ -22,7 +22,7 @@ The export/import enables you to export your data to a serialized format. The se
 See :ref:`operations-export` for more information on export/import.
 
 Backing up blobs
-------------------
+----------------
 The blobs are just files on a filesystem. This should be backed up by your preferred way of doing file-backups.
 
 The folder to backup is:
@@ -50,7 +50,7 @@ There are 4 rest-resources at your disposal.
 
 
 Snapshot
-*********
+********
 
 The snapshot rest-service accepts a JSON in this format:
 
@@ -69,7 +69,7 @@ To ease the process, we have provided a :ref:`toolbox-snapshot` tool.
 
 
 Restore
-*********
+*******
 
 The restore rest-service accepts a JSON in this format:
 
@@ -90,7 +90,7 @@ To ease the process, we have provided a :ref:`toolbox-restore-snapshot` tool.
 
 
 Delete
-*********
+******
 
 The delete rest-service accepts a JSON in this format:
 
