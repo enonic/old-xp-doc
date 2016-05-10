@@ -16,19 +16,22 @@ method
     HTTP method of the request.
 
 scheme
-    Scheme of the request.
+    Name of the scheme used to make this request ("http" / "https").
 
 host
-    Host of the request.
+    Host name of the server to which the request was sent.
 
 port
-    Port of the request.
+    Port of the server to which the request was sent.
 
 path
     Path of the request.
 
 url
     URL of the request.
+
+remoteAddress
+    IP address of the client that sent the request. If the `X-Forwarded-For`_ header is set, its value will override the client IP.
 
 mode
     Portal rendering mode, one of: ``edit``, ``preview``, ``live``.
@@ -47,3 +50,5 @@ headers
 
 cookies
     Name/value pairs with the HTTP request cookies.
+
+.. _X-Forwarded-For: http://en.wikipedia.org/wiki/X-Forwarded-For

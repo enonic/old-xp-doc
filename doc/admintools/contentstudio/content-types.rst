@@ -8,7 +8,7 @@ Content Types
 
 Some content types are built into enonic XP. A basic understanding of these will be essential to building sites with the Content Studio.
 
-.. images:: images/content-types.jpg
+.. image:: images/content-types.jpg
 
 .. toctree::
    :maxdepth: 1
