@@ -1,4 +1,5 @@
 <input name="name" type="Time">
   <label>My Time</label>
   <occurrences minimum="0" maximum="1"/>
+  <default>now</default>
 </input>

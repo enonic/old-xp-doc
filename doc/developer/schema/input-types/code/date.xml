@@ -1,4 +1,5 @@
 <input name="name" type="Date">
   <label>Some Date</label>
   <occurrences minimum="0" maximum="1"/>
+  <default>2011-09-12</default>
 </input>
