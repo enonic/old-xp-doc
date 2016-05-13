@@ -6,6 +6,10 @@ load
 Load data from a named dump and load it into Enonic XP.
 The dump read has to be stored in the ``$XP_HOME/data/dump`` directory.
 
+.. Attention::
+ 
+	A load must never be performed on a repo with existing content. It's meant to be used on empty repos. Make sure the repo is emptied first (delete contents)!
+
 **Usage:**
 
 .. code-block:: none
