@@ -3,8 +3,8 @@
   <occurrences minimum="0" maximum="0"/>
   <config>
     <relationship>system:reference</relationship>
-    <allowType>citation</allowType>
-    <allowType>my.other.app:quote</allowType>
+    <allowContentType>citation</allowContentType>
+    <allowContentType>my.other.app:quote</allowContentType>
     <allowPath>${site}/people/</allowPath>
     <allowPath>./*</allowPath>
     <allowPath>/quotes*</allowPath>
