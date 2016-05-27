@@ -9,8 +9,8 @@
       <label>Profiles folder</label>
       <occurrences minimum="0" maximum="1"/>
       <config>
-        <relationship-type>system:reference</relationship-type>
-        <allow-content-type>base:folder</allow-content-type>
+        <relationshipType>system:reference</relationshipType>
+        <allowContentType>base:folder</allowContentType>
       </config>
     </input>
   </config>
