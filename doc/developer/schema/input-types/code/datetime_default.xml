@@ -1,0 +1,22 @@
+<input name="dateTimeDefaultTz" type="DateTime">
+  <label>DateTime (with tz and default value)</label>
+  <config>
+    <timezone>true</timezone>
+  </config>
+  <default>2000-01-01T12:30+01:00</default>
+</input>
+
+<input name="dateTimeDefaultNoTz" type="DateTime">
+  <label>DateTime (without tz and default value)</label>
+  <default>2000-01-01T12:30</default>
+</input>
+
+<input name="dateTimeRelative" type="DateTime">
+  <label>DateTime (relative default value)</label>
+  <default>+1year -12hours</default>
+</input>
+
+<input name="dateTimeNow" type="DateTime">
+  <label>DateTime (current time as default value)</label>
+  <default>now</default>
+</input>

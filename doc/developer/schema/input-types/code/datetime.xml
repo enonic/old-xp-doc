@@ -1,7 +1,7 @@
-<input name="name" type="DateTime">
-  <label>DateTime (with tz)</label>
-  <occurrences minimum="0" maximum="1"/>
-  <config>
-    <timezone>true</timezone>
-  </config>
-</input>
+  <input name="name" type="DateTime">
+    <label>DateTime (with tz)</label>
+    <occurrences minimum="0" maximum="1"/>
+    <config>
+      <timezone>true</timezone>
+    </config>
+  </input>
