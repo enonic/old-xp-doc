@@ -29,7 +29,7 @@ See :ref:`backup` for more information on snapshots.
               Port number for server (default is 8080).
 
           -r <repository>
-              The name of the repository to restore.
+              The name of the repository to restore. Default is all repositories
 
           -s <snapshotName>
               The name of the snapshot to restore.
@@ -38,5 +38,8 @@ See :ref:`backup` for more information on snapshots.
 
 .. code-block:: none
 
-  $ ./toolbox restore -a su:password -r cms-repo \
-    -s cms-repo2015-07-02t11:53:13.224z
+  $ ./toolbox.sh restore -a su:password -s 2015-07-02t11:53:13.224z
+
+**Related:**
+
+ * List available snapshots with names: :ref:`toolbox-list-snapshots`
