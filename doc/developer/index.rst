@@ -28,3 +28,4 @@ here :ref:`api_ref_guide`.
    node-domain/index
    search/index
    admin/index
+   id-provider/index

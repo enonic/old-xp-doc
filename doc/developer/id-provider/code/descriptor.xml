@@ -1,0 +1,15 @@
+<id-provider>
+  <mode>LOCAL</mode>
+  <config>
+    <input name="title" type="TextLine">
+      <label>Title</label>
+      <occurrences minimum="0" maximum="1"/>
+      <default>User Login</default>
+    </input>
+    <input name="backgroundColor" type="TextLine">
+      <label>Background Color</label>
+      <occurrences minimum="0" maximum="1"/>
+      <default>#fff</default>
+    </input>
+  </config>
+</id-provider>
