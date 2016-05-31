@@ -4,10 +4,37 @@ Services
 ========
 
 Services allow the creation of http endpoints without binding them to specific paths.
+Each service must have a JavaScript controller file and optionally an XML descriptor placed in the folder ``services/[service-name]``
 
-Services typically consist of a single JavaScript file which bares the name of the service. This controller must be in a folder with the
-same name and must be located in the ``/src/main/resources/services`` folder. For example, a logout service would look like this:
-``/src/main/resources/services/logout/logout.js``
+
+Descriptor
+----------
+
+The service descriptor is an XML file that that is used to define which rights are required to access the service.
+
+The descriptor file must have the same name as the service, i.e. ``services/[service-name]/[service-name].xml``:
+
+.. literalinclude:: code/service.xml
+   :language: xml
+
+
+Controller
+----------
+
+A service controller handles requests to the service.
+The controller is a required file written in JavaScript and must have the same name as the service, i.e. ``services/[service-name]/[service-name].js``.
+
+A controller exports a method for each type of HTTP request that should be handled.
+The handle method has the request object as a parameter and returns the response object (see :ref:`http_controllers`).
+
+The following example is a simple service that returns a JSON object with the date and a counter.
+
+.. literalinclude:: code/service.js
+   :language: javascript
+
+
+Access
+------
 
 The service can then be accessed on a relatively mounted URL, as seen below, where ``application`` is the application name (without version)::
 
@@ -22,13 +49,3 @@ The portal function ``serviceUrl()`` will create a dynamic URL for a service.
   :param string type: URL type. Either server (server-relative URL) or absolute. Default is server.
   :param object params: Custom parameters to append to the url.
   :returns: The the relative or absolute URL to the service.
-
-.. ATTENTION::
-
-  For sites, you may only access the services of the apps that have been added to that site.
-..
-
-The following example is a simple service that returns a JSON object with the date and a counter.
-
-.. literalinclude:: code/service.js
-   :language: javascript
