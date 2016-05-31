@@ -81,6 +81,8 @@ Instead, the widget controller will receive the ID of the selected content as a 
 The controller can then use the Javascript library "content" to retrieve the selected content.
 Two new functions have also been added to the Javascript library "content": getSite and getSiteConfig
 
+If you have installed widgets, please install a version compatible with Enonic XP 6.6
+
 If you have developed a widget, please update your code to use the "content" library instead. Below are some example:
                                                                
 .. literalinclude:: code/content-studio-widget-upgrade-1.js
