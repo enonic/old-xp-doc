@@ -71,3 +71,22 @@ To enable clustering, an option in ``$XP_DISTRO/home/config/com.enonic.xp.elasti
 
 See :ref:`clustering` for more details about configuring clustering.
 
+
+Content Studio detail panel widgets
+-----------------------------------
+
+The widgets displayed in the "Content Studio" detail panel are no longer able to retrieve the selected content using the Javascript library "portal" like a page or a part.
+
+Instead, the widget controller will receive the ID of the selected content as a parameter "contentId".
+The controller can then use the Javascript library "content" to retrieve the selected content.
+Two new functions have also been added to the Javascript library "content": getSite and getSiteConfig
+
+If you have developed a widget, please update your code to use the "content" library instead. Below are some example:
+                                                               
+.. literalinclude:: code/content-studio-widget-upgrade-1.js
+   :language: javascript                                                               
+.. literalinclude:: code/content-studio-widget-upgrade-2.js
+   :language: javascript                                                               
+.. literalinclude:: code/content-studio-widget-upgrade-3.js
+   :language: javascript
+
