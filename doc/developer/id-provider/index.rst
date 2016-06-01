@@ -39,10 +39,29 @@ config
 Controller
 ----------
 
-To drive the widget, we will need a ``controller`` (See :ref:`http_controllers`). The controller typically produces the initial widget html.
-Depending on the widget implementation it may also handle sub-requests from the widget.
+To drive the ID Provider, we will need a ``controller`` (See :ref:`http_controllers`).
 
-The controller file must match the widget name, i.e. ``admin/widgets/[widget-name]/[widget-name].js``:
+The descriptor file must have the following path: ``idprovider/idprovider.js``:
 
 .. literalinclude:: code/controller.js
    :language: javascript
+   
+login
+  Mandatory function rendered in the case of a 401/403 error.
+  This function typically produces a login or error page.
+  
+  The portal function ``loginUrl()`` will create a dynamic URL to this function.
+
+logout
+  Mandatory function rendered.
+  A call to "authLib.logout()" will log out the current user from Enonic XP.
+  
+  The portal function ``logoutUrl()`` will create a dynamic URL to this function.   
+  
+authFilter
+  Optional function executed if the current user is unauthenticated.
+  This functions allows, for example, to handle web tokens or other request headers.
+  
+sync
+  Optional function executed after a click on "Sync" in the Users Manager.
+  This function is typically used for ID Providers in mode MIXED or EXTERNAL to refresh the user store data. 
