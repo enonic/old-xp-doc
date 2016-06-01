@@ -6,7 +6,8 @@ ID Providers
 .. WARNING::
   ID Providers support is experimental.
 
-TODO Explanation about ID Providers
+An ID Provider is a pluggable authentication module, contained inside an application.
+This mechanism allows you to install an existing ID Provider (or write your own), configure it and associate it to a user store.
 
 To create an ID provider, you must create a new folder in your project structure, i.e.  ``idprovider``.
 Then you must place a descriptor and a controller there.
@@ -15,7 +16,6 @@ Descriptor
 ----------
 
 The ID Provider descriptor is an XML file that that is used to define the mode and the configuration required by the provider.
-
 The descriptor file must have the following path: ``idprovider/idprovider.xml``:
 
 .. literalinclude:: code/descriptor.xml
@@ -39,9 +39,7 @@ config
 Controller
 ----------
 
-To drive the ID Provider, we will need a ``controller`` (See :ref:`http_controllers`).
-
-The descriptor file must have the following path: ``idprovider/idprovider.js``:
+The controller is a required file written in JavaScript and must have the following path: ``idprovider/idprovider.js``:
 
 .. literalinclude:: code/controller.js
    :language: javascript
@@ -65,3 +63,13 @@ authFilter
 sync
   Optional function executed after a click on "Sync" in the Users Manager.
   This function is typically used for ID Providers in mode MIXED or EXTERNAL to refresh the user store data. 
+
+
+Set-up an ID Provider
+---------------------
+
+To set-up an ID Provider, you must follow the 3 requirements below:
+
+#. An application containing an ID Provider must be installed and started (Use the admin tool "Applications").
+#. The application must be associated to the user store to guard (Use the admin tool "Users" and edit the user store to guard).
+#. The user store must be associated to a virtual host in the virtual host configuration file (see :ref:`configuration`).
