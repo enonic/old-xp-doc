@@ -21,9 +21,7 @@ exports.sync = function (req) {
 
 exports.logout = function (req) {
     authLib.logout();
-    if (req.params.redirect) {
-        return {
-            redirect: req.params.redirect
-        }
-    }
+    return {
+        redirect: req.params.redirect
+    };
 };
