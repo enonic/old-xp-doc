@@ -1,4 +1,4 @@
-.. _widgets:
+.. _id-providers:
 
 ID Providers
 ============
@@ -7,7 +7,7 @@ ID Providers
   ID Providers support is experimental.
 
 An ID Provider is a pluggable authentication module, contained inside an application.
-This mechanism allows you to install an existing ID Provider (or write your own), configure it and associate it to a user store.
+Install an existing ID Provider or write your own, configure it and associate it to a user store.
 
 To create an ID provider, you must create a new folder in your project structure, i.e.  ``idprovider``.
 Then you must place a descriptor and a controller there.

@@ -44,7 +44,7 @@ target
   Path to which the request is sent.
 
 userstore
-  User store associated to this virtual host.
+  Key of the user store associated to this virtual host (see :ref:`id-providers`).
 
 In the second example, mapping "intranet", a site is mapped to the root of the
 URL, which would be normal in production environments.
