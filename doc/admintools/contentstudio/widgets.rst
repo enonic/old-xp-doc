@@ -38,21 +38,27 @@ listed as "Out-of-date". The active version will be listed as "Modified" if it i
 Restoring a version
 *******************
 
-Any version can be set as the **active version** by selecting it and clicking the button labeled "Restore this version". This will not
-change the published (online) version. A previously published version of the content will remain online when a version is restored. A
-content must be published before the restored (active) version goes online.
+Any version can be set as the **active version** by selecting it and clicking the button labeled "Restore this version". Doing so will not
+change the published (online) version. This means that a previously published version of the content will remain online when a version is
+restored. A content must be published before the restored (active) version goes online.
 
 Dependencies
 ------------
 
-The dependencies widget makes it easy to find all the content that uses, or is used by, the selected content. Select the Dependencies widget
-in the details panel and then select a content in the tree grid. The icon, name, and path of the selected content now appears in the center
-of the details panel. An icon for each type of inbound dependency is listed at the top-left and icons for each type of outbound dependency
-is listed at the bottom-right. Next to each content type icon is the number of dependent content of that type.
+Content can be configured to use content of other types. For example, an article content might use a ContentSelector for adding pre-defined
+categories. The dependencies widget makes it easy to find all the content that uses, or is used by, the selected content.
+
+Select the Dependencies widget in the details panel and then select a content in the tree grid. The icon, name, and path of the selected
+content will appear in the center of the details panel. An icon for each type of inbound dependency is listed at the top-left. Icons for
+each type of outbound dependency are listed at the bottom-right. Next to each content type icon is the number of dependent items of that
+type.
 
 .. image:: images/dependencies-widget.jpg
 
-Inbound dependencies are other content that use the selected content. Outbound dependencies are the content that is used by the selected
-content. For example, the image shows a Post content named March Madness. This Post has five inbound Comment items that reference the March
-Madness post. The Post references one image content, one Author content, and two Category contents. The image, Author and Categories are
-outbound.
+**Inbound** dependencies are other content items that use the selected content. **Outbound** dependencies are the content items that are
+used by the selected content. For example, the image above shows a Post content named March Madness. This Post has five inbound Comment
+items that reference the March Madness post. The Post itself references one image content, one Author content, and two Category contents.
+Therefore, the image, Author and Categories are outbound.
+
+Inbound and outbound content can be viewed by clicking the respective buttons at the top and bottom of the dependencies widget. This will
+open the search panel on the left and filter the tree grid to show only the selected dependency type.
