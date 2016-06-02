@@ -3,8 +3,7 @@
 Mixins
 ======
 
-Structures of data that are repeated in different content types or component descriptors may be defined as mixins. Such structures (like a
-set of address fields or a combobox with a standard set of values) would be defined once in a mixin and then the mixin would be called in
+Structures of data that are repeated in different content types or component descriptors may be defined as mixins. Such structures (like some address fields or a combobox with a standard set of values) would be defined once in a mixin and then the mixin would be called in
 other schemas that require these fields. The mixin definition file must be placed in the folder ``site/mixins/[name]`` and named
 ``[name].xml``. For example, ``site/mixins/us-address/us-address.xml``.
 
