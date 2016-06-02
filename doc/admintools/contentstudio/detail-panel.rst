@@ -1,7 +1,7 @@
 .. _detail_panel:
 
-Detail panel and widgets
-========================
+Detail panel
+============
 
 .. |detailicon| image:: images/icon-detail-panel.png
 .. |unlockicon| image:: images/icon-unlock.png

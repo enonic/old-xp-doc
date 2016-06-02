@@ -21,3 +21,4 @@ that has three small squares next to horizontal bars.
    content-tree
    preview-panel
    detail-panel
+   widgets

@@ -83,7 +83,7 @@ Two new functions have also been added to the Javascript library "content": getS
 
 If you have installed widgets, please install a version compatible with Enonic XP 6.6
 
-If you have developed a widget, please update your code to use the "content" library instead. Below are some example:
+If you have developed a widget, please update your code to use the "content" library instead. Below are some examples:
                                                                
 .. literalinclude:: code/content-studio-widget-upgrade-1.js
    :language: javascript                                                               
