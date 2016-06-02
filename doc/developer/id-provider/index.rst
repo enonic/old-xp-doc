@@ -44,9 +44,12 @@ The controller is a required file written in JavaScript and must have the follow
 .. literalinclude:: code/controller.js
    :language: javascript
    
-login
+handle403
   Mandatory function rendered in the case of a 401/403 error.
   This function typically produces a login or error page.
+   
+login
+  Mandatory function rendered.
   
   The portal function ``loginUrl()`` will create a dynamic URL to this function.
 
