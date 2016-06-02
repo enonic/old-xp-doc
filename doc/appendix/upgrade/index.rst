@@ -27,11 +27,13 @@ Download Enonic XP https://repo.enonic.com/public/com/enonic/xp/distro/${release
 
 The next step depends on your setup. Do you have your **$XP_HOME** folder outside or inside the **$XP_INSTALL** folder?
 
-**My $XP_HOME is outside the $XP_INSTALL - folder:**  
-Make sure the new installation points to the correct $XP_HOME folder
+**Outside the $XP_INSTALL - folder:**  
 
-**My $XP_HOME inside the $XP_INSTALL - folder:**  
-Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all nodes)
+Make sure the new installation points to the correct $XP_HOME folder.
+
+**Inside the $XP_INSTALL - folder:**  
+
+Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all nodes).
  
 
 4. Stop the old installation
