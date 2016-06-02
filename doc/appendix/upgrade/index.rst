@@ -18,22 +18,20 @@ You could also do a :ref:`toolbox-dump` of the system, but then you will loose v
 2. Install new version
 ******************************
 
-  #. Download Enonic XP https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip and install according to your setup.
+  Download Enonic XP https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip and install according to your setup.
   
 .. tip:: Remember to update any startup scripts you might have to launch your new installation given a server restart
 
 3. Configure XP_HOME
 *********************
 
-The next steps depends on your setup:
+The next step depends on your setup. Do you have your **$XP_HOME** folder outside or inside the **$XP_INSTALL** folder:
 
-  **If $XP_HOME outside the $XP_INSTALL - folder:**
+**My $XP_HOME is outside the $XP_INSTALL - folder:**
+Make sure the new installation points to the correct $XP_HOME folder
 
-  #. Make sure the new installation points to the correct $XP_HOME folder
-
-  **If $XP_HOME inside the $XP_INSTALL - folder:**
-
-  #. Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all nodes)
+**My $XP_HOME inside the $XP_INSTALL - folder:**
+Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all nodes)
  
 
 4. Stop the old installation
