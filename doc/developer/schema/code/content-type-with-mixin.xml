@@ -2,12 +2,7 @@
   <display-name>Using mixins</display-name>
   <super-type>base:structured</super-type>
   <form>
-    <field-set name="basic">
-      <label>Status</label>
-      <items>
-        <inline mixin="us-address"/>
-      </items>
-    </field-set>
+    <inline mixin="us-address"/>
   </form>
   <x-data mixin="menu-item"/>
 </content-type>
