@@ -1,12 +1,29 @@
 var authLib = require('/lib/xp/auth');
 
-exports.login = function (req) {
-    var authConfig = authLib.getIdProviderConfig();
-    var title = authConfig.title || "User Login";
+exports.handle403 = function (req) {
+    var body = generateLoginPage();
+
     return {
         status: 403,
-        body: '<html><head></head><body><h1>' + title + '</h1></body></html>',
-        contentType: 'text/html'
+        contentType: 'text/html',
+        body: body
+    };
+};
+
+exports.login = function (req) {
+    var body = generateLoginPage(req.params.redirect);
+
+    return {
+        contentType: 'text/html',
+        body: body
+    };
+};
+
+exports.logout = function (req) {
+    authLib.logout();
+
+    return {
+        redirect: req.params.redirect
     };
 };
 
@@ -17,11 +34,10 @@ exports.authFilter = function (req) {
 exports.sync = function (req) {
     var userStoreKey = authLib.getUserStore().key;
     log.info('Userstore "' + userStoreKey + '" synchronization');
-}
+};
 
-exports.logout = function (req) {
-    authLib.logout();
-    return {
-        redirect: req.params.redirect
-    };
+function generateLoginPage(redirectUrl) {
+    var authConfig = authLib.getIdProviderConfig();
+    var title = authConfig.title || "User Login";
+    return '<html><head></head><body><h1>' + title + '</h1></body></html>';
 };
