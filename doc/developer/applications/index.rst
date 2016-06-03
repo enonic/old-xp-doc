@@ -14,7 +14,7 @@ Applications may even carry data, for instance, to initialize a repository or po
 
 Life Cycle
 ----------
-Applications and have the following life-cycle:
+Applications have the following life-cycle:
 
 * installed
 * started
