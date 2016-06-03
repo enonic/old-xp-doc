@@ -18,5 +18,5 @@ options may include **Select parent**, **Insert** another component, **Inspect**
 .. image:: images/page-editor.jpg
 
 The page editor will be closed when the type of content being edited does not have a supporting page template. However, it can be opened and
-a dropdown selector will appear which can be used add a **page component** to render a page. Read more about this in the
+a dropdown selector will appear which can be used to add a **page component** to render a page. Read more about this in the
 :ref:`page_templates` section.

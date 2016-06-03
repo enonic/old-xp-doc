@@ -20,7 +20,8 @@ placeholder.
 For example, to add a part component called "Categories" to the page, simply click the part icon (puzzle piece) and drag it to a region in
 the page editor. A red circle appears when the component is dragged over an area where it cannot be dropped. A green checkbox appears when
 dragged over valid locations and a blue box shows where the component will land. Once the part placeholder is dropped, it will have a
-combo-box where the "Categories" part can be selected from the list.
+combo-box where the "Categories" part can be selected from the list. When a component placeholder is selected, the inspection panel will
+also show a combo-box with a list of available part components.
 
 .. image:: images/inspect-insert.jpg
 

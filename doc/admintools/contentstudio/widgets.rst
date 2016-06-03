@@ -12,6 +12,8 @@ the top of the panel.
 
 There are two built-in widgets.
 
+.. _version_history:
+
 Version history
 ---------------
 
@@ -41,6 +43,8 @@ Restoring a version
 Any version can be set as the **active version** by selecting it and clicking the button labeled "Restore this version". Doing so will not
 change the published (online) version. This means that a previously published version of the content will remain online when a version is
 restored. A content must be published before the restored (active) version goes online.
+
+.. _dependencies_widget:
 
 Dependencies
 ------------

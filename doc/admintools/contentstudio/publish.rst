@@ -13,22 +13,22 @@ Draft and master branch
 -----------------------
 
 All content created with the Content Studio exists in the **draft** branch with the status **offline**. Content in the draft branch can be
-edited, changed, and previewed until it is ready to go online. When a content is published, it is copied from the **draft** branch to the
-**master** branch. Only content in the master branch can be accessed by others outside of the Content Studio, subject to the contents'
-security settings.
+edited, changed, and previewed until it is ready to go online. Every time a content is saved with changes, a new version is created. (See
+:ref:`version_history`) When a content is published, the active version is copied from the **draft** branch to the **master** branch. Only
+content in the master branch can be accessed by others outside of the Content Studio, subject to the contents' security settings.
 
 Content status
 --------------
 
 Published content will have the status **online** while content that has not yet been published will be **offline**. When changes to a
-published content are saved, its status will be **modified** and this content will need to be published again before the changes will be
-visible outside of the Content Studio. When a published content is "deleted" then its status will be **pending delete** and it will still be
-visible outside of the Content Studio. Content that is pending delete must be published before it is actually removed from the master
-branch.
+published content are saved, the new version becomes the active version but the version that is online is not changed. The status of the
+new active version will be **modified** and this content will need to be published again before the changes will be visible outside of the
+Content Studio.
 
-.. warning:: Once a content is published, it cannot be taken offline without deleting it. If deleting the content is not a good option, it
-   could be moved to an archive folder outside of the site content. Or the content security could be altered to make it visible only to
-   administrators.
+When a published content is "deleted", the "Delete item" dialogue offers a checkbox to "Instantly delete published items". If this box is
+not checked then the content's status will be **pending delete** and it will still be visible outside of the Content Studio. Content that is
+pending delete must be published or "instantly deleted" before it is actually removed from the master branch.
+
 
 Publishing wizard
 -----------------
@@ -42,4 +42,13 @@ with the selected content are listed in the publishing wizard.
 .. image:: images/publishing-wizard.jpg
 
 If the selected content has children then these items can be included by checking the box labeled "Include child items". The total number of
-items that will be published is displayed on the **Publish** button.
+items that will be published is displayed on the **Publish** button. The green "Publish" button has a menu option for "Publish tree" which
+simply opens the dialogue with the "Include child items" box checked.
+
+Previously published content can be taken offline with the "Unpublish" feature. The "Unpublish" dialogue can be opened from the Publish menu
+in the toolbar or by right-clicking the content in the tree grid and selecting "Unpublish" from the context menu. All of the content's
+children will be listed and unpublished along with the selected content. The total number of content items that will be taken offline will
+appear in parenthesis in the red "Unpublish" button at the bottom of the dialogue.
+
+.. image:: images/unpublish-dialogue.jpg
+
