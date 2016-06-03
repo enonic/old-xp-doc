@@ -13,7 +13,7 @@ has three tabs: Insert, Inspect, and Emulator.
 Insert tab
 ----------
 
-This tab has a list of component types that can be added to the page in a two step process. The first step is to drag and drop a component
+This tab has a list of :ref:`cs_components` that can be added to the page in a two step process. The first step is to drag and drop a component
 type placeholder to a region in the page editor. The second step is to select the specific component from a dropdown selector in the
 placeholder.
 

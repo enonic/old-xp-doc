@@ -26,3 +26,4 @@ view** appears when content is created or edited. All actions and features will 
    actions
    content-types
    content-security
+   components
