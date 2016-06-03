@@ -6,7 +6,27 @@ Userstores
 
 All users and groups are created and managed in user stores. Each Enonic XP installation has a System User Store that cannot be deleted.
 Additional user stores can be created as needed. For example, it might be convenient to use the System User Store for employees who run the
-website and another user store for customers who log into the public site.
+website and another user store for customers who log into the public site. Each user store can assign an ID Provider to handle its
+authentication (see :ref:`id-providers`).
+
+Creating user stores
+--------------------
+
+To create a new user store, click "New" in the toolbar while no items are selected in the tree view. This will open an editor tab where the
+user store details can be entered as described below.
+
+As the ``<DisplayName>`` is entered, the ``<name>`` field is automatically filled in with a URL friendly version. The ``<name>`` field will
+be part of the user store key and it cannot be changed once the user store is saved.
+
+The ID Provider is for assigning an app that will handle authentication for the user store. ID providers can have their own configuration
+which can be viewed and modified by clicking the pencil icon.
+
+Finally, the permissions section allows principals (users, roles and groups) to be added to the user store. The Authenticated and
+Administrator roles are automatically added and they cannot be altered or removed.
+
+When a user store is created, it will automatically have folders for Users and Groups.
+
+.. image:: images/user-store.jpg
 
 
 Users
