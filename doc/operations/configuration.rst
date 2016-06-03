@@ -21,6 +21,8 @@ The default ``system.properties`` are listed below.
    :caption: ``$XP_HOME/config/system.properties``
 
 
+.. _configuration-vhost:
+
 Virtual Host Configuration
 --------------------------
 
