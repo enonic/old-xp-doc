@@ -68,11 +68,11 @@ sync
   This function is typically used for ID Providers in mode MIXED or EXTERNAL to refresh the user store data. 
 
 
-Set-up an ID Provider
+Set up an ID Provider
 ---------------------
 
-To set-up an ID Provider, you must follow the 3 requirements below:
+To set up an ID Provider, you must follow the 3 steps below:
 
-#. An application containing an ID Provider must be installed and started (Use the admin tool "Applications").
-#. The application must be associated to the user store to guard (Use the admin tool "Users" and edit the user store to guard).
-#. The user store must be associated to a virtual host in the virtual host configuration file (see :ref:`configuration`).
+#. An application containing an ID Provider must be installed and started (Use the admin tool :ref:`application_tool`).
+#. The application must be associated to a user store and configured (Use the admin tool :ref:`users_tool` and edit the user store to guard).
+#. The user store must be associated to a virtual host in the virtual host configuration file (see :ref:`configuration-vhost`).
