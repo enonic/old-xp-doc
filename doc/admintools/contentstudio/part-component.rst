@@ -15,7 +15,11 @@ The first step in adding a part component to a page is to edit the page content 
 component placeholder (puzzle piece) to the desired location on the page. The part placeholder will now appear as a blue box with a dropdown
 selector. The same part dropdown selector will appear in the inspect panel. Use one of the selectors to find the desired part component.
 Once a part component is selected, the placeholder will be replaced with the actual part and the Inspect panel will show the part's
-configuration options in a form. Some parts won't have any configuration.
+configuration options in a form.
+
+Some parts won't have any configuration. Parts with configuration options are independently configured. This means that the same part
+component can be added to multiple pages, or even multiple times in the same page, and each instance can have different configuration
+values.
 
 .. image:: images/part-component-selector.jpg
 
