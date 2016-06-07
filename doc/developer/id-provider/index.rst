@@ -15,7 +15,7 @@ Then you must place a descriptor and a controller there.
 Descriptor
 ----------
 
-The ID Provider descriptor is an XML file that that is used to define the mode and the configuration required by the provider.
+The ID Provider descriptor is a required XML file that that is used to define the mode and the configuration required by the provider.
 The descriptor file must have the following path: ``idprovider/idprovider.xml``:
 
 .. literalinclude:: code/descriptor.xml
@@ -24,13 +24,13 @@ The descriptor file must have the following path: ``idprovider/idprovider.xml``:
 mode
   Specifies how the provider uses the user store.
   
-  LOCAL: Both the users and groups are stored in the user store.
+  LOCAL: Both the users and groups are stored locally in the user store.
   
   EXTERNAL: Both the users and groups are stored in a remote system.
-  The user store is only a snapshot view of this remote system and therefore the users and groups are not editable in the Users Manager.
+  The user store is only a snapshot view of this remote system and therefore the users and groups are not editable in the admin tool :ref:`users_tool`.
   
   MIXED: The users are stored in a remote system and the groups in the user store.
-  The users in the user store are only a snapshot view of this remote system and therefore the users are not editable in the Users Manager.
+  The users in the user store are only a snapshot view of this remote system and therefore the users are not editable in the admin tool :ref:`users_tool`.
 
 config
   Specifies the input fields of the configuration required by the ID provider.
@@ -62,10 +62,6 @@ logout
 authFilter
   Optional function executed if the current user is unauthenticated.
   This functions allows, for example, to handle web tokens or other request headers.
-  
-sync
-  Optional function executed after a click on "Sync" in the Users Manager.
-  This function is typically used for ID Providers in mode MIXED or EXTERNAL to refresh the user store data. 
 
 
 Set up an ID Provider

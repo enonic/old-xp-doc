@@ -31,11 +31,6 @@ exports.authFilter = function (req) {
     log.info('Auth filter. Invoked only when user is not authenticated');
 };
 
-exports.sync = function (req) {
-    var userStoreKey = authLib.getUserStore().key;
-    log.info('Userstore "' + userStoreKey + '" synchronization');
-};
-
 function generateLoginPage(redirectUrl) {
     var authConfig = authLib.getIdProviderConfig();
     var title = authConfig.title || "User Login";
