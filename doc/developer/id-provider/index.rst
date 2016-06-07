@@ -62,10 +62,6 @@ logout
 authFilter
   Optional function executed if the current user is unauthenticated.
   This functions allows, for example, to handle web tokens or other request headers.
-  
-sync
-  Optional function executed after a click on "Sync" in the Users Manager.
-  This function is typically used for ID Providers in mode MIXED or EXTERNAL to refresh the user store data. 
 
 
 Set up an ID Provider
