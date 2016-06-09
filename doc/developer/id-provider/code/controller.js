@@ -10,7 +10,7 @@ exports.handle403 = function (req) {
     };
 };
 
-exports.login = function (req) {
+exports.get = function (req) {
     var body = generateLoginPage(req.params.redirect);
 
     return {
