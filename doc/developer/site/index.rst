@@ -21,3 +21,4 @@ This chapter will dive into the details on how to build sites and the various co
     fragments/index
     contributions
     errors/index
+    macros/index

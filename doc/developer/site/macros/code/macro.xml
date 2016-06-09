@@ -1,0 +1,10 @@
+<macro>
+  <display-name>Current user</display-name>
+  <description>Shows currently logged user</description>
+
+  <form>
+    <input name="defaultText" type="TextLine">
+      <label>Text to show if no user logged in</label>
+    </input>
+  </form>
+</macro>

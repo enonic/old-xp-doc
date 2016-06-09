@@ -3,7 +3,7 @@
 Page Contributions
 ==================
 
-Page contributions are fragments of HTML that a component (part or layout) can contribute to the page in which it is contained.
+Page contributions are fragments of HTML that a component (part or layout) or macro can contribute to the page in which it is contained.
 The idea is to allow components to add JavaScript or CSS stylesheets globally in the page, although it is not restricted to scripts or styles.
 
 Page contributions help with solving 2 problems:
