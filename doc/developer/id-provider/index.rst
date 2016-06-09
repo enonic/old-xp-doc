@@ -48,10 +48,10 @@ handle403
   Mandatory function rendered in the case of a 401/403 error.
   This function typically produces a login or error page.
    
-login
-  Mandatory function rendered.
+get/post/...
+  An ID provider controller exports a method for each type of HTTP request that should be handled.
   
-  The portal function ``loginUrl()`` will create a dynamic URL to this function.
+  The portal function ``idProviderUrl()`` will create a dynamic URL to this function.
 
 logout
   Mandatory function rendered.
