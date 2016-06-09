@@ -51,5 +51,5 @@ content-display-name-script
 
 .. TIP::
 
-  A content type may optionally have its own specific icon. The icon can be assigned to the content type by adding a PNG file with
-  the same name, in the content type folder, e.g. ``site/content-types/my-content-type-name/my-content-type-name.png``
+  A content type may optionally have its own specific icon. The icon can be assigned to the content type by adding a PNG or SVG file with
+  the same name, in the content type folder, e.g. ``site/content-types/my-content-type-name/my-content-type-name.svg``

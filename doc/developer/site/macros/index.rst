@@ -17,7 +17,7 @@ When an application that contains macros is added to a site, they will be availa
 Macro instruction
 -----------------
 
-A macro instruction is similar to an HTML or XML tag but using square brackets instead of angular brackets.
+A macro instruction is similar to an HTML or XML tag but using square brackets instead of angle brackets.
 It has a name, a set of attributes, and optionally a body.
 
 .. literalinclude:: code/instruction.html
@@ -29,7 +29,7 @@ During the rendering of the page the macros are resolved and executed. Then the 
 In addition, a macro can also add styles or scripts to the page, by setting :ref:`page_contributions` in its response.
 
 A user can add macro instructions by typing the square bracket tags, as the examples above.
-But more frequently it will click on the Insert macro button and select one of the macros available.
+But more frequently it will click on the `Insert macro` button and select one of the macros available.
 
 Descriptor
 ----------
@@ -105,3 +105,9 @@ Examples:
 
 .. literalinclude:: code/builtin.html
   :language: html
+
+
+.. NOTE::
+
+  A macro may optionally have its own specific icon. The icon can be assigned to the macro by adding a PNG or SVG file with
+  the same name, in the macro folder, e.g. ``site/macros/myMacro/myMacro.svg``
