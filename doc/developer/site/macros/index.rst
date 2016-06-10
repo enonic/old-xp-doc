@@ -92,8 +92,8 @@ Built-in macros
 
 There are currently 2 built-in macros that are included in XP and available for any site:
 
-noformat
-  The contents (body) of this macro will not be processed. That allows rendering another macro instruction as text without executing it.
+disable
+  The contents (body) of this macro will not be evaluated as macros. That allows rendering another macro instruction as text without executing it.
   It is useful for documenting macros, for example. This macro has no parameters.
 
 embed
