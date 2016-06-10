@@ -1,7 +1,7 @@
 .. _toolbox-install-app:
 
 install-app
-==============
+===========
 
 Installs an application on all nodes 
 

@@ -48,6 +48,7 @@ Here's a list of all the commands that you can do with the toolbox:
    export
    import
    reindex
+   reprocess
    set-replicas
    dump
    load
