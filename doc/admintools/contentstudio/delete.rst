@@ -12,8 +12,14 @@ listed along with its status: Online or Offline. If the content is a parent then
 The Delete button shows the total number of items that will be removed. More than one content can be selected for deletion from the tree
 grid in browse view.
 
-**Offline** content is removed immediately. Content that is **online** will only be marked for deletion. Its status will change to **pending
+**Offline** content is removed immediately. Content that is **online** can be removed immediately by checking the box labeled "Instantly
+delete published items". If this box is not checked then the content will only be marked for deletion. Its status will change to **pending
 delete** and its name will have a line through it. Content that is pending delete will still be visible outside the Content Studio and it
 must be published before it is actually removed and taken offline.
 
 .. image:: images/delete-item-dialogue.jpg
+
+An extra layer of protection kicks in before a **site** content can be deleted. The "Confirm delete" dialogue appears to warn that this
+action cannot be undone. A number must be entered before the deletion will occur.
+
+.. image:: images/confirm-delete.jpg
