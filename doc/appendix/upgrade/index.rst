@@ -92,3 +92,16 @@ If you have developed a widget, please update your code to use the "content" lib
 .. literalinclude:: code/content-studio-widget-upgrade-3.js
    :language: javascript
 
+
+Custom Error 401 Handling
+-------------------------
+
+Previously, if an unauthenticated user or an authenticated user with missing rights requested a restricted content, the server would return a 403 error.
+The case of an unauthenticated user will now return a 401 error.
+
+If you have developed a custom error page (see :ref:`errors`)  with a function ``handle403``, please update your code to handle both cases by adding the function ``handle401``.
+
+
+
+
+
