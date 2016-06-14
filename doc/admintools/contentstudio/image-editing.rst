@@ -44,4 +44,4 @@ Setting the focal point.
 
 .. image:: images/image-with-focal-point.jpg
 
-The result keeps the giraffe's head in frame.
+The giraffe's head remains in frame with the focal point set.
