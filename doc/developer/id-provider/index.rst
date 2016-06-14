@@ -59,7 +59,7 @@ logout
   
   The portal function ``logoutUrl()`` will create a dynamic URL to this function.   
   
-authFilter
+autoLogin
   Optional function executed if the current user is unauthenticated.
   This functions allows, for example, to handle web tokens or other request headers.
 
