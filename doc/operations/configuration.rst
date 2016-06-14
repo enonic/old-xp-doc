@@ -91,7 +91,7 @@ Storage Configuration
 ---------------------------
 
 **Blobstore Configuration**
-   
+
 Main blobstore configuration is configured in ``com.enonic.xp.blobstore.cfg``.
 
 .. literalinclude:: code/com.enonic.xp.blobstore.cfg
@@ -100,16 +100,16 @@ Main blobstore configuration is configured in ``com.enonic.xp.blobstore.cfg``.
 
 provider
  	The blobstore provider to be used for storing. Default value is ``file``. Other providers will be available in future versions / enterprise-edition. Each provider will have a separate configuration file named ``com.enonic.xp.blobstore.<providername>.cfg``
-	
+
 cache
 	Enable or disable memory caching of blobs fetched from the blobstore. Default true
-	
-cache.sizeThreshold 
+
+cache.sizeThreshold
     The maximum size for objects to be cached, defaults to 1MB. You will usually avoid filling up the cache with large blobs, but rather cache smaller objects that are used often. The size notation accepts a number plus byte-size idenfier (``b``/``kb``/``mb``/``gb``/``tb``/``pb``)
 
 cache.memoryCapacity
 	The maximum memory footprint of the blob cache. Defaults to 100MB. The size notation accepts a number plus byte-size idenfier  (``b``/``kb``/``mb``/``gb``/``tb``/``pb``)
-	
+
 **File blobstore configuration**
 
 .. literalinclude:: code/com.enonic.xp.blobstore.file.cfg
@@ -117,8 +117,8 @@ cache.memoryCapacity
   :caption: ``$XP_HOME/config/com.enonic.xp.blobstore.file.cfg``
 
 baseDir
- 	Base-directory for storing blobs. Defaults to ``${xp.home}/repo/blob``. 
-	
+ 	Base-directory for storing blobs. Defaults to ``${xp.home}/repo/blob``.
+
 readThrough.provider = none
 	Readthrough provider name, if enabled. A readthrough provider stores and fetches blobs through an intermediate blobstore. Typically used for providers using a remote blobstore where caching as local files will improve performance.
 
@@ -227,12 +227,24 @@ The DoS (denial of service) filter can be configured using
 .. literalinclude:: code/com.enonic.xp.web.dos.cfg
    :language: properties
    :caption: ``$XP_HOME/config/com.enonic.xp.web.dos.cfg``
-   
+
 Market Configuration
-------------------------
+--------------------
 
 The market-place for installing applications can be configured using the ``com.enonic.xp.market.cfg`` file
 
 .. literalinclude:: code/com.enonic.xp.market.cfg
    :language: properties
-   :caption: ``$XP_HOME/config/com.enonic.xp.market.cfg`` 
+   :caption: ``$XP_HOME/config/com.enonic.xp.market.cfg``
+
+UDC Configuration
+-----------------
+
+UDC (Usage Data Collector) is collecting anonymous usage data 10 minutes
+after startup and every 24 hours. It is only used for finding out what platforms
+to focus on and improve platform stability. To switch this off, you can
+configure it sing the ``com.enonic.xp.server.udc.cfg`` file
+
+.. literalinclude:: code/com.enonic.xp.server.udc.cfg
+  :language: properties
+  :caption: ``$XP_HOME/config/com.enonic.xp.server.udc.cfg``
