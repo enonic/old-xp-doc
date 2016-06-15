@@ -18,6 +18,11 @@ All controllers within the app can access the configured values with the portal.
 .. literalinclude:: code/controller.js
    :language: javascript
 
-An app's site.xml file may optionally contain ``<x-data>`` elements for adding :ref:`mixins` and a ``<filters>`` element for adding :ref:`response_filters`.
+Extensions
+----------
+
+An app's site.xml file may optionally contain ``<x-data>`` elements for adding :ref:`mixins`. Adding a mixin this way will add that data on all the content in Content Studio.
+
+Additionally, the ``<filters>`` element can be used for adding :ref:`response_filters`.
 
 :ref:`controller_mappings` can also be configured in a site descriptor with a ``<mappings>`` element.
