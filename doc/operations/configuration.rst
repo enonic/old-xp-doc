@@ -45,7 +45,7 @@ source
 target
   Path to which the request is sent.
 
-idProvider
+userStore
   Key of the user store associated to this virtual host (see :ref:`id-providers`).
 
 In the second example, mapping "intranet", a site is mapped to the root of the

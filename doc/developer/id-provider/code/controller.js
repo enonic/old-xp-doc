@@ -11,8 +11,17 @@ exports.handle401 = function (req) {
     };
 };
 
-exports.get = function (req) {
+exports.get = function () {
     var body = generateLoginPage();
+
+    return {
+        contentType: 'text/html',
+        body: body
+    };
+};
+
+exports.login = function (req) {
+    var body = generateLoginPage(req.params.redirect);
 
     return {
         contentType: 'text/html',
@@ -22,10 +31,14 @@ exports.get = function (req) {
 
 exports.logout = function (req) {
     authLib.logout();
-    var redirectUrl = generateRedirectUrl();
+    var redirectUrl = req.params.redirect || generateRedirectUrl();
     return {
         redirect: redirectUrl
     };
+};
+
+exports.autoLogin = function (req) {
+    log.info('Auto login. Invoked only when user is not authenticated');
 };
 
 function generateRedirectUrl() {
@@ -36,12 +49,7 @@ function generateRedirectUrl() {
     return '/';
 }
 
-
-exports.autoLogin = function (req) {
-    log.info('Auto login. Invoked only when user is not authenticated');
-};
-
-function generateLoginPage() {
+function generateLoginPage(redirectUrl) {
     var authConfig = authLib.getIdProviderConfig();
     var title = authConfig.title || "User Login";
     return '<html><head></head><body><h1>' + title + '</h1></body></html>';

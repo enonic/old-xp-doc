@@ -15,7 +15,7 @@ Then you must place a descriptor and a controller there.
 Descriptor
 ----------
 
-The ID Provider descriptor is a required XML file that that is used to define the mode and the configuration required by the provider.
+The ID Provider descriptor is a required XML file used to define the mode and the configuration required by the provider.
 The descriptor file must have the following path: ``idprovider/idprovider.xml``:
 
 .. literalinclude:: code/descriptor.xml
@@ -45,18 +45,19 @@ The controller is a required file written in JavaScript and must have the follow
    :language: javascript
    
 handle401
-  Mandatory function rendered in the case of a 401 error.
+  Optional function rendered in the case of a 401 error.
   This function typically produces a login or error page.
    
 get/post/...
-  An ID provider controller exports a method for each type of HTTP request that should be handled.
-  
+  Functions rendered. An ID provider controller exports a method for each type of HTTP request that should be handled.
   The portal function ``idProviderUrl()`` will create a dynamic URL to this function.
 
+login
+  Function rendered.
+  The portal function ``loginUrl()`` will create a dynamic URL to this function.
+
 logout
-  Mandatory function rendered.
-  A call to "authLib.logout()" will log out the current user from Enonic XP.
-  
+  Function rendered.
   The portal function ``logoutUrl()`` will create a dynamic URL to this function.   
   
 autoLogin
