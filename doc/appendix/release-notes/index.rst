@@ -1,22 +1,22 @@
 Release Notes
 =============
 
-Enonic XP |version| is a minor release, with new amazing features and several improvements and fixes. There are changes related to content studio widgets (experiemental feature) - developers that have created widgets should look into these changes.
+Enonic XP |version| is a minor release with new, amazing features and several improvements and fixes. There are changes related to content studio widgets (experiemental feature) - developers that have created widgets should look into these changes.
 Please consult :ref:`upgrade_notes`.
 
 Identity Providers
 ------------------
 We are proud to introduce the first version of de-coupled and pluggable authentication for Enonic XP.
-IdProviders are built and supplied as regular applications, and can added to a userstore and configured - similar to how applications are added to sites.
+IdProviders are built and supplied as regular applications, and can be added to a userstore and configured - similar to how applications are added to sites.
 This configuration can then be mapped to your sites and applications using vhost configurations.
-IdProviders will automatically take control for 401 errors (requires authentication) or when explicitly requested on by the site.
+IdProviders will automatically take control for 401 errors (requires authentication) or when explicitly requested by the site.
 IdProviders also deliver a standard logout mechanism and autologin features - the latter is particularly useful in SSO environments and intranet settings.
 
 .. image:: images/idprovider.jpg
 
 Two new idProvider apps are already live on Enonic Market - namely SimpleIdProvider and Auth0.
 
-Check out the documentation on how to build a custom :ref:`id_providers`
+Check out the documentation on how to build custom :ref:`id_providers`
 
 
 Dependency Widget
@@ -48,7 +48,7 @@ In addition to the standard macros (disable macro and iframe embed), two macro p
 Name Transliteration
 -----------------------------------
 
-Content Studio pretty-url url generation is improved with support for transliteration of non ascii characters to a matching ascii character.
+Content Studio pretty-url generation is improved with support for transliteration of non ascii characters to a matching ascii character.
 Nicer links, less work.
 
 .. figure:: images/transliteration.png
@@ -57,8 +57,8 @@ Nicer links, less work.
 Safe deletes
 ------------
 
-Content Studio now provides a belt-and-buckles approach to bulk deleting, or deletion of sensitive items such as a site.
-User must configure the delete by typing in the number of items to delete.
+Content Studio now provides a belt-and-braces approach to bulk deleting, or deletion of sensitive items such as a site.
+An extra "Confirm delete" dialogue requires the user to type in the number of items to delete.
 
 .. figure:: images/safe-delete.jpg
 

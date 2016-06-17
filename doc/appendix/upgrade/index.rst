@@ -62,7 +62,7 @@ The reindex is usually processing around 500-1000 contents pr second.
 Cluster now defaults to false
 -----------------------------
 
-To prevent unintentional forming of cluster when two xp-instances are started on the same machine, the cluster discovery is now turned off by default.
+Cluster discovery is now turned off by default to prevent unintentional forming of a cluster when two xp-instances are started on the same machine.
 To enable clustering, an option in ``$XP_DISTRO/home/config/com.enonic.xp.elasticsearch.cfg`` must be set:
 
 ::

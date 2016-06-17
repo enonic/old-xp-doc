@@ -62,7 +62,7 @@ logout
 
 autoLogin
   Optional function executed if the current user is unauthenticated.
-  This functions allows, for example, to handle web tokens or other request headers.
+  This functions allows you to, for example, handle web tokens or other request headers.
 
 
 Set up an ID Provider
