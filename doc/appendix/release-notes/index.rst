@@ -1,106 +1,110 @@
 Release Notes
 =============
 
-Enonic XP |version| is a minor release, with cool new features and many improvements and fixes - there are no breaking changes
+Enonic XP |version| is a minor release, with new amazing features and several improvements and fixes. There are changes related to content studio widgets (experiemental feature) - developers that have created widgets should look into these changes.
+Please consult :ref:`upgrade_notes`.
 
-Enonic XP installers
---------------------
-A new download page is now available, providing native installers for OSX and Windows.
-The installers bundle the Java Runtime Environment (JRE) and as such simplifies testing of Enonic XP greatly.
-Developers are still recommended to use traditional Java installation as building applications will require access to the Java Development Kit (JDK)
-
-Enonic XP installation docs :ref:`getting_started_guide`
-
-.. image:: ../../getstarted/images/install-mac.jpg
-
-
-New Text Component Editor
--------------------------
-The Page editor's Text component has finally been aligned with the htmlArea.
-It now provides all the powerful text editing capabilities you expect, such as tables, images, special characters, source mode and more.
-It is also more visually pleasing with a traditional ribbon at the top that can be exited easily by clicking the top right close icon.
-
-.. image:: images/text-component.jpg
-
-
-Page Fragments
---------------
-Wouldn't it be nice if you could create a component once, and re-use it across pages and templates? Well now you can!
-Thanks to the new concept of "fragments", any single component (parts, texts, images and even layouts) can be converted to fragments.
-A new content type "portal:fragment" is available with this release, so when a component is converted to a fragment it is actually created as a separate content item.
-This means you can manage access control for it, and publish at will - just like page templates or other content items.
-
-To get the optimal visual appearance when editing fragments, you will have to implement a fragment controller mapping (More about controller mappings below).
-
-.. figure:: images/fragment-editor.png
-
-   Edit fragments just like any other page
-
-.. figure:: images/fragment-on-page.jpg
-
-   Fragments can be inserted on multiple pages
-
-
-Inline image crop
------------------
-The html editor now supports pre-defined image sizes and automatic cropping on insert.
-The sizes are Cinema (21:9), Widescreen (16:9), Regular (4:3), Square (1:1), Portrait (3:4), Tall (2:3) and Skyscraper (9:21)
-
-.. image:: images/crop-on-insert-image.jpg
-
-
-Version history restore
------------------------
-Content Studio UI now supports rollback (and rollforward) in a document's history.
-Simply restore a selected version and publish it!
-
-.. image:: images/version-restore.jpg
-
-
-Controller mapping
+Identity Providers
 ------------------
-Until now, rendering of sites required a 100% content driven approach,
-meaning you would have to create some content item in the path for anything to be rendered (with the exception of /_/services and /_/components).
-Also, if a content did exist, a page template or controller would have to be configured editorially first.
+We are proud to introduce the first version of de-coupled and pluggable authentication for Enonic XP.
+IdProviders are built and supplied as regular applications, and can added to a userstore and configured - similar to how applications are added to sites.
+This configuration can then be mapped to your sites and applications using vhost configurations.
+IdProviders will automatically take control for 401 errors (requires authentication) or when explicitly requested on by the site.
+IdProviders also deliver a standard logout mechanism and autologin features - the latter is particularly useful in SSO environments and intranet settings.
 
-With controller mappings, developers can statically declare url patterns or content matches that will be triggered without any editorial setup:
+.. image:: images/idprovider.jpg
 
-* Pattern example: pattern /mycontroller - if the request matches the path pattern, a defined javascript controller will be invoked
-* Content match example: match myproperty: "somevalue" - if the content in path matches, a defined javascript controller will be executed
+Two new idProvider apps are already live on Enonic Market - namely SimpleIdProvider and Auth0.
 
-Read more about  :ref:`controller_mappings`
+Check out the documentation on how to build a custom :ref:`id_providers`
 
-Default values for input types
-------------------------------
-To speed up form population, the following input types now support default values:
 
-* TextLine
-* TextArea
-* Long
-* Double
-* Checkbox
-* ComboBox
-* RadioButton
-* HtmlArea
+Dependency Widget
+-----------------
+Ever wondered about inbound and outbound references from your content items?
+The new dependencies widget panel in content studio lets you easily find and explore both.
+This is combined with a new search feature that lets you browse all dependent items in the main content navigator.
+
+.. image:: images/dependency-widget.jpg
+
+
+Editor Macros
+-------------
+The HTML editors are now supercharged with support for pluggable macros.
+Macros enable you to add rich widgets directly into your text - for example Youtube video's, Info panels, Tweets and just about anything you can think of.
+Macros are created and shipped as applications, and can be used simply by adding them to your site.
+
+In addition to the standard macros (disable macro and iframe embed), two macro packs are already live on Enonic Market - namely Panel macros and Social macros, enjoy!
+
+.. figure:: images/macros-insert.png
+
+  Easily insert macros using the macro tool
+
+.. figure:: images/macros-rendered.jpg
+
+  Youtube and Info macros in action
+
+
+Name Transliteration
+-----------------------------------
+
+Content Studio pretty-url url generation is improved with support for transliteration of non ascii characters to a matching ascii character.
+Nicer links, less work.
+
+.. figure:: images/transliteration.png
+
+
+Safe deletes
+------------
+
+Content Studio now provides a belt-and-buckles approach to bulk deleting, or deletion of sensitive items such as a site.
+User must configure the delete by typing in the number of items to delete.
+
+.. figure:: images/safe-delete.jpg
+
+   Confirm by typing in the number of items to delete.
+
+
+Search improvements
+-------------------
+
+* Content attachments are now automatically text extracted and indexed. I.e. a pdf document attached to any content can now be searched explicitly.
+* Media content utilize the attachment index by adding it to the fulltext search. A regular fulltext search will thus also match text within the uploaded file.
+* Finally - text components on pages are also added to the fulltext search, so fulltext search will also match text written within a text component on any given page.
+
 
 Libraries
 ---------
 
-* Portal Library - New function url() to create statically defined URLs.
+* Portal Library - New function loginUrl(), logoutUrl() and idProvider() functions available to fully support IdProviders.
+* Auth Library - Made password optional for login (authentication could occur against 3rd party systems in IdProvider instead)
+* Http Library
+
+  * Added support for streams
+  * Added support for proxy parameter
+
+* Content Library
+
+  * requireValid parameter added to modify function
+  * getSite() and getSiteConfig() added
+  * createMedia() branch parameter added
 
 Minor improvements
 ------------------
 
-* Marketplace installer UI now handles unlimited number of items
-* Progress bar for marketplace installer while downloading
-* Cleaned up presentation of htmlArea toolbar (aligned with new text component)
-* SVG support for content type icons
-* SVG support for content thumbnails
-* More robust valueTypes conversion in forms i.e. from dateTime to date
-* Added description field to users, groups and roles
-* Support for pressing keys Y and N in close wizard dialogue
-* Publishing dialogue - enable opening invalid items directly
+* Disabled "auto cluster discovery" default setting - Enonic XP now boots in 5 seconds (yes really!)
+* Publishing Wizard now supports excluding dependent items in modified state
+* Unpublish - Take published items offline without deleting or moving them.
+* Instant Delete - Instantly delete published items (skipping pending delete state)
+* Improved selector hits - Content and Image selectors now give better and more relevant hits
+* Default values for DateTime and GeoPoint input types added
+* Client IP added to request object
+* New query function - pathMatch to boost items closer to a defined path
+* Usage Data Collector added - XP will provide anonymized usage data to Enonic (can be disabled)
+* Reindex now gives feedback on progress
+* Users Tool: Role description is now displayed in preview
+* Upgraded Thymeleaf view template processor to version 3 (faster and better)
 
 Changelog
 ---------
-For a complete list of changes see http://github.com/enonic/xp/releases/tag/v6.5.0
+For a complete list of changes and bugfixes see http://github.com/enonic/xp/releases/tag/v6.6.0

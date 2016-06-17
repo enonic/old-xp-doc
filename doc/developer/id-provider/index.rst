@@ -1,4 +1,4 @@
-.. _id-providers:
+.. _id_providers:
 
 ID Providers
 ============
@@ -20,15 +20,15 @@ The descriptor file must have the following path: ``idprovider/idprovider.xml``:
 
 .. literalinclude:: code/descriptor.xml
    :language: xml
-   
+
 mode
   Specifies how the provider uses the user store.
-  
+
   LOCAL: Both the users and groups are stored locally in the user store.
-  
+
   EXTERNAL: Both the users and groups are stored in a remote system.
   The user store is only a snapshot view of this remote system and therefore the users and groups are not editable in the admin tool :ref:`users_tool`.
-  
+
   MIXED: The users are stored in a remote system and the groups in the user store.
   The users in the user store are only a snapshot view of this remote system and therefore the users are not editable in the admin tool :ref:`users_tool`.
 
@@ -43,11 +43,11 @@ The controller is a required file written in JavaScript and must have the follow
 
 .. literalinclude:: code/controller.js
    :language: javascript
-   
+
 handle401
   Optional function rendered in the case of a 401 error.
   This function typically produces a login or error page.
-   
+
 get/post/...
   Functions rendered. An ID provider controller exports a method for each type of HTTP request that should be handled.
   The portal function ``idProviderUrl()`` will create a dynamic URL to this function.
@@ -58,8 +58,8 @@ login
 
 logout
   Function rendered.
-  The portal function ``logoutUrl()`` will create a dynamic URL to this function.   
-  
+  The portal function ``logoutUrl()`` will create a dynamic URL to this function.
+
 autoLogin
   Optional function executed if the current user is unauthenticated.
   This functions allows, for example, to handle web tokens or other request headers.

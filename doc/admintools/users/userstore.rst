@@ -7,7 +7,7 @@ Userstores
 All users and groups are created and managed in user stores. Each Enonic XP installation has a System User Store that cannot be deleted.
 Additional user stores can be created as needed. For example, it might be convenient to use the System User Store for employees who run the
 website and another user store for customers who log into the public site. Each user store can assign an ID Provider to handle its
-authentication (see :ref:`id-providers`).
+authentication (see :ref:`id_providers`).
 
 Creating user stores
 --------------------

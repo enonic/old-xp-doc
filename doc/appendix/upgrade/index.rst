@@ -1,7 +1,7 @@
-.. _upgrading:
+.. _upgrade_notes:
 
-Upgrading to |version|
-======================
+Upgrade notes - |version|
+=========================
 
 .. warning:: This documentation describes upgrading from 6.5.3 to |version|.
 
@@ -11,7 +11,7 @@ Upgrade Steps
 1. Backup the installation
 **************************
 
-Backup you current installation. This is described in :ref:`backup`. 
+Backup you current installation. This is described in :ref:`backup`.
 
 You could also do a :ref:`toolbox-dump` of the system, but then you will loose versions if you have to reload it.
 
@@ -19,7 +19,7 @@ You could also do a :ref:`toolbox-dump` of the system, but then you will loose v
 ******************************
 
 Download Enonic XP https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip and install according to your setup.
-  
+
 .. tip:: Remember to update any startup scripts you might have to launch your new installation given a server restart
 
 3. Configure XP_HOME
@@ -27,14 +27,14 @@ Download Enonic XP https://repo.enonic.com/public/com/enonic/xp/distro/${release
 
 The next step depends on your setup. Do you have your **$XP_HOME** folder outside or inside the **$XP_INSTALL** folder?
 
-**Outside the $XP_INSTALL - folder:**  
+**Outside the $XP_INSTALL - folder:**
 
 Make sure the new installation points to the correct $XP_HOME folder.
 
-**Inside the $XP_INSTALL - folder:**  
+**Inside the $XP_INSTALL - folder:**
 
 Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all nodes).
- 
+
 
 4. Stop the old installation
 ****************************
@@ -50,7 +50,7 @@ Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all no
 Since there are changes to the index-structure, you will have to reindex your data. Your site will not be available while you do the reindex.
 Both branches in ``cms-repo`` and the master branch of ``system-repo`` must be reindexed, and the "-i" index option must be enabled:
 
-:: 
+::
 
   ./toolbox.sh reindex -a su:password -r cms-repo -b draft,master -i
   ./toolbox.sh reindex -a su:password -r system-repo -b master -i
@@ -65,9 +65,9 @@ Cluster now defaults to false
 To prevent unintentional forming of cluster when two xp-instances are started on the same machine, the cluster discovery is now turned off by default.
 To enable clustering, an option in ``$XP_DISTRO/home/config/com.enonic.xp.elasticsearch.cfg`` must be set:
 
-:: 
- 
-  node.local = false 
+::
+
+  node.local = false
 
 See :ref:`clustering` for more details about configuring clustering.
 
@@ -84,11 +84,11 @@ Two new functions have also been added to the Javascript library "content": getS
 If you have installed widgets, please install a version compatible with Enonic XP 6.6
 
 If you have developed a widget, please update your code to use the "content" library instead. Below are some examples:
-                                                               
+
 .. literalinclude:: code/content-studio-widget-upgrade-1.js
-   :language: javascript                                                               
+   :language: javascript
 .. literalinclude:: code/content-studio-widget-upgrade-2.js
-   :language: javascript                                                               
+   :language: javascript
 .. literalinclude:: code/content-studio-widget-upgrade-3.js
    :language: javascript
 
@@ -100,8 +100,3 @@ Previously, if an unauthenticated user or an authenticated user with missing rig
 The case of an unauthenticated user will now return a 401 error.
 
 If you have developed a custom error page (see :ref:`errors`)  with a function ``handle403``, please update your code, if necessary, by adding the function ``handle401``.
-
-
-
-
-
