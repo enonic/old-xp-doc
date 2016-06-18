@@ -12,8 +12,11 @@ TextLine
 --------
 
 A text line is used for capturing a single line of text. In the image below, the first TextLine is required and marked with a red star. The
-second allows multiple entries under the same label. TextLine inputs may be configured with regular expressions to allow only valid values
-with a specified structure.
+second allows multiple entries under the same label. When multiple values are enabled, the order of the entries can be changed by clicking
+the dotted area to the left of the entry box and dragging them up or down.
+
+TextLine inputs may be configured with regular expressions to allow only valid values with a specified structure. The box becomes red when
+the value does not match the regular expression.
 
 TextArea
 --------

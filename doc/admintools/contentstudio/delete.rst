@@ -14,12 +14,13 @@ grid in browse view.
 
 **Offline** content is removed immediately. Content that is **online** can be removed immediately by checking the box labeled "Instantly
 delete published items". If this box is not checked then the content will only be marked for deletion. Its status will change to **pending
-delete** and its name will have a line through it. Content that is pending delete will still be visible outside the Content Studio and it
-must be published before it is actually removed and taken offline.
+delete** and its name will have a line through it. Content that is pending delete will still be visible outside the Content Studio. Content
+that is pending delete can be removed and taken offline by publishing or unpublishing it, or deleting it again and checking the box to
+"Instantly delete published items".
 
 .. image:: images/delete-item-dialogue.jpg
 
-An extra layer of protection kicks in before a **site** content can be deleted. The "Confirm delete" dialogue appears to warn that this
-action cannot be undone. A number must be entered before the deletion will occur.
+An extra layer of protection kicks in before bulk items or a **site** content can be deleted. The "Confirm delete" dialogue appears to warn
+that this action cannot be undone. The number of content items to be deleted must be entered before the deletion will occur.
 
 .. image:: images/confirm-delete.jpg

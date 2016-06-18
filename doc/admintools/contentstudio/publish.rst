@@ -27,7 +27,7 @@ Content Studio.
 
 When a published content is "deleted", the "Delete item" dialogue offers a checkbox to "Instantly delete published items". If this box is
 not checked then the content's status will be **pending delete** and it will still be visible outside of the Content Studio. Content that is
-pending delete must be published or "instantly deleted" before it is actually removed from the master branch.
+pending delete must be published, unpublished, or "instantly deleted" before it is actually removed from the master branch.
 
 
 Publishing wizard
@@ -45,10 +45,15 @@ If the selected content has children then these items can be included by checkin
 items that will be published is displayed on the **Publish** button. The green "Publish" button has a menu option for "Publish tree" which
 simply opens the dialogue with the "Include child items" box checked.
 
+Unpublish content
+-----------------
+
 Previously published content can be taken offline with the "Unpublish" feature. The "Unpublish" dialogue can be opened from the Publish menu
 in the toolbar or by right-clicking the content in the tree grid and selecting "Unpublish" from the context menu. All of the content's
 children will be listed and unpublished along with the selected content. The total number of content items that will be taken offline will
 appear in parenthesis in the red "Unpublish" button at the bottom of the dialogue.
+
+Content that has the status **Pending delete** will be removed and taken offline when unpublished.
 
 .. image:: images/unpublish-dialogue.jpg
 
