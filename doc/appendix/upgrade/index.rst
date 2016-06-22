@@ -100,3 +100,15 @@ Previously, if an unauthenticated user or an authenticated user with missing rig
 The case of an unauthenticated user will now return a 401 error.
 
 If you have developed a custom error page (see :ref:`errors`)  with a function ``handle403``, please update your code, if necessary, by adding the function ``handle401``.
+
+
+Admin Virtual Host
+------------------
+
+If you have set a virtual host pointing to /admin, please set the value ``system`` to the new property ``userStore``, in the :ref:`configuration-vhost`.
+Below is an example
+
+.. literalinclude:: code/vhost.properties
+   :language: properties
+
+
