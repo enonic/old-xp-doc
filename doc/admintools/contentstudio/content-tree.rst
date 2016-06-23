@@ -11,7 +11,7 @@ child content collapsed under parent content. Parent content will have a gray tr
 to expand or collapse the view of its children. The content tree can also be navigated with the keyboard arrow keys. The top of the content
 tree has buttons to select all displayed content, clear selected content and refresh the tree.
 
-.. image:: images/content-tree-grid.png
+.. image:: images/content-tree-grid.jpg
 
 Information about the content is displayed in three columns. The first column has an icon based on the type of content. A gray triangle will
 appear to the left of the icon if the content has children content. The first column also has a display name and under this is the path
