@@ -105,8 +105,12 @@ If you have developed a custom error page (see :ref:`errors`)  with a function `
 Admin Virtual Host
 ------------------
 
-If you have set a virtual host pointing to /admin, please set the value ``system`` to the new property ``userStore``, in the :ref:`configuration-vhost`.
-Below is an example
+If you have enabled virtual hosting (``enabled = true``) in :ref:`configuration-vhost`,
+
+* Set the missing mappings
+* If a mapping include admin (``target = /`` or ``target = /admin``), set the value ``system`` to the new property ``userStore``
+    
+Below is an example:
 
 .. literalinclude:: code/vhost.properties
    :language: properties
