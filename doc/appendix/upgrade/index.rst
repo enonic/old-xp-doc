@@ -108,7 +108,7 @@ Admin Virtual Host
 If you have enabled virtual hosting (``enabled = true``) in :ref:`configuration-vhost`,
 
 * Set the missing mappings
-* If a mapping include ``/admin``, set the value ``system`` to the new property ``userStore``
+* If a mapping includes ``/admin``, set the value ``system`` to the new property ``userStore``
     
 Below is an example:
 
