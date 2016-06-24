@@ -19,3 +19,4 @@ Some content types are built into enonic XP. A basic understanding of these will
    page-templates
    templates-folder
    unstructured
+   image-content

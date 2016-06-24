@@ -10,6 +10,8 @@ There are three input types for entering dates and times: **Date**, **Time**, an
 Values can also be manually typed into the input fields. The input turns red if the value is not a valid format. These inputs can have
 default values (set in the application code) and the defaults can even be relative to the date and time that the form item was created.
 
+.. image:: images/inputs-date-time.jpg
+
 Date
 ----
 
@@ -18,11 +20,15 @@ invalid format. The button on the right opens a date-picker tool. Date inputs ca
 value. The default date could even be relative to the current date, for example, one month from the time that the content with thie input
 was created.
 
-TIme
+.. image:: images/input-date.jpg
+
+Time
 ----
 
 The time can be entered manually in the 24 hour format HH:MM. Invalid entries will turn the input red. A button in the right of the form
 will open a time-picker tool for easily selecting the desired time. The input could be configured with a default value.
+
+.. image:: images/input-time.jpg
 
 DateTime
 --------
@@ -32,4 +38,6 @@ tool can be opened with the button on the right side fo the input.
 
 The input can be configured to include the timezone. The timezone will be the same as that of the Enonic installation server and it is not
 editable in the data-time picker tool. However, the timezone can be changed by manually entering a date in ISO 8601 format
-2016-06-17T12:59+03:00. A default value can be set
+2016-06-17T12:59+03:00. A default value can be set.
+
+.. image:: images/input-date-time-picker.jpg

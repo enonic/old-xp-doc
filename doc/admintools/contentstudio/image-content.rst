@@ -1,6 +1,6 @@
-.. _image_editing:
+.. _image_content:
 
-Image editing
+Image content
 =============
 
 .. NOTE::
