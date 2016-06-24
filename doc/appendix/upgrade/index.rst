@@ -105,10 +105,10 @@ The case of an unauthenticated user will now return a 401 error.
 Admin Virtual Host
 ------------------
 
-If you have enabled virtual hosting (``enabled = true``) in :ref:`configuration-vhost`,
+If virtual hosting is enabled (``enabled = true``) in the :ref:`configuration-vhost` then the admin mapping is required.
 
-* Set the missing mappings
-* If a mapping includes ``/admin``, set the value ``system`` to the new property ``userStore``
+* If a mapping includes ``/admin``, add the new property ``userStore`` and set its value to ``system``
+* If no mapping for ``/admin`` exits, create one and set the ``userStore`` property to ``system``
     
 Below is an example:
 
