@@ -81,9 +81,9 @@ Instead, the widget controller will receive the ID of the selected content as a 
 The controller can then use the Javascript library "content" to retrieve the selected content.
 Two new functions have also been added to the Javascript library "content": getSite and getSiteConfig
 
-If you have installed widgets, please install a version compatible with Enonic XP 6.6
+* If you have installed widgets, please install a version compatible with Enonic XP 6.6
 
-If you have developed a widget, please update your code to use the "content" library instead. Below are some examples:
+* If you have developed a widget, please update your code to use the "content" library instead. Below are some examples:
 
 .. literalinclude:: code/content-studio-widget-upgrade-1.js
    :language: javascript
@@ -99,7 +99,7 @@ Custom Error 401 Handling
 Previously, if an unauthenticated user or an authenticated user with missing rights requested a restricted content, the server would return a 403 error.
 The case of an unauthenticated user will now return a 401 error.
 
-If you have developed a custom error page (see :ref:`errors`)  with a function ``handle403``, please update your code, if necessary, by adding the function ``handle401``.
+* If you have developed a custom error page (see :ref:`errors`)  with a function ``handle403``, please update your code, if necessary, by adding the function ``handle401``.
 
 
 Admin Virtual Host
