@@ -16,7 +16,7 @@ Backup you current installation. This is described in :ref:`backup`.
 You could also do a :ref:`toolbox-dump` of the system, but then you will loose versions if you have to reload it.
 
 2. Install new version
-******************************
+**********************
 
 Download Enonic XP https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip and install according to your setup.
 
@@ -45,7 +45,7 @@ Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all no
 
 
 6. Reindex your data
-*****************************
+********************
 
 Since there are changes to the index-structure, you will have to reindex your data. Your site will not be available while you do the reindex.
 Both branches in ``cms-repo`` and the master branch of ``system-repo`` must be reindexed, and the "-i" index option must be enabled:
