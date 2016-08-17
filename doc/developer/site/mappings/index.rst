@@ -63,8 +63,11 @@ The expected value can be either a regular expression to match the property valu
 URL pattern
 -----------
 
-The ``<pattern>`` element specifies a regular expression to be matched against the request URL. The part of the URL that is taken into account for the matching is the path.
-That means the protocol, host, port, or query parameters are not involved in the matching.
+The ``<pattern>`` element specifies a regular expression to be matched against the request URL.
+The part of the URL that is taken into account for the matching is the path relative to the site where the application is configured.
+For example if a site has a content path `/mysite`, then the pattern ``<pattern>/api/.*</pattern>`` will match with requests with URL ending in `/mysite/api/.*`
+
+The protocol, host, port, or query parameters are not involved in the matching.
 
 The pattern element may also contain an ``invert`` attribute to indicate that the result of evaluating the regular expression should be negated: ``<pattern invert="true">``
 
@@ -74,7 +77,7 @@ The pattern must be a valid `Java regular expression`_.
 
 Examples:
 
-| ``<pattern>/portal/.*/api/.*\.json</pattern>``
-| ``<pattern>/portal/draft/.*</pattern>``
-| ``<pattern invert="true">.*\/_\/.*</pattern>`` *exclude URLs containing /_/*
+| ``<pattern>/api/.*\.json</pattern>``
+| ``<pattern>/.*</pattern>``
+| ``<pattern invert="true">/section/.*</pattern>``
 | 
