@@ -19,6 +19,8 @@ Below is a sample project folder structure - all items are folders, except for `
           admin/
             widgets/
             tools/
+          application.svg
+          application.xml
           assets/
           lib/
           services/
@@ -54,6 +56,16 @@ admin/tools
 admin/widgets
   Widgets are essentially user interface components that can be embedded within selected tools.
   I.e. you can create a widget that extends the Content Studio detail panel.
+
+
+application.svg
+  The ``application.svg`` file is the application icon in SVG format.
+
+application.xml
+  The ``application.xml`` file contains basic information for the application. Currently a description.
+
+  .. literalinclude:: ./code/application.xml
+     :language: xml
 
 assets/
   Public folder for external css, javascript and static images etc. etc.
