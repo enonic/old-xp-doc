@@ -59,10 +59,10 @@ admin/widgets
 
 
 application.svg
-  The ``application.svg`` file is the application icon in SVG format.
+  Application icon in SVG format.
 
 application.xml
-  The ``application.xml`` file contains basic information for the application. Currently a description.
+  The XML file contains basic information for the application. Currently a description.
 
   .. literalinclude:: ./code/application.xml
      :language: xml
