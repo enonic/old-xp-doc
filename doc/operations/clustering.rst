@@ -34,11 +34,11 @@ Typically, you will already have an XP-installation by now, so just copy the $XP
 
  2. **Share data:** Prepare a common place for storing data and configure both XP instances:
 
-In ``$XP_DISTRO/home/config/com.enonic.xp.repo.cfg`` set the following property to point to a common directory:
+In ``$XP_DISTRO/home/config/com.enonic.xp.blobstore.file.cfg`` set the following property to point to a common directory:
 
  ::
 
-    blobStore.dir = /some/common/path
+    baseDir = /some/common/path
 
  3. **Give each node its own HTTP-port:** Since you will run two nodes on the same machine, you also need to set two different HTTP-ports to be able to run two instances at once:
 
