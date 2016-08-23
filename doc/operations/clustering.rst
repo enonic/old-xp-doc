@@ -95,11 +95,11 @@ Shared storage Configuration
 For now, the nodes in the cluster need a shared storage to store data as files. Setting this up is highly individual for different operating systems and infrastructures, but as a basic guideline:
 
   #. Get access to a shared or distributed file system and mount it on the nodes that will be part of the cluster
-  #. Configure ``$XP_HOME/config/com.enonic.xp.repo.cfg`` to point to the mounted storage:
+  #. Configure ``$XP_HOME/config/com.enonic.xp.blobstore.file.cfg`` to point to the mounted storage:
 
   ::
 
-    blobsStore.dir = /path/to/shared/disk/folder
+    baseDir = /path/to/shared/disk/folder
 
 
 .. _network-config:
