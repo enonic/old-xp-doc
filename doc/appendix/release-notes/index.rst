@@ -1,110 +1,123 @@
 Release Notes
 =============
 
-Enonic XP |version| is a minor release with new, amazing features and several improvements and fixes. There are changes related to content studio widgets (experiemental feature) - developers that have created widgets should look into these changes.
-Please consult :ref:`upgrade_notes`.
+Enonic XP |version| is a minor release with new, with several new features and improvements.
 
-Identity Providers
-------------------
-We are proud to introduce the first version of de-coupled and pluggable authentication for Enonic XP.
-IdProviders are built and supplied as regular applications, and can be added to a userstore and configured - similar to how applications are added to sites.
-This configuration can then be mapped to your sites and applications using vhost configurations.
-IdProviders will automatically take control for 401 errors (requires authentication) or when explicitly requested by the site.
-IdProviders also deliver a standard logout mechanism and autologin features - the latter is particularly useful in SSO environments and intranet settings.
+.. NOTE:: Enonic XP |version| now requires minimum Java 1.8.92
+
+
+Welcome Tour
+------------
+The first time you log in to XP, a welcome tour will greet you and finally help you install some interesting applications for testing XP.
+Don't worry - this can easily be disabled :)
+
+.. image:: images/tour.png
+
+
+Home Screen Shortcuts
+---------------------
+We have added a few useful links on the home screen, including a new "About" dialogue
+
+.. image:: images/links.png
+
+
+Schema Error handling
+---------------------
+The schema error handling has been polished, and you now get nice and instant feedback in the UI as you proceed through the forms.
+
+.. image:: images/error.png
+
+
+Schema Help texts
+-----------------
+All admin schemas now support help texts per field. Simply add texts to your schemas to get started.
+
+.. image:: images/help.png
+
+
+CustomSelector input type
+-------------------------
+So you want to pick-and-choose content that does not exist in XP. CustomSelector input type to the rescue.
+Configure the CustomSelector to use your very own http service.
+Now you may search for and select just about anything out there - from Spotify songs to your statically mapped list.
+
+.. image:: images/customselector.png
+
+Check out this tutorial :ref:`customselector_tutorial` or visit the :ref:`customselector` documentation directly.
+
+
+Improved Page Editor
+--------------------
+We just gave the page editor a facelift. It is now easier than ever to see what you have selected and work with pages.
+The new design is inspired by the browser inspection panels.
+
+.. figure:: images/page-editor.jpg
+
+  Clear hightlighting of selected item, and less noise for drag'n drop. Context menu now only appears on right-click.
+
+
+Boosted HTML Editor
+-------------------
+The HTML Editor has been improved and now supports custom button configurations - from nothing to everything.
+Also, the editor now always has a footer bar with document path inspector, source mode and fullscreen mode.
+
+.. image:: images/html-editor.png
+
+
+Application Icons
+-----------------
+Applications now support adding the icon locally, so the icon will be visible from the various Admin tools.
+You may also add a short description in an application.xml.
+
+.. image:: images/application-icons.png
+
+
+User profile object
+-------------------
+Building on the IDprovider feature introduced in 6.6.0, we now introduce thew user profile object.
+It is in many ways similar to data objects on content. Easily add custom properties to user objects in order to build more sophisticated ID providers.
+Currently there are no schemas, but these will be added in future releases.
+
+Properties may also be scoped so it is easy to reuse code from different libraries when building custom IDproviders.
+This feature also goes hand-in-hand with the new findUser() function, available in the auth API. Search for users and profile specific properties.
 
 .. image:: images/idprovider.jpg
 
-Two new idProvider apps are already live on Enonic Market - namely SimpleIdProvider and Auth0.
+SimpleID provider and LDAP IDprovider (live on the appstore) both utilize the new capabilities.
 
 Check out the documentation on how to build custom :ref:`id_providers`
 
 
-Dependency Widget
------------------
-Ever wondered about inbound and outbound references from your content items?
-The new dependencies widget panel in content studio lets you easily find and explore both.
-This is combined with a new search feature that lets you browse all dependent items in the main content navigator.
+Speed Improvements
+------------------
 
-.. image:: images/dependency-widget.jpg
-
-
-Editor Macros
--------------
-The HTML editors are now supercharged with support for pluggable macros.
-Macros enable you to add rich widgets directly into your text - for example Youtube video's, Info panels, Tweets and just about anything you can think of.
-Macros are created and shipped as applications, and can be used simply by adding them to your site.
-
-In addition to the standard macros (disable macro and iframe embed), two macro packs are already live on Enonic Market - namely Panel macros and Social macros, enjoy!
-
-.. figure:: images/macros-insert.png
-
-  Easily insert macros using the macro tool
-
-.. figure:: images/macros-rendered.jpg
-
-  Youtube and Info macros in action
-
-
-Name Transliteration
------------------------------------
-
-Content Studio pretty-url generation is improved with support for transliteration of non ascii characters to a matching ascii character.
-Nicer links, less work.
-
-.. figure:: images/transliteration.png
-
-
-Safe deletes
-------------
-
-Content Studio now provides a belt-and-braces approach to bulk deleting, or deletion of sensitive items such as a site.
-An extra "Confirm delete" dialogue requires the user to type in the number of items to delete.
-
-.. figure:: images/safe-delete.jpg
-
-   Confirm by typing in the number of items to delete.
-
-
-Search improvements
--------------------
-
-* Content attachments are now automatically text extracted and indexed. I.e. a pdf document attached to any content can now be searched explicitly.
-* Media content utilize the attachment index by adding it to the fulltext search. A regular fulltext search will thus also match text within the uploaded file.
-* Finally - text components on pages are also added to the fulltext search, so fulltext search will also match text written within a text component on any given page.
-
+* Publishing wizard dialog now supports lazy loading to handle large datasets better
+* Publishing process speed has been greatly improved for large datasets.
+* Content browse panel is more performant and makes few'er requests to back-end
+* Tabs in Content Studio now open much faster, and support lazy loading
 
 Libraries
 ---------
 
-* Portal Library - New function loginUrl(), logoutUrl() and idProvider() functions available to fully support IdProviders.
-* Auth Library - Made password optional for login (authentication could occur against 3rd party systems in IdProvider instead)
-* Http Library
+* Auth Library - New findUser() function
+* Content Lib
 
-  * Added support for streams
-  * Added support for proxy parameter
+  * refresh() function to force refresh of index
+  * refresh() parameter added to contentLib.create(), default is true
 
-* Content Library
+* Context Library - Run scope now supports role modification
 
-  * requireValid parameter added to modify function
-  * getSite() and getSiteConfig() added
-  * createMedia() branch parameter added
 
 Minor improvements
 ------------------
 
-* Disabled "auto cluster discovery" default setting - Enonic XP now boots in 5 seconds (yes really!)
-* Publishing Wizard now supports excluding dependent items in modified state
-* Unpublish - Take published items offline without deleting or moving them.
-* Instant Delete - Instantly delete published items (skipping pending delete state)
-* Improved selector hits - Content and Image selectors now give better and more relevant hits
-* Default values for DateTime and GeoPoint input types added
-* Client IP added to request object
-* New query function - pathMatch to boost items closer to a defined path
-* Usage Data Collector added - XP will provide anonymized usage data to Enonic (can be disabled)
-* Reindex now gives feedback on progress
-* Users Tool: Role description is now displayed in preview
-* Upgraded Thymeleaf view template processor to version 3 (faster and better)
+* Toolbox API endpoint has been moved to a new path, separating it more clearly from /admin
+* Simplify management with custom credentials for system:su user in system.properties
+* Adjustable label placement for checkbox input type
+* Controller mappings now support URL parameters
+* SVG is now supported for inserting as image in the html editors
+
 
 Changelog
 ---------
-For a complete list of changes and bugfixes see http://github.com/enonic/xp/releases/tag/v6.6.0
+For a complete list of changes and bugfixes see http://github.com/enonic/xp/releases/tag/v6.7.0
