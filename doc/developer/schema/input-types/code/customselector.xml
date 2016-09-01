@@ -1,0 +1,7 @@
+<input name="name" type="CustomSelector">
+  <label>Custom Selector</label>
+  <occurrences minimum="0" maximum="0"/>
+  <config>
+    <service>customSelector</service>
+  </config>
+</input>

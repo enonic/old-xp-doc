@@ -47,6 +47,7 @@ default
     checkbox
     combobox
     content-selector
+    custom-selector
     date
     datetime
     double
