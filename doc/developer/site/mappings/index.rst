@@ -63,18 +63,32 @@ The expected value can be either a regular expression to match the property valu
 URL pattern
 -----------
 
-The ``<pattern>`` element specifies a regular expression to be matched against the request URL. The part of the URL that is taken into account for the matching is the path.
-That means the protocol, host, port, or query parameters are not involved in the matching.
+The ``<pattern>`` element specifies a regular expression to be matched against the request URL.
+The part of the URL that is taken into account for the matching is the path relative to the site where the application is configured.
+For example, if a site has a content path `/mysite`, then the pattern ``<pattern>/api/.*</pattern>`` will match with requests with URL ending in `/mysite/api/.*`
+
+If the pattern contains the question mark ``?`` character, the URL to match will also include query parameters. The query parameters will be normalized so they are always in alphabetical order.
+
+For example the pattern ``<pattern>/api\?category=foo&amp;key=\d+</pattern>`` will match with both:
+
+`/api?category=foo&key=123` and also with `/api?key=123&category=foo`
+
+Note than in the previous example the question mark character ``?`` is escaped with a backslash because the question mark is a quantifier in regular expressions.
+And also the ampersand character ``&`` needs to be XML-escaped because the pattern string is in an XML. Another alternative to XML-escape is to wrap the string in a CDATA block, as in the example below.
+
+The protocol, host and port are not involved in the matching.
 
 The pattern element may also contain an ``invert`` attribute to indicate that the result of evaluating the regular expression should be negated: ``<pattern invert="true">``
 
-The pattern must be a valid `Java regular expression`_.
+The pattern string must be a valid `Java regular expression`_.
 
 .. _Java regular expression: https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html
 
 Examples:
 
-| ``<pattern>/portal/.*/api/.*\.json</pattern>``
-| ``<pattern>/portal/draft/.*</pattern>``
-| ``<pattern invert="true">.*\/_\/.*</pattern>`` *exclude URLs containing /_/*
+| ``<pattern>/api/.*\.json</pattern>``
+| ``<pattern>/.*</pattern>``
+| ``<pattern><![CDATA[/endpoint\?bar=\d+&foo=.*]]></pattern>``
+| ``<pattern>/endpoint\?bar=\d+&amp;foo=.*</pattern>``
+| ``<pattern invert="true">/section/.*</pattern>``
 | 

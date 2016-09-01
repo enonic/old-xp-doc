@@ -24,8 +24,7 @@ To create a custom renderer for the ``portal:fragment`` content, configure a con
 .. literalinclude:: code/site.xml
     :language: xml
 
-This mapping indicates that it will handle content of type ``portal:fragment``, but exclude URL paths containing "/_/".
-The last part is necessary to avoid the renderer being triggered during some operations while the fragment is edited in *Page Editor*.
+This mapping indicates that it will handle content of type ``portal:fragment``.
 
 The mapping points to a controller that will handle the rendering. The controller is just like any other page or part controller (See :ref:`http_controllers` and :ref:`controller_mappings` for details).
 

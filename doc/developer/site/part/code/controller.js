@@ -2,7 +2,7 @@ var portal = require('/lib/xp/portal'); // Import the portal functions
 var thymeleaf = require('/lib/xp/thymeleaf'); // Import the thymeleaf render function
 
 // Handle GET requests
-exports.get = function(portal) {
+exports.get = function(req) {
 
   // Find the current component from request
   var component = portal.getComponent();
