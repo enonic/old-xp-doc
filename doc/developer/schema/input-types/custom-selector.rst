@@ -3,24 +3,19 @@
 CustomSelector
 ---------------
 
-Selector input type with user-defined data source.
+Selector input type with custom data source. Application developer must create a service that returns results according to
+required JSON format, and then specify the service name in the input config. For information on creating a service see the
+:ref:`services` section.
 
 Below is a sample config file:
 
-.. literalinclude:: code/customselector.xml
+.. literalinclude:: code/my-custom-selector.xml
    :language: xml
 
 service
   This setting defines name of a javascript service file located under ``/resources/services/[serviceName]/[serviceName].js``
 
-Below is the service file for the configuration above, located at ``/resources/services/customSelector/customSelector.js``:
-
-.. literalinclude:: code/customselector-service.js
-    :language: javascript
-
-Note the call to ``helper.createresults`` method: this will ìnject properties required for paging, sorting and filtering of results.
-
-Response JSON format:
+Service file must have a GET handler that returns results in JSON format of the following format:
 
 id
   Unique Id of the option
@@ -36,3 +31,6 @@ iconUrl (optional)
 
 icon (optional)
   Inline image content (for example, SVG)
+
+
+Please check our tutorial on the :ref:`custom-selector_tutorial` for detailed information on setting up this input type.

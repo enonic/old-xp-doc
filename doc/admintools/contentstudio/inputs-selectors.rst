@@ -69,10 +69,10 @@ before, simply finish typing and press **enter/return**. Added tags can be remov
 Custom selector
 ----------------
 
-Behavior of Custom selector is similar to that of Content selector except that the list of options in the dropdown is built based on user-
-configured data source. In the application code user must create a service that returns JSON in correct format required by the input. Each
-option in the JSON must have a unique Id and display name (required), and, optionally, description and thumbnail (either as an external URL
-or inline SVG).
+Behavior of Custom selector is similar to that of Content selector except that the list of options in the dropdown is built based on custom
+data source. Application developer must create a service that returns JSON in correct format required by the input. Name of this service
+must then be specified inside the input configuration in the application code. Each option in the JSON must have a unique Id and display name
+(required), and, optionally, description and thumbnail (either as an external URL or inline SVG).
 
 
 .. image:: images/inputs-custom-selector.jpg

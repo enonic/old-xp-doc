@@ -15,3 +15,4 @@ You will find our tutorials below.
    project-init
    javascript-mvc
    my-first-app/index
+   custom-selector/index
