@@ -46,3 +46,8 @@ And here's a bit more advanced version of the service file that fetches song nam
 
 .. literalinclude:: code/spotify-service.js
     :language: javascript
+
+.. tip:: You can also refer to service file in another application, for example *com.myapplication.app:myservice*.
+
+.. literalinclude:: code/my-custom-selector-ext-service.xml
+    :language: xml

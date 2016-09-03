@@ -13,7 +13,8 @@ Below is a sample config file:
    :language: xml
 
 service
-  This setting defines name of a javascript service file located under ``/resources/services/[serviceName]/[serviceName].js``
+  This setting defines name of a javascript service file located under ``/resources/services/[serviceName]/[serviceName].js``.
+  You can also refer to service file in another application, for example *com.myapplication.app:myservice*.
 
 Service file must have a GET handler that returns results in JSON format of the following format:
 

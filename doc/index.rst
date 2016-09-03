@@ -32,6 +32,6 @@ Enjoy! - *The Enonic Development Team*
    appendix/glossary
 
 
-.. tip:: The source code for this documentation source is `available on GitHub`_ .
+.. tip:: The source code for this documentation is `available on GitHub`_ .
 
 .. _available on GitHub: https://github.com/enonic/xp-doc
