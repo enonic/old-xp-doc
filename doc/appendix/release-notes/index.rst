@@ -43,7 +43,7 @@ Now you may search for and select just about anything out there - from Spotify s
 
 .. image:: images/customselector.png
 
-Check out this tutorial :ref:`customselector_tutorial` or visit the :ref:`customselector` documentation directly.
+Check out this tutorial :ref:`custom-selector_tutorial` or visit the :ref:`customselector_type` documentation directly.
 
 
 Improved Page Editor

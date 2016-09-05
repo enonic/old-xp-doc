@@ -7,12 +7,8 @@ Tutorials
 
 You will find our tutorials below.
 
-
-.. toctree::
-   :maxdepth: 1
-
-   installation
-   project-init
-   javascript-mvc
-   my-first-app/index
-   custom-selector/index
+* :doc:`installation`
+* :doc:`project-init`
+* :doc:`javascript-mvc`
+* :doc:`my-first-app/index`
+* :doc:`custom-selector/index`

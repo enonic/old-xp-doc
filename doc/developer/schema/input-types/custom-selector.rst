@@ -34,4 +34,4 @@ icon (optional)
   Inline image content (for example, SVG)
 
 
-Please check our tutorial on the :ref:`custom-selector_tutorial` for detailed information on setting up this input type.
+Please check our tutorial on how to :ref:`custom-selector_tutorial`.
