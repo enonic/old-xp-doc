@@ -5,42 +5,30 @@ Build a Custom Selector
 
 *This guide will lead you through the required steps to build an input of type Custom Selector.*
 
-* :ref:`Create a folder for Custom Selector content type<custom-selector-folder>` 
-* :ref:`Create a schema for Custom Selector content type<custom-selector-schema>`
- * :ref:`Create a folder for Custom Selector service<custom-selector-service-folder>`
- * :ref:`Create a service for Custom Selector<custom-selector-service>` 
+* :ref:`Create a content type<custom-selector-content-type>` 
+ * :ref:`Create a service<custom-selector-service>` 
 * :ref:`Format of JSON response from the service<custom-selector-service-json>` 
 * :ref:`Sample service for Custom Selector<custom-selector-service-sample>` 
 * :ref:`Integration with Spotify API using Custom Selector<custom-selector-sample-spotify>`
 
 
-.. _custom-selector-folder:
+.. _custom-selector-content-type:
 
-Create a folder for Custom Selector content type
-================================================
-Create a folder called “my-custom-selector” inside the “site/content-types” folder of your project.
-
-.. _custom-selector-schema:
-
-Create a schema for Custom Selector content type
-================================================
-In that folder create a configuration schema for the "my-custom-selector" content type.
+Create a content type
+=====================
+* Create a folder called “my-custom-selector” inside the “site/content-types” folder of your project.
+* In that folder create a configuration schema for the "my-custom-selector" content type.
 
 .. literalinclude:: code/my-custom-selector.xml
-    :language: xml
-
-.. _custom-selector-service-folder:
-
-Create a folder for Custom Selector service
-================================================
-Create a folder called “my-custom-selector-service” (folder name must match the one specified in the config schema) inside the “resources/services” folder of your project.
+:language: xml
 
 .. _custom-selector-service:
 
-Create a service for Custom Selector (or refer to a service in another app)
-===========================================================================
-In that folder create a javascript service file called “my-custom-selector-service.js” (again, the name must match the config schema).
-Create GET handler method in this service file and make sure it returns JSON in the proper format.
+Create a service (or refer to a service in another app)
+=======================================================
+* Create a folder called “my-custom-selector-service” (folder name must match the one specified in the config schema) inside the “resources/services” folder of your project.
+* In that folder create a javascript service file called “my-custom-selector-service.js” (again, the name must match the config schema).
+* Create GET handler method in this service file and make sure it returns JSON in the proper format.
 
 .. tip:: You can also refer to service file in another application (for example, *com.myapplication.app:myservice*) instead of adding one to your application.
 
