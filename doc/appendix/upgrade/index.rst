@@ -3,7 +3,7 @@
 Upgrade notes - |version|
 =========================
 
-.. warning:: This documentation describes upgrading from 6.5.3 to |version|.
+.. warning:: This documentation describes upgrading from 6.6.2 to |version|.
 
 Upgrade Steps
 -------------
