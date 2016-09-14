@@ -181,7 +181,7 @@ The dump REST service accepts a JSON in this format:
     "name": "<dump-name>"
   }
 
-To ease the process, we have provided an :ref:`toolbox-dump` tool.
+To ease the process, we have provided a :ref:`toolbox-dump` tool.
 
 
 
@@ -201,4 +201,4 @@ The export REST service accepts a JSON in this format:
     "name": "<dump-name>"
   }
 
-To ease the process, we have provided an :ref:`toolbox-load` tool.
+To ease the process, we have provided a :ref:`toolbox-load` tool.
