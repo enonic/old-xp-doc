@@ -3,13 +3,13 @@
 dump
 ====
 
-Export data from an entire system.
+Make a copy of all the data in an entire system.
 The result will be stored in the ``$XP_HOME/data/dump`` directory.
 See :ref:`operations-export` for more information on system dump/load.
 
 .. Attention::
  
-	Performing a dump will delete version history for all data (used for version history restoration).
+	Performing a dump will delete version history for all data (used for version history and snapshot restoration).
 
 **Usage:**
 
