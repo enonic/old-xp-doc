@@ -3,9 +3,14 @@
 export
 ======
 
-Extract data for a given repository, branch and content path.
+Extract data from a given repository, branch and content path.
 The result will be stored in the ``$XP_HOME/data/export`` directory.
+This is useful to move a part of a site from one installation to another.
 See :ref:`operations-export` for more information on content export/import.
+
+.. Attention::
+
+	Exporting content will not include the version history of the content, just the current version.
 
 **Usage:**
 

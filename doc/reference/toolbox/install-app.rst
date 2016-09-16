@@ -3,7 +3,7 @@
 install-app
 ===========
 
-Installs an application on all nodes 
+Installs an application on all nodes.
 
 **Usage:**
 

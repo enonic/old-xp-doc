@@ -3,7 +3,7 @@
 set-replicas
 ============
 
-Set the number of replicas in the cluster.
+Set the number of replicas in the cluster.  For more information on how replicas work and recommended values, see: :ref:`replica-setup`.
 
 **Usage:**
 

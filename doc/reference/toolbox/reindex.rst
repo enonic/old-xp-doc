@@ -2,6 +2,7 @@ reindex
 =======
 
 Reindex the content in the search indices for the given repository and branches.
+This is usually required after upgrades, and may be useful in many other situation.
 
 **Usage:**
 
