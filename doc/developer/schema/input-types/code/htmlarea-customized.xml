@@ -1,0 +1,8 @@
+<input name="description" type="HtmlArea">
+  <label>Description</label>
+  <default><h3>Enter description here</h3></default>
+  <config>
+    <exclude>*</exclude>
+    <include>alignleft alignright | bold italic</include>
+  </config>
+</input>
