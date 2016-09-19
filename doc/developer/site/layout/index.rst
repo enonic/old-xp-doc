@@ -44,6 +44,11 @@ that is supported.
    :language: html
 
 
+
+.. IMPORTANT::
+
+   The HTML generated for the layout view must have a single root element.
+
 Styling
 -------
 
