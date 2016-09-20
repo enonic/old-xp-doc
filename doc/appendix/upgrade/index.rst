@@ -5,6 +5,10 @@ Upgrade notes - |version|
 
 .. warning:: This documentation describes upgrading from 6.6.2 to |version|.
 
+
+.. NOTE:: Enonic XP |version| now requires minimum Java 1.8.92
+
+
 Upgrade Steps
 -------------
 
@@ -57,5 +61,3 @@ Both branches in ``cms-repo`` and the master branch of ``system-repo`` must be r
 
 
 The reindex is usually processing around 500-1000 contents pr second.
-
-

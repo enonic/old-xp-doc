@@ -3,13 +3,11 @@ Release Notes
 
 Enonic XP |version| is a minor release with new, with several new features and improvements.
 
-.. NOTE:: Enonic XP |version| now requires minimum Java 1.8.92
-
 
 Welcome Tour
 ------------
 The first time you log in to XP, a welcome tour will greet you and finally help you install some interesting applications for testing XP.
-Don't worry - this can easily be disabled :)
+The tour is currently only available for Administrators.
 
 .. image:: images/tour.png
 
@@ -37,9 +35,10 @@ All admin schemas now support help texts per field. Simply add texts to your sch
 
 CustomSelector input type
 -------------------------
-So you want to pick-and-choose content that does not exist in XP. CustomSelector input type to the rescue.
-Configure the CustomSelector to use your very own http service.
-Now you may search for and select just about anything out there - from Spotify songs to your statically mapped list.
+Want to pick-and-choose content that does not exist in XP directly from the forms? CustomSelector input type to the rescue!
+Configure the CustomSelector to use a customized service to return the results you desire from virtually any source.
+
+This is what it looks like when selecting songs directly form Spotify for instance.
 
 .. image:: images/customselector.png
 
@@ -81,7 +80,7 @@ Currently there are no schemas, but these will be added in future releases.
 Properties may also be scoped so it is easy to reuse code from different libraries when building custom IDproviders.
 This feature also goes hand-in-hand with the new findUser() function, available in the auth API. Search for users and profile specific properties.
 
-.. image:: images/idprovider.jpg
+.. image:: images/idprovider.png
 
 SimpleID provider and LDAP IDprovider (live on the appstore) both utilize the new capabilities.
 
