@@ -23,7 +23,7 @@ All inputs have some common features. For example:
 
    inputs-standard
    inputs-selectors
-   inputs-text
+   inputs-html
    inputs-date-time
    inputs-numbers
 

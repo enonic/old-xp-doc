@@ -1,7 +1,7 @@
-.. _editing_input_types_text:
+.. _editing_input_types_html:
 
-Text HtmlArea
-=============
+Html Area input type
+====================
 
 .. NOTE::
    This page is under construction. This information is likely incomplete and possibly inaccurate until this notice is removed.
@@ -105,59 +105,3 @@ on the source of the text will come with it.
 
 .. tip:: Although HTML Area comes with default toolbar, it can be customized to exclude specific (or all) tools and/or include other tools that are supported.
    Read about this in description of :ref:`htmlarea_type` input config.
-
-These are the tools in default configuration of HTML Area, in the same order they are placed in the toolbar:
-
-============     ==================================
-Name             Description
-============     ==================================
-styleselect      Text format menu
-alignleft        Left align content
-aligncenter      Center content
-alignright       Right align content
-alignjustify     Justify content
-anchor           Insert an anchor
-bullist          Add a bullet list
-numlist          Insert a numbered list
-outdent          Decrease indent
-indent           Increase indent
-charmap          Insert a special character
-anchor           Insert an anchor
-image            Insert/Edit an image
-macro            Insert a macro
-link             Insert/Edit a link
-unlink           Remove link
-table            Table format menu
-pastetext        Toggle paste text mode
-============     ==================================
-
-
-These are additional tools supported by HTML Area that can be used in the input config:
-
-=============    =====================================
-Name             Description
-=============    =====================================
-backcolor        Change text background color
-blockquote       Add a quote block
-bold             Make text bold
-copy             Copy selected text into buffer
-cut              Cut selected text into buffer
-forecolor        Change text color
-hr               Insert a horizontal line
-italic           Make text italic
-ltr              Left-to-right text direction
-paste            Paste text from buffer into HTML Area
-preview          Preview HTML Area contents
-redo             Repeat last action
-removeformat     Remove formatting of selected text
-rtl              Right-to-left text direction
-searchreplace    Find or replace text
-strikethrough    Apply strikethrough effect to text
-styleselect      Text format menu
-subscript        Add subscript effect
-superscript      Add superscript effect
-underline        Underline text
-undo             Undo last action
-visualchars      Show hidden characters
-visualblocks     Show hidden blocks
-=============    =====================================
