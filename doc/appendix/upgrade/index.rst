@@ -46,18 +46,3 @@ Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all no
 
 5. Start the new installation
 *****************************
-
-
-6. Reindex your data
-********************
-
-Since there are changes to the index-structure, you will have to reindex your data. Your site will not be available while you do the reindex.
-Both branches in ``cms-repo`` and the master branch of ``system-repo`` must be reindexed, and the "-i" index option must be enabled:
-
-::
-
-  ./toolbox.sh reindex -a su:password -r cms-repo -b draft,master -i
-  ./toolbox.sh reindex -a su:password -r system-repo -b master -i
-
-
-The reindex is usually processing around 500-1000 contents pr second.
