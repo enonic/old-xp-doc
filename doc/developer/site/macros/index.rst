@@ -46,6 +46,11 @@ description
 config
   The ``config`` element is a form where each input element corresponds to a macro parameter. The macro body is represented with an input named ``"body"``.
 
+.. NOTE::
+
+  The config form does not support nested elements, so :ref:`item_sets` are not allowed in the macro config form.
+  Also the :ref:`htmlarea_type` input type is not allowed in the config form, since it may contain macros itself.
+
 
 Its path follows the pattern ``site/macros/<macroName>/<macroName>.xml``
 
