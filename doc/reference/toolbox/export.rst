@@ -48,3 +48,4 @@ See :ref:`operations-export` for more information on content export/import.
 .. code-block:: none
 
   $ ./toolbox.sh export -a su:password -s cms-repo:draft:/ -t myExport
+  $ ./toolbox.sh export -a su:password -s cms-repo:draft:/content/my-site -t mySiteExport

@@ -44,6 +44,7 @@ See :ref:`operations-export` for more information on content export/import.
 .. code-block:: none
 
   $ ./toolbox.sh import -a su:password -s myExport -t cms-repo:draft:/
+  $ ./toolbox.sh import -a su:password -s mySiteExport -t cms-repo:draft:/content
 
 .. TIP::
   An **XSL** file and a set of *name=value* parameters can be optionally passed for applying transformations to each ``node.xml`` file, before importing it.
