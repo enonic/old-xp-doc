@@ -22,6 +22,9 @@ label
   The label text will become the label for the input field in the editable form of
   the admin console.
 
+help-text
+  This optional text will be shown next to the input field and can be used for explanation of the field's purpose.
+
 occurrences
   Detailed definition of how many times this field may be repeated inside one content.
   Set ``minimum`` to zero for fields that are not required, and ``maximum`` to zero for
