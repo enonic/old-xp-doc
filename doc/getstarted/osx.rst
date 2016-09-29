@@ -22,7 +22,7 @@ the .dmg file to a convenient location.
 
 .. image:: images/download-mac.jpg
 
-Open the file when it is finished downloading. A window like the one in the image below will appears. Click and drag the Enonic XP logo to
+Open the file when it is finished downloading. A window like the one in the image below will appear. Click and drag the Enonic XP logo to
 the Applications folder.
 
 .. image:: images/install-mac.jpg
