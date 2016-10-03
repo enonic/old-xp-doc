@@ -7,15 +7,13 @@ Build a Custom Selector
 
 * :ref:`Create a content type<custom-selector-content-type>` 
  * :ref:`Create a service<custom-selector-service>` 
-* :ref:`Format of JSON response from the service<custom-selector-service-json>` 
-* :ref:`Sample service for Custom Selector<custom-selector-service-sample>` 
-* :ref:`Integration with Spotify API using Custom Selector<custom-selector-sample-spotify>`
-
+* :ref:`Response format<custom-selector-service-json>` 
+* :ref:`Sample service<custom-selector-service-sample>` 
+* :ref:`Integration with Spotify API<custom-selector-sample-spotify>`
 
 .. _custom-selector-content-type:
+.. rubric:: Create a content type
 
-Create a content type
-=====================
 * Create a folder called “my-custom-selector” inside the “site/content-types” folder of your project.
 * In that folder create a configuration schema for the "my-custom-selector" content type.
 
@@ -23,9 +21,8 @@ Create a content type
     :language: xml
 
 .. _custom-selector-service:
+.. rubric:: Create a service (or refer to a service in another app)
 
-Create a service (or refer to a service in another app)
-=======================================================
 * Create a folder called “my-custom-selector-service” (folder name must match the one specified in the config schema) inside the “resources/services” folder of your project.
 * In that folder create a javascript service file called “my-custom-selector-service.js” (again, the name must match the config schema).
 * Create GET handler method in this service file and make sure it returns JSON in the proper format.
@@ -37,9 +34,9 @@ Create a service (or refer to a service in another app)
 
 
 .. _custom-selector-service-json:
+.. rubric:: Response format
 
-Format of JSON response from the service
-========================================
+Format of JSON response from the service:
 
     id
       Unique Id of the option
@@ -56,20 +53,17 @@ Format of JSON response from the service
     icon (optional)
       Inline image content (for example, SVG)
 
-Example of a simple service file
-================================
-
 .. _custom-selector-service-sample:
+.. rubric:: Example of a simple service file
 
 Below is a simple service file that returns two items in the result set, one with external thumbnail image, and another one with inline SVG markup:
 
 .. literalinclude:: code/my-custom-selector-service.js
     :language: javascript
 
-Integration with Spotify API
-============================
 
 .. _custom-selector-sample-spotify:
+.. rubric:: Integration with Spotify API
 
 And here's a bit more advanced version of the service file that fetches song names from the Spotify API:
 
