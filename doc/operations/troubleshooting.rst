@@ -9,14 +9,14 @@ for our current release and development releases.
 Wrong Java version
 ------------------
 
-Verify that Java 1.8 (update 40 or higher) is installed and that this version is actually used.
+Verify that Java 1.8 (update 92 or higher) is installed and that this version is actually used.
 
 Run `java -version` in the shell where you attempt to start Enonic XP::
 
   $ java -version
-  java version "1.8.0_40"
-  Java(TM) SE Runtime Environment (build 1.8.0_40-b26)
-  Java HotSpot(TM) 64-Bit Server VM (build 25.40-b25, mixed mode)
+  java version "1.8.0_92"
+  Java(TM) SE Runtime Environment (build 1.8.0_92-b14)
+  Java HotSpot(TM) 64-Bit Server VM (build 25.92-b14, mixed mode)
 
 The boot log will also output the version of Java that was actually used.
 

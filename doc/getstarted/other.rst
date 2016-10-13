@@ -10,7 +10,7 @@ have any problems, please look at our :ref:`troubleshooting` section.
 .. note:: **General Requirements**
 
    * Any OS supporting Java (Mac, Linux, Windows etc)
-   * Java JDK 1.8 (update 40 or newer)
+   * Java JDK 1.8 (update 92 or newer)
    * At least 1 GB of available memory
    * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)
 
@@ -20,7 +20,7 @@ have any problems, please look at our :ref:`troubleshooting` section.
 Install Java
 ------------
 
-.. warning:: To run Enonic XP, you need Java Development Kit (JDK) 1.8.40 JDK or newer.
+.. warning:: To run Enonic XP, you need Java Development Kit (JDK) 1.8.92 JDK or newer.
 
 **Check JDK Version**
 

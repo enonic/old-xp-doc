@@ -22,12 +22,12 @@ To see all installed JDK's on you environment, if any, type the following comman
 
 
 If you have a JDK equal to or above version 1.8.0_92, but the ``javac -version`` points to another version, proceed to set the JAVA_HOME
-environment variable correctly.  If you do not have a JDK equal to or above version 1.8.0_92, then you need to upgrade your JDK.
+environment variable correctly.
 
 Setting JAVA_HOME
 -----------------
 
-If you don't have a JDK equal to or above version 1.8.0_40, you must install a newer version.
+If you don't have a JDK equal to or above version 1.8.0_92, you must install a newer version.
 
 * Go to the `JDK page <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ and click the "JDK download"
   button. This button will always link to the latest version.
