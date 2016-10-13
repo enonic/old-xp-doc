@@ -15,8 +15,9 @@ Run `java -version` in the shell where you attempt to start Enonic XP::
 
   $ java -version
   java version "1.8.0_92"
-  Java(TM) SE Runtime Environment (build 1.8.0_92-b26)
-  Java HotSpot(TM) 64-Bit Server VM (build 25.40-b25, mixed mode)
+  Java(TM) SE Runtime Environment (build 1.8.0_92-b14)
+  Java HotSpot(TM) 64-Bit Server VM (build 25.92-b14, mixed mode)
+
 
 The boot log will also output the version of Java that was actually used.
 
