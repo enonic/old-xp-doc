@@ -46,7 +46,7 @@ Query
 -----
 
 The query-part of a search is where the constraints are defined. All nodes in
-the repository will match when then query parameter is empty. The query is defined in the :ref:`query_language` section.
+the repository will match when the query parameter is empty. The query is defined in the :ref:`query_language` section.
 
 The results matching the query constraint will be assigned a score. This is imperative for fulltext-type queries.
 The score of a matching document depends on how the constraint is defined, e.g which fulltext-like function
