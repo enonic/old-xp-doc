@@ -21,10 +21,20 @@ Fields
 Fields is a string containing a comma-separated list of fields to include in the search.
 Wildcards are supported in field-names.
 
+Some valid string values for "fields" are:
+
+  .. code-block:: javascript
+
+    'displayName' // Search in single field
+    'displayName,data.description,data.title' // Search in multiple fields
+    'data.*' // Wildcard usage
+
+Note that "data." domain is used to access custom fields from custom content types. Default fields, like displayName, are directly available at the top level (without the "data." prepended).
+
 You can boost  - thus increasing or decreasing hit-score pr field basis - if providing
 more than one field to the query by appending a weight-factor: ``^N``::
 
-  fulltext('title^5,description', 'my search string', 'AND')
+  fulltext('displayName^5,data.description', 'my search string', 'AND')
 
 Operator
 --------
