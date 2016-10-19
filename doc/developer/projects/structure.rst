@@ -8,7 +8,7 @@ included in the Enonic XP toolbox utility.
 
 The project structure is a similar to `Maven <https://maven.apache.org/>`_ projects for those who are familiar with that.
 
-Below is a sample project folder structure - all items are folders, except for ``site.xml`` and ``build.gradle``::
+Below is a sample project folder structure - all items are folders, except for ``site.xml``, ``application.svg``, ``application.xml`` and ``build.gradle``::
 
   my-first-app/
     build.gradle
