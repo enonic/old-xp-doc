@@ -30,7 +30,7 @@ If you're not sure what JDK version you have (or even if you have one), run the 
 
   javac -version
 
-This should produce a response such as: "javac 1.8.0_60"
+This should produce a response such as: "javac 1.8.0_112"
 
 Having problems with your existing Java installation? Check out our :ref:`troubleshooting_java` documentation.
 
