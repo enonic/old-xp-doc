@@ -16,6 +16,7 @@ Schemas are made up of the following main concepts:
 
     input-types/index
     item-sets
+    option-sets
     layouts
     mixins
     relationship-types
