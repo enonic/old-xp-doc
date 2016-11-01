@@ -27,8 +27,8 @@ formatting options available for a text area. The box will expand vertically as 
 CheckBox
 --------
 
-The checkbox can be toggled between **checked** or **unchecked** by clicking the box with the mouse or by pressing the space-bar when it has
-focus.
+The checkbox can be toggled between **checked** or **unchecked** by clicking the box or the label with the mouse or by pressing the space-bar when it has
+focus. Checkbox position in relation to its label is configurable.
 
 RadioButtons
 ------------
