@@ -13,7 +13,7 @@ It's also possible to pre-select specific options by default.
 
 Here is an example of a multi-select option set with options expanded by default, empty first option and pre-selected second option:
 
-.. literalinclude:: code/option-set-multi.xml
+.. literalinclude:: code/option-set.xml
    :language: xml
 
 @name
@@ -28,6 +28,9 @@ expanded
 occurrences
   Detailed definition of how many times this option set may be repeated inside one content.
 
+help-text
+  Optional. Help text for the entire option set.
+
 options
   Container of options.
 
@@ -38,6 +41,7 @@ options
       Required. Maximum number of options that can be selected in this option set.
       Setting this attribute to a value greater than 1 will result in rendering of a multi-select option set with
       options rendered as checkboxes. Setting the attribute value to 1 will render options as radio-buttons (single-select option set).
+      Once the maximum of selected options is reached, the rest of the options will be disabled.
 
    option
      Container of the option form.
@@ -47,6 +51,9 @@ options
 
       label
          Label of the option's checkbox or radio button.
+
+      help-text
+        Optional. Help text for the option.
 
       default
          Optional. Set to ``true`` to pre-select the option.

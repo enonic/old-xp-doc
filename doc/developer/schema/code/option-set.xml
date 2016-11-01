@@ -2,9 +2,11 @@
   <label>Multi-selection OptionSet</label>
   <expanded>true</expanded>
   <occurrences minimum="1" maximum="1"/>
-  <options minimum="1" maximum="3">
+  <help-text>You can select up to 2 options</help-text>
+  <options minimum="1" maximum="2">
     <option name="option_1">
       <label>Option 1</label>
+      <help-text>Help text for Option 1</help-text>
     </option>
     <option name="option_2">
       <label>Option 2</label>
@@ -19,6 +21,7 @@
     </option>
     <option name="option_3">
       <label>Option 3</label>
+      <help-text>Help text for Option 3</help-text>
       <items>
         <input name="textarea" type="TextArea">
           <label>Text Area</label>
