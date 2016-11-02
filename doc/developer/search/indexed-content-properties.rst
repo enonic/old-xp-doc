@@ -105,6 +105,9 @@ page
 page.region.component.textcomponent.text
 	This property contains all values in the text-components added to pages
 
+publish.from
+	The time when the content was first published. This timestamp will be the set both in draft and master branch.
+
 type
   	The content-type name
 
