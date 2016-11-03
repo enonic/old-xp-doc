@@ -5,3 +5,12 @@
     <service>my-custom-selector-service</service>
   </config>
 </input>
+
+<input name="musicTrack" type="CustomSelector">
+  <label>Intro song</label>
+  <config>
+    <service>spotify-music-selector</service>
+    <option value="genre">classic</option>
+    <option value="sortBy">length</option>
+  </config>
+</input>
