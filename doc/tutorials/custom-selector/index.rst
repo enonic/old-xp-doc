@@ -18,7 +18,7 @@ Build a Custom Selector
 * In that folder create a configuration schema for the "my-custom-selector" content type.
 
 .. literalinclude:: code/my-custom-selector.xml
-:language: xml
+    :language: xml
 
 .. _custom-selector-service:
 .. rubric:: Create a service (or refer to a service in another app)
