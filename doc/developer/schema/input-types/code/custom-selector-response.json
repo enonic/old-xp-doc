@@ -1,0 +1,21 @@
+{
+  "total": 10,
+  "count": 2,
+  "hits": [
+    {
+      "id": "1",
+      "displayName": "Option number 1",
+      "description": "External SVG file is used as icon",
+      "iconUrl": "/some/path/images/number_1.svg"
+    },
+    {
+      "id": "2",
+      "displayName": "Option number 2",
+      "description": "Inline SVG markup is used as icon",
+      "icon": {
+        "data": "<svg xmlns=\"http://www.w3.org/2000/svg\"/>",
+        "type": "image/svg+xml"
+      }
+    }
+  ]
+}

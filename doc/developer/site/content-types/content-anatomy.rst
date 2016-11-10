@@ -43,6 +43,9 @@ page (propertySet)
   The page property contains page-specific properties, like template and regions.
   This will typically be reference to a page-template that supports the content-type.
 
+publish (propertySet)
+  Contains publish-information, e.g ``publish.from``
+
 site (propertySet)
   If the contentType is ``portal:site``, this will contain site-specific information.
 
