@@ -13,7 +13,7 @@ There are no breaking changes in this release, but due to internal changes in re
 1. Setup new installation
 *************************
 
-  #. Download Enonic XP https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip
+  #. Download Enonic XP http://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip
   #. Setup new XP installations - (for all servers in your entire cluster if you have one)
 
 .. tip:: Remember to update any startup scripts you might have to launch your new installation given a server restart
