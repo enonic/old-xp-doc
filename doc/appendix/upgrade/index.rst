@@ -18,7 +18,7 @@ You could also do a :ref:`toolbox-dump` of the system, but then you will loose v
 2. Install new version
 **********************
 
-Download Enonic XP https://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip and install according to your setup.
+Download Enonic XP http://repo.enonic.com/public/com/enonic/xp/distro/${release}/distro-${release}.zip and install according to your setup.
 
 .. tip:: Remember to update any startup scripts you might have to launch your new installation given a server restart
 
