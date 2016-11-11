@@ -6,9 +6,9 @@ Enonic XP |version| is a minor release with new features and improvements.
 OptionSet Form Item
 -------------------
 This new form item enables fast creation of conditional fields in a schema.
-Use optionSet to create more advanced forms by allow the editor to select between the different options
+Use optionSet to create more advanced forms by allowing the editor to select between the different options
 - for instance "big article" or "small article" or choose between different types of links such as "content link", "download link" or "external link".
-OptionSet also allows for selecting two or more options at once.
+OptionSet also allow selecting two or more options at once.
 
 .. image:: images/singleselect.png
 
@@ -39,7 +39,7 @@ Some of the things that are exposed are:
 
 Asynchronous Task API
 ---------------------
-The Task API enable developers to initialize background tasks, get progress of the task and all other tasks running in the cluster.
+The Task API enables developers to initialize background tasks, get progress of the task and all other tasks running in the cluster.
 A task will run both Javascript and Java code. Each task will be started as a separate thread.
 
 Check out the Javascript library :ref:`js-libraries` documentation.
