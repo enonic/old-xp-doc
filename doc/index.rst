@@ -2,15 +2,23 @@
 Enonic XP |version| documentation
 =================================
 
-Congratulations - you've found the official Enonic XP |version| documentation. We really hope you like our technology and use it to build
-amazing things :-).
+**Enonic XP is a unique and powerful application development stack - in a single runtime.**
 
-We've put together some funky documentation - for installation check out :ref:`getting_started_guide`
-or move on to the :ref:`tutorials`.  The more savvy will probably enjoy our :ref:`api_ref_guide`.
+Lighting fast, and capable of scaling from a single server to large clusters - our mission is to make web development as predictable as building applications for traditional Operating System.
+
+**We simply call it the Web Operating System**
+
+.. image:: images/wos.jpg
+
+* NoSQL storage - Distributed content repository built on top of Elasticsearch
+* OSGi App Engine - Supports application development with serverside Javascript - using the popular `PurpleJS framework`_
+* Powerful embedded Web Content Management - seamlessly blend applications and websites
+* Runs on the powerful Java Virtual Machine - can be deployed on just about any infrastructure.
+
+To get started - check out :ref:`getting_started_guide` or move on to the :ref:`tutorials`.
+The more savvy will probably enjoy our :ref:`api_ref_guide`.
 
 Enjoy! - *The Enonic Development Team*
-
-.. image:: images/dive-into-documentation.jpg
 
 .. toctree::
    :maxdepth: 1
@@ -35,3 +43,4 @@ Enjoy! - *The Enonic Development Team*
 .. tip:: The source code for this documentation is `available on GitHub`_ .
 
 .. _available on GitHub: https://github.com/enonic/xp-doc
+.. _PurpleJS framework: https://purplejs.io
