@@ -23,24 +23,25 @@ Log In
 After requesting a Trial, you should recieve an informative e-mail about your installation.
 
 * Click the link in your e-mail to reach the administrative interface, it should be in the following form: ``http://<my-email-com>.tryme.enonic.io``
-* Log in with username ``su`` and password ``password``.
 
-After logging in you should see the following screen, with the launcher panel to the right:
+.. include:: login.rst
 
-.. image:: images/admin.jpg
+Add Sample Apps
+---------------
 
-Superhero Blog
---------------
-
-.. _discuss: https://discuss.enonic.com
-.. _platform_video: https://youtu.be/r_rjD8ScfeM
-
-For your enjoyment, we've created the Superhero Blog application and pre-installed it on the trial instance.
-
-This is a simple blog, basically emulating Wordpress - even using one of their nice themes. Follow these steps to try it out:
+.. include:: tour.rst
 
 
-.. include:: start-blogging.rst
+Open Content Studio
+-------------------
+
+.. include:: content-studio.rst
+
+
+Visit Enonic Market
+-------------------
+
+.. include:: install-app.rst
 
 
 Next Steps

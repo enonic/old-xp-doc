@@ -5,13 +5,14 @@ OSX
 
 This section describes the easiest way to install Enonic XP on a Mac OSX computer.
 
-.. tip:: The Java JDK is not required to run XP with this installer, but developers will need the JDK to build applications for Enonic XP.
+**Watch this video**
 
-.. note:: **General Requirements**
+.. image:: images/macos-installer-video.jpg
+  :alt: Installing Enonic XP on MacOS
+  :target: https://youtu.be/_lA4bBqhTr0
 
-   * Mac OSX
-   * At least 1 GB of available memory
-   * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)
+.. contents:: or complete the following steps:
+     :local:
 
 
 Download
@@ -22,10 +23,16 @@ the .dmg file to a convenient location.
 
 .. image:: images/download-mac.jpg
 
+Install
+-------
+
 Open the file when it is finished downloading. A window like the one in the image below will appear. Click and drag the Enonic XP logo to
 the Applications folder.
 
 .. image:: images/install-mac.jpg
+
+Start
+-----
 
 Find the Enonic XP app in the applications folder, or use Spotlight search, and double click to open it.
 
@@ -41,21 +48,40 @@ the default browser. The admin UI can also be reached at http://localhost:8080
 Log In
 ------
 
-* Click the **Launch Browser** button or point your browser to ``http://localhost:8080``
-* Log in with username ``su`` and password ``password``.
+Click the **Launch Browser** button or point your browser to ``http://localhost:8080``
 
-After logging in you should see the following screen, with the launcher panel to the right:
+.. include:: login.rst
 
-.. image:: images/admin.jpg
+Add Sample Apps
+---------------
 
-Install Superhero Blog
-----------------------
+.. include:: tour.rst
+
+
+Open Content Studio
+-------------------
+
+.. include:: content-studio.rst
+
+
+Visit Enonic Market
+-------------------
 
 .. include:: install-app.rst
 
-.. include:: start-blogging.rst
 
 Next Steps
 ----------
 
 .. include:: next.rst
+
+
+Troubleshooting
+---------------
+Verify that you comply with the minimum requirements for running XP on your local machine
+
+.. note:: **General Requirements**
+
+   * MacOS 10.9 or newer
+   * At least 1 GB of available memory
+   * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)

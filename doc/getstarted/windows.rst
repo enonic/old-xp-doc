@@ -5,13 +5,15 @@ Windows
 
 This section describes the easiest way to install Enonic XP on a Windows computer.
 
-.. tip:: The Java JDK is not required to run XP with this installer, but developers will need the JDK to build applications for Enonic XP.
+**Watch this video**
 
-.. note:: **General Requirements**
+.. image:: images/windows-installer-video.jpg
+  :alt: Installing Enonic XP on Windows
+  :target: https://youtu.be/kKrpJ3vxqgQ
 
-   * Windows 7 or newer
-   * At least 1 GB of available memory
-   * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)
+.. contents:: or complete the steps below:
+    :local:
+
 
 Download
 --------
@@ -21,8 +23,8 @@ save the .exe file to a convenient location.
 
 .. image:: images/download-windows.jpg
 
-Run the installer
------------------
+Install
+-------
 
 Open the file when it is finished downloading and follow the instructions to install Enonic XP.
 
@@ -44,6 +46,9 @@ Click "Finish" to close the installer.
 
 .. image:: images/6win-completed.png
 
+Start
+-----
+
 Now find the Enonic XP Start Menu shortcut and click to start it.
 
 A window will open with the log and some buttons. XP will continue to run while this window is open. The **Home Directory** button will open
@@ -55,21 +60,40 @@ interface in the default browser. The admin UI can also be reached at http://loc
 Log In
 ------
 
-* Click the **Launch Browser** button or point your browser to ``http://localhost:8080``
-* Log in with username ``su`` and password ``password``.
+Click the **Launch Browser** button or point your browser to ``http://localhost:8080``
 
-After logging in you should see the following screen, with the launcher panel to the right:
+.. include:: login.rst
 
-.. image:: images/admin.jpg
+Add Sample Apps
+---------------
 
-Install Superhero Blog
-----------------------
+.. include:: tour.rst
+
+
+Open Content Studio
+-------------------
+
+.. include:: content-studio.rst
+
+
+Visit Enonic Market
+-------------------
 
 .. include:: install-app.rst
 
-.. include:: start-blogging.rst
 
 Next Steps
 ----------
 
 .. include:: next.rst
+
+
+Troubleshooting
+---------------
+Verify that you comply with the minimum requirements for running XP on your local machine
+
+.. note:: **General Requirements**
+
+   * Windows 7 or newer
+   * At least 1 GB of available memory
+   * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)

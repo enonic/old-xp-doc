@@ -1,21 +1,23 @@
 .. _local_installation:
 
-Other operating systems
-=======================
+For Developers
+==============
 
-This section describes how to install Enonic XP on your own computer, without the Mac or Windows installer. This is also the preferred
-method of environment setup for developers who will be running multiple projects with various XP versions and XP_HOME locations. If you
-have any problems, please look at our :ref:`troubleshooting` section.
+This section describes how to install Enonic XP on any operating system.
+This is also the recommended approach for setting up a development environment.
+If you have any problems, please look at our :ref:`troubleshooting` section.
 
-.. note:: **General Requirements**
+**Watch this video**
 
-   * Any OS supporting Java (Mac, Linux, Windows etc)
-   * Java JDK 1.8 (update 92 or newer)
-   * At least 1 GB of available memory
-   * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)
+.. image:: images/developer-environment-video.jpg
+  :alt: Setting up development environment
+  :target: https://youtu.be/Sr7X9cmOvhw
+
+.. contents:: or complete the following steps:
+  :local:
 
 
-.. _install_java:
+
 
 Install Java
 ------------
@@ -86,21 +88,38 @@ This will start Enonic XP. When successfully started, the following will appear 
 Log In
 ------
 
-* Point your browser to ``http://localhost:8080``
-* Log in with username ``su`` and password ``password``.
+.. include:: login.rst
 
-After logging in you should see the following screen, with the launcher panel to the right:
+Add Sample Apps
+---------------
 
-.. image:: images/admin.jpg
+.. include:: tour.rst
 
-Install Superhero Blog
-----------------------
+
+Open Content Studio
+-------------------
+
+.. include:: content-studio.rst
+
+
+Visit Enonic Market
+-------------------
 
 .. include:: install-app.rst
 
-.. include:: start-blogging.rst
 
 Next Steps
 ----------
 
 .. include:: next.rst
+
+
+Troubleshooting
+---------------
+Verify that you comply with the minimum requirements for running XP on your local machine
+
+.. note:: **General Requirements**
+
+   * Any OS supporting the required version of Java (Mac, Linux, Windows etc)
+   * At least 1 GB of available memory
+   * HTTP port 8080 should be available (this can be changed if needed, see :ref:`configuration`)

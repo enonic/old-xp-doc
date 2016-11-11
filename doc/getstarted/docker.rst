@@ -55,20 +55,26 @@ Check out our `Project page at Docker Hub <https://hub.docker.com/u/enonic/>`_ f
 Log In
 ------
 
-* Point your browser to ``http://<mydockercontainer>:8080``
-* Log in with username ``su`` and password ``password``.
+Start by pointing your browser to ``http://<mydockercontainer>:8080``
 
-After logging in you should see the following screen, with the launcher panel to the right:
+.. include:: login.rst
 
-.. image:: images/admin.jpg
+Add Sample Apps
+---------------
+
+.. include:: tour.rst
 
 
-Install Superhero Blog
-----------------------
+Open Content Studio
+-------------------
+
+.. include:: content-studio.rst
+
+
+Visit Enonic Market
+-------------------
 
 .. include:: install-app.rst
-
-.. include:: start-blogging.rst
 
 
 Next Steps

@@ -15,5 +15,5 @@ So - you're looking for the fastest way to get Enonic XP up and running?
    cloud
    osx
    windows
-   other
    docker
+   other

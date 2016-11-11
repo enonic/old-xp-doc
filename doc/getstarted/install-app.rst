@@ -1,10 +1,11 @@
-This is a simple blog, basically emulating Wordpress - even using one of their nice themes. Follow these steps to try it out:
+**Find more on Enonic Market**
 
-**Install from Market**
+If you want to try other applications, follow the steps below:
 
 * Open the `Applications` tool from the launcher panel to the right
 * Click `Install` from the menu (top left)
-* Select `Enonic Market` from the dialogue
-* Browse to the application named "Superhero Blog" and click `Install`
+* Browse to find the applications you are looking for and click `Install`
 
 .. image:: images/install.jpg
+
+You may also visit Enonic market directly on https://market.enonic.com
