@@ -71,13 +71,17 @@ A macro controller must export a single ``macro`` function that takes a ``contex
 The ``context`` parameter is a Javascript object with the following properties:
 
 name
-  a string containing the macro name .
+  a string containing the macro name.
 
 body
   a string containing the body of the macro instruction.
 
 params
   an object with key-value pairs containing the macro parameters. The values are the strings from the macro instruction attributes.
+
+document
+  a string with the HTML document that contains the current macro. The document contains the raw source HTML, before any macro instructions have been executed,
+  and before image or content URLs have been resolved. The document is only an input parameter to the macro, it cannot be modified.
 
 request
   the request object.
