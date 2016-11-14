@@ -17,6 +17,11 @@ The globally available ``app`` object holds information about the contextual app
 .. js:attribute:: app.version
     Version of the application.
 
+.. js:attribute:: app.config
+    Application configuration. This can be set using
+    ``$XP_HOME/config/<app.name>.cfg``. Every time the configuration is
+    changed the app is restarted.
+
 Examples:
 
 .. literalinclude:: code/app.js

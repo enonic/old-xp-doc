@@ -25,7 +25,7 @@ The export operation will extract data for a given content URL and store it as X
 in a sub-folder under ``$XP_HOME/data/export``.
 The REST service for export is found at the following URL::
 
-  http://<host>:<port>/admin/rest/export/export
+  http://<host>:<port>/api/repo/export
 
 The export REST service accepts a JSON in this format:
 
@@ -47,7 +47,7 @@ Content Import
 The import will take data from a given export directory and load it into Enonic XP at the
 desired content path. The REST service for import is found at the following URL::
 
-  http://<host>:<port>/admin/rest/export/import
+  http://<host>:<port>/api/repo/import
 
 The import REST service accepts a JSON in this format:
 
@@ -171,7 +171,7 @@ System Dump
 The dump operation will extract data from your entire system and store it as XML in a sub-folder under ``$XP_HOME/data/dump``.
 The REST service for export is found at the following URL::
 
-  http://<host>:<port>/admin/rest/system/dump
+  http://<host>:<port>/api/system/dump
 
 The dump REST service accepts a JSON in this format:
 
@@ -191,7 +191,7 @@ System Load
 The load operation will take data from a given dump directory and load it into Enonic XP.
 The REST service for load is found at the following URL::
 
-  http://<host>:<port>/admin/rest/system/load
+  http://<host>:<port>/api/system/load
 
 The export REST service accepts a JSON in this format:
 
