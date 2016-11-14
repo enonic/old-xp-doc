@@ -9,15 +9,18 @@ If you have any problems, please look at our :ref:`troubleshooting` section.
 
 **Watch this video**
 
-.. image:: images/developer-environment-video.jpg
-  :alt: Setting up development environment
-  :target: https://youtu.be/Sr7X9cmOvhw
+.. raw:: html
+
+  <div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; margin-bottom: 25px; height: 0;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/Sr7X9cmOvhw?rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+
 
 .. contents:: or complete the following steps:
   :local:
 
 
-
+.. _install_java:
 
 Install Java
 ------------

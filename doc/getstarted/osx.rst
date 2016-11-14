@@ -7,9 +7,11 @@ This section describes the easiest way to install Enonic XP on a Mac OSX compute
 
 **Watch this video**
 
-.. image:: images/macos-installer-video.jpg
-  :alt: Installing Enonic XP on MacOS
-  :target: https://youtu.be/_lA4bBqhTr0
+.. raw:: html
+
+  <div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; margin-bottom: 25px; height: 0;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/_lA4bBqhTr0?rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
 
 .. contents:: or complete the following steps:
      :local:

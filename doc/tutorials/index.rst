@@ -11,7 +11,6 @@ You will find our tutorials below.
 .. toctree::
     :maxdepth: 1
 
-    installation
     project-init
     javascript-mvc
     my-first-app/index
