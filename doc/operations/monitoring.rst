@@ -4,12 +4,8 @@ Monitoring
 ==========
 
 We provide some basic metric tools for monitoring which are easily accessed in
-a simple JSON format.
-
-Basic status info
------------------
-
-To access the monitoring JSON feed you can point to the following url::
+a simple JSON format. To access the monitoring JSON feed you can point to
+the following url::
 
   http://localhost:8080/status
 
@@ -17,6 +13,53 @@ This will give you a list of status-reporters. Each reporter has a name and
 can be accessed using the following pattern::
 
   http://localhost:8080/status/<name>
+
+Here's a list of all the status pages and what is shows:
+
+  ``cluster``
+    Information of the current cluster. Local-node and members.
+
+  ``dump.deadlocks``
+    This will try to detect thread deadlocks and show them if any.
+
+  ``dump.threads``
+    Dumps all current thread-states.
+
+  ``index``
+    Shows ElasticSearch index status.
+
+  ``jvm.gc``
+    Information about JVM GC status.
+
+  ``jvm.info``
+    General JVM information (version, vendor, uptime).
+
+  ``jvm.memory``
+    JVM memory information (heap and non-heap).
+
+  ``jvm.os``
+    Information about OS (name, version, architecture).
+
+  ``jvm.properties``
+    Shows all JVM properties.
+
+  ``jvm.threads``
+    JVM thread stats (count, peak, total).
+
+  ``metrics``
+    Shows metrics. The information can be filtered using ``?filter=...``.
+
+  ``osgi.bundle``
+    Information about all OSGi bundles.
+
+  ``osgi.component``
+    Information about registered SCR OSGi components.
+
+  ``osgi.service``
+    Shows all OSGi services registered.
+
+  ``server``
+    Information about the server (version, build).
 
 
 .. _cluster-monitoring:
