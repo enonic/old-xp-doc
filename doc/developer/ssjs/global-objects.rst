@@ -31,7 +31,7 @@ Examples:
 Log
 ---
 
-This gobally available ``log`` object holds the logging methods. It's one method for each log
+This globally available ``log`` object holds the logging methods. It's one method for each log
 level and takes the same number of parameters.
 
 .. js:function:: log.debug(message, [args])

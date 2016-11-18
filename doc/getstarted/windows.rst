@@ -7,9 +7,12 @@ This section describes the easiest way to install Enonic XP on a Windows compute
 
 **Watch this video**
 
-.. image:: images/windows-installer-video.jpg
-  :alt: Installing Enonic XP on Windows
-  :target: https://youtu.be/kKrpJ3vxqgQ
+
+.. raw:: html
+
+  <div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; margin-bottom: 25px; height: 0;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/kKrpJ3vxqgQ?rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
 
 .. contents:: or complete the steps below:
     :local:

@@ -3,7 +3,14 @@
 ImageSelector
 -------------
 
-References to other content are specified by this input type.
+Pick a reference to another existing image or upload a new image.
+Supported image types are:
+
+* Jpeg
+* Png
+* Gif
+* Svg
+
 
 .. literalinclude:: code/imageselector.xml
    :language: xml
