@@ -1,11 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>{{appName}}</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="{{assetsUri}}/common/styles/_all.css">
+
+    <!-- Common lib -->
+    <script type="text/javascript" src="{{assetsUri}}/common/lib/_all.js"></script>
+
+</head>
 <body>
-    <script data-th-inline="javascript">
-        /*<![CDATA[*/
-            var CONFIG = {
-                portalAssetsUrl : /*[[${adminUiAssetsUrl}]]*/,
-                appId: 'system-info'
-            };
-        /*]]>*/
-    </script>
-    <script type="text/javascript" data-th-src="${launcherJsUrl}"></script>
+
+<!-- Configuration -->
+<script type="text/javascript">
+    var CONFIG = {
+        adminUrl: '{{adminUrl}}',
+        assetsUri: '{{assetsUri}}',
+        appId: '{{appId}}'
+    };
+</script>
+
+<!-- Append the Launcher Panel -->
+<script type="text/javascript" src="{{assetsUri}}/apps/launcher/js/_all.js" async></script>
+
 </body>
+</html>

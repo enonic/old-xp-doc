@@ -64,19 +64,28 @@ The controller must have the same name as the tool, i.e. ``admin/tools/[tool-nam
 .. literalinclude:: code/controller.js
    :language: javascript
 
+
 Adding the Launcher Panel menu
 ------------------------------
 
-Adding the Launcher Panel menu to a custom admin tool requires a few extra steps. The view file must include a JavaScript CONFIG object and
-the launcher.js file from the built-in XP admin UI app. The controller file below shows two parameters with the required values and the
-view file below shows how to use them.
+Adding the Launcher Panel menu to a custom admin tool requires two steps.
 
-.. literalinclude:: code/controller-menu.js
-   :language: javascript
+1. In the <body> section of the view add a Javascript snippet where you define an object variable called "CONFIG" with properties
+adminUrl, assetsUri and appId which will get their values from the controller:
 
-The two script elements must be placed in the <body> of the view page. The CONFIG appId must match the name of the admin tool. This will
-work for an app named "system-info".
+
+.. literalinclude:: code/config.html
+    :language: html
+
+
+2. Under the Javascript snippet add a reference to the Launcher's Javascript file as shown below:
+
+.. literalinclude:: code/launcher-reference.html
+    :language: html
+
+
+The entire view:
 
 .. literalinclude:: code/view.html
-   :language: html
+    :language: html
 
