@@ -70,15 +70,17 @@ Adding the Launcher Panel menu
 
 Adding the Launcher Panel menu to a custom admin tool requires two steps.
 
-1. <head> section of the view file must include reference to the common javascript library file of the XP:
+1. In the <body> section of the view add a Javascript snippet where you define an object variable called "CONFIG" with properties
+adminUrl, assetsUri and appId which will get their values from the controller:
 
-.. literalinclude:: code/launcher-lib.html
+
+.. literalinclude:: code/config.html
     :language: html
 
 
-2. <body> section of the view file must include a javascript code snippet with a method call that will append the Launcher Panel to the document body:
+2. Under the Javascript snippet add a reference to the Launcher's Javascript file as shown below:
 
-.. literalinclude:: code/launcher-snippet.html
+.. literalinclude:: code/launcher-reference.html
     :language: html
 
 
