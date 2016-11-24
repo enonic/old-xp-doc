@@ -53,8 +53,8 @@ Stricter Site config validation
 -------------------------------
 
 Validation of application configuration forms in a site has been improved.
-When the application configuration is updated while editing a site in `Content Studio`, an extra validation has been added to the server.
-This means that there are potentially some existing invalid values that were accepted before, but will cause the Site content to be marked
+Where the application configuration is updated while editing a site in `Content Studio`, an extra validation has been added to the server.
+Therefore there are potentially some existing invalid values that were accepted before, but will cause the Site content to be marked
 as invalid after the upgrade.
 
 If updating a site makes it invalid after the upgrade, double-check the config in ``site.xml`` for the applications in the site.
