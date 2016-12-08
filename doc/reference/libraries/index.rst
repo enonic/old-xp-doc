@@ -16,6 +16,7 @@ Where ``name`` is the name of the library. Here's a list of available libraries:
 * lib-cache
 * lib-content
 * lib-context
+* lib-event
 * lib-http-client
 * lib-i18n
 * lib-io
