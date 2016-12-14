@@ -1,7 +1,7 @@
 Hello Geo World
 ===============
 
-Going back to your site, you will now see a list of the countries we have added. To make this even more exciting, we will add a City content
+The home page of the site now shows a list of the countries we have added. To make this even more exciting, we will add a City content
 type with geo-location and a `City list` part with configuration capabilities.
 
 City content
@@ -9,7 +9,7 @@ City content
 
 The next steps will create a content type for adding cities with location coordinates.
 
-1. Create a folder called `city` inside the project's ``site/content-types`` folder.
+1. Create a folder named `city` inside the project's ``site/content-types`` folder.
 
 2. Add the content type file below to your project. Because the contet type's folder is named "city" the file must be named "city.xml".
 
@@ -28,7 +28,7 @@ City list part
 
 We need a `part component` to display the city data. It will list the cities and show a Google map of each location.
 
-1. Create a folder called `city-list` inside the project's ``site/parts`` folder.
+1. Create a folder named `city-list` inside the project's ``site/parts`` folder.
 
 2. Add the part descriptor file. It must be named city-list.xml.
 

@@ -13,6 +13,7 @@
     </input>
     <input type="TextLine" name="zoom">
       <label>Zoom level 1-15</label>
+      <default>10</default>
       <occurrences minimum="0" maximum="1"/>
     </input>
   </config>

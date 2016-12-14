@@ -1,4 +1,4 @@
-var thymeleaf = require('/lib/xp/thymeleaf'); // Import the thymeleaf render function
+var thymeleaf = require('/lib/xp/thymeleaf'); // Import the thymeleaf library
 
 // Handle the GET request
 exports.get = function(req) {

@@ -2,10 +2,8 @@
 Create the Country Part
 =======================
 
-We also need a way to present a country - because every country wants to be seen.
-This time, rather than just making another page controller, we will create a :ref:`part` component. Parts are reusable components that can
-be added to pages containing "regions" - more on this later.
-
+We also need a way to display the data from our Country content type. This time, rather than making another page controller, we will create
+a :ref:`part` component. Parts are reusable components that can be added to "regions" in pages or layout components - more on this later.
 
 #. Create a folder called "country" inside the "parts" folder in your project.
 #. Add the part **controller** and **view** files below to the "country" folder:

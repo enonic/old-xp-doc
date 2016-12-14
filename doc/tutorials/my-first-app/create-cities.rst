@@ -10,7 +10,7 @@ Now let's make use of the new city content type and part component. First we nee
 #. Edit the "Country" page template. Find it in the content pane below the templates |templatesicon|
 #. Open the Inspect Panel by clicking the cog button |cogicon| in the toolbar.
 #. Under the Insert tab, click and drag a `Part` |particon| to the page region below the "country" part. (This may be a bit tricky because the
-   "country" part is small.)
+   "country" part is small.) You could also right-click on the word "Country" and then use the context menu to insert the part.
 #. Select the "City list" part from the dropdown in the box.
 #. Save and close the tab.
 

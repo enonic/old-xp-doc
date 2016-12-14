@@ -4,21 +4,29 @@ Create the Hello World Site
 .. |monitoricon| image:: images/icon-monitor.png
 .. |menuicon| image:: images/icon-menu.png
 
-Our next goal is to set up a "Hello World" site in Content Studio,
-but first we must add some initial configuration to our project.
+Our next goal is to set up a "Hello World" site in Content Studio, but first we must add some initial configuration to our project.
 
 Site descriptor
 ---------------
 
 An application can serve many purposes and building sites is just one of them. The ``site.xml`` file is the descriptor that will let Enonic
-XP know that this app can be added to a site. Site-wide configurations can be defined in this file but we will leave the config element
-empty for now (see :ref:`site_descriptor`).
+XP know that this app can be added to a site. Site-wide configurations can be defined in the config element of this file
+(see :ref:`site_descriptor`).
 
-A basic site.xml file was automatically created by the init-project script::
+A basic site.xml file was automatically created by the init-project script and we don't need to make any changes for now. ::
 
   [project-root]/src/main/resources/site/site.xml
 
-.. note:: All of the files we will be working with are below the "site" directory in the project folder - src/main/resources/site. All file
+Application description and icon
+--------------------------------
+
+The ``application.xml`` file at ``[project-root]/src/main/resources/application.xml`` can be edited to provide a suitable description for
+your app. Go ahead and give your app a custom description.
+
+The ``application.svg`` file can be replaced with a custom app icon. The description and icon will be visible in the Applications admin
+tool.
+
+.. note:: Most of the files we will be working with are below the "site" directory in the project folder - src/main/resources/site. All file
   paths from now on will begin with "site/".
 
 Page Component
@@ -68,4 +76,10 @@ Switch between different tools by clicking the menu icon |menuicon| (top right) 
 
 When you click on the "Hello World" site content, the preview should look something like this:
 
-.. image:: images/hello-world-site1.png
+.. image:: images/hello-world-site1.jpg
+
+This concludes part one of the tutorial. Let's review: You've learned how to initialize a new project with the CLI toolbox init-project.
+Then you set the $XP_HOME environment variable and deployed the app with gradle. Next, you created a page component with a JavaScript
+controller and an HTML view file. Finally, you created a site in the Content Studio and added the app and page component to the site. This
+might seem like a lot of work just to make a static page; but we have laid a solid foundation in preparation for dynamically displaying
+structured content in reusable components which you will learn about in the next section.

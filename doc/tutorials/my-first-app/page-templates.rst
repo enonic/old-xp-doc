@@ -7,7 +7,8 @@ The Country Page Template
 .. |particon| image:: images/icon-part.png
 
 With our current solution, sadly, we would have to create a new page for every country we add.
-As this is not a very effective way of working with large data sets, we will create a page template that will automatically render all country content.
+As this is not a very effective way of working with large data sets, we will create a page template that will automatically render all
+country content.
 
 #. Select the Templates item |templatesicon| located below the "Hello World" site in the content pane.
 #. Click "New" and select "Page Template".
@@ -28,9 +29,9 @@ Every "Country" content you create will now use this template by default.
 .. TIP:: The "Support" property is the key. A page template will support rendering of the content types specified here.
 
 Try this out by creating a few new countries in your site. Be aware that every content you create will be a child of the content that was
-selected in the content pane, so make sure you select the "Hello World" site before clicking "New" in the toolbar. Or get in the habit of
-right-clicking the parent content and selecting "New" from the context menu. This way you will never accidentally create a content in the
-wrong place.
+selected in the content pane, so make sure you select the "Hello World" site before clicking "New" in the toolbar. Or better yet, get in the
+habit of right-clicking the desired parent content and selecting "New" from the context menu. This way you will never accidentally create a
+content in the wrong place.
 
 Extra task
 ----------
@@ -41,11 +42,12 @@ You might remember that your favorite country was "hardcoded" - so let's change 
 
 #. In the Content pane, double click the country content to edit it.
 #. Open the Inspection Panel |cogicon| and select the "Inspect" tab if it's not already selected.
-#. You should see a label for "Rnederer" with "Custom" selected and a label for "Page controller" with "Hello Region" selected. If you see
-   a label for "Part" instead then click on the page above the country name to select the page. Then click the "Inspect" tab. (See image below)
-#. Now select "Automatic" from under the "Renderer" label in the "Inspect" tab.
+#. You should see a label for "Page Template" with "Custom" selected and a label for "Page controller" with "Hello Region" selected. If you
+   see a label for "Part" instead then click on the page above the country name to select the page. Then click the "Inspect" tab. (See image
+   below)
+#. Now select "Automatic" from under the "Page Template" label in the "Inspect" tab.
 #. Save draft and close the tab.
 
-.. image:: images/page-template-automatic.png
+.. image:: images/page-template-automatic.jpg
 
 You can select another `Page template` at any time, or even customize the presentation of a single content.

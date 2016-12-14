@@ -17,18 +17,20 @@ Similar to the site, we must also configure a view for the country
 4. In the toolbar, in the top right corner of the page, click the button with the monitor icon |monitoricon| to activate the Page Editor
    (blue background).
 
-.. image:: images/country-content-edit.png
-
+.. image:: images/country-content-edit.jpg
 
 
 5. In the Page Editor, select "Hello Region" from the template selector dropdown. If the dropdown arrow is not visible, double-click
    inside the option field or start typing "hello world" in it to see the options.
-#. Click the cog button |cogicon| to open the Inspection Panel (far right).
-#. In the Inspection Panel, click the "Insert" tab. This reveals a list of default components that can be placed into regions.
+
+The blue box with "Drop here" is the region that we defined in the project code and it's where we add components here in the page editor.
+
+6. Click the cog button |cogicon| in the toolbar to open the Inspection Panel (far right).
+#. In the Inspection Panel, click the "Insert" tab. This reveals a list of default component types that can be placed into regions.
 #. Click and drag the "Part" |particon| into the box on the page.
 #. A new dropdown option will appear. Select the "country" part.
 #. Save draft and close the content edit tab.
 
 When you click on the country in the content pane, you should see a preview of the rendered page, something like this:
 
-.. image:: images/country-content-rendered.png
+.. image:: images/country-content-rendered.jpg

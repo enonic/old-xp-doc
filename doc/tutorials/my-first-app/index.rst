@@ -4,7 +4,10 @@ My First App
 ============
 *This guide will lead you through the required steps to build the "Hello World" app for Enonic XP.*
 
-In this tutorial, you will learn how to initialize new application projects and deploy them. We will create a simple website that displays a list of countries and cities with a Google map of each city. Upon completion, you will be familiar with content types, page and part components, page templates, regions, and the Content Studio app. You won't be writing any code - just copy/paste from the examples.
+This three-part tutorial will cover the basics of creating a website application for Enonic XP. You will learn how to initialize new
+application projects and deploy them. We will create a simple website that displays a list of countries and cities with a Google map of each
+city. Upon completion, you will be familiar with content types, page and part components, page templates, regions, and the Content Studio
+app. You won't be writing any code - just copy/paste from the examples.
 
 The screen-shots below show the final product of this tutorial.
 
@@ -18,21 +21,9 @@ The screen-shots below show the final product of this tutorial.
 .. toctree::
   :maxdepth: 1
 
-  initialize-project
-  build-and-deploy
-  hello-world-site
-  adding-countries
-  country-part
-  hello-region-page
-  add-favorite-country
-  page-templates
-  country-list
-  hello-geo-world
-  create-cities
-  configure-city-part
-  go-online
-  pro-tips
-  next-steps
+  part-1
+  part-2
+  part-3
 
 The screenshot below shows the Content Studio interface with content on the left and a site preview on the right.
 
