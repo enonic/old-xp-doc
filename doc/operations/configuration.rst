@@ -85,6 +85,19 @@ smtpTLS
   Turn on Transport Layer Security (TLS) security for SMTP servers that require it. Default ``false``.
 
 
+.. _repo-configuration:
+
+Repo Configuration
+---------------------------
+
+snapshots.dir
+  Where to store snapshots
+
+.. literalinclude:: code/repo.properties
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.repo.cfg``
+
+
 .. _storage-config:
 
 Storage Configuration
