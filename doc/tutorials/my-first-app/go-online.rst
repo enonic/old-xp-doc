@@ -15,4 +15,8 @@ If you have placed your site on root level, you can also see your live site at t
 ``http://localhost:8080/portal/master/hello-world``.
 
 Well done - you just created your first App for Enonic XP - The Enonic team congratulates you - we look forward to seeing all the brilliant
-things you will make and are always looking for `feedback <https://discuss.enonic.com>`_.
+things you will make.
+
+We are always looking for `feedback <https://discuss.enonic.com>`_.
+
+Now take a look at :ref:`pro_tips`.

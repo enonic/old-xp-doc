@@ -15,4 +15,4 @@ the default values for these inputs by editing the `City list` part in the `Coun
 Now all of the countries will show the city maps with the new settings. You can override these defaults for any individual country by
 editing the Country content and changing its `City list` part configuration.
 
-.. image:: images/city-list-config.png
+.. image:: images/city-list-config.jpg

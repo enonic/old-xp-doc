@@ -1,0 +1,9 @@
+<site>
+  <config>
+    <input type="TextLine" name="googleApiKey">
+      <label>Google API key</label>
+      <help-text>Get your Google maps Javascript API key at: https://developers.google.com/maps/documentation/javascript/get-api-key</help-text>
+      <occurrences minimum="1" maximum="1"/>
+    </input>
+  </config>
+</site>

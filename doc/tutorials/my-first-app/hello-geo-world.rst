@@ -44,7 +44,9 @@ The part descriptor above has a configuration similar to those found in content 
   :language: javascript
   :caption: City list part controller - site/parts/city-list/city-list.js
 
-This controller uses :ref:`page_contributions` to put the Google Maps JavaScript into the head of the document.
+There are a few things to note in this controller file. It gets the part configuration for zoom and map type which were defined in the part
+descriptor. It also gets the site configuration for the Google Maps API key which we will define later in the site.xml file.
+:ref:`page_contributions` are used to put the Google Maps JavaScript into the head of the document.
 
 4. Add the part view file. It must be named city-list.html to match the "resolve" function in the controller.
 
@@ -52,6 +54,4 @@ This controller uses :ref:`page_contributions` to put the Google Maps JavaScript
   :language: html
   :caption: City list part view - site/parts/city-list/city-list.html
 
-5. If you didn't start XP in :ref:`gradle_dev_mode` then build and deploy your project one final time with ``./gradlew deploy``.
-
-All of the project's files are now complete. The rest of the steps will be performed in the Content Studio interface.
+There is just one more file to edit and then all the code for this project will be complete.

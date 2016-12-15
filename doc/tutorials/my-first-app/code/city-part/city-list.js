@@ -7,11 +7,15 @@ exports.get = function (req) {
 
     // Get the part configuration for the map
     var config = portal.getComponent().config;
-    var zoom = parseInt(config.zoom) && config.zoom <= 15 && config.zoom >= 1 ? config.zoom : 10;
+    var zoom = parseInt(config.zoom) || 10;
     var mapType = config.mapType || 'ROADMAP';
 
+    // Get the site configuration for the app
+    var siteConfig = portal.getSiteConfig();
+    var googleApiKey = siteConfig.googleApiKey;
+
     // String that will be inserted to the head of the document
-    var googleMaps = '<script src="http://maps.googleapis.com/maps/api/js"></script>';
+    var googleMaps = '<script src="http://maps.googleapis.com/maps/api/js?key=' + googleApiKey + '"></script>';
 
     var countryPath = portal.getContent()._path;
 

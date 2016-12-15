@@ -10,10 +10,11 @@ Site descriptor
 ---------------
 
 An application can serve many purposes and building sites is just one of them. The ``site.xml`` file is the descriptor that will let Enonic
-XP know that this app can be added to a site. Site-wide configurations can be defined in the config element of this file
-(see :ref:`site_descriptor`).
+XP know that this app can be added to a site. Response filters and controller mappings can be set up in the site descriptor as well as
+application configurations (see :ref:`site_descriptor`).
 
-A basic site.xml file was automatically created by the init-project script and we don't need to make any changes for now. ::
+A basic site.xml file was automatically created by the init-project script and we don't need to make any changes for now. Later in this
+tutorial we will edit site.xml to add a site-wide configuration. ::
 
   [project-root]/src/main/resources/site/site.xml
 
@@ -23,8 +24,7 @@ Application description and icon
 The ``application.xml`` file at ``[project-root]/src/main/resources/application.xml`` can be edited to provide a suitable description for
 your app. Go ahead and give your app a custom description.
 
-The ``application.svg`` file can be replaced with a custom app icon. The description and icon will be visible in the Applications admin
-tool.
+The ``application.svg`` file can be replaced with a custom app icon. The description and icon will be visible in the admin tools.
 
 .. note:: Most of the files we will be working with are below the "site" directory in the project folder - src/main/resources/site. All file
   paths from now on will begin with "site/".
