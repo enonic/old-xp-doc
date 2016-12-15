@@ -4,13 +4,13 @@ snapshot
 ========
 
 Create a snapshot of all or a single repository while running. The snapshots will be stored in
-the directory given in ``snapshots.dir`` option in the :ref:`storage-config` (default ``$xp_home/snapshots``).
+the directory given in ``snapshots.dir`` option in the :ref:`repo-configuration` (default ``$xp_home/snapshots``).
 Note that the first snapshot only stores markers in the repository for the current state.
 Subsequent snapshots stores the changes since the last snapshot.
 See :ref:`backup` for more information on snapshots.
 
 .. Attention::
- 
+
 	For a clustered installation, the snapshot-location must be on a shared file-system.
 
 **Usage:**

@@ -3,6 +3,8 @@ nGram
 
 An n-gram is a sequence of n letters from a string. The nGram-function is used to search for
 words or phrases beginning with a given search string. Typically, find-as-you-type searches will use this function.
+The max limit of an ngram is 12 character, meaning that search-strings over 12 characters will not match any ngrams.
+This means that the ngram should be combined with the fulltext-function or other query expressions to both match incomplete words and full phrases.
 
 .. TIP::
 
