@@ -25,6 +25,12 @@ Content Manager App
 
 This role allows users to access the Content Studio. Users can see content and sites, but cannot save changes or publish content.
 
+Content Manager Expert
+----------------------
+
+This role allows access to advanced features in the Content Studio admin tool,
+including seeing and editing the source code of HTML and text areas.
+
 Content Manager Administrator
 -----------------------------
 
