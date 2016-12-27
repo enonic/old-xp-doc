@@ -4,14 +4,14 @@ Enonic XP |version| documentation
 
 **Enonic XP is a unique and powerful application development stack - in a single runtime.**
 
-Lighting fast, and capable of scaling from a single server to large clusters - our mission is to make web development as predictable as building applications for traditional Operating System.
+Seriously fast, and scalable from a single server to large clusters - Enonic XP radically simplifies the application infrastructure required to deliver high performance mission critical applications and sites.
 
 **We simply call it the Web Operating System**
 
 .. image:: images/wos.jpg
 
 * NoSQL storage - Distributed content repository built on top of Elasticsearch
-* OSGi App Engine - Supports application development with serverside Javascript - using the popular `PurpleJS framework`_
+* App Engine - Supports deployment of serverside Javascript and Java apps - using the popular `PurpleJS framework`_
 * Powerful embedded Web Content Management - seamlessly blend applications and websites
 * Runs on the powerful Java Virtual Machine - can be deployed on just about any infrastructure.
 

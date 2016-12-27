@@ -3,79 +3,85 @@ Release Notes
 
 Enonic XP |version| is a minor release with new features and improvements.
 
-OptionSet Form Item
--------------------
-This new form item enables fast creation of conditional fields in a schema.
-Use optionSet to create more advanced forms by allowing the editor to select between the different options
-- for instance "big article" or "small article" or choose between different types of links such as "content link", "download link" or "external link".
-OptionSet also allow selecting two or more options at once.
+Node and Repository API
+-----------------------
+This feature marks a massive milestone for XP, giving developers direct access to the low-level node API for storing any type of data - leaving the Content API to focus on editorially created content.
+The node API is suitable for just about any kind of application data. Compared to traditional database the Node API offers features such as hierarchy, item-level access control, versioning, blob-support and more.
+The node and repo API is optimized for use by read-intensive applications, but also supports large data volumes including user-generated content.
 
-.. image:: images/singleselect.png
+Applications for accessing node structures and data will be made available on Enonic Market shortly after this release.
 
-.. image:: images/multiselect.png
-
-Check out the :ref:`option_sets` documentation.
-
-
-Expandable Help texts
----------------------
-Help texts can now be shown/hidden for an entire form, or for a single input
+NB! If you are planning to store log-data or similar write mostly data structures, we recommend you to consider other storage options that may be better suited for the task.
 
 .. image:: images/help.png
 
-
-Metrics Endpoint
-----------------
-System monitoring is now easier than ever as users can access detailed information about the system through the /status endpoint.
-Some of the things that are exposed are:
-
-* cluster
-* index
-* jvm (GC, threads, memory, etc)
-* metrics
-* osgi
-* server
+Read more about nodes and repositories :ref:`node_domain` documentation.
+Javascript API documentation :ref:`js-libraries` documentation.
 
 
-Asynchronous Task API
+Time-based publishing
 ---------------------
-The Task API enables developers to initialize background tasks, get progress of the task and all other tasks running in the cluster.
-A task will run both Javascript and Java code. Each task will be started as a separate thread.
+6.9 introduces the first version of time-based-publishing. This allows editors to schedule when new content goes online. Expiration date may be set for any content.
+Future versions will also support scheduling of modifications, deletes and move operations.
 
-Check out the Javascript library :ref:`js-libraries` documentation.
+.. image:: images/schedule.png
+
+Check out the :ref:`scheduled_publish` documentation.
+
+Native Tabs
+-----------
+To improve usability, screen real-estate and performance we have split Content Studio into two - the browse view and the editor.
+When editing items, each item will now load in a separate native tab similar to how Google Docs and Office 365 works.
+
+* Native tabs eliminates the need for "tabs in tabs", providing more screen real-estate and better tab handling
+* Improved loading times as less content must be downloaded for each view
+* Better stability - possible to reload a single editor, where the old solution would loose all other tabs when reloading Content Studio.
+* Deep linking and loading of a single editor is also much faster.
+* Easy navigation as native tabs now shows the name of content being edited plus icon
+
+.. figure:: images/native-tabs.png
+
+   Native tabs in Desktop browsers
 
 
-Global App configuration
-------------------------
-All applications can now easily be configured by adding a file named <application-name>.cfg in the config directory.
-The configuration is automatically accessible to both Javascript and Java code.
-Updating a configuration file will automatically restart the corresponding app, injecting the new configuration.
-The configuration files must be in standard properties format.
+.. figure:: images/mobile-tabs.png
+
+   The benefit of native tabs has proven extremely beneficial when working with small screens.
+
+Mobile UI Improvements
+----------------------
+The mobile interface has several new usability improvements
+
+* Use of native tabs frees up space and simplifies navigation and speed
+* Content Studio navigation view has an updated layout and more intuitive navigation
+* Content Editor preview has been improved to leave more space for the content
+* Sleek transitions between panels
+
+.. image:: images/mobile-ui.png
 
 
 Libraries
 ---------
 
-* http-lib - added support for basic auth
-* Content Lib
-
-  * refresh() function to force refresh of index
-  * refresh() parameter added to contentLib.create(), default is true
-
-
+* event-lib - Adds support for listening to Java events using Javascript files
+* repo-lib - Enables creation and deletion of repositories for isolated storing of nodes using Javascript
+* node-lib - Create and manipulate nodes directly from Javascript
 
 Minor improvements
 ------------------
 
-* Macros - HTML document is now added to macro context, allowing you to create macros such as Table of Contents.
-* Schemas - Checkbox input type can now be aligned - for instance left to create nicer form layouts
-* Schemas - Custom selector now supports passing of parameters
-* Application lifecycle handling - Disposer will be executed when applications are stopped
-* Javascript error handlers now support post processing
-* Content Studio - preview improved user experience for mobile users
-* Page editor - highlighting page component when mouse over for better usability
-* Publishing wizard - Shows progress for long running tasks (using the task API)
+* CMS Expert Role - Users must be in this role to access HTML editor source mode
+* Content Grid - Dim content items for users with read-only access
+* main.js - If available, the resources/main.js file is executed when the application is started
+* Site Configuration permissions check - Only Administrators or users with the "Content Admin" role can add/remove or edit applications on a site.
+* Caption, Artist and Copyright inputs have been added to the Vector media type
+* Configuration files can now be loaded from multiple paths, simplifying config overriding for instance
+* Better handling of page errors in the preview panel
+* Support for JSON in require statements
+* File extensions are removed by default from media display names
+* 50+ bugs fixed
+
 
 Changelog
 ---------
-For a complete list of changes and bugfixes see http://github.com/enonic/xp/releases/tag/v6.8.0
+For a complete list of changes and bugfixes see http://github.com/enonic/xp/releases/tag/v6.9.0
