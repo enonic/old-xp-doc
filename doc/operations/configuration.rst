@@ -3,22 +3,41 @@
 Configuration
 =============
 
-Enonic XP, system modules, and 3rd party modules can easily be configured by editing the files
+Enonic XP and 3rd party applications can easily be configured by editing the files
 in the ``$XP_HOME/config/`` directory.
 
-When changing files ending with ``.cfg``, their respective modules will automatically
+When changing files ending with ``.cfg``, it's respective application will automatically
 restart with the new configuration. Files ending with ``.properties`` require a full restart of
-Enonic XP to be applied. In a clustered environment each node must be restarted.
+Enonic XP to be applied. In a clustered environment, configuration files must be distributed to all nodes where it is relevant.
 
 
-System Configuration
---------------------
+System Properties
+-----------------
 
-The default ``system.properties`` are listed below.
+The  ``$XP_HOME/config/system.properties`` file must always be placed in this location. Any changes to this file will require a full restart of the node to take effect
+The standard version of this file is listed below.
 
 .. literalinclude:: code/system.properties
    :language: properties
    :caption: ``$XP_HOME/config/system.properties``
+
+
+With Enonic XP versjon 6.9 a simple but powerful feature called "Config Paths" was introduced.
+In addition to the default ``$XP_HOME/config/`` directory, you may now instruct XP to scan multiple different folders when looking for config files.
+
+This provides great flexibility and can simplify configuration management. For instance:
+
+* Allowing selected users to manage application config, but not system configuration
+* Overriding standard config on selected nodes only
+
+Below is an example usage of config path where it will scan three directories in the defined order.
+
+::
+
+  xp.config.paths = ${xp.home}/config,/usr/local/xp/${node.group},/etc/xp/config
+
+
+Please note that ${xp.home}/config is no longer required to be in the path.
 
 
 .. _configuration-vhost:
