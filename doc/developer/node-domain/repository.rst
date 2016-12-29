@@ -3,11 +3,12 @@
 Repository
 ==========
 
-A repository is a place where nodes can be stored. Data stored in a repository will
+A repository is silo where nodes can be stored. Data stored in a repository will
 typically belong to a common domain. Fetches and searches are by default executed against
 a single repository, so it makes sense to keep data from different domains separated in different repositories.
-For instance, in the Enonic XP CMS, content and data concerning user management are separated into two
-repositories. The Content Studio application uses the ``cms-repo`` repository, and the
+
+For instance, in the Enonic XP, content and data concerning user management are separated into two
+repositories. Content Studio uses the ``cms-repo`` repository, and the
 User Manager application uses the ``system-repo`` repository.
 
 When nodes are stored in the repository, two things happens:
@@ -57,11 +58,6 @@ Again, doing a push-operation from 'draft' to 'master' will result in both nodes
 
 Repository characteristics
 --------------------------
-
-.. NOTE::
-
-  Currently, there is no API for creating and managing repositories, so this
-  information is for reference only at the moment.
 
 A repository should be tuned to match the characteristic of the data you want to store, e.g:
 

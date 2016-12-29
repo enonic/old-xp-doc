@@ -54,6 +54,8 @@ This allow the user to schedule a publish by specifying an "Online from" date/ti
 The content status of published contents that are not yet available or not available anymore will have the additional mention "(Pending)"
 or "(Expired)".
 
+.. note:: Changes to online items will be effective immediately - i.e. modified, moved, deleted.
+
 .. image:: images/schedule-publish.png
 
 
@@ -68,4 +70,3 @@ appear in parenthesis in the red "Unpublish" button at the bottom of the dialogu
 Content that has the status **Pending delete** will be removed and taken offline when unpublished.
 
 .. image:: images/unpublish-dialogue.jpg
-

@@ -5,18 +5,24 @@ Enonic XP |version| is a minor release with new features and improvements.
 
 Node and Repository API
 -----------------------
-This feature marks a massive milestone for XP, giving developers direct access to the low-level node API for storing any type of data - leaving the Content API to focus on editorially created content.
-The node API is suitable for just about any kind of application data. Compared to traditional database the Node API offers features such as hierarchy, item-level access control, versioning, blob-support and more.
-The node and repo API is optimized for use by read-intensive applications, but also supports large data volumes including user-generated content.
+This feature marks a massive milestone for XP, giving developers direct access to the low-level node API for persisting application-specific domain data.
 
-Applications for accessing node structures and data will be made available on Enonic Market shortly after this release.
+Basic capabilities compared to SQL:
 
-NB! If you are planning to store log-data or similar write mostly data structures, we recommend you to consider other storage options that may be better suited for the task.
+* Powerful search and aggregation capabilities
+* Supports hierarchy, branches, item-level access control, versioning and blobs.
+* No transaction concept, but you may use branches to simulate transactions
+* Optimized for high-performance read-intensive applications
+* Suitable for large data volumes including user-generated content.
 
-.. image:: images/help.png
+NB! For write mostly use-cases such as logging we recommend you to consider other storage options that may be better suited for the task.
 
-Read more about nodes and repositories :ref:`node_domain` documentation.
-Javascript API documentation :ref:`js-libraries` documentation.
+.. figure:: images/repoxplorer.png
+
+   Screenshot from the Repo XPlorer app which will be available on Enonic Market soon
+
+* Read more about nodes and repositories :ref:`node_domain` documentation.
+* Javascript API documentation :ref:`js-libraries` documentation.
 
 
 Time-based publishing
@@ -26,7 +32,7 @@ Future versions will also support scheduling of modifications, deletes and move 
 
 .. image:: images/schedule.png
 
-Check out the :ref:`scheduled_publish` documentation.
+Check out the :ref:`publish` documentation.
 
 Native Tabs
 -----------
