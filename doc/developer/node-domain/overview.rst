@@ -38,7 +38,7 @@ We were unable to find any single solution that was sufficiently simple and incl
 desired feature set - so we decided to build our own; the Enonic Content Repository.
 
 The Enonic Content Repository is a place where you can store data,
-or more specific: :ref:`node-domain-nodes`.
+or more specific, :ref:`node-domain-nodes`.
 
 It is built on top of Elasticsearch and exposes many of it's capabilities in search and aggregations
 and scalability - but in addition, provides the following capabilities:
@@ -48,13 +48,11 @@ and scalability - but in addition, provides the following capabilities:
 * Complete Access Control and security model
 * Blob support - using shared filesystem and append-only approach
 * Repository and Branch concepts for content staging
-* Schemaless - Add any property you like, at any time
-* Rich set of value types (`HTMLPart`, `XML`, `Binary`, `Reference` etc..)
+* Schema-less - Add any property you like, at any time
+* Rich set of value types (`Binary`, `Reference`)
 * SQL-like query syntax
 
 The Enonic Content Repository itself contains one or more separate repositories based on the application need.
 For instance, an application could demand a setup having three repositories - one for application data, one for users and one for logging:
 
 .. image:: images/sub-repos.png
-
-The reasons for having several separated repositories are many, and explained in detail in the :ref:`node-domain-repository` below.

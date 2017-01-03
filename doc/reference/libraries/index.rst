@@ -22,7 +22,9 @@ Where ``name`` is the name of the library. Here's a list of available libraries:
 * lib-io
 * lib-mail
 * lib-mustache
+* lib-node
 * lib-portal
+* lib-repo
 * lib-task
 * lib-thymeleaf
 * lib-xslt

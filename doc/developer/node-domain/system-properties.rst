@@ -9,29 +9,29 @@ reserved ``_`` as a starting character for system properties.
 
 Below are the system properties explained.
 
+_childOrder
+  Default ordering of children when doing find children if no other order expression is given
+
 _id
   Holds the id of the node, typically generated automatically in the form of a UUID.
 
+_indexConfig
+  Specification on how to index properties
+
+_manualOrderValue
+    Numeric order value used for the builtin manual ordering
+
 _name
   Holds the name of the node. The name must be unique within its scope (all nodes with same parent).
+
+_nodeType
+  Used to create collections for nodes in a repository.
 
 _parentPath
   Reference to parent node path.
 
 _path
   The path is resolved from the node name and parent path.
-
-_timestamp
-  The last change to the node version.
-
-_nodeType
-  Used to create collections for nodes in a repository.
-
-_versionKey
-  The id of the node version.
-
-_state
-  Used for keeping state of a node in a branch.
 
 _permissions_read
   The principals that have read access.
@@ -53,3 +53,12 @@ _permissions_readpermissions
 
 _permissions_writepermissions
   The principals that have access to change the node permissions.
+
+_state
+  Used for keeping state of a node in a branch.
+
+_timestamp
+  The last change to the node version.
+
+_versionKey
+  The id of the node version.

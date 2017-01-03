@@ -1,17 +1,18 @@
 .. _node_domain:
 
-Node Domain
+Storage
 ===========
 
-At the core of Enonic XP lies a distributed data storage - all persistent items in Enonic XP are stored as nodes.
+At the core of Enonic XP lies a distributed data storage with strong search-capabilities.
 
 .. toctree::
    :maxdepth: 1
 
    overview
+   repository
+   branch
    nodes
    property
    value-types
    system-properties
-   repository
    blobstore
