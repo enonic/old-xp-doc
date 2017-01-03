@@ -1,10 +1,35 @@
 .. _clustering:
 
-Clustering
-==========
+Cluster Deployment
+==================
 
 Introduction
 -------------
+
+Consider deploying an XP cluster if you are building applications or sites that require
+
+* High availability
+* High performance
+* Both above
+
+A clustered deployment of Enonic XP enables you to distribute load across servers (aka nodes) and at the same time increased resilience.
+If one node fails the rest of the cluster will still be running and keep your services available.
+
+
+Ways to Cluster
+***************
+
+The minimal and simplest cluster deployment is three nodes - identically configured.
+However There are many available configurations when deploying a cluster, here are some factors to consider
+
+* Dedicated nodes for specific sites or services
+* Dedicated admin nodes
+* Dedicated storage nodes
+* Dedicated master nodes
+
+.. ATTENTION::
+   Clusters with a paired number of nodes should be avoided due to the so-called split-brain scenario - discussed further below.
+
 
 System Requirements
 *******************
@@ -17,13 +42,13 @@ Enonic XP clusters have minimal requirements to infrastructure, it needs:
 .. image:: images/logical-cluster.png
 
 These components are standard ingredients in modern clouds and they are readily available as software as well.
-An XP cluster can also be launched on a regular computer for testing or development purposes.
+An XP cluster can also be launched on a single computer for testing or development purposes.
 
 
 Basic cluster setup on local machine
 **************************************
 
-We have tried to make deployment of XP as simple and fail-safe as possible. By default it is configured to run on a local computer and it
+We have strived to make Enonic XP deployment as simple and fail-safe as possible. By default it is configured to run on a local computer and it
 will not start looking for nodes in the network until you configure it to do so.
 
 To test a cluster on your local machine, you need to do the following:
@@ -47,11 +72,11 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
  ::
 
     http.port = somePort
- 
+
  4. **Enable clustering:** In ``$XP_DISTRO/home/config/com.enonic.xp.elasticsearch.cfg`` set the property ``node.local`` to ``false``
- 
+
  ::
- 
+
     node.local = false
 
  5. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
@@ -221,8 +246,10 @@ nodes and rejoin the cluster.
 
 So what about a 2 node cluster? It will be impossible to avoid a possible split-brain scenario with this setup. It's highly recommended to
 add one node as a tie-breaker. This node may act as a dedicated master node (with `node.data = false`, see :ref:`cluster-stability-settings`)
-which enables it to run on less expensive hardware since it will not handle any external requests.
+which enables it to run on reduced hardware since it will not handle any external requests.
 
+A common practice for increased stability is setting up dedicated master nodes.
+These nodes will then never be affected by traffic peaks and can safely keep track of the cluster state.
 
 .. TIP::
 
@@ -240,7 +267,6 @@ which enables it to run on less expensive hardware since it will not handle any 
     down to complex scenarios where e.g a firewall cuts the connection in one direction between two nodes
 
     *Node not responding*
-
 
     If a node does not get a response on a ping to the master node within a set timeout, it will consider it as dead and invoke an election
     process. Likewise, the master node expects that a slave node will respond within a certain amount of time. This is usually caused by a
