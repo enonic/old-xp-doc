@@ -28,3 +28,4 @@ view** appears when content is created or edited. All actions and features will 
    input-types
    content-security
    components
+   ../shortcuts

@@ -105,3 +105,6 @@ on the source of the text will come with it.
 
 .. tip:: Although HTML Area comes with default toolbar, it can be customized to exclude specific (or all) tools and/or include other tools that are supported.
    Read about this in description of :ref:`htmlarea_type` input config.
+
+
+.. tip:: Read about keyboard shortcuts supported in the HTML Area in our :ref:`Keyboard shortcuts<htmlarea_shortcuts>` section.
