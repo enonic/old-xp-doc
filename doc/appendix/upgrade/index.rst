@@ -46,3 +46,15 @@ Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all no
 
 5. Start the new installation
 *****************************
+
+
+Strict Virtual Hosting
+----------------------
+
+If the virtual hosting is enabled (see :ref:`configuration-vhost`),
+a request on a resource not included by any virtual host mapping will return a 404. 
+
+If you are using the Toolbox CLI, you will want to make sure that the path "/api" is included. 
+
+.. literalinclude:: code/vhost.properties
+   :language: properties
