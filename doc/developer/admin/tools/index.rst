@@ -15,12 +15,12 @@ Each tool will run in it's own browser tab - here are some of the reasons for th
 
 **Standard Tools**
 
-Enonic XP ships with the following tools by default:
+Enonic XP is shipped with the following tools by default:
 
-* Home (The default tool)
-* Applications (Install, stop, start and uninstall applications)
-* Content Studio (Create and manage content and sites)
-* Users (Create, setup and manage users, groups and roles)
+* :ref:`home_tool` (The default tool)
+* :ref:`application_tool` (Install, stop, start and uninstall applications)
+* :ref:`content_studio` (Create and manage content and sites)
+* :ref:`users_tool` (Create, setup and manage users, groups and roles)
 
 **Launcher**
 
