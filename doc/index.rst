@@ -27,7 +27,7 @@ Enjoy! - *The Enonic Development Team*
    tutorials/index
    developer/index
    operations/index
-   editor/index
+   admin/index
    reference/index
 
 .. toctree::

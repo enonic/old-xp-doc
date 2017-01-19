@@ -1,27 +1,15 @@
+.. _content_studio_shortcuts:
+
 Keyboard shortcuts
 ==================
 
 This section describes the shortcuts that are available for power users in the Content Studio.
 
-Shortcut keys can be revealed for all available options by pressing F2 on your keyboard. Hovering your cursor over a button or menu item
-will reveal the shortcut for that operation if one is available.
+.. hint:: Press F2 to reveal all available shortcuts for a view
 
-.. _users_admin_shortcuts:
 
-Users Admin tool
-++++++++++++++++
-+------------------------+----------------+------------------+
-|Users Admin tool        |MAC OSX         |Windows           |
-+========================+================+==================+
-|New user                |Cmd+Alt+N       |Ctrl+Alt+N        |
-+------------------------+----------------+------------------+
-|Edit selected user      |F4              |F4                |
-+------------------------+----------------+------------------+
-
-.. _content_studio_shortcuts:
-
-Content Studio
-++++++++++++++
+Browse View
++++++++++++
 +----------------------------------+----------------+------------------+
 |Content grid                      |MAC OSX         |Windows           |
 +==================================+================+==================+
@@ -32,6 +20,8 @@ Content Studio
 |Delete selected content           |Cmd+Del         |Ctrl+Del          |
 +----------------------------------+----------------+------------------+
 
+Content Editor
+++++++++++++++
 +----------------------------------+----------------+------------------+
 |Edit content wizard               |MAC OSX         |Windows           |
 +==================================+================+==================+
@@ -44,8 +34,8 @@ Content Studio
 
 .. _htmlarea_shortcuts:
 
-HtmlArea / Text editor
-++++++++++++++++++++++
+Rich Text Editor
+++++++++++++++++
 +------------------------+------------------------+----------------------+
 |HtmlArea editor         |MAC OSX                 |Windows               |
 +========================+========================+======================+

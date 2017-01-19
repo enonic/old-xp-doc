@@ -1,7 +1,7 @@
 .. _move_content:
 
-Move content
-============
+Move
+====
 
 The toolbar's "Move" button opens the **Move item with children** dialogue. This feature moves selected items with all children and current
 permissions to another place in the tree grid. Type to search, or use the dropdown arrow, to find the new parent content where the selected

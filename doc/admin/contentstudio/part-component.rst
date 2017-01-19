@@ -4,7 +4,7 @@ Part component
 ==============
 
 Part components are reusable, configurable components that can be placed into any region of a page with the page editor
-:ref:`inspection_panel`. This allows content editors to build and customize pages without writing any code. There are no built-in part
+:ref:`context_panel`. This allows content editors to build and customize pages without writing any code. There are no built-in part
 components. Each one is custom made in the application code. Parts are typically created to render custom content, lists of content, forms,
 etc.
 
@@ -19,5 +19,3 @@ component can be added to multiple pages, or even multiple times in the same pag
 values.
 
 .. image:: images/part-component-selector.jpg
-
-

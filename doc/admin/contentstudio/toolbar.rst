@@ -11,7 +11,7 @@ available in the context menu that appears when right-clicking on a content item
 
 * **New**: Opens the :ref:`create_content_dialogue` dialogue for creating new content.
 
-* **Edit**: Opens the content for editing in a new browser tab. See :ref:`edit_view`.
+* **Edit**: Opens the content for editing in a new browser tab. See :ref:`content_editor`.
 
 * **Delete**: Opens the **Delete item** dialogue for the selected content. Read about :ref:`delete`.
 

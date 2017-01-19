@@ -19,7 +19,7 @@ Using fragments
 ---------------
 
 Once a fragment content has been created, it can be added to pages with the page editor. Drag a fragment placeholder from the "Insert" tab
-of the :ref:`inspection_panel` to the desired location on the page. Use the dropdown selector in the placeholder to find the desired
+of the :ref:`context_panel` to the desired location on the page. Use the dropdown selector in the placeholder to find the desired
 fragment content. Once selected, the fragment will appear.
 
 .. image:: images/fragments.jpg

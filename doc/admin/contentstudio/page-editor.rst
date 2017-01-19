@@ -1,10 +1,10 @@
 .. _page_editor:
 
-Page Editor panel
-=================
+Page Editor
+===========
 
 The page editor is a modifiable preview of the content page that will open automatically when a content that has a supporting page template
-is created or edited. It is used in conjunction with the :ref:`inspection_panel` to add, remove, and move components around the page with
+is created or edited. It is used in conjunction with the :ref:`context_panel` to add, remove, and move components around the page with
 drag and drop. The page editor can be closed and reopened with the icon on the far right of the toolbar that looks like a computer monitor.
 
 A component can be selected in the page editor by clicking on it. This will highlight the selected component and show its configuration in

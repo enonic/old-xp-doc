@@ -3,9 +3,6 @@
 ID Providers
 ============
 
-.. WARNING::
-  ID Providers support is experimental.
-
 An ID Provider is a pluggable authentication module, contained inside an application.
 Install an existing ID Provider or write your own, configure it and associate it to a user store.
 

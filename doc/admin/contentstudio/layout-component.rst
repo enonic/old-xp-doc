@@ -16,6 +16,6 @@ its configuration options will appear in the inspect panel. Some layout componen
 
 .. image:: images/layouts.jpg
 
-While editing a page, it may be difficult to select a layout to access its configuration. In this case,  the :ref:`components_view` can help
+While editing a page, it may be difficult to select a layout to access its configuration. In this case,  the :ref:`components_panel` can help
 to select the layout. Alternatively, a part within the layout can be selected and then that part's parent can be selected from the
 right-click context menu. Continue selecting the parent component until the layout is the selected component.

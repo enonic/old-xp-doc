@@ -13,6 +13,3 @@ in the Content Studio. The only difference is that the formatting toolbar is at 
 
 In the :ref:`page_editor`, drag a Text component from the inspect panel to the desired region on the page. A cursor will appear inside the
 text component and editing can begin. If another component is selected, the text component will need to be double-clicked to resume editing.
-
-
-

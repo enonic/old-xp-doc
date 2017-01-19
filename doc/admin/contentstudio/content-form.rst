@@ -1,13 +1,13 @@
-.. _content_editor:
+.. _content_form:
 
-Content Editor panel
-====================
+Content Form
+============
 
 This panel appears on the left side of the page when content is created or edited. It is where the form appears in which content data is
 entered. The structure and fields in the form are determined by the **content type** which is defined in the application code. The content
 editor panel can be collapsed to give the page editor more room by clicking the arrow icon on the top right of the panel.
 
-The top of the content editor panel has the content type icon, the Display Name, and the content path name. The default icon can be replaced
+The top of the content form has the content type icon, the Display Name, and the content path name. The default icon can be replaced
 with an image file by clicking on it. As the Display Name is entered, the path name will automatically be filled in with a URL-friendly
 version. The path will not update automatically once the content has been published. This is to prevent accidental breaking of external
 hard-coded links. The path name can always be changed manually. It is also possible for the Display Name to be generated automatically while

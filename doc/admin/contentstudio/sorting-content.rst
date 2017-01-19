@@ -1,7 +1,7 @@
 .. _sorting_content:
 
-Sorting content
-===============
+Sort
+====
 
 Child items of any content can be sorted in a number of ways through the **Sort items** dialogue. It is accessed with the **Sort** button in
 the toolbar or context menu, or by clicking a "sort" icon that appears for previously sorted content.

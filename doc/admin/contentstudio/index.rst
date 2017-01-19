@@ -9,7 +9,7 @@ building and extending web applications from the components of the installed app
 Opening the Content Studio reveals the :ref:`browse_view` with a menu bar, content tree grid, preview panel and details panel. The **Edit
 view** appears when content is created or edited and will open in a new browser tab. All actions and features will be described in the following pages.
 
-.. NOTE::
+.. HINT::
    The Content Studio is fully responsive, so panels may stack or collapse if the screen is small or narrow. This
    documentation will assume a large desktop view.
 
@@ -19,10 +19,7 @@ view** appears when content is created or edited and will open in a new browser 
    :maxdepth: 1
 
    browse-view
-   edit-view
-   actions
+   content-editor
    content-types
-   input-types
-   content-security
-   components
-   ../shortcuts
+   actions
+   shortcuts

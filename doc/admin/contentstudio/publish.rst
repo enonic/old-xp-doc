@@ -1,7 +1,7 @@
 .. _publish:
 
-Publishing content
-==================
+Publish
+=======
 
 **Publishing** is a simple but important concept for working with content in Enonic XP. The basic concept of publishing is that it makes
 content viewable to others outside of the Content Studio.

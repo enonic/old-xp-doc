@@ -1,7 +1,7 @@
 .. _content_actions:
 
-Content actions
-===============
+Actions
+=======
 
 Content can be created, edited, deleted, duplicated, moved, sorted and published.
 
@@ -14,4 +14,3 @@ Content can be created, edited, deleted, duplicated, moved, sorted and published
    move-content
    sorting-content
    publish
-

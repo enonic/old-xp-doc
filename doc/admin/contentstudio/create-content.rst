@@ -1,7 +1,7 @@
 .. _create_content_dialogue:
 
-Create Content
-==============
+New
+===
 
 All content created with the Content Studio begins with the **Create Content** dialogue. This dialogue has two functions. First it assists
 the user with finding the type of content to be created. Second, it opens the edit view in a new internal tab.

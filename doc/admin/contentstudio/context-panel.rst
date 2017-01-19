@@ -1,7 +1,7 @@
-.. _inspection_panel:
+.. _context_panel:
 
-Inspection Panel
-================
+Context Panel
+=============
 
 This panel is a multi-function tool that can be toggled open and closed with the cog icon at the right of the toolbar. It is used in
 conjunction with the :ref:`page_editor` to add and configure components on the page and to emulate various device sizes. The inspection panel
@@ -14,13 +14,14 @@ This tab has a list of :ref:`cs_components` that can be added to the page in a t
 type placeholder to a region in the page editor. The second step is to select the specific component from a dropdown selector in the
 placeholder.
 
+.. image:: images/inspect-insert.jpg
+
 For example, to add a part component called "Categories" to the page, simply click the part icon (puzzle piece) and drag it to a region in
 the page editor. A red circle appears when the component is dragged over an area where it cannot be dropped. A green checkbox appears when
 dragged over valid locations and a blue box shows where the component will land. Once the part placeholder is dropped, it will have a
 combo-box where the "Categories" part can be selected from the list. When a component placeholder is selected, the inspection panel will
 also show a combo-box with a list of available part components.
 
-.. image:: images/inspect-insert.jpg
 
 Inspect tab
 -----------

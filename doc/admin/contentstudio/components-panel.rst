@@ -1,7 +1,7 @@
-.. _components_view:
+.. _components_panel:
 
-Component View
-==============
+Components Panel
+================
 
 This tool opens in a draggable internal window activated by the clipboard icon in the toolbar. It displays a hierarchical tree
 representation of all the components and regions on the page, including the page itself. This tool is extremely valuable in situations when
