@@ -11,6 +11,5 @@ essential for the proper management of your applications.
 
    userstore
    roles
-   ../shortcuts
 
 .. image:: images/user-admin.jpg

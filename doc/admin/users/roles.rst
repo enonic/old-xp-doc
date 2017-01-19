@@ -51,4 +51,5 @@ Users automatically have this role when they are logged into the system in any w
 Everyone
 --------
 
-This is a special role that all users and site visitors have. Content with this role will be publicly available to any non-logged in visitor.
+This is a special role that all users and site visitors have. This role is typically used to grant read permissions to publicly available content.
+Unauthenticated visitors, as well as authenticated users will all have this role.
