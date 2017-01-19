@@ -26,7 +26,7 @@ Content Manager Expert
 ----------------------
 
 This role allows access to advanced features in the Content Studio admin tool,
-including seeing and editing the source code of HTML and text areas.
+including seeing and editing the source code of HTML area fields in content and text components on pages.
 
 Content Manager Administrator
 -----------------------------
