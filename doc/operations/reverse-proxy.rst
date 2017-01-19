@@ -1,11 +1,11 @@
-.. _webproxy:
+.. _reverse_proxy:
 
-Web Proxy Servers
-=================
+Reverse Proxy Servers
+=====================
 
-A common and recommended way to deploy Enonic XP is by using proxy servers.
-Adding this layer of services provides additional flexibility beyond what is offered directly by XP.
-Some benefits are:
+A common and recommended way to deploy Enonic XP is by using reverse proxy servers.
+Adding this layer of services to your network provides additional flexibility beyond what is offered directly by XP.
+Some potential benefits are:
 
 * Vhost routing to XP and other systems
 * Additional network security
