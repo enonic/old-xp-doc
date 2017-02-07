@@ -54,8 +54,9 @@ The search-string supports a set of operator:
 * ``-`` negates a single token.
 * ``*`` at the end of a term signifies a prefix query.
 * ``(`` and ``)`` signify precedence.
+* ``"`` and ``"`` wraps a number of tokens to signify a phrase for searching
 * ``~N`` after a word signifies edit distance (fuzziness) with a number representing `Levenshtein distance`_.
-* ``~N`` after a phrase signifies slop amount.
+* ``~N`` after a phrase signifies slop amount (how far apart terms in phrase are allowed)
 
 .. _Levenshtein distance: http://en.wikipedia.org/wiki/Levenshtein_distance
 
@@ -104,3 +105,15 @@ Match if any field under data-set data contains "fish" and not "boat".
   .. code-block:: sql
 
     fulltext("data.*", "fish -boat", "AND")
+
+Match exact phrase.
+
+  .. code-block:: sql
+
+    fulltext('data.*', '"gone fishing today"', "AND")
+
+Match phrase where maximum distance between words are 2.
+
+      .. code-block:: sql
+
+        fulltext('data.*', '"gone fishing today"~2', "AND")
