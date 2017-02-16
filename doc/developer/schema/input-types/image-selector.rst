@@ -11,7 +11,6 @@ Supported image types are:
 * Gif
 * Svg
 
-
 .. literalinclude:: code/imageselector.xml
    :language: xml
 
