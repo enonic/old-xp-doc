@@ -1,4 +1,12 @@
 <!--
+Only content from the current site (but from any location), e.g
+  /mySite/fish.jpg
+  /mySite/articles/new-blog-post
+  /mySite/someFolder/anotherFolder/rubarb/lettuce
+-->
+<allowPath>${site}/*</allowPath>
+
+<!--
 All children of <site>/people, e.g
   /mySite/people/myContent
   /mySite/people/myGroup/anotherContent
