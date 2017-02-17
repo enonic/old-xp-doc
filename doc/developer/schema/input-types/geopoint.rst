@@ -13,3 +13,6 @@ Stores a GPS coordinate as two comma-separated decimal numbers.
 
 .. literalinclude:: code/geopoint.xml
    :language: xml
+
+common fields
+  All Input Types have these :ref:`Common Fields <input_types_common_fields>`

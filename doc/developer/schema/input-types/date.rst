@@ -9,6 +9,9 @@ The default format is ``yyyy-MM-dd``.
 .. literalinclude:: code/date.xml
    :language: xml
 
+common fields
+  All Input Types have these :ref:`Common Fields <input_types_common_fields>`
+
 default
     The format for the default date value can be:
 

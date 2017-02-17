@@ -12,6 +12,9 @@ Below there are two sample usages of CustomSelector input type:
 .. literalinclude:: code/my-custom-selector.xml
    :language: xml
 
+common fields
+  All Input Types have these :ref:`Common Fields <input_types_common_fields>`
+
 service
   The name of a JavaScript service file, located under ``/resources/services/[serviceName]/[serviceName].js``.
   You can also refer to a service file in another application, for example *com.myapplication.app:myservice*.

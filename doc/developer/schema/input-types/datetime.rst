@@ -10,6 +10,9 @@ The format is ``yyyy-MM-dd hh:mm`` for example, ``2015-02-09T09:00``. The date-t
 .. literalinclude:: code/datetime.xml
    :language: xml
 
+common fields
+  All Input Types have these :ref:`Common Fields <input_types_common_fields>`
+
 timezone
   ``true`` if timezone information should be used. Default is ``false``.
 

@@ -11,6 +11,8 @@ The following XML configuration is common for all input types:
 .. literalinclude:: code/input-type.xml
    :language: xml
 
+.. _input_types_common_fields:
+
 @name
   The ``name`` attribute is the technical name used in templates and result
   sets to refer to this value.
