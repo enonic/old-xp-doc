@@ -13,7 +13,7 @@ Here is an example of an item set with two inputs. The resulting form will allow
 .. literalinclude:: code/item-set.xml
    :language: xml
 
-name
+name (required)
   The set needs a name for reference in result sets.
 
 label

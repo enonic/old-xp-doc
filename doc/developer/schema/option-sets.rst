@@ -16,7 +16,7 @@ Here is an example of a multi-select option set with options expanded by default
 .. literalinclude:: code/option-set.xml
    :language: xml
 
-@name
+@name (required)
   The set needs a name for reference in result sets.
 
 label
@@ -31,7 +31,7 @@ occurrences
 help-text
   Optional. Help text for the entire option set.
 
-options
+options (required)
   Container of options.
 
    @minimum
@@ -43,13 +43,13 @@ options
       options rendered as checkboxes. Setting the attribute value to 1 will render options as radio-buttons (single-select option set).
       Once the maximum of selected options is reached, the rest of the options will be disabled.
 
-   option
+   option (required)
      Container of the option form.
 
-      @name
+      @name (required)
          Option name. Must be unique within the option set.
 
-      label
+      label (required)
          Label of the option's checkbox or radio button.
 
       help-text
