@@ -29,7 +29,7 @@ There are four positions where contributed content can be inserted in the page:
 A simple usage example:
 
 .. literalinclude:: code/page-contribution-simple.json
-   :language: json
+   :language: javascript
 
 A more full usage example:
 
