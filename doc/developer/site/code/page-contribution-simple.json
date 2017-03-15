@@ -1,5 +1,5 @@
 {
-  "body": body, // HTML code from thymeleaf.render function (or similar)
+  "body": body,
   "pageContributions": {
     "headEnd": "<some script />"
   }
