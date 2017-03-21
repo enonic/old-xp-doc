@@ -117,4 +117,4 @@ site/layouts/
 
 views/
   Views are any kind of files that are used for rendering. The folder is optional, as view files can
-   be placed anywhere you want, just keep in mind what path to use when resolving them (see :ref:`views`).
+  be placed anywhere you want, just keep in mind what path to use when resolving them (see :ref:`views`).
