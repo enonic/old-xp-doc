@@ -6,9 +6,6 @@ A filter is doing none of these steps, its only filtering the result from the qu
 
 The query filters are applied as a root level property in query-api's, here is an example from using the content-API
 
-
-Here's an example of using the exists filter:
-
   .. literalinclude:: code/content-api-query.js
      :language: js
 
