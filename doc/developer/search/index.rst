@@ -10,6 +10,7 @@ retrieving data, a rich search-API is paramount.
    overview
    index-instructions
    indexed-content-properties
+   filters/index
    query-functions/index
    order-functions/index
    aggregations/index
