@@ -8,6 +8,9 @@ A ComboBox needs a list of options.
 .. literalinclude:: code/combobox.xml
    :language: xml
 
+common fields
+   All Input Types have these :ref:`Common Fields <input_types_common_fields>`
+
 option
   This element defines the option label. The ``value`` attribute defines the
   actual value to set when this option is selected. Multiple ``option``

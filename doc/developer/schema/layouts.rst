@@ -14,7 +14,7 @@ label of the field set.
 .. literalinclude:: code/field-set.xml
    :language: xml
 
-@name
+@name (required)
   The field set needs a name for reference.
 
 label

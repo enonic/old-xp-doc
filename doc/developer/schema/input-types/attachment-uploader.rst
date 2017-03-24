@@ -8,3 +8,6 @@ This is different from media content where each media is a separate node that ca
 
 .. literalinclude:: code/attachmentuploader.xml
    :language: xml
+
+common fields
+   All Input Types have these :ref:`Common Fields <input_types_common_fields>`

@@ -11,14 +11,16 @@ The following XML configuration is common for all input types:
 .. literalinclude:: code/input-type.xml
    :language: xml
 
-@name
+.. _input_types_common_fields:
+
+@name (required)
   The ``name`` attribute is the technical name used in templates and result
   sets to refer to this value.
 
-@type
+@type (required)
   The type refers to one of the many input types which are explained below.
 
-label
+label (required)
   The label text will become the label for the input field in the editable form of
   the admin console.
 

@@ -8,6 +8,9 @@ A field for inputting multi-line text, with formatting options.
 .. literalinclude:: code/htmlarea.xml
    :language: xml
 
+common fields
+  All Input Types have these :ref:`Common Fields <input_types_common_fields>`
+
 default
   This element specifies a default value. The value can contain any HTML elements, but tags must be correctly closed since the input type is defined inside an XML.
 

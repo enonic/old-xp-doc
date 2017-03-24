@@ -17,13 +17,21 @@ Page contributions help with solving 2 problems:
   is included multiple times in a page, the library script contributed will only be added once.
 
 Any page, part, layout or macro controller can contribute content to the page. The values from all component contributions
-will be included in the final rendered page. Duplicated values will be ignored. There are four positions where
-contributed content can be inserted in the page:
+will be included in the final rendered page. Duplicated values will be ignored.
+
+There are four positions where contributed content can be inserted in the page:
 
 * ``headBegin``: After the ``<head>`` opening tag.
 * ``headEnd``: Before the ``</head>`` closing tag.
 * ``bodyBegin``: After the ``<body>`` opening tag.
 * ``bodyEnd``: Before the ``</body>`` closing tag.
+
+A simple usage example:
+
+.. literalinclude:: code/page-contribution-simple.json
+   :language: json
+
+A more full usage example:
 
 .. literalinclude:: code/page-contribution.json
    :language: json
