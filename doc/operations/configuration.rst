@@ -30,6 +30,8 @@ This provides great flexibility and can simplify configuration management. For i
 * Allowing selected users to manage application config, but not system configuration
 * Overriding standard config on selected nodes only
 
+If multiple paths are listed, each directory will be scanned in the defined order, and the first file found of each configuration, will be used.
+
 Below is an example usage of config path where it will scan three directories in the defined order.
 
 ::
