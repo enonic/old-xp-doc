@@ -109,7 +109,7 @@ smtpTLS
 .. _repo-configuration:
 
 Repo Configuration
----------------------------
+------------------
 
 snapshots.dir
   Where to store snapshots
@@ -122,7 +122,7 @@ snapshots.dir
 .. _storage-config:
 
 Storage Configuration
----------------------------
+---------------------
 
 **Blobstore Configuration**
 
@@ -166,7 +166,7 @@ readThrough.sizeThreshold = 100mb
 .. _es-config:
 
 Elasticsearch configuration
-----------------------------
+---------------------------
 
 The cluster functionallity is facilitated by Elasticsearch, so all relevant Elasticsearch settings are available.
 
