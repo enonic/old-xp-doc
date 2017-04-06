@@ -242,6 +242,15 @@ Jetty HTTP settings can be configured using ``com.enonic.xp.web.jetty.cfg`` file
    :language: properties
    :caption: ``$XP_HOME/config/com.enonic.xp.web.jetty.cfg``
 
+Media Configuration
+-------------------
+
+If you need extra media-type mappings you can add them
+in ``com.enonic.xp.media.cfg``.
+
+.. literalinclude:: code/com.enonic.xp.media.cfg
+  :language: properties
+  :caption: ``$XP_HOME/config/com.enonic.xp.media.cfg``
 
 OSGi Shell Configuration
 ------------------------
