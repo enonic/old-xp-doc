@@ -9,13 +9,10 @@ _id (string)
 _name (string, fulltext, ngram)
   The content name (same as node name)
 
-_parent (reference)
-  The parent content path (same as node parent)
-
 attachment (propertySet)
   If content contains attachments, a list of attachments with respective properties will be listed here.
 
-contentType (string)
+type (string)
   The content schema type.
 
 creator (string)
@@ -45,15 +42,6 @@ page (propertySet)
 
 publish (propertySet)
   Contains publish-information, e.g ``publish.from``
-
-site (propertySet)
-  If the contentType is ``portal:site``, this will contain site-specific information.
-
-thumbnail
-  A thumbnail representing the content.
-
-type (string)
-  the nodetype - Used to identify nodes of type content in the repository.
 
 x (propertySet)
   A property-set containing properties from mixins, also known as xtra data.
