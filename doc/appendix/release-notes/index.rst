@@ -1,93 +1,87 @@
 Release Notes
 =============
 
-Enonic XP |version| is a minor release with new features and improvements.
+Enonic XP |version| is a minor release with mainly improvements and bug fixes.
 
-Node and Repository API
------------------------
-This feature marks a massive milestone for XP, giving developers direct access to the low-level node API for persisting application-specific domain data.
-
-Basic capabilities compared to SQL:
-
-* Powerful search and aggregation capabilities
-* Supports hierarchy, branches, item-level access control, versioning and blobs.
-* No transaction concept, but you may use branches to simulate transactions
-* Optimized for high-performance read-intensive applications
-* Suitable for large data volumes including user-generated content.
-
-NB! For write mostly use-cases such as logging we recommend you to consider other storage options that may be better suited for the task.
-
-.. figure:: images/repoxplorer.png
-
-   Screenshot from the Repo XPlorer app which will be available on Enonic Market soon
-
-* Read more about nodes and repositories :ref:`node_domain` documentation.
-* Javascript API documentation :ref:`js-libraries` documentation.
-
-
-Time-based publishing
+Better bulk selection
 ---------------------
-6.9 introduces the first version of time-based-publishing. This allows editors to schedule when new content goes online. Expiration date may be set for any content.
-Future versions will also support scheduling of modifications, deletes and move operations.
+To simplify use and avoid user confusion, the bulk selection mode of XP admin tools have been given an overhaul.
+In particular, users have struggled with confusion from selecting too many items, and then performing unwanted delete actions.
 
-.. image:: images/schedule.png
+Also, showing the bulk selection in the preview area has been removed, so users now alway get the preview of the latest selected item.
+
+.. figure:: images/bulk-select.png
+
+  Bulk selection is now easier to use
+
+
+Improved Publishing Wizard
+--------------------------
+The publishing wizard has been further improved to allow users to control even more aspects of what is being published:
+
+* Invalid items are now listed at the top of the dependants list
+* Any non-parent items can now be removed from the dependants list
+* Editors may now choose to publish children (or not) on a per item basis
+
+.. image:: images/wizard.png
 
 Check out the :ref:`publish` documentation.
 
-Native Tabs
+
+Undo Delete
 -----------
-To improve usability, screen real-estate and performance we have split Content Studio into two - the browse view and the editor.
-When editing items, each item will now load in a separate native tab similar to how Google Docs and Office 365 works.
+The process of deleting content in Content Studio has been improved as follows:
 
-* Native tabs eliminates the need for "tabs in tabs", providing more screen real-estate and better tab handling
-* Improved loading times as less content must be downloaded for each view
-* Better stability - possible to reload a single editor, where the old solution would loose all other tabs when reloading Content Studio.
-* Deep linking and loading of a single editor is also much faster.
-* Easy navigation as native tabs now shows the name of content being edited plus icon
+* Users must explicitly confirm deletion of more than one item
+* Deleted items will get status DELETED (previously PENDING DELETE)
+* DELETED items can now be restored by clicking the 'Undo Delete' button
 
-.. figure:: images/native-tabs.png
+.. figure:: images/undo-delete.png
 
-   Native tabs in Desktop browsers
+   Undo delete action
 
 
-.. figure:: images/mobile-tabs.png
+HTML Editor improvements
+------------------------
+Several updates and improvements have been made the the HTML editor:
 
-   The benefit of native tabs has proven extremely beneficial when working with small screens.
+* Upgraded to TinyMCE version 4.5.2 (from 4.1.9)
+* Find/Replace modal dialog now uses native XP design
+* Source modal dialog now uses native XP design
+* Special character dialog now uses XP native design
+* Text Component was fixed so it no longer creates additional <p> above inserted macro in rendered html
 
-Mobile UI Improvements
-----------------------
-The mobile interface has several new usability improvements
-
-* Use of native tabs frees up space and simplifies navigation and speed
-* Content Studio navigation view has an updated layout and more intuitive navigation
-* Content Editor preview has been improved to leave more space for the content
-* Sleek transitions between panels
-
-.. image:: images/mobile-ui.png
-
+.. figure:: images/editor.png
 
 Libraries
 ---------
+* lib-thymeleaf - Added template mode option to render function
 
-* event-lib - Adds support for listening to Java events using Javascript files
-* repo-lib - Enables creation and deletion of repositories for isolated storing of nodes using Javascript
-* node-lib - Create and manipulate nodes directly from Javascript
 
-Minor improvements
+Other improvements
 ------------------
 
-* CMS Expert Role - Users must be in this role to access HTML editor source mode
-* Content Grid - Dim content items for users with read-only access
-* main.js - If available, the resources/main.js file is executed when the application is started
-* Site Configuration permissions check - Only Administrators or users with the "Content Admin" role can add/remove or edit applications on a site.
-* Caption, Artist and Copyright inputs have been added to the Vector media type
-* Configuration files can now be loaded from multiple paths, simplifying config overriding for instance
-* Better handling of page errors in the preview panel
-* Support for JSON in require statements
-* File extensions are removed by default from media display names
-* 50+ bugs fixed
+* NEW content status - items that have never been published are now listed as NEW
+* New content property: publish.first. Automatically set the first time an item is published
+* Applications Installer - It is now possible to search for applications on Enonic Market
+* Content Studio - Fragment display name is now listed on the Page Component View
+* Implemented trace API and event listeners
+* Insert Link dialog - Prevents linking to unrenderable content
+* Option Set - Keep input values even if options are de-selected
+* Page Editor - "Edit" added to the context menu of image and fragment components
+* Automatically updates the details panel when applications are installed, started and stopped
+* Changed max header size for requests in Jetty
+* Session are now lazy created on first access
+* Internal error page will no longer be used if current page produces a body
+* Content and image selectors now also support path match in searches
+* Move dialog now asks for user confirmation when content is about to be moved out of its site
+* Move dialog - Show tree structure inside the content selector
+* Page editor now warns user about loosing data when switching from custom page to a page template
+* Empty figcaption tag is removed when rendering HTML Area on the server
+* Ctrl+click in the Page Editor now acts as right mouse click.
+* 80+ bugs fixed
 
 
 Changelog
 ---------
-For a complete list of changes and bugfixes see http://github.com/enonic/xp/releases/tag/v6.9.0
+For a complete list of changes and bugfixes see http://github.com/enonic/xp/releases/tag/v6.10.0
