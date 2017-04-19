@@ -10,7 +10,7 @@
   <label>Intro song</label>
   <config>
     <service>spotify-music-selector</service>
-    <option value="genre">classic</option>
-    <option value="sortBy">length</option>
+    <param value="genre">classic</param>
+    <param value="sortBy">length</param>
   </config>
 </input>
