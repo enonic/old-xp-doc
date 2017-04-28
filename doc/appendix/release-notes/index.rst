@@ -56,7 +56,7 @@ Several updates and improvements have been made the the HTML editor:
 Libraries
 ---------
 * lib-thymeleaf - Added template mode option to render function
-
+* lib-content / lib-node - Added support for filters in queries. The much awaited "exists"-filter replaces the hacky "<field> NOT LIKE '*'". Check it out in the api-documentation.
 
 Other improvements
 ------------------
