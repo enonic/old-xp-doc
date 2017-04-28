@@ -3,10 +3,10 @@
 Upgrade notes - |version|
 =========================
 
-.. warning:: This documentation describes upgrading from 6.6.2 to |version|.
+.. note:: This documentation describes upgrading from 6.6.2 to |version|.
 
 
-.. NOTE:: Enonic XP |version| now requires minimum Java 1.8.92
+.. warning:: Enonic XP |version| now requires minimum Java 1.8 **update 92** to run.
 
 
 Upgrade Steps
@@ -46,3 +46,5 @@ Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all no
 
 5. Start the new installation
 *****************************
+
+.. warning:: Enonic XP |version| now requires minimum Java 1.8 **update 92** to run.
