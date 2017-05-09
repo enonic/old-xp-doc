@@ -14,6 +14,16 @@ common fields
 default
   This element specifies a default value. The value can contain any HTML elements, but tags must be correctly closed since the input type is defined inside an XML.
 
+
+config
+   forced-root-block
+      This config setting can be used to override default wrapper element in the root of the HTML Area. By default it's ``<p>`` element. Set this option to "div" to switch to ``<div>``.
+   include
+      List of space-separated tools to be added to the toolbar (see the tip below).
+   exclude
+      Use this to hide some of the default tools in the toolbar (see the tip below).
+
+
 .. tip:: HTML Area is configured with default set of tools but the toolbar can be customized.
    Using the config setting you can exclude specific tools from being shown (use "*" to exclude all tools at once) and/or include those that you want to have in the toolbar.
    Separate tools with a space and use "|" character to group tool buttons together.
