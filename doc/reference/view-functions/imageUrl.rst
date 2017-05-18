@@ -35,7 +35,7 @@ _type
 *everything else*
   Custom parameters to append to the url.
 
-**Usage in Thymeleaf:**
+**Usages in Thymeleaf:**
 
 .. literalinclude:: code/imageUrl-thymeleaf.html
    :language: html
