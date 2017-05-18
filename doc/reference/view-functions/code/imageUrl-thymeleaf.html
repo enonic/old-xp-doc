@@ -1,2 +1,14 @@
+<!-- With ID -->
 <img data-th-src="${portal.imageUrl({'_id=11', '_scale=width(200)'})}"/>
-<img data-th-src="${portal.imageUrl({'_path=test', '_scale=width(200)'})}"/>
+
+<!-- With Path -->
+<img data-th-src="${portal.imageUrl({'_path=/path/to/image', '_scale=width(200)'})}"/>
+
+<!-- With ID sent as a variable from controller -->
+<img data-th-src="${portal.imageUrl({'_id=' + imageId, '_scale=block(450,275)'})}"/>
+
+<!-- With ID and width sent as a variable from controller -->
+<img data-th-src="${portal.imageUrl({'_id=' + imageId, '_scale=width(' + imageWidth + ')'})}"/>
+
+<!-- With ID sent as a variable from controller, using absolute URL output -->
+<img data-th-src="${portal.imageUrl({'_id=' + imageId, '_scale=block(450,275)', '_type=absolute'})}"/>
