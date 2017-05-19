@@ -56,8 +56,8 @@ Groups
 ------
 
 Groups assist with managing user permissions for content. For example, all content has security permissions which may include roles, groups
-and users. If a content has only a group named "Customers" (with read access) then only logged in members of that group can see the content.
-Groups have no function without Members. Users and even other groups may be added as members. Clicking on a group in the Users admin tool
+and users. If a content has only one group named "Customers" (with read access) then only logged in members of that group can see the content.
+Groups have no function without Members. Users and other groups may be added as members. Clicking on a group in the Users admin tool
 will show the group's display name, principal path, and a list of its members.
 
 Creating groups
