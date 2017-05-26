@@ -65,4 +65,11 @@ Content Manager Expert
 
 A new role "cms.expert", allowing access to advanced features in :ref:`content_studio`, has been created.
 This role needs to be created manually for existing installations using the tool :ref:`users_tool`.
-(See :ref:`roles` for more information).
+(See :ref:`roles` for more information).   
+
+
+Lazy session creation
+---------------------
+
+Starting from 6.9.2, sessions are now lazy created.
+You should not expect the cookie 'JSESSIONID' to be set if not necessary.
