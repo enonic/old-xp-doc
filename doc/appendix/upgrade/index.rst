@@ -47,3 +47,9 @@ Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all no
 5. Start the new installation
 *****************************
 
+
+Lazy session creation
+---------------------
+
+Starting from 6.9.2, sessions are now lazy created.
+You should not expect the cookie 'JSESSIONID' to be set if not necessary.
