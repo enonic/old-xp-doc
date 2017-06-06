@@ -39,4 +39,4 @@ This is usually required after upgrades, and may be useful in many other situati
 
 .. code-block:: none
 
-  $ ./toolbox.sh reindex -a su:password -b draft -i -r cms-repo
+  $ ./toolbox.sh reindex -a su:password -b draft,master -i -r cms-repo
