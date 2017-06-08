@@ -1,5 +1,5 @@
 boolean
-======
+=======
 
 The boolean filter combines functions in logical expressions
 
