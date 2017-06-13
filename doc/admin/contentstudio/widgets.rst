@@ -9,7 +9,7 @@ the top of the panel.
 
 .. tip:: Widgets are user-definable. Read more about how to create your own :ref:`widgets`.
 
-There are two built-in widgets.
+In addition to the details panel, there are two built-in widgets.
 
 .. _version_history:
 
