@@ -3,13 +3,11 @@
 Widgets
 =======
 
-Widgets are apps that add functionality to the Content Studio. As of version |version|, widgets are limited to the :ref:`detail_panel` where
-they display custom information about whichever content is selected in the tree view. Installed widgets are listed in a dropdown selector at
-the top of the panel.
+Widgets are apps that add functionality to the Content Studio. As of version |version|, there are three built-in widgets.  The
+:ref:`detail_panel` was described on the previous page.  Here follows descriptions of the version history and dependency widgets.
+Installed widgets are listed in a dropdown selector at the top of the panel.
 
 .. tip:: Widgets are user-definable. Read more about how to create your own :ref:`widgets`.
-
-In addition to the details panel, there are two built-in widgets.
 
 .. _version_history:
 
