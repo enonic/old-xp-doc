@@ -51,3 +51,7 @@ You might remember that your favorite country was "hardcoded" - so let's change 
 .. image:: images/page-template-automatic.jpg
 
 You can select another `Page template` at any time, or even customize the presentation of a single content.
+
+.. tip:: From Enonic XP 6.11, The Detail Panel on the far right of the :ref:`browse_view` now has a little box showing how the node is rendered:
+
+.. image:: images/rendering-mode-view.png
