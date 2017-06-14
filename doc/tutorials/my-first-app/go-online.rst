@@ -1,11 +1,13 @@
 Go Online
 =========
 
+.. |childrenicon| image:: images/children-list.png
+
 Now that your "Hello World" is complete, it's time to publish.
 
 #. Select the "Hello World" site in the content pane
 #. Right-click and select "Publish" from the context menu, or click the "Publish" button in the toolbar
-#. The Publishing Wizard will appear. Check the "Include children" checkbox
+#. The Publishing Wizard will appear.  You may click the |childrenicon| icon to see all child nodes that are published together.
 #. Verify that all your items are listed  - click "Publish"!
 
 When publishing content, all the selected items and changes are "cloned" from draft to the master branch (:ref:`node-domain-repository`).
