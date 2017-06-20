@@ -245,7 +245,7 @@ Jetty HTTP settings can be configured using ``com.enonic.xp.web.jetty.cfg`` file
 Media Configuration
 -------------------
 
-If you need extra media-type mappings you can add them
+If you need extra media-type (MIME type) mappings you can add them
 in ``com.enonic.xp.media.cfg``.
 
 .. literalinclude:: code/com.enonic.xp.media.cfg
