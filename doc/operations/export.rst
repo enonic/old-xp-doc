@@ -15,7 +15,9 @@ Content Export/Import vs System Dump/Load
 -----------------------------------------
 
 Both enable you to export your data to a serialized format and import the serialized data into another instance.
-But, while the export/import focuses on a given content, the dump/load is used to export an entire system (all repositories and branches). This is used, for example, to export the entire system when doing an upgrade.
+But, while the export/import focuses on a given content, the dump/load is used to export an entire system (all repositories and branches).
+This is used, for example to migrate between systems or perform upgrade scripts.
+Dump and Load also supports dumping complete version history and branches.
 
 
 Content Export
