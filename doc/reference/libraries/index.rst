@@ -13,11 +13,9 @@ included in your application through the Gradle build script like this::
 Where ``name`` is the name of the library. Here's a list of available libraries:
 
 * lib-auth
-* lib-cache
 * lib-content
 * lib-context
 * lib-event
-* lib-http-client
 * lib-i18n
 * lib-io
 * lib-mail
@@ -27,7 +25,6 @@ Where ``name`` is the name of the library. Here's a list of available libraries:
 * lib-repo
 * lib-task
 * lib-thymeleaf
-* lib-xslt
 * lib-websocket
 
 To include both ``lib-mail`` and ``lib-content`` you can add both inside the
