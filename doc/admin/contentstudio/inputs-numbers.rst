@@ -3,9 +3,9 @@
 Numbers and GeoPoint input types
 ================================
 
-There are three input types for entering dates and times: **Date**, **Time**, and **DateTime**. Each input has a date/time-picker tool.
-Values can also be manually typed into the input fields. The input turns red if the value is not a valid format. These inputs can have
-default values (set in the application code) and the defaults can even be relative to the date and time that the form item was created.
+There are four ways to input numeric data.  **Double** and **Long** ensures the data is treated as numeric on the back-end as well.
+**GeoPoint** is a very special input type for registering a Geo Point world coordinate.
+All of these input types have validation rules to ensure correct input.
 
 .. image:: images/inputs-numbers.jpg
 
