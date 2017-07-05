@@ -41,9 +41,8 @@ Shortcut (base:shortcut)
 * final: true
 * allow-child-content: true
 
-This is used for redirecting a visitor to another content item in the structure
-The content type name is ``base:shortcut``.
-
+This is used for redirecting a visitor to another content item in the structure.
+Optional name-value parameters can be set to be added to the redirect URL.
 
 
 Structured (base:structured)

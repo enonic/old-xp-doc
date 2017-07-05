@@ -61,7 +61,7 @@ Our intention is that the GPL license should only apply to developers that inten
 Other improvements
 ------------------
 
-  * Improved detail panel menu and nativation in Content Studio
+  * Improved detail panel menu and navigation in Content Studio
   * Page Template info displayed in the Details panel
   * Added parameters to Shortcut content type
   * AttachmentUploader - Show placeholder text when no file is selected

@@ -12,4 +12,6 @@ For example, a content in the "Posts" folder named "Gotham sure is a big town" w
 
 Each shortcut has a required **Target** field. The selected target content can be edited with the pencil icon.
 
-.. image:: images/shortcut.jpg
+In addition it is possible to set custom parameters as a list of name-value pairs. These optional parameters will be added to the redirect URL.
+
+.. image:: images/shortcut.png
