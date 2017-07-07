@@ -46,6 +46,34 @@ Previous versions of XP only supported dumping data without version history, bas
 With 6.11 developers and operations may dump and load entire installations of XP without loosing any data.
 
 
+Some libraries are moved outside project
+----------------------------------------
+
+For now, 3 libraries has been moved outside the project. The reason for this
+is to allow individual releases of some of the libraries. All moved
+libraries has the same API so only a dependency renaming is necessary.
+Here's a list of the libraries that has been moved:
+
+`lib-cache`_
+
+  Rename from ``com.enonic.xp:lib-cache:6.11.0``
+  to ``com.enonic.lib:lib-cache:1.0.0``.
+
+`lib-http-client`_
+
+  Rename from ``com.enonic.xp:lib-http-client:6.11.0``
+  to ``com.enonic.lib:lib-http-client:1.1.0``.
+
+`lib-xslt`_
+
+  Rename from ``com.enonic.xp:lib-xslt:6.11.0``
+  to ``com.enonic.lib:lib-xslt:1.0.0``.
+
+.. _lib-cache: https://github.com/enonic/lib-cache
+.. _lib-http-client: https://github.com/enonic/lib-http-client
+.. _lib-xslt: https://github.com/enonic/lib-xslt
+
+
 License change from AGPL to GPL
 -------------------------------
 
