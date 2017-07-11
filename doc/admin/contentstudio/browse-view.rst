@@ -10,7 +10,7 @@ left is the :ref:`content_tree` where all the sites and content can be found. To
 which displays a preview of the selected content. On the far right is the :ref:`detail_panel` that may be toggled on and off with the |detailicon| icon
 in the top right corner.
 
-.. image:: images/content-studio.jpg
+.. image:: images/content-studio.png
 
 .. toctree::
    :maxdepth: 1

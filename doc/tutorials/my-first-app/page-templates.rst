@@ -33,8 +33,7 @@ selected in the content pane, so make sure you select the "Hello World" site bef
 habit of right-clicking the desired parent content and selecting "New" from the context menu. This way you will never accidentally create a
 content in the wrong place.
 
-.. tip:: From Enonic XP 6.11, The Detail Panel on the far right of the :ref:`browse_view` has a little box showing the rendering mode.
-Compare your favorite country to other countries that are rendered automatically:
+.. tip:: From Enonic XP 6.11, The Detail Panel on the far right of the :ref:`browse_view` has a little box showing the rendering mode. Compare your favorite country to other countries that are rendered automatically:
 
 .. image:: images/rendering-mode-view.png
 

@@ -26,6 +26,8 @@ When a published content is "deleted", the "Delete item" dialogue offers a check
 not checked then the content's status will be **pending delete** and it will still be visible outside of the Content Studio. Content that is
 pending delete must be published, unpublished, or "instantly deleted" before it is actually removed from the master branch.
 
+.. _publish_wizard:
+
 Publishing wizard
 -----------------
 

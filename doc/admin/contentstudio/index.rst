@@ -20,6 +20,7 @@ view** appears when content is created or edited and will open in a new browser 
 
    browse-view
    content-editor
+   publishing-issues
    content-types
    actions
    shortcuts
