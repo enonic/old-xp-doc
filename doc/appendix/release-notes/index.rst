@@ -13,7 +13,7 @@ This release includes two languages: English and Norwegian, more translations wi
 Publishing Issues
 -----------------
 
-Inspired by "GitHubs Issues", we have are finally able to reveal the first iteration of collaboration and workflow handling in Enonic XP.
+Inspired by "GitHubs Issues", we are finally able to reveal the first iteration of collaboration and workflow handling in Enonic XP.
 
 The idea is simple and powerful. Content Studio users now get the ability to create Issues, assign them to other Content Studio editors and contributors,
 and optionally add content items to them. With added items an issue can in fact be considered a publishing request.
@@ -49,9 +49,9 @@ With 6.11 developers and operations may dump and load entire installations of XP
 Some libraries are moved outside project
 ----------------------------------------
 
-For now, 3 libraries has been moved outside the project. The reason for this
-is to allow individual releases of some of the libraries. All moved
-libraries has the same API so only a dependency renaming is necessary.
+For now, 3 libraries has been moved outside the core XP project. The reason for this
+is to allow individual releases of these libraries. All the moved
+libraries keeps their API so only a dependency renaming is necessary.
 Here's a list of the libraries that has been moved:
 
 `lib-cache`_
@@ -78,7 +78,7 @@ License change from AGPL to GPL
 -------------------------------
 
 Enonic XP has until now been licensed as AGPL. We are now loosening up the licensing to the more commonly used GPLv3.
-In short GPL is similar to AGPL, but AGPL also covers to cloud-based uses of the platform.
+In short GPL is similar to AGPL, but GPL also covers cloud-based uses of the platform.
 With GPL, Enonic XP is aligned with the most popular open source platform projects out there.
 
 All XP libraries (prefixed with lib- in the GitHub project) are licensed under Apache 2.0.
