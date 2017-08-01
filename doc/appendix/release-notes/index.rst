@@ -62,7 +62,7 @@ Here's a list of the libraries that has been moved:
 `lib-http-client`_
 
   Rename from ``com.enonic.xp:lib-http-client:6.11.0``
-  to ``com.enonic.lib:lib-http-client:1.1.0``.
+  to ``com.enonic.lib:lib-http-client:1.0.0``.
 
 `lib-xslt`_
 
