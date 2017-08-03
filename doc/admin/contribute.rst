@@ -5,7 +5,7 @@ Contributing to Translations
 
 We would greatly appreciate help with translating our Admin Console to more languages.  Here is a guide on how to contribute:
 
-First, you need to checkout the project from GitHub: git@github.com:enonic/xp.git
+First, you need to checkout the project from GitHub.  The project is here: https://github.com/enonic/xp , and the project URL is: ``git@github.com:enonic/xp.git``
 
 The original English language files are these:
 
