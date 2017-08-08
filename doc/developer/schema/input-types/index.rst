@@ -52,6 +52,7 @@ default
     checkbox
     combobox
     content-selector
+    contenttypefilter
     custom-selector
     date
     datetime
