@@ -6,7 +6,7 @@ Project structure
 To build applications with Enonic XP, you will typically setup a project.  The fastest way to do this is using the init-project feature
 included in the Enonic XP toolbox utility.
 
-The project structure is a similar to `Maven <https://maven.apache.org/>`_ projects for those who are familiar with that.
+The project structure is similar to `Maven <https://maven.apache.org/>`_ projects for those who are familiar with that.
 
 Below is a sample project folder structure - all items that end with a slash are folders ::
 
