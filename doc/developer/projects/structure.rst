@@ -23,6 +23,7 @@ Below is a sample project folder structure - all items are folders, except for `
           application.xml
           assets/
           lib/
+          main.js
           services/
           site/
             content-types/
@@ -73,6 +74,9 @@ assets/
 lib/
   This is the last place the global ``require`` JavaScript-function looks,
   so it is a good place to put default JavaScript files here.
+
+main.js
+  This file may be thought of as an app initializer.  It is executed every time the app is started.  (see :ref:`main_initializer`)
 
 services/
   Services are a special type of http controller that will be mounted on a fixed url pattern that looks like this: _/service/<myapp>/<myservice>.
