@@ -8,7 +8,7 @@ function handleGet() {
     var params = {
         adminUrl: portalLib.url({path: "/admin"}),
         assetsUri: portalLib.url({path: "/admin/assets/" + timestamp}),
-        appId: 'my-custom-tool',
+        appId: app.name,
         appName: 'My custom tool'
     };
     return {
