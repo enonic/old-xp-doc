@@ -10,7 +10,7 @@ Each service must have a JavaScript controller file and optionally an XML descri
 Descriptor
 ----------
 
-The service descriptor is an XML file that that is used to define which rights are required to access the service.
+The service descriptor is an XML file that is used to define which rights are required to access the service.
 
 The descriptor file must have the same name as the service, i.e. ``services/[service-name]/[service-name].xml``:
 

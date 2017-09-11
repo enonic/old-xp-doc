@@ -35,6 +35,7 @@ Below is a sample project folder structure - all items that end with a slash are
             pages/
             parts/
             site.xml
+          tasks
           views/
 
 Every file and folder has a specific function and meaning.
@@ -118,6 +119,9 @@ site/parts/
 site/layouts/
   Layout controllers should be placed here. Layouts are similar to parts, but in addition have one or more regions.
   Regions enable placement of other components inside the layout. (see :ref:`layout`).
+
+tasks/
+  Contains tasks to be executed asynchronously (see :ref:`tasks`).
 
 views/
   Views are any kind of files that are used for rendering. The folder is optional, as view files can
