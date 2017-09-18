@@ -26,6 +26,7 @@ To get help for the commands, just type the following::
     		reindex            Reindex content in search indices for the given repository and branches.
     		reprocess          Reprocesses content in the repository.
     		restore            Restores a snapshot of a previous state of the repository.
+    		set-read-only      Toggle read-only mode for server or single repository
     		set-replicas       Set the number of replicas in the cluster.
     		snapshot           Stores a snapshot of the current state of the repository.
     		upgrade            Upgrade a dump to the current version. The upgraded files will be written to <dumpFolderName>_upgraded_<version>
@@ -49,6 +50,7 @@ Here's a list of all the commands that you can do with the toolbox:
    import
    reindex
    reprocess
+   set-read-only
    set-replicas
    dump
    load
