@@ -13,3 +13,10 @@ common fields
 
 default
   This element specifies a default value. The value can be any double-precision floating-point number, with the dot character as decimal separator.
+
+config
+   min
+      Minimum value allowed for the field. Optional.
+
+   max
+      Maximum value allowed for the field. Optional.

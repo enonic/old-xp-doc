@@ -13,3 +13,10 @@ common fields
 
 default
   This element specifies a default value. The value can be any valid integer.
+
+config
+   min
+      Minimum value allowed for the field. Optional.
+
+   max
+      Maximum value allowed for the field. Optional.
