@@ -1,4 +1,7 @@
 <input name="description" type="TextArea">
   <label>Description</label>
   <default>Description goes here</default>
+  <config>
+    <max-length>42</max-length>
+  </config>
 </input>
