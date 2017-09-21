@@ -16,6 +16,7 @@ The unzipped Enonic XP distribution will have the following structure (folders w
      |- snapshots/
      |- work/ *
    |- lib/
+   |- service/
    |- system/
    |- toolbox/
    |- work/ *
@@ -53,6 +54,9 @@ home/
 
 lib/
   Contains the bootstrap code used to launch Enonic XP.
+
+service/
+  Contains install script for Linux to make Enonic XP run as a service.  See: :ref:`bootservice`.
 
 system/
   System OSGi bundles are placed here.
