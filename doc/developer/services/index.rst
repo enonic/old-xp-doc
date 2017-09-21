@@ -42,9 +42,9 @@ The service can then be accessed on a relatively mounted URL, as seen below, whe
 
 The portal function ``serviceUrl()`` will create a dynamic URL for a service.
 
-.. js:function:: serviceUrl(name [,application] [,type] [,params])
+.. js:function:: serviceUrl(service [,application] [,type] [,params])
 
-  :param string name: Name of the service.
+  :param string service: Name of the service.
   :param string application: Application where the service exists. Default is current application.
   :param string type: URL type. Either server (server-relative URL) or absolute. Default is server.
   :param object params: Custom parameters to append to the url.
