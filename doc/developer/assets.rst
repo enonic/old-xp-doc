@@ -11,7 +11,7 @@ These files can then be dynamically accessed through the asset service. The asse
 
 The assetUrl() portal function lets you easily create links to assets.
 
-.. js:function:: assetUrl(path [,application] [,type] [,params])
+.. js:function:: assetUrl({path [,application] [,type] [,params]})
 
   :param string path: Path to the asset.
   :param string application: Application where the asset exists. Default is current application.
