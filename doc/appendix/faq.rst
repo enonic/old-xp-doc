@@ -11,16 +11,22 @@ The latest release can be found here `latest release changelog <https://github.c
 Where can I get the source code?
 --------------------------------
 
-All source code for Enonic XP is published on our
-`GitHub project page <https://github.com/enonic/xp>`_.
+All source code for Enonic XP is published on GitHub:
+ * The back-end: `Enonic XP runtime <https://github.com/enonic/xp>`_
+ * The Admin apps: `Enonic XP Apps <https://github.com/enonic/xp-apps>`_
+ * Admin lib for common code in admin apps: `Admin UI Library <https://github.com/enonic/lib-admin-ui>`_
+
 
 Do you publish changelogs?
 --------------------------
 
-Yes. You can go to the
-`releases tab on GitHub <https://github.com/enonic/xp/releases>`_
-to read the changelog for all versions. If you want to see what's coming,
-you can go to our `GitHub wiki page <https://github.com/enonic/xp/wiki>`_.
+Yes.  Each project have it's own changelog on GitHub.  Go to the GitHub project page using the links in the last question and click ``Code``.
+On the resulting page, a line with links to all commits, branches commits and contributors is show.  Clock on the text that say ``<X> releases``,
+and all the releases of that project are listed with links to the changelog.
+
+If you want to see what's coming in the future releases, check out `Discuss <https://discuss.enonic.com/>`_ .
+Approximately every other week, our product advisory board meets to discuss what to prioritze in the upcoming releases.
+Reports from these meetings are published on Discuss.
 
 How is Enonic XP Licensed
 -------------------------
