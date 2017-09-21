@@ -30,10 +30,10 @@ Reports from these meetings are published on Discuss.
 
 How is Enonic XP Licensed
 -------------------------
-Enonic XP is available under the `AGPL 3 license <http://www.gnu.org/licenses/agpl-3.0.html>`_, with a linking exception.
-This basically means that you are free to use and re-distribute Enonic XP according to the AGPL license.
+Enonic XP is available under the `GPL 3.0 license <http://www.gnu.org/licenses/gpl-3.0.html>`_.
+This basically means that you are free to use and re-distribute Enonic XP according to the GPL license.
 The linking exception ensures that you can build custom applications and libraries on top of Enonic XP and license these however you see fit.
-Any changes made to the Enonic XP core platform however must be licensed as APGL.
+Any changes made to the Enonic XP core platform however must be licensed as PGL.
 
 We encourage the use of FOSS licensing for 3rd party apps and libraries. Libraries in particular should be licensed with a non-intrusive license such as Apache, BSD or MIT.
 
