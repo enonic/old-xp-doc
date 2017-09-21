@@ -20,7 +20,7 @@ All source code for Enonic XP is published on GitHub:
 Do you publish changelogs?
 --------------------------
 
-Yes.  Each project have it's own changelog on GitHub.  Go to the GitHub project page using the links in the last question and click ``Code``.
+Yes.  Each project have it's own changelog on GitHub.  Go to the GitHub project page using the links in the previous question and click ``Code``.
 On the resulting page, a line with links to all commits, branches commits and contributors is show.  Clock on the text that say ``<X> releases``,
 and all the releases of that project are listed with links to the changelog.
 
