@@ -19,8 +19,8 @@ The assetUrl() portal function lets you easily create links to assets.
   :param object params: Custom parameters to append to the url.
   :returns: The relative or absolute URL to the asset.
 
-    API
-    ---
-    The detailed API documentation may be `found here`_.
+API
+---
+The detailed API documentation may be `found here`_.
 
 .. _found here: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/module-portal.html#.assetUrl .
