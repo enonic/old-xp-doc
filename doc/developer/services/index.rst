@@ -49,3 +49,8 @@ The portal function ``serviceUrl()`` will create a dynamic URL for a service.
   :param string type: URL type. Either server (server-relative URL) or absolute. Default is server.
   :param object params: Custom parameters to append to the url.
   :returns: The the relative or absolute URL to the service.
+
+API
+---
+The detailed API documentation may be
+.. _found here: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/module-portal.html#.serviceUrl .
