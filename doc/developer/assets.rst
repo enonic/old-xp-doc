@@ -11,10 +11,16 @@ These files can then be dynamically accessed through the asset service. The asse
 
 The assetUrl() portal function lets you easily create links to assets.
 
-.. js:function:: assetUrl(path [,application] [,type] [,params])
+.. js:function:: assetUrl({path [,application] [,type] [,params]})
 
   :param string path: Path to the asset.
   :param string application: Application where the asset exists. Default is current application.
   :param string type: URL type. Either server (server-relative URL) or absolute. Default is server.
   :param object params: Custom parameters to append to the url.
-  :returns: The the relative or absolute URL to the asset.
+  :returns: The relative or absolute URL to the asset.
+
+API
+---
+The detailed API documentation may be `found here`_.
+
+.. _found here: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/module-portal.html#.assetUrl .
