@@ -48,7 +48,7 @@ The portal function ``serviceUrl()`` will create a dynamic URL for a service.
   :param string application: Application where the service exists. Default is current application.
   :param string type: URL type. Either server (server-relative URL) or absolute. Default is server.
   :param object params: Custom parameters to append to the url.
-  :returns: The the relative or absolute URL to the service.
+  :returns: The relative or absolute URL to the service.
 
 API
 ---

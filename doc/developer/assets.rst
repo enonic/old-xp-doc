@@ -17,7 +17,7 @@ The assetUrl() portal function lets you easily create links to assets.
   :param string application: Application where the asset exists. Default is current application.
   :param string type: URL type. Either server (server-relative URL) or absolute. Default is server.
   :param object params: Custom parameters to append to the url.
-  :returns: The the relative or absolute URL to the asset.
+  :returns: The relative or absolute URL to the asset.
 
 API
 ---
