@@ -2,3 +2,11 @@
   <label>Count</label>
   <default>42</default>
 </input>
+
+<input name="rating" type="Long">
+  <label>Rating</label>
+  <config>
+    <min>1</min>
+    <max>10</max>
+  </config>
+</input>

@@ -22,7 +22,8 @@ See :ref:`operations-export` for more information on content export/import.
               Port number for server (default is 8080).
 
           -s <exportName>
-              A named export to import.
+              A named export to import. Name = folder name.
+              (Must be stored in `$XP_HOME/data/export`)
 
           --skipids
               Flag that skips ids.

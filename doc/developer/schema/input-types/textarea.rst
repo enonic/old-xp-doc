@@ -13,3 +13,7 @@ common fields
 
 default
   This element specifies a default string value for the TextArea.
+
+config
+   max-length
+      Maximum number of characters allowed in the field. If not specified the length is unrestricted.

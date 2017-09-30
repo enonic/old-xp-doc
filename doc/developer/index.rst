@@ -29,3 +29,4 @@ here :ref:`api_ref_guide`.
    search/index
    admin/index
    id-provider/index
+   tasks/index

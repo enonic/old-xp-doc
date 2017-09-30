@@ -3,7 +3,7 @@
 Upgrade notes - |version|
 =========================
 
-.. warning:: This documentation describes upgrading from 6.8.x to |version|.
+.. warning:: This documentation describes upgrading from 6.10.x to |version|.
 
 
 .. NOTE:: Enonic XP |version| now requires minimum Java 1.8.92

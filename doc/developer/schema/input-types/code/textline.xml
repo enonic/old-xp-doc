@@ -1,8 +1,16 @@
+<!-- Bare minimum example, the least settings you need for the field to work. -->
+<input name="myTextField" type="TextLine">
+  <label>String input</label>
+  <occurrences minimum="0" maximum="1"/><!-- Even this can be omitted. -->
+</input>
+
+<!-- Example using regex validation and a default value. -->
 <input name="socialSecurityNumber" type="TextLine">
   <label>SSN</label>
   <occurrences minimum="0" maximum="1"/>
   <config>
     <regexp>\b\d{3}-\d{2}-\d{4}\b</regexp>
+    <max-length>11</max-length>
   </config>
   <default>000-00-0000</default>
 </input>

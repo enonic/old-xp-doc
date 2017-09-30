@@ -1,0 +1,7 @@
+<input name="name" type="ContentTypeFilter">
+  <label>Target type</label>
+  <occurrences minimum="0" maximum="0"/>
+  <config>
+    <context>true</context>
+  </config>
+</input>

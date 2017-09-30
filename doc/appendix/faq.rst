@@ -11,23 +11,29 @@ The latest release can be found here `latest release changelog <https://github.c
 Where can I get the source code?
 --------------------------------
 
-All source code for Enonic XP is published on our
-`GitHub project page <https://github.com/enonic/xp>`_.
+All source code for Enonic XP is published on GitHub:
+ * The back-end: `Enonic XP runtime <https://github.com/enonic/xp>`_
+ * The Admin apps: `Enonic XP Apps <https://github.com/enonic/xp-apps>`_
+ * Admin lib for common code in admin apps: `Admin UI Library <https://github.com/enonic/lib-admin-ui>`_
+
 
 Do you publish changelogs?
 --------------------------
 
-Yes. You can go to the
-`releases tab on GitHub <https://github.com/enonic/xp/releases>`_
-to read the changelog for all versions. If you want to see what's coming,
-you can go to our `GitHub wiki page <https://github.com/enonic/xp/wiki>`_.
+Yes.  Each project have it's own changelog on GitHub.  Go to the GitHub project page using the links in the previous question and click ``Code``.
+On the resulting page, a line with links to all commits, branches commits and contributors is show.  Clock on the text that say ``<X> releases``,
+and all the releases of that project are listed with links to the changelog.
+
+If you want to see what's coming in the future releases, check out `Discuss <https://discuss.enonic.com/>`_ .
+Approximately every other week, our product advisory board meets to discuss what to prioritze in the upcoming releases.
+Reports from these meetings are published on Discuss.
 
 How is Enonic XP Licensed
 -------------------------
-Enonic XP is available under the `AGPL 3 license <http://www.gnu.org/licenses/agpl-3.0.html>`_, with a linking exception.
-This basically means that you are free to use and re-distribute Enonic XP according to the AGPL license.
+Enonic XP is available under the `GPL 3.0 license <http://www.gnu.org/licenses/gpl-3.0.html>`_.
+This basically means that you are free to use and re-distribute Enonic XP according to the GPL license.
 The linking exception ensures that you can build custom applications and libraries on top of Enonic XP and license these however you see fit.
-Any changes made to the Enonic XP core platform however must be licensed as APGL.
+Any changes made to the Enonic XP core platform however must be licensed as PGL.
 
 We encourage the use of FOSS licensing for 3rd party apps and libraries. Libraries in particular should be licensed with a non-intrusive license such as Apache, BSD or MIT.
 
