@@ -3,7 +3,7 @@
 ContentSelector
 ---------------
 
-References to other content are specified by this input type.
+References to other content are specified by this input type. Use the toggle icon to switch between the list mode (default) and the tree mode.
 
 .. literalinclude:: code/contentselector.xml
    :language: xml
@@ -22,3 +22,18 @@ allowPath
 
 .. literalinclude:: code/allowpath-samples.xml
     :language: xml
+
+treeMode
+  By default content selector is displaying content in the list mode but you can switch it to default tree-mode (same as in the Content grid) by setting `treeMode` to `true`.
+
+.. image:: images/content-selector-tree.png
+
+showStatus
+  You can display current status for each content item inside the content selector by setting `showStatus` to `true`.
+
+.. image:: images/content-selector-status.png
+
+hideToggleIcon
+  The toggle mode icon can be hidden by setting `hideToggleIcon` to `true`.
+
+.. image:: images/content-selector-no-toggle.png

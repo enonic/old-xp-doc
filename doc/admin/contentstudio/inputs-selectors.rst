@@ -42,7 +42,7 @@ filter the content by name. When more than one content has been selected, the or
 to the left of each content. Any selected content may be opened for editing by clicking the pencil icon. Selected content can be removed
 with the X icon.
 
-.. image:: images/inputs-content-selector.jpg
+.. image:: images/inputs-content-selector.png
 
 Image selector
 --------------

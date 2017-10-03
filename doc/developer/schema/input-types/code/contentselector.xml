@@ -8,5 +8,8 @@
     <allowPath>${site}/people/</allowPath>
     <allowPath>./*</allowPath>
     <allowPath>/quotes*</allowPath>
+    <treeMode>true</treeMode>
+    <showStatus>true</showStatus>
+    <hideToggleIcon>true</hideToggleIcon>
   </config>
 </input>

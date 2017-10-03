@@ -6,11 +6,29 @@ Additional user stores can be created as needed. For example, it might be conven
 website and another user store for customers who log into the public site. Each user store can assign an ID Provider to handle its
 authentication (see :ref:`id_providers`).
 
-Creating user stores
---------------------
 
-To create a new user store, click "New" in the toolbar while no items are selected in the tree view. This will open an editor tab where the
-user store details can be entered as described below.
+Create new
+----------
+
+To create a new user store, user, user group or role click "New..." in the toolbar. This will open a new modal dialog where you can
+select what type of object you want to create.
+
+.. image:: images/new-user-dialog.png
+
+Note that if there's more than one user store in the system and you want to create either a user or a group then you will have to select
+which user store you want to create it in.
+
+.. image:: images/new-user-dialog-stores.png
+
+After selecting the type of object a new Wizard tab will open where you can finalize and save the item.
+Also, if you select an existing user store, user, user group or role in the tree the
+"New.." button will automatically change to display what kind of object it will create. For example, if you select an existing user
+in the tree then "New..." will change to "New User". If you click that, it will instantly open a new Wizard tab, skipping the modal dialog.
+
+.. image:: images/new-user.png
+
+User stores
+-----------
 
 As the ``<DisplayName>`` is entered, the ``<name>`` field is automatically filled in with a URL friendly version. The ``<name>`` field will
 be part of the user store key and it cannot be changed once the user store is saved.
@@ -34,7 +52,7 @@ User which is the principal used by any site visitor that is not logged in.
 
 Creating users
 ``````````````
-Additional users may be added by right-clicking the "Users" folder and selecting "New" in the context menu. This opens the User editor in a
+Besides the modal dialog, a new user can be created by right-clicking the "Users" folder (or an existing user) and selecting "New User" in the context menu. This opens the User editor in a
 new tab within the page. All the fields are required except for the "Groups & Roles" and the user cannot be "Saved" until the required
 fields are filled in.
 
@@ -63,7 +81,7 @@ will show the group's display name, principal path, and a list of its members.
 Creating groups
 ```````````````
 
-Right-click the "Groups" folder in the desired user store and select "New" in the context menu. The ``<Display Name>`` is what will be
+Right-click the "Groups" folder in the desired user store and select "New Group" in the context menu. The ``<Display Name>`` is what will be
 listed in the "Groups" folder. The ``<name>`` is automatically generated as a URL-friendly version of the ``<Display Name>`` and should not
 be changed. The Description is optional. Users and other groups can be added to the group as "Members". Users can also be added to a group
 by editing the user.
