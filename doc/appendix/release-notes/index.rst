@@ -6,102 +6,80 @@ Enonic XP |version| is a minor release with exiting new features, improvements a
 
 Multi-lingual Admin
 -------------------
-The XP admin and authoring interface now supports localization. The language will be automatically set based on your browser and OS defined preferences.
-This release includes two languages: English and Norwegian, more translations will be added in future releases.
+
+6.11 opened up the possiblity of localizing admin and most phrases were translated to Norwegian to demonstrate this.
+5 more translations have since been added, and the admin console may now be used in seven languages.
+The new ones are: French, Spanish, Portuguese, Russian and Swedish.
+The language used by Enonic XP to render the admin pages is based on the settings in your browser.
+If the language of your choice is not supported by XP, admin will default to English.
+
+A special thanks goes to Paulo Vitor Merlo de Andrade, who contributed the Portuguese translation.
+Translations to other languages are greatly appreciated.  Check out how to contribute here: :ref:`language_contribution`.
 
 
-Publishing Issues
------------------
+Content and image selectors may browse tree structure
+-----------------------------------------------------
 
-Inspired by "GitHubs Issues", we are finally able to reveal the first iteration of collaboration and workflow handling in Enonic XP.
+The content and image selectors have gained a "tree" icon on the left hand side.  Clicking this icon will turn it blue, and the dropdown
+box with the available choices will switch to a tree structure, so it is possible to look up the content or image in a known location:
 
-The idea is simple and powerful. Content Studio users now get the ability to create Issues, assign them to other Content Studio editors and contributors,
-and optionally add content items to them. With added items an issue can in fact be considered a publishing request.
+.. figure:: images/image-selector-tree.png
 
-Content Studio users may even create issues directly from the publishing wizard, as the publishing process and issues nicely blend together.
-Users are instantly notified on changes or assignments to issues through e-mails.
-
-.. figure:: images/issue-create.png
-
-  Create issues directly from the publishing wizard
+  The tree icon has been clicked, in order to look for images in a specific folder.  Notice how the tree icon is blue.
 
 
-.. figure:: images/issue.png
+Image Editor gets rotation and flip
+-----------------------------------
 
-  Details of the created issues
+In the image editor, images may now be rotated and flipped:
 
+.. figure:: images/image-editor-rotate.png
 
-.. figure:: images/issue-list.png
-
-  Browse and find issues
-
-
-Future versions of XP will extend the concept with features for commenting and tracking of changes to the issue, including single item verification and approval steps.
+  Just the click of a button to rotate an image 90°
 
 
-Dump and Load with versions
----------------------------
+.. figure:: images/image-editor-flip.png
 
-Previous versions of XP only supported dumping data without version history, based on the export format.
-With 6.11 developers and operations may dump and load entire installations of XP without loosing any data.
+  Another click of a button to flip the image around its vertical axis
 
 
-Some libraries are moved outside project
-----------------------------------------
+Rewritten Users App
+-------------------
 
-For now, 3 libraries has been moved outside the core XP project. The reason for this
-is to allow individual releases of these libraries. All the moved
-libraries keeps their API so only a dependency renaming is necessary.
-Here's a list of the libraries that has been moved:
+The Users App has been rewritten from scratch using `GraphQL technology <http://graphql.org>`_ to improve performance.
+Also, the User Interface have been improved, and there are two new features:  Bulk delete and Roles for Users groups.
 
-`lib-cache`_
+.. figure:: images/users-group-roles.png
 
-  Rename from ``com.enonic.xp:lib-cache:6.11.0``
-  to ``com.enonic.lib:lib-cache:1.0.0``.
-
-`lib-http-client`_
-
-  Rename from ``com.enonic.xp:lib-http-client:6.11.0``
-  to ``com.enonic.lib:lib-http-client:1.0.0``.
-
-`lib-xslt`_
-
-  Rename from ``com.enonic.xp:lib-xslt:6.11.0``
-  to ``com.enonic.lib:lib-xslt:1.0.0``.
-
-.. _lib-cache: https://github.com/enonic/lib-cache
-.. _lib-http-client: https://github.com/enonic/lib-http-client
-.. _lib-xslt: https://github.com/enonic/lib-xslt
+  Roles may be added to groups for much improved role management
 
 
-License change from AGPL to GPL
--------------------------------
+.. figure:: images/users-bulk-delete.png
 
-Enonic XP has until now been licensed as AGPL. We are now loosening up the licensing to the more commonly used GPLv3.
-In short GPL is similar to AGPL, but GPL also covers cloud-based uses of the platform.
-With GPL, Enonic XP is aligned with the most popular open source platform projects out there.
+  Multiple users may now be deleted in one go
 
-All XP libraries (prefixed with lib- in the GitHub project) are licensed under Apache 2.0.
-Developers only use these libraries directly when building apps, effectively enabling developers to license their code however they see fit.
-Our intention is that the GPL license should only apply to developers that intend to rewrite, modify or extend the core XP platform itself.
+
+Vacuum tool
+-----------
+
+The toolbox has a great new tool to save disk space.  The vacuum tool will go through the blob store and physically
+delete all object that is no longer in use.
 
 
 Other improvements
 ------------------
 
-  * Improved detail panel menu and navigation in Content Studio
-  * Page Template info displayed in the Details panel
-  * Added parameters to Shortcut content type
-  * AttachmentUploader - Show placeholder text when no file is selected
-  * Implement imagePlaceholder in portal lib
-  * Logback - Size and time based
-  * Restyle X icon in modal dialogs
-  * Support headers in attachments in mail lib
+  * More configuration options for the input types, TextArea, TextLine, Double and Long
+  * Support for range header and byte serving for attachments
+  * New santize function in JavaScript
+  * Header shortcuts in HTML Area changed to "Ctrl-Shift-number"
+  * Keyboard deletion of selected component in Page Editor and Page Component view
+  * Checkbox column in content and image selectors right-aligned
+  * Security check implemented directly in services
 
-
-40+ bugs fixed
+50+ bugs fixed
 
 
 Changelog
 ---------
-For a complete list of changes and bugfixes see http://github.com/enonic/xp/releases/tag/v6.11.0
+For a complete list of changes and bugfixes see http://github.com/enonic/xp/releases/tag/v6.12.0

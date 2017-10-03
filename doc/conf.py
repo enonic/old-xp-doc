@@ -47,7 +47,7 @@ author = u'Enonic AS'
 # built documents.
 #
 # The short X.Y version.
-version = '6.11'
+version = '6.12'
 # The full version, including alpha/beta/rc tags.
 release = '6.11.1'
 
