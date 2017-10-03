@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-Enonic XP |version| is a minor release with exiting new features, improvements and fixes.
+Enonic XP |version| is a minor release with exciting new features, improvements and fixes.
 
 
 Multi-lingual Admin
