@@ -99,12 +99,6 @@ Add Sample Apps
 .. include:: tour.rst
 
 
-Open Content Studio
--------------------
-
-.. include:: content-studio.rst
-
-
 Visit Enonic Market
 -------------------
 
