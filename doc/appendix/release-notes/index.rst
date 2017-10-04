@@ -47,7 +47,7 @@ Rewritten Users App
 -------------------
 
 The Users App has been rewritten from scratch using `GraphQL technology <http://graphql.org>`_ to improve performance.
-Also, the User Interface have been improved, and there are two new features:  Bulk delete and Roles for Users groups.
+In the process, the User Interface have been improved.  There are also two new features:  Bulk delete and adding roles directly to groups.
 
 .. figure:: images/users-group-roles.png
 
@@ -64,6 +64,15 @@ Vacuum tool
 
 The toolbox has a great new tool to save disk space.  The vacuum tool will go through the blob store and physically
 delete all object that is no longer in use.
+
+
+Input types configuration
+-------------------------
+
+There are some additional ways to configure input types with boundaries that will be validated by Enonic XP.
+
+  * **Double and Long:** ``max`` and ``min`` for boundaries on absolute values.
+  * **TextArea and TextLine:** ``max-length`` to limit the number of characters.
 
 
 Other improvements
