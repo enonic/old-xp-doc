@@ -71,11 +71,10 @@ Other improvements
 
   * More configuration options for the input types, TextArea, TextLine, Double and Long
   * Support for range header and byte serving for attachments
-  * New santize function in JavaScript
+  * New sanitize function in JavaScript
   * Header shortcuts in HTML Area changed to "Ctrl-Shift-number"
   * Keyboard deletion of selected component in Page Editor and Page Component view
   * Checkbox column in content and image selectors right-aligned
-  * Security check implemented directly in services
 
 50+ bugs fixed
 
