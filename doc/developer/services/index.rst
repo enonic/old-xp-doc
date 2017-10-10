@@ -24,8 +24,8 @@ Controller
 A service controller handles requests to the service.
 The controller is a required file written in JavaScript and must have the same name as the service, i.e. ``services/[service-name]/[service-name].js``.
 
-A controller exports a method for each type of HTTP request that should be handled.
-The handle method has the request object as a parameter and returns the response object (see :ref:`http_controllers`).
+A controller exports a function for each type of HTTP request that should be handled.
+The handle function takes the request object as a parameter and returns the response object (see :ref:`http_controllers`).
 
 The following example is a simple service that returns a JSON object with the date and a counter.
 
