@@ -10,7 +10,7 @@ for windows environments.
 
 To get help for the commands, just type the following::
 
-	$ ./toolbox.sh 
+	$ ./toolbox.sh
 	usage: toolbox <command> [<args>]
 
 	The most commonly used toolbox commands are:
@@ -30,6 +30,7 @@ To get help for the commands, just type the following::
     		set-replicas       Set the number of replicas in the cluster.
     		snapshot           Stores a snapshot of the current state of the repository.
     		upgrade            Upgrade a dump to the current version. The upgraded files will be written to <dumpFolderName>_upgraded_<version>
+    		vacuum             Removes unused blobs and binaries from blobstore
 
 		See 'toolbox help <command>' for more information on a specific command.
 
@@ -42,18 +43,21 @@ Here's a list of all the commands that you can do with the toolbox:
 .. toctree::
    :maxdepth: 1
 
-   snapshot
-   restore
-   list-snapshots
    delete-snapshots
+   dump
    export
    import
-   reindex
-   reprocess
-   set-read-only
-   set-replicas
-   dump
-   load
-   upgrade
    init-project
    install-app
+   list-snapshots
+   load
+   reindex
+   reprocess
+   restore
+   set-read-only
+   set-replicas
+   snapshot
+   upgrade
+   vacuum
+
+
