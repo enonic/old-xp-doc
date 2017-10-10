@@ -22,7 +22,6 @@ Read more below to learn about the basic concepts.
     http-controllers
     global-objects
     main
-    app-controller
     http-request
     http-response
     http-cookies

@@ -20,6 +20,7 @@ here :ref:`api_ref_guide`.
    projects/index
    schema/index
    ssjs/index
+   app-controller/index
    assets
    services/index
    views
