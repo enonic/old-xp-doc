@@ -16,23 +16,23 @@ Settings
 
 Overview of full JS object and the settings can be found here. A full in-depth into how each parameter works can be found in the `Java documentation for Cookies`_. Also, `general knownledge of Cookies`_ and their limitations is adviced.
 
-value
-  **Mandatory** - The value for the cookie. The example (2) in the code above would store ``complex: value`` in the cookie.
+value (required)
+  The value to store in the cookie. The example (2) in the code above would store a cookie looking like this ``complex: value``.
 
 path
   The paths on the site this cookie should be available from (and all containing paths).  
   
-  *Default* ``empty`` - the entire site can read the cookie.
+  *Default:* ``empty`` - the entire site can read the cookie.
   
 domain
   Add additional sites that should be able to read the cookie.  
   
-  *Default* ``empty`` - only the server that creates the cookie can read it.
+  *Default:* ``empty`` - only the server that creates the cookie can read it.
 
 comment
   A comment describing the cookie.  
   
-  *Default* ``null``.
+  *Default:* ``null``.
 
 maxAge
   Number of **seconds** before the browser is allowed to delete the cookie.  
@@ -42,12 +42,12 @@ maxAge
 secure
   Control if the cookie should only be accepted to be created and read over https and similar secure protocols.  
 
-  *Default* ``false``
+  *Default:* ``false``
 
 httpOnly
   Control if the cookie is available for scripts or not. If `true`, only the serverside code can read the cookie.  
     
-  *Default* ``false`` - also client-side scripts can read the cookie.
+  *Default:* ``false`` - also client-side scripts can read the cookie.
 
 .. _Java documentation for Cookies: http://docs.oracle.com/javaee/6/api/javax/servlet/http/Cookie.html
 .. _general knownledge of Cookies: https://en.wikipedia.org/wiki/HTTP_cookie
