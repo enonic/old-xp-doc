@@ -17,30 +17,30 @@ Settings
 Overview of full JS object and the settings can be found here. A full in-depth into how each parameter works can be found in the `Java documentation for Cookies`_. Also, `general knownledge of Cookies`_ and their limitations is adviced.
 
 value
-  **Mandatory** the value for the cookie. The example (2) in the code above would store `complex: value` in the cookie.
+  **Mandatory** - The value for the cookie. The example (2) in the code above would store `complex: value` in the cookie.
 
 path
-  The paths on the site this cookie should be available from (and all containing paths).  
+  The paths on the site this cookie should be available from (and all containing paths).<br />
   *Default* empty - the entire site can read the cookie.
   
 domain
-  Add additional sites that should be able to read the cookie.  
+  Add additional sites that should be able to read the cookie.<br />
   *Default* empty - only the server that creates the cookie can read it.
 
 comment
-  A comment describing the cookie.  
+  A comment describing the cookie.<br />
   *Default* null.
 
 maxAge
-  Number of **seconds** before the browser is allowed to delete the cookie.  
+  Number of **seconds** before the browser is allowed to delete the cookie.<br />  
   *Default:* -1 - the cookie will live until the browser's main process is stopped (when closing all browser windows, crashing, etc).
   
 secure
-  Control if the cookie should only be accepted to be created and read over https and similar secure protocols.  
+  Control if the cookie should only be accepted to be created and read over https and similar secure protocols.<br />
   *Default* false
 
 httpOnly
-  Control if the cookie is available for scripts or not. If `true`, only the serverside code can read the cookie.  
+  Control if the cookie is available for scripts or not. If `true`, only the serverside code can read the cookie.<br />
   *Default* false - also client side scripts can read the cookie.
 
 .. _Java documentation for Cookies: http://docs.oracle.com/javaee/6/api/javax/servlet/http/Cookie.html
