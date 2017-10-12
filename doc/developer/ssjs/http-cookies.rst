@@ -14,10 +14,10 @@ Here's an example of how the cookies should be set:
 Settings
 --------
 
-Overview of full cookies object settings and their defaults can be found here. A full in-depth into how each parameter works can be found in the `Java documentation for Cookies`. Also `general knownledge of Cookies` and their limitations are adviced.
+Overview of full JS object and the settings can be found here. A full in-depth into how each parameter works can be found in the `Java documentation for Cookies`_. Also, `general knownledge of Cookies`_ and their limitations is adviced.
 
 value
-  **Mandatory** the value for the cookie. Example above would store `complex: value` in the cookie.
+  **Mandatory** the value for the cookie. The example (2) in the code above would store `complex: value` in the cookie.
 
 path
   The paths on the site this cookie should be available from (and all containing paths).  
