@@ -15,10 +15,21 @@ If this is a test-installation, you can login with **su** / **password**.
 
 **Language**
 
-   The tools of the admin console have been translated to several languages, and will try to match the language settings of your browser.
-   If a translation is not found, the admin console will default to English.
-   If you know and use a language that is not supported, we would greatly appreciate help with translating the admin console to mor
-   languages.  Please checkout out our guide on :ref:`language_contribution`.
+   The tools of the admin console have been translated to the following languages:
+
+   * English
+   * French
+   * Norwegian
+   * Portuguese
+   * Russian
+   * Spanish
+   * Swedish
+
+   When using the admin console, your browser settings will be checked.  If your preferred language is one of the above, it will be used.
+   If your preferred language is not in the list, the admin console will default to English.
+
+   If you know a language that is not supported, we would greatly appreciate help with translating the admin console to more languages.
+   Please checkout out our guide on :ref:`language_contribution`.
 
 **The tools:**
 
