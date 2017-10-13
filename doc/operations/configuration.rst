@@ -233,6 +233,17 @@ index.recovery.initial_shards
 * ``_[networkInterface]:ipv6_`` : Resolves to the ipv6 address of the provided network interface. For example ``_en0:ipv6_``
 
 
+Admin UI Configuration
+----------------------
+
+The Admin UI can be configured in the ``com.enonic.xp.admin.ui.cfg`` file.  For now, the only option here, is to turn off the XP Tour
+for all users.
+
+.. literalinclude:: code/com.enonic.xp.admin.ui.cfg
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.admin.ui.cfg``
+
+
 Jetty HTTP Configuration
 ------------------------
 
