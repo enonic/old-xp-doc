@@ -1,0 +1,18 @@
+buildscript {
+    plugins {
+        repositories {
+            mavenLocal()
+            jcenter()
+            maven {
+                url 'http://repo.enonic.com/public'
+            }
+        }
+
+        dependencies {
+            classpath "com.enonic.xp:gradle-plugin:${xpVersion}"
+        }
+    }
+}
+
+apply plugin: 'com.enonic.xp.app'
+...
