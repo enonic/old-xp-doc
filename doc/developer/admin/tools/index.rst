@@ -24,7 +24,7 @@ Enonic XP is shipped with the following tools by default:
 
 **Launcher**
 
-Navigation between the various Admin Tools is done via the "Launcher Panel", Accessible from the top right corner.
+Navigation between the various Admin Tools is done via the "Launcher Panel", accessible via the "burger" icon in the top right corner.
 This icon and the Launcher panel should be available across all Admin Tools.
 
 .. image:: images/launcher.jpg
@@ -68,23 +68,39 @@ The controller must have the same name as the tool, i.e. ``admin/tools/[tool-nam
 Adding the Launcher Panel menu
 ------------------------------
 
-Adding the Launcher Panel menu to a custom admin tool requires two steps.
+Adding the Launcher Panel menu to a custom admin tool requires a few steps.
 
-1. In the <body> section of the view add a Javascript snippet where you define an object variable called "CONFIG" with properties
-adminUrl, assetsUri and appId which will get their values from the controller:
+1. Add a reference to lib-admin-ui to the ``dependencies`` section in build.gradle file of your project:
+
+``include "com.enonic.lib:lib-admin-ui:1.9.0"``
+
+
+2. Add references to XP Admin UI's libraries and stylesheets to your view file - they are required for the Launcher Panel to function properly:
+
+.. literalinclude:: code/admin_references.html
+    :language: html
+
+
+3. Add a reference to the Launcher bundle which will inject the "burger" icon and the Launcher panel into your page.
+
+.. literalinclude:: code/launcher-reference.html
+    :language: html
+
+
+4. In the <body> section of the view add a Javascript snippet where you define an object variable called "CONFIG" with properties
+``adminUrl`` and ``appId``. ``appId`` is needed to correctly identify your tool inside the Launcher panel.
 
 
 .. literalinclude:: code/config.html
     :language: html
 
 
-2. Under the Javascript snippet add a reference to the Launcher's Javascript file as shown below:
+5. Finally, make sure that all parameters used in the view are passed from the view controller:
 
-.. literalinclude:: code/launcher-reference.html
-    :language: html
+.. literalinclude:: code/launcher-controller.js
+    :language: javascript
 
-
-The entire view:
+Entire view:
 
 .. literalinclude:: code/view.html
     :language: html

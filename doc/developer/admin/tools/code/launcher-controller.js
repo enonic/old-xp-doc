@@ -8,7 +8,12 @@ function handleGet() {
     var params = {
         adminUrl: adminLib.getBaseUri(),
         assetsUrl: portalLib.assetUrl({path: ''}),
-        appName: 'My custom tool'
+        appName: 'My custom tool',
+        launcherUrl: portalLib.assetUrl({
+            path: '/js/launcher',
+            application: 'com.enonic.xp.app.main'
+        }),
+        appId: 'my-custom-tool'
     };
 
     return {

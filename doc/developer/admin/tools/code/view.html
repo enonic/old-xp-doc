@@ -9,10 +9,10 @@
     <title>{{appName}}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="{{assetsUri}}/common/styles/_all.css">
+    <link rel="stylesheet" type="text/css" href="{{assetsUrl}}/admin/common/styles/_all.css">
 
     <!-- Common lib -->
-    <script type="text/javascript" src="{{assetsUri}}/common/lib/_all.js"></script>
+    <script type="text/javascript" src="{{assetsUrl}}/admin/common/lib/_all.js"></script>
 
 </head>
 <body>
@@ -21,13 +21,15 @@
 <script type="text/javascript">
     var CONFIG = {
         adminUrl: '{{adminUrl}}',
-        assetsUri: '{{assetsUri}}',
         appId: '{{appId}}'
     };
 </script>
 
+<!-- Common UI -->
+<script type="text/javascript" src="{{assetsUrl}}/admin/common/js/_all.js"></script>
+
 <!-- Append the Launcher Panel -->
-<script type="text/javascript" src="{{assetsUri}}/apps/launcher/js/_all.js" async></script>
+<script type="text/javascript" src="{{launcherUrl}}/bundle.js" async></script>
 
 </body>
 </html>
