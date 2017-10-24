@@ -4,7 +4,7 @@ Cluster Deployment
 ==================
 
 Introduction
--------------
+------------
 
 Consider deploying an XP cluster if you are building applications or sites that require
 
@@ -46,7 +46,7 @@ An XP cluster can also be launched on a single computer for testing or developme
 
 
 Basic cluster setup on local machine
-**************************************
+************************************
 
 We have strived to make Enonic XP deployment as simple and fail-safe as possible. By default it is configured to run on a local computer and it
 will not start looking for nodes in the network until you configure it to do so.
@@ -79,7 +79,7 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
 
     node.local = false
 
- 5. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
+ 5. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin\server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
 
  ::
 
@@ -134,14 +134,14 @@ For now, the nodes in the cluster need a shared storage to store data as files. 
 .. _network-config:
 
 Network configuration
-----------------------
+---------------------
 
 The nodes in a cluster need to be able to discover and communicate with other nodes in the network. The nodes communicate through TCP.
 
 Each node binds to an IP-address and port, and communicates to other nodes specified in a list of other nodes bind addresses. Verify that your network allows TCP traffic on a specific port or port-range for the nodes to communicate and then configure the nodes to use these addresses.
 
 Settings
-*********
+********
 
 node.local
 ##########
@@ -188,7 +188,7 @@ Sample config
 .. _replica-setup:
 
 Replica setup
--------------------
+-------------
 
 Number of replicas
 ******************
@@ -205,7 +205,7 @@ So for a 3 node cluster, the number of replicas should be set to 2.
 .. _cluster-partition-settings:
 
 Cluster partition settings
-----------------------------------
+--------------------------
 
 One of the main motivations of a cluster is to ensure that even if one or several nodes fail, the service you are providing should still be
 available. In an ideal world, a 100 node cluster should be fully operational even if 99 nodes are down. But in the real world, we also need
@@ -213,8 +213,6 @@ to consider the cluster data integrity. This introduces a common dilemma in clus
 
 In a split-brain scenario, nodes get divided into smaller clusters that don't communicate with each other, and each cluster believing that
 the nodes in the other cluster are dead. This can easily happen in a cluster with 4 nodes on two different locations:
-
-<<<Figure>>>
 
 If the nodes on location-1 are disconnected from the master node on location-2, they will regroup and select a new master on location-1 and
 still provide service. The nodes on location-2 will assume that the nodes in location-1 are dead, so they will also continue serving
@@ -228,7 +226,7 @@ To avoid this situation, there are a couple of basic properties of a cluster tha
  #. The minority cluster partitions can be allowed to serve read-only requests if that is acceptable for the provided service.
 
 Settings
-*********
+********
 
 discovery.zen.minimum_master_nodes
 ##################################
@@ -276,13 +274,13 @@ These nodes will then never be affected by traffic peaks and can safely keep tra
 .. _cluster-stability-settings:
 
 Cluster stability settings
----------------------------
+--------------------------
 
 In a low load environment, there is probably no need to do a lot of tuning since it will perform acceptable with the default setup. If you
 expect heavy load, there are a couple of things to consider when setting up the cluster topology.
 
 Dedicated master nodes
-***********************
+**********************
 
 A cluster consists of a number of nodes sharing data and state between them. A cluster needs to have exactly one node acting as a master-node
 at any time. The master-node is responsible for managing the cluster-state. In a busy cluster, the master-nodes will have to do a lot of work
@@ -318,7 +316,7 @@ A dedicated data node should have the following settings:
 .. _node-recovery-settings:
 
 Node recovery settings
------------------------
+----------------------
 
 Node recovery happens when a node starts or reconnects to the cluster after a e.g a network shortage.
 
@@ -329,10 +327,10 @@ before the nodes with existing data can inform the new node that there is alread
 
 
 Settings
-*********
+********
 
 gateway.recover_after_nodes
-#############################
+###########################
 
 Defaults to 1. Do not start the recovery of local indices before this number of nodes (master or data) has joined the cluster.
 
@@ -380,25 +378,25 @@ Sample configurations
 ---------------------
 
 2-node cluster
-****************
+**************
 
 .. literalinclude:: code/2-node-cluster-config.properties
    :language: properties
 
 3-node cluster
-****************
+**************
 
 .. literalinclude:: code/3-node-cluster-config.properties
    :language: properties
 
 5-node cluster
-****************
+**************
 
 .. literalinclude:: code/5-node-cluster-config.properties
    :language: properties
 
 7-node cluster with dedicated roles
-************************************
+***********************************
 
 .. literalinclude:: code/7-node-cluster-dedicated.properties
    :language: properties
