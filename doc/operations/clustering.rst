@@ -79,7 +79,7 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
 
     node.local = false
 
- 5. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin/server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
+ 5. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin\server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
 
  ::
 
@@ -213,8 +213,6 @@ to consider the cluster data integrity. This introduces a common dilemma in clus
 
 In a split-brain scenario, nodes get divided into smaller clusters that don't communicate with each other, and each cluster believing that
 the nodes in the other cluster are dead. This can easily happen in a cluster with 4 nodes on two different locations:
-
-<<<Figure>>>
 
 If the nodes on location-1 are disconnected from the master node on location-2, they will regroup and select a new master on location-1 and
 still provide service. The nodes on location-2 will assume that the nodes in location-1 are dead, so they will also continue serving
