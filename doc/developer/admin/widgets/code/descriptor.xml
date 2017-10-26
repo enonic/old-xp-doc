@@ -3,4 +3,8 @@
   <interfaces>
     <interface>contentstudio.detailpanel</interface>
   </interfaces>
+  <allow>
+    <principal>role:system.admin</principal>
+    <principal>role:myapp.myrole</principal>
+  </allow>
 </widget>
