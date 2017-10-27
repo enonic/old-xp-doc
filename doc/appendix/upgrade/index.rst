@@ -64,4 +64,6 @@ Now you can write the same block as:
 
 .. literalinclude:: code/new.build.gradle
 
+PS: This requires Gradle 4.0 or later.
+
 All the rest will be the same. You can look at https://github.com/enonic/starter-vanilla for an example of how to use plugin.
