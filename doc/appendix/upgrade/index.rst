@@ -73,4 +73,4 @@ All the rest will be the same. You can look at https://github.com/enonic/starter
 
 If you have used the Admin UI config-file in 6.11 (to disable the Welcome Tour), the name of that file has changed in 6.12. In order for XP to pick that up you will need to:
 
-Rename the file `$XP_HOME/config/com.enonic.xp.admin.ui.cfg` to `$XP_HOME/config/com.enonic.xp.app.main.cfg`. The settings in that file have not changed.
+Rename the file ``com.enonic.xp.admin.ui.cfg`` in the ``$XP_HOME/config/`` directory to ``$XP_HOME/config/com.enonic.xp.app.main.cfg``. The settings in that file have not changed.
