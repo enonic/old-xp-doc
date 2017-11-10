@@ -11,9 +11,9 @@ App
 
 The globally available ``app`` object holds information about the contextual app it was delivered from.
 
-.. js:function:: app.name
+.. js:variable:: app.name
 
-    :returns: The name of the application.
+    :returns: The name of the application, as defined in its gradle configuration.
 
 .. js:function:: app.version
 
