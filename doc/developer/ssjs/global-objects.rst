@@ -9,21 +9,16 @@ The following global functions and objects are available in the Enonic XP framew
 App
 ---
 
-The globally available ``app`` object holds information about the contextual app it was delivered from.
+The globally available ``app`` object holds information about the contextual app it was delivered from. It has the following properties:
 
-.. js:variable:: app.name
+app.name
+  The name of the application, as defined in its gradle configuration.
 
-    :returns: The name of the application, as defined in its gradle configuration.
+app.version
+  Version of the application, as defined in its gradle configuration.
 
-.. js:function:: app.version
-
-    :returns: Version of the application, as defined in its gradle configuration.
-
-.. js:function:: app.config
-
-    :returns: Values from the application's configuration file. This can be set using
-    ``$XP_HOME/config/<app.name>.cfg``. Every time the configuration is
-    changed the app is restarted.
+app.config
+  Values from the application's configuration file. This can be set using ``$XP_HOME/config/<app.name>.cfg``. Every time the configuration is changed the app is restarted.
 
 Examples:
 
