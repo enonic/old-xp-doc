@@ -236,12 +236,11 @@ index.recovery.initial_shards
 Admin UI Configuration
 ----------------------
 
-The Admin UI can be configured in the ``com.enonic.xp.admin.ui.cfg`` file.  For now, the only option here, is to turn off the XP Tour
-for all users.
+The Admin UI can be configured in the ``com.enonic.xp.app.main.cfg`` file.  For now, the only option here, is to turn off the XP Tour for all users.
 
-.. literalinclude:: code/com.enonic.xp.admin.ui.cfg
+.. literalinclude:: code/com.enonic.xp.app.main.cfg
    :language: properties
-   :caption: ``$XP_HOME/config/com.enonic.xp.admin.ui.cfg``
+   :caption: ``$XP_HOME/config/com.enonic.xp.app.main.cfg``
 
 
 Jetty HTTP Configuration
