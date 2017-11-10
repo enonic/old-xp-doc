@@ -12,13 +12,13 @@ App
 The globally available ``app`` object holds information about the contextual app it was delivered from.
 
 .. js:attribute:: app.name
-    Name of the application.
+    :returns: The name of the application.
 
 .. js:attribute:: app.version
-    Version of the application.
+    :returns: Version of the application, as defined in its gradle configuration.
 
 .. js:attribute:: app.config
-    Application configuration. This can be set using
+    :returns: Values from the application's configuration file. This can be set using
     ``$XP_HOME/config/<app.name>.cfg``. Every time the configuration is
     changed the app is restarted.
 
