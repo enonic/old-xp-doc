@@ -79,7 +79,14 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
 
     node.local = false
 
- 5. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin\server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
+ 5. **Open ports:** In ``$XP_DISTRO/home/config/com.enonic.xp.elasticsearch.cfg`` set the property ``transport.tcp.port`` to a range, e.g ``9300-9301`` and add range to ``discovery.zen.ping.unicast.hosts``
+
+ ::
+
+    transport.tcp.port = 9300-9301
+    discovery.zen.ping.unicast.hosts=127.0.0.1[9300-9301]
+
+ 6. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin\server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
 
  ::
 
@@ -151,14 +158,14 @@ When this setting is ``true``, the node will never try to join a cluster. In all
 network.host
 ############
 
-The ``network.host`` setting specifies the TCP-address used for node communication. The default value for this is 127.0.0.1, which means that this node will never be able to talk to other nodes.
+The ``network.host`` setting specifies the TCP-address used for node communication. The default value for this is 127.0.0.1[9300], which means that this node will never be able to talk to other nodes, and only on port 9300.
 
 The ``network.host`` setting can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`es-config` section for an overview.
 
 transport.tcp.port
 ##################
 
-The ``transport.tcp.port`` value defines the port that the node will use for communication. This defaults to a range of ports; ``9300-9400``, meaning that it will use the first available port in this range.
+The ``transport.tcp.port`` value defines the port that the node will use for communication. This defaults to a single ports; ``9300``. To define a range, use e.g ``9300-9400``
 
 discovery.zen.ping.unicast.hosts
 ################################
