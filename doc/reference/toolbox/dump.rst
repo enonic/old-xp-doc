@@ -3,36 +3,45 @@
 dump
 ====
 
-Make a copy of all the data in an entire system.
+toolbox dump - Export data from every repository.
 The result will be stored in the ``$XP_HOME/data/dump`` directory.
-See :ref:`operations-export` for more information on system dump/load.
-
-.. Attention::
- 
-	Performing a dump will delete version history for all data (used for version history and snapshot restoration).
 
 **Usage:**
 
 .. code-block:: none
 
   NAME
-          toolbox dump - Export data from every repository.
+        toolbox dump - Export data from every repository.
 
   SYNOPSIS
-          toolbox dump -a <auth> [-h <host>] [-p <port>] -t <target>
+        toolbox dump -a <auth> [-h <host>] [--max-version-age <maxAge>]
+                [--max-versions <maxVersions>] [-p <port>] [--scheme <scheme>]
+                [--skip-versions] -t <target>
 
   OPTIONS
-          -a <auth>
-              Authentication token for basic authentication (user:password).
+        -a <auth>
+            Authentication token for basic authentication (user:password).
 
-          -h <host>
-              Host name for server (default is localhost).
+        -h <host>
+            Host name for server (default is localhost).
 
-          -p <port>
-              Port number for server (default is 8080).
+        --max-version-age <maxAge>
+            Max age of versions to include, in days, in addition to current version
 
-          -t <target>
-              Dump name.
+        --max-versions <maxVersions>
+            Max number of versions to dump in addition to current version
+
+        -p <port>
+            Port number for server (default is 8080).
+
+        --scheme <scheme>
+            Scheme (default is http).
+
+        --skip-versions
+            Dont dump version-history, only current versions included
+
+        -t <target>
+            Dump name.
 
 **Example:**
 
