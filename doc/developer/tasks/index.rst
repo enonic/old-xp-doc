@@ -26,7 +26,7 @@ Controller
 ----------
 
 A task controller handles the execution of the task.
-The controller is a required file written in JavaScript and must have the same name as the task, i.e. ``services/[task-name]/[task-name].js``.
+The controller is a required file written in JavaScript and must have the same name as the task, i.e. ``tasks/[task-name]/[task-name].js``.
 
 A task controller must export a ``run`` function, that will be called when the task is executed.
 The ``run`` function will receive the task parameters as a JSON object.
