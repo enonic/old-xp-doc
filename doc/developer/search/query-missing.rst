@@ -7,14 +7,15 @@ There are two ways of querying missing values:
 By filter
 ---------
 
-The exists-filter is the recommended and most efficient way of query for missing values
+The exists- and notExists-filters is the recommended and most efficient way of query for missing values
 
-  .. literalinclude:: filters/code/exists-filter.json
-    :language: json
+    .. literalinclude:: filters/code/exists-filter.json
+     :language: json
 
+    .. literalinclude:: filters/code/notExists-filter.json
+     :language: json
 
-See the :ref:`exists`-filter
-
+    See the :ref:`exists`-filter and :ref:`not-exists`-filter
 
 By query
 --------

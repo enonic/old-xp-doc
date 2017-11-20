@@ -1,3 +1,5 @@
+.. _not-exists:
+
 notExists
 =========
 
