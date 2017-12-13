@@ -17,7 +17,7 @@ Upgrade Steps
 
 Backup you current installation. This is described in :ref:`backup`.
 
-You could also do a :ref:`toolbox-dump` of the system, but then you will loose versions if you have to reload it.
+You could also do a :ref:`toolbox-dump` of the system, but then you will lose versions if you have to reload it.
 
 2. Install new version
 **********************
