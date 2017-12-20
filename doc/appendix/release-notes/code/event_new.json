@@ -1,0 +1,10 @@
+{
+  "nodes": [
+    {
+      "id": "de21117-78ee-4667-b866-4fdd4b",
+      "path": "/content/mysite",
+      "branch": "draft",
+      "repo": "cms-repo"
+    }
+  ]
+}

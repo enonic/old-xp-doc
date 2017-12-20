@@ -23,6 +23,27 @@ To allow more than one instance running on the same machine, the setting ``trans
  * Previous default value: ``127.0.0.1``
  * New default value: ``127.0.0.1[9300]``
 
+Changes in event formatting
+---------------------------
+
+There was a bug in XP that made that `event-lib`_ returned event data serialized in the wrong format.
+What should have been a JSON object was instead a string that looked almost like JSON, but it was not.
+
+The issue has been fixed in this release and the events are now properly formatted as JSON.
+But some 3rd party applications and libraries that tried to work around the issue, by parsing the string, might break now.
+If you are using `event-lib`_, we recommend to test and verify that everything still works as expected.
+
+This is an example of how the event was serialized in previous versions. The data is from a node event:
+
+.. literalinclude:: code/event_old.json
+  :language: json
+
+And this is how it is serialized in 6.13, after the fix:
+
+.. literalinclude:: code/event_new.json
+  :language: json
+
+.. _event-lib: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/module-event.html
 
 Changelog
 ---------
