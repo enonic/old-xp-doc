@@ -43,3 +43,37 @@ Using Tasks
 Tasks can be started by calling the ``submitNamed`` function in `lib-task library`_.
 
 .. _lib-task library: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/module-task.html#.submitNamed
+
+Task Properties
+---------------
+
+A running task has the following properties, which can be obtained using the `functions in lib-task library`_
+
++------------------+--------+--------------------------------------------------------------------------------+
+| Name             | Type   | Description                                                                    |
++==================+========+================================================================================+
+| id               | string | Task unique id.                                                                |
++------------------+--------+--------------------------------------------------------------------------------+
+| name             | string | Task name.                                                                     |
++------------------+--------+--------------------------------------------------------------------------------+
+| description      | string | Task description.                                                              |
++------------------+--------+--------------------------------------------------------------------------------+
+| state            | string | Task state. Possible values: ``WAITING``, ``RUNNING``, ``FINISHED``, ``FAILED``|
++------------------+--------+--------------------------------------------------------------------------------+
+| application      | string | Application containing the callback function to run.                           |
++------------------+--------+--------------------------------------------------------------------------------+
+| user             | string | Key of the user that submitted the task.                                       |
++------------------+--------+--------------------------------------------------------------------------------+
+| startTime        | string | Time when the task was submitted (in ISO-8601 format).                         |
++------------------+--------+--------------------------------------------------------------------------------+
+| progress         | Object | Progress information provided by the running task.                             |
++------------------+--------+--------------------------------------------------------------------------------+
+| progress.current | number | Latest progress current numeric value.                                         |
++------------------+--------+--------------------------------------------------------------------------------+
+| progress.total   | number | Latest progress target numeric value.                                          |
++------------------+--------+--------------------------------------------------------------------------------+
+| progress.info    | string | Latest progress textual information.                                           |
++------------------+--------+--------------------------------------------------------------------------------+
+
+.. _functions in lib-task library: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/module-task.html
+
