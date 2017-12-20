@@ -24,3 +24,18 @@ exports.post = function (req) {
         contentType: 'application/json'
     };
 };
+
+// Handles all other method requests
+exports.all = function (req) {
+    if (req.method === 'DELETE') {
+        handleDelete(req);
+
+    } else if (req.method === 'PUT') {
+        handlePut(req);
+    }
+
+    return {
+        body: {'Hello': name, 'Method': req.method},
+        contentType: 'application/json'
+    };
+};
