@@ -38,21 +38,34 @@ Content selectors allow the selection of one ore more existing content items. Th
 specific types of content and/or content that exists at a certain path of the content tree.
 
 Content selectors behave much like combo boxes. The down arrow in the right of the box opens the list. Typing in the search field will
-filter the content by name. When more than one content has been selected, the order my be changed by clicking and dragging the dotted area
-to the left of each content. Any selected content may be opened for editing by clicking the pencil icon. Selected content can be removed
+filter the content by name. When multiple content items have been selected, their order can be changed by clicking and dragging the dotted area
+to the left of each content. Any selected content can be opened for editing by clicking the pencil icon. Selected content can be removed
 with the X icon.
 
 .. image:: images/inputs-content-selector.png
+
+Content selector supports two modes of displaying content: flat (default) and tree. The mode can be switched by the toggler icon inside the input field.
+
+.. image:: images/inputs-content-selector-tree.png
 
 Image selector
 --------------
 
 Image selectors are much like content selectors except that they allow only image content to be selected. They also allow new image content
-to be created and selected by clicking the upload button to the right of the input. When multiple images are selected, the order can be
-changed by clicking and dragging the image previews. Clicking on a selected image will reveal **Edit** and **Remove** buttons.
+to be created and selected by clicking the upload button to the right of the input.
 
-.. image:: images/inputs-image-selector.jpg
+By default image selector is displaying content in the gallery mode with large thumbnail images:
 
+.. image:: images/inputs-image-selector-gallery.png
+
+Clicking the toggler icon inside the selector's input field will switch the selector into tree mode:
+
+.. image:: images/inputs-image-selector-tree.png
+
+Order of selected images can be changed by clicking and dragging the image thumbnails.
+Clicking on a selected image will reveal **Edit** and **Remove** buttons.
+
+.. image:: images/inputs-image-selector.png
 
 Tag
 ---
