@@ -25,6 +25,18 @@ Here's a list of all the status pages and what is shows:
   ``dump.threads``
     Dumps all current thread-states.
 
+  ``http.filter``
+    List of servlet filters registered. It shows class, order and the URL patterns to which it applies.
+
+  ``http.servlet``
+    List of HTTP servlets registered. It shows class, order and the URL patterns to which it applies.
+
+  ``http.threadpool``
+    Status of the the Jetty web server thread pool.
+
+  ``http.webHandler``
+    List of WebHandler instances registered.
+
   ``index``
     Shows ElasticSearch index status.
 
@@ -46,6 +58,9 @@ Here's a list of all the status pages and what is shows:
   ``jvm.threads``
     JVM thread stats (count, peak, total).
 
+  ``mediaTypes``
+    List of mappings from file extension to media type.
+
   ``metrics``
     Shows metrics. The information can be filtered using ``?filter=...``.
 
@@ -65,12 +80,12 @@ Here's a list of all the status pages and what is shows:
 .. _cluster-monitoring:
 
 Cluster monitoring
--------------------------
+------------------
 
 There are two tools at your disposal for monitoring the health of the cluster and indices:
 
 Cluster health
-***************
+**************
 
 ::
 
@@ -93,7 +108,7 @@ The "state" property is the most important:
 To see the details about how the replicas are distributed, let's continue to the ``Index stats`` report:
 
 Index stats
-*************
+***********
 
 ::
 
