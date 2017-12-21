@@ -47,7 +47,7 @@ Here's a list of all the status pages and what is shows:
     General JVM information (version, vendor, uptime).
 
   ``jvm.memory``
-    JVM memory information (heap and non-heap).
+    JVM memory information (heap, non-heap, pools).
 
   ``jvm.os``
     Information about OS (name, version, architecture).
