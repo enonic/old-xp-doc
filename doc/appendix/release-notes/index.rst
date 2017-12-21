@@ -45,6 +45,16 @@ And this is how it is serialized in 6.13, after the fix:
 
 .. _event-lib: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/module-event.html
 
+
+Indexing of pages, components and x-data
+----------------------------------------
+
+For content, values in page- and component-config is now indexed "by type", meaning that string-values are fulltext-indexed.
+Also, html-areas in these configs are now properly stripped for html-tags when indexed as fulltext / n-gram.
+
+Since the index-configuration of a content is stored on the content itself, a content must be refreshed (edited) to make the new index-values available.
+A reindex will not make the new index value available.
+
 Changelog
 ---------
 For a complete list of changes and bugfixes see http://github.com/enonic/xp/releases/tag/v6.13.0
