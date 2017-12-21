@@ -3,6 +3,8 @@
 Toolbox CLI
 ===========
 
+.. NOTE:: If you have enabled the :ref:`configuration-vhost`, ``/api`` has to be accessible for the toolbox CLI to communicate with the server
+
 The toolbox is a CLI (command line interface) tool that is used to do
 administration tasks. Toolbox executables are located in ``$XP_INSTALL/toolbox``
 folder. Use ``toolbox.sh`` for mac/unix environments and ``toolbox.bat``
