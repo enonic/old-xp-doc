@@ -51,7 +51,7 @@ repository, and adapting its build file properties (gradle.properties).
 
 ::
 
-  $ toolbox.sh init-project -d ~/Dev/xp/apps/myApp -n com.company.myapp -v 0.9.0 -r https://github.com/enonic/starter-vanilla.git -c 1.0.0
+  $ toolbox.sh init-project -d ~/Dev/xp/apps/myApp -n com.company.myapp -v 0.9.0 -r https://github.com/enonic/starter-vanilla.git -c 1.3.0
 
 ::
 
