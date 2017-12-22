@@ -30,8 +30,7 @@ The folder structure for such a setup would look something like this::
 
 An actual implementation with projects called my-first-app and company-site would look like this::
 
-  /Users/mla/development/software/enonic-xp-6.8.1
-  /Users/mla/development/software/enonic-xp-6.9.0
+  /Users/mla/development/software/enonic-xp-${release}
   /Users/mla/development/xp-homes/my-first-app/home
   /Users/mla/development/xp-homes/company-site/home
   /Users/mla/development/projects/my-first-app/...

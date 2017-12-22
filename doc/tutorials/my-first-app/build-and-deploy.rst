@@ -12,11 +12,11 @@ Linux and OSX::
 
   export XP_HOME=[$XP_INSTALL]/home
 
-For example, if your XP installation is at ``/Users/enonic/installs/enonic-xp-6.9.0`` then you would enter:
+For example, if your XP installation is at ``/Users/enonic/installs/enonic-xp-${release}`` then you would enter:
 
 ::
 
-  export XP_HOME=/Users/enonic/installs/enonic-xp-6.9.0/home
+  export XP_HOME=/Users/enonic/installs/enonic-xp-${release}/home
 
 Windows::
 
