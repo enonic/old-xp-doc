@@ -1,59 +1,97 @@
+.. _release_notes:
+
 Release Notes
 =============
 
 Enonic XP |version| is a minor release with exciting new features, improvements and fixes.
 
 
-Stricter default cluster settings
----------------------------------
+Gallery mode in Image Selector
+------------------------------
 
-There has been incidents where several instances of XP has been started on the same machine and by accident creating a cluster.
-The default settings has now been changed to prevent this, also meaning that local machine cluster members must be explicitly configured.
-The cluster settings are available in the config-file: ``com.enonic.xp.elasticsearch.cfg``
-To allow more than one instance running on the same machine, the setting ``transport.tcp.port`` must be set to a port range, e.g ``9300-9302``
+Based on user feedback, we have implemented a brand new gallery view for the image selector
 
-*Changed settings (com.enonic.xp.elasticsearch.cfg):*
+* Bigger thumbnails making the selection process faster and easier.
+* The tree-browsing mode is also available
+* Actions for inserted images available in sticky menu
 
+.. figure:: images/gallery-mode.png
 
-``transport.tcp.port``
- * Previous default value: ``9300-9400``
- * New default value: ``9300``
-
-``discovery.zen.ping.unicast.hosts``
- * Previous default value: ``127.0.0.1``
- * New default value: ``127.0.0.1[9300]``
-
-Changes in event formatting
----------------------------
-
-There was a bug in XP that made that `event-lib`_ returned event data serialized in the wrong format.
-What should have been a JSON object was instead a string that looked almost like JSON, but it was not.
-
-The issue has been fixed in this release and the events are now properly formatted as JSON.
-But some 3rd party applications and libraries that tried to work around the issue, by parsing the string, might break now.
-If you are using `event-lib`_, we recommend to test and verify that everything still works as expected.
-
-This is an example of how the event was serialized in previous versions. The data is from a node event:
-
-.. literalinclude:: code/event_old.json
-  :language: json
-
-And this is how it is serialized in 6.13, after the fix:
-
-.. literalinclude:: code/event_new.json
-  :language: json
-
-.. _event-lib: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/module-event.html
+  Search and select images in gallery mode
 
 
-Indexing of pages, components and x-data
-----------------------------------------
+.. figure:: images/sticky-actions.png
 
-For content, values in page- and component-config is now indexed "by type", meaning that string-values are fulltext-indexed.
-Also, html-areas in these configs are now properly stripped for html-tags when indexed as fulltext / n-gram.
+  Action buttons for selected images are more easily available
 
-Since the index-configuration of a content is stored on the content itself, a content must be refreshed (edited) to make the new index-values available.
-A reindex will not make the new index value available.
+
+Improved UI for ItemSets
+------------------------
+ItemSet interface has had a makeover to make it easier and faster to use
+
+* Toggle to edit/close a single item by clicking it
+* Get instant info on itemSet content from the header
+* More consistent icon for drag handle
+* Expect further improvements in upcoming releases :)
+
+.. figure:: images/item-sets.png
+
+
+Warning for inbound references
+------------------------------
+
+User is warned when attempting to delete content in Content Studio:
+
+* Lists number of inbound references per item
+* Link to quickly access items referencing content
+
+.. figure:: images/delete-warning.png
+
+
+Better indexing of content
+--------------------------
+
+Previously, only the content type fields and standard content fields were indexed and searchable.
+Now the following fields are also indexed automatically:
+
+* X-data inputs (Steps and fields dynamically added to content)
+* Page configuration inputs (editable from context menu)
+* Part and layout configuration inputs (editable from context menu)
+
+
+API improvements
+----------------
+
+* Auth lib now supports create and modify role
+* Auth lib supports specifying session timeout for logins
+* Web server thread pool details now available in status API
+* Memory pool details for JVM added to status API
+* Events are now sent for task API
+* Task thread names can now be set manually
+* New "all" keyword available to process all http methods in javascript controllers
+* Import, Export and Dump now have progress information available
+* ChildOrder setting now configurable in lib-content
+
+Other improvements
+------------------
+
+* Page Editor now automatically scrolls to last position after saving
+* UI improvements for publishing issues
+* Progress bars are now displayed for time consuming move and duplicate actions in Content Studio
+* New default icon for custom content types
+* "tablet layout mode" with preview panel placed at the bottom of the screen has been dropped
+* Content Studio Security step renamed to Access
+* Easily clear selections in Content Studio by clicking on blank areas
+* + 14 minor improvements and 70 bugfixes
+
+.. warning:: There are important upgrade steps to follow when upgrading to |version|.
+
+  * Stricter default cluster settings
+  * Fixes to `event-lib`_ may break compatibiliy
+  * Indexing of pages, components and x-data
+
+
+:ref:`upgrade_notes` for more details.
 
 Changelog
 ---------
