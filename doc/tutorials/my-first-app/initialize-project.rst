@@ -14,13 +14,13 @@ the standard structures required (see :ref:`projects`).
 
 ::
 
-[$XP_INSTALL]/toolbox/toolbox.sh init-project -n com.company.myapp -r starter-vanilla -c v1.1.0
+[$XP_INSTALL]/toolbox/toolbox.sh init-project -n com.company.myapp -r starter-vanilla -c v1.3.0
 
-For example, if your XP installation is at ``/Users/enonic/installs/enonic-xp-6.9.0`` then you would enter:
+For example, if your XP installation is at ``/Users/enonic/installs/enonic-xp-${release}`` then you would enter:
 
 ::
 
-/Users/enonic/installs/enonic-xp-6.9.0/toolbox/toolbox.sh init-project -n com.company.myapp -r starter-vanilla -c v1.1.0
+/Users/enonic/installs/enonic-xp-${release}/toolbox/toolbox.sh init-project -n com.company.myapp -r starter-vanilla -c v1.3.0
 
 .. tip::
 

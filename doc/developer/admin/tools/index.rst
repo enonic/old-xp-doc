@@ -72,7 +72,7 @@ Adding the Launcher Panel menu to a custom admin tool requires a few steps.
 
 1. Add a reference to lib-admin-ui to the ``dependencies`` section in build.gradle file of your project:
 
-``include "com.enonic.lib:lib-admin-ui:1.9.0"``
+``include "com.enonic.lib:lib-admin-ui:1.1.0"``
 
 
 2. Add references to XP Admin UI's libraries and stylesheets to your view file - they are required for the Launcher Panel to function properly:

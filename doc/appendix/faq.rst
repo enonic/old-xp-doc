@@ -6,7 +6,7 @@ Frequently Asked Questions
 What's the latest release?
 --------------------------
 
-The latest release can be found here `latest release changelog <https://github.com/enonic/xp/releases/latest>`_.
+The latest release can be found here `latest release changelog <https://github.com/enonic/xp-distro/releases/latest>`_.
 
 Where can I get the source code?
 --------------------------------
