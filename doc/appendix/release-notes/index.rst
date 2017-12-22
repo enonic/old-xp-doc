@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-Enonic XP |version| is a minor release with exciting new features, improvements and fixes.
+Enonic XP |version| is a release with exciting new features, improvements and fixes.
 
 
 Gallery mode in Image Selector
