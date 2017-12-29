@@ -22,7 +22,7 @@ value (required)
 path
   The paths on the site this cookie should be available from (and all containing paths).  
   
-  *Default:* ``empty`` (The entire site can read the cookie.)
+  *Default:* ``empty`` (The current URL path.)
   
 domain
   Add additional sites that should be able to read the cookie.  
