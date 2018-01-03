@@ -4,7 +4,7 @@ Site Descriptors
 ================
 
 To indicate that an application provides "site capabilities" and allow it to be added to sites, a site descriptor must be placed into the application.
-Within your project, simply add a file called ``/main/src/resources/site/site.xml``. 
+Within your project, simply add a file called ``/src/main/resources/site/site.xml``. 
 
 The site.xml file also makes use of the :ref:`schemas` concept, so you may easily define custom forms for configuring the application when
 adding it to a site. These configurations are made in the <config> element.
