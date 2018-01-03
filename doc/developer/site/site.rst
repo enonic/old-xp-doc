@@ -11,7 +11,7 @@ adding it to a site. These configurations are made in the <config> element.
 
 .. literalinclude:: code/site.xml
    :language: xml
-   :caption: /main/src/resources/site/site.xml
+   :caption: /src/main/resources/site/site.xml
 
 All controllers within the app can access the configured values with the portal.getSiteConfig() function.
 
