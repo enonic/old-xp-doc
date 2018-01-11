@@ -65,7 +65,7 @@ Indexing instructions
 ---------------------
 
 By default, nodes will be indexed using the "type" instruction - using the propertyType to determine how it should be indexed.
-Special indexing options may be passed along with the node - forcing special handling of one or more properties. These options are described below:
+Special indexing options may be passed along with the node (e.g in the Node API) - forcing special handling of one or more properties. These options are described below:
 
 type (default)
   Indexing is done based on type; e.g numeric values are indexed as both string and numeric.
