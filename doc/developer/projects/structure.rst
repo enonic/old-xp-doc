@@ -29,13 +29,13 @@ Below is a sample project folder structure - all items that end with a slash are
             content-types/
             error/
             filters/
-            i18n/
             layouts/
             mixins/
             pages/
             parts/
             site.xml
-          tasks
+          i18n/
+          tasks/
           views/
 
 Every file and folder has a specific function and meaning.
@@ -101,11 +101,6 @@ site/filters/
     This is where generic http response filters are placed. Filters can be used for post processing any given request - also across applications added to a site.
     A common use case is adding script tags to pages - but possibilities are virtually endless.
 
-site/i18n/
-  This folder will contain application localization files (i18n is short for Internationalization).
-  Files placed in this folder must follow Java's standard property file format, one file for each language.
-  Here is an example: https://docs.oracle.com/javase/tutorial/i18n/resbundle/propfile.html
-
 site/mixins/
   Mixin schema-types are placed here. A mixin can be used to add common fields to multiple content-types or other schemas (see :ref:`mixins`).
 
@@ -119,6 +114,11 @@ site/parts/
 site/layouts/
   Layout controllers should be placed here. Layouts are similar to parts, but in addition have one or more regions.
   Regions enable placement of other components inside the layout. (see :ref:`layout`).
+
+i18n/
+  This folder will contain application localization files (i18n is short for Internationalization).
+  Files placed in this folder must follow Java's standard property file format, one file for each language.
+  Here is an example: https://docs.oracle.com/javase/tutorial/i18n/resbundle/propfile.html
 
 tasks/
   Contains tasks to be executed asynchronously (see :ref:`tasks`).
