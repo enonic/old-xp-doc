@@ -2,7 +2,7 @@ Resource Bundle
 ===============
 
 The resource-bundle consists of a collection of files containing the phrases to be used for localization. The
-resource-bundle should be placed in a folder named ``i18n`` under the application ``site`` folder.
+resource-bundle should be placed in a folder named ``i18n``.
 
 Each locale to be localized should be represented by a single resource, e.g this could be a structure for an app supporting
 
@@ -13,10 +13,10 @@ Each locale to be localized should be represented by a single resource, e.g this
 
 .. code-block:: none
 
-  site/i18n/phrases.properties
-  site/i18n/phrases_en_us.properties
-  site/i18n/phrases_no.properties
-  site/i18n/phrases_no_nn.properties
+  i18n/phrases.properties
+  i18n/phrases_en_us.properties
+  i18n/phrases_no.properties
+  i18n/phrases_no_nn.properties
 
 The filename of a resource determines what locale it represents::
 
