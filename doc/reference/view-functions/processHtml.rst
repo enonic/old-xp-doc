@@ -6,10 +6,10 @@ text by generated URLs.
 
 **Parameters:**
 
-_value
+value
   Html value string to process.
 
-_type
+type
   URL type. Either "server" (server-relative URL) or "absolute". Default is "server"
 
 **Usage in Thymeleaf:**

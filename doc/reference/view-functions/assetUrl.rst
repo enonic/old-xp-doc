@@ -5,17 +5,17 @@ This generates a URL pointing to a static file in the site/assets folder, such a
 
 **Parameters:**
 
-_path
+path
   Path to the asset.
 
-_application
+application
   Use this when the asset referenced is in another application. Defaults to current application. Use the app name, for example,
   ``com.enonic.blog.superhero``.
 
-_type
+type
   URL type. Either ``server`` (server-relative URL) or ``absolute``. Default is ``server``.
 
-*everything else*
+params
   Custom parameters to append to the url.
 
 **Usage in Thymeleaf:**

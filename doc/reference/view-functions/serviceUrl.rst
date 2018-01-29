@@ -5,16 +5,16 @@ This generates a URL pointing to a service.
 
 **Parameters:**
 
-_service
+service
   Name of the service.
 
-_application
+application
   Other application to reference to.  Default is current application.
 
-_type
+type
   URL type. Either ``server`` (server-relative URL) or ``absolute``. Default is ``server``.
 
-*everything else*
+params
   Custom parameters to append to the url.
 
 **Usage in Thymeleaf:**

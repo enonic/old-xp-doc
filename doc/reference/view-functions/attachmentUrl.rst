@@ -5,26 +5,26 @@ This generates a URL pointing to an attachment.
 
 **Parameters:**
 
-_id
+id
   Id to the content holding the attachment.
 
-_path
+path
   Path to the content holding the attachment.
 
-_name
+name
   Name to the attachment.
 
-_label
+label
   Label of the attachment. Default is ``source``.
 
-_download
+download
   Set to true if the disposition header should be set to attachment.
   Default is ``false``.
 
-_type
+type
   URL type. Either ``server`` (server-relative URL) or ``absolute``. Default is ``server``.
 
-*everything else*
+params
   Custom parameters to append to the url.
 
 **Usage in Thymeleaf:**
