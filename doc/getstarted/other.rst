@@ -25,7 +25,7 @@ If you have any problems, please look at our :ref:`troubleshooting` section.
 Install Java
 ------------
 
-.. warning:: To run Enonic XP, you need Java Development Kit (JDK) 1.8.92 JDK or newer.
+.. warning:: To run Enonic XP, you need Java 8 (also known as Java 1.8). Install Java Development Kit (JDK) 1.8.92 or newer. Java 9 is not supported and XP will not start on it!
 
 **Check JDK Version**
 
