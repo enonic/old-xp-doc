@@ -7,14 +7,14 @@ This localizes a phrase.
 
 **Parameters:**
 
-_key
+key
   The property key.
 
-_locale
+locale
   A string-representation of a locale. If the locale is not set, the
   site language is used.
 
-_values
+values
   Optional placeholder values (comma separated).
 
 **Usage in Thymeleaf:**

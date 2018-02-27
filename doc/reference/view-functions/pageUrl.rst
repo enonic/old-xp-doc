@@ -5,16 +5,16 @@ This generates a URL pointing to a page.
 
 **Parameters:**
 
-_id
+id
   Id to the page. If id is set, then path is not used.
 
-_path
+path
   Path to the page. Relative paths is resolved using the context page.
 
-_type
+type
   URL type. Either ``server`` (server-relative URL) or ``absolute``. Default is ``server``.
 
-*everything else*
+params
   Custom parameters to append to the url.
 
 **Usage in Thymeleaf:**
