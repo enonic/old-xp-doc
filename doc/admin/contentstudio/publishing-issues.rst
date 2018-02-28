@@ -20,5 +20,4 @@ If current user has any open issues assigned to him this will be reflected on th
    issue-create
    issue-list
    issue-details
-   issue-modify
    issue-status
