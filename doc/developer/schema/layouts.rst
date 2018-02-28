@@ -20,6 +20,9 @@ label of the field set.
 label
   The label will appear as a heading above the inputs that are grouped inside.
 
+label\@i18n
+  The key to look up the label text in the localization bundles. (See also :ref:`localization_schemas`)
+
 items
   The fields inside the set must be listed inside an ``items`` element.
 

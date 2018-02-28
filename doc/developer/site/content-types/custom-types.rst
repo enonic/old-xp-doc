@@ -19,6 +19,9 @@ display-name
   The display name of the content type is used throughout the admin console
   to recognize it. But the technical name is the name of the folder the file is placed in.
 
+display-name\@i18n
+  The key to look up the display-name text in the localization bundles. (See also :ref:`localization_schemas`)
+
 super-type
   Many properties are inherited from the super-type. All custom content types
   must either inherit ``base:structured`` directly or indirectly. The icon and the general

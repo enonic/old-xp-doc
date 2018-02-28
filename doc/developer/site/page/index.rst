@@ -30,6 +30,9 @@ The file must be named ``[page-name].xml``. For example, if a page component is 
 display-name
   A simple human readable display name.
 
+display-name\@i18n
+  The key to look up the display-name text in the localization bundles. Optional. (See also :ref:`localization_schemas`)
+
 config
   The ``config`` element is where input fields are defined for configurable data that
   may be used on the page.

@@ -1,6 +1,6 @@
 <tool>
-  <display-name>My Tool</display-name>
-  <description>Control my stuff</description>
+  <display-name i18n="my-tool.display-name">My Tool</display-name>
+  <description i18n="my-tool.description">Control my stuff</description>
   <allow>
     <principal>role:system.admin</principal>
     <principal>role:myapp.myrole</principal>

@@ -1,15 +1,15 @@
 <option-set name="checkOptionSet">
-  <label>Multi-selection OptionSet</label>
+  <label i18n="checkOptionSet.label">Multi-selection OptionSet</label>
   <expanded>true</expanded>
   <occurrences minimum="1" maximum="1"/>
   <help-text>You can select up to 2 options</help-text>
   <options minimum="1" maximum="2">
     <option name="option_1">
-      <label>Option 1</label>
-      <help-text>Help text for Option 1</help-text>
+      <label i18n="checkOptionSet.option_1.label">Option 1</label>
+      <help-text i18n="checkOptionSet.option_1.help-text">Help text for Option 1</help-text>
     </option>
     <option name="option_2">
-      <label>Option 2</label>
+      <label i18n="checkOptionSet.option_2.label">Option 2</label>
       <default>true</default>
       <items>
         <input name="contentSelector" type="ContentSelector">

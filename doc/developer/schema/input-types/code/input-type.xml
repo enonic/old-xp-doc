@@ -1,6 +1,6 @@
 <input name="name" type="type-name">
-  <label>Some label</label>
+  <label i18n="type-name.label">Some label</label>
+  <help-text i18n="type-name.help-text">Use me to provide some extra info for the input</help-text>
   <occurrences minimum="0" maximum="1"/>
-  <help-text>Use me to provide some extra info for the input</help-text>
   <config/>
 </input>

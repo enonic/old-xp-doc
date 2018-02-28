@@ -1,5 +1,5 @@
 <field-set name="metadata">
-  <label>Metadata</label>
+  <label i18n="metadata.label">Metadata</label>
   <items>
     <input name="tags" type="Tag">
       <label>Tags for tag cloud</label>

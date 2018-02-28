@@ -24,8 +24,14 @@ label (required)
   The label text will become the label for the input field in the editable form of
   the admin console.
 
+label\@i18n
+  The key to look up the label text in the localization bundles. (See also :ref:`localization_schemas`)
+
 help-text
   This optional text will be shown next to the input field and can be used for explanation of the field's purpose.
+
+help-text\@i18n
+  The key to look up the help text in the localization bundles. (See also :ref:`localization_schemas`)
 
 occurrences
   Detailed definition of how many times this field may be repeated inside one content.

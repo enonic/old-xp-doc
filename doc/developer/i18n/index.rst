@@ -1,3 +1,5 @@
+.. _localization:
+
 Localization
 ============
 
@@ -8,9 +10,12 @@ Content localization currently requires building separate structures - we are wo
 
 To see how this is used in a controller, see ``lib-i18n`` in :ref:`js-libraries`.
 
+The labels and texts used in content types, input types and other schemas can also be localized. See how to localize them in :ref:`localization_schemas`.
+
 .. toctree::
    :maxdepth: 1
 
    bundle
    resolving
    best-match
+   schemas

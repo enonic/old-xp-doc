@@ -45,6 +45,10 @@ The descriptor file must have the same name as the tool, i.e. ``admin/tools/[too
 .. literalinclude:: code/descriptor.xml
    :language: xml
 
+.. TIP::
+
+  The tool `display-name` and `description` can be provided in multiple languages. See :ref:`localization_schemas` for details.
+
 
 Icon
 ----

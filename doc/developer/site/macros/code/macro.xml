@@ -1,6 +1,6 @@
 <macro>
-  <display-name>Current user</display-name>
-  <description>Shows currently logged user</description>
+  <display-name i18n="a-macro.display-name">Current user</display-name>
+  <description i18n="a-macro.description">Shows currently logged user</description>
 
   <form>
     <input name="defaultText" type="TextLine">

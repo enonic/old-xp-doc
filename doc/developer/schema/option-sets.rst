@@ -22,6 +22,9 @@ Here is an example of a multi-select option set with options expanded by default
 label
   The label is displayed as a header of the option set.
 
+label\@i18n
+  The key to look up the label text in the localization bundles. (See also :ref:`localization_schemas`)
+
 expanded
   Optional. Set to ``true`` to expand all of the options by default
 
@@ -30,6 +33,9 @@ occurrences
 
 help-text
   Optional. Help text for the entire option set.
+
+help-text\@i18n
+  The key to look up the help text in the localization bundles. (See also :ref:`localization_schemas`)
 
 options (required)
   Container of options.
@@ -52,8 +58,16 @@ options (required)
       label (required)
          Label of the option's checkbox or radio button.
 
+      label\@i18n
+        The key to look up the label text in the localization bundles. (See also :ref:`localization_schemas`)
+
+
       help-text
         Optional. Help text for the option.
+
+      help-text\@i18n
+        The key to look up the help text in the localization bundles. (See also :ref:`localization_schemas`)
+
 
       default
          Optional. Set to ``true`` to pre-select the option.

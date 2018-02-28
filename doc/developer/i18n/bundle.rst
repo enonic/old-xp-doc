@@ -1,3 +1,5 @@
+.. _localization_bundle:
+
 Resource Bundle
 ===============
 
@@ -46,7 +48,7 @@ Placeholders
 ------------
 
 Placeholders are marked with ``{<number>}``. The given number corresponds with the function argument named ``values`` and
-the placement of the parameter. See below for an example.
+the placement of the parameter. See above for an example.
 
 
 Encoding and special characters

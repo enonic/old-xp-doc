@@ -1,5 +1,5 @@
 <item-set name="contact_info">
-  <label>Contact Info</label>
+  <label i18n="contact_info.label">Contact Info</label>
   <items>
     <input name="label" type="TextLine">
       <label>Label</label>

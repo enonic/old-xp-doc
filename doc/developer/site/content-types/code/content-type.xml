@@ -1,5 +1,5 @@
 <content-type>
-  <display-name>Choices</display-name>
+  <display-name i18n="types.choices.displayName">Choices</display-name>
   <content-display-name-script>$('firstName', ' ', 'lastName')</content-display-name-script>
   <super-type>base:structured</super-type>
   <is-abstract>false</is-abstract>

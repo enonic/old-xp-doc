@@ -40,8 +40,14 @@ It also has a configuration to define the types and names of the macro parameter
 display-name
   A simple human readable display name.
 
+display-name\@i18n
+  The key to look up the display-name text in the localization bundles. Optional. (See also :ref:`localization_schemas`)
+
 description
   A description to show in the Insert macro dialog in Content Studio.
+
+description\@i18n
+  The key to look up the description text in the localization bundles. Optional. (See also :ref:`localization_schemas`)
 
 config
   The ``config`` element is a form where each input element corresponds to a macro parameter. The macro body is represented with an input named ``"body"``.
@@ -56,6 +62,10 @@ Its path follows the pattern ``site/macros/<macroName>/<macroName>.xml``
 
 .. literalinclude:: code/macro.xml
   :language: xml
+
+.. TIP::
+
+  The macro texts (`display-name`, `description`, `label` and `help-text` from config input types) can be provided in multiple languages. See :ref:`localization_schemas` for details.
 
 
 Although not strictly required, it is recommended to create a descriptor, as it provides the required details for adding macros through the UI in Content Studio.

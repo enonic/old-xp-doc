@@ -20,6 +20,9 @@ label
   The set label is printed as a header on the box that will surround the group
   in the input form.
 
+label\@i18n
+  The key to look up the label text in the localization bundles. (See also :ref:`localization_schemas`)
+
 occurrences
   Occurrence configuration can be done at any level.
 
