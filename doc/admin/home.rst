@@ -19,7 +19,7 @@ The icons on the Dashboard can be used for the following:
 
 Future releases will include more functionality for the Home Tool.
 
-.. image:: images/start-page.jpg
+.. image:: images/start-page.png
 
 Launcher panel
 --------------

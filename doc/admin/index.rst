@@ -6,12 +6,10 @@ Admin Guide
 This documentation describes the various administrative tools that are included in Enonic XP by default.
 
 When visiting the Enonic XP admin interface - you will be required to log in.
-Unless otherwise configured, the standard login screen will be displayed.
+For new installations and unless configured otherwise, you will first have to create the admin. user.
 
+.. figure:: images/login-page.png
 
-.. figure:: images/login-page.jpg
-
-If this is a test-installation, you can login with **su** / **password**.
 
 **Language**
 
