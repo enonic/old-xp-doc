@@ -1,5 +1,5 @@
-Log in with username ``su`` and password ``password``.
+Create the Admin. User.
 
-After logging in you should see the following screen, with the launcher panel to the right:
+After the creation, you should see the following screen, with the launcher panel to the right:
 
 .. image:: images/admin.jpg
