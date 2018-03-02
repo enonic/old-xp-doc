@@ -3,69 +3,18 @@
 Upgrade notes - |version|
 =========================
 
-.. note:: This documentation describes upgrading from 6.12.x to |version|.
+.. note:: This documentation describes upgrading from 6.13.x to |version|.
 
 Notable changes
 ---------------
 
-Fixes to event JS library may break compatibility
-*************************************************
+No major backward-compatibility issues in this version, just one small API deprecation for Page Contributions:
 
-There was a bug in XP that made that `event-lib`_ return event data serialized in the wrong format.
-What should have been a JSON object was instead a string that looked almost like JSON, but it was not.
-
-The issue has been fixed in this release and the events are now properly formatted as JSON.
-But some 3rd party applications and libraries that tried to work around the issue, by parsing the string, might break now.
-If you are using `event-lib`_, we recommend to test and verify that everything still works as expected.
-
-This is an example of how the event was serialized in previous versions. The data is from a node event:
-
-.. literalinclude:: code/event_old.json
- :language: json
-
-And this is how it is serialized in 6.13, after the fix:
-
-.. literalinclude:: code/event_new.json
- :language: json
-
-.. _event-lib: http://repo.enonic.com/public/com/enonic/xp/docs/${release}/docs-${release}-libdoc.zip!/module-event.html
-
-
-Reindexing of pages, parts, layouts and x-data
+Page Contributions now require array input
 ******************************************
 
-As of |version|, content values in x-data, page-, and component-configs are now indexed "by type", meaning that string-values are automatically fulltext indexed.
-Also, html-areas in these configs are now properly stripped for html-tags when indexed as fulltext / n-gram.
-
-Content created with earlier versions of XP does not have the same index settings.
-Since the index-configuration of a content is stored within each content version,
-each content must be updated (edit and save) to make the new index-values available.
-
-Simply running a reindex will not change the index definitions.
-
-New default cluster settings
-****************************
-
-.. note:: This change is only relevant for particular cluster deployments of XP, where multiple nodes are running within the same server (OS/VM).
-
-We have seen incidents where multiple XP instances have been started on the same machine, by accident creating a cluster.
-To prevent this, the default cluster settings have been changed to use a specified port rather than a port range.
-
-The cluster settings are available in the config-file: ``com.enonic.xp.elasticsearch.cfg``
-
-As if |version|, if you still want to run more than one instance on the same machine, the setting ``transport.tcp.port`` must be set to a port range, e.g ``9300-9302``
-
-*Changed settings (com.enonic.xp.elasticsearch.cfg):*
-
-
-``transport.tcp.port``
- * Previous default value: ``9300-9400``
- * New default value: ``9300``
-
-``discovery.zen.ping.unicast.hosts``
- * Previous default value: ``127.0.0.1``
- * New default value: ``127.0.0.1[9300]``
-
+All pageContributions are now returned as arrays in response object sent to filter.  Previously it could be a single value or an array, so
+if code expected a single value, it will now fail.
 
 
 Upgrade Steps

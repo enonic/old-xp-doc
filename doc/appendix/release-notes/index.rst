@@ -6,93 +6,76 @@ Release Notes
 Enonic XP |version| is a release with exciting new features, improvements and fixes.
 
 
-Gallery mode in Image Selector
-------------------------------
+Improved Save Button
+--------------------
 
-Based on user feedback, we have implemented a brand new gallery view for the image selector
+The new save button has a more accurate state description:
 
-* Bigger thumbnails making the selection process faster and easier.
-* The tree-browsing mode is also available
-* Actions for inserted images available in sticky menu
+When a content is openend but has not changed, the save button is unavailable:
 
-.. figure:: images/gallery-mode.png
+.. figure:: images/savebutton-1-unchanged.png
 
-  Search and select images in gallery mode
+After the content is changed, it becomes available:
 
+.. figure:: images/savebutton-2-changed.png
 
-.. figure:: images/sticky-actions.png
+When clicked, the save button temporary states what is happening:
 
-  Action buttons for selected images are more easily available
+.. figure:: images/savebutton-3-saving.png
 
+Finally, the save button is updated to the new state:
 
-Improved UI for ItemSets
-------------------------
-ItemSet interface has had a makeover to make it easier and faster to use
-
-* Toggle to edit/close a single item by clicking it
-* Get instant info on itemSet content from the header
-* More consistent icon for drag handle
-* Expect further improvements in upcoming releases :)
-
-.. figure:: images/item-sets.png
+.. figure:: images/savebutton-4-saved.png
 
 
-Warning for inbound references
-------------------------------
+New Admin User
+--------------
 
-User is warned when attempting to delete content in Content Studio:
+To improve the security, it is no longer necessary to set the admin-user password in a property file.  For new installations, it is instead
+set as part of the set-up procedure, where a password is entered before it may be used:
 
-* Lists number of inbound references per item
-* Link to quickly access items referencing content
-
-.. figure:: images/delete-warning.png
+.. figure:: images/create-admin-user.png
 
 
-Better indexing of content
---------------------------
+All system content types are localized
+--------------------------------------
 
-Previously, only the content type fields and standard content fields were indexed and searchable.
-Now the following fields are also indexed automatically:
+System macros and content types like Page Template, Folder, Image and more, have been included in the localization system, so they are
+now displayed in each users native language, as shown here, where a Norwegian User will choose a "Sidemal" instead of a Page Template:
 
-* X-data inputs (Steps and fields dynamically added to content)
-* Page configuration inputs (editable from context menu)
-* Part and layout configuration inputs (editable from context menu)
+.. figure:: images/localized-schema-descriptor.png
 
 
-API improvements
-----------------
+Components may be detached from Fragments
+-----------------------------------------
 
-* Auth lib now supports create and modify role
-* Auth lib supports specifying session timeout for logins
-* Web server thread pool details now available in status API
-* Memory pool details for JVM added to status API
-* Events are now sent for task API
-* Task thread names can now be set manually
-* New "all" keyword available to process all http methods in javascript controllers
-* Import, Export and Dump now have progress information available
-* ChildOrder setting now configurable in lib-content
+It has been made possible to detach components from fragments, where the fragment have grown too complex.  This is both possible
+directly on the fragment, and from the Page Contributions view.
+
+
+Publishing Issue Comments
+-------------------------
+
+When publishing content and passing the work between different authorized personell, it is now possible to add comments, to improve
+internal communication.
+
+.. figure:: images/publishing-issues-comment.png
+
 
 Other improvements
 ------------------
 
-* Page Editor now automatically scrolls to last position after saving
-* UI improvements for publishing issues
-* Progress bars are now displayed for time consuming move and duplicate actions in Content Studio
-* New default icon for custom content types
-* "tablet layout mode" with preview panel placed at the bottom of the screen has been dropped
-* Content Studio Security step renamed to Access
-* Easily clear selections in Content Studio by clicking on blank areas
-* + 14 minor improvements and 70 bugfixes
+* Auth Lib has been improved with a Delete Principal function
+* Users are notified if the repo is in read-only state.
+* GraphQL is used for User Stores.
+* Permission inheritence is implemented in the Node Lib.
+* URL Generation and Context Path Parameters have been added to the Portal Lib.
+* several other improvements and 68 bugfixes.
 
 .. warning:: There are important upgrade steps to follow when upgrading to |version|.
-
-  * Stricter default cluster settings
-  * Fixes to `event-lib`_ may break compatibiliy
-  * Indexing of pages, components and x-data
-
 
 :ref:`upgrade_notes` for more details.
 
 Changelog
 ---------
-For a complete list of changes and bugfixes see http://github.com/enonic/xp/releases/tag/v6.13.0
+For a complete list of changes and bugfixes see https://github.com/enonic/xp-distro/releases/tag/v6.14.0
