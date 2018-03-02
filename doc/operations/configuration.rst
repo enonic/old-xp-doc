@@ -306,8 +306,8 @@ Standard ID Provider
 --------------------
 
 Standard ID Provider, in charge of the login for admin by default, has a "Create Admin User" mode for new installations under specific conditions.
-When this mode is enabled, you also have the possibility to postpone the admin user creation and login without a user.
-You may turn off the entire feature or the "login without a user" part.
+When this mode is enabled, you also have the possibility to postpone the admin user creation and login without a user. 
+You may turn off this capability.
 
 .. literalinclude:: code/com.enonic.xp.app.standardidprovider.cfg
   :language: properties
