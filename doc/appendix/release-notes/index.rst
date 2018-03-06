@@ -46,6 +46,14 @@ now displayed in each users native language, as shown here, where a Norwegian Us
 .. figure:: images/localized-schema-descriptor.png
 
 
+Support for localized schemas!
+--------------------------------------
+
+We introduce the much requested ability to localize an app's schemas. You can localize it in the same way as you use localization other places in your app, using the `.phrases`-files in the `i18n`-folder of your app. By adding the `i18n` attribute with a key from the phrases file to any of the translatable elements, your app will truly speak any language.
+
+Be sure to read the full docs on :ref:`localization_schemas` to find out more.
+
+
 Components may be detached from Fragments
 -----------------------------------------
 
