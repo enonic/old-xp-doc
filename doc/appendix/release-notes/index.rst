@@ -50,7 +50,7 @@ Components may be detached from Fragments
 -----------------------------------------
 
 It has been made possible to detach components from fragments, where the fragment have grown too complex.  This is both possible
-directly on the fragment, and from the Page Contributions view.
+directly on the fragment, and from the Page Editor view.
 
 
 Publishing Issue Comments
