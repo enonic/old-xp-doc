@@ -20,7 +20,9 @@ The standard version of this file is listed below.
 .. literalinclude:: code/system.properties
    :language: properties
    :caption: ``$XP_HOME/config/system.properties``
-
+   
+In case you cannot log in as the su user and do not have any other admin user, you can set a temporary password by setting the property `xp.suPassword` in system.properties and restart the node.
+The password value can be hashed. The hashing algorithm currently supported are: sha1, sha256, sha512 and md5.
 
 With Enonic XP versjon 6.9 a simple but powerful feature called "Config Paths" was introduced.
 In addition to the default ``$XP_HOME/config/`` directory, you may now instruct XP to scan multiple different folders when looking for config files.
@@ -41,7 +43,6 @@ Below is an example usage of config path where it will scan three directories in
 
 Please note that ${xp.home}/config is no longer required to be in the path.
 
-
 .. _configuration-vhost:
 
 Virtual Host Configuration
@@ -59,6 +60,7 @@ In this example file, three mappings are configured.
 
 host
   Host-name to match.
+
 
 source
   Requested path to match.
