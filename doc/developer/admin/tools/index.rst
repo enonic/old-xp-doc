@@ -91,8 +91,7 @@ Adding the Launcher Panel menu to a custom admin tool requires a few steps.
     :language: html
 
 
-4. In the <body> section of the view add a Javascript snippet where you define an object variable called "CONFIG" with properties
-``adminUrl`` and ``appId``. ``appId`` is needed to correctly identify your tool inside the Launcher panel.
+4. In the <body> section of the view add a Javascript snippet where you define a global object variable called "CONFIG" with properties ``launcherUrl``, ``adminUrl`` and ``appId``. ``appId`` is needed to correctly identify your tool inside the Launcher panel.
 
 
 .. literalinclude:: code/config.html
@@ -109,3 +108,7 @@ Entire view:
 .. literalinclude:: code/view.html
     :language: html
 
+
+.. TIP::
+
+  Feel free to use our `admin tool starter <https://github.com/enonic/starter-admin-tool>`_ to help you speed up the process of setting up your own tool.
