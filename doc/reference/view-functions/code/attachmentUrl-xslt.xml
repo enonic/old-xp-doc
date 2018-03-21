@@ -3,7 +3,8 @@
   xmlns:portal="urn:enonic:xp:portal:1.0">
 
   <xsl:template match="/">
-    <xsl:value-of select="portal:attachmentUrl('_download=true')"/>
+    <xsl:value-of select="portal:attachmentUrl('_id=1234')"/>
+    <xsl:value-of select="portal:attachmentUrl('_path=/path/to/attachment', '_download=true')"/>
   </xsl:template>
 
 </xsl:stylesheet>
