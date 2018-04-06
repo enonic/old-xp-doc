@@ -50,7 +50,7 @@ Copy your $OLD_XP_INSTALL/home folder to the the new $NEW_XP_INSTALL/ (on all no
 6. Configure apps to build with 6.12
 ************************************
 
-In 6.12 we have made several strucutural changes to Enonic XP.  This affects how you build your own apps with Gradle.
+In 6.12 we have made several structural changes to Enonic XP.  This affects how you build your own apps with Gradle.
 
 The Gradle plugin for building Enonic applications are not included in the distribution anymore.
 This helps us improve the build tools without waiting for a new release of XP every time.
