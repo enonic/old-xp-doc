@@ -9,7 +9,7 @@ Build a Custom Selector
  * :ref:`Create a service<custom-selector-service>` 
 * :ref:`Response format<custom-selector-service-json>` 
 * :ref:`Sample service<custom-selector-service-sample>` 
-* :ref:`Integration with Spotify API<custom-selector-sample-spotify>`
+* :ref:`Integration with Google Books API<custom-selector-sample-books>`
 
 .. _custom-selector-content-type:
 .. rubric:: Create a content type
@@ -62,12 +62,12 @@ Below is a simple service file that returns two items in the result set, one wit
     :language: javascript
 
 
-.. _custom-selector-sample-spotify:
-.. rubric:: Integration with Spotify API
+.. _custom-selector-sample-books:
+.. rubric:: Integration with Google Books API
 
-And here's a bit more advanced version of the service file that fetches song names from the Spotify API:
+And here's a bit more advanced version of the service file that fetches book titles from the Google Books API:
 
-.. literalinclude:: code/spotify-service.js
+.. literalinclude:: code/books-service.js
     :language: javascript
 
-.. image:: code/custom-selector-spotify.jpg
+.. image:: code/custom-selector-books.png
