@@ -123,8 +123,8 @@ You will also need to handle regions in the controller.
 .. literalinclude:: code/controller-4.js
    :language: javascript
 
-To make the Page Editor understand that an element is a region, we need an attribute
-called ``data-portal-component-type`` with the value ``region`` in our HTML.
+To make the Page Editor understand that an element is a region, it needs an attribute
+called ``data-portal-region`` with value being name of the region.
 
 .. literalinclude:: code/thymeleaf-3.html
    :language: html
