@@ -1,5 +1,4 @@
 var authLib = require('/lib/xp/auth');
-var portalLib = require('/lib/xp/portal');
 
 exports.handle401 = function (req) {
     var body = generateLoginPage();
@@ -54,4 +53,4 @@ function generateLoginPage(redirectUrl) {
     var title = authConfig.title || "User Login";
     var redirectionLink = redirectUrl ? '<a href="' + redirectUrl + '">Return</a>' : '';
     return '<html><head></head><body><h1>' + title + '</h1>' + redirectionLink + '</body></html>';
-};
+}
