@@ -40,60 +40,79 @@ Default configuration of the HTML Area toolbar is shown below:
 
 ::
 
-   styleselect | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | charmap anchor image macro link unlink | table | pastetext
+   Format Bold Italic Underline Strike Subscript Superscript Code Blockquote | JustifyLeft JustifyCenter JustifyRight JustifyBlock | BulletedList NumberedList Outdent Indent | SpecialChar Anchor Image Macro Link Unlink | Table | PasteText Maximize
 
 
 
-============     ==================================
+=============    ==================================
 Name             Description
-============     ==================================
-styleselect      Text format menu
-alignleft        Left align content
-aligncenter      Center content
-alignright       Right align content
-alignjustify     Justify content
-anchor           Insert an anchor
-bullist          Add a bullet list
-numlist          Insert a numbered list
-outdent          Decrease indent
-indent           Increase indent
-charmap          Insert a special character
-anchor           Insert an anchor
-image            Insert/Edit an image
-macro            Insert a macro
-link             Insert/Edit a link
-unlink           Remove link
-table            Table format menu
-pastetext        Toggle paste text mode
-============     ==================================
+=============    ==================================
+Format           Text format menu
+Bold             Bold text
+Italic           Italic text
+Underline        Underline text
+Strike           Strikethrough over text
+Subscript        Subscript text
+Superscript      Superscript text
+Code             Wrap text with code tag
+Blockquote       Quotation
+JustifyLeft      Left align content
+JustifyCenter    Center content
+JustifyRight     Right align content
+JustifyBlock     Justify content
+BulletedList     Add a bullet list
+NumberedList     Insert a numbered list
+Outdent          Decrease indent
+Indent           Increase indent
+SpecialChar      Insert a special character
+Anchor           Insert an anchor
+Image            Insert/Edit an image
+Macro            Insert a macro
+Link             Insert/Edit a link
+Unlink           Remove link
+Table            Table format menu
+PasteText        Toggle paste text mode
+Maximize         Full screen mode
+=============    ==================================
 
 
 These are additional tools supported by HTML Area that can be used in the input config:
 
-=============    =====================================
+==============   =====================================
 Name             Description
-=============    =====================================
-backcolor        Change text background color
-blockquote       Add a quote block
-bold             Make text bold
-copy             Copy selected text into buffer
-cut              Cut selected text into buffer
-forecolor        Change text color
-hr               Insert a horizontal line
-italic           Make text italic
-ltr              Left-to-right text direction
-paste            Paste text from buffer into HTML Area
-preview          Preview HTML Area contents
-redo             Repeat last action
-removeformat     Remove formatting of selected text
-rtl              Right-to-left text direction
-searchreplace    Find or replace text
-strikethrough    Apply strikethrough effect to text
-styleselect      Text format menu
-subscript        Add subscript effect
-superscript      Add superscript effect
-underline        Underline text
-undo             Undo last action
-visualchars      Show hidden characters
-visualblocks     Show hidden blocks
-=============    =====================================
+==============   =====================================
+NewPage          Clean editor's content
+Preview          Preview HTML Area contents
+Print            Print editor's content
+Templates        Template to open in the editor
+Copy             Copy selected text into buffer
+Cut              Cut selected text into buffer
+Paste            Paste text from buffer
+PasteFromWord    Paste text from Word
+Undo             Undo last action
+Redo             Repeat last action
+SelectAll        Select editor's content
+Scayt            Spell checker
+Form             Insert form
+Checkbox         Insert checkbox
+Radio            Insert radiobutton
+TextField        Insert text input
+Textarea         Insert textarea
+Select           Insert select tag
+Button           Insert button
+HiddenField      Insert hidden field
+CopyFormatting   Copy formatting
+RemoveFormat     Remove formatting
+CreateDiv        Wrap with div
+BidiLtr          Text direction left to right
+BidiRtl          Text direction right to left
+Language         Add lang attribute
+Flash            Insert flash
+HorizontalRule   Insert a horizontal line
+Styles           Text styles menu
+Font             Font menu
+FontSize         Font size menu
+TextColor        Text color
+BGColor          Background color
+ShowBlocks       Visualize all block-level elements
+==============   =====================================

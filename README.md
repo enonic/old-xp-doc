@@ -22,3 +22,6 @@ it's nice to build locally for verification. Build using make:
 
     make html
 
+To build on windows:
+
+    sphinx-build -b html doc build

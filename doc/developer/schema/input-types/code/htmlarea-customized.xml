@@ -3,6 +3,6 @@
   <default><h3>Enter description here</h3></default>
   <config>
     <exclude>*</exclude>
-    <include>alignleft alignright | bold italic</include>
+    <include>JustifyLeft JustifyRight | Bold Italic</include>
   </config>
 </input>
