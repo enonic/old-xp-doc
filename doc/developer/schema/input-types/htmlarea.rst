@@ -16,8 +16,6 @@ default
 
 
 config
-   forced-root-block
-      This config setting can be used to override default wrapper element in the root of the HTML Area. By default it's ``<p>`` element. Set this option to "div" to switch to ``<div>``.
    include
       List of space-separated tools to be added to the toolbar (see the tip below).
    exclude
