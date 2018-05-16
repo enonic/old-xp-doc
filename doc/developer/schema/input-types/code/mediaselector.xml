@@ -1,0 +1,7 @@
+<input name="myMediaSelector" type="MediaSelector">
+  <label>Archives</label>
+  <occurrences minimum="0" maximum="1"/>
+  <config>
+	  <allowContentType>media:archive</allowContentType>
+  </config>
+</input>

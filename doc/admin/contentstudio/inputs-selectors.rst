@@ -48,11 +48,22 @@ Content selector supports two modes of displaying content: flat (default) and tr
 
 .. image:: images/inputs-content-selector-tree.png
 
+
+Media selector
+--------------
+
+Media selectors are much like content selectors except that they allow only media content to be selected (see :ref:`content_media_types`). They also allow creating new media content
+by uploading a new local media file with the Upload button or simply by dragging the file onto the selector.
+
+.. image:: images/inputs-media-selector-dropdown.png
+
+The list of selected options looks and behaves like that of Content Selector.
+
+
 Image selector
 --------------
 
-Image selectors are much like content selectors except that they allow only image content to be selected. They also allow new image content
-to be created and selected by clicking the upload button to the right of the input.
+Image selectors are basically media selectors that allow only image content to be selected or created.
 
 By default image selector is displaying content in the gallery mode with large thumbnail images:
 
@@ -66,6 +77,7 @@ Order of selected images can be changed by clicking and dragging the image thumb
 Clicking on a selected image will reveal **Edit** and **Remove** buttons.
 
 .. image:: images/inputs-image-selector.png
+
 
 Tag
 ---

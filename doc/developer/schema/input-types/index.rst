@@ -67,6 +67,7 @@ default
     htmlarea
     image-selector
     long
+    media-selector
     radiobutton
     tag
     textarea
