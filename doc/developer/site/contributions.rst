@@ -32,13 +32,13 @@ There are four positions where contributed content can be inserted in the page:
 
 A simple usage example:
 
-.. literalinclude:: code/page-contribution-simple.json
-   :language: json
+.. literalinclude:: code/page-contribution-simple.js
+   :language: javascript
 
 A more full usage example:
 
-.. literalinclude:: code/page-contribution.json
-   :language: json
+.. literalinclude:: code/page-contribution.js
+   :language: javascript
 
 Some remarks:
 
