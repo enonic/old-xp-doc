@@ -1,6 +1,8 @@
 return {
   "body": body,
   "pageContributions": {
-    "headEnd": "<some script />"
+    "headEnd": [
+      "<some script />"
+    ]
   }
 };
