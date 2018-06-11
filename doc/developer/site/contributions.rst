@@ -3,16 +3,29 @@
 Page Contributions
 ==================
 
-Page contributions lets your components (**page**, **part**, **layout**) or **macro** contribute to the page's resulting HTML being sent back to the user. Normally, the HTML being sent from the page, is only possible to change from the page itself. With page contributions your component can add additional HTML (like CSS style, JavaScript, or any other custom HTML) to specific segments of the resulting HTML code, before it is sent from the server to the end-user.
+Page contributions lets your components (**page**, **part**, **layout**) or **macro** contribute to the page's resulting HTML before it's being sent back to the user. Normally, the HTML being sent from any page is only possible to change from the page itself. Contributions can add any HTML (like CSS style, JavaScript, or any other custom HTML) to specific segments of the resulting HTML code.
 
 A few ways to use page contributions are:
 
-* Let a Google Maps part use page contributions to add required JavaScript to the page `<head>` section.
-* Using a part that requires custom styling add the needed CSS to the `<head>` of that page.
-* Adding a specific layout to a page will add a custom JavaScript tracker to the end of the `<body>` of that page.
-* If parts collecting form data is added to a page, let them add a `<p>` to the beginning of the `<body>` explaining what the data is used for.
+* Let a Google Maps part use page contributions to add required JavaScript to the page ``<head>`` section.
+* Using a part that requires custom styling add the needed CSS to the ``<head>`` of that page.
+* Adding a specific layout to a page will add a custom JavaScript tracker to the end of the ``<body>`` of that page.
+* If parts collecting form data is added to a page, let them add a ``<p>`` to the beginning of the ``<body>`` explaining what the data is used for.
 
 Added code from page contributions will be aggregated from all controllers before generated the final HTML. Any duplicate page contributions will be removed, making sure the HTML is not bloated.
+
+To use page contributions, your component needs to return a ``pageContributions`` property in the returned JavaScript object (where you usually return the ``body``. A full return might look like this.
+
+```
+return {
+  body: '<p>Some code</p>',
+  pageContributions: {
+    headEnd: "<script>My script</script>"
+  }
+}
+```
+
+Changing the ``headEnd`` to one of the other possible positions, will change where the code you contribute is added into the page's HTML before returning it to the end-user.
 
 There are four positions where contributed content can be inserted in the page:
 
