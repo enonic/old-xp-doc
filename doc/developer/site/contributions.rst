@@ -7,14 +7,14 @@ Page contributions lets your components (**page**, **part**, **layout**) or **ma
 
 A few ways to use page contributions are:
 
-* Let a Google Maps part use page contributions to add required JavaScript to the page ``<head>`` section.
+* Let a Google Maps part use page contributions to add required JavaScript to the page's ``<head>`` section.
 * Using a part that requires custom styling add the needed CSS to the ``<head>`` of that page.
 * Adding a specific layout to a page will add a custom JavaScript tracker to the end of the ``<body>`` of that page.
 * If parts collecting form data is added to a page, let them add a ``<p>`` to the beginning of the ``<body>`` explaining what the data is used for.
 
 Added code from page contributions will be aggregated from all controllers before generated the final HTML. Any duplicate page contributions will be removed, making sure the HTML is not bloated.
 
-To use page contributions, your component needs to return a ``pageContributions`` property in the returned JavaScript object (where you usually return the ``body``. A full return might look like this.
+To use page contributions, your component needs to return a ``pageContributions`` property in the response of your component, meaning in the returned JavaScript object (where you usually put the ``body`` property). A full return might look like this. As always, the ``return`` goes at the end of your component's controller.
 
 ```
 return {
@@ -25,7 +25,7 @@ return {
 }
 ```
 
-Changing the ``headEnd`` to one of the other possible positions, will change where the code you contribute is added into the page's HTML before returning it to the end-user.
+Changing the ``headEnd`` to one of the other possible positions will change where the code you contributed is added in the page's HTML before returning it to the end-user.
 
 There are four positions where contributed content can be inserted in the page:
 
