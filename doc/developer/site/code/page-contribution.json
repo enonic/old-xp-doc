@@ -1,4 +1,4 @@
-{
+return {
   "body": "<html>...</html>",
   "pageContributions": {
     "headEnd": "value",
@@ -6,4 +6,4 @@
       "value1", "value2"
     ]
   }
-}
+};
