@@ -3,21 +3,16 @@
 Page Contributions
 ==================
 
-Page contributions are fragments of HTML that a component (**page**, **part**, **layout**) or **macro** can contribute to the page in which it is contained.
-The idea is to allow components to add JavaScript or CSS stylesheets globally in the page, although it is not restricted to scripts or styles.
+Page contributions lets your components (**page**, **part**, **layout**) or **macro** contribute to the page's resulting HTML being sent back to the user. Normally, the HTML being sent from the page, is only possible to change from the page itself. With page contributions your component can add additional HTML (like CSS style, JavaScript, or any other custom HTML) to specific segments of the resulting HTML code, before it is sent from the server to the end-user.
 
-Page contributions help with solving 2 problems:
+A few ways to use page contributions are:
 
-* Allow components to insert scripts or styles in specific positions in the page where it is often required.
+* Let a Google Maps part use page contributions to add required JavaScript to the page `<head>` section.
+* Using a part that requires custom styling add the needed CSS to the `<head>` of that page.
+* Adding a specific layout to a page will add a custom JavaScript tracker to the end of the `<body>` of that page.
+* If parts collecting form data is added to a page, let them add a `<p>` to the beginning of the `<body>` explaining what the data is used for.
 
-  For example, a component providing web analytics might require that a script is inserted at the end
-  of the page ``<body>``. Or a stylesheet needed for a component must be inserted in the ``<head>`` tag.
-
-* Avoid duplicating script libraries or stylesheets required for a component. Even if the same component
-  is included multiple times in a page, the library script contributed will only be added once.
-
-Any page, part, layout or macro controller can contribute content to the page. The values from all component contributions
-will be included in the final rendered page. Duplicated values will be ignored.
+Added code from page contributions will be aggregated from all controllers before generated the final HTML. Any duplicate page contributions will be removed, making sure the HTML is not bloated.
 
 There are four positions where contributed content can be inserted in the page:
 
