@@ -16,14 +16,8 @@ Added code from page contributions will be aggregated from all controllers befor
 
 To use page contributions, your component needs to return a ``pageContributions`` property in the response of your component, meaning in the returned JavaScript object (where you usually put the ``body`` property). A full return might look like this. As always, the ``return`` goes at the end of your component's controller.
 
-```
-return {
-  body: '<p>Some code</p>',
-  pageContributions: {
-    headEnd: "<script>My script</script>"
-  }
-}
-```
+.. literalinclude:: code/page-contribution-intro.js
+   :language: javascript
 
 Changing the ``headEnd`` to one of the other possible positions will change where the code you contributed is added in the page's HTML before returning it to the end-user.
 
