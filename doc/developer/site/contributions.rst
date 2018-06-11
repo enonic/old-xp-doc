@@ -59,11 +59,3 @@ Some remarks:
 
 * The contributions are inserted in a post-processing step during rendering. That means that there will not be any processing of
   Thymeleaf tags or similar. Contributions are treated as plain text.
-
-.. WARNING:: **Avoid String - Array conflicts in response filters**
-
-   When there is a single contribution for a placeholder, like headEnd, it will be a string. But adding to it in a response filter will require
-   an array. It is best to always check if it is an array before adding a value.
-
-   .. literalinclude:: code/page-contributions-example.js
-      :language: js
