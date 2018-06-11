@@ -21,6 +21,8 @@ To use page contributions, your component needs to return a ``pageContributions`
 
 Changing the ``headEnd`` to one of the other possible positions will change where the code you contributed is added in the page's HTML before returning it to the end-user.
 
+Note: Be sure to return your ``pageContributions`` data in the form of an **array** to make it easier to work with, and make sure any existing contributions are not overwritten.
+
 There are four positions where contributed content can be inserted in the page:
 
 * ``headBegin``: After the ``<head>`` opening tag.
