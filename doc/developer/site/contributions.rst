@@ -12,9 +12,9 @@ A few ways to use page contributions are:
 * Adding a specific layout to a page will add a custom JavaScript tracker to the end of the ``<body>`` of that page.
 * If parts collecting form data is added to a page, let them add a ``<p>`` to the beginning of the ``<body>`` explaining what the data is used for.
 
-Added code from page contributions will be aggregated from all controllers before generated the final HTML. Any duplicate page contributions will be removed, making sure the HTML is not bloated.
+Added code from page contributions will be aggregated from all controllers before generating the final HTML. Any duplicate page contributions will be removed, making sure the HTML is not bloated.
 
-To use page contributions, your component needs to return a ``pageContributions`` property in the response of your component, meaning in the returned JavaScript object (where you usually put the ``body`` property). A full return might look like this (as always, the ``return`` goes at the end of your component's controller):
+To use page contributions, your component needs to return a ``pageContributions`` property in the :ref:`http-response` of your component, meaning in the returned JavaScript object (where you usually put the ``body`` property). A full return might look like this (as always, the ``return`` goes at the end of your component's controller):
 
 .. literalinclude:: code/page-contributions-intro.js
    :language: javascript
