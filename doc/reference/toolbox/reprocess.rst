@@ -18,25 +18,28 @@ This command should be used after migrating content from Enonic CMS using the cm
 
   NAME
           toolbox reprocess - Reprocesses content in the repository.
-
+  
   SYNOPSIS
           toolbox reprocess -a <auth> [-h <host>] [-p <port>]
-                  -s <sourceBranchPath> [--skip-children]
-
+                  -s <sourceBranchPath> [--scheme <scheme>] [--skip-children]
+  
   OPTIONS
           -a <auth>
               Authentication token for basic authentication (user:password).
-
+  
           -h <host>
               Host name for server (default is localhost).
-
+  
           -p <port>
               Port number for server (default is 8080).
-
+  
           -s <sourceBranchPath>
               Target content path to be reprocessed. Format:
-            <branch-name>:<content-path>. e.g 'draft:/mySite/media'
-
+              <branch-name>:<content-path>. e.g 'draft:/'
+  
+          --scheme <scheme>
+              Scheme (default is http).
+  
           --skip-children
               Flag to skip processing of content children.
 

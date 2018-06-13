@@ -20,22 +20,26 @@ See :ref:`backup` for more information on snapshots.
   NAME
           toolbox snapshot - Stores a snapshot of the current state of the
           repository.
-
+  
   SYNOPSIS
           toolbox snapshot -a <auth> [-h <host>] [-p <port>] [-r <repository>]
-
+                  [--scheme <scheme>]
+  
   OPTIONS
           -a <auth>
               Authentication token for basic authentication (user:password).
-
+  
           -h <host>
               Host name for server (default is localhost).
-
+  
           -p <port>
               Port number for server (default is 8080).
-
+  
           -r <repository>
-              the name of the repository to snapshot (default is all repositories)
+              the name of the repository to snapshot.
+  
+          --scheme <scheme>
+              Scheme (default is http).
 
 **Example:**
 

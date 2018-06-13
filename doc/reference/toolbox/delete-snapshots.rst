@@ -13,22 +13,26 @@ See :ref:`backup` for more information on snapshots.
   NAME
           toolbox delete-snapshots - Deletes snapshots, either before a given
           timestamp or by name.
-
+  
   SYNOPSIS
           toolbox delete-snapshots -a <auth> -b <before> [-h <host>] [-p <port>]
-
+                  [--scheme <scheme>]
+  
   OPTIONS
           -a <auth>
               Authentication token for basic authentication (user:password).
-
+  
           -b <before>
               Delete snapshots before this timestamp.
-
+  
           -h <host>
               Host name for server (default is localhost).
-
+  
           -p <port>
               Port number for server (default is 8080).
+  
+          --scheme <scheme>
+              Scheme (default is http).
 
 **Example:**
 

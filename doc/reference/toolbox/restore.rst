@@ -13,26 +13,29 @@ See :ref:`backup` for more information on snapshots.
   NAME
           toolbox restore - Restores a snapshot of a previous state of the
           repository.
-
+  
   SYNOPSIS
           toolbox restore -a <auth> [-h <host>] [-p <port>] [-r <repository>]
-                  -s <snapshotName>
-
+                  -s <snapshotName> [--scheme <scheme>]
+  
   OPTIONS
           -a <auth>
               Authentication token for basic authentication (user:password).
-
+  
           -h <host>
               Host name for server (default is localhost).
-
+  
           -p <port>
               Port number for server (default is 8080).
-
+  
           -r <repository>
-              The name of the repository to restore. Default is all repositories
-
+              The name of the repository to restore.
+  
           -s <snapshotName>
               The name of the snapshot to restore.
+  
+          --scheme <scheme>
+              Scheme (default is http).
 
 **Example:**
 

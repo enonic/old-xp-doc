@@ -10,26 +10,30 @@ Installs an application on all nodes.
 .. code-block:: none
 
   NAME
-          toolbox install-app - Installs an application on all nodes
-
+          toolbox install-app - Install an application from URL or file
+  
   SYNOPSIS
-          toolbox install-app -a <auth> (-u <url> | -f <file>) [-h <host>] [-p <port>]
-
+          toolbox install-app -a <auth> [-f <file>] [-h <host>] [-p <port>]
+                  [--scheme <scheme>] [-u <url>]
+  
   OPTIONS
           -a <auth>
-              Authentication token for basic authentication (user:password)
-
-          -u <url>
-              Url to application
-			  
+              Authentication token for basic authentication (user:password).
+  
           -f <file>
-              Path to application jar-file
-		  
+              Application file
+  
           -h <host>
-              Host name for server (default is localhost)
-
+              Host name for server (default is localhost).
+  
           -p <port>
-              Port number for server (default is 8080)
+              Port number for server (default is 8080).
+  
+          --scheme <scheme>
+              Scheme (default is http).
+  
+          -u <url>
+              The URL of the application
 
 **Example:**
 

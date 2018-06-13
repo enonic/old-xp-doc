@@ -14,14 +14,15 @@ The current version XP installation must be running with the upgraded app deploy
 .. code-block:: none
 
   NAME
-          toolbox upgrade - Upgrade a dump.
-
+          toolbox upgrade - Upgrade a dump to the current version. The upgraded
+          files will be written to <dumpFolderName>_upgraded_<version>
+  
   SYNOPSIS
-          toolbox upgrade -d dump-path -t target-location
-
+          toolbox upgrade -d <dump>
+  
   OPTIONS
           -d <dump>
-             Directory for dump.
+              Dump folder location
 
 **Example:**
 

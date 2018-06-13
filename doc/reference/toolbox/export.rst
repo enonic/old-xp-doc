@@ -18,28 +18,31 @@ See :ref:`operations-export` for more information on content export/import.
 
   NAME
           toolbox export - Export data for a specified path.
-
+  
   SYNOPSIS
           toolbox export -a <auth> [-h <host>] [-p <port>] -s <sourceRepoPath>
-                  [--skipids] -t <exportName>
-
+                  [--scheme <scheme>] [--skipids] -t <exportName>
+  
   OPTIONS
           -a <auth>
               Authentication token for basic authentication (user:password).
-
+  
           -h <host>
               Host name for server (default is localhost).
-
+  
           -p <port>
               Port number for server (default is 8080).
-
+  
           -s <sourceRepoPath>
               Path of data to export. Format:
               <repo-name>:<branch-name>:<node-path>.
-
+  
+          --scheme <scheme>
+              Scheme (default is http).
+  
           --skipids
               Flag that skips ids in data when exporting.
-
+  
           -t <exportName>
               Target name to save export.
 

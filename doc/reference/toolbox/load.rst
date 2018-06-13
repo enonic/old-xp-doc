@@ -17,22 +17,30 @@ See :ref:`operations-export` for more information on system dump/load.
 
   NAME
           toolbox load - Import data from a dump.
-
+  
   SYNOPSIS
           toolbox load -a <auth> [-h <host>] [-p <port>] -s <source>
-
+                  [--scheme <scheme>] [-y]
+  
   OPTIONS
           -a <auth>
               Authentication token for basic authentication (user:password).
-
+  
           -h <host>
               Host name for server (default is localhost).
-
+  
           -p <port>
               Port number for server (default is 8080).
-
+  
           -s <source>
               Dump name.
+  
+          --scheme <scheme>
+              Scheme (default is http).
+  
+          -y
+              Automatic yes to prompts; assume “Yes” as answer to all prompts and
+              run non-interactively.
 
 **Example:**
 
