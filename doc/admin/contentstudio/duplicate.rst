@@ -3,10 +3,11 @@
 Duplicate
 =========
 
-This action will make a copy of the selected content and add "-copy" to the duplicate's path name. The only other difference between the
-original and duplicate will be the content ID. Even the **Created** and **Modified** dates will be the same. This option is disabled when
-more than one content is selected in the tree grid.
+If you want to duplicate one or more content items, select them in the Content Grid and click Duplicate button in the Grid toolbar.
+This will open modal dialog where you can choose whether child items of selected content(s) should also be duplicated or not.
+Pressing "Duplicate" button in the dialog will trigger the duplicate operation which will be visualised by a progress bar, if the process is taking more than a few seconds.
+Duplicates will get a new id and path names will be postfixed with "-copy".
 
-When used from inside the Edit view, "Duplicate" function will open a new browser tab for the copy of the content and switch to that tab.
+When the Duplicate button is clicked from inside the Content Wizard, only the current item will be selected in the dialog.
 
-.. image:: images/duplicate.jpg
+.. image:: images/duplicate.png
