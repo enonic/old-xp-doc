@@ -18,7 +18,7 @@ Site (portal:site)
 The Site content type allows creating websites. By creating a content of type Site, it will become the root of a website.
 
 This content type provides a special behavior for the content, allowing to select and configure applications for the website.
-The types (content types, relationship types and mixins) of the applications selected will be available to be used
+Content types, relationship types, filters and x-data of the applications selected will be available to be used
 inside the website content tree.
 
 .. NOTE::

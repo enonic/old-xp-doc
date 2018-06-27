@@ -1,0 +1,13 @@
+<site>
+  <config>
+    <input type="TextLine" name="company">
+      <label>Company</label>
+      <occurrences minimum="1" maximum="1"/>
+    </input>
+    <input type="TextArea" name="description">
+      <label>Description</label>
+      <occurrences minimum="1" maximum="1"/>
+    </input>
+  </config>
+  <x-data name="us-address"/>
+</site>

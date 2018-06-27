@@ -23,7 +23,8 @@ Extensions
 
 An app's site.xml file may optionally contain other elements, placed outside the ``<config>`` node.
 
-Use ``<x-data>`` element for adding :ref:`mixins`. Adding a mixin this way will add that data on all the content in Content Studio.
+Use ``<x-data>`` element for adding :ref:`x-data` or ``<inline>`` element for adding :ref:`mixins`
+Adding extra data this way will automatically add that data to the content in Content Studio.
 
 Additionally, the ``<filters>`` element can be used for adding :ref:`response_filters`.
 

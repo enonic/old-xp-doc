@@ -33,6 +33,7 @@ Below is a sample project folder structure - all items that end with a slash are
             mixins/
             pages/
             parts/
+            x-data/
             site.xml
           i18n/
           tasks/
@@ -101,6 +102,10 @@ site/filters/
     This is where generic http response filters are placed. Filters can be used for post processing any given request - also across applications added to a site.
     A common use case is adding script tags to pages - but possibilities are virtually endless.
 
+site/layouts/
+  Layout controllers should be placed here. Layouts are similar to parts, but in addition have one or more regions.
+  Regions enable placement of other components inside the layout. (see :ref:`layout`).
+
 site/mixins/
   Mixin schema-types are placed here. A mixin can be used to add common fields to multiple content-types or other schemas (see :ref:`mixins`).
 
@@ -111,9 +116,9 @@ site/parts/
   Part controllers should be placed here. Parts are dynamically configurable components that can
   be placed on pages (see :ref:`part`).
 
-site/layouts/
-  Layout controllers should be placed here. Layouts are similar to parts, but in addition have one or more regions.
-  Regions enable placement of other components inside the layout. (see :ref:`layout`).
+site/x-data/
+  Schemas for "extra data" (x-data) - common fields that can be added to content-types or other schemas based on regex rules (see :ref:`x-data`).
+
 
 i18n/
   This folder will contain application localization files (i18n is short for Internationalization).

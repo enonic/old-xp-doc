@@ -112,4 +112,4 @@ type
   	The content-type name
 
 x
-  	A property-set containing properties from mixins, also known as extra data. Indexed values depend on the specified mixins.
+  	A property-set containing properties from x-data (this also includes mixins).

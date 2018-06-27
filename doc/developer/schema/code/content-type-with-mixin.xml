@@ -4,5 +4,4 @@
   <form>
     <inline mixin="us-address"/>
   </form>
-  <x-data mixin="menu-item"/>
 </content-type>

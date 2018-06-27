@@ -6,10 +6,9 @@ Applications
 The Applications admin tool provides an interface to install, uninstall, start and stop applications for an Enonic XP installation. A list
 of the installed applications appears in the left panel. Applications in this list can be selected by clicking on them. Information about
 a selected app appears in the right panel. This information includes the basics such as version, key and system requirements as well as a
-list of schemas for content types, mixins and relationship types, and also a list of descriptors, which are components for pages, parts and
-layouts.
+list content type schemas, descriptors for pages and page components, as well as all the sites that use this application.
 
-.. image:: images/apps-tool.jpg
+.. image:: images/apps-tool.png
 
 Installing an app
 -----------------

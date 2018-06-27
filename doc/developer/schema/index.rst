@@ -9,7 +9,7 @@ Schemas are made up of the following main concepts:
 
 * A rich set of widgets called :ref:`input_types`
 * Rich :ref:`schema_forms` by combining Input Types and layouts
-* Horizontal inheritance across forms through the use of :ref:`mixins`
+* Horizontal inheritance across forms through the use of :ref:`x-data` and :ref:`mixins`
 
 .. toctree::
     :maxdepth: 1
@@ -18,6 +18,7 @@ Schemas are made up of the following main concepts:
     item-sets
     option-sets
     layouts
+    x-data
     mixins
     relationship-types
     forms

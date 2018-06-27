@@ -44,4 +44,4 @@ publish (propertySet)
   Contains publish-information, e.g ``publish.from``
 
 x (propertySet)
-  A property-set containing properties from mixins, also known as xtra data.
+  A property-set containing properties from x-data and mixins.
