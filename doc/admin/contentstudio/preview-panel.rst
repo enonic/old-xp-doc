@@ -10,3 +10,8 @@ panel is replaced with a list of all selected content items. If preview is for s
 
 .. NOTE::
    Only the **Draft** version of content is visible in the preview panel.
+
+Preview panel has a toolbar which shows status and last modifier of the content, as well as the list of open publishing issues the content is currently a part of. The newest issue
+is shown by default and the entire list can be expanded via dropdown. Clicking on the issue name will open the :ref:`issue_details` dialog.
+
+.. image:: images/preview-toolbar.png

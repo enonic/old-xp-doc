@@ -12,7 +12,7 @@ There are several ways to create a new issue.
 From the Issue List dialog
 --------------------------
 
-Click the |issueicon| icon in the top right corner of the :ref:`browse_view`. This will open a dialog with the :ref:`issue_list`.
+Click the |issueicon| icon in the Content Studio header to open the :ref:`issue_list` dialog.
 
 .. image:: images/issues/publishing-issues-list-empty.png
 
