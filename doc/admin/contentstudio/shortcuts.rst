@@ -15,9 +15,15 @@ Browse View
 +==================================+================+==================+
 |New content                       |Alt+N           |Alt+N             |
 +----------------------------------+----------------+------------------+
-|Edit selected content             |Cmd+E           |Ctrl+E            |
+|Select/unselect content           |Space           |Space             |
++----------------------------------+----------------+------------------+
+|Edit selected content             |Cmd+E or Enter  |Ctrl+E or Enter   |
 +----------------------------------+----------------+------------------+
 |Delete selected content           |Cmd+Del         |Ctrl+Del          |
++----------------------------------+----------------+------------------+
+|Preview selected content          |Alt+Space       |Ctrl+Alt+Space    |
++----------------------------------+----------------+------------------+
+|Preview selected content          |Ctrl+Alt+P      |Ctrl+Alt+P        |
 +----------------------------------+----------------+------------------+
 
 Content Editor
@@ -30,6 +36,12 @@ Content Editor
 |Save content and close wizard tab |Cmd+Enter       |Ctrl+Enter        |
 +----------------------------------+----------------+------------------+
 |Close wizard tab                  |Alt+W           |Alt+W             |
++----------------------------------+----------------+------------------+
+|Delete content                    |Cmd+Del         |Ctrl+Del          |
++----------------------------------+----------------+------------------+
+|Preview content                   |Alt+Space       |Ctrl+Alt+Space    |
++----------------------------------+----------------+------------------+
+|Preview content                   |Ctrl+Alt+P      |Ctrl+Alt+P        |
 +----------------------------------+----------------+------------------+
 
 .. _htmlarea_shortcuts:
