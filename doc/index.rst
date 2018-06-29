@@ -6,12 +6,12 @@ Enonic XP |version| documentation
 
 Seriously fast, and scalable from a single server to large clusters - Enonic XP radically simplifies the application infrastructure required to deliver high performance mission critical applications and sites.
 
-**We simply call it the Web Operating System**
+**Build powerful applications with a single dependency**
 
 .. image:: images/wos.jpg
 
 * NoSQL storage - Distributed content repository built on top of Elasticsearch
-* App Engine - Supports deployment of serverside Javascript and Java apps - using the popular `PurpleJS framework`_
+* App Engine - Supports serverside Javascript and Java through the `PurpleJS framework`_
 * Powerful embedded Web Content Management - seamlessly blend applications and websites
 * Runs on the powerful Java Virtual Machine - can be deployed on just about any infrastructure.
 
