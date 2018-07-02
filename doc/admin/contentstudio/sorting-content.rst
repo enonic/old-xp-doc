@@ -6,12 +6,12 @@ Sort
 Child items of any content can be sorted in a number of ways through the **Sort items** dialogue. It is accessed with the **Sort** button in
 the toolbar or context menu, or by clicking a "sort" icon that appears for previously sorted content.
 
-.. image:: images/sort.jpg
+.. image:: images/sort.png
 
 The default sorting is by the **modified** time in descending order. The other options are **modified** time ascending, **DisplayName**
 (ascending or descending), and **Manually Sorted**. To manually sort items, simply drag and drop them in the **Sort items** dialogue.
 
-.. image:: images/sort-options.jpg
+.. image:: images/sort-options.png
 
 Once items are sorted, the parent content will have an arrow in the browse view tree grid pointed up or down to denote ascending or descending. If the
 content is manually sorted, an icon with three horizontal bars will appear. Clicking the bars or arrow icon will open the **Sort items**
