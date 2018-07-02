@@ -3,11 +3,11 @@
 X-data
 ------
 
-**x-data** is a concept similar to :ref:`mixins` but, unlike mixins, x-data schemas don't have to be plugged in inline inside content type schema or ``site.xml``
+**X-data** is a concept similar to :ref:`mixins` but, unlike mixins, x-data schemas don't have to be plugged in inline inside content type schema or ``site.xml``
 which makes them much more flexible. Unless config of x-data implicitly restricts it from being used for specific content types(s), it will
 be automatically made visible in the Content Wizard and user can manually enable it for specific content.
 
-x-data definition file must be placed in the folder ``site/x-data/[name]`` and named
+X-data definition file must be placed in the folder ``site/x-data/[name]`` and named
 ``[name].xml``. For example, ``site/x-data/us-address/us-address.xml``.
 
 .. literalinclude:: code/x-data.xml

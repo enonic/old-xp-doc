@@ -13,7 +13,7 @@ view** appears when content is created or edited and will open in a new browser 
    The Content Studio is fully responsive, so panels may stack or collapse if the screen is small or narrow. This
    documentation will assume a large desktop view.
 
-.. image:: images/content-studio.jpg
+.. image:: images/content-studio.png
 
 .. toctree::
    :maxdepth: 1

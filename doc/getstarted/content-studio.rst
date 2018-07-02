@@ -5,7 +5,7 @@ The sample applications automatically create demo sites you can try out.
 * Select or expand the sites you are interested in for a preview
 * Right click or choose actions from the menu to get going
 
-.. image:: images/content-studio.jpg
+.. image:: images/content-studio.png
 
 **Wireframe Prototyping Application**
 
