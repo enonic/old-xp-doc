@@ -2,6 +2,6 @@
   <label>Archives</label>
   <occurrences minimum="0" maximum="1"/>
   <config>
-	  <allowContentType>media:archive</allowContentType>
+    <allowContentType>media:archive</allowContentType>
   </config>
 </input>

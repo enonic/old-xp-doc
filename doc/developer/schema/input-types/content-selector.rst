@@ -20,7 +20,7 @@ allowContentType
   * If you only specify content type name - `citation` - the current app is automatically presumed. Use one setting for each content-type.
   * You can add another app's name - `my.other.app` - followed by a colon (:) and the content type name `:quote` to allow content from other apps, like so: `my.other.app:quote`.
   * Asterisk (*) can be used instead of app name or content type name. For instance `*:quote` will select content type `quote` from any app.
-  * *${app}* wildcard is used to denote current app name. So writing `${app}:*` will select all content types from the current app.
+  * *${app}*  wildcard is used to denote current app name. So writing `${app}:*` will select all content types from the current app.
   * Regular expressions are also supported. For example `my.other.app:^content*` will select all content types starting with `content` from the app `my.other.app`.
     You can even use complex expressions with negative lookaheads like `((?!folder).)*$` that will return all content types except the ones containing `folder`.
 

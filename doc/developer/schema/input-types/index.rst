@@ -45,11 +45,6 @@ config
   with dashes is automatically camel-cased
   (``relationship-type`` -> ``relationshipType``).
 
-default
-  Optional element that contains a default value for the particular input type. Currently it is only supported by some input types.
-  See below for value formats for each input type. Invalid values for a given input type will be ignored.
-
-
 
 .. toctree::
     :maxdepth: 1

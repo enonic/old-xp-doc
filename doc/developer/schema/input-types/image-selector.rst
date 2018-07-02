@@ -17,6 +17,15 @@ Supported image types are:
 common fields
   All Input Types have these :ref:`Common Fields <input_types_common_fields>`
 
+allowContentType
+  Same as for :ref:`contentselector_type` .
+
 allowPath
-  This is used to limit the path of the images that may be selected for this input. The site on which the content exists, can be wildcarded with ${site} Use one setting for path expression.
-  For some examples of how to use this, please see **allowPath** of  :ref:`contentselector_type` .
+  Same as for :ref:`contentselector_type` .
+
+treeMode
+  Same as for :ref:`contentselector_type` .
+  When not in tree mode, Image Selector will show images in gallery mode, 3 images per row.
+
+hideToggleIcon
+  Same as for :ref:`contentselector_type` .
