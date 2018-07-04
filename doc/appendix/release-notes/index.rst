@@ -30,7 +30,7 @@ The switch improves both stability for editors, and new features, here are a few
 
 * Drag'n dropping images directly into the editor.
 * Drag images around inside text
-* Double click to edit both images
+* Double click to edit images
 * Double click to edit links
 * Field expands on select (for faster scrolling through forms)
 
