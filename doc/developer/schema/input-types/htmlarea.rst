@@ -3,7 +3,7 @@
 HtmlArea
 --------
 
-A field for inputting multi-line text, with formatting options.
+A field for entering multi-line text with rich-formatting options.
 
 .. literalinclude:: code/htmlarea.xml
    :language: xml
@@ -25,7 +25,7 @@ config
 .. tip:: HTML Area is configured with default set of tools but the toolbar can be customized.
    Using the config setting you can exclude specific tools from being shown (use "*" to exclude all tools at once) and/or include those that you want to have in the toolbar.
    Separate tools with a space and use "|" character to group tool buttons together.
-   Complete list of supported tools can be found in description of :ref:`editing_input_types_html`.
+   Complete list of supported tools can be found below.
 
 .. literalinclude:: code/htmlarea-customized.xml
    :language: xml
@@ -38,39 +38,32 @@ Default configuration of the HTML Area toolbar is shown below:
 
 ::
 
-   Format Bold Italic Underline Strike Subscript Superscript Code Blockquote | JustifyLeft JustifyCenter JustifyRight JustifyBlock | BulletedList NumberedList Outdent Indent | SpecialChar Anchor Image Macro Link Unlink | Table | PasteText Maximize
+   Styleselect | Bold Italic Underline | Alignleft Aligncenter Alignright Alignjustify | Bullist Numlist Outdent Indent | Charmap Anchor Image Macro Link Unlink | Table
 
 
 
 =============    ==================================
 Name             Description
 =============    ==================================
-Format           Text format menu
+Styleselect      Text format menu
 Bold             Bold text
 Italic           Italic text
 Underline        Underline text
-Strike           Strikethrough over text
-Subscript        Subscript text
-Superscript      Superscript text
-Code             Wrap text with code tag
-Blockquote       Quotation
-JustifyLeft      Left align content
-JustifyCenter    Center content
-JustifyRight     Right align content
-JustifyBlock     Justify content
-BulletedList     Add a bullet list
-NumberedList     Insert a numbered list
+Alignleft        Left align content
+Aligncenter      Center content
+Alignright       Right align content
+Alignjustify     Justify content
+Bullist          Add a bullet list
+Numlist          Insert a numbered list
 Outdent          Decrease indent
 Indent           Increase indent
-SpecialChar      Insert a special character
+Charmap          Insert a special character
 Anchor           Insert an anchor
 Image            Insert/Edit an image
 Macro            Insert a macro
 Link             Insert/Edit a link
 Unlink           Remove link
 Table            Table format menu
-PasteText        Toggle paste text mode
-Maximize         Full screen mode
 =============    ==================================
 
 
@@ -79,38 +72,28 @@ These are additional tools supported by HTML Area that can be used in the input 
 ==============   =====================================
 Name             Description
 ==============   =====================================
-NewPage          Clean editor's content
-Preview          Preview HTML Area contents
-Print            Print editor's content
-Templates        Template to open in the editor
+Backcolor        Background color
+Blockquote       Quotation
+Code             Wrap text with code tag
 Copy             Copy selected text into buffer
-Cut              Cut selected text into buffer
-Paste            Paste text from buffer
-PasteFromWord    Paste text from Word
-Undo             Undo last action
-Redo             Repeat last action
-SelectAll        Select editor's content
-Scayt            Spell checker
-Form             Insert form
-Checkbox         Insert checkbox
-Radio            Insert radiobutton
-TextField        Insert text input
-Textarea         Insert textarea
-Select           Insert select tag
-Button           Insert button
-HiddenField      Insert hidden field
 CopyFormatting   Copy formatting
-RemoveFormat     Remove formatting
 CreateDiv        Wrap with div
-BidiLtr          Text direction left to right
-BidiRtl          Text direction right to left
-Language         Add lang attribute
-Flash            Insert flash
-HorizontalRule   Insert a horizontal line
-Styles           Text styles menu
+Cut              Cut selected text into buffer
 Font             Font menu
 FontSize         Font size menu
+HorizontalRule   Insert a horizontal line
+Ltr              Text direction left to right
+NewPage          Clean editor's content
+Preview          Preview HTML Area contents
+Redo             Repeat last action
+RemoveFormat     Remove formatting
+Rtl              Text direction right to left
+SelectAll        Select editor's content
+Strikethrough    Strikethrough over text
+Styles           Text styles menu
+Subscript        Subscript text
+Superscript      Superscript text
 TextColor        Text color
-BGColor          Background color
-ShowBlocks       Visualize all block-level elements
+Undo             Undo last action
+VisualBlocks     Visualize all block-level elements
 ==============   =====================================
