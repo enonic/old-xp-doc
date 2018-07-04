@@ -13,7 +13,7 @@ Issues are now fully integrated in the publishing process of Content Studio.
 
 * Create issues directly from browse view and/or publishing wizard
 * Assign and collaborate on issues until they are resolved
-* Easily see and access issues your issues
+* Easily see and access your issues
 * Easily spot and access issues for an item from preview panel
 * Directly open and edit content items from an issue
 
@@ -30,7 +30,7 @@ The switch improves both stability for editors, and new features, here are a few
 
 * Drag'n dropping images directly into the editor.
 * Drag images around inside text
-* Double click to edit both images
+* Double click to edit images
 * Double click to edit links
 * Field expands on select (for faster scrolling through forms)
 
