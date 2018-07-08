@@ -1,0 +1,17 @@
+{
+    "state": "OK",
+    "clusters": [
+        {
+            "id": "elasticsearch",
+            "enabled": true,
+            "healthy": true,
+            "numberOfNodesSeen": 3
+        },
+        {
+            "id": "ignite",
+            "enabled": true,
+            "healthy": true,
+            "numberOfNodesSeen": 3
+        }
+    ]
+}

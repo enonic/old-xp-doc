@@ -16,8 +16,17 @@ can be accessed using the following pattern::
 
 Here's a list of all the status pages and what is shows:
 
-  ``cluster``
-    Information of the current cluster. Local-node and members.
+  ``cache.com.enonic.xp.webSessionCache``
+    Statistics about the web session cache.
+
+  ``cluster.elasticsearch``
+    Information about the ElasticSearch cluster. Local-node and members.
+
+  ``cluster.ignite``
+    Information about the Ignite cluster. Local-node and members.
+
+  ``cluster.manager``
+    Information about the state of the clusters: elasticsearch and ignite 
 
   ``dump.deadlocks``
     This will try to detect thread deadlocks and show them if any.
@@ -82,18 +91,45 @@ Here's a list of all the status pages and what is shows:
 Cluster monitoring
 ------------------
 
-There are two tools at your disposal for monitoring the health of the cluster and indices:
+There are multiple tools at your disposal for monitoring the health of the clusters and indices:
 
 Cluster health
 **************
 
 ::
 
-  http://<host>:<port>/status/cluster
+  http://<host>:<port>/status/cluster.manager
 
-Which should give you a response like this:
+To obtain a generic health check of the clusters.
+It should return you a response similar to:
 
-.. literalinclude:: code/cluster-state-response.json
+.. literalinclude:: code/cluster-manager-response.json
+   :language: json
+
+Ignite cluster health
+****************************
+
+::
+
+  http://<host>:<port>/status/cluster.ignite
+
+Which should return you a response similar to:
+
+.. literalinclude:: code/cluster-ignite-response.json
+   :language: json
+
+This view gives a brief overview of the nodes in the cluster. 
+
+ElasticSearch cluster health
+****************************
+
+::
+
+  http://<host>:<port>/status/cluster.elasticsearch
+
+Which should return you a response similar to:
+
+.. literalinclude:: code/cluster-elasticsearch-response.json
    :language: json
 
 This view gives a brief overview of the nodes in the cluster. For convenience, the current local node to which the request was made has a

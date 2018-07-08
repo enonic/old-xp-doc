@@ -1,0 +1,43 @@
+{
+    "name": "mycluster",
+    "localNode": {
+        "isMaster": true,
+        "id": "WT_gNgZ8SAu7GCJxvynSOg",
+        "hostName": "griPortable.local",
+        "version": "1.5.2",
+        "numberOfNodesSeen": 3
+    },
+    "members": [
+        {
+            "isMaster": false,
+            "id": "WqknPf3USg2fOnK6xGlWwA",
+            "hostName": "griPortable.local",
+            "version": "1.5.2",
+            "address": "inet[/127.0.0.1:9301]",
+            "name": "01bd187e-7cd1-4a8a-ac0a-918d4e09aa64",
+            "isDataNode": true,
+            "isClientNode": false
+        },
+        {
+            "isMaster": false,
+            "id": "xDwdxa37SUy6AHPz6hMZMA",
+            "hostName": "griPortable.local",
+            "version": "1.5.2",
+            "address": "inet[/127.0.0.1:9302]",
+            "name": "cf91d280-6111-47f2-8118-7d48664c3530",
+            "isDataNode": true,
+            "isClientNode": false
+        },
+        {
+            "isMaster": true,
+            "id": "WT_gNgZ8SAu7GCJxvynSOg",
+            "hostName": "griPortable.local",
+            "version": "1.5.2",
+            "address": "inet[/127.0.0.1:9300]",
+            "name": "af5287fc-663d-40bd-9b05-7cca59f96522",
+            "isDataNode": true,
+            "isClientNode": false
+        }
+    ],
+    "state": "GREEN"
+}
