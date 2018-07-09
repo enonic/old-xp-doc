@@ -73,7 +73,9 @@ Duplicating content in Content Studio now support selecting to duplicate only a 
 Fully replicated sessions
 -------------------------
 
-Web sessions (i.e. logins) are now fully replicated.
+.. WARNING:: Session replication is an experimental feature.
+
+Web sessions (i.e. logins) can now be fully replicated.
 This means that users will never loose their session if a server is shut down or fails while running an XP cluster.
 As of 6.15 sticky-session load balancer configuration is optional.
 
