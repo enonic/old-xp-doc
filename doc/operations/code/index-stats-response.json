@@ -1,61 +1,64 @@
 {
     "summary": {
         "total": 8,
-        "started": 4,
-        "unassigned": 4
-        "initializing": 0,
+        "started": 8,
+        "unassigned": 0,
         "relocating": 0,
-     },
+        "initializing": 0
+    },
     "shards": {
-        "initializing": [],
-        "relocating": [],
         "started": [
             {
                 "id": "search-cms-repo(0)",
-                "nodeAddress": "10.0.6.146",
-                "nodeId": "xUfgZ2FdRu6q-CLJA4CIkA",
-                "type": "PRIMARY"
+                "nodeId": "xDwdxa37SUy6AHPz6hMZMA",
+                "nodeAddress": "192.168.1.5",
+                "type": "REPLICA"
             },
-            {
-                "id": "search-system-repo(0)",
-                "nodeAddress": "10.0.6.146",
-                "nodeId": "xUfgZ2FdRu6q-CLJA4CIkA",
-                "type": "PRIMARY"
-            },
-            {
-                "id": "storage-system-repo(0)",
-                "nodeAddress": "10.0.6.146",
-                "nodeId": "xUfgZ2FdRu6q-CLJA4CIkA",
-                "type": "PRIMARY"
-            },
-            {
-                "id": "storage-cms-repo(0)",
-                "nodeAddress": "10.0.6.146",
-                "nodeId": "xUfgZ2FdRu6q-CLJA4CIkA",
-                "type": "PRIMARY"
-            }
-        ],
-        "unassigned": [
             {
                 "id": "search-cms-repo(0)",
-                "nodeAddress": "UNKNOWN",
-                "type": "REPLICA"
+                "nodeId": "WT_gNgZ8SAu7GCJxvynSOg",
+                "nodeAddress": "192.168.1.5",
+                "type": "PRIMARY"
             },
             {
                 "id": "search-system-repo(0)",
-                "nodeAddress": "UNKNOWN",
+                "nodeId": "xDwdxa37SUy6AHPz6hMZMA",
+                "nodeAddress": "192.168.1.5",
+                "type": "PRIMARY"
+            },
+            {
+                "id": "search-system-repo(0)",
+                "nodeId": "WqknPf3USg2fOnK6xGlWwA",
+                "nodeAddress": "192.168.1.5",
                 "type": "REPLICA"
             },
             {
                 "id": "storage-system-repo(0)",
-                "nodeAddress": "UNKNOWN",
+                "nodeId": "WT_gNgZ8SAu7GCJxvynSOg",
+                "nodeAddress": "192.168.1.5",
                 "type": "REPLICA"
             },
             {
+                "id": "storage-system-repo(0)",
+                "nodeId": "WqknPf3USg2fOnK6xGlWwA",
+                "nodeAddress": "192.168.1.5",
+                "type": "PRIMARY"
+            },
+            {
                 "id": "storage-cms-repo(0)",
-                "nodeAddress": "UNKNOWN",
+                "nodeId": "WT_gNgZ8SAu7GCJxvynSOg",
+                "nodeAddress": "192.168.1.5",
+                "type": "PRIMARY"
+            },
+            {
+                "id": "storage-cms-repo(0)",
+                "nodeId": "WqknPf3USg2fOnK6xGlWwA",
+                "nodeAddress": "192.168.1.5",
                 "type": "REPLICA"
             }
-        ]
+        ],
+        "unassigned": [],
+        "relocating": [],
+        "initializing": []
     }
 }

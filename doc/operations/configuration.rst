@@ -165,12 +165,51 @@ readThrough.sizeThreshold = 100mb
     The maximum size for objects to be stored in the readthrough provider, defaults to 100MB. The size notation accepts a number plus byte-size idenfier (``b``/``kb``/``mb``/``gb``/``tb``/``pb``)
 
 
+
+.. _cluster-config:
+
+Cluster configuration
+---------------------
+
+Enonic XP functions with two clusters: Elasticsearch and Ignite. The cluster configuration gathers the common configuration for both ElasticSearch and Ignite
+
+.. literalinclude:: code/cluster.properties
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.cluster.cfg``
+
+cluster.enabled
+  If true, the node wil try to join a cluster. Default ``false``.
+node.name
+  Node name. Default a generated-UUID
+discovery.unicast.hosts
+  List of nodes in the cluster to perform discovery when new nodes are started. Default ``127.0.0.1``.
+network.host
+  Set the bind address. Default ``127.0.0.1``. Can be an explicit *IP-address*, a *host-name* or an *alias*. See the section below for an overview of aliases
+network.publish.host
+  Set the address other nodes will use to communicate with this node  = 127.0.0.1. Default ``127.0.0.1``
+session.replication.enabled
+  Use the web session replication between cluster nodes. Default ``false``.
+.. WARNING:: Session replication is an experimental feature
+
+.. _network-host-aliases:
+
+*Network host aliases*
+
+* ``_local_`` : Will be resolved to the local ip address.
+* ``_non_loopback_`` : The first non loopback address.
+* ``_non_loopback:ipv4_`` : The first non loopback IPv4 address.
+* ``_non_loopback:ipv6_`` : The first non loopback IPv6 address.
+* ``_[networkInterface]_`` : Resolves to the ip address of the provided network interface. For example ``_en0_``
+* ``_[networkInterface]:ipv4_`` : Resolves to the ipv4 address of the provided network interface. For example ``_en0:ipv4_``
+* ``_[networkInterface]:ipv6_`` : Resolves to the ipv6 address of the provided network interface. For example ``_en0:ipv6_``
+
+
 .. _es-config:
 
 Elasticsearch configuration
 ---------------------------
 
-The cluster functionallity is facilitated by Elasticsearch, so all relevant Elasticsearch settings are available.
+All relevant Elasticsearch settings are available.
 
 When changing ``com.enonic.xp.elasticsearch.cfg``, the  node will automatically restart with the new configuration.
 
@@ -178,12 +217,10 @@ When changing ``com.enonic.xp.elasticsearch.cfg``, the  node will automatically 
    :language: properties
    :caption: ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg``
 
-node.name
-  Node name. Default ``local-node``.
-node.master
-  Allow this node to be eligible as a master node. Default ``true``.
 node.data
   Allow data to be distributed to this node. Default ``true``.
+node.master
+  Allow this node to be eligible as a master node. Default ``true``.
 path
   Path to directory where elasticsearch stores files. Default ``${xp.home}/repo/index``. Should be on a local file-system, not sharded.
 path.data
@@ -202,8 +239,6 @@ cluster.routing.allocation.disk.threshold_enabled
   Prevent shard allocation on nodes depending on disk usage. Default ``false``.
 http.enabled
   Enable the HTTP module. Default ``false``.
-network.host
-  Set the bind address and the address other nodes will use to communicate with this node. Default ``127.0.0.1``. Can be an explicit *IP-address*, a *host-name* or an *alias*. See the section below for an overview of aliases.
 transport.tcp.port
   Custom port for the node to node communication. Defaults to the range ``9300-9400``.
 gateway.expected_nodes
@@ -212,27 +247,39 @@ gateway.recover_after_time
   Time to wait until recovery happens once the nodes are met. Default ``5m``.
 gateway.recover_after_nodes
   Number of nodes expected to be in the cluster to start the recovery after gateway.recover_after_time. Default ``1``.
-discovery.zen.minimum_master_nodes
-  Ensure a node sees N other master eligible nodes to be considered operational within the cluster. Default ``1``.
-discovery.zen.ping.multicast.enabled
-  Enable multicast ping discovery. Default ``false``.
-discovery.zen.ping.unicast.hosts
-  List of master nodes in the cluster to perform discovery when new nodes are started. Default ``127.0.0.1, [::1]``.
+discovery.unicast.port
+  List of ports to perform discovery when new nodes are started. Default ``9300``.
 index.recovery.initial_shards
   Number of shards expected to be found on full cluster restart per index. Default ``quorum``.
 
+.. _ignite-config:
 
-.. _network-host-aliases:
+Ignite configuration
+--------------------
 
-*Network host aliases*
+.. literalinclude:: code/ignite.properties
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.ignite.cfg``
 
-* ``_local_`` : Will be resolved to the local ip address.
-* ``_non_loopback_`` : The first non loopback address.
-* ``_non_loopback:ipv4_`` : The first non loopback IPv4 address.
-* ``_non_loopback:ipv6_`` : The first non loopback IPv6 address.
-* ``_[networkInterface]_`` : Resolves to the ip address of the provided network interface. For example ``_en0_``
-* ``_[networkInterface]:ipv4_`` : Resolves to the ipv4 address of the provided network interface. For example ``_en0:ipv4_``
-* ``_[networkInterface]:ipv6_`` : Resolves to the ipv6 address of the provided network interface. For example ``_en0:ipv6_``
+
+discovery.tcp.port
+  Local port to listen to. Default ``47500``.
+discovery.tcp.port.range
+  Range for local ports. Local node will try to bind on first available port starting from ``discovery.tcp.port`` up until ``discovery.tcp.port`` + ``discovery.tcp.port.range``. Default ``0``.
+discovery.tcp.reconnect
+  Number of times the node tries to (re)establish connection to another node. Default ``10``.
+discovery.tcp.network.timeout
+  Maximum network timeout to use for network operations (in ms). Default ``5000``.
+discovery.tcp.socket.timeout
+  Socket operations timeout (in ms). Default ``5000``.
+discovery.tcp.ack.timeout
+  Timeout for receiving acknowledgement for sent message (in ms). Default ``5000``.
+discovery.tcp.join.timeout
+  Join timeout (in ms). Default ``0``.
+discovery.tcp.stat.printfreq
+  Statistics print frequency. Default ``0``.
+communication.message.queue.limit
+  Message queue limit for incoming and outgoing messages. Default ``1024``.
 
 
 Admin UI Configuration

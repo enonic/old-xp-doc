@@ -73,20 +73,26 @@ In ``$XP_DISTRO/home/config/com.enonic.xp.web.jetty.cfg`` set the following prop
 
     http.port = somePort
 
- 4. **Enable clustering:** In ``$XP_DISTRO/home/config/com.enonic.xp.elasticsearch.cfg`` set the property ``node.local`` to ``false``
+ 4. **Enable clustering:** In ``$XP_DISTRO/home/config/com.enonic.xp.cluster.cfg`` set the property ``node.local`` to ``false``
 
  ::
 
-    node.local = false
+    cluster.enabled = true
 
- 5. **Open ports:** In ``$XP_DISTRO/home/config/com.enonic.xp.elasticsearch.cfg`` set the property ``transport.tcp.port`` to a range, e.g ``9300-9301`` and add range to ``discovery.zen.ping.unicast.hosts``
+ 5. **Open ElasticSearch ports:** In ``$XP_DISTRO/home/config/com.enonic.xp.elasticsearch.cfg`` set the properties ``transport.tcp.port`` and ``discovery.unicast.port`` to a range, e.g ``9300-9301``
 
  ::
 
     transport.tcp.port = 9300-9301
-    discovery.zen.ping.unicast.hosts=127.0.0.1[9300-9301]
+    discovery.unicast.port = 9300-9301
 
- 6. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin\server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
+ 6. **Open Ignite ports:** In ``$XP_DISTRO/home/config/com.enonic.xp.ignite.cfg`` set the property ``discovery.tcp.port.range``, e.g ``2``
+
+ ::
+
+    discovery.tcp.port.range = 2
+
+ 7. **Start your cluster:** Start both nodes by their respective ``bin/server.sh`` or ``bin\server.bat``. They will connect and you should have a live cluster on your machine. You can check the current cluster info at:
 
  ::
 
@@ -150,28 +156,22 @@ Each node binds to an IP-address and port, and communicates to other nodes speci
 Settings
 ********
 
-node.local
-##########
+cluster.enabled
+###############
 
-When this setting is ``true``, the node will never try to join a cluster. In all cluster setups, nodes must set this to ``false``
+When this setting is ``false``, the node will never try to join a cluster. In all cluster setups, nodes must set this to ``true``
 
-network.host
-############
+discovery.unicast.hosts
+#######################
 
-The ``network.host`` setting specifies the TCP-address used for node communication. The default value for this is 127.0.0.1[9300], which means that this node will never be able to talk to other nodes, and only on port 9300.
+The ``discovery.unicast.hosts`` value contains a comma-separated list of nodes that are allowed to join the cluster. The default value for this is 127.0.0.1
 
-The ``network.host`` setting can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`es-config` section for an overview.
+network.host & network.publish.host
+###################################
 
-transport.tcp.port
-##################
+The ``network.host`` and ``network.publish.host`` settings specify the TCP-address used for node communication. The default value for these is 127.0.0.1, which means that this node will never be able to talk to other nodes.
 
-The ``transport.tcp.port`` value defines the port that the node will use for communication. This defaults to a single ports; ``9300``. To define a range, use e.g ``9300-9400``
-
-discovery.zen.ping.unicast.hosts
-################################
-
-The ``discovery.zen.ping.unicast.hosts`` value contains a comma-separated list of nodes that are allowed to join the cluster. Each value is either in the form of ``host:port`` or ``host:port1-port2`` (port-range).
-
+These settings can be an explicit *IP-address*, a *host-name* or an *alias*. See the :ref:`cluster-config` section for an overview.
 
 Sample config
 *************
@@ -384,26 +384,35 @@ Backing up a cluster is done in the same way as backing up a single node install
 Sample configurations
 ---------------------
 
-2-node cluster
-**************
-
-.. literalinclude:: code/2-node-cluster-config.properties
-   :language: properties
-
 3-node cluster
 **************
 
-.. literalinclude:: code/3-node-cluster-config.properties
+.. literalinclude:: code/3-node-cluster-config-cluster.properties
    :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.cluster.cfg``
+   
+.. literalinclude:: code/3-node-cluster-config-es.properties
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg``
 
 5-node cluster
 **************
 
-.. literalinclude:: code/5-node-cluster-config.properties
+.. literalinclude:: code/5-node-cluster-config-cluster.properties
    :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.cluster.cfg``
+   
+.. literalinclude:: code/5-node-cluster-config-es.properties
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg``
 
 7-node cluster with dedicated roles
 ***********************************
 
-.. literalinclude:: code/7-node-cluster-dedicated.properties
+.. literalinclude:: code/7-node-cluster-config-cluster.properties
    :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.cluster.cfg``
+   
+.. literalinclude:: code/7-node-cluster-config-es.properties
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.elasticsearch.cfg``
