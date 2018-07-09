@@ -8,13 +8,32 @@ Upgrade notes - |version|
 Notable changes
 ---------------
 
-No major backward-compatibility issues in this version, just one small API deprecation for Page Contributions:
+CKEditor replaces TinyMCE
+*************************
 
-Page Contributions now require array input
-******************************************
+CKEditor is the new HTML editor used inside Content Studio.
+To ease the transition, TinyMCE is still present and can be used by setting the property ``htmlarea`` in the new config file ``com.enonic.xp.app.contentstudio.cfg``.
 
-All pageContributions are now returned as arrays in response object sent to filter.  Previously it could be a single value or an array, so
-if code expected a single value, it will now fail.
+.. literalinclude:: code/contentstudio.properties
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.app.contentstudio.cfg``
+   
+Ignite cluster
+**************
+
+Enonic XP now includes Apache Ignite. If your installation is not clustered, you do not need to do anything and may skip this part.
+
+Elasticsearch and Ignite communicate between every Enonic XP node of a cluster.
+To simplify the configuration, a file ``com.enonic.xp.cluster.cfg`` has been created to gather the properties common to Ignite and Elasticsearch. 
+The configuration files ``com.enonic.xp.elasticsearch.cfg`` and ``com.enonic.xp.ignite.cfg`` contain the properties specific to each system.
+
+.. literalinclude:: code/cluster.properties
+   :language: properties
+   :caption: ``$XP_HOME/config/com.enonic.xp.cluster.cfg``
+   
+Remove the following obsolete properties from the file ``com.enonic.xp.elasticsearch.cfg``: node.name, node.local, network.host and discovery.zen.ping.unicast.hosts
+
+See the :ref:`configuration` section for more information about the configuration files.
 
 
 Upgrade Steps
