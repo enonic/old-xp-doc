@@ -44,8 +44,8 @@ Having problems with your existing Java installation? Check out our :ref:`troubl
 
 If it turns out you're on the wrong java version, follow these steps
 
-* Download it from http://www.oracle.com/technetwork/java/javase/downloads/index.html - The Java 8 installation is top at the top of the page.
-  Please find the Java 8 section, then download the Java 8 JDK.
+* Download it from http://www.oracle.com/technetwork/java/javase/downloads/index.html - The page starts with the latest Java version.
+  Please find the Java 8 section, a little further down the page, and download the Java 8 JDK.
 
 * Follow the instructions for your respective operating system
 
