@@ -21,16 +21,16 @@ To see all installed JDK's on you environment, if any, type the following comman
  ~/ $
 
 
-If you have a JDK equal to or above version 1.8.0_92, but the ``javac -version`` points to another version, proceed to set the JAVA_HOME
-environment variable correctly.
+**Enonic XP run on Java 8 only,** using update 92 or later.  If you have a Java 8 JDK equal to or above version 1.8.0_92, but the
+``javac -version`` points to another version, proceed to set the JAVA_HOME environment variable correctly.
 
 Setting JAVA_HOME
 -----------------
 
-If you don't have a JDK equal to or above version 1.8.0_92, you must install a newer version.
+If you don't have a Java 8 JDK equal to or above version 1.8.0_92, you must install a newer version.
 
-* Go to the `JDK page <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ and click the "JDK download"
-  button. This button will always link to the latest version.
+* Go to the `JDK page <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ and look down the page for the Java 8 section.
+  The download button for the JDK, will download the latest version for Java 8.
 
 * Follow the `installation instructions <http://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html>`_.
 
@@ -42,7 +42,7 @@ To check the current JAVA_HOME environment variable:
 .. code-block:: none
 
  ~/ $ echo $JAVA_HOME
- /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
+ /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
  ~/ $
 
 If this is not set correctly, you must set the correct one either for this terminal session, or in your ``.profile`` or ``.bashrc`` for all
@@ -66,4 +66,4 @@ terminal sessions.
  $ source .bash_profile
 
  $ echo $JAVA_HOME
- /Library/Java/JavaVirtualMachines/1.8.0_45.jdk/Contents/Home
+ /Library/Java/JavaVirtualMachines/1.8.0_131.jdk/Contents/Home
