@@ -3,7 +3,7 @@
 Upgrade notes - |version|
 =========================
 
-.. note:: This documentation describes upgrading from 6.13.x to |version|.
+.. note:: This documentation describes upgrading from 6.14.x to |version|.
 
 Notable changes
 ---------------
