@@ -103,7 +103,7 @@ Thymeleaf syntax.
 More on how to use Thymeleaf can be found in
 `the official Thymeleaf documentation`_.
 
-.. _the official Thymeleaf documentation: https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html
+.. _the official Thymeleaf documentation: https://www.thymeleaf.org/documentation.html
 
 
 .. _apps-page-regions:
