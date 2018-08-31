@@ -1,8 +1,8 @@
-geo-distance
+geoDistance
 ============
 
-The geo_distance aggregation needs a defined range to split the documents into buckets.
-Only documents with properties of type 'GeoPoint' will be considered in the ``geo_distance`` aggregation buckets.
+The geoDistance aggregation needs a defined range to split the documents into buckets.
+Only documents with properties of type 'GeoPoint' will be considered in the ``geoDistance`` aggregation buckets.
 
 Here's a list of properties:
 
@@ -35,5 +35,5 @@ The above example gives a result with this structure:
      :language: json
 
 NOTE: At the time of writing, there is only one way of find out which result belongs to which bucket:
-By also sorting the result on geo_distance, and matching the order to the number of each bucket.
+By also sorting the result on geoDistance, and matching the order to the number of each bucket.
 In a future version, there will easier ways of doing this.
