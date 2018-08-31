@@ -1,6 +1,6 @@
 "aggregations": {
     "distance": {
-        "geo_distance": {
+        "geoDistance": {
             'field': "data.cityLocation",
             'unit': "km",
             'origin': {
