@@ -29,7 +29,7 @@ Service Request
 In addition to the option values, if set on the input type ``<config>``, the service will receive the following query parameters in the HTTP request:
 
 ids
-  Array of item ids already selected in the CustomSelector. The service is expected to return the items with the specified ids.
+  Comma-delimited list of ids already selected in the CustomSelector. The service is expected to return the items with the specified ids.
 
 start
   Index of the first item expected. Used for pagination of the results.

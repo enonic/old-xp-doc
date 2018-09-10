@@ -39,7 +39,7 @@ function parseparams(params) {
         ids, start, count;
 
     try {
-        ids = JSON.parse(params['ids']) || []
+        ids = params['ids'].split(',') || []
     } catch (e) {
         log.warning('Invalid parameter ids: %s, using []', params['ids']);
         ids = [];
