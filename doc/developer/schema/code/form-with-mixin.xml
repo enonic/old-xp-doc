@@ -2,7 +2,7 @@
   <field-set name="basic">
     <label>Status</label>
     <items>
-      <inline mixin="us-address"/>
+      <mixin name="us-address"/>
     </items>
   </field-set>
 </form>

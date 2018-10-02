@@ -2,6 +2,6 @@
   <display-name>Using mixins</display-name>
   <super-type>base:structured</super-type>
   <form>
-    <inline mixin="us-address"/>
+    <mixin name="us-address"/>
   </form>
 </content-type>
