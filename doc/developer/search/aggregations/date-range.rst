@@ -9,7 +9,7 @@ field (string)
   The property path.
 
 format (string)
-  The date-format of which the buckets will be formatted to on return. Default to ``YYYY-MM-DDThh:mm:ssTZD``.
+  The date-format of which the buckets will be formatted to on return. Defaults to ``yyyy-MM-dd'T'HH:mm:ss.SSSZ``.
 
 ranges (range[])
   The range-buckets to create.
