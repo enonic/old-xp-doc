@@ -31,3 +31,4 @@ here :ref:`api_ref_guide`.
    admin/index
    id-provider/index
    tasks/index
+   events/index
