@@ -4,11 +4,11 @@ Events
 ======
 
 Events is the publish-subscribe mechanism used by Enonic XP.
-It allows Enonic XP or any application to send events and be triggered when a specific type of event is sent.
-These events are distributed in the current Enonic XP instance but can also be propagated to the entire Enonic XP cluster.
+Enonic XP or any application can send events or be triggered when a specific type of event is sent.
+An event is transmitted to all the matching listeners for the current Enonic XP instance, but can also be distributed to all the nodes of the cluster.
 
-With Enonic XP 6.9 came the Javascript library "event" allowing your application to be triggered on core events (an application being started, a node being published, ...).
-But also to define/send/listen your own events to have a more loosely coupled components.
+Using the JS library "event", you can make your application listen to core events (an application being started, a node being published, ...).
+But you can also define/send/listen your own events to have more loosely coupled components.
 
 Event properties
 ----------------
@@ -22,9 +22,9 @@ All events have the following properties
 +------------------+--------+--------------------------------------------------------------------------------+
 | timestamp        | long   | Creation time of the event.                                                    |
 +------------------+--------+--------------------------------------------------------------------------------+
-| distributed      | boolean| TBD                                                                            |
+| distributed      | boolean| True if the event will be distributed. False for non-local event               |
 +------------------+--------+--------------------------------------------------------------------------------+
-| localOrigin      | boolean| TBD                                                                            |
+| localOrigin      | boolean| True if the event was created by the current cluster node                      |
 +------------------+--------+--------------------------------------------------------------------------------+
 | data             | Object | Custom part of an event. Format depending on the event type                    |
 +------------------+--------+--------------------------------------------------------------------------------+
