@@ -9,7 +9,7 @@ See :ref:`operations-export` for more information on system dump/load.
 
 .. Attention::
  
-	A load must never be performed on a repo with existing content. It's meant to be used on empty repos. Make sure the repo is emptied first (delete contents)!
+	A load will delete all existing repositories before loading the repositories present in the system-dump
 
 **Usage:**
 
