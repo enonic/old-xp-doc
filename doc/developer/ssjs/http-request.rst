@@ -34,7 +34,11 @@ remoteAddress
     IP address of the client that sent the request. If the `X-Forwarded-For`_ header is set, its value will override the client IP.
 
 mode
-    Portal rendering mode, one of: ``edit``, ``preview``, ``live``.
+    Portal rendering mode, one of:
+        ``edit`` - when content is being edited in the Content Studio's Page Editor
+        ``inline`` - when content is previewed inside the preview panel of the Content Studio's content grid
+        ``preview`` - when content draft is previewed in a separate tab
+        ``live`` - when content is published and previewed in a separate tab
 
 branch
     Name of the repository branch, one of: ``draft``, ``master``.

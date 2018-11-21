@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content-type>
   <display-name>URL</display-name>
-  <content-display-name-script>$('url')</content-display-name-script>
+  <display-name-expression>${url}</display-name-expression>
   <super-type>base:structured</super-type>
   <form>
     <input type="TextLine" name="url">
