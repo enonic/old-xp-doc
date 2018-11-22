@@ -1,0 +1,15 @@
+<site>
+  <config>
+    <input type="TextLine" name="company">
+      <label>Company</label>
+      <occurrences minimum="1" maximum="1"/>
+    </input>
+    <input type="TextArea" name="description">
+      <label>Description</label>
+      <occurrences minimum="1" maximum="1"/>
+    </input>
+  </config>
+  <x-data name="my-x-data-1"/>
+  <x-data name="my-x-data-2" allowContentTypes="^(?!base:folder$).*"/>
+  <x-data name="my-x-data-3" allowContentTypes="base:folder" optional="true" />
+</site>
