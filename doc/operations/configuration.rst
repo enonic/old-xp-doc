@@ -339,13 +339,20 @@ The market-place for installing applications can be configured using the ``com.e
    :language: properties
    :caption: ``$XP_HOME/config/com.enonic.xp.market.cfg``
 
+.. TIP:: To configure XP to use a proxy when connecting to Market, just set the standard JVM proxy parameters: *http.proxyHost*, *http.proxyPort*, *https.proxyHost*, *https.proxyPort*.
+
+For example to configure the proxy for ip *10.0.0.42* and port *8080*:
+
+.. literalinclude:: code/proxy_jvm.sh
+   :language: bash
+
 UDC Configuration
 -----------------
 
 UDC (Usage Data Collector) is collecting anonymous usage data 10 minutes
 after startup and every 24 hours. It is only used for finding out what platforms
 to focus on and improve platform stability. To switch this off, you can
-configure it sing the ``com.enonic.xp.server.udc.cfg`` file
+configure it using the ``com.enonic.xp.server.udc.cfg`` file
 
 .. literalinclude:: code/com.enonic.xp.server.udc.cfg
   :language: properties
