@@ -3,7 +3,7 @@
   <filters>
     <response-filter name="trackingScript" order="10"/>
   </filters>
-  <x-data mixin="html-meta"/>
+  <x-data name="html-meta"/>
   <config>
     <input type="ContentSelector" name="profiles">
       <label>Profiles folder</label>

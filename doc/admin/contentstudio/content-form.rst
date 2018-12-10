@@ -17,12 +17,23 @@ other fields in the form are filled in if the content type was set up that way i
 
 Underneath is a toolbar with clickable navigation steps that correspond to different sections of the content form.
 The first one is always content type name, and the last ones are icons for the **Schedule** (only for published content), **Settings** and **Access** wizard steps.
-In between, there might be :ref:`x-data` and :ref:`mixins` steps enabled for this content.
+In between, there might be :ref:`x-data` steps enabled for this content.
 Clicking on an item in the toolbar will scroll the content form down to the corresponding section.
 
 .. image:: images/wizard-form-2.png
 
 Form fields in the content data section depend on how the content type was set up.
+
+
+X-data sections will be injected into the content form along with inputs from content type schema.
+
+.. image:: images/wizard-form-x-data.png
+
+
+Mandatory x-data will be expanded with no option to remove.
+Optional x-data are collapsed by default and have to be expanded by clicking "+" icon next to the title.
+
+.. image:: images/wizard-form-x-data-expanded.png
 
 The **Schedule** section is where the period of time, during which a content is available online, can be modified.
 This section is only displayed for published content.

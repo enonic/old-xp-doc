@@ -1,6 +1,6 @@
 <x-data>
   <display-name>This x-data will be available for any content type except folders</display-name>
-  <allowContentType>((?!base:folder).)*$</allowContentType>
+  <allowContentType>^(?!base:folder$).*</allowContentType>
   <items>
     <input type="TextLine" name="addressLine">
       <label>Street address</label>

@@ -20,7 +20,7 @@ function handleGet(req) {
     var params = req.params;
     var ids;
     try {
-        ids = JSON.parse(params.ids) || []
+        ids = params.ids.split(',') || []
     } catch (e) {
         ids = [];
     }

@@ -117,7 +117,7 @@ site/parts/
   be placed on pages (see :ref:`part`).
 
 site/x-data/
-  Schemas for "extra data" (x-data) - common fields that can be added to content-types or other schemas based on regex rules (see :ref:`x-data`).
+  Schemas for "extra data" (x-data) - common fields that can be enabled for content-types based on regex rules (see :ref:`x-data`).
 
 
 i18n/

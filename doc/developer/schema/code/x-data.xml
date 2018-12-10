@@ -1,6 +1,5 @@
 <x-data>
-  <display-name>This x-data will be available only for folders</display-name>
-  <allowContentType>base:folder</allowContentType>
+  <display-name>US Address</display-name>
   <items>
     <input type="TextLine" name="addressLine">
       <label>Street address</label>

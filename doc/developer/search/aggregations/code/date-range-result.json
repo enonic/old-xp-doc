@@ -1,18 +1,16 @@
-"price_ranges": {
-  "buckets": [{
-    "docCount": 2,
-    "key": "a",
-    "to": 50
-  },
-  {
-    "docCount": 4,
-    "from": 50,
-    "key": "b",
-    "to": 100
-  },
-  {
-    "docCount": 4,
-    "from": 100,
-    "key": "c"
-  }]
+{
+  "my_date_range": {
+    "buckets": [
+      {
+        "key": "*-12-2017",
+        "docCount": 2,
+        "to": "2017-12-01T00:00:00Z"
+      },
+      {
+        "key": "12-2017-*",
+        "docCount": 4,
+        "from": "2017-12-01T00:00:00Z"
+      }
+    ]
+  }
 }
