@@ -13,7 +13,7 @@ Syntax
 
   pathMatch(<field>, <path>, [<minimum_elements_must_match>])
 
-If not given, the default mimum-must-match value will be 1.
+If not given, the default minimum-must-match value will be 1.
 
 Examples
 --------
