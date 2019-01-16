@@ -23,7 +23,7 @@ Browse View
 +----------------------------------+----------------+------------------+
 |Preview selected content          |Alt+Space       |Ctrl+Alt+Space    |
 +----------------------------------+----------------+------------------+
-|Preview selected content          |Ctrl+Alt+P      |Ctrl+Alt+P        |
+|Publish selected content          |Ctrl+Alt+P      |Ctrl+Alt+P        |
 +----------------------------------+----------------+------------------+
 
 Content Editor
@@ -41,7 +41,7 @@ Content Editor
 +----------------------------------+----------------+------------------+
 |Preview content                   |Alt+Space       |Ctrl+Alt+Space    |
 +----------------------------------+----------------+------------------+
-|Preview content                   |Ctrl+Alt+P      |Ctrl+Alt+P        |
+|Publish content                   |Ctrl+Alt+P      |Ctrl+Alt+P        |
 +----------------------------------+----------------+------------------+
 
 .. _htmlarea_shortcuts:
