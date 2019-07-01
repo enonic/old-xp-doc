@@ -9,7 +9,7 @@ The query filters are applied as a root level property in query-api's, here is a
   .. literalinclude:: code/content-api-query.js
      :language: js
 
-If specifying several filters on the filter object root level, the filters are joined automatically with a boolean "must" clause, meaning all filters much match.
+If specifying several filters on the filter object root level, the filters are joined automatically with a boolean "must" clause, meaning all filters must match.
 
 Supported query filters:
 
