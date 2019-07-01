@@ -3,7 +3,7 @@
 notExists
 =========
 
-The notExists filter filter outs any document containing any value in the given field.
+The notExists filter filters out any document containing any value in the given field.
 
 field (string)
   The property path
