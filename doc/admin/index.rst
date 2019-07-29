@@ -18,6 +18,7 @@ For new installations and unless configured otherwise, you will first have to cr
    * English
    * French
    * Norwegian
+   * Polish
    * Portuguese
    * Russian
    * Spanish
