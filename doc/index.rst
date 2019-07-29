@@ -1,3 +1,4 @@
+.. important:: The XP 7.0 documentation and lots of other updated articles, guides and templates are available in our `Developer Portal <https://developer.enonic.com>`_.
 
 Enonic XP |version| documentation
 =================================
