@@ -16,9 +16,9 @@ Each locale to be localized should be represented by a single resource, e.g this
 .. code-block:: none
 
   i18n/phrases.properties
-  i18n/phrases_en_us.properties
+  i18n/phrases_en_US.properties
   i18n/phrases_no.properties
-  i18n/phrases_no_nn.properties
+  i18n/phrases_no_NN.properties
 
 The filename of a resource determines what locale it represents::
 
