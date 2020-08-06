@@ -3,6 +3,8 @@
 Response Filters
 ================
 
+Note: Response filters are deprecated.  In 7.0, they are replaced by `Response Processors <https://developer.enonic.com/docs/xp/stable/cms/response-processors>`_
+
 Response filters are scripts, similar to controllers, that allow customizing or adapting the response of page controllers.
 Notice that this actually applies to pages from any application added to the site.
 
